@@ -1,0 +1,511 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/><meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+<title>Lesson 14B — The Baby Moses | Lexilink History Workshop</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"/><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet"/>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@latest/tabler-icons.min.css"/>
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
+:root{--bg:#0F0800;--surface:rgba(255,255,255,0.04);--surface2:rgba(255,255,255,0.07);--border:rgba(255,255,255,0.10);--border2:rgba(255,255,255,0.06);--amber-300:#E8A832;--amber-400:#D4890F;--amber-500:#B8720A;--amber-bg:rgba(212,137,15,0.12);--amber-border:rgba(212,137,15,0.3);--text:#fff;--text2:rgba(255,255,255,0.72);--text3:rgba(255,255,255,0.45);--teal:#1D9E75;--teal-bg:rgba(29,158,117,0.12);--teal-border:rgba(29,158,117,0.3);--coral:#E05C3A;--coral-bg:rgba(224,92,58,0.12);--blue:#4A9EE0;--blue-bg:rgba(74,158,224,0.12);--r:12px;--r-sm:8px;}
+html{scroll-behavior:smooth;}
+body{font-family:'Inter',sans-serif;background:var(--bg);color:var(--text);min-height:100vh;line-height:1.6;}
+.site-header{background:#111;border-bottom:1px solid rgba(255,255,255,0.08);position:sticky;top:0;z-index:100;}
+.hdr{max-width:860px;margin:0 auto;padding:0 1.5rem;height:54px;display:flex;align-items:center;gap:12px;}
+.logo-wrap{display:flex;align-items:center;gap:8px;text-decoration:none;}
+.logo-icon{width:30px;height:30px;display:flex;align-items:center;justify-content:center;}
+.logo-icon svg{width:26px;height:26px;}
+.logo-name{font-size:13px;font-weight:700;color:#fff;}
+.hdr-pipe{width:1px;height:20px;background:rgba(255,255,255,0.15);}
+.hdr-back{display:flex;align-items:center;gap:5px;font-size:12px;color:var(--text3);text-decoration:none;transition:color .15s;}
+.hdr-back:hover{color:var(--text2);}
+.hdr-spacer{flex:1;}
+.hdr-badge{font-size:10px;font-weight:700;letter-spacing:.05em;padding:3px 10px;border-radius:99px;border:1px solid var(--amber-border);color:var(--amber-300);background:var(--amber-bg);}
+.lesson-hero{background:linear-gradient(135deg,#1A0C00 0%,#4A2800 40%,#6B3A00 100%);padding:3rem 1.5rem 2.5rem;text-align:center;position:relative;overflow:hidden;}
+.lesson-hero::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse 70% 60% at 50% 50%,rgba(180,110,0,0.18),transparent);pointer-events:none;}
+.lesson-eyebrow{font-size:10px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--amber-300);margin-bottom:.75rem;}
+.lesson-hero h1{font-size:clamp(22px,4vw,36px);font-weight:700;color:#fff;letter-spacing:-.02em;margin-bottom:.5rem;}
+.lesson-hero p{font-size:14px;color:rgba(255,255,255,0.65);max-width:520px;margin:0 auto .875rem;}
+.lesson-pills{display:flex;flex-wrap:wrap;justify-content:center;gap:8px;}
+.l-pill{font-size:11px;font-weight:500;padding:4px 12px;border-radius:99px;border:1px solid rgba(255,255,255,0.18);color:rgba(255,255,255,0.75);background:rgba(255,255,255,0.06);}
+.lesson-progress{background:#1A1100;border-bottom:1px solid rgba(255,255,255,0.06);padding:.75rem 1.5rem;}
+.lp-inner{max-width:860px;margin:0 auto;}
+.lp-labels{display:flex;justify-content:space-between;font-size:11px;color:var(--text3);margin-bottom:6px;}
+.lp-track{height:4px;border-radius:99px;background:rgba(255,255,255,0.08);}
+.lp-fill{height:100%;border-radius:99px;background:linear-gradient(90deg,var(--amber-500),var(--amber-300));width:10%;}
+.lp-parts{display:flex;gap:4px;margin-top:8px;flex-wrap:wrap;}
+.lp-part{font-size:10px;font-weight:600;padding:2px 8px;border-radius:99px;background:rgba(255,255,255,0.06);color:var(--text3);cursor:pointer;transition:all .15s;}
+.lp-part.done{background:var(--amber-bg);color:var(--amber-300);border:1px solid var(--amber-border);}
+.lp-part.active{background:var(--amber-400);color:#1A0800;}
+.main{max-width:860px;margin:0 auto;padding:2rem 1.5rem 5rem;}
+.sec{background:var(--surface);border:1px solid var(--border);border-radius:var(--r);padding:1.5rem;margin-bottom:1.5rem;scroll-margin-top:80px;}
+.sec-header{display:flex;align-items:center;gap:10px;margin-bottom:1.25rem;}
+.sec-num{width:28px;height:28px;border-radius:8px;display:flex;align-items:center;justify-content:center;font-size:11px;font-weight:700;background:var(--amber-bg);color:var(--amber-300);border:1px solid var(--amber-border);flex-shrink:0;}
+.sec-title{font-size:16px;font-weight:700;color:#fff;}
+.sec-sub{font-size:12px;color:var(--text3);margin-top:1px;}
+.vocab-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(240px,1fr));gap:10px;}
+.vocab-card{background:var(--surface2);border:1px solid var(--border2);border-radius:var(--r-sm);padding:1rem;cursor:pointer;transition:border-color .15s;}
+.vocab-card:hover,.vocab-card.open{border-color:var(--amber-border);}
+.vc-top{display:flex;align-items:baseline;gap:8px;}
+.vc-word{font-size:16px;font-weight:700;color:#fff;}
+.vc-pos{font-size:10px;font-weight:600;padding:1px 7px;border-radius:99px;background:var(--amber-bg);color:var(--amber-300);}
+.vc-pron{font-size:12px;color:var(--text3);margin-top:2px;font-style:italic;}
+.vc-cn{font-size:15px;color:var(--amber-300);margin-top:4px;font-weight:600;}
+.vc-detail{display:none;margin-top:10px;padding-top:10px;border-top:1px solid var(--border2);}
+.vocab-card.open .vc-detail{display:block;}
+.vc-def{font-size:13px;color:var(--text2);margin-bottom:6px;}
+.vc-ex{font-size:12px;color:var(--text3);font-style:italic;padding-left:8px;border-left:2px solid var(--amber-border);}
+.story-body p{font-size:15px;color:var(--text2);line-height:1.8;margin-bottom:1rem;}
+.story-body p:last-child{margin-bottom:0;}
+.story-hl{color:var(--amber-300);font-weight:600;}
+.story-box{background:var(--amber-bg);border:1px solid var(--amber-border);border-radius:var(--r-sm);padding:1rem 1.25rem;margin:1.25rem 0;font-size:14px;color:rgba(255,255,255,0.85);line-height:1.7;font-style:italic;}
+.story-icon{font-size:40px;text-align:center;margin:1rem 0;}
+.story-narr{background:rgba(255,255,255,0.04);border-left:3px solid var(--amber-400);border-radius:0 8px 8px 0;padding:1rem 1.25rem;margin:1rem 0;font-size:14px;color:rgba(255,255,255,0.8);line-height:1.8;}
+.story-narr .speaker{font-size:11px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;color:var(--amber-300);margin-bottom:.5rem;}
+.quiz-list{display:flex;flex-direction:column;gap:14px;}
+.q-item{background:var(--surface2);border:1px solid var(--border2);border-radius:var(--r-sm);padding:1rem 1.25rem;}
+.q-text{font-size:14px;font-weight:600;color:#fff;margin-bottom:.75rem;}
+.q-opts{display:flex;flex-direction:column;gap:6px;}
+.q-opt{display:flex;align-items:center;gap:10px;padding:8px 12px;border-radius:8px;border:1px solid var(--border);background:transparent;cursor:pointer;font-size:13px;color:var(--text2);width:100%;text-align:left;transition:all .15s;}
+.q-opt:hover{border-color:var(--amber-border);background:var(--amber-bg);}
+.q-opt.correct{border-color:var(--teal-border);background:var(--teal-bg);color:#fff;}
+.q-opt.wrong{border-color:rgba(224,92,58,0.4);background:var(--coral-bg);color:#fff;}
+.q-feedback{font-size:12px;margin-top:8px;padding:6px 10px;border-radius:6px;display:none;}
+.q-feedback.show{display:block;}
+.q-feedback.good{background:var(--teal-bg);color:#5DCAA5;}
+.q-feedback.bad{background:var(--coral-bg);color:#F09B80;}
+.tf-opts{display:flex;gap:8px;}
+.tf-btn{flex:1;padding:8px;border-radius:8px;border:1px solid var(--border);background:transparent;cursor:pointer;font-size:13px;font-weight:600;color:var(--text2);transition:all .15s;}
+.tf-btn:hover{border-color:var(--amber-border);background:var(--amber-bg);}
+.tf-btn.correct{border-color:var(--teal-border);background:var(--teal-bg);color:#fff;}
+.tf-btn.wrong{border-color:rgba(224,92,58,0.4);background:var(--coral-bg);color:#fff;}
+.grammar-box{background:var(--surface2);border-left:3px solid var(--amber-400);border-radius:0 var(--r-sm) var(--r-sm) 0;padding:1rem 1.25rem;margin-bottom:1rem;}
+.grammar-label{font-size:10px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--amber-300);margin-bottom:.5rem;}
+.grammar-rule{font-size:14px;color:#fff;font-weight:600;margin-bottom:.5rem;}
+.grammar-eg{font-size:13px;color:var(--text2);margin-top:.35rem;font-style:italic;}
+.grammar-eg span{color:var(--amber-300);font-weight:600;font-style:normal;}
+.hl{color:var(--amber-300);font-weight:600;}
+.sb-activity{margin-bottom:1.25rem;}
+.sb-label{font-size:11px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;color:var(--amber-300);margin-bottom:.75rem;}
+.sb-input{width:100%;background:var(--surface2);border:1px solid var(--border);border-radius:var(--r-sm);padding:.625rem .875rem;font-size:14px;color:#fff;font-family:'Inter',sans-serif;transition:border-color .15s;outline:none;margin-bottom:.5rem;}
+.sb-input:focus{border-color:var(--amber-border);}
+.sb-check{padding:7px 18px;border-radius:99px;background:var(--amber-400);color:#1A0800;font-size:13px;font-weight:700;border:none;cursor:pointer;transition:opacity .15s;}
+.sb-check:hover{opacity:.85;}
+.sb-result{font-size:12px;margin-top:6px;padding:6px 10px;border-radius:6px;display:none;}
+.sb-result.show{display:block;}
+.sb-result.ok{background:var(--teal-bg);color:#5DCAA5;}
+.sb-result.no{background:var(--coral-bg);color:#F09B80;}
+.speak-level{margin-bottom:1.25rem;}
+.speak-badge{display:inline-flex;align-items:center;gap:6px;font-size:11px;font-weight:700;padding:3px 12px;border-radius:99px;margin-bottom:.875rem;}
+.speak-badge.l1{background:var(--teal-bg);color:#5DCAA5;border:1px solid var(--teal-border);}
+.speak-badge.l2{background:var(--amber-bg);color:var(--amber-300);border:1px solid var(--amber-border);}
+.speak-badge.l3{background:var(--blue-bg);color:var(--blue);border:1px solid rgba(74,158,224,0.3);}
+.speak-q{background:var(--surface2);border:1px solid var(--border2);border-radius:var(--r-sm);padding:1rem 1.25rem;margin-bottom:.75rem;}
+.speak-q p{font-size:14px;font-weight:600;color:#fff;margin-bottom:.5rem;}
+.speak-hint{font-size:12px;color:var(--text3);}
+.speak-hint span{color:var(--amber-300);}
+.idea-q{background:var(--surface2);border:1px solid var(--border2);border-radius:var(--r-sm);padding:1rem 1.25rem;margin-bottom:.75rem;display:flex;gap:10px;}
+.idea-icon{font-size:20px;flex-shrink:0;margin-top:2px;}
+.idea-text{font-size:14px;color:var(--text2);line-height:1.6;}
+.idea-text strong{color:#fff;}
+.ielts-topic{background:var(--blue-bg);border:1px solid rgba(74,158,224,0.25);border-radius:var(--r-sm);padding:1rem 1.25rem;margin-bottom:1.25rem;}
+.ielts-topic-label{font-size:10px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--blue);margin-bottom:.25rem;}
+.ielts-topic h4{font-size:16px;font-weight:700;color:#fff;}
+.vocab-chips{display:flex;flex-wrap:wrap;gap:6px;margin-top:.75rem;}
+.chip{font-size:12px;padding:4px 12px;border-radius:99px;background:rgba(255,255,255,0.06);border:1px solid var(--border);color:var(--text2);}
+.chip.amber{background:var(--amber-bg);border-color:var(--amber-border);color:var(--amber-300);}
+.ielts-qs{display:flex;flex-direction:column;gap:8px;margin-top:1rem;}
+.ielts-q{display:flex;gap:10px;background:var(--surface2);border-radius:var(--r-sm);padding:.875rem 1rem;}
+.ielts-q-num{font-size:11px;font-weight:700;color:var(--blue);min-width:20px;}
+.ielts-q-text{font-size:13px;color:var(--text2);}
+.ielts-w2{background:rgba(74,158,224,0.08);border:1px solid rgba(74,158,224,0.2);border-radius:var(--r-sm);padding:1rem 1.25rem;margin-top:1rem;}
+.ielts-w2-label{font-size:10px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--blue);margin-bottom:.5rem;}
+.ielts-w2 p{font-size:14px;color:var(--text2);line-height:1.7;font-style:italic;}
+.star-words{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:1.25rem;}
+.star-word{display:flex;align-items:center;gap:6px;padding:6px 14px;border-radius:99px;background:var(--amber-bg);border:1px solid var(--amber-border);font-size:13px;font-weight:600;color:var(--amber-300);}
+.think-box{background:var(--surface2);border:1px solid var(--border2);border-radius:var(--r-sm);padding:1rem 1.25rem;margin-bottom:1rem;}
+.think-box .think-head{font-size:12px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;color:var(--amber-300);margin-bottom:.5rem;}
+.think-box p{font-size:14px;color:var(--text2);}
+.mini-quiz-q{background:var(--surface2);border:1px solid var(--border2);border-radius:var(--r-sm);padding:1rem;margin-bottom:.75rem;}
+.mq-text{font-size:13px;font-weight:600;color:#fff;margin-bottom:.625rem;}
+.mq-opts{display:flex;flex-direction:column;gap:5px;}
+.mq-opt{padding:7px 12px;border-radius:6px;border:1px solid var(--border);background:transparent;font-size:12px;color:var(--text2);cursor:pointer;text-align:left;transition:all .15s;}
+.mq-opt:hover{border-color:var(--amber-border);background:var(--amber-bg);}
+.mq-opt.correct{border-color:var(--teal-border);background:var(--teal-bg);color:#fff;}
+.mq-opt.wrong{border-color:rgba(224,92,58,0.4);background:var(--coral-bg);color:#fff;}
+.lesson-nav{display:flex;gap:10px;margin-top:2rem;}
+.nav-btn{display:flex;align-items:center;gap:6px;padding:.75rem 1.25rem;border-radius:10px;font-size:13px;font-weight:600;cursor:pointer;text-decoration:none;border:1px solid var(--border);color:var(--text2);background:var(--surface);transition:all .15s;flex:1;justify-content:center;}
+.nav-btn:hover{border-color:var(--border2);color:#fff;}
+.nav-btn.primary{background:var(--amber-400);color:#1A0800;border-color:transparent;}
+.nav-btn.primary:hover{opacity:.9;}
+.site-footer{background:#111;border-top:1px solid rgba(255,255,255,0.07);text-align:center;padding:1.5rem;font-size:12px;color:rgba(255,255,255,0.3);}
+.site-footer strong{color:var(--amber-300);}
+@media(max-width:600px){.vocab-grid{grid-template-columns:1fr;}.lesson-nav{flex-direction:column;}}
+</style>
+</head>
+<body>
+<header class="site-header">
+  <div class="hdr">
+    <a class="logo-wrap" href="../index.html">
+      <div class="logo-icon"><svg viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path d="M6 24 C8 18,14 10,24 6 C20 10,18 14,20 18 C16 16,12 18,6 24Z" fill="white"/><path d="M20 18 C22 20,22 23,20 26 C18 24,18 21,20 18Z" fill="rgba(255,255,255,0.5)"/></svg></div>
+      <span class="logo-name">Lexilink Ideation IELTS STUDIO</span>
+    </a>
+    <div class="hdr-pipe"></div>
+    <a class="hdr-back" href="../index.html"><i class="ti ti-arrow-left" aria-hidden="true"></i> Vol. 1</a>
+    <div class="hdr-spacer"></div>
+    <span class="hdr-badge">Lesson 14B</span>
+  </div>
+</header>
+
+<section class="lesson-hero">
+  <p class="lesson-eyebrow">Chapter 14 · The Israelites Leave Egypt</p>
+  <h1>The Baby Moses</h1>
+  <p>A mother's courage and a baby hidden in the Nile</p>
+  <div class="lesson-pills">
+    <span class="l-pill">📖 Story + Vocabulary</span>
+    <span class="l-pill">🎤 Speaking</span>
+    <span class="l-pill">✏️ Grammar</span>
+    <span class="l-pill">⭐ CEFR A2–B1</span>
+  </div>
+</section>
+
+<div class="lesson-progress">
+  <div class="lp-inner">
+    <div class="lp-labels"><span>Lesson 14B of 4</span><span style="color:var(--amber-300)">Part 1 of 10</span></div>
+    <div class="lp-track"><div class="lp-fill" id="prog-fill" style="width:10%"></div></div>
+    <div class="lp-parts">
+      <span class="lp-part active" onclick="goTo('p1')">1 Vocab</span>
+      <span class="lp-part" onclick="goTo('p2')">2 Story</span>
+      <span class="lp-part" onclick="goTo('p3')">3 Reading</span>
+      <span class="lp-part" onclick="goTo('p4')">4 Grammar</span>
+      <span class="lp-part" onclick="goTo('p5')">5 Builder</span>
+      <span class="lp-part" onclick="goTo('p6')">6 Speaking 1</span>
+      <span class="lp-part" onclick="goTo('p7')">7 Speaking 2</span>
+      <span class="lp-part" onclick="goTo('p8')">8 Ideas</span>
+      <span class="lp-part" onclick="goTo('p9')">9 IELTS</span>
+      <span class="lp-part" onclick="goTo('p10')">10 Review</span>
+    </div>
+  </div>
+</div>
+
+<main class="main">
+
+<!-- PART 1 VOCAB -->
+<section class="sec" id="p1">
+  <div class="sec-header"><div class="sec-num">1</div><div><div class="sec-title">Vocabulary</div><div class="sec-sub">Click each word to expand</div></div></div>
+  <div class="vocab-grid">
+    <div class="vocab-card" onclick="toggleVocab(this)">
+      <div class="vc-top"><span class="vc-word">pharaoh</span><span class="vc-pos">noun</span></div>
+      <div class="vc-pron">/ˈfeə.rəʊ/</div><div class="vc-cn">法老（古埃及国王）</div>
+      <div class="vc-detail"><div class="vc-def">The king of ancient Egypt. A very powerful ruler.</div><div class="vc-ex">"The pharaoh sat on his throne with a frown on his face."</div></div>
+    </div>
+    <div class="vocab-card" onclick="toggleVocab(this)">
+      <div class="vc-top"><span class="vc-word">dreadful</span><span class="vc-pos">adjective</span></div>
+      <div class="vc-pron">/ˈdred.fəl/</div><div class="vc-cn">可怕的；令人恐惧的</div>
+      <div class="vc-detail"><div class="vc-def">Very bad or frightening.</div><div class="vc-ex">"When the Israelites heard the dreadful command, they wept."</div></div>
+    </div>
+    <div class="vocab-card" onclick="toggleVocab(this)">
+      <div class="vc-top"><span class="vc-word">mourn</span><span class="vc-pos">verb</span></div>
+      <div class="vc-pron">/mɔːn/</div><div class="vc-cn">哀悼；悲痛</div>
+      <div class="vc-detail"><div class="vc-def">To feel and show great sadness, especially after a loss.</div><div class="vc-ex">"The people wept and mourned when they heard the terrible news."</div></div>
+    </div>
+    <div class="vocab-card" onclick="toggleVocab(this)">
+      <div class="vc-top"><span class="vc-word">reed</span><span class="vc-pos">noun</span></div>
+      <div class="vc-pron">/riːd/</div><div class="vc-cn">芦苇</div>
+      <div class="vc-detail"><div class="vc-def">A tall plant that grows near water. It can be woven to make baskets.</div><div class="vc-ex">"The mother wove a basket out of reeds."</div></div>
+    </div>
+    <div class="vocab-card" onclick="toggleVocab(this)">
+      <div class="vc-top"><span class="vc-word">tar</span><span class="vc-pos">noun</span></div>
+      <div class="vc-pron">/tɑː/</div><div class="vc-cn">焦油；沥青</div>
+      <div class="vc-detail"><div class="vc-def">A thick, dark, sticky substance. It keeps water out.</div><div class="vc-ex">"She coated the outside of the basket with tar so it would float."</div></div>
+    </div>
+    <div class="vocab-card" onclick="toggleVocab(this)">
+      <div class="vc-top"><span class="vc-word">drift</span><span class="vc-pos">verb</span></div>
+      <div class="vc-pron">/drɪft/</div><div class="vc-cn">漂流；缓慢移动</div>
+      <div class="vc-detail"><div class="vc-def">To move slowly in water or air without control.</div><div class="vc-ex">"The basket drifted closer and closer to the side of the Nile."</div></div>
+    </div>
+    <div class="vocab-card" onclick="toggleVocab(this)">
+      <div class="vc-top"><span class="vc-word">lull</span><span class="vc-pos">verb</span></div>
+      <div class="vc-pron">/lʌl/</div><div class="vc-cn">使安静；哄入睡</div>
+      <div class="vc-detail"><div class="vc-def">To make someone calm and sleepy, often by gentle movement.</div><div class="vc-ex">"The gentle rocking lulled the baby to sleep."</div></div>
+    </div>
+    <div class="vocab-card" onclick="toggleVocab(this)">
+      <div class="vc-top"><span class="vc-word">weeds</span><span class="vc-pos">noun</span></div>
+      <div class="vc-pron">/wiːdz/</div><div class="vc-cn">杂草；水草</div>
+      <div class="vc-detail"><div class="vc-def">Wild plants that grow where they are not wanted, often near water.</div><div class="vc-ex">"The basket caught in the weeds at the water's edge."</div></div>
+    </div>
+    <div class="vocab-card" onclick="toggleVocab(this)">
+      <div class="vc-top"><span class="vc-word">deliver</span><span class="vc-pos">verb</span></div>
+      <div class="vc-pron">/dɪˈlɪv.ər/</div><div class="vc-cn">拯救；解救</div>
+      <div class="vc-detail"><div class="vc-def">To save someone from danger or a bad situation.</div><div class="vc-ex">"'God, send us someone to deliver us from this wicked pharaoh!' they cried."</div></div>
+    </div>
+    <div class="vocab-card" onclick="toggleVocab(this)">
+      <div class="vc-top"><span class="vc-word">courage</span><span class="vc-pos">noun</span></div>
+      <div class="vc-pron">/ˈkʌr.ɪdʒ/</div><div class="vc-cn">勇气；勇敢</div>
+      <div class="vc-detail"><div class="vc-def">The ability to do something difficult or dangerous even when you are afraid.</div><div class="vc-ex">"It took great courage for the mother to put her baby in the river."</div></div>
+    </div>
+    <div class="vocab-card" onclick="toggleVocab(this)">
+      <div class="vc-top"><span class="vc-word">nurse</span><span class="vc-pos">noun/verb</span></div>
+      <div class="vc-pron">/nɜːs/</div><div class="vc-cn">乳母；护士；照顾</div>
+      <div class="vc-detail"><div class="vc-def">A person who takes care of a baby or sick person. Also means to care for.</div><div class="vc-ex">"Miriam asked if she should find a nurse to take care of the baby."</div></div>
+    </div>
+    <div class="vocab-card" onclick="toggleVocab(this)">
+      <div class="vc-top"><span class="vc-word">throne</span><span class="vc-pos">noun</span></div>
+      <div class="vc-pron">/θrəʊn/</div><div class="vc-cn">王座；宝座</div>
+      <div class="vc-detail"><div class="vc-def">The special chair that a king or queen sits on.</div><div class="vc-ex">"The pharaoh sat on his throne thinking about what to do."</div></div>
+    </div>
+  </div>
+</section>
+
+<!-- PART 2 STORY -->
+<section class="sec" id="p2">
+  <div class="sec-header"><div class="sec-num">2</div><div><div class="sec-title">The Story</div><div class="sec-sub">A mother hides her baby to keep him safe</div></div></div>
+  <div class="story-body">
+    <div class="story-icon">👶</div>
+    <p>The <span class="story-hl">pharaoh</span> of Egypt sat on his <span class="story-hl">throne</span>. He looked angry. He was thinking about the Israelites. "There are more and more of them every day!" he thought. "Soon they will take over Egypt. I must do something."</p>
+    <p>Then he had a terrible, <span class="story-hl">dreadful</span> idea. He called his soldiers. "Go to every Israelite home," he said. "Find out when the mothers are having babies. Then kill every baby boy!"</p>
+    <p>When the Israelites heard this, they <span class="story-hl">mourned</span> and cried. "God, save us!" they prayed. "Send someone to <span class="story-hl">deliver</span> us from this wicked pharaoh!"</p>
+    <div class="story-icon">🌿</div>
+    <p>An Israelite woman who lived near the Nile River was getting ready to have her baby. When she heard the terrible order, she hid in a back room. The baby was born — a fine, strong baby boy.</p>
+    <p>For three months, the mother and baby hid from the soldiers. But babies grow. They get louder. Soon, the mother knew she could not hide him forever. She had to be very brave — she needed great <span class="story-hl">courage</span>.</p>
+    <p>So she found some tall <span class="story-hl">reeds</span> near the river. She wove them into a basket. Then she coated the outside with <span class="story-hl">tar</span> so that it would float on water. She wrapped the baby in a warm, soft blanket and placed him gently inside the basket.</p>
+    <div class="story-box">She pushed the basket out onto the Nile River. Then she sent her daughter Miriam to stand by the riverbank and watch what would happen.</div>
+    <p>The baby <span class="story-hl">drifted</span> slowly down the river. The gentle rocking of the basket <span class="story-hl">lulled</span> him to sleep. The basket floated closer and closer to the edge of the river, until it caught in some <span class="story-hl">weeds</span>.</p>
+    <div class="story-icon">👑</div>
+    <p>The daughter of the <span class="story-hl">pharaoh</span> came to the river to swim. She saw the basket. "What is in that basket?" she asked. One of her maids ran to get it.</p>
+    <p>The princess looked inside. She saw the baby boy. He opened his eyes and smiled at her. "Oh!" she cried. "Such a beautiful baby! I will keep him and raise him as my own!"</p>
+    <p>Miriam saw what happened. She ran forward bravely. "Lady," she said, "shall I find you a <span class="story-hl">nurse</span> to take care of the baby?"</p>
+    <p>"Yes!" said the princess. "Bring her to me."</p>
+    <p>So Miriam ran home and brought back her own mother. The mother and baby were together again! She took care of him until he was old enough to live in the palace. The pharaoh's daughter named him <span class="story-hl">Moses</span>.</p>
+  </div>
+</section>
+
+<!-- PART 3 READING -->
+<section class="sec" id="p3">
+  <div class="sec-header"><div class="sec-num">3</div><div><div class="sec-title">Reading Comprehension</div><div class="sec-sub">Check your understanding</div></div></div>
+  <div class="quiz-list">
+    <div class="q-item">
+      <div class="q-text">1. Why did the pharaoh want to kill Israelite baby boys?</div>
+      <div class="q-opts">
+        <button class="q-opt" onclick="mcq(this,'wrong')">The babies were too loud and noisy.</button>
+        <button class="q-opt" onclick="mcq(this,'correct')">He was afraid the Israelites would grow too large and take over Egypt.</button>
+        <button class="q-opt" onclick="mcq(this,'wrong')">He wanted more Egyptian children instead.</button>
+      </div><div class="q-feedback"></div>
+    </div>
+    <div class="q-item">
+      <div class="q-text">2. What did Moses' mother make the basket from?</div>
+      <div class="q-opts">
+        <button class="q-opt" onclick="mcq(this,'wrong')">Wood and metal</button>
+        <button class="q-opt" onclick="mcq(this,'correct')">Reeds coated with tar</button>
+        <button class="q-opt" onclick="mcq(this,'wrong')">Cloth and rope</button>
+      </div><div class="q-feedback"></div>
+    </div>
+    <div class="q-item">
+      <div class="q-text">3. True or False: Miriam watched the basket from the riverbank.</div>
+      <div class="tf-opts">
+        <button class="tf-btn" onclick="tf(this,'correct','Correct! Miriam stood by the riverbank to watch the basket.')">True</button>
+        <button class="tf-btn" onclick="tf(this,'wrong','Not correct. Miriam did watch by the riverbank.')">False</button>
+      </div><div class="q-feedback"></div>
+    </div>
+    <div class="q-item">
+      <div class="q-text">4. Who found the baby in the basket?</div>
+      <div class="q-opts">
+        <button class="q-opt" onclick="mcq(this,'wrong')">An Egyptian soldier</button>
+        <button class="q-opt" onclick="mcq(this,'wrong')">A fisherman</button>
+        <button class="q-opt" onclick="mcq(this,'correct')">The pharaoh's daughter</button>
+      </div><div class="q-feedback"></div>
+    </div>
+    <div class="q-item">
+      <div class="q-text">5. True or False: The baby's real mother never saw him again.</div>
+      <div class="tf-opts">
+        <button class="tf-btn" onclick="tf(this,'wrong','Not correct! The mother came back as the nurse to care for Moses.')">True</button>
+        <button class="tf-btn" onclick="tf(this,'correct','Correct! Miriam cleverly arranged for the real mother to return as nurse.')">False</button>
+      </div><div class="q-feedback"></div>
+    </div>
+    <div class="q-item">
+      <div class="q-text">6. Who gave Moses his name?</div>
+      <div class="q-opts">
+        <button class="q-opt" onclick="mcq(this,'wrong')">His Israelite mother</button>
+        <button class="q-opt" onclick="mcq(this,'wrong')">The pharaoh himself</button>
+        <button class="q-opt" onclick="mcq(this,'correct')">The pharaoh's daughter</button>
+      </div><div class="q-feedback"></div>
+    </div>
+  </div>
+</section>
+
+<!-- PART 4 LANGUAGE -->
+<section class="sec" id="p4">
+  <div class="sec-header"><div class="sec-num">4</div><div><div class="sec-title">Language Focus</div><div class="sec-sub">Grammar through the story</div></div></div>
+  <div class="grammar-box">
+    <div class="grammar-label">📌 Sequence words — so that / until / when</div>
+    <div class="grammar-rule">These words connect actions and show order or purpose.</div>
+    <div class="grammar-eg">She coated the basket with tar <span>so that</span> it would float.</div>
+    <div class="grammar-eg">She hid the baby <span>until</span> he was three months old.</div>
+    <div class="grammar-eg"><span>When</span> the princess looked inside, she saw the baby.</div>
+  </div>
+  <div class="grammar-box">
+    <div class="grammar-label">📌 Reported speech — direct vs indirect</div>
+    <div class="grammar-rule">When we tell someone what another person said, we can use <span class="hl">direct speech</span> (with quotation marks) or <span class="hl">indirect speech</span> (no quotation marks).</div>
+    <div class="grammar-eg">Direct: The princess said, <span>"I will keep him!"</span></div>
+    <div class="grammar-eg">Indirect: The princess said that <span>she would keep him.</span></div>
+    <div class="grammar-eg">Direct: Miriam asked, <span>"Shall I find you a nurse?"</span></div>
+    <div class="grammar-eg">Indirect: Miriam asked if <span>she should find a nurse.</span></div>
+  </div>
+  <div class="grammar-box">
+    <div class="grammar-label">📌 Adjectives for describing feelings</div>
+    <div class="grammar-rule">Good writers use strong adjectives. Notice these from the story:</div>
+    <div class="grammar-eg">A <span>dreadful</span> command / a <span>terrible</span> idea / a <span>fine, strong</span> baby / a <span>warm, soft</span> blanket / a <span>gentle</span> rocking</div>
+    <div style="margin-top:.75rem;font-size:13px;color:var(--text3);">Try: Describe the basket using 3 adjectives.</div>
+  </div>
+</section>
+
+<!-- PART 5 BUILDER -->
+<section class="sec" id="p5">
+  <div class="sec-header"><div class="sec-num">5</div><div><div class="sec-title">Sentence Builder</div><div class="sec-sub">Practice the vocabulary and grammar</div></div></div>
+  <div class="sb-activity">
+    <div class="sb-label">✏️ Fill in the blank</div>
+    <p style="font-size:13px;color:var(--text2);margin-bottom:.5rem;">1. The mother coated the basket with ________ so that it would float.</p>
+    <input class="sb-input" id="f1" placeholder="Your answer..."/>
+    <button class="sb-check" onclick="checkFill('f1','tar','r1')">Check ✓</button>
+    <div class="sb-result" id="r1"></div>
+  </div>
+  <div class="sb-activity">
+    <div class="sb-label">✏️ Fill in the blank</div>
+    <p style="font-size:13px;color:var(--text2);margin-bottom:.5rem;">2. The gentle rocking of the basket ________ the baby to sleep.</p>
+    <input class="sb-input" id="f2" placeholder="Your answer..."/>
+    <button class="sb-check" onclick="checkFill('f2','lulled','r2')">Check ✓</button>
+    <div class="sb-result" id="r2"></div>
+  </div>
+  <div class="sb-activity">
+    <div class="sb-label">🔀 Unscramble</div>
+    <p style="font-size:13px;color:var(--text3);margin-bottom:.75rem;">Put the words in the correct order:</p>
+    <p style="font-size:13px;color:var(--text2);background:var(--surface2);padding:.75rem;border-radius:8px;margin-bottom:.75rem;font-style:italic;">basket / out / The / onto / pushed / mother / the / the / Nile / her</p>
+    <input class="sb-input" id="f3" placeholder="Type your sentence here..."/>
+    <button class="sb-check" onclick="checkUnscramble('f3','the mother pushed her basket out onto the nile','r3')">Check ✓</button>
+    <div class="sb-result" id="r3"></div>
+  </div>
+  <div class="sb-activity">
+    <div class="sb-label">🈶 Translation challenge</div>
+    <p style="font-size:13px;color:var(--text2);margin-bottom:.5rem;">Translate this sentence into English:</p>
+    <p style="font-size:16px;color:var(--amber-300);margin-bottom:.75rem;">她把婴儿放进篮子里，让他顺着尼罗河漂流。</p>
+    <input class="sb-input" id="f4" placeholder="Type your English translation..."/>
+    <button class="sb-check" onclick="checkFill('f4','she put the baby in the basket and let him drift down the nile','r4')">Check ✓</button>
+    <div class="sb-result" id="r4"></div>
+  </div>
+</section>
+
+<!-- PART 6 SPEAKING 1 -->
+<section class="sec" id="p6">
+  <div class="sec-header"><div class="sec-num">6</div><div><div class="sec-title">Speaking — Level 1</div><div class="sec-sub">One sentence answers</div></div></div>
+  <span class="speak-badge l1">🟢 Level 1 · One sentence</span>
+  <div class="speak-q"><p>What did Moses' mother make to hide him?</p><div class="speak-hint">💡 Start with: <span>"Moses' mother made a..."</span></div></div>
+  <div class="speak-q"><p>Who found the baby in the river?</p><div class="speak-hint">💡 Start with: <span>"The baby was found by..."</span></div></div>
+  <div class="speak-q"><p>What did the pharaoh's daughter decide to do with Moses?</p><div class="speak-hint">💡 Start with: <span>"She decided to..."</span></div></div>
+</section>
+
+<!-- PART 7 SPEAKING 2 -->
+<section class="sec" id="p7">
+  <div class="sec-header"><div class="sec-num">7</div><div><div class="sec-title">Speaking — Level 2 &amp; 3</div><div class="sec-sub">Share your ideas and opinions</div></div></div>
+  <span class="speak-badge l2">🟡 Level 2 · 2–3 sentences</span>
+  <div class="speak-q"><p>Imagine you were Moses' mother. How would you feel when you put the basket in the river?</p><div class="speak-hint">💡 Try: <span>"I think I would feel... because..."</span></div></div>
+  <div class="speak-q"><p>Miriam showed great bravery when she spoke to the princess. What made her decision brave?</p><div class="speak-hint">💡 Think about: <span>danger · risk · quick thinking · love for her brother</span></div></div>
+  <span class="speak-badge l3" style="margin-top:1rem;">🔵 Level 3 · Opinion</span>
+  <div class="speak-q"><p>The pharaoh's daughter broke her father's law to save Moses. Was she right to do this? Should we sometimes disobey laws that are cruel?</p><div class="speak-hint">💡 Use: <span>"I believe... / On one hand... / On the other hand..."</span></div></div>
+</section>
+
+<!-- PART 8 IDEAS -->
+<section class="sec" id="p8">
+  <div class="sec-header"><div class="sec-num">8</div><div><div class="sec-title">Ideas &amp; Society</div><div class="sec-sub">Big questions — think freely</div></div></div>
+  <div class="idea-q"><div class="idea-icon">💝</div><div class="idea-text"><strong>A mother put her baby in a river to save him.</strong> What does this story tell us about the love between parents and children? Can you think of any modern examples of parents sacrificing for their children?</div></div>
+  <div class="idea-q"><div class="idea-icon">⚖️</div><div class="idea-text"><strong>The pharaoh's daughter disobeyed her father's law.</strong> Are there situations where breaking a law is the right thing to do? What makes a law unjust?</div></div>
+  <div class="idea-q"><div class="idea-icon">🧠</div><div class="idea-text"><strong>Miriam was very clever and quick-thinking.</strong> Why is quick thinking important in dangerous situations? Can you think of a time when thinking fast helped someone?</div></div>
+  <div class="idea-q"><div class="idea-icon">🌊</div><div class="idea-text"><strong>Rivers appear many times in this story.</strong> In what ways are rivers important to human life? Think about: water, food, transport, and civilization.</div></div>
+</section>
+
+<!-- PART 9 IELTS -->
+<section class="sec" id="p9">
+  <div class="sec-header"><div class="sec-num">9</div><div><div class="sec-title">IELTS Content Builder</div><div class="sec-sub">Planting seeds for your future</div></div></div>
+  <div class="ielts-topic"><div class="ielts-topic-label">📘 Today's IELTS Topic</div><h4>Human Rights and the Protection of Children</h4></div>
+  <p style="font-size:13px;color:var(--text3);margin-bottom:.75rem;">Moses' story is about a child at risk. Child protection is a serious topic in IELTS Speaking and Writing.</p>
+  <p style="font-size:12px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;color:var(--text3);margin-bottom:.5rem;">Useful vocabulary</p>
+  <div class="vocab-chips">
+    <span class="chip amber">human rights</span><span class="chip amber">child protection</span><span class="chip amber">injustice</span><span class="chip amber">oppression</span>
+    <span class="chip">vulnerable groups</span><span class="chip">government policy</span><span class="chip">moral responsibility</span><span class="chip">conscience</span>
+  </div>
+  <p style="font-size:12px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;color:var(--text3);margin:.875rem 0 .5rem;">Useful collocations</p>
+  <div class="vocab-chips">
+    <span class="chip">protect the innocent</span><span class="chip">face persecution</span><span class="chip">civil disobedience</span><span class="chip">act of courage</span><span class="chip">moral duty</span>
+  </div>
+  <div class="ielts-qs">
+    <div class="ielts-q"><div class="ielts-q-num">S1</div><div class="ielts-q-text">Do governments have a responsibility to protect children? Why?</div></div>
+    <div class="ielts-q"><div class="ielts-q-num">S2</div><div class="ielts-q-text">What happens when laws are unjust? Who is responsible for changing them?</div></div>
+    <div class="ielts-q"><div class="ielts-q-num">S3</div><div class="ielts-q-text">Can one person's brave decision change history? Give an example.</div></div>
+  </div>
+  <div class="ielts-w2">
+    <div class="ielts-w2-label">✏️ IELTS Writing Task 2 — Future Practice</div>
+    <p>"Some people believe that individuals have a moral duty to disobey laws they consider unjust. Others argue that breaking the law always leads to chaos. Discuss both views and give your opinion."</p>
+  </div>
+</section>
+
+<!-- PART 10 REVIEW -->
+<section class="sec" id="p10">
+  <div class="sec-header"><div class="sec-num">10</div><div><div class="sec-title">Review</div><div class="sec-sub">What did you learn today?</div></div></div>
+  <p style="font-size:12px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;color:var(--text3);margin-bottom:.75rem;">⭐ Star Words</p>
+  <div class="star-words">
+    <span class="star-word">⭐ pharaoh</span><span class="star-word">⭐ dreadful</span><span class="star-word">⭐ courage</span><span class="star-word">⭐ drift</span><span class="star-word">⭐ deliver</span><span class="star-word">⭐ mourn</span>
+  </div>
+  <div class="think-box">
+    <div class="think-head">💡 Think About It</div>
+    <p>Moses was saved by three women: his mother, his sister Miriam, and the pharaoh's daughter. Each showed <strong>courage in a different way</strong>. Remember: history is shaped not only by kings and armies — but by ordinary people making brave choices.</p>
+  </div>
+  <p style="font-size:12px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;color:var(--text3);margin:.875rem 0 .75rem;">🧠 Mini Quiz</p>
+  <div class="mini-quiz-q">
+    <div class="mq-text">A. Why did Moses' mother put him in a basket on the river?</div>
+    <div class="mq-opts">
+      <button class="mq-opt" onclick="mq(this,'wrong')">She didn't want him anymore.</button>
+      <button class="mq-opt" onclick="mq(this,'correct')">To hide him from the pharaoh's soldiers who were killing baby boys.</button>
+      <button class="mq-opt" onclick="mq(this,'wrong')">She wanted the princess to find him.</button>
+    </div>
+  </div>
+  <div class="mini-quiz-q">
+    <div class="mq-text">B. "She coated the basket with tar ________ it would float." Choose the correct word.</div>
+    <div class="mq-opts">
+      <button class="mq-opt" onclick="mq(this,'wrong')">because</button>
+      <button class="mq-opt" onclick="mq(this,'correct')">so that</button>
+      <button class="mq-opt" onclick="mq(this,'wrong')">when</button>
+    </div>
+  </div>
+  <div class="mini-quiz-q">
+    <div class="mq-text">C. Who gave Moses his name?</div>
+    <div class="mq-opts">
+      <button class="mq-opt" onclick="mq(this,'wrong')">His real mother</button>
+      <button class="mq-opt" onclick="mq(this,'wrong')">The pharaoh</button>
+      <button class="mq-opt" onclick="mq(this,'correct')">The pharaoh's daughter</button>
+    </div>
+  </div>
+  <div class="lesson-nav">
+    <a class="nav-btn" href="ch14-a.html"><i class="ti ti-arrow-left"></i> Lesson 14A</a>
+    <a class="nav-btn primary" href="ch14-c.html">Next: Lesson 14C — The Exodus <i class="ti ti-arrow-right"></i></a>
+  </div>
+</section>
+</main>
+<footer class="site-footer"><strong>Lexilink Ideation IELTS STUDIO</strong> · History ESL Course · Chapter 14 — Lesson B</footer>
+<script>
+function toggleVocab(c){c.classList.toggle('open');}
+function mcq(btn,t){const i=btn.closest('.q-item');i.querySelectorAll('.q-opt').forEach(b=>{b.classList.remove('correct','wrong');b.disabled=true;});btn.classList.add(t);const f=i.querySelector('.q-feedback');f.className='q-feedback show '+(t==='correct'?'good':'bad');f.textContent=t==='correct'?'✓ Correct! Well done!':'✗ Not quite. Read the story again.';}
+function tf(btn,t,msg){const i=btn.closest('.q-item');i.querySelectorAll('.tf-btn').forEach(b=>{b.classList.remove('correct','wrong');b.disabled=true;});btn.classList.add(t);const f=i.querySelector('.q-feedback');f.className='q-feedback show '+(t==='correct'?'good':'bad');f.textContent=(t==='correct'?'✓ ':'✗ ')+msg;}
+function mq(btn,t){const i=btn.closest('.mini-quiz-q');i.querySelectorAll('.mq-opt').forEach(b=>{b.classList.remove('correct','wrong');b.disabled=true;});btn.classList.add(t);}
+function checkFill(id,ans,rid){const v=document.getElementById(id).value.trim().toLowerCase();const r=document.getElementById(rid);const ok=v===ans||v.includes(ans);r.className='sb-result show '+(ok?'ok':'no');r.textContent=ok?'✓ Correct!':'✗ Answer: "'+ans+'"';}
+function checkUnscramble(id,ans,rid){const v=document.getElementById(id).value.trim().toLowerCase().replace(/[^a-z\s]/g,'');const r=document.getElementById(rid);r.className='sb-result show '+(v===ans?'ok':'no');r.textContent=v===ans?'✓ Perfect!':'✗ Answer: "'+ans.charAt(0).toUpperCase()+ans.slice(1)+'"';}
+function goTo(id){document.getElementById(id).scrollIntoView({behavior:'smooth',block:'start'});}
+const parts=['p1','p2','p3','p4','p5','p6','p7','p8','p9','p10'];
+const partEls=document.querySelectorAll('.lp-part');
+window.addEventListener('scroll',()=>{
+  let cur=0;parts.forEach((id,i)=>{const el=document.getElementById(id);if(el&&el.getBoundingClientRect().top<200)cur=i;});
+  partEls.forEach((el,i)=>{el.classList.remove('active','done');if(i<cur)el.classList.add('done');else if(i===cur)el.classList.add('active');});
+  document.getElementById('prog-fill').style.width=Math.round(((cur+1)/10)*100)+'%';
+});
+</script>
+</body>
+</html>

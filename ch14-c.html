@@ -1,0 +1,579 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/><meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+<title>Lesson 14C — The Exodus | Lexilink History Workshop</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"/><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet"/>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@latest/tabler-icons.min.css"/>
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
+:root{--bg:#0F0800;--surface:rgba(255,255,255,0.04);--surface2:rgba(255,255,255,0.07);--border:rgba(255,255,255,0.10);--border2:rgba(255,255,255,0.06);--amber-300:#E8A832;--amber-400:#D4890F;--amber-500:#B8720A;--amber-bg:rgba(212,137,15,0.12);--amber-border:rgba(212,137,15,0.3);--text:#fff;--text2:rgba(255,255,255,0.72);--text3:rgba(255,255,255,0.45);--teal:#1D9E75;--teal-bg:rgba(29,158,117,0.12);--teal-border:rgba(29,158,117,0.3);--coral:#E05C3A;--coral-bg:rgba(224,92,58,0.12);--blue:#4A9EE0;--blue-bg:rgba(74,158,224,0.12);--r:12px;--r-sm:8px;}
+html{scroll-behavior:smooth;}
+body{font-family:'Inter',sans-serif;background:var(--bg);color:var(--text);min-height:100vh;line-height:1.6;}
+.site-header{background:#111;border-bottom:1px solid rgba(255,255,255,0.08);position:sticky;top:0;z-index:100;}
+.hdr{max-width:860px;margin:0 auto;padding:0 1.5rem;height:54px;display:flex;align-items:center;gap:12px;}
+.logo-wrap{display:flex;align-items:center;gap:8px;text-decoration:none;}
+.logo-icon{width:30px;height:30px;display:flex;align-items:center;justify-content:center;}
+.logo-icon svg{width:26px;height:26px;}
+.logo-name{font-size:13px;font-weight:700;color:#fff;}
+.hdr-pipe{width:1px;height:20px;background:rgba(255,255,255,0.15);}
+.hdr-back{display:flex;align-items:center;gap:5px;font-size:12px;color:var(--text3);text-decoration:none;transition:color .15s;}
+.hdr-back:hover{color:var(--text2);}
+.hdr-spacer{flex:1;}
+.hdr-badge{font-size:10px;font-weight:700;letter-spacing:.05em;padding:3px 10px;border-radius:99px;border:1px solid var(--amber-border);color:var(--amber-300);background:var(--amber-bg);}
+.lesson-hero{background:linear-gradient(135deg,#1A0A00 0%,#3D2000 40%,#5C3000 70%,#3D1A00 100%);padding:3rem 1.5rem 2.5rem;text-align:center;position:relative;overflow:hidden;}
+.lesson-hero::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse 70% 60% at 50% 50%,rgba(160,100,0,0.2),transparent);pointer-events:none;}
+.lesson-eyebrow{font-size:10px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--amber-300);margin-bottom:.75rem;}
+.lesson-hero h1{font-size:clamp(22px,4vw,36px);font-weight:700;color:#fff;letter-spacing:-.02em;margin-bottom:.5rem;}
+.lesson-hero p{font-size:14px;color:rgba(255,255,255,0.65);max-width:520px;margin:0 auto .875rem;}
+.lesson-pills{display:flex;flex-wrap:wrap;justify-content:center;gap:8px;}
+.l-pill{font-size:11px;font-weight:500;padding:4px 12px;border-radius:99px;border:1px solid rgba(255,255,255,0.18);color:rgba(255,255,255,0.75);background:rgba(255,255,255,0.06);}
+.lesson-progress{background:#1A1100;border-bottom:1px solid rgba(255,255,255,0.06);padding:.75rem 1.5rem;}
+.lp-inner{max-width:860px;margin:0 auto;}
+.lp-labels{display:flex;justify-content:space-between;font-size:11px;color:var(--text3);margin-bottom:6px;}
+.lp-track{height:4px;border-radius:99px;background:rgba(255,255,255,0.08);}
+.lp-fill{height:100%;border-radius:99px;background:linear-gradient(90deg,var(--amber-500),var(--amber-300));width:10%;}
+.lp-parts{display:flex;gap:4px;margin-top:8px;flex-wrap:wrap;}
+.lp-part{font-size:10px;font-weight:600;padding:2px 8px;border-radius:99px;background:rgba(255,255,255,0.06);color:var(--text3);cursor:pointer;transition:all .15s;}
+.lp-part.done{background:var(--amber-bg);color:var(--amber-300);border:1px solid var(--amber-border);}
+.lp-part.active{background:var(--amber-400);color:#1A0800;}
+.main{max-width:860px;margin:0 auto;padding:2rem 1.5rem 5rem;}
+.sec{background:var(--surface);border:1px solid var(--border);border-radius:var(--r);padding:1.5rem;margin-bottom:1.5rem;scroll-margin-top:80px;}
+.sec-header{display:flex;align-items:center;gap:10px;margin-bottom:1.25rem;}
+.sec-num{width:28px;height:28px;border-radius:8px;display:flex;align-items:center;justify-content:center;font-size:11px;font-weight:700;background:var(--amber-bg);color:var(--amber-300);border:1px solid var(--amber-border);flex-shrink:0;}
+.sec-title{font-size:16px;font-weight:700;color:#fff;}
+.sec-sub{font-size:12px;color:var(--text3);margin-top:1px;}
+.vocab-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(240px,1fr));gap:10px;}
+.vocab-card{background:var(--surface2);border:1px solid var(--border2);border-radius:var(--r-sm);padding:1rem;cursor:pointer;transition:border-color .15s;}
+.vocab-card:hover,.vocab-card.open{border-color:var(--amber-border);}
+.vc-top{display:flex;align-items:baseline;gap:8px;}
+.vc-word{font-size:16px;font-weight:700;color:#fff;}
+.vc-pos{font-size:10px;font-weight:600;padding:1px 7px;border-radius:99px;background:var(--amber-bg);color:var(--amber-300);}
+.vc-pron{font-size:12px;color:var(--text3);margin-top:2px;font-style:italic;}
+.vc-cn{font-size:15px;color:var(--amber-300);margin-top:4px;font-weight:600;}
+.vc-detail{display:none;margin-top:10px;padding-top:10px;border-top:1px solid var(--border2);}
+.vocab-card.open .vc-detail{display:block;}
+.vc-def{font-size:13px;color:var(--text2);margin-bottom:6px;}
+.vc-ex{font-size:12px;color:var(--text3);font-style:italic;padding-left:8px;border-left:2px solid var(--amber-border);}
+.story-body p{font-size:15px;color:var(--text2);line-height:1.8;margin-bottom:1rem;}
+.story-body p:last-child{margin-bottom:0;}
+.story-hl{color:var(--amber-300);font-weight:600;}
+.story-box{background:var(--amber-bg);border:1px solid var(--amber-border);border-radius:var(--r-sm);padding:1rem 1.25rem;margin:1.25rem 0;font-size:14px;color:rgba(255,255,255,0.85);line-height:1.7;font-style:italic;}
+.story-icon{font-size:40px;text-align:center;margin:1rem 0;}
+.plague-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(180px,1fr));gap:8px;margin:1rem 0;}
+.plague-card{background:var(--surface2);border:1px solid var(--border2);border-radius:var(--r-sm);padding:.75rem 1rem;display:flex;align-items:center;gap:10px;}
+.plague-icon{font-size:22px;flex-shrink:0;}
+.plague-text{font-size:13px;color:var(--text2);}
+.plague-text strong{color:#fff;display:block;font-size:12px;}
+.quiz-list{display:flex;flex-direction:column;gap:14px;}
+.q-item{background:var(--surface2);border:1px solid var(--border2);border-radius:var(--r-sm);padding:1rem 1.25rem;}
+.q-text{font-size:14px;font-weight:600;color:#fff;margin-bottom:.75rem;}
+.q-opts{display:flex;flex-direction:column;gap:6px;}
+.q-opt{display:flex;align-items:center;gap:10px;padding:8px 12px;border-radius:8px;border:1px solid var(--border);background:transparent;cursor:pointer;font-size:13px;color:var(--text2);width:100%;text-align:left;transition:all .15s;}
+.q-opt:hover{border-color:var(--amber-border);background:var(--amber-bg);}
+.q-opt.correct{border-color:var(--teal-border);background:var(--teal-bg);color:#fff;}
+.q-opt.wrong{border-color:rgba(224,92,58,0.4);background:var(--coral-bg);color:#fff;}
+.q-feedback{font-size:12px;margin-top:8px;padding:6px 10px;border-radius:6px;display:none;}
+.q-feedback.show{display:block;}
+.q-feedback.good{background:var(--teal-bg);color:#5DCAA5;}
+.q-feedback.bad{background:var(--coral-bg);color:#F09B80;}
+.tf-opts{display:flex;gap:8px;}
+.tf-btn{flex:1;padding:8px;border-radius:8px;border:1px solid var(--border);background:transparent;cursor:pointer;font-size:13px;font-weight:600;color:var(--text2);transition:all .15s;}
+.tf-btn:hover{border-color:var(--amber-border);background:var(--amber-bg);}
+.tf-btn.correct{border-color:var(--teal-border);background:var(--teal-bg);color:#fff;}
+.tf-btn.wrong{border-color:rgba(224,92,58,0.4);background:var(--coral-bg);color:#fff;}
+.grammar-box{background:var(--surface2);border-left:3px solid var(--amber-400);border-radius:0 var(--r-sm) var(--r-sm) 0;padding:1rem 1.25rem;margin-bottom:1rem;}
+.grammar-label{font-size:10px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--amber-300);margin-bottom:.5rem;}
+.grammar-rule{font-size:14px;color:#fff;font-weight:600;margin-bottom:.5rem;}
+.grammar-eg{font-size:13px;color:var(--text2);margin-top:.35rem;font-style:italic;}
+.grammar-eg span{color:var(--amber-300);font-weight:600;font-style:normal;}
+.sb-activity{margin-bottom:1.25rem;}
+.sb-label{font-size:11px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;color:var(--amber-300);margin-bottom:.75rem;}
+.sb-input{width:100%;background:var(--surface2);border:1px solid var(--border);border-radius:var(--r-sm);padding:.625rem .875rem;font-size:14px;color:#fff;font-family:'Inter',sans-serif;transition:border-color .15s;outline:none;margin-bottom:.5rem;}
+.sb-input:focus{border-color:var(--amber-border);}
+.sb-check{padding:7px 18px;border-radius:99px;background:var(--amber-400);color:#1A0800;font-size:13px;font-weight:700;border:none;cursor:pointer;transition:opacity .15s;}
+.sb-check:hover{opacity:.85;}
+.sb-result{font-size:12px;margin-top:6px;padding:6px 10px;border-radius:6px;display:none;}
+.sb-result.show{display:block;}
+.sb-result.ok{background:var(--teal-bg);color:#5DCAA5;}
+.sb-result.no{background:var(--coral-bg);color:#F09B80;}
+.speak-badge{display:inline-flex;align-items:center;gap:6px;font-size:11px;font-weight:700;padding:3px 12px;border-radius:99px;margin-bottom:.875rem;}
+.speak-badge.l1{background:var(--teal-bg);color:#5DCAA5;border:1px solid var(--teal-border);}
+.speak-badge.l2{background:var(--amber-bg);color:var(--amber-300);border:1px solid var(--amber-border);}
+.speak-badge.l3{background:var(--blue-bg);color:var(--blue);border:1px solid rgba(74,158,224,0.3);}
+.speak-q{background:var(--surface2);border:1px solid var(--border2);border-radius:var(--r-sm);padding:1rem 1.25rem;margin-bottom:.75rem;}
+.speak-q p{font-size:14px;font-weight:600;color:#fff;margin-bottom:.5rem;}
+.speak-hint{font-size:12px;color:var(--text3);}
+.speak-hint span{color:var(--amber-300);}
+.idea-q{background:var(--surface2);border:1px solid var(--border2);border-radius:var(--r-sm);padding:1rem 1.25rem;margin-bottom:.75rem;display:flex;gap:10px;}
+.idea-icon{font-size:20px;flex-shrink:0;margin-top:2px;}
+.idea-text{font-size:14px;color:var(--text2);line-height:1.6;}
+.idea-text strong{color:#fff;}
+.ielts-topic{background:var(--blue-bg);border:1px solid rgba(74,158,224,0.25);border-radius:var(--r-sm);padding:1rem 1.25rem;margin-bottom:1.25rem;}
+.ielts-topic-label{font-size:10px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--blue);margin-bottom:.25rem;}
+.ielts-topic h4{font-size:16px;font-weight:700;color:#fff;}
+.vocab-chips{display:flex;flex-wrap:wrap;gap:6px;margin-top:.75rem;}
+.chip{font-size:12px;padding:4px 12px;border-radius:99px;background:rgba(255,255,255,0.06);border:1px solid var(--border);color:var(--text2);}
+.chip.amber{background:var(--amber-bg);border-color:var(--amber-border);color:var(--amber-300);}
+.ielts-qs{display:flex;flex-direction:column;gap:8px;margin-top:1rem;}
+.ielts-q{display:flex;gap:10px;background:var(--surface2);border-radius:var(--r-sm);padding:.875rem 1rem;}
+.ielts-q-num{font-size:11px;font-weight:700;color:var(--blue);min-width:20px;}
+.ielts-q-text{font-size:13px;color:var(--text2);}
+.ielts-w2{background:rgba(74,158,224,0.08);border:1px solid rgba(74,158,224,0.2);border-radius:var(--r-sm);padding:1rem 1.25rem;margin-top:1rem;}
+.ielts-w2-label{font-size:10px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--blue);margin-bottom:.5rem;}
+.ielts-w2 p{font-size:14px;color:var(--text2);line-height:1.7;font-style:italic;}
+.star-words{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:1.25rem;}
+.star-word{padding:6px 14px;border-radius:99px;background:var(--amber-bg);border:1px solid var(--amber-border);font-size:13px;font-weight:600;color:var(--amber-300);}
+.think-box{background:var(--surface2);border:1px solid var(--border2);border-radius:var(--r-sm);padding:1rem 1.25rem;margin-bottom:1rem;}
+.think-box .think-head{font-size:12px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;color:var(--amber-300);margin-bottom:.5rem;}
+.think-box p{font-size:14px;color:var(--text2);}
+.mini-quiz-q{background:var(--surface2);border:1px solid var(--border2);border-radius:var(--r-sm);padding:1rem;margin-bottom:.75rem;}
+.mq-text{font-size:13px;font-weight:600;color:#fff;margin-bottom:.625rem;}
+.mq-opts{display:flex;flex-direction:column;gap:5px;}
+.mq-opt{padding:7px 12px;border-radius:6px;border:1px solid var(--border);background:transparent;font-size:12px;color:var(--text2);cursor:pointer;text-align:left;transition:all .15s;}
+.mq-opt:hover{border-color:var(--amber-border);background:var(--amber-bg);}
+.mq-opt.correct{border-color:var(--teal-border);background:var(--teal-bg);color:#fff;}
+.mq-opt.wrong{border-color:rgba(224,92,58,0.4);background:var(--coral-bg);color:#fff;}
+/* REVIEW PROJECT */
+.project-box{background:linear-gradient(135deg,rgba(212,137,15,0.08),rgba(74,158,224,0.06));border:1px solid var(--amber-border);border-radius:var(--r);padding:1.5rem;margin-bottom:1.25rem;}
+.project-title{font-size:18px;font-weight:700;color:var(--amber-300);margin-bottom:.5rem;}
+.project-sub{font-size:13px;color:var(--text3);margin-bottom:1.25rem;}
+.project-step{display:flex;gap:12px;margin-bottom:1rem;}
+.project-step-num{width:26px;height:26px;border-radius:50%;background:var(--amber-400);color:#1A0800;font-size:12px;font-weight:700;display:flex;align-items:center;justify-content:center;flex-shrink:0;margin-top:2px;}
+.project-step-text{font-size:14px;color:var(--text2);line-height:1.6;}
+.project-step-text strong{color:#fff;}
+.label-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(130px,1fr));gap:8px;margin-top:1rem;}
+.label-chip{background:var(--surface2);border:1px solid var(--border);border-radius:var(--r-sm);padding:.625rem .875rem;font-size:13px;font-weight:600;color:var(--amber-300);text-align:center;}
+.chapter-summary{background:var(--surface2);border:1px solid var(--border2);border-radius:var(--r-sm);padding:1.25rem;margin-bottom:1rem;}
+.chapter-summary h4{font-size:14px;font-weight:700;color:#fff;margin-bottom:.75rem;}
+.summary-item{display:flex;gap:10px;font-size:13px;color:var(--text2);margin-bottom:.5rem;align-items:flex-start;}
+.summary-dot{width:6px;height:6px;border-radius:50%;background:var(--amber-400);flex-shrink:0;margin-top:6px;}
+.lesson-nav{display:flex;gap:10px;margin-top:2rem;}
+.nav-btn{display:flex;align-items:center;gap:6px;padding:.75rem 1.25rem;border-radius:10px;font-size:13px;font-weight:600;cursor:pointer;text-decoration:none;border:1px solid var(--border);color:var(--text2);background:var(--surface);transition:all .15s;flex:1;justify-content:center;}
+.nav-btn:hover{border-color:var(--border2);color:#fff;}
+.nav-btn.primary{background:var(--amber-400);color:#1A0800;border-color:transparent;}
+.nav-btn.primary:hover{opacity:.9;}
+.site-footer{background:#111;border-top:1px solid rgba(255,255,255,0.07);text-align:center;padding:1.5rem;font-size:12px;color:rgba(255,255,255,0.3);}
+.site-footer strong{color:var(--amber-300);}
+@media(max-width:600px){.vocab-grid{grid-template-columns:1fr;}.lesson-nav{flex-direction:column;}.plague-grid{grid-template-columns:1fr 1fr;}}
+</style>
+</head>
+<body>
+<header class="site-header">
+  <div class="hdr">
+    <a class="logo-wrap" href="../index.html">
+      <div class="logo-icon"><svg viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path d="M6 24 C8 18,14 10,24 6 C20 10,18 14,20 18 C16 16,12 18,6 24Z" fill="white"/><path d="M20 18 C22 20,22 23,20 26 C18 24,18 21,20 18Z" fill="rgba(255,255,255,0.5)"/></svg></div>
+      <span class="logo-name">Lexilink Ideation IELTS STUDIO</span>
+    </a>
+    <div class="hdr-pipe"></div>
+    <a class="hdr-back" href="../index.html"><i class="ti ti-arrow-left" aria-hidden="true"></i> Vol. 1</a>
+    <div class="hdr-spacer"></div>
+    <span class="hdr-badge">Lesson 14C</span>
+  </div>
+</header>
+
+<section class="lesson-hero">
+  <p class="lesson-eyebrow">Chapter 14 · The Israelites Leave Egypt</p>
+  <h1>The Exodus From Egypt</h1>
+  <p>Ten plagues, a parted sea, and the birth of freedom</p>
+  <div class="lesson-pills">
+    <span class="l-pill">📖 Story + Vocabulary</span>
+    <span class="l-pill">🎤 Speaking</span>
+    <span class="l-pill">✏️ Grammar</span>
+    <span class="l-pill">⭐ CEFR B1</span>
+  </div>
+</section>
+
+<div class="lesson-progress">
+  <div class="lp-inner">
+    <div class="lp-labels"><span>Lesson 14C of 4</span><span style="color:var(--amber-300)">Part 1 of 10</span></div>
+    <div class="lp-track"><div class="lp-fill" id="prog-fill" style="width:10%"></div></div>
+    <div class="lp-parts">
+      <span class="lp-part active" onclick="goTo('p1')">1 Vocab</span><span class="lp-part" onclick="goTo('p2')">2 Story</span><span class="lp-part" onclick="goTo('p3')">3 Reading</span><span class="lp-part" onclick="goTo('p4')">4 Grammar</span><span class="lp-part" onclick="goTo('p5')">5 Builder</span><span class="lp-part" onclick="goTo('p6')">6 Speaking 1</span><span class="lp-part" onclick="goTo('p7')">7 Speaking 2</span><span class="lp-part" onclick="goTo('p8')">8 Ideas</span><span class="lp-part" onclick="goTo('p9')">9 IELTS</span><span class="lp-part" onclick="goTo('p10')">10 Review</span>
+    </div>
+  </div>
+</div>
+
+<main class="main">
+
+<!-- PART 1 -->
+<section class="sec" id="p1">
+  <div class="sec-header"><div class="sec-num">1</div><div><div class="sec-title">Vocabulary</div><div class="sec-sub">Click each word to learn more</div></div></div>
+  <div class="vocab-grid">
+    <div class="vocab-card" onclick="toggleVocab(this)">
+      <div class="vc-top"><span class="vc-word">plague</span><span class="vc-pos">noun</span></div>
+      <div class="vc-pron">/pleɪɡ/</div><div class="vc-cn">瘟疫；天灾</div>
+      <div class="vc-detail"><div class="vc-def">A terrible disaster, often a disease or a large event that harms many people.</div><div class="vc-ex">"Moses told the pharaoh that God would send ten plagues on Egypt."</div></div>
+    </div>
+    <div class="vocab-card" onclick="toggleVocab(this)">
+      <div class="vc-top"><span class="vc-word">sacred</span><span class="vc-pos">adjective</span></div>
+      <div class="vc-pron">/ˈseɪ.krɪd/</div><div class="vc-cn">神圣的</div>
+      <div class="vc-detail"><div class="vc-def">Very holy and special to a religion; treated with great respect.</div><div class="vc-ex">"Frogs were sacred to the Egyptians because they belonged to the goddess Isis."</div></div>
+    </div>
+    <div class="vocab-card" onclick="toggleVocab(this)">
+      <div class="vc-top"><span class="vc-word">conquer</span><span class="vc-pos">verb</span></div>
+      <div class="vc-pron">/ˈkɒŋ.kər/</div><div class="vc-cn">征服；战胜</div>
+      <div class="vc-detail"><div class="vc-def">To defeat and take control of something or someone.</div><div class="vc-ex">"The God of Moses was able to conquer all the gods of Egypt."</div></div>
+    </div>
+    <div class="vocab-card" onclick="toggleVocab(this)">
+      <div class="vc-top"><span class="vc-word">staff</span><span class="vc-pos">noun</span></div>
+      <div class="vc-pron">/stɑːf/</div><div class="vc-cn">手杖；权杖</div>
+      <div class="vc-detail"><div class="vc-def">A long thick stick used as a tool or weapon. Moses used his staff to perform miracles.</div><div class="vc-ex">"Moses raised his staff, and God parted the waters of the Red Sea."</div></div>
+    </div>
+    <div class="vocab-card" onclick="toggleVocab(this)">
+      <div class="vc-top"><span class="vc-word">part</span><span class="vc-pos">verb</span></div>
+      <div class="vc-pron">/pɑːt/</div><div class="vc-cn">（使）分开；劈开</div>
+      <div class="vc-detail"><div class="vc-def">To split into two, creating a space in the middle.</div><div class="vc-ex">"God parted the waters so the Israelites could walk through on dry ground."</div></div>
+    </div>
+    <div class="vocab-card" onclick="toggleVocab(this)">
+      <div class="vc-top"><span class="vc-word">chariot</span><span class="vc-pos">noun</span></div>
+      <div class="vc-pron">/ˈtʃær.i.ət/</div><div class="vc-cn">战车</div>
+      <div class="vc-detail"><div class="vc-def">A vehicle pulled by horses, used in ancient times for war or racing.</div><div class="vc-ex">"The Egyptians drove their war chariots into the sea after the Israelites."</div></div>
+    </div>
+    <div class="vocab-card" onclick="toggleVocab(this)">
+      <div class="vc-top"><span class="vc-word">Exodus</span><span class="vc-pos">noun</span></div>
+      <div class="vc-pron">/ˈek.sə.dəs/</div><div class="vc-cn">出埃及记；大规模离开</div>
+      <div class="vc-detail"><div class="vc-def">The departure of the Israelites from Egypt. Today, it means any large group of people leaving a place.</div><div class="vc-ex">"This part of Israel's history is now called the Exodus."</div></div>
+    </div>
+    <div class="vocab-card" onclick="toggleVocab(this)">
+      <div class="vc-top"><span class="vc-word">drown</span><span class="vc-pos">verb</span></div>
+      <div class="vc-pron">/draʊn/</div><div class="vc-cn">溺死；淹死</div>
+      <div class="vc-detail"><div class="vc-def">To die by going under water and not being able to breathe.</div><div class="vc-ex">"The water flooded back and drowned the Egyptian army."</div></div>
+    </div>
+    <div class="vocab-card" onclick="toggleVocab(this)">
+      <div class="vc-top"><span class="vc-word">mistreat</span><span class="vc-pos">verb</span></div>
+      <div class="vc-pron">/ˌmɪsˈtriːt/</div><div class="vc-cn">虐待；不公正对待</div>
+      <div class="vc-detail"><div class="vc-def">To treat a person or animal badly or cruelly.</div><div class="vc-ex">"Moses grew up and saw that his people were being beaten and mistreated."</div></div>
+    </div>
+    <div class="vocab-card" onclick="toggleVocab(this)">
+      <div class="vc-top"><span class="vc-word">refuse</span><span class="vc-pos">verb</span></div>
+      <div class="vc-pron">/rɪˈfjuːz/</div><div class="vc-cn">拒绝</div>
+      <div class="vc-detail"><div class="vc-def">To say no to something; to not do what someone asks.</div><div class="vc-ex">"The pharaoh refused to let the Israelites leave Egypt."</div></div>
+    </div>
+    <div class="vocab-card" onclick="toggleVocab(this)">
+      <div class="vc-top"><span class="vc-word">trapped</span><span class="vc-pos">adjective</span></div>
+      <div class="vc-pron">/træpt/</div><div class="vc-cn">被困住的</div>
+      <div class="vc-detail"><div class="vc-def">Unable to escape from a place or situation.</div><div class="vc-ex">"'We are trapped!' they cried. 'Water in front, Egyptians behind!'"</div></div>
+    </div>
+    <div class="vocab-card" onclick="toggleVocab(this)">
+      <div class="vc-top"><span class="vc-word">clutches</span><span class="vc-pos">noun</span></div>
+      <div class="vc-pron">/ˈklʌtʃ.ɪz/</div><div class="vc-cn">魔爪；控制</div>
+      <div class="vc-detail"><div class="vc-def">The control of someone with power over you. (Often used to show danger.)</div><div class="vc-ex">"Even slaves could escape from the clutches of the Egyptian army."</div></div>
+    </div>
+  </div>
+</section>
+
+<!-- PART 2 STORY -->
+<section class="sec" id="p2">
+  <div class="sec-header"><div class="sec-num">2</div><div><div class="sec-title">The Story</div><div class="sec-sub">Moses grows up — and the greatest escape in history begins</div></div></div>
+  <div class="story-body">
+    <div class="story-icon">👨</div>
+    <p><span class="story-hl">Moses</span> grew up in the palace of the pharaoh. He ate fine food. He wore fine clothes. But one day, he discovered something that changed his life forever: he was not Egyptian. He was an <span class="story-hl">Israelite</span>.</p>
+    <p>Moses went out and saw his own people — beaten, working in the hot sun, <span class="story-hl">mistreated</span>. He was angry. So he went to the pharaoh.</p>
+    <p>"I am an Israelite," he said, "and I worship the one God of the Israelites. God says: <strong>Let the Israelites go!</strong>"</p>
+    <p>But the pharaoh <span class="story-hl">refused</span>. He did not want to lose his slaves. So Moses warned him: if the pharaoh would not free the Israelites, God would send ten <span class="story-hl">plagues</span> on Egypt.</p>
+    <div class="story-icon">🌊</div>
+    <p>Each plague was a challenge to the Egyptian gods. The Egyptians believed their gods were the most powerful in the world. But one by one, the plagues proved them wrong.</p>
+
+    <div class="plague-grid">
+      <div class="plague-card"><div class="plague-icon">🩸</div><div class="plague-text"><strong>Plague 1</strong>River turned to blood — killing all fish</div></div>
+      <div class="plague-card"><div class="plague-icon">🐸</div><div class="plague-text"><strong>Plague 2</strong>Frogs everywhere — in beds, food, and clothes</div></div>
+      <div class="plague-card"><div class="plague-icon">🦟</div><div class="plague-text"><strong>Plague 3</strong>Lice and insects covered the land</div></div>
+      <div class="plague-card"><div class="plague-icon">🪰</div><div class="plague-text"><strong>Plague 4</strong>Flies swarmed across Egypt</div></div>
+      <div class="plague-card"><div class="plague-icon">🐂</div><div class="plague-text"><strong>Plague 5</strong>Animals became sick and died</div></div>
+      <div class="plague-card"><div class="plague-icon">🔴</div><div class="plague-text"><strong>Plague 6</strong>Painful sores appeared on people</div></div>
+      <div class="plague-card"><div class="plague-icon">⛈️</div><div class="plague-text"><strong>Plague 7</strong>Hail and fire destroyed the crops</div></div>
+      <div class="plague-card"><div class="plague-icon">🦗</div><div class="plague-text"><strong>Plague 8</strong>Locusts ate all remaining food</div></div>
+      <div class="plague-card"><div class="plague-icon">🌑</div><div class="plague-text"><strong>Plague 9</strong>Darkness covered Egypt for three days</div></div>
+      <div class="plague-card"><div class="plague-icon">😢</div><div class="plague-text"><strong>Plague 10</strong>The firstborn son in every Egyptian family died</div></div>
+    </div>
+
+    <p>After the tenth plague, the pharaoh finally said yes. "Go!" he cried. "Take your people and leave!"</p>
+    <p>That very night, the Israelites packed everything and ran. But then the pharaoh changed his mind. He sent his army after them in their <span class="story-hl">chariots</span>.</p>
+    <div class="story-icon">🌊</div>
+    <p>The Israelites ran as fast as they could. But when they looked ahead, they saw water — the <span class="story-hl">Red Sea</span>. And when they looked behind, they saw the dust of the Egyptian army. They were <span class="story-hl">trapped</span>.</p>
+    <div class="story-box">"Moses, have you led us out of Egypt only to let us die here by the sea?"</div>
+    <p>Then Moses raised his <span class="story-hl">staff</span>. God <span class="story-hl">parted</span> the waters. Huge walls of water rose up on each side. The Israelites could see fish swimming inside the walls of water. But the ground beneath their feet was completely dry.</p>
+    <p>They walked all the way through the Red Sea. Then Moses raised his staff again. The water flooded back — and the entire Egyptian army was <span class="story-hl">drowned</span>.</p>
+    <p>The Israelites were finally free. This great escape is called the <span class="story-hl">Exodus</span>. It is one of the most important stories in all of history.</p>
+    <p>The Israelites walked back to Canaan, the land Abraham had once called home. They became a powerful kingdom. And Egypt, once the greatest empire in the world, began to grow weak.</p>
+  </div>
+</section>
+
+<!-- PART 3 READING -->
+<section class="sec" id="p3">
+  <div class="sec-header"><div class="sec-num">3</div><div><div class="sec-title">Reading Comprehension</div><div class="sec-sub">Test your understanding</div></div></div>
+  <div class="quiz-list">
+    <div class="q-item">
+      <div class="q-text">1. What did Moses discover when he grew up?</div>
+      <div class="q-opts">
+        <button class="q-opt" onclick="mcq(this,'wrong')">That he was the pharaoh's real son</button>
+        <button class="q-opt" onclick="mcq(this,'correct')">That he was an Israelite, not an Egyptian</button>
+        <button class="q-opt" onclick="mcq(this,'wrong')">That he had special powers</button>
+      </div><div class="q-feedback"></div>
+    </div>
+    <div class="q-item">
+      <div class="q-text">2. How many plagues did God send on Egypt?</div>
+      <div class="q-opts">
+        <button class="q-opt" onclick="mcq(this,'wrong')">Five</button>
+        <button class="q-opt" onclick="mcq(this,'wrong')">Seven</button>
+        <button class="q-opt" onclick="mcq(this,'correct')">Ten</button>
+      </div><div class="q-feedback"></div>
+    </div>
+    <div class="q-item">
+      <div class="q-text">3. True or False: The pharaoh agreed immediately when Moses asked him to free the Israelites.</div>
+      <div class="tf-opts">
+        <button class="tf-btn" onclick="tf(this,'wrong','Not correct — the pharaoh refused many times before finally agreeing.')">True</button>
+        <button class="tf-btn" onclick="tf(this,'correct','Correct! The pharaoh refused for a long time before the plagues forced him.')">False</button>
+      </div><div class="q-feedback"></div>
+    </div>
+    <div class="q-item">
+      <div class="q-text">4. Why were the Israelites "trapped" at the Red Sea?</div>
+      <div class="q-opts">
+        <button class="q-opt" onclick="mcq(this,'correct')">The sea was in front of them and the Egyptian army was behind them.</button>
+        <button class="q-opt" onclick="mcq(this,'wrong')">They lost all their belongings and couldn't move.</button>
+        <button class="q-opt" onclick="mcq(this,'wrong')">A storm blocked their path.</button>
+      </div><div class="q-feedback"></div>
+    </div>
+    <div class="q-item">
+      <div class="q-text">5. What happened to the Egyptian army in the Red Sea?</div>
+      <div class="q-opts">
+        <button class="q-opt" onclick="mcq(this,'wrong')">They turned back and went home.</button>
+        <button class="q-opt" onclick="mcq(this,'wrong')">They captured the Israelites.</button>
+        <button class="q-opt" onclick="mcq(this,'correct')">They were drowned when the water flooded back.</button>
+      </div><div class="q-feedback"></div>
+    </div>
+    <div class="q-item">
+      <div class="q-text">6. What does the word "Exodus" mean today?</div>
+      <div class="q-opts">
+        <button class="q-opt" onclick="mcq(this,'wrong')">A type of plague</button>
+        <button class="q-opt" onclick="mcq(this,'correct')">A large group of people leaving a place</button>
+        <button class="q-opt" onclick="mcq(this,'wrong')">The parting of the sea</button>
+      </div><div class="q-feedback"></div>
+    </div>
+  </div>
+</section>
+
+<!-- PART 4 GRAMMAR -->
+<section class="sec" id="p4">
+  <div class="sec-header"><div class="sec-num">4</div><div><div class="sec-title">Language Focus</div><div class="sec-sub">Grammar through the story</div></div></div>
+  <div class="grammar-box">
+    <div class="grammar-label">📌 Conditional — "if" clauses</div>
+    <div class="grammar-rule">We use <span class="hl">if</span> to talk about conditions and results.</div>
+    <div class="grammar-eg"><span>If</span> the pharaoh refused, God would send plagues.</div>
+    <div class="grammar-eg">"Have you led us out of Egypt only to let us die <span>if</span> the army catches us?"</div>
+    <div class="grammar-eg"><span>If</span> the pharaoh freed them, they would leave immediately.</div>
+  </div>
+  <div class="grammar-box">
+    <div class="grammar-label">📌 Passive voice — "was/were + past participle"</div>
+    <div class="grammar-rule">We use <span class="hl">passive voice</span> when we focus on what happened TO someone, not who did it.</div>
+    <div class="grammar-eg">Active: God <span>drowned</span> the Egyptian army.</div>
+    <div class="grammar-eg">Passive: The Egyptian army <span>was drowned</span>.</div>
+    <div class="grammar-eg">Active: The pharaoh <span>mistreated</span> the Israelites.</div>
+    <div class="grammar-eg">Passive: The Israelites <span>were mistreated</span> by the pharaoh.</div>
+  </div>
+  <div class="grammar-box">
+    <div class="grammar-label">📌 Contrast — "but then" / "however" / "finally"</div>
+    <div class="grammar-rule">These words show a change or a surprising development.</div>
+    <div class="grammar-eg">The pharaoh agreed to let them go. <span>But then</span> he changed his mind.</div>
+    <div class="grammar-eg">The plagues came one by one. <span>Finally</span>, the pharaoh agreed.</div>
+    <div class="grammar-eg">They were trapped. <span>However</span>, Moses raised his staff and the sea parted.</div>
+  </div>
+</section>
+
+<!-- PART 5 BUILDER -->
+<section class="sec" id="p5">
+  <div class="sec-header"><div class="sec-num">5</div><div><div class="sec-title">Sentence Builder</div><div class="sec-sub">Practise and create</div></div></div>
+  <div class="sb-activity">
+    <div class="sb-label">✏️ Fill in the blank — passive voice</div>
+    <p style="font-size:13px;color:var(--text2);margin-bottom:.5rem;">1. The entire Egyptian army ________ when the waters flooded back. (drown)</p>
+    <input class="sb-input" id="f1" placeholder="was drowned / were drowned..."/>
+    <button class="sb-check" onclick="checkFill2('f1',['was drowned','were drowned'],'r1')">Check ✓</button>
+    <div class="sb-result" id="r1"></div>
+  </div>
+  <div class="sb-activity">
+    <div class="sb-label">✏️ Fill in the blank</div>
+    <p style="font-size:13px;color:var(--text2);margin-bottom:.5rem;">2. Moses raised his ________ and God parted the Red Sea.</p>
+    <input class="sb-input" id="f2" placeholder="Your answer..."/>
+    <button class="sb-check" onclick="checkFill('f2','staff','r2')">Check ✓</button>
+    <div class="sb-result" id="r2"></div>
+  </div>
+  <div class="sb-activity">
+    <div class="sb-label">🔀 Unscramble</div>
+    <p style="font-size:13px;color:var(--text3);margin-bottom:.5rem;">Put in the correct order:</p>
+    <p style="font-size:13px;color:var(--text2);background:var(--surface2);padding:.75rem;border-radius:8px;margin-bottom:.75rem;font-style:italic;">God / the / waters / parted / Israelites / so / could / walk / the / through</p>
+    <input class="sb-input" id="f3" placeholder="Type your sentence here..."/>
+    <button class="sb-check" onclick="checkUnscramble('f3','god parted the waters so the israelites could walk through','r3')">Check ✓</button>
+    <div class="sb-result" id="r3"></div>
+  </div>
+  <div class="sb-activity">
+    <div class="sb-label">🈶 Translation challenge</div>
+    <p style="font-size:16px;color:var(--amber-300);margin-bottom:.75rem;">法老拒绝放走以色列人，所以上帝降下了十场瘟疫。</p>
+    <input class="sb-input" id="f4" placeholder="Your English translation..."/>
+    <button class="sb-check" onclick="checkFill('f4','the pharaoh refused to free the israelites so god sent ten plagues','r4')">Check ✓</button>
+    <div class="sb-result" id="r4"></div>
+  </div>
+</section>
+
+<!-- PART 6 SPEAKING 1 -->
+<section class="sec" id="p6">
+  <div class="sec-header"><div class="sec-num">6</div><div><div class="sec-title">Speaking — Level 1</div><div class="sec-sub">One sentence answers</div></div></div>
+  <span class="speak-badge l1">🟢 Level 1 · One sentence</span>
+  <div class="speak-q"><p>What did Moses say to the pharaoh?</p><div class="speak-hint">💡 Start with: <span>"Moses told the pharaoh that..."</span></div></div>
+  <div class="speak-q"><p>What happened when Moses raised his staff at the Red Sea?</p><div class="speak-hint">💡 Start with: <span>"When Moses raised his staff, the waters..."</span></div></div>
+  <div class="speak-q"><p>What is the Exodus?</p><div class="speak-hint">💡 Start with: <span>"The Exodus is the story of..."</span></div></div>
+</section>
+
+<!-- PART 7 SPEAKING 2 -->
+<section class="sec" id="p7">
+  <div class="sec-header"><div class="sec-num">7</div><div><div class="sec-title">Speaking — Level 2 &amp; 3</div><div class="sec-sub">Share your thoughts</div></div></div>
+  <span class="speak-badge l2">🟡 Level 2 · 2–3 sentences</span>
+  <div class="speak-q"><p>Imagine you were one of the Israelites running to the Red Sea. The army is behind you. The sea is in front of you. What are you thinking and feeling?</p><div class="speak-hint">💡 Try: <span>"I would feel... because... I think I would..."</span></div></div>
+  <div class="speak-q"><p>The pharaoh changed his mind after he said yes to Moses. What does this tell us about the pharaoh's character?</p><div class="speak-hint">💡 Think about: <span>power · greed · pride · fear · weakness</span></div></div>
+  <span class="speak-badge l3" style="margin-top:1rem;">🔵 Level 3 · Opinion</span>
+  <div class="speak-q"><p>The plagues each attacked something the Egyptians considered sacred or powerful. Do you think this was an effective strategy? How do you think the Egyptian people felt about their gods after the plagues?</p><div class="speak-hint">💡 Use: <span>"I think the strategy was effective because... The Egyptians probably felt..."</span></div></div>
+</section>
+
+<!-- PART 8 IDEAS -->
+<section class="sec" id="p8">
+  <div class="sec-header"><div class="sec-num">8</div><div><div class="sec-title">Ideas &amp; Society</div><div class="sec-sub">Big questions — think carefully</div></div></div>
+  <div class="idea-q"><div class="idea-icon">🔓</div><div class="idea-text"><strong>The Exodus is one of history's great stories of freedom.</strong> Why do human beings value freedom so much? What does it mean to be truly free?</div></div>
+  <div class="idea-q"><div class="idea-icon">💪</div><div class="idea-text"><strong>The Israelites were slaves with no weapons.</strong> Yet they escaped from the most powerful army in the world. What does this tell us about the limits of power?</div></div>
+  <div class="idea-q"><div class="idea-icon">🙏</div><div class="idea-text"><strong>The Exodus shows monotheism winning over polytheism.</strong> Why do you think belief in one all-powerful god became more common over time? Does this connect to how humans think about the universe?</div></div>
+  <div class="idea-q"><div class="idea-icon">📉</div><div class="idea-text"><strong>Egypt had been the most powerful empire in the world.</strong> After the Exodus, it began to grow weak. What makes powerful empires fall? Can you think of any modern examples?</div></div>
+</section>
+
+<!-- PART 9 IELTS -->
+<section class="sec" id="p9">
+  <div class="sec-header"><div class="sec-num">9</div><div><div class="sec-title">IELTS Content Builder</div><div class="sec-sub">Building your future academic vocabulary</div></div></div>
+  <div class="ielts-topic"><div class="ielts-topic-label">📘 Today's IELTS Topic</div><h4>Freedom, Justice, and the Role of Power in Society</h4></div>
+  <p style="font-size:13px;color:var(--text3);margin-bottom:.75rem;">The Exodus is about slavery, power, and freedom — topics that appear constantly in IELTS Writing Task 2 and Speaking Part 3.</p>
+  <p style="font-size:12px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;color:var(--text3);margin-bottom:.5rem;">Useful vocabulary</p>
+  <div class="vocab-chips">
+    <span class="chip amber">oppression</span><span class="chip amber">liberation</span><span class="chip amber">justice</span><span class="chip amber">equality</span><span class="chip amber">resistance</span>
+    <span class="chip">civil rights</span><span class="chip">abuse of power</span><span class="chip">political freedom</span><span class="chip">social change</span>
+  </div>
+  <p style="font-size:12px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;color:var(--text3);margin:.875rem 0 .5rem;">Useful collocations</p>
+  <div class="vocab-chips">
+    <span class="chip">fight for freedom</span><span class="chip">abuse of authority</span><span class="chip">rise to power</span><span class="chip">collapse of an empire</span><span class="chip">seek justice</span>
+  </div>
+  <div class="ielts-qs">
+    <div class="ielts-q"><div class="ielts-q-num">S1</div><div class="ielts-q-text">Should people always obey their government? Are there situations when disobeying is right?</div></div>
+    <div class="ielts-q"><div class="ielts-q-num">S2</div><div class="ielts-q-text">Why do some powerful nations eventually decline? What are the warning signs?</div></div>
+    <div class="ielts-q"><div class="ielts-q-num">S3</div><div class="ielts-q-text">Is freedom more important than security? Can a society have both?</div></div>
+  </div>
+  <div class="ielts-w2">
+    <div class="ielts-w2-label">✏️ IELTS Writing Task 2 — Future Practice</div>
+    <p>"Throughout history, major social changes have often come through conflict rather than peaceful means. To what extent do you agree with this statement? Use historical examples to support your answer."</p>
+  </div>
+</section>
+
+<!-- PART 10 REVIEW + PROJECT -->
+<section class="sec" id="p10">
+  <div class="sec-header"><div class="sec-num">10</div><div><div class="sec-title">Review + Chapter Project</div><div class="sec-sub">Chapter 14 — Complete Summary</div></div></div>
+
+  <div class="chapter-summary">
+    <h4>📖 Chapter 14 in Three Key Points</h4>
+    <div class="summary-item"><div class="summary-dot"></div><span>The Israelites were descendants of Abraham. They moved to Egypt during a famine and were later made into slaves by the Egyptians who feared their growing numbers.</span></div>
+    <div class="summary-item"><div class="summary-dot"></div><span>Moses, born an Israelite but raised in the pharaoh's palace, returned to his people and demanded freedom. God sent ten plagues on Egypt to force the pharaoh to agree.</span></div>
+    <div class="summary-item"><div class="summary-dot"></div><span>The Israelites escaped through the parted Red Sea in an event called the Exodus. This showed monotheism (one god) winning over polytheism (many gods), and Egypt beginning to weaken as a power.</span></div>
+  </div>
+
+  <p style="font-size:12px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;color:var(--text3);margin-bottom:.75rem;">⭐ Star Words — Chapter 14</p>
+  <div class="star-words">
+    <span class="star-word">⭐ monotheist</span><span class="star-word">⭐ famine</span><span class="star-word">⭐ slave</span><span class="star-word">⭐ plague</span><span class="star-word">⭐ Exodus</span><span class="star-word">⭐ courage</span><span class="star-word">⭐ sacred</span><span class="star-word">⭐ conquer</span>
+  </div>
+
+  <div class="think-box">
+    <div class="think-head">💡 The Big Idea</div>
+    <p>The Exodus story teaches us that <strong>power is not permanent</strong>. Egypt was the strongest empire in the world — yet a group of slaves with no weapons escaped it. History shows us again and again that empires rise, and empires fall. <strong>This idea will appear in many of your future IELTS questions.</strong></p>
+  </div>
+
+  <!-- CHAPTER PROJECT -->
+  <div class="project-box">
+    <div class="project-title">🎨 Chapter Project — The Exodus Timeline</div>
+    <div class="project-sub">Create a visual timeline of the Exodus story. You can draw it, write it, or make it on your computer.</div>
+
+    <div class="project-step">
+      <div class="project-step-num">1</div>
+      <div class="project-step-text">Draw a long horizontal line across your page. This is your <strong>timeline</strong>.</div>
+    </div>
+    <div class="project-step">
+      <div class="project-step-num">2</div>
+      <div class="project-step-text">Add these <strong>7 key events</strong> in order, with a small picture or symbol for each:</div>
+    </div>
+
+    <div class="label-grid">
+      <div class="label-chip">🌿 Abraham & Canaan</div>
+      <div class="label-chip">🍞 Famine & Egypt</div>
+      <div class="label-chip">🧱 Israelites as slaves</div>
+      <div class="label-chip">👶 Baby Moses</div>
+      <div class="label-chip">🐸 The 10 Plagues</div>
+      <div class="label-chip">🌊 The Red Sea</div>
+      <div class="label-chip">🕊️ Freedom!</div>
+    </div>
+
+    <div class="project-step" style="margin-top:1rem;">
+      <div class="project-step-num">3</div>
+      <div class="project-step-text">Under each event, write <strong>one sentence</strong> describing what happened. Use past tense.</div>
+    </div>
+    <div class="project-step">
+      <div class="project-step-num">4</div>
+      <div class="project-step-text"><strong>Bonus challenge:</strong> Add one vocabulary word from this chapter near each event on your timeline.</div>
+    </div>
+    <p style="font-size:12px;color:var(--text3);margin-top:1rem;font-style:italic;">💡 This project is optional and fun. Share it with your teacher or classmates!</p>
+  </div>
+
+  <p style="font-size:12px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;color:var(--text3);margin:.875rem 0 .75rem;">🧠 Final Mini Quiz — Chapter 14</p>
+  <div class="mini-quiz-q">
+    <div class="mq-text">A. Why did God send plagues on Egypt?</div>
+    <div class="mq-opts">
+      <button class="mq-opt" onclick="mq(this,'wrong')">To punish the Israelites</button>
+      <button class="mq-opt" onclick="mq(this,'correct')">To force the pharaoh to free the Israelites</button>
+      <button class="mq-opt" onclick="mq(this,'wrong')">To destroy the River Nile</button>
+    </div>
+  </div>
+  <div class="mini-quiz-q">
+    <div class="mq-text">B. "The Israelites ________ mistreated by the Egyptians for many years." Choose the correct word.</div>
+    <div class="mq-opts">
+      <button class="mq-opt" onclick="mq(this,'correct')">were</button>
+      <button class="mq-opt" onclick="mq(this,'wrong')">are</button>
+      <button class="mq-opt" onclick="mq(this,'wrong')">was</button>
+    </div>
+  </div>
+  <div class="mini-quiz-q">
+    <div class="mq-text">C. What is the most important lesson of the Exodus story?</div>
+    <div class="mq-opts">
+      <button class="mq-opt" onclick="mq(this,'wrong')">Rivers can be dangerous</button>
+      <button class="mq-opt" onclick="mq(this,'wrong')">The Egyptians were evil people</button>
+      <button class="mq-opt" onclick="mq(this,'correct')">Even the most powerful nations cannot hold back people who fight for freedom</button>
+    </div>
+  </div>
+
+  <div class="lesson-nav">
+    <a class="nav-btn" href="ch14-b.html"><i class="ti ti-arrow-left"></i> Lesson 14B</a>
+    <a class="nav-btn primary" href="../index.html">Back to all chapters <i class="ti ti-home"></i></a>
+  </div>
+</section>
+</main>
+<footer class="site-footer"><strong>Lexilink Ideation IELTS STUDIO</strong> · History ESL Course · Chapter 14 — Lesson C + Review</footer>
+<script>
+function toggleVocab(c){c.classList.toggle('open');}
+function mcq(btn,t){const i=btn.closest('.q-item');i.querySelectorAll('.q-opt').forEach(b=>{b.classList.remove('correct','wrong');b.disabled=true;});btn.classList.add(t);const f=i.querySelector('.q-feedback');f.className='q-feedback show '+(t==='correct'?'good':'bad');f.textContent=t==='correct'?'✓ Correct! Well done!':'✗ Not quite — read the story again.';}
+function tf(btn,t,msg){const i=btn.closest('.q-item');i.querySelectorAll('.tf-btn').forEach(b=>{b.classList.remove('correct','wrong');b.disabled=true;});btn.classList.add(t);const f=i.querySelector('.q-feedback');f.className='q-feedback show '+(t==='correct'?'good':'bad');f.textContent=(t==='correct'?'✓ ':'✗ ')+msg;}
+function mq(btn,t){const i=btn.closest('.mini-quiz-q');i.querySelectorAll('.mq-opt').forEach(b=>{b.classList.remove('correct','wrong');b.disabled=true;});btn.classList.add(t);}
+function checkFill(id,ans,rid){const v=document.getElementById(id).value.trim().toLowerCase();const r=document.getElementById(rid);const ok=v===ans||v.includes(ans);r.className='sb-result show '+(ok?'ok':'no');r.textContent=ok?'✓ Correct!':'✗ Answer: "'+ans+'"';}
+function checkFill2(id,answers,rid){const v=document.getElementById(id).value.trim().toLowerCase();const r=document.getElementById(rid);const ok=answers.some(a=>v===a||v.includes(a));r.className='sb-result show '+(ok?'ok':'no');r.textContent=ok?'✓ Correct!':'✗ Try: "was drowned"';}
+function checkUnscramble(id,ans,rid){const v=document.getElementById(id).value.trim().toLowerCase().replace(/[^a-z\s]/g,'');const r=document.getElementById(rid);r.className='sb-result show '+(v===ans?'ok':'no');r.textContent=v===ans?'✓ Perfect!':'✗ Answer: "'+ans.charAt(0).toUpperCase()+ans.slice(1)+'"';}
+function goTo(id){document.getElementById(id).scrollIntoView({behavior:'smooth',block:'start'});}
+const parts=['p1','p2','p3','p4','p5','p6','p7','p8','p9','p10'];
+const partEls=document.querySelectorAll('.lp-part');
+window.addEventListener('scroll',()=>{
+  let cur=0;parts.forEach((id,i)=>{const el=document.getElementById(id);if(el&&el.getBoundingClientRect().top<200)cur=i;});
+  partEls.forEach((el,i)=>{el.classList.remove('active','done');if(i<cur)el.classList.add('done');else if(i===cur)el.classList.add('active');});
+  document.getElementById('prog-fill').style.width=Math.round(((cur+1)/10)*100)+'%';
+});
+</script>
+</body>
+</html>
