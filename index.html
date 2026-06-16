@@ -371,6 +371,35 @@
     .lesson-row.is-active .l-name { color: #fff; font-weight: 500; }
     .l-icon { font-size: 12px; color: var(--text-dim); }
 
+    /* ── LIVE / LOCKED states ── */
+    .lesson-row.is-live .l-name { color: rgba(255,255,255,0.82); }
+    .lesson-row.is-live:hover { background: rgba(212,137,15,0.07); }
+    .lesson-row:not(.is-live):not(.is-active) { opacity: 0.38; pointer-events: none; cursor: default; }
+    .live-badge {
+      font-size: 9px; font-weight: 700; letter-spacing: .05em;
+      text-transform: uppercase; padding: 2px 8px; border-radius: 99px;
+      background: rgba(29,158,117,0.18); color: #5DCAA5;
+      border: 1px solid rgba(29,158,117,0.3); flex-shrink: 0; margin-right: 2px;
+    }
+    .lesson-row.is-review .live-badge { display: none; }
+
+    /* ── LIVE CHAPTER ── */
+    .ch-card.ch-live { border-color: rgba(212,137,15,0.25); }
+    .ch-card.ch-live .ch-header:hover { background: rgba(212,137,15,0.05); }
+    .ch-num-live {
+      background: rgba(29,158,117,0.2) !important;
+      color: #5DCAA5 !important;
+      border-color: rgba(29,158,117,0.35) !important;
+    }
+    .ch-new-badge {
+      display: inline-block;
+      font-size: 9px; font-weight: 700; letter-spacing: .05em;
+      text-transform: uppercase; padding: 1px 7px; border-radius: 99px;
+      background: rgba(29,158,117,0.2); color: #5DCAA5;
+      border: 1px solid rgba(29,158,117,0.3);
+      vertical-align: middle; margin-left: 6px; position: relative; top: -1px;
+    }
+
     /* ── FOOTER ── */
     .site-footer {
       background: #111111;
@@ -471,14 +500,13 @@
     </div>
     <div class="progress-cta">
       <i class="ti ti-player-play" aria-hidden="true"></i>
-      Next up: Lesson Intro A — What Is History?
+      Next up: Lesson 14A — Who Were the Israelites?
     </div>
   </div>
 
-  <!-- CTA button -->
-  <a class="start-btn" href="lessons/intro-a.html">
+  <a class="start-btn" href="ch14-a.html">
     <i class="ti ti-player-play" aria-hidden="true"></i>
-    Continue where I left off
+    Start Chapter 14 — The Israelites Leave Egypt
   </a>
 
   <!-- Introduction -->
@@ -557,7 +585,13 @@ const chapters = [
   { n:13, title:"The New Kingdom of Egypt",
     lessons:["The General and the Woman Pharaoh","Amenhotep and King Tut","Review + Project"] },
   { n:14, title:"The Israelites Leave Egypt",
-    lessons:["The Baby Moses","The Exodus From Egypt","Review + Project"] },
+    lessons:[
+      { name:"Who Were the Israelites?",  file:"ch14-a.html", live:true },
+      { name:"The Baby Moses",            file:"ch14-b.html", live:true },
+      { name:"The Exodus From Egypt",     file:"ch14-c.html", live:true },
+      { name:"Review + Project",          file:"ch14-c.html#p10", live:true },
+    ],
+    progress: 0, live: true },
   { n:15, title:"The Phoenicians",
     lessons:["Phoenician Traders","Cedar Trees and Mediterranean Trade","Glassmaking","Glass Blowing","Purple Dye and Tyre","The Founding of Carthage","Review + Project"] },
   { n:16, title:"The Return of Assyria",
@@ -614,32 +648,45 @@ const container = document.getElementById('chapter-list');
 
 chapters.forEach((ch, idx) => {
   const prog = ch.progress || 0;
+  const isChLive = ch.live || false;
   const card = document.createElement('div');
   card.className = 'ch-card';
   if (idx === 0) card.classList.add('open');
+  if (isChLive)  card.classList.add('ch-live');
 
-  const lessonsHtml = ch.lessons.map((name, li) => {
-    const code     = 'ch' + ch.n + '-' + String.fromCharCode(65 + li).toLowerCase();
+  const lessonsHtml = ch.lessons.map((lesson, li) => {
+    const isObj    = typeof lesson === 'object';
+    const name     = isObj ? lesson.name : lesson;
+    const isLive   = isObj && lesson.live;
+    const href     = isLive
+                       ? lesson.file
+                       : `lessons/ch${ch.n}-${String.fromCharCode(65+li).toLowerCase()}.html`;
     const tag      = ch.n + String.fromCharCode(65 + li);
     const isReview = name.startsWith('Review');
     const isActive = idx === 0 && li === 0;
     let cls = 'lesson-row';
     if (isActive)  cls += ' is-active';
     if (isReview)  cls += ' is-review';
-    return `<a class="${cls}" href="lessons/${code}.html">
+    if (isLive)    cls += ' is-live';
+    const liveBadge = isLive && !isReview
+      ? `<span class="live-badge">Available</span>`
+      : '';
+    const icon = isReview ? 'ti-star' : (isLive ? 'ti-arrow-right' : 'ti-lock');
+    return `<a class="${cls}" href="${href}">
       <span class="l-tag">${tag}</span>
       <span class="l-name">${name}</span>
-      <i class="ti ${isReview ? 'ti-star' : 'ti-chevron-right'} l-icon" aria-hidden="true"></i>
+      ${liveBadge}
+      <i class="ti ${icon} l-icon" aria-hidden="true"></i>
     </a>`;
   }).join('');
 
   card.innerHTML = `
     <div class="ch-header" role="button"
          aria-expanded="${idx === 0}" tabindex="0">
-      <div class="ch-num">${ch.n}</div>
+      <div class="ch-num${isChLive ? ' ch-num-live' : ''}">${ch.n}</div>
       <div class="ch-info">
-        <div class="ch-title">${ch.title}</div>
-        <div class="ch-meta">${ch.lessons.length} lessons</div>
+        <div class="ch-title">${ch.title}${isChLive ? ' <span class="ch-new-badge">New</span>' : ''}</div>
+        <div class="ch-meta">${ch.lessons.length} lessons${isChLive ? ' · Available now' : ''}</div>
       </div>
       <div class="ch-right">
         <div class="mini-track"><div class="mini-fill" style="width:${prog}%"></div></div>
