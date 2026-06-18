@@ -1,556 +1,546 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width,initial-scale=1.0">
-  <title>Lesson 15B — Phoenician Traders | Lexilink History Workshop</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;600;700&family=Noto+Sans+SC&display=swap" rel="stylesheet">
-  <style>
-    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-    :root { --navy: #1a2744; --blue: #2563eb; --blue-light: #dbeafe; --gold: #f59e0b; --gold-light: #fef3c7; --green: #16a34a; --green-light: #dcfce7; --red: #dc2626; --red-light: #fee2e2; --gray: #6b7280; --gray-light: #f3f4f6; --white: #ffffff; --radius: 12px; --shadow: 0 2px 12px rgba(0,0,0,0.08); }
-    body { font-family: 'Noto Sans', 'Noto Sans SC', sans-serif; background: #f8fafc; color: #1e293b; line-height: 1.7; }
-    nav { background: var(--navy); padding: 0 24px; display: flex; align-items: center; gap: 16px; height: 52px; }
-    nav a { color: #cbd5e1; text-decoration: none; font-size: 0.85rem; font-weight: 600; }
-    nav a:hover { color: white; }
-    nav .sep { color: #475569; }
-    .lesson-header { background: var(--navy); color: white; padding: 32px 24px 28px; }
-    .lesson-meta { font-size: 0.8rem; color: #94a3b8; text-transform: uppercase; letter-spacing: 0.08em; margin-bottom: 6px; }
-    .lesson-chapter { font-size: 0.9rem; color: #7dd3fc; margin-bottom: 14px; }
-    .lesson-header h1 { font-size: 1.9rem; font-weight: 700; margin-bottom: 8px; }
-    .lesson-subtitle { color: #cbd5e1; font-size: 1rem; margin-bottom: 16px; }
-    .lesson-tags { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 14px; }
-    .tag { background: rgba(255,255,255,0.12); border-radius: 20px; padding: 4px 12px; font-size: 0.78rem; color: #e2e8f0; }
-    .lesson-progress { font-size: 0.82rem; color: #94a3b8; }
-    .tabs-bar { background: white; border-bottom: 2px solid #e2e8f0; overflow-x: auto; white-space: nowrap; padding: 0 16px; position: sticky; top: 0; z-index: 10; box-shadow: 0 2px 8px rgba(0,0,0,0.06); }
-    .tab-btn { display: inline-block; padding: 14px 14px 12px; cursor: pointer; font-size: 0.82rem; font-weight: 600; color: var(--gray); border-bottom: 3px solid transparent; margin-bottom: -2px; transition: all 0.2s; white-space: nowrap; background: none; border-top: none; border-left: none; border-right: none; }
-    .tab-btn:hover { color: var(--blue); }
-    .tab-btn.active { color: var(--blue); border-bottom-color: var(--blue); }
-    .tab-num { display: inline-flex; align-items: center; justify-content: center; width: 20px; height: 20px; background: var(--gray-light); border-radius: 50%; font-size: 0.72rem; font-weight: 700; margin-right: 5px; }
-    .tab-btn.active .tab-num { background: var(--blue); color: white; }
-    .section { display: none; max-width: 780px; margin: 0 auto; padding: 32px 20px; }
-    .section.active { display: block; }
-    .section-title { font-size: 1.3rem; font-weight: 700; color: var(--navy); margin-bottom: 6px; }
-    .section-subtitle { color: var(--gray); font-size: 0.88rem; margin-bottom: 24px; }
-    .vocab-grid { display: grid; gap: 12px; }
-    .vocab-card { background: white; border-radius: var(--radius); box-shadow: var(--shadow); border: 1px solid #e2e8f0; overflow: hidden; cursor: pointer; }
-    .vocab-card-header { display: flex; align-items: center; gap: 12px; padding: 16px 20px; }
-    .vocab-word { font-size: 1.1rem; font-weight: 700; color: var(--navy); }
-    .vocab-pos { font-size: 0.75rem; color: var(--gray); background: var(--gray-light); border-radius: 4px; padding: 2px 7px; }
-    .vocab-pron { font-size: 0.82rem; color: var(--blue); margin-left: auto; font-style: italic; }
-    .vocab-expand { width: 24px; height: 24px; border-radius: 50%; background: var(--blue-light); color: var(--blue); display: flex; align-items: center; justify-content: center; font-size: 0.9rem; flex-shrink: 0; transition: transform 0.3s; }
-    .vocab-card.open .vocab-expand { transform: rotate(180deg); }
-    .vocab-body { display: none; padding: 0 20px 18px; border-top: 1px solid #f1f5f9; }
-    .vocab-card.open .vocab-body { display: block; }
-    .vocab-zh { font-size: 1rem; color: var(--navy); font-weight: 600; margin: 10px 0 4px; }
-    .vocab-def { color: #374151; font-size: 0.9rem; margin-bottom: 8px; }
-    .vocab-example { color: var(--gray); font-size: 0.85rem; font-style: italic; border-left: 3px solid var(--blue-light); padding-left: 10px; }
-    .story-card { background: white; border-radius: var(--radius); box-shadow: var(--shadow); padding: 28px; line-height: 1.9; font-size: 0.97rem; }
-    .story-card p { margin-bottom: 16px; }
-    .story-card p:last-child { margin-bottom: 0; }
-    .story-emoji { font-size: 2rem; display: block; margin-bottom: 12px; }
-    .story-card strong { color: var(--navy); }
-    .question-card { background: white; border-radius: var(--radius); box-shadow: var(--shadow); padding: 20px 22px; margin-bottom: 16px; }
-    .question-text { font-weight: 600; color: var(--navy); margin-bottom: 14px; }
-    .q-num { display: inline-flex; align-items: center; justify-content: center; width: 26px; height: 26px; background: var(--blue); color: white; border-radius: 50%; font-size: 0.8rem; font-weight: 700; margin-right: 8px; flex-shrink: 0; }
-    .options label { display: flex; align-items: flex-start; gap: 10px; padding: 10px 12px; margin-bottom: 8px; border-radius: 8px; border: 2px solid #e2e8f0; cursor: pointer; font-size: 0.9rem; transition: border-color 0.2s, background 0.2s; }
-    .options label:hover { border-color: var(--blue); background: var(--blue-light); }
-    .options input[type=radio] { margin-top: 3px; flex-shrink: 0; }
-    .check-btn { margin-top: 10px; background: var(--blue); color: white; border: none; padding: 8px 18px; border-radius: 8px; cursor: pointer; font-size: 0.85rem; font-weight: 600; }
-    .check-btn:hover { background: #1d4ed8; }
-    .feedback { display: none; margin-top: 8px; padding: 8px 12px; border-radius: 8px; font-size: 0.85rem; font-weight: 600; }
-    .feedback.correct { background: var(--green-light); color: var(--green); display: block; }
-    .feedback.wrong { background: var(--red-light); color: var(--red); display: block; }
-    .grammar-block { background: white; border-radius: var(--radius); box-shadow: var(--shadow); padding: 22px 24px; margin-bottom: 18px; }
-    .grammar-label { display: inline-block; background: var(--navy); color: white; font-size: 0.75rem; font-weight: 700; padding: 3px 10px; border-radius: 4px; margin-bottom: 12px; }
-    .grammar-title { font-size: 1rem; font-weight: 700; color: var(--navy); margin-bottom: 12px; }
-    .grammar-table { width: 100%; border-collapse: collapse; font-size: 0.88rem; margin: 12px 0; }
-    .grammar-table th { background: var(--navy); color: white; padding: 8px 12px; text-align: left; font-weight: 600; }
-    .grammar-table td { padding: 8px 12px; border-bottom: 1px solid #e2e8f0; }
-    .grammar-table tr:nth-child(even) td { background: var(--gray-light); }
-    .grammar-example { background: var(--blue-light); border-left: 4px solid var(--blue); border-radius: 6px; padding: 10px 14px; font-size: 0.9rem; margin: 8px 0; color: var(--navy); }
-    .grammar-note { color: var(--gray); font-size: 0.85rem; margin-top: 10px; font-style: italic; }
-    .builder-card { background: white; border-radius: var(--radius); box-shadow: var(--shadow); padding: 20px 22px; margin-bottom: 16px; }
-    .builder-label { font-size: 0.78rem; font-weight: 700; color: var(--blue); text-transform: uppercase; letter-spacing: 0.06em; margin-bottom: 8px; }
-    .builder-prompt { font-size: 0.92rem; color: var(--navy); margin-bottom: 12px; font-weight: 500; }
-    .builder-input { width: 100%; border: 2px solid #e2e8f0; border-radius: 8px; padding: 10px 12px; font-size: 0.9rem; font-family: inherit; resize: vertical; transition: border-color 0.2s; }
-    .builder-input:focus { outline: none; border-color: var(--blue); }
-    .builder-check { margin-top: 8px; background: var(--blue); color: white; border: none; padding: 8px 16px; border-radius: 8px; cursor: pointer; font-size: 0.85rem; font-weight: 600; }
-    .builder-check:hover { background: #1d4ed8; }
-    .builder-feedback { display: none; margin-top: 8px; padding: 8px 12px; border-radius: 8px; font-size: 0.85rem; }
-    .builder-feedback.show { display: block; background: var(--green-light); color: var(--green); font-weight: 600; }
-    .speaking-level { display: inline-flex; align-items: center; gap: 6px; font-size: 0.8rem; font-weight: 700; padding: 4px 12px; border-radius: 20px; margin-bottom: 14px; }
-    .level-1 { background: #dcfce7; color: #15803d; }
-    .level-2 { background: #fef9c3; color: #a16207; }
-    .level-3 { background: #dbeafe; color: #1d4ed8; }
-    .speaking-question { background: white; border-radius: var(--radius); box-shadow: var(--shadow); padding: 18px 22px; margin-bottom: 14px; border-left: 4px solid var(--blue); }
-    .speaking-q { font-weight: 600; color: var(--navy); margin-bottom: 8px; }
-    .speaking-hint { font-size: 0.83rem; color: var(--gray); }
-    .speaking-hint span { color: var(--blue); font-style: italic; }
-    .idea-card { background: white; border-radius: var(--radius); box-shadow: var(--shadow); padding: 20px 22px; margin-bottom: 14px; border-top: 4px solid var(--gold); }
-    .idea-emoji { font-size: 1.4rem; display: block; margin-bottom: 8px; }
-    .idea-card p { font-size: 0.9rem; color: #374151; line-height: 1.75; }
-    .idea-card strong { color: var(--navy); }
-    .ielts-banner { background: var(--navy); border-radius: var(--radius); padding: 20px 24px; color: white; margin-bottom: 20px; }
-    .ielts-banner h4 { font-size: 1rem; margin-bottom: 8px; color: #7dd3fc; }
-    .ielts-banner p { font-size: 0.88rem; color: #cbd5e1; }
-    .vocab-tags { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 12px; }
-    .vocab-tag { background: rgba(255,255,255,0.12); border-radius: 6px; padding: 4px 10px; font-size: 0.8rem; color: #e2e8f0; }
-    .colloc-list { list-style: none; margin: 12px 0 0; }
-    .colloc-list li { font-size: 0.88rem; color: #cbd5e1; padding: 3px 0; }
-    .colloc-list li::before { content: "→ "; color: #7dd3fc; }
-    .ielts-q { background: white; border-radius: var(--radius); padding: 14px 18px; margin-bottom: 10px; font-size: 0.88rem; color: var(--navy); box-shadow: var(--shadow); }
-    .ielts-q .ielts-num { font-weight: 700; color: var(--blue); margin-right: 6px; }
-    .ielts-writing { background: var(--gold-light); border-radius: var(--radius); padding: 18px 20px; border-left: 4px solid var(--gold); margin-top: 16px; }
-    .ielts-writing h5 { font-size: 0.85rem; font-weight: 700; color: #92400e; text-transform: uppercase; letter-spacing: 0.05em; margin-bottom: 8px; }
-    .ielts-writing p { font-size: 0.9rem; color: #78350f; font-style: italic; }
-    .star-words { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 20px; }
-    .star-word { background: var(--gold-light); color: #92400e; border-radius: 20px; padding: 5px 14px; font-size: 0.85rem; font-weight: 600; }
-    .big-idea { background: var(--blue-light); border-radius: var(--radius); padding: 18px 20px; margin-bottom: 20px; border-left: 4px solid var(--blue); }
-    .big-idea p { font-size: 0.92rem; color: var(--navy); }
-    .mini-quiz-card { background: white; border-radius: var(--radius); box-shadow: var(--shadow); padding: 20px 22px; margin-bottom: 14px; }
-    .lesson-nav { max-width: 780px; margin: 0 auto; padding: 24px 20px 40px; display: flex; justify-content: space-between; align-items: center; gap: 12px; flex-wrap: wrap; }
-    .lesson-nav a { text-decoration: none; padding: 10px 20px; border-radius: 10px; font-size: 0.88rem; font-weight: 600; transition: all 0.2s; }
-    .nav-prev { background: var(--gray-light); color: var(--navy); }
-    .nav-prev:hover { background: #e2e8f0; }
-    .nav-next { background: var(--blue); color: white; }
-    .nav-next:hover { background: #1d4ed8; }
-    .site-footer { background: var(--navy); color: #94a3b8; text-align: center; padding: 16px; font-size: 0.8rem; }
-  </style>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+<title>Lesson 15B — Phoenician Traders | Lexilink History Workshop</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"/>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet"/>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@latest/tabler-icons.min.css"/>
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
+:root{
+  --bg:#0F0800;--surface:rgba(255,255,255,0.04);--surface2:rgba(255,255,255,0.07);
+  --border:rgba(255,255,255,0.10);--border2:rgba(255,255,255,0.06);
+  --amber-300:#E8A832;--amber-400:#D4890F;--amber-500:#B8720A;
+  --amber-bg:rgba(212,137,15,0.12);--amber-border:rgba(212,137,15,0.3);
+  --text:#fff;--text2:rgba(255,255,255,0.72);--text3:rgba(255,255,255,0.45);
+  --teal:#1D9E75;--teal-bg:rgba(29,158,117,0.12);--teal-border:rgba(29,158,117,0.3);
+  --coral:#E05C3A;--coral-bg:rgba(224,92,58,0.12);
+  --blue:#4A9EE0;--blue-bg:rgba(74,158,224,0.12);
+  --r:12px;--r-sm:8px;
+}
+html{scroll-behavior:smooth;}
+body{font-family:'Inter',sans-serif;background:var(--bg);color:var(--text);min-height:100vh;line-height:1.6;}
+.site-header{background:#111;border-bottom:1px solid rgba(255,255,255,0.08);position:sticky;top:0;z-index:100;}
+.hdr{max-width:860px;margin:0 auto;padding:0 1.5rem;height:54px;display:flex;align-items:center;gap:12px;}
+.logo-wrap{display:flex;align-items:center;gap:8px;text-decoration:none;}
+.logo-icon{width:30px;height:30px;display:flex;align-items:center;justify-content:center;}
+.logo-icon svg{width:26px;height:26px;}
+.logo-name{font-size:13px;font-weight:700;color:#fff;}
+.hdr-pipe{width:1px;height:20px;background:rgba(255,255,255,0.15);}
+.hdr-back{display:flex;align-items:center;gap:5px;font-size:12px;color:var(--text3);text-decoration:none;transition:color .15s;}
+.hdr-back:hover{color:var(--text2);}
+.hdr-spacer{flex:1;}
+.hdr-badge{font-size:10px;font-weight:700;letter-spacing:.05em;padding:3px 10px;border-radius:99px;border:1px solid var(--amber-border);color:var(--amber-300);background:var(--amber-bg);}
+.lesson-hero{background:linear-gradient(135deg,#2C1600 0%,#5C3200 40%,#7A4500 100%);padding:3rem 1.5rem 2.5rem;text-align:center;position:relative;overflow:hidden;}
+.lesson-hero::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse 70% 60% at 50% 50%,rgba(200,130,0,0.15),transparent);pointer-events:none;}
+.lesson-eyebrow{font-size:10px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--amber-300);margin-bottom:.75rem;}
+.lesson-hero h1{font-size:clamp(22px,4vw,36px);font-weight:700;color:#fff;letter-spacing:-.02em;margin-bottom:.5rem;}
+.lesson-hero p{font-size:14px;color:rgba(255,255,255,0.65);max-width:520px;margin:0 auto .875rem;}
+.lesson-pills{display:flex;flex-wrap:wrap;justify-content:center;gap:8px;}
+.l-pill{font-size:11px;font-weight:500;padding:4px 12px;border-radius:99px;border:1px solid rgba(255,255,255,0.18);color:rgba(255,255,255,0.75);background:rgba(255,255,255,0.06);}
+.lesson-progress{background:#1A1100;border-bottom:1px solid rgba(255,255,255,0.06);padding:.75rem 1.5rem;}
+.lp-inner{max-width:860px;margin:0 auto;}
+.lp-labels{display:flex;justify-content:space-between;font-size:11px;color:var(--text3);margin-bottom:6px;}
+.lp-track{height:4px;border-radius:99px;background:rgba(255,255,255,0.08);}
+.lp-fill{height:100%;border-radius:99px;background:linear-gradient(90deg,var(--amber-500),var(--amber-300));width:10%;}
+.lp-parts{display:flex;gap:4px;margin-top:8px;flex-wrap:wrap;}
+.lp-part{font-size:10px;font-weight:600;padding:2px 8px;border-radius:99px;background:rgba(255,255,255,0.06);color:var(--text3);cursor:pointer;transition:all .15s;}
+.lp-part.done{background:var(--amber-bg);color:var(--amber-300);border:1px solid var(--amber-border);}
+.lp-part.active{background:var(--amber-400);color:#1A0800;}
+.main{max-width:860px;margin:0 auto;padding:2rem 1.5rem 5rem;}
+.sec{background:var(--surface);border:1px solid var(--border);border-radius:var(--r);padding:1.5rem;margin-bottom:1.5rem;scroll-margin-top:80px;}
+.sec-header{display:flex;align-items:center;gap:10px;margin-bottom:1.25rem;}
+.sec-num{width:28px;height:28px;border-radius:8px;display:flex;align-items:center;justify-content:center;font-size:11px;font-weight:700;background:var(--amber-bg);color:var(--amber-300);border:1px solid var(--amber-border);flex-shrink:0;}
+.sec-title{font-size:16px;font-weight:700;color:#fff;}
+.sec-sub{font-size:12px;color:var(--text3);margin-top:1px;}
+.vocab-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(240px,1fr));gap:10px;}
+.vocab-card{background:var(--surface2);border:1px solid var(--border2);border-radius:var(--r-sm);padding:1rem;cursor:pointer;transition:border-color .15s;}
+.vocab-card:hover,.vocab-card.open{border-color:var(--amber-border);}
+.vc-top{display:flex;align-items:baseline;gap:8px;}
+.vc-word{font-size:16px;font-weight:700;color:#fff;}
+.vc-pos{font-size:10px;font-weight:600;padding:1px 7px;border-radius:99px;background:var(--amber-bg);color:var(--amber-300);}
+.vc-pron{font-size:12px;color:var(--text3);margin-top:2px;font-style:italic;}
+.vc-cn{font-size:15px;color:var(--amber-300);margin-top:4px;font-weight:600;}
+.vc-detail{display:none;margin-top:10px;padding-top:10px;border-top:1px solid var(--border2);}
+.vocab-card.open .vc-detail{display:block;}
+.vc-def{font-size:13px;color:var(--text2);margin-bottom:6px;}
+.vc-ex{font-size:12px;color:var(--text3);font-style:italic;padding-left:8px;border-left:2px solid var(--amber-border);}
+.story-body p{font-size:15px;color:var(--text2);line-height:1.8;margin-bottom:1rem;}
+.story-body p:last-child{margin-bottom:0;}
+.story-hl{color:var(--amber-300);font-weight:600;}
+.story-box{background:var(--amber-bg);border:1px solid var(--amber-border);border-radius:var(--r-sm);padding:1rem 1.25rem;margin:1.25rem 0;font-size:14px;color:rgba(255,255,255,0.85);line-height:1.7;font-style:italic;}
+.story-box::before{content:'"';font-size:32px;color:var(--amber-400);line-height:1;display:block;margin-bottom:.25rem;}
+.story-icon{font-size:40px;text-align:center;margin:1rem 0;}
+.quiz-list{display:flex;flex-direction:column;gap:14px;}
+.q-item{background:var(--surface2);border:1px solid var(--border2);border-radius:var(--r-sm);padding:1rem 1.25rem;}
+.q-text{font-size:14px;font-weight:600;color:#fff;margin-bottom:.75rem;}
+.q-opts{display:flex;flex-direction:column;gap:6px;}
+.q-opt{display:flex;align-items:center;gap:10px;padding:8px 12px;border-radius:8px;border:1px solid var(--border);background:transparent;cursor:pointer;font-size:13px;color:var(--text2);width:100%;text-align:left;transition:all .15s;}
+.q-opt:hover{border-color:var(--amber-border);background:var(--amber-bg);}
+.q-opt.correct{border-color:var(--teal-border);background:var(--teal-bg);color:#fff;}
+.q-opt.wrong{border-color:rgba(224,92,58,0.4);background:var(--coral-bg);color:#fff;}
+.q-feedback{font-size:12px;margin-top:8px;padding:6px 10px;border-radius:6px;display:none;}
+.q-feedback.show{display:block;}
+.q-feedback.good{background:var(--teal-bg);color:#5DCAA5;}
+.q-feedback.bad{background:var(--coral-bg);color:#F09B80;}
+.tf-opts{display:flex;gap:8px;}
+.tf-btn{flex:1;padding:8px;border-radius:8px;border:1px solid var(--border);background:transparent;cursor:pointer;font-size:13px;font-weight:600;color:var(--text2);transition:all .15s;}
+.tf-btn:hover{border-color:var(--amber-border);background:var(--amber-bg);}
+.tf-btn.correct{border-color:var(--teal-border);background:var(--teal-bg);color:#fff;}
+.tf-btn.wrong{border-color:rgba(224,92,58,0.4);background:var(--coral-bg);color:#fff;}
+.grammar-box{background:var(--surface2);border-left:3px solid var(--amber-400);border-radius:0 var(--r-sm) var(--r-sm) 0;padding:1rem 1.25rem;margin-bottom:1rem;}
+.grammar-label{font-size:10px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--amber-300);margin-bottom:.5rem;}
+.grammar-rule{font-size:14px;color:#fff;font-weight:600;margin-bottom:.5rem;}
+.grammar-eg{font-size:13px;color:var(--text2);margin-top:.25rem;font-style:italic;}
+.grammar-eg span{color:var(--amber-300);font-weight:600;font-style:normal;}
+.grammar-table{width:100%;border-collapse:collapse;font-size:13px;margin-top:.75rem;}
+.grammar-table th{text-align:left;padding:6px 10px;font-size:10px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;color:var(--text3);border-bottom:1px solid var(--border);}
+.grammar-table td{padding:7px 10px;color:var(--text2);border-bottom:1px solid var(--border2);}
+.grammar-table td:first-child{color:#fff;font-weight:500;}
+.hl{color:var(--amber-300);font-weight:600;}
+.sb-activity{margin-bottom:1.25rem;}
+.sb-label{font-size:11px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;color:var(--amber-300);margin-bottom:.75rem;}
+.sb-input{width:100%;background:var(--surface2);border:1px solid var(--border);border-radius:var(--r-sm);padding:.625rem .875rem;font-size:14px;color:#fff;font-family:'Inter',sans-serif;transition:border-color .15s;outline:none;margin-bottom:.5rem;}
+.sb-input:focus{border-color:var(--amber-border);}
+.sb-check{padding:7px 18px;border-radius:99px;background:var(--amber-400);color:#1A0800;font-size:13px;font-weight:700;border:none;cursor:pointer;transition:opacity .15s;}
+.sb-check:hover{opacity:.85;}
+.sb-result{font-size:12px;margin-top:6px;padding:6px 10px;border-radius:6px;display:none;}
+.sb-result.show{display:block;}
+.sb-result.ok{background:var(--teal-bg);color:#5DCAA5;}
+.sb-result.no{background:var(--coral-bg);color:#F09B80;}
+.speak-level{margin-bottom:1.25rem;}
+.speak-badge{display:inline-flex;align-items:center;gap:6px;font-size:11px;font-weight:700;padding:3px 12px;border-radius:99px;margin-bottom:.875rem;}
+.speak-badge.l1{background:var(--teal-bg);color:#5DCAA5;border:1px solid var(--teal-border);}
+.speak-badge.l2{background:var(--amber-bg);color:var(--amber-300);border:1px solid var(--amber-border);}
+.speak-badge.l3{background:var(--blue-bg);color:var(--blue);border:1px solid rgba(74,158,224,0.3);}
+.speak-q{background:var(--surface2);border:1px solid var(--border2);border-radius:var(--r-sm);padding:1rem 1.25rem;margin-bottom:.75rem;}
+.speak-q p{font-size:14px;font-weight:600;color:#fff;margin-bottom:.5rem;}
+.speak-hint{font-size:12px;color:var(--text3);}
+.speak-hint span{color:var(--amber-300);}
+.idea-q{background:var(--surface2);border:1px solid var(--border2);border-radius:var(--r-sm);padding:1rem 1.25rem;margin-bottom:.75rem;display:flex;gap:10px;}
+.idea-icon{font-size:20px;flex-shrink:0;margin-top:2px;}
+.idea-text{font-size:14px;color:var(--text2);line-height:1.6;}
+.idea-text strong{color:#fff;}
+.ielts-topic{background:var(--blue-bg);border:1px solid rgba(74,158,224,0.25);border-radius:var(--r-sm);padding:1rem 1.25rem;margin-bottom:1.25rem;}
+.ielts-topic-label{font-size:10px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--blue);margin-bottom:.25rem;}
+.ielts-topic h4{font-size:16px;font-weight:700;color:#fff;}
+.vocab-chips{display:flex;flex-wrap:wrap;gap:6px;margin-top:.75rem;}
+.chip{font-size:12px;padding:4px 12px;border-radius:99px;background:rgba(255,255,255,0.06);border:1px solid var(--border);color:var(--text2);}
+.chip.amber{background:var(--amber-bg);border-color:var(--amber-border);color:var(--amber-300);}
+.ielts-qs{display:flex;flex-direction:column;gap:8px;margin-top:1rem;}
+.ielts-q{display:flex;gap:10px;background:var(--surface2);border-radius:var(--r-sm);padding:.875rem 1rem;}
+.ielts-q-num{font-size:11px;font-weight:700;color:var(--blue);min-width:20px;}
+.ielts-q-text{font-size:13px;color:var(--text2);}
+.ielts-w2{background:rgba(74,158,224,0.08);border:1px solid rgba(74,158,224,0.2);border-radius:var(--r-sm);padding:1rem 1.25rem;margin-top:1rem;}
+.ielts-w2-label{font-size:10px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--blue);margin-bottom:.5rem;}
+.ielts-w2 p{font-size:14px;color:var(--text2);line-height:1.7;font-style:italic;}
+.star-words{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:1.25rem;}
+.star-word{display:flex;align-items:center;gap:6px;padding:6px 14px;border-radius:99px;background:var(--amber-bg);border:1px solid var(--amber-border);font-size:13px;font-weight:600;color:var(--amber-300);}
+.think-box{background:var(--surface2);border:1px solid var(--border2);border-radius:var(--r-sm);padding:1rem 1.25rem;margin-bottom:1rem;}
+.think-box .think-head{font-size:12px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;color:var(--amber-300);margin-bottom:.5rem;}
+.think-box p{font-size:14px;color:var(--text2);}
+.mini-quiz-q{background:var(--surface2);border:1px solid var(--border2);border-radius:var(--r-sm);padding:1rem;margin-bottom:.75rem;}
+.mq-text{font-size:13px;font-weight:600;color:#fff;margin-bottom:.625rem;}
+.mq-opts{display:flex;flex-direction:column;gap:5px;}
+.mq-opt{padding:7px 12px;border-radius:6px;border:1px solid var(--border);background:transparent;font-size:12px;color:var(--text2);cursor:pointer;text-align:left;transition:all .15s;}
+.mq-opt:hover{border-color:var(--amber-border);background:var(--amber-bg);}
+.mq-opt.correct{border-color:var(--teal-border);background:var(--teal-bg);color:#fff;}
+.mq-opt.wrong{border-color:rgba(224,92,58,0.4);background:var(--coral-bg);color:#fff;}
+.lesson-nav{display:flex;gap:10px;margin-top:2rem;}
+.nav-btn{display:flex;align-items:center;gap:6px;padding:.75rem 1.25rem;border-radius:10px;font-size:13px;font-weight:600;cursor:pointer;text-decoration:none;border:1px solid var(--border);color:var(--text2);background:var(--surface);transition:all .15s;flex:1;justify-content:center;}
+.nav-btn:hover{border-color:var(--border2);color:#fff;}
+.nav-btn.primary{background:var(--amber-400);color:#1A0800;border-color:transparent;}
+.nav-btn.primary:hover{opacity:.9;}
+.site-footer{background:#111;border-top:1px solid rgba(255,255,255,0.07);text-align:center;padding:1.5rem;font-size:12px;color:rgba(255,255,255,0.3);}
+.site-footer strong{color:var(--amber-300);}
+@media(max-width:600px){.vocab-grid{grid-template-columns:1fr;}.lesson-nav{flex-direction:column;}}
+</style>
 </head>
 <body>
-
-<nav>
-  <a href="https://lexilink-ideation.github.io/index.html">Lexilink Ideation IELTS STUDIO</a>
-  <span class="sep">·</span>
-  <a href="https://lexilink-ideation.github.io/index.html">Vol. 1</a>
-</nav>
-
-<div class="lesson-header">
-  <div class="lesson-meta">Lesson 15B</div>
-  <div class="lesson-chapter">Chapter 15 · The Phoenicians</div>
+<header class="site-header">
+  <div class="hdr">
+    <a class="logo-wrap" href="index.html">
+      <div class="logo-icon"><svg viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+          <path d="M6 24 C8 18,14 10,24 6 C20 10,18 14,20 18 C16 16,12 18,6 24Z" fill="white"/>
+          <path d="M20 18 C22 20,22 23,20 26 C18 24,18 21,20 18Z" fill="rgba(255,255,255,0.5)"/>
+        </svg></div>
+      <span class="logo-name">Lexilink Ideation IELTS STUDIO</span>
+    </a>
+    <div class="hdr-pipe"></div>
+    <a class="hdr-back" href="index.html"><i class="ti ti-arrow-left" aria-hidden="true"></i> Vol. 1</a>
+    <div class="hdr-spacer"></div>
+    <span class="hdr-badge">Lesson 15B</span>
+  </div>
+</header>
+<section class="lesson-hero">
+  <p class="lesson-eyebrow">Chapter 15 · The Phoenicians</p>
   <h1>Phoenician Traders</h1>
-  <p class="lesson-subtitle">Cedar wood, salt, and silver — how the Phoenicians built a trading empire</p>
-  <div class="lesson-tags">
-    <span class="tag">📖 Story + Vocabulary</span>
-    <span class="tag">🎤 Speaking</span>
-    <span class="tag">✏️ Grammar</span>
-    <span class="tag">⭐ CEFR A2–B1</span>
-  </div>
-  <div class="lesson-progress">Lesson 15B of 7 &nbsp;·&nbsp; Part 1 of 10</div>
-</div>
-
-<div class="tabs-bar">
-  <button class="tab-btn active" onclick="showTab(0,this)"><span class="tab-num">1</span>Vocab</button>
-  <button class="tab-btn" onclick="showTab(1,this)"><span class="tab-num">2</span>Story</button>
-  <button class="tab-btn" onclick="showTab(2,this)"><span class="tab-num">3</span>Reading</button>
-  <button class="tab-btn" onclick="showTab(3,this)"><span class="tab-num">4</span>Grammar</button>
-  <button class="tab-btn" onclick="showTab(4,this)"><span class="tab-num">5</span>Builder</button>
-  <button class="tab-btn" onclick="showTab(5,this)"><span class="tab-num">6</span>Speaking 1</button>
-  <button class="tab-btn" onclick="showTab(6,this)"><span class="tab-num">7</span>Speaking 2</button>
-  <button class="tab-btn" onclick="showTab(7,this)"><span class="tab-num">8</span>Ideas</button>
-  <button class="tab-btn" onclick="showTab(8,this)"><span class="tab-num">9</span>IELTS</button>
-  <button class="tab-btn" onclick="showTab(9,this)"><span class="tab-num">10</span>Review</button>
-</div>
-
-<!-- SECTION 1: VOCAB -->
-<div class="section active" id="sec-0">
-  <div class="section-title">1 — Vocabulary</div>
-  <div class="section-subtitle">Click each word to learn more</div>
-  <div class="vocab-grid">
-    <div class="vocab-card" onclick="toggleVocab(this)">
-      <div class="vocab-card-header"><span class="vocab-word">cedar</span><span class="vocab-pos">noun</span><span class="vocab-pron">/ˈsiː.dər/</span><div class="vocab-expand">▼</div></div>
-      <div class="vocab-body"><div class="vocab-zh">雪松；柏树</div><div class="vocab-def">A tall, strong tree that produces very good wood. The cedar trees of Lebanon were famous in the ancient world.</div><div class="vocab-example">"The Phoenicians cut down tall cedar trees and floated the logs to other countries."</div></div>
-    </div>
-    <div class="vocab-card" onclick="toggleVocab(this)">
-      <div class="vocab-card-header"><span class="vocab-word">trade</span><span class="vocab-pos">noun / verb</span><span class="vocab-pron">/treɪd/</span><div class="vocab-expand">▼</div></div>
-      <div class="vocab-body"><div class="vocab-zh">贸易；交易</div><div class="vocab-def">The activity of buying and selling goods between people or countries.</div><div class="vocab-example">"The Phoenicians sailed all around the Mediterranean to trade their goods."</div></div>
-    </div>
-    <div class="vocab-card" onclick="toggleVocab(this)">
-      <div class="vocab-card-header"><span class="vocab-word">embroidered</span><span class="vocab-pos">adjective</span><span class="vocab-pron">/ɪmˈbrɔɪ.dəd/</span><div class="vocab-expand">▼</div></div>
-      <div class="vocab-body"><div class="vocab-zh">刺绣的；绣花的</div><div class="vocab-def">Decorated with patterns sewn onto cloth using coloured thread.</div><div class="vocab-example">"The Phoenicians sold beautiful embroidered cloth with colourful patterns."</div></div>
-    </div>
-    <div class="vocab-card" onclick="toggleVocab(this)">
-      <div class="vocab-card-header"><span class="vocab-word">tin</span><span class="vocab-pos">noun</span><span class="vocab-pron">/tɪn/</span><div class="vocab-expand">▼</div></div>
-      <div class="vocab-body"><div class="vocab-zh">锡（金属）</div><div class="vocab-def">A soft silver-coloured metal. In ancient times, tin was mixed with copper to make bronze.</div><div class="vocab-example">"The Phoenicians sailed far to find the best places to dig up tin and other metals."</div></div>
-    </div>
-    <div class="vocab-card" onclick="toggleVocab(this)">
-      <div class="vocab-card-header"><span class="vocab-word">valuable</span><span class="vocab-pos">adjective</span><span class="vocab-pron">/ˈvæl.jʊ.ə.bəl/</span><div class="vocab-expand">▼</div></div>
-      <div class="vocab-body"><div class="vocab-zh">贵重的；有价值的</div><div class="vocab-def">Worth a lot of money, or very important and useful.</div><div class="vocab-example">"Cedar wood was extremely valuable because it was strong and did not rot easily."</div></div>
-    </div>
-    <div class="vocab-card" onclick="toggleVocab(this)">
-      <div class="vocab-card-header"><span class="vocab-word">export</span><span class="vocab-pos">verb / noun</span><span class="vocab-pron">/ˈek.spɔːt/</span><div class="vocab-expand">▼</div></div>
-      <div class="vocab-body"><div class="vocab-zh">出口；输出</div><div class="vocab-def">To send goods to another country to be sold there.</div><div class="vocab-example">"The Phoenicians exported cedar wood, glass, and cloth to countries all around the Mediterranean."</div></div>
-    </div>
-    <div class="vocab-card" onclick="toggleVocab(this)">
-      <div class="vocab-card-header"><span class="vocab-word">profit</span><span class="vocab-pos">noun</span><span class="vocab-pron">/ˈprɒf.ɪt/</span><div class="vocab-expand">▼</div></div>
-      <div class="vocab-body"><div class="vocab-zh">利润；盈利</div><div class="vocab-def">The money you make after you have paid all your costs. If you buy something cheap and sell it for more, you make a profit.</div><div class="vocab-example">"By selling beautiful furniture, the Phoenicians made a large profit."</div></div>
-    </div>
-    <div class="vocab-card" onclick="toggleVocab(this)">
-      <div class="vocab-card-header"><span class="vocab-word">network</span><span class="vocab-pos">noun</span><span class="vocab-pron">/ˈnet.wɜːk/</span><div class="vocab-expand">▼</div></div>
-      <div class="vocab-body"><div class="vocab-zh">网络；关系网</div><div class="vocab-def">A system of connected things, people, or places.</div><div class="vocab-example">"The Phoenicians built the most powerful trading network in the ancient Mediterranean world."</div></div>
-    </div>
-    <div class="vocab-card" onclick="toggleVocab(this)">
-      <div class="vocab-card-header"><span class="vocab-word">demand</span><span class="vocab-pos">noun</span><span class="vocab-pron">/dɪˈmɑːnd/</span><div class="vocab-expand">▼</div></div>
-      <div class="vocab-body"><div class="vocab-zh">需求；需要</div><div class="vocab-def">The desire of customers to buy or have something. High demand means many people want it.</div><div class="vocab-example">"There was huge demand for Phoenician goods all around the ancient world."</div></div>
-    </div>
-    <div class="vocab-card" onclick="toggleVocab(this)">
-      <div class="vocab-card-header"><span class="vocab-word">log</span><span class="vocab-pos">noun</span><span class="vocab-pron">/lɒɡ/</span><div class="vocab-expand">▼</div></div>
-      <div class="vocab-body"><div class="vocab-zh">原木；木材</div><div class="vocab-def">A thick piece of wood cut from a tree trunk.</div><div class="vocab-example">"The Phoenicians cut the cedar trees into logs and floated them to Egypt and other countries."</div></div>
+  <p>How a small nation connected the ancient world through trade</p>
+  <div class="lesson-pills"><span class="l-pill">📖 Story + Vocabulary</span><span class="l-pill">🎤 Speaking</span><span class="l-pill">✏️ Grammar</span><span class="l-pill">⭐ CEFR A2–B1</span></div>
+</section>
+<div class="lesson-progress">
+  <div class="lp-inner">
+    <div class="lp-labels"><span>Lesson 15B of 7</span><span style="color:var(--amber-300)">Part 1 of 10</span></div>
+    <div class="lp-track"><div class="lp-fill"></div></div>
+    <div class="lp-parts">
+      <span class="lp-part active" onclick="scrollTo('p1')">1 Vocab</span>
+      <span class="lp-part" onclick="scrollTo('p2')">2 Story</span>
+      <span class="lp-part" onclick="scrollTo('p3')">3 Reading</span>
+      <span class="lp-part" onclick="scrollTo('p4')">4 Grammar</span>
+      <span class="lp-part" onclick="scrollTo('p5')">5 Builder</span>
+      <span class="lp-part" onclick="scrollTo('p6')">6 Speaking 1</span>
+      <span class="lp-part" onclick="scrollTo('p7')">7 Speaking 2</span>
+      <span class="lp-part" onclick="scrollTo('p8')">8 Ideas</span>
+      <span class="lp-part" onclick="scrollTo('p9')">9 IELTS</span>
+      <span class="lp-part" onclick="scrollTo('p10')">10 Review</span>
     </div>
   </div>
 </div>
-
-<!-- SECTION 2: STORY -->
-<div class="section" id="sec-1">
-  <div class="section-title">2 — The Story</div>
-  <div class="section-subtitle">Read carefully. Notice the bold words.</div>
-  <div class="story-card">
-    <span class="story-emoji">⛵</span>
-    <p>The Phoenicians were the greatest sailors in the ancient world — but why? Because they were also the greatest <strong>traders</strong>. Sailing and trading went together perfectly. The more they sailed, the more goods they found. The more goods they found, the more they could <strong>trade</strong>. And trade made them rich.</p>
-    <p>So what did the Phoenicians sell? Almost everything. Let's take a walk through a Phoenician marketplace and find out.</p>
-    <p>First: <strong>cedar</strong> wood. The tall cedar trees that grew in the mountains behind the Phoenician coast were magnificent — strong, sweet-smelling, and resistant to rot. Everywhere else in the ancient world, wood was scarce. So the Phoenicians cut down the cedars, turned them into <strong>logs</strong>, and floated them along the coast to countries like Egypt. In Egypt, there were almost no trees. A cargo of cedar was worth more than gold. The Phoenicians built beautiful furniture from cedar and sold it for a very high price. They grew very <strong>wealthy</strong> from this trade alone.</p>
-    <span class="story-emoji">🐟</span>
-    <p>Next: <strong>salt and dried fish</strong>. The Mediterranean Sea was full of fish, and salt — used to preserve food before refrigerators existed — was one of the most important products in the ancient world. The Phoenicians salted and dried their fish and sold it to cities far away from the sea.</p>
-    <p>They also sold <strong>embroidered</strong> cloth — beautiful fabric decorated with colourful patterns sewn in thread. Cloth-making was a skilled art in Phoenicia, and their fabrics were famous for their beauty and quality. Women in faraway cities wanted Phoenician cloth for their robes and curtains.</p>
-    <span class="story-emoji">⛏️</span>
-    <p>The Phoenicians also sailed to distant shores to find metals. They found places to dig up <strong>tin</strong> — a precious metal used to make bronze. Bronze was harder than copper alone and was used to make weapons and tools. Whoever controlled the tin controlled the armies. The Phoenicians traded tin from as far away as Spain and Britain, connecting the Mediterranean world to the Atlantic coast.</p>
-    <p>By trading all these goods — wood, salt, fish, cloth, and metals — the Phoenicians built the most powerful trading <strong>network</strong> in the ancient world. Their ships were everywhere. Their language and their goods spread to every shore of the Mediterranean Sea. Wherever there was <strong>demand</strong>, the Phoenicians were there to <strong>export</strong> what people needed — and to take home a handsome <strong>profit</strong>.</p>
-    <p>The world had its first great international merchants.</p>
+<main class="main">
+<section class="sec" id="p1">
+  <div class="sec-header">
+    <div class="sec-num">1</div>
+    <div><div class="sec-title">Vocabulary</div><div class="sec-sub">Click each word to learn more</div></div>
   </div>
-</div>
-
-<!-- SECTION 3: READING -->
-<div class="section" id="sec-2">
-  <div class="section-title">3 — Reading Comprehension</div>
-  <div class="section-subtitle">Choose the best answer.</div>
-
-  <div class="question-card">
-    <div class="question-text"><span class="q-num">1</span>Why was cedar wood so valuable in the ancient world?</div>
-    <div class="options">
-      <label><input type="radio" name="q1" value="a"> It was very light and floated easily</label>
-      <label><input type="radio" name="q1" value="b"> It was strong, sweet-smelling, and resistant to rot — and scarce outside Phoenicia</label>
-      <label><input type="radio" name="q1" value="c"> It was the only wood that could be used for ships</label>
+  <div class="vocab-grid"><div class="vocab-card" onclick="toggleVocab(this)">
+      <div class="vc-top"><span class="vc-word">trade</span><span class="vc-pos">verb / noun</span></div>
+      <div class="vc-pron">/treɪd/</div>
+      <div class="vc-cn">贸易 / 交易</div>
+      <div class="vc-detail">
+        <div class="vc-def">To buy, sell, or exchange goods; also the activity of buying and selling.</div>
+        <div class="vc-ex">"The Phoenicians trade with Egypt, Greece, and even faraway Spain."</div>
+      </div>
+    </div><div class="vocab-card" onclick="toggleVocab(this)">
+      <div class="vc-top"><span class="vc-word">timber</span><span class="vc-pos">noun</span></div>
+      <div class="vc-pron">/ˈtɪm.bər/</div>
+      <div class="vc-cn">木材</div>
+      <div class="vc-detail">
+        <div class="vc-def">Wood that has been cut and prepared for building or selling.</div>
+        <div class="vc-ex">"Phoenician merchants sold cedar timber to the Egyptians for building ships."</div>
+      </div>
+    </div><div class="vocab-card" onclick="toggleVocab(this)">
+      <div class="vc-top"><span class="vc-word">cargo</span><span class="vc-pos">noun</span></div>
+      <div class="vc-pron">/ˈkɑː.ɡəʊ/</div>
+      <div class="vc-cn">货物</div>
+      <div class="vc-detail">
+        <div class="vc-def">Goods that are carried by a ship, plane, or vehicle.</div>
+        <div class="vc-ex">"The Phoenician ships were loaded with cargo — cedar, cloth, and wine."</div>
+      </div>
+    </div><div class="vocab-card" onclick="toggleVocab(this)">
+      <div class="vc-top"><span class="vc-word">tin</span><span class="vc-pos">noun</span></div>
+      <div class="vc-pron">/tɪn/</div>
+      <div class="vc-cn">锡</div>
+      <div class="vc-detail">
+        <div class="vc-def">A soft, silvery metal used to make bronze when mixed with copper.</div>
+        <div class="vc-ex">"Phoenician traders sailed all the way to Britain to find tin."</div>
+      </div>
+    </div><div class="vocab-card" onclick="toggleVocab(this)">
+      <div class="vc-top"><span class="vc-word">embroidered</span><span class="vc-pos">adjective</span></div>
+      <div class="vc-pron">/ɪmˈbrɔɪ.dəd/</div>
+      <div class="vc-cn">刺绣的</div>
+      <div class="vc-detail">
+        <div class="vc-def">Decorated with patterns sewn onto cloth with coloured thread.</div>
+        <div class="vc-ex">"Phoenician women made beautiful embroidered cloth that kings loved to wear."</div>
+      </div>
+    </div><div class="vocab-card" onclick="toggleVocab(this)">
+      <div class="vc-top"><span class="vc-word">linen</span><span class="vc-pos">noun</span></div>
+      <div class="vc-pron">/ˈlɪn.ɪn/</div>
+      <div class="vc-cn">亚麻布</div>
+      <div class="vc-detail">
+        <div class="vc-def">Light cloth made from the flax plant, often used for fine clothing.</div>
+        <div class="vc-ex">"The Phoenicians imported Egyptian linen and dyed it beautiful colours."</div>
+      </div>
+    </div><div class="vocab-card" onclick="toggleVocab(this)">
+      <div class="vc-top"><span class="vc-word">exchange</span><span class="vc-pos">verb</span></div>
+      <div class="vc-pron">/ɪksˈtʃeɪndʒ/</div>
+      <div class="vc-cn">交换</div>
+      <div class="vc-detail">
+        <div class="vc-def">To give something and receive something else in return.</div>
+        <div class="vc-ex">"The Phoenicians would exchange their cedar for Egyptian grain and gold."</div>
+      </div>
+    </div><div class="vocab-card" onclick="toggleVocab(this)">
+      <div class="vc-top"><span class="vc-word">profit</span><span class="vc-pos">noun</span></div>
+      <div class="vc-pron">/ˈprɒf.ɪt/</div>
+      <div class="vc-cn">利润</div>
+      <div class="vc-detail">
+        <div class="vc-def">The money you earn after paying all your costs — what you keep.</div>
+        <div class="vc-ex">"Phoenician merchants made great profit by selling goods that were scarce far from home."</div>
+      </div>
+    </div><div class="vocab-card" onclick="toggleVocab(this)">
+      <div class="vc-top"><span class="vc-word">route</span><span class="vc-pos">noun</span></div>
+      <div class="vc-pron">/ruːt/</div>
+      <div class="vc-cn">路线</div>
+      <div class="vc-detail">
+        <div class="vc-def">A path or road that you follow to get from one place to another.</div>
+        <div class="vc-ex">"The Phoenicians had trading routes that stretched from Egypt to the Atlantic Ocean."</div>
+      </div>
+    </div><div class="vocab-card" onclick="toggleVocab(this)">
+      <div class="vc-top"><span class="vc-word">surplus</span><span class="vc-pos">noun</span></div>
+      <div class="vc-pron">/ˈsɜː.pləs/</div>
+      <div class="vc-cn">剩余 / 盈余</div>
+      <div class="vc-detail">
+        <div class="vc-def">More than you need; extra goods that you can sell or trade.</div>
+        <div class="vc-ex">"Egypt had a surplus of grain, which it exchanged for Phoenician cedar wood."</div>
+      </div>
+    </div></div>
+</section>
+<section class="sec" id="p2">
+  <div class="sec-header">
+    <div class="sec-num">2</div>
+    <div><div class="sec-title">The Story</div><div class="sec-sub">Read carefully. Notice the bold words.</div></div>
+  </div>
+  <div class="story-body"><div class="story-icon">⛵</div>
+    <p>A Phoenician merchant woke before dawn. His ship was loaded with <span class="story-hl">cargo</span>: tall logs of sweet-smelling <span class="story-hl">cedar timber</span>, bolts of fine <span class="story-hl">linen</span> cloth decorated with <span class="story-hl">embroidered</span> patterns, jars of wine, and barrels of salted fish. The wind was right. It was time to <span class="story-hl">trade</span>.</p>
+    <p>The Phoenicians did not grow much food. But they had things that other nations desperately wanted — especially cedar. The great forests of Lebanon produced the finest timber in the ancient world. Egypt had almost no trees of its own. So Egypt traded grain and gold in <span class="story-hl">exchange</span> for Phoenician cedar. The Phoenicians used that grain to feed their cities, and that gold to buy more goods.</p>
+    <div class="story-box">The Phoenicians were the middlemen of the ancient world. They bought goods where they were plentiful and cheap, then sailed them to places where those same goods were scarce and valuable. This was their genius: turning geography into profit.</div>
+    <p>Their <span class="story-hl">trading routes</span> stretched across the entire Mediterranean. They sailed west to Spain and north to Britain, where they found <span class="story-hl">tin</span> — a precious metal needed to make bronze. Phoenician ships also carried glass beads, fine cloth, olive oil, and wine.</p>
+    <p>Back home, Phoenician craftswomen created beautiful goods. They made <span class="story-hl">embroidered</span> cloth decorated with bright colours. They wove fine linen that kings and queens across the world coveted. They pickled fish in salt and packed them in clay jars. Every <span class="story-hl">surplus</span> resource became a <span class="story-hl">profit</span>.</p>
+    <p>The Phoenicians did not build empires with armies. They built something more lasting — a network of trade that connected the ancient world from one end to the other.</p>
+    <div class="story-icon">💰</div></div>
+</section>
+<section class="sec" id="p3">
+  <div class="sec-header">
+    <div class="sec-num">3</div>
+    <div><div class="sec-title">Reading Comprehension</div><div class="sec-sub">Choose the best answer. Get instant feedback!</div></div>
+  </div>
+  <div class="quiz-list">
+    <div class="q-item">
+      <div class="q-text">1. What did the Egyptians trade in exchange for Phoenician cedar?</div>
+      <div class="q-opts"><button class="q-opt" onclick="mcq(this,'wrong')">Tin and bronze.</button>
+<button class="q-opt" onclick="mcq(this,'correct')">Grain and gold.</button>
+<button class="q-opt" onclick="mcq(this,'wrong')">Embroidered cloth.</button></div>
+      <div class="q-feedback"></div>
     </div>
-    <button class="check-btn" onclick="checkQ('q1','b',this)">Check ✓</button>
-    <div class="feedback"></div>
-  </div>
-
-  <div class="question-card">
-    <div class="question-text"><span class="q-num">2</span>Why did the Phoenicians sell salt and dried fish?</div>
-    <div class="options">
-      <label><input type="radio" name="q2" value="a"> Salt was very fashionable in ancient Egypt</label>
-      <label><input type="radio" name="q2" value="b"> Salt was used to preserve food before refrigerators existed</label>
-      <label><input type="radio" name="q2" value="c"> They had too much fish and didn't want to waste it</label>
+    <div class="q-item">
+      <div class="q-text">2. True or False: The Phoenicians traded only with their closest neighbours.</div>
+      <div class="tf-opts">
+        <button class="tf-btn" onclick="tf(this,'wrong','False! Their routes stretched from Egypt all the way to Britain and Spain.')">True</button>
+        <button class="tf-btn" onclick="tf(this,'correct','Correct! Their trading routes stretched across the entire Mediterranean and beyond.')">False</button>
+      </div>
+      <div class="q-feedback"></div>
     </div>
-    <button class="check-btn" onclick="checkQ('q2','b',this)">Check ✓</button>
-    <div class="feedback"></div>
-  </div>
-
-  <div class="question-card">
-    <div class="question-text"><span class="q-num">3</span>What is tin used for?</div>
-    <div class="options">
-      <label><input type="radio" name="q3" value="a"> Making jewellery and purple dye</label>
-      <label><input type="radio" name="q3" value="b"> Mixed with copper to make bronze for weapons and tools</label>
-      <label><input type="radio" name="q3" value="c"> Making sails and ropes for ships</label>
+    <div class="q-item">
+      <div class="q-text">3. Why did the Phoenicians sail to Britain?</div>
+      <div class="q-opts"><button class="q-opt" onclick="mcq(this,'wrong')">To find silver.</button>
+<button class="q-opt" onclick="mcq(this,'correct')">To find tin, a metal needed to make bronze.</button>
+<button class="q-opt" onclick="mcq(this,'wrong')">To look for new farmland.</button></div>
+      <div class="q-feedback"></div>
     </div>
-    <button class="check-btn" onclick="checkQ('q3','b',this)">Check ✓</button>
-    <div class="feedback"></div>
-  </div>
-
-  <div class="question-card">
-    <div class="question-text"><span class="q-num">4</span>True or False: The Phoenicians only traded with countries close to Phoenicia.</div>
-    <div class="options">
-      <label><input type="radio" name="q4" value="a"> True</label>
-      <label><input type="radio" name="q4" value="b"> False — they traded as far away as Spain and Britain</label>
+    <div class="q-item">
+      <div class="q-text">4. What does it mean to be 'the middlemen of the ancient world'?</div>
+      <div class="q-opts"><button class="q-opt" onclick="mcq(this,'wrong')">They built cities in the middle of trade routes.</button>
+<button class="q-opt" onclick="mcq(this,'correct')">They bought goods where they were cheap and sold them where they were expensive.</button>
+<button class="q-opt" onclick="mcq(this,'wrong')">They never traded but only shipped goods for others.</button></div>
+      <div class="q-feedback"></div>
     </div>
-    <button class="check-btn" onclick="checkQ('q4','b',this)">Check ✓</button>
-    <div class="feedback"></div>
-  </div>
-
-  <div class="question-card">
-    <div class="question-text"><span class="q-num">5</span>What does "embroidered cloth" look like?</div>
-    <div class="options">
-      <label><input type="radio" name="q5" value="a"> Plain white linen with no decoration</label>
-      <label><input type="radio" name="q5" value="b"> Fabric decorated with colourful patterns sewn in thread</label>
-      <label><input type="radio" name="q5" value="c"> Cloth dyed purple with snail juice</label>
+    <div class="q-item">
+      <div class="q-text">5. True or False: The Phoenicians built empires using armies.</div>
+      <div class="tf-opts">
+        <button class="tf-btn" onclick="tf(this,'wrong','False! They built trade networks, not military empires.')">True</button>
+        <button class="tf-btn" onclick="tf(this,'correct','Correct! Their power came from trade, not conquest.')">False</button>
+      </div>
+      <div class="q-feedback"></div>
     </div>
-    <button class="check-btn" onclick="checkQ('q5','b',this)">Check ✓</button>
-    <div class="feedback"></div>
-  </div>
-
-  <div class="question-card">
-    <div class="question-text"><span class="q-num">6</span>What made the Phoenicians the world's first great international merchants?</div>
-    <div class="options">
-      <label><input type="radio" name="q6" value="a"> They had the largest army</label>
-      <label><input type="radio" name="q6" value="b"> They built the most powerful trading network, exporting many goods to every shore of the Mediterranean</label>
-      <label><input type="radio" name="q6" value="c"> They invented money and banking</label>
+    <div class="q-item">
+      <div class="q-text">6. What made Phoenician cloth special?</div>
+      <div class="q-opts"><button class="q-opt" onclick="mcq(this,'wrong')">It was made from cedar wood fibres.</button>
+<button class="q-opt" onclick="mcq(this,'correct')">It was embroidered with patterns and dyed in beautiful colours.</button>
+<button class="q-opt" onclick="mcq(this,'wrong')">It was the cheapest cloth in the ancient world.</button></div>
+      <div class="q-feedback"></div>
     </div>
-    <button class="check-btn" onclick="checkQ('q6','b',this)">Check ✓</button>
-    <div class="feedback"></div>
   </div>
-</div>
-
-<!-- SECTION 4: GRAMMAR -->
-<div class="section" id="sec-3">
-  <div class="section-title">4 — Language Focus</div>
-  <div class="section-subtitle">Grammar from the story</div>
-
-  <div class="grammar-block">
-    <div class="grammar-label">📌 GRAMMAR</div>
-    <div class="grammar-title">Past Simple — Regular and Irregular Verbs</div>
-    <table class="grammar-table">
-      <tr><th>Base form</th><th>Past tense</th><th>From the story</th></tr>
-      <tr><td>cut</td><td>cut</td><td>They <strong>cut</strong> down the cedar trees.</td></tr>
-      <tr><td>sell</td><td>sold</td><td>They <strong>sold</strong> embroidered cloth.</td></tr>
-      <tr><td>build</td><td>built</td><td>The Phoenicians <strong>built</strong> beautiful furniture.</td></tr>
-      <tr><td>find</td><td>found</td><td>They <strong>found</strong> places to dig up tin.</td></tr>
-      <tr><td>float</td><td>floated</td><td>They <strong>floated</strong> the logs to Egypt.</td></tr>
-      <tr><td>trade</td><td>traded</td><td>The Phoenicians <strong>traded</strong> with many countries.</td></tr>
-    </table>
+</section>
+<section class="sec" id="p4">
+  <div class="sec-header">
+    <div class="sec-num">4</div>
+    <div><div class="sec-title">Language Focus</div><div class="sec-sub">Grammar from the story — learn through meaning</div></div>
   </div>
-
-  <div class="grammar-block">
-    <div class="grammar-label">📌 GRAMMAR</div>
-    <div class="grammar-title">The more… the more… — Parallel Comparatives</div>
-    <p style="font-size:0.9rem;color:#374151;margin-bottom:12px;">This structure shows that two things increase together. When one thing gets bigger, the other gets bigger too.</p>
-    <div class="grammar-example">The <strong>more</strong> they sailed, the <strong>more</strong> goods they found.</div>
-    <div class="grammar-example">The <strong>more</strong> goods they found, the <strong>more</strong> they could trade.</div>
-    <div class="grammar-example">The <strong>more</strong> they traded, the <strong>richer</strong> they became.</div>
-    <div class="grammar-note">This is a very useful pattern for IELTS essays: "The more countries invest in education, the more productive their economies become."</div>
+  <div class="grammar-box">
+    <div class="grammar-label">📌 Past Tense — Regular & Irregular</div>
+    <div class="grammar-rule">History stories use the past tense. Here are verbs from the story.</div>
+    
+    <table class="grammar-table"><tr><th>Base</th><th>Past</th><th>From the story</th></tr><tr><td>load</td><td><span class="hl">loaded</span></td><td>The ship was <span class='hl'>loaded</span> with cedar and cloth.</td></tr><tr><td>trade</td><td><span class="hl">traded</span></td><td>Phoenicians <span class='hl'>traded</span> across the Mediterranean.</td></tr><tr><td>buy</td><td><span class="hl">bought</span></td><td>They <span class='hl'>bought</span> goods where they were cheap.</td></tr><tr><td>sell</td><td><span class="hl">sold</span></td><td>They <span class='hl'>sold</span> those goods where they were expensive.</td></tr><tr><td>make</td><td><span class="hl">made</span></td><td>Craftswomen <span class='hl'>made</span> beautiful embroidered cloth.</td></tr></table>
   </div>
-
-  <div class="grammar-block">
-    <div class="grammar-label">📌 GRAMMAR</div>
-    <div class="grammar-title">Used to — Habits and States in the Past</div>
-    <p style="font-size:0.9rem;color:#374151;margin-bottom:12px;">We use <strong>used to + verb</strong> to describe something that happened regularly in the past but doesn't happen now.</p>
-    <div class="grammar-example">People <strong>used to</strong> preserve food with salt before refrigerators existed.</div>
-    <div class="grammar-example">Phoenician merchants <strong>used to</strong> sail from country to country selling their goods.</div>
-    <div class="grammar-note">Notice: "used to" has no present form. We can't say "I use to go." We say "I usually go" for present habits.</div>
+<div class="grammar-box">
+    <div class="grammar-label">📌 Comparative adjectives — '-er' and 'more'</div>
+    <div class="grammar-rule">Use comparative adjectives to compare two things.</div>
+    <div class="grammar-eg">Cedar was <span>more valuable</span> in Egypt than in Phoenicia.</div>
+<div class="grammar-eg">Tin was <span>scarcer</span> in Egypt than in Britain.</div>
+<div class="grammar-eg">Phoenician cloth was <span>finer</span> than what most people could make at home.</div>
+<div class="grammar-eg">The <span>longer</span> the route, the <span>higher</span> the profit.</div>
+    
   </div>
-</div>
-
-<!-- SECTION 5: BUILDER -->
-<div class="section" id="sec-4">
-  <div class="section-title">5 — Sentence Builder</div>
-  <div class="section-subtitle">Practice with the vocabulary</div>
-
-  <div class="builder-card">
-    <div class="builder-label">✏️ Fill in the blank</div>
-    <div class="builder-prompt">1. The Phoenicians <strong>cut</strong> down tall ________ trees and floated the logs to Egypt.</div>
-    <input class="builder-input" type="text" placeholder="Type your answer...">
-    <button class="builder-check" onclick="checkFill(this,'cedar')">Check ✓</button>
-    <div class="builder-feedback"></div>
+<div class="grammar-box">
+    <div class="grammar-label">📌 Purpose — 'to' + verb / 'in order to'</div>
+    <div class="grammar-rule">Use these structures to explain WHY someone did something.</div>
+    <div class="grammar-eg">Phoenicians sailed to Britain <span>to find</span> tin.</div>
+<div class="grammar-eg">They salted fish <span>in order to</span> preserve them for the journey.</div>
+<div class="grammar-eg">They traded cedar <span>to get</span> grain and gold.</div>
+<div class="grammar-eg">They built ships <span>in order to</span> expand their trading routes.</div>
+    
   </div>
-
-  <div class="builder-card">
-    <div class="builder-label">✏️ Fill in the blank</div>
-    <div class="builder-prompt">2. The Phoenicians made a large ________ by selling cedar furniture at a high price.</div>
-    <input class="builder-input" type="text" placeholder="Type your answer...">
-    <button class="builder-check" onclick="checkFill(this,'profit')">Check ✓</button>
-    <div class="builder-feedback"></div>
+</section>
+<section class="sec" id="p5">
+  <div class="sec-header">
+    <div class="sec-num">5</div>
+    <div><div class="sec-title">Sentence Builder</div><div class="sec-sub">Build your skills with the vocabulary</div></div>
   </div>
-
-  <div class="builder-card">
-    <div class="builder-label">✏️ Complete the pattern</div>
-    <div class="builder-prompt">3. Complete this sentence using "the more… the more…":<br><em>The more countries the Phoenicians visited, ________________.</em></div>
-    <input class="builder-input" type="text" placeholder="the more...">
-    <button class="builder-check" onclick="revealFill(this,'the more goods they could trade (and the richer they became)')">Check ✓</button>
-    <div class="builder-feedback"></div>
+  <div class="sb-activity">
+    <div class="sb-label">🔀 Unscramble the sentence</div>
+    <p style="font-size:13px;color:var(--text3);margin-bottom:.75rem;">Put these words in the correct order:</p>
+    <div style="margin-bottom:.75rem;"><span style="padding:5px 10px;border-radius:99px;background:var(--surface2);border:1px solid var(--border);font-size:13px;color:var(--text2);display:inline-block;margin:3px;">traded</span><span style="padding:5px 10px;border-radius:99px;background:var(--surface2);border:1px solid var(--border);font-size:13px;color:var(--text2);display:inline-block;margin:3px;">goods</span><span style="padding:5px 10px;border-radius:99px;background:var(--surface2);border:1px solid var(--border);font-size:13px;color:var(--text2);display:inline-block;margin:3px;">world</span><span style="padding:5px 10px;border-radius:99px;background:var(--surface2);border:1px solid var(--border);font-size:13px;color:var(--text2);display:inline-block;margin:3px;">Phoenicians</span><span style="padding:5px 10px;border-radius:99px;background:var(--surface2);border:1px solid var(--border);font-size:13px;color:var(--text2);display:inline-block;margin:3px;">the</span><span style="padding:5px 10px;border-radius:99px;background:var(--surface2);border:1px solid var(--border);font-size:13px;color:var(--text2);display:inline-block;margin:3px;">ancient</span><span style="padding:5px 10px;border-radius:99px;background:var(--surface2);border:1px solid var(--border);font-size:13px;color:var(--text2);display:inline-block;margin:3px;">entire</span><span style="padding:5px 10px;border-radius:99px;background:var(--surface2);border:1px solid var(--border);font-size:13px;color:var(--text2);display:inline-block;margin:3px;">across</span><span style="padding:5px 10px;border-radius:99px;background:var(--surface2);border:1px solid var(--border);font-size:13px;color:var(--text2);display:inline-block;margin:3px;">the</span><span style="padding:5px 10px;border-radius:99px;background:var(--surface2);border:1px solid var(--border);font-size:13px;color:var(--text2);display:inline-block;margin:3px;">The</span></div>
+    <input class="sb-input" id="us1b" placeholder="Type your sentence here..."/>
+    <button class="sb-check" onclick="checkUnscramble('us1b','The Phoenicians traded goods across the entire ancient world','ur1b')">Check ✓</button>
+    <div class="sb-result" id="ur1b"></div>
   </div>
-
-  <div class="builder-card">
-    <div class="builder-label">🈶 Translation challenge</div>
-    <div class="builder-prompt">Translate into English:</div>
-    <div style="background:var(--gold-light);border-radius:8px;padding:12px;margin-bottom:10px;font-size:1rem;color:#92400e;font-weight:600;">
-      腓尼基人向各地出口雪松木、盐渍鱼和刺绣布料，建立起强大的贸易网络。
-    </div>
-    <input class="builder-input" type="text" placeholder="Write in English...">
-    <button class="builder-check" onclick="revealFill(this,'The Phoenicians exported cedar wood, salted fish, and embroidered cloth to many places, building a powerful trading network.')">Check ✓</button>
-    <div class="builder-feedback"></div>
+<div class="sb-activity">
+    <div class="sb-label">✏️ Fill in the blank</div>
+    <p style="font-size:13px;color:var(--text2);margin-bottom:.5rem;">1. The Egyptians gave grain and gold in ________ for Phoenician cedar wood.</p>
+    <input class="sb-input" id="f1b" placeholder="Your answer..."/>
+    <button class="sb-check" onclick="checkFill('f1b','exchange','rf1b')">Check ✓</button>
+    <div class="sb-result" id="rf1b"></div>
   </div>
-</div>
-
-<!-- SECTION 6: SPEAKING 1 -->
-<div class="section" id="sec-5">
-  <div class="section-title">6 — Speaking — Level 1</div>
-  <div class="section-subtitle">Answer in one complete sentence</div>
-  <div class="speaking-level level-1">🟢 Level 1 · One sentence</div>
-  <div class="speaking-question">
-    <div class="speaking-q">Name two things the Phoenicians sold as traders.</div>
-    <div class="speaking-hint">💡 Start with: <span>"The Phoenicians sold..."</span></div>
+<div class="sb-activity">
+    <div class="sb-label">✏️ Fill in the blank</div>
+    <p style="font-size:13px;color:var(--text2);margin-bottom:.5rem;">2. Phoenician sailors travelled to Britain to find ________, a metal used to make bronze.</p>
+    <input class="sb-input" id="f2b" placeholder="Your answer..."/>
+    <button class="sb-check" onclick="checkFill('f2b','tin','rf2b')">Check ✓</button>
+    <div class="sb-result" id="rf2b"></div>
   </div>
-  <div class="speaking-question">
-    <div class="speaking-q">Why was cedar wood so valuable?</div>
-    <div class="speaking-hint">💡 Start with: <span>"Cedar wood was valuable because..."</span></div>
+</section>
+<section class="sec" id="p6">
+  <div class="sec-header">
+    <div class="sec-num">6</div>
+    <div><div class="sec-title">Speaking — Level 1</div><div class="sec-sub">Answer in one complete sentence</div></div>
   </div>
-  <div class="speaking-question">
-    <div class="speaking-q">What was tin used for in the ancient world?</div>
-    <div class="speaking-hint">💡 Start with: <span>"Tin was used to..."</span></div>
+  <div class="speak-level">
+    <span class="speak-badge l1">🟢 Level 1 · One sentence</span>
+    <div class="speak-q"><p>What is cargo?</p><div class="speak-hint">💡 Start with: <span>"Cargo is..."</span></div></div>
+    <div class="speak-q"><p>What did the Phoenicians trade with Egypt?</p><div class="speak-hint">💡 Start with: <span>"The Phoenicians traded... with Egypt in exchange for..."</span></div></div>
+    <div class="speak-q"><p>Why did Phoenician traders sail all the way to Britain?</p><div class="speak-hint">💡 Start with: <span>"They sailed to Britain because..."</span></div></div>
   </div>
-</div>
-
-<!-- SECTION 7: SPEAKING 2 -->
-<div class="section" id="sec-6">
-  <div class="section-title">7 — Speaking — Level 2</div>
-  <div class="section-subtitle">Answer in 2–3 sentences. Share your opinion.</div>
-  <div class="speaking-level level-2">🟡 Level 2 · 2–3 sentences</div>
-  <div class="speaking-question">
-    <div class="speaking-q">Imagine you are a Phoenician merchant arriving in Egypt with a ship full of cedar wood and embroidered cloth. Describe what happens when you arrive.</div>
-    <div class="speaking-hint">💡 Try: <span>"When my ship arrives, I see... The Egyptian buyers... I sell my goods for..."</span></div>
+</section>
+<section class="sec" id="p7">
+  <div class="sec-header">
+    <div class="sec-num">7</div>
+    <div><div class="sec-title">Speaking — Level 2 &amp; 3</div><div class="sec-sub">Extend your answer. Share your opinion.</div></div>
   </div>
-  <div class="speaking-question">
-    <div class="speaking-q">The Phoenicians traded "the more they sailed, the more they found." Do you think exploration and trade still work this way today? Give an example.</div>
-    <div class="speaking-hint">💡 Think about: <span>modern companies · global supply chains · technology · internet commerce</span></div>
+  <div class="speak-level">
+    <span class="speak-badge l2">🟡 Level 2 · 2–3 sentences</span>
+    <div class="speak-q"><p>The Phoenicians were called "the middlemen of the ancient world." What do you think this means? Is being a middleman a smart strategy?</p><div class="speak-hint">💡 Try: <span>"A middleman is someone who... I think this was smart because..."</span></div></div>
+    <div class="speak-q"><p>Imagine you are a Phoenician merchant. What goods would you choose to trade, and why?</p><div class="speak-hint">💡 Think about: <span>what is valuable · what is easy to carry on a ship · what people need</span></div></div>
   </div>
-  <div class="speaking-level level-3" style="margin-top:20px;">🔵 Level 3 · Your opinion</div>
-  <div class="speaking-question">
-    <div class="speaking-q">The Phoenicians became wealthy from trade without building a large army or conquering other lands. Do you think trade is a more powerful way to build influence than military strength? Why?</div>
-    <div class="speaking-hint">💡 Use: <span>I believe... / Trade allows... / Unlike armies, merchants... / However...</span></div>
+  <div class="speak-level">
+    <span class="speak-badge l3">🔵 Level 3 · Your opinion</span>
+    <div class="speak-q"><p>Do you think trade creates peace between nations, or can it also cause conflict? Give examples from history or today.</p><div class="speak-hint">💡 Use: <span>On one hand... / On the other hand... / For example...</span></div></div>
   </div>
-</div>
-
-<!-- SECTION 8: IDEAS -->
-<div class="section" id="sec-7">
-  <div class="section-title">8 — Ideas &amp; Society</div>
-  <div class="section-subtitle">Think about big ideas. There is no wrong answer.</div>
-  <div class="idea-card">
-    <span class="idea-emoji">🌍</span>
-    <p><strong>Trade connects cultures.</strong> The Phoenicians brought their goods — and their language, art, and ideas — to every shore of the Mediterranean. Do you think trade always brings cultures closer together, or can it also cause conflict? Why?</p>
+</section>
+<section class="sec" id="p8">
+  <div class="sec-header">
+    <div class="sec-num">8</div>
+    <div><div class="sec-title">Ideas &amp; Society</div><div class="sec-sub">Think about big ideas. There is no wrong answer.</div></div>
   </div>
-  <div class="idea-card">
-    <span class="idea-emoji">🪵</span>
-    <p><strong>Natural resources and power.</strong> The Phoenicians controlled the cedar forests and could find tin. This gave them enormous power. Today, countries that control oil or rare metals have similar power. Is it fair that geography gives some countries so many resources and others so few?</p>
+  <div class="idea-q"><div class="idea-icon">💱</div><div class="idea-text"><strong>Trade connects people who need different things.</strong> Egypt had grain but no timber. Phoenicia had timber but needed grain. How does this difference create trade? Can you think of a modern example?</div></div>
+<div class="idea-q"><div class="idea-icon">🌍</div><div class="idea-text"><strong>Phoenician traders created one of the world's first global networks.</strong> Long before the internet, the Phoenicians were connecting distant peoples through trade. Do you think ancient trade was a kind of 'globalisation'?</div></div>
+<div class="idea-q"><div class="idea-icon">⚖️</div><div class="idea-text"><strong>The Phoenicians made profit by being in the middle.</strong> Is it fair to buy cheaply and sell expensively? When does this become unfair or exploitative?</div></div>
+<div class="idea-q"><div class="idea-icon">🚢</div><div class="idea-text"><strong>Risk and reward: long ocean voyages were extremely dangerous.</strong> The Phoenicians risked their lives at sea. Do you think the reward of profit justifies this kind of risk? How do people today take similar risks?</div></div>
+</section>
+<section class="sec" id="p9">
+  <div class="sec-header">
+    <div class="sec-num">9</div>
+    <div><div class="sec-title">IELTS Content Builder</div><div class="sec-sub">Planting seeds for your future IELTS exam</div></div>
   </div>
-  <div class="idea-card">
-    <span class="idea-emoji">💰</span>
-    <p><strong>Profit and ethics.</strong> The Phoenicians made huge profits from selling goods that others needed. Do you think businesses today have a responsibility beyond making profit? What responsibilities might they have to society or the environment?</p>
+  <div class="ielts-topic">
+    <div class="ielts-topic-label">📘 Today's IELTS Topic</div>
+    <h4>International Trade and Globalisation</h4>
   </div>
-  <div class="idea-card">
-    <span class="idea-emoji">📦</span>
-    <p><strong>What do we trade today?</strong> Think about the goods in your daily life — clothes, electronics, food. Where do they come from? How is global trade today similar to and different from Phoenician trade 3,000 years ago?</p>
+  <p style="font-size:12px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;color:var(--text3);margin-bottom:.5rem;">Key vocabulary</p>
+  <div class="vocab-chips"><span class="chip amber">trade</span><span class="chip amber">export</span><span class="chip amber">import</span><span class="chip amber">profit</span><span class="chip">supply and demand</span><span class="chip">trading network</span><span class="chip">comparative advantage</span><span class="chip">economic interdependence</span></div>
+  <p style="font-size:12px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;color:var(--text3);margin:.875rem 0 .5rem;">Useful collocations</p>
+  <div class="vocab-chips"><span class="chip">drive economic growth</span><span class="chip">generate profit</span><span class="chip">create trade links</span><span class="chip">exchange goods and services</span></div>
+  <div class="ielts-qs"><div class="ielts-q"><div class="ielts-q-num">S1</div><div class="ielts-q-text">What are the benefits of international trade for a country?</div></div>
+<div class="ielts-q"><div class="ielts-q-num">S2</div><div class="ielts-q-text">Can you think of any disadvantages of depending too much on trade with other nations?</div></div>
+<div class="ielts-q"><div class="ielts-q-num">S3</div><div class="ielts-q-text">Do you think countries should produce everything they need themselves, or specialise and trade?</div></div></div>
+  <div class="ielts-w2">
+    <div class="ielts-w2-label">✏️ IELTS Writing Task 2 — Future Practice</div>
+    <p>"International trade benefits all countries involved. To what extent do you agree or disagree with this statement?"</p>
   </div>
-</div>
-
-<!-- SECTION 9: IELTS -->
-<div class="section" id="sec-8">
-  <div class="section-title">9 — IELTS Content Builder</div>
-  <div class="section-subtitle">Planting seeds for your future IELTS exam</div>
-  <div class="ielts-banner">
-    <h4>📘 Today's IELTS Topic</h4>
-    <p><strong>International Trade and Globalisation</strong></p>
-    <p style="margin-top:6px;">The Phoenicians were the ancient world's first globalisers. International trade, its benefits and drawbacks, is one of the most common IELTS Writing Task 2 topics.</p>
-    <div class="vocab-tags">
-      <span class="vocab-tag">globalisation</span>
-      <span class="vocab-tag">international trade</span>
-      <span class="vocab-tag">export</span>
-      <span class="vocab-tag">import</span>
-      <span class="vocab-tag">supply chain</span>
-      <span class="vocab-tag">natural resources</span>
-      <span class="vocab-tag">economic growth</span>
-      <span class="vocab-tag">trading network</span>
-    </div>
-    <ul class="colloc-list">
-      <li>drive economic growth</li>
-      <li>create employment opportunities</li>
-      <li>exploit natural resources</li>
-      <li>benefit from trade agreements</li>
-      <li>lead to economic inequality</li>
-    </ul>
+</section>
+<section class="sec" id="p10">
+  <div class="sec-header">
+    <div class="sec-num">10</div>
+    <div><div class="sec-title">Review</div><div class="sec-sub">Remember what you learned!</div></div>
   </div>
-  <div class="ielts-q"><span class="ielts-num">S1</span>What are the benefits of international trade for a country?</div>
-  <div class="ielts-q"><span class="ielts-num">S2</span>Do you think all countries benefit equally from global trade? Why or why not?</div>
-  <div class="ielts-q"><span class="ielts-num">S3</span>Some people say globalisation makes the world more similar. Is that a good thing?</div>
-  <div class="ielts-writing">
-    <h5>✏️ IELTS Writing Task 2 — Future Practice</h5>
-    <p>"Some people believe that international trade benefits all countries equally. Others argue that wealthy nations gain more than developing ones. Discuss both views and give your opinion."</p>
+  <p style="font-size:12px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;color:var(--text3);margin-bottom:.75rem;">⭐ Star Words</p>
+  <div class="star-words"><span class="star-word">⭐ trade</span><span class="star-word">⭐ timber</span><span class="star-word">⭐ cargo</span><span class="star-word">⭐ tin</span><span class="star-word">⭐ embroidered</span><span class="star-word">⭐ profit</span><span class="star-word">⭐ route</span><span class="star-word">⭐ exchange</span></div>
+  <div class="think-box">
+    <div class="think-head">💡 Big Idea</div>
+    <p>The Phoenicians taught the world a lesson that still applies today: <strong>you don't need to have everything yourself — you just need to know how to connect those who have with those who need.</strong></p>
   </div>
-</div>
-
-<!-- SECTION 10: REVIEW -->
-<div class="section" id="sec-9">
-  <div class="section-title">10 — Review</div>
-  <div class="section-subtitle">Remember what you learned!</div>
-  <div class="star-words">
-    <span class="star-word">⭐ cedar</span>
-    <span class="star-word">⭐ trade</span>
-    <span class="star-word">⭐ embroidered</span>
-    <span class="star-word">⭐ tin</span>
-    <span class="star-word">⭐ export</span>
-    <span class="star-word">⭐ profit</span>
-    <span class="star-word">⭐ network</span>
-    <span class="star-word">⭐ demand</span>
+  <p style="font-size:12px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;color:var(--text3);margin:.875rem 0 .75rem;">🧠 Mini Quiz</p>
+  <div class="mini-quiz-q"><div class="mq-text">A. What did Phoenician merchants carry in their ships?</div><div class="mq-opts"><button class="mq-opt" onclick="mq(this,'wrong')">Soldiers and weapons</button>
+<button class="mq-opt" onclick="mq(this,'correct')">Cedar timber, cloth, wine, and salted fish</button>
+<button class="mq-opt" onclick="mq(this,'wrong')">Gold coins and jewellery</button></div></div><div class="mini-quiz-q"><div class="mq-text">B. What is 'surplus'?</div><div class="mq-opts"><button class="mq-opt" onclick="mq(this,'wrong')">Something you don't have enough of</button>
+<button class="mq-opt" onclick="mq(this,'correct')">Extra goods beyond what you need</button>
+<button class="mq-opt" onclick="mq(this,'wrong')">A type of Phoenician cloth</button></div></div><div class="mini-quiz-q"><div class="mq-text">C. Why did the Phoenicians go all the way to Britain?</div><div class="mq-opts"><button class="mq-opt" onclick="mq(this,'wrong')">To find fertile farmland</button>
+<button class="mq-opt" onclick="mq(this,'correct')">To find tin for making bronze</button>
+<button class="mq-opt" onclick="mq(this,'wrong')">To build a new city there</button></div></div>
+  <div class="lesson-nav">
+    <a class="nav-btn" href="ch15-a.html"><i class="ti ti-arrow-left"></i> Lesson 15A</a>
+    <a class="nav-btn primary" href="ch15-c.html">Next: Lesson 15C — The Secret of Glass <i class="ti ti-arrow-right"></i></a>
   </div>
-  <div class="big-idea">
-    <p>💡 <strong>The Phoenicians built wealth without war.</strong> They had no great army. But they had ships, skills, and smart trading. They became rich by connecting the world's needs to the world's resources. This is the foundation of all modern commerce.</p>
-  </div>
-  <div class="section-title" style="margin-bottom:14px;">🧠 Mini Quiz</div>
-  <div class="mini-quiz-card">
-    <div class="question-text"><span class="q-num">A</span>Which of the following did the Phoenicians NOT trade?</div>
-    <div class="options">
-      <label><input type="radio" name="mq1" value="a"> Cedar wood and dried fish</label>
-      <label><input type="radio" name="mq1" value="b"> Egyptian papyrus scrolls</label>
-      <label><input type="radio" name="mq1" value="c"> Embroidered cloth and tin</label>
-    </div>
-    <button class="check-btn" onclick="checkQ('mq1','b',this)">Check ✓</button>
-    <div class="feedback"></div>
-  </div>
-  <div class="mini-quiz-card">
-    <div class="question-text"><span class="q-num">B</span>Complete: "The more they sailed, ________ goods they found."</div>
-    <div class="options">
-      <label><input type="radio" name="mq2" value="a"> much more</label>
-      <label><input type="radio" name="mq2" value="b"> the more</label>
-      <label><input type="radio" name="mq2" value="c"> so more</label>
-    </div>
-    <button class="check-btn" onclick="checkQ('mq2','b',this)">Check ✓</button>
-    <div class="feedback"></div>
-  </div>
-  <div class="mini-quiz-card">
-    <div class="question-text"><span class="q-num">C</span>Why was tin so important in the ancient world?</div>
-    <div class="options">
-      <label><input type="radio" name="mq3" value="a"> It was used to make coloured glass</label>
-      <label><input type="radio" name="mq3" value="b"> It was mixed with copper to make bronze for weapons and tools</label>
-      <label><input type="radio" name="mq3" value="c"> It was used to build ships</label>
-    </div>
-    <button class="check-btn" onclick="checkQ('mq3','b',this)">Check ✓</button>
-    <div class="feedback"></div>
-  </div>
-</div>
-
-<div class="lesson-nav">
-  <a href="ch15-a.html" class="lesson-nav nav-prev">← Lesson 15A</a>
-  <a href="ch15-c.html" class="lesson-nav nav-next">Next: Lesson 15C →</a>
-</div>
-<footer class="site-footer">
-  <strong>Lexilink Ideation IELTS STUDIO</strong> · History ESL Course · Chapter 15 — Lesson B
-</footer>
-
+</section>
+</main>
+<footer class="site-footer"><strong>Lexilink Ideation IELTS STUDIO</strong> · History ESL Course · Chapter 15 — Lesson B</footer>
 <script>
-  function showTab(idx, btn) {
-    document.querySelectorAll('.section').forEach((s,i) => s.classList.toggle('active', i===idx));
-    document.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
-    btn.classList.add('active');
-    window.scrollTo({top:0, behavior:'smooth'});
-  }
-  function toggleVocab(card) { card.classList.toggle('open'); }
-  function checkQ(name, correct, btn) {
-    const selected = document.querySelector(`input[name="${name}"]:checked`);
-    const fb = btn.nextElementSibling;
-    if (!selected) { fb.textContent='Please choose an answer first.'; fb.className='feedback wrong'; return; }
-    if (selected.value===correct) { fb.textContent='✅ Correct! Well done.'; fb.className='feedback correct'; }
-    else { fb.textContent='❌ Not quite. Read the story again and try once more.'; fb.className='feedback wrong'; }
-  }
-  function checkFill(btn, answer) {
-    const input=btn.previousElementSibling; const fb=btn.nextElementSibling;
-    const val=input.value.trim().toLowerCase().replace(/[.,!?]/g,'');
-    const ans=answer.toLowerCase();
-    if(val===ans||val.includes(ans.split(' ')[0])){fb.textContent='✅ Correct!';fb.className='builder-feedback show';}
-    else{fb.textContent=`❌ Try again. The answer is "${answer}"`;fb.className='builder-feedback show';fb.style.background='var(--red-light)';fb.style.color='var(--red)';}
-  }
-  function revealFill(btn, answer) {
-    const fb=btn.nextElementSibling;
-    fb.textContent=`✅ Model answer: "${answer}"`;fb.className='builder-feedback show';
-  }
+function toggleVocab(card){card.classList.toggle('open');}
+function mcq(btn,type){
+  const item=btn.closest('.q-item');
+  item.querySelectorAll('.q-opt').forEach(b=>{b.classList.remove('correct','wrong');b.disabled=true;});
+  btn.classList.add(type);
+  const fb=item.querySelector('.q-feedback');
+  fb.className='q-feedback show '+(type==='correct'?'good':'bad');
+  fb.textContent=type==='correct'?'✓ Correct! Well done!':'✗ Not quite. Try to remember the story.';
+}
+function tf(btn,type,msg){
+  const item=btn.closest('.q-item');
+  item.querySelectorAll('.tf-btn').forEach(b=>{b.classList.remove('correct','wrong');b.disabled=true;});
+  btn.classList.add(type);
+  const fb=item.querySelector('.q-feedback');
+  fb.className='q-feedback show '+(type==='correct'?'good':'bad');
+  fb.textContent=(type==='correct'?'✓ ':'✗ ')+msg;
+}
+function mq(btn,type){
+  const item=btn.closest('.mini-quiz-q');
+  item.querySelectorAll('.mq-opt').forEach(b=>{b.classList.remove('correct','wrong');b.disabled=true;});
+  btn.classList.add(type);
+}
+function checkUnscramble(id,answer,rid){
+  const val=document.getElementById(id).value.trim().toLowerCase().replace(/[^a-z\s]/g,'');
+  const ans=answer.toLowerCase();
+  const r=document.getElementById(rid);
+  r.className='sb-result show '+(val===ans?'ok':'no');
+  r.textContent=val===ans?'✓ Perfect! "'+answer+'"':'✗ Try again. Check the word order.';
+}
+function checkFill(id,answer,rid){
+  const val=document.getElementById(id).value.trim().toLowerCase();
+  const r=document.getElementById(rid);
+  r.className='sb-result show '+(val===answer?'ok':'no');
+  r.textContent=val===answer?'✓ Correct!':'✗ The answer is: "'+answer+'"';
+}
+function scrollTo(id){document.getElementById(id).scrollIntoView({behavior:'smooth',block:'start'});}
+const parts=['p1','p2','p3','p4','p5','p6','p7','p8','p9','p10'];
+const partEls=document.querySelectorAll('.lp-part');
+window.addEventListener('scroll',()=>{
+  let current=0;
+  parts.forEach((id,i)=>{const el=document.getElementById(id);if(el&&el.getBoundingClientRect().top<200)current=i;});
+  partEls.forEach((el,i)=>{el.classList.remove('active','done');if(i<current)el.classList.add('done');else if(i===current)el.classList.add('active');});
+  const pct=Math.round(((current+1)/10)*100);
+  document.querySelector('.lp-fill').style.width=pct+'%';
+});
 </script>
 </body>
 </html>

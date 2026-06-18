@@ -1,186 +1,548 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1.0">
-  <title>Lesson 15E — Purple — The Colour of Kings | Lexilink History Workshop</title>
-  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;600;700&family=Noto+Sans+SC&display=swap" rel="stylesheet">
-  <style>*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}:root{--navy:#1a2744;--blue:#2563eb;--blue-light:#dbeafe;--gold:#f59e0b;--gold-light:#fef3c7;--green:#16a34a;--green-light:#dcfce7;--red:#dc2626;--red-light:#fee2e2;--gray:#6b7280;--gray-light:#f3f4f6;--radius:12px;--shadow:0 2px 12px rgba(0,0,0,.08)}body{font-family:'Noto Sans','Noto Sans SC',sans-serif;background:#f8fafc;color:#1e293b;line-height:1.7}nav{background:var(--navy);padding:0 24px;display:flex;align-items:center;gap:16px;height:52px}nav a{color:#cbd5e1;text-decoration:none;font-size:.85rem;font-weight:600}nav a:hover{color:#fff}nav .sep{color:#475569}.lesson-header{background:var(--navy);color:#fff;padding:32px 24px 28px}.lesson-meta{font-size:.8rem;color:#94a3b8;text-transform:uppercase;letter-spacing:.08em;margin-bottom:6px}.lesson-chapter{font-size:.9rem;color:#7dd3fc;margin-bottom:14px}.lesson-header h1{font-size:1.9rem;font-weight:700;margin-bottom:8px}.lesson-subtitle{color:#cbd5e1;font-size:1rem;margin-bottom:16px}.lesson-tags{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:14px}.tag{background:rgba(255,255,255,.12);border-radius:20px;padding:4px 12px;font-size:.78rem;color:#e2e8f0}.lesson-progress{font-size:.82rem;color:#94a3b8}.tabs-bar{background:#fff;border-bottom:2px solid #e2e8f0;overflow-x:auto;white-space:nowrap;padding:0 16px;position:sticky;top:0;z-index:10;box-shadow:0 2px 8px rgba(0,0,0,.06)}.tab-btn{display:inline-block;padding:14px 14px 12px;cursor:pointer;font-size:.82rem;font-weight:600;color:var(--gray);border-bottom:3px solid transparent;margin-bottom:-2px;background:none;border-top:none;border-left:none;border-right:none;white-space:nowrap}.tab-btn:hover{color:var(--blue)}.tab-btn.active{color:var(--blue);border-bottom-color:var(--blue)}.tab-num{display:inline-flex;align-items:center;justify-content:center;width:20px;height:20px;background:var(--gray-light);border-radius:50%;font-size:.72rem;font-weight:700;margin-right:5px}.tab-btn.active .tab-num{background:var(--blue);color:#fff}.section{display:none;max-width:780px;margin:0 auto;padding:32px 20px}.section.active{display:block}.section-title{font-size:1.3rem;font-weight:700;color:var(--navy);margin-bottom:6px}.section-subtitle{color:var(--gray);font-size:.88rem;margin-bottom:24px}.vocab-grid{display:grid;gap:12px}.vocab-card{background:#fff;border-radius:var(--radius);box-shadow:var(--shadow);border:1px solid #e2e8f0;overflow:hidden;cursor:pointer}.vocab-card-header{display:flex;align-items:center;gap:12px;padding:16px 20px}.vocab-word{font-size:1.1rem;font-weight:700;color:var(--navy)}.vocab-pos{font-size:.75rem;color:var(--gray);background:var(--gray-light);border-radius:4px;padding:2px 7px}.vocab-pron{font-size:.82rem;color:var(--blue);margin-left:auto;font-style:italic}.vocab-expand{width:24px;height:24px;border-radius:50%;background:var(--blue-light);color:var(--blue);display:flex;align-items:center;justify-content:center;font-size:.9rem;flex-shrink:0;transition:transform .3s}.vocab-card.open .vocab-expand{transform:rotate(180deg)}.vocab-body{display:none;padding:0 20px 18px;border-top:1px solid #f1f5f9}.vocab-card.open .vocab-body{display:block}.vocab-zh{font-size:1rem;color:var(--navy);font-weight:600;margin:10px 0 4px}.vocab-def{color:#374151;font-size:.9rem;margin-bottom:8px}.vocab-example{color:var(--gray);font-size:.85rem;font-style:italic;border-left:3px solid var(--blue-light);padding-left:10px}.story-card{background:#fff;border-radius:var(--radius);box-shadow:var(--shadow);padding:28px;line-height:1.9;font-size:.97rem}.story-card p{margin-bottom:16px}.story-card p:last-child{margin-bottom:0}.story-emoji{font-size:2rem;display:block;margin-bottom:12px}.story-card strong{color:var(--navy)}.question-card{background:#fff;border-radius:var(--radius);box-shadow:var(--shadow);padding:20px 22px;margin-bottom:16px}.question-text{font-weight:600;color:var(--navy);margin-bottom:14px}.q-num{display:inline-flex;align-items:center;justify-content:center;width:26px;height:26px;background:var(--blue);color:#fff;border-radius:50%;font-size:.8rem;font-weight:700;margin-right:8px;flex-shrink:0}.options label{display:flex;align-items:flex-start;gap:10px;padding:10px 12px;margin-bottom:8px;border-radius:8px;border:2px solid #e2e8f0;cursor:pointer;font-size:.9rem;transition:border-color .2s,background .2s}.options label:hover{border-color:var(--blue);background:var(--blue-light)}.options input[type=radio]{margin-top:3px;flex-shrink:0}.check-btn{margin-top:10px;background:var(--blue);color:#fff;border:none;padding:8px 18px;border-radius:8px;cursor:pointer;font-size:.85rem;font-weight:600}.check-btn:hover{background:#1d4ed8}.feedback{display:none;margin-top:8px;padding:8px 12px;border-radius:8px;font-size:.85rem;font-weight:600}.feedback.correct{background:var(--green-light);color:var(--green);display:block}.feedback.wrong{background:var(--red-light);color:var(--red);display:block}.grammar-block{background:#fff;border-radius:var(--radius);box-shadow:var(--shadow);padding:22px 24px;margin-bottom:18px}.grammar-label{display:inline-block;background:var(--navy);color:#fff;font-size:.75rem;font-weight:700;padding:3px 10px;border-radius:4px;margin-bottom:12px}.grammar-title{font-size:1rem;font-weight:700;color:var(--navy);margin-bottom:12px}.grammar-table{width:100%;border-collapse:collapse;font-size:.88rem;margin:12px 0}.grammar-table th{background:var(--navy);color:#fff;padding:8px 12px;text-align:left;font-weight:600}.grammar-table td{padding:8px 12px;border-bottom:1px solid #e2e8f0}.grammar-table tr:nth-child(even) td{background:var(--gray-light)}.grammar-example{background:var(--blue-light);border-left:4px solid var(--blue);border-radius:6px;padding:10px 14px;font-size:.9rem;margin:8px 0;color:var(--navy)}.grammar-note{color:var(--gray);font-size:.85rem;margin-top:10px;font-style:italic}.builder-card{background:#fff;border-radius:var(--radius);box-shadow:var(--shadow);padding:20px 22px;margin-bottom:16px}.builder-label{font-size:.78rem;font-weight:700;color:var(--blue);text-transform:uppercase;letter-spacing:.06em;margin-bottom:8px}.builder-prompt{font-size:.92rem;color:var(--navy);margin-bottom:12px;font-weight:500}.builder-input{width:100%;border:2px solid #e2e8f0;border-radius:8px;padding:10px 12px;font-size:.9rem;font-family:inherit;resize:vertical;transition:border-color .2s}.builder-input:focus{outline:none;border-color:var(--blue)}.builder-check{margin-top:8px;background:var(--blue);color:#fff;border:none;padding:8px 16px;border-radius:8px;cursor:pointer;font-size:.85rem;font-weight:600}.builder-check:hover{background:#1d4ed8}.builder-feedback{display:none;margin-top:8px;padding:8px 12px;border-radius:8px;font-size:.85rem}.builder-feedback.show{display:block;background:var(--green-light);color:var(--green);font-weight:600}.speaking-level{display:inline-flex;align-items:center;gap:6px;font-size:.8rem;font-weight:700;padding:4px 12px;border-radius:20px;margin-bottom:14px}.level-1{background:#dcfce7;color:#15803d}.level-2{background:#fef9c3;color:#a16207}.level-3{background:#dbeafe;color:#1d4ed8}.speaking-question{background:#fff;border-radius:var(--radius);box-shadow:var(--shadow);padding:18px 22px;margin-bottom:14px;border-left:4px solid var(--blue)}.speaking-q{font-weight:600;color:var(--navy);margin-bottom:8px}.speaking-hint{font-size:.83rem;color:var(--gray)}.speaking-hint span{color:var(--blue);font-style:italic}.idea-card{background:#fff;border-radius:var(--radius);box-shadow:var(--shadow);padding:20px 22px;margin-bottom:14px;border-top:4px solid var(--gold)}.idea-emoji{font-size:1.4rem;display:block;margin-bottom:8px}.idea-card p{font-size:.9rem;color:#374151;line-height:1.75}.idea-card strong{color:var(--navy)}.ielts-banner{background:var(--navy);border-radius:var(--radius);padding:20px 24px;color:#fff;margin-bottom:20px}.ielts-banner h4{font-size:1rem;margin-bottom:8px;color:#7dd3fc}.ielts-banner p{font-size:.88rem;color:#cbd5e1}.vocab-tags{display:flex;flex-wrap:wrap;gap:8px;margin-top:12px}.vocab-tag{background:rgba(255,255,255,.12);border-radius:6px;padding:4px 10px;font-size:.8rem;color:#e2e8f0}.colloc-list{list-style:none;margin:12px 0 0}.colloc-list li{font-size:.88rem;color:#cbd5e1;padding:3px 0}.colloc-list li::before{content:"→ ";color:#7dd3fc}.ielts-q{background:#fff;border-radius:var(--radius);padding:14px 18px;margin-bottom:10px;font-size:.88rem;color:var(--navy);box-shadow:var(--shadow)}.ielts-q .ielts-num{font-weight:700;color:var(--blue);margin-right:6px}.ielts-writing{background:var(--gold-light);border-radius:var(--radius);padding:18px 20px;border-left:4px solid var(--gold);margin-top:16px}.ielts-writing h5{font-size:.85rem;font-weight:700;color:#92400e;text-transform:uppercase;letter-spacing:.05em;margin-bottom:8px}.ielts-writing p{font-size:.9rem;color:#78350f;font-style:italic}.star-words{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:20px}.star-word{background:var(--gold-light);color:#92400e;border-radius:20px;padding:5px 14px;font-size:.85rem;font-weight:600}.big-idea{background:var(--blue-light);border-radius:var(--radius);padding:18px 20px;margin-bottom:20px;border-left:4px solid var(--blue)}.big-idea p{font-size:.92rem;color:var(--navy)}.mini-quiz-card{background:#fff;border-radius:var(--radius);box-shadow:var(--shadow);padding:20px 22px;margin-bottom:14px}.lesson-nav{max-width:780px;margin:0 auto;padding:24px 20px 40px;display:flex;justify-content:space-between;align-items:center;gap:12px;flex-wrap:wrap}.lesson-nav a{text-decoration:none;padding:10px 20px;border-radius:10px;font-size:.88rem;font-weight:600;transition:all .2s}.nav-prev{background:var(--gray-light);color:var(--navy)}.nav-prev:hover{background:#e2e8f0}.nav-next{background:var(--blue);color:#fff}.nav-next:hover{background:#1d4ed8}.site-footer{background:var(--navy);color:#94a3b8;text-align:center;padding:16px;font-size:.8rem}.review-summary{background:var(--navy);color:#fff;border-radius:var(--radius);padding:22px 24px;margin-bottom:20px}.review-summary h4{color:#7dd3fc;margin-bottom:12px;font-size:1rem}.review-summary p{color:#cbd5e1;font-size:.9rem;line-height:1.75;margin-bottom:8px}</style>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+<title>Lesson 15E — Purple: The Colour of Kings | Lexilink History Workshop</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"/>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet"/>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@latest/tabler-icons.min.css"/>
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
+:root{
+  --bg:#0F0800;--surface:rgba(255,255,255,0.04);--surface2:rgba(255,255,255,0.07);
+  --border:rgba(255,255,255,0.10);--border2:rgba(255,255,255,0.06);
+  --amber-300:#E8A832;--amber-400:#D4890F;--amber-500:#B8720A;
+  --amber-bg:rgba(212,137,15,0.12);--amber-border:rgba(212,137,15,0.3);
+  --text:#fff;--text2:rgba(255,255,255,0.72);--text3:rgba(255,255,255,0.45);
+  --teal:#1D9E75;--teal-bg:rgba(29,158,117,0.12);--teal-border:rgba(29,158,117,0.3);
+  --coral:#E05C3A;--coral-bg:rgba(224,92,58,0.12);
+  --blue:#4A9EE0;--blue-bg:rgba(74,158,224,0.12);
+  --r:12px;--r-sm:8px;
+}
+html{scroll-behavior:smooth;}
+body{font-family:'Inter',sans-serif;background:var(--bg);color:var(--text);min-height:100vh;line-height:1.6;}
+.site-header{background:#111;border-bottom:1px solid rgba(255,255,255,0.08);position:sticky;top:0;z-index:100;}
+.hdr{max-width:860px;margin:0 auto;padding:0 1.5rem;height:54px;display:flex;align-items:center;gap:12px;}
+.logo-wrap{display:flex;align-items:center;gap:8px;text-decoration:none;}
+.logo-icon{width:30px;height:30px;display:flex;align-items:center;justify-content:center;}
+.logo-icon svg{width:26px;height:26px;}
+.logo-name{font-size:13px;font-weight:700;color:#fff;}
+.hdr-pipe{width:1px;height:20px;background:rgba(255,255,255,0.15);}
+.hdr-back{display:flex;align-items:center;gap:5px;font-size:12px;color:var(--text3);text-decoration:none;transition:color .15s;}
+.hdr-back:hover{color:var(--text2);}
+.hdr-spacer{flex:1;}
+.hdr-badge{font-size:10px;font-weight:700;letter-spacing:.05em;padding:3px 10px;border-radius:99px;border:1px solid var(--amber-border);color:var(--amber-300);background:var(--amber-bg);}
+.lesson-hero{background:linear-gradient(135deg,#2C1600 0%,#5C3200 40%,#7A4500 100%);padding:3rem 1.5rem 2.5rem;text-align:center;position:relative;overflow:hidden;}
+.lesson-hero::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse 70% 60% at 50% 50%,rgba(200,130,0,0.15),transparent);pointer-events:none;}
+.lesson-eyebrow{font-size:10px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--amber-300);margin-bottom:.75rem;}
+.lesson-hero h1{font-size:clamp(22px,4vw,36px);font-weight:700;color:#fff;letter-spacing:-.02em;margin-bottom:.5rem;}
+.lesson-hero p{font-size:14px;color:rgba(255,255,255,0.65);max-width:520px;margin:0 auto .875rem;}
+.lesson-pills{display:flex;flex-wrap:wrap;justify-content:center;gap:8px;}
+.l-pill{font-size:11px;font-weight:500;padding:4px 12px;border-radius:99px;border:1px solid rgba(255,255,255,0.18);color:rgba(255,255,255,0.75);background:rgba(255,255,255,0.06);}
+.lesson-progress{background:#1A1100;border-bottom:1px solid rgba(255,255,255,0.06);padding:.75rem 1.5rem;}
+.lp-inner{max-width:860px;margin:0 auto;}
+.lp-labels{display:flex;justify-content:space-between;font-size:11px;color:var(--text3);margin-bottom:6px;}
+.lp-track{height:4px;border-radius:99px;background:rgba(255,255,255,0.08);}
+.lp-fill{height:100%;border-radius:99px;background:linear-gradient(90deg,var(--amber-500),var(--amber-300));width:10%;}
+.lp-parts{display:flex;gap:4px;margin-top:8px;flex-wrap:wrap;}
+.lp-part{font-size:10px;font-weight:600;padding:2px 8px;border-radius:99px;background:rgba(255,255,255,0.06);color:var(--text3);cursor:pointer;transition:all .15s;}
+.lp-part.done{background:var(--amber-bg);color:var(--amber-300);border:1px solid var(--amber-border);}
+.lp-part.active{background:var(--amber-400);color:#1A0800;}
+.main{max-width:860px;margin:0 auto;padding:2rem 1.5rem 5rem;}
+.sec{background:var(--surface);border:1px solid var(--border);border-radius:var(--r);padding:1.5rem;margin-bottom:1.5rem;scroll-margin-top:80px;}
+.sec-header{display:flex;align-items:center;gap:10px;margin-bottom:1.25rem;}
+.sec-num{width:28px;height:28px;border-radius:8px;display:flex;align-items:center;justify-content:center;font-size:11px;font-weight:700;background:var(--amber-bg);color:var(--amber-300);border:1px solid var(--amber-border);flex-shrink:0;}
+.sec-title{font-size:16px;font-weight:700;color:#fff;}
+.sec-sub{font-size:12px;color:var(--text3);margin-top:1px;}
+.vocab-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(240px,1fr));gap:10px;}
+.vocab-card{background:var(--surface2);border:1px solid var(--border2);border-radius:var(--r-sm);padding:1rem;cursor:pointer;transition:border-color .15s;}
+.vocab-card:hover,.vocab-card.open{border-color:var(--amber-border);}
+.vc-top{display:flex;align-items:baseline;gap:8px;}
+.vc-word{font-size:16px;font-weight:700;color:#fff;}
+.vc-pos{font-size:10px;font-weight:600;padding:1px 7px;border-radius:99px;background:var(--amber-bg);color:var(--amber-300);}
+.vc-pron{font-size:12px;color:var(--text3);margin-top:2px;font-style:italic;}
+.vc-cn{font-size:15px;color:var(--amber-300);margin-top:4px;font-weight:600;}
+.vc-detail{display:none;margin-top:10px;padding-top:10px;border-top:1px solid var(--border2);}
+.vocab-card.open .vc-detail{display:block;}
+.vc-def{font-size:13px;color:var(--text2);margin-bottom:6px;}
+.vc-ex{font-size:12px;color:var(--text3);font-style:italic;padding-left:8px;border-left:2px solid var(--amber-border);}
+.story-body p{font-size:15px;color:var(--text2);line-height:1.8;margin-bottom:1rem;}
+.story-body p:last-child{margin-bottom:0;}
+.story-hl{color:var(--amber-300);font-weight:600;}
+.story-box{background:var(--amber-bg);border:1px solid var(--amber-border);border-radius:var(--r-sm);padding:1rem 1.25rem;margin:1.25rem 0;font-size:14px;color:rgba(255,255,255,0.85);line-height:1.7;font-style:italic;}
+.story-box::before{content:'"';font-size:32px;color:var(--amber-400);line-height:1;display:block;margin-bottom:.25rem;}
+.story-icon{font-size:40px;text-align:center;margin:1rem 0;}
+.quiz-list{display:flex;flex-direction:column;gap:14px;}
+.q-item{background:var(--surface2);border:1px solid var(--border2);border-radius:var(--r-sm);padding:1rem 1.25rem;}
+.q-text{font-size:14px;font-weight:600;color:#fff;margin-bottom:.75rem;}
+.q-opts{display:flex;flex-direction:column;gap:6px;}
+.q-opt{display:flex;align-items:center;gap:10px;padding:8px 12px;border-radius:8px;border:1px solid var(--border);background:transparent;cursor:pointer;font-size:13px;color:var(--text2);width:100%;text-align:left;transition:all .15s;}
+.q-opt:hover{border-color:var(--amber-border);background:var(--amber-bg);}
+.q-opt.correct{border-color:var(--teal-border);background:var(--teal-bg);color:#fff;}
+.q-opt.wrong{border-color:rgba(224,92,58,0.4);background:var(--coral-bg);color:#fff;}
+.q-feedback{font-size:12px;margin-top:8px;padding:6px 10px;border-radius:6px;display:none;}
+.q-feedback.show{display:block;}
+.q-feedback.good{background:var(--teal-bg);color:#5DCAA5;}
+.q-feedback.bad{background:var(--coral-bg);color:#F09B80;}
+.tf-opts{display:flex;gap:8px;}
+.tf-btn{flex:1;padding:8px;border-radius:8px;border:1px solid var(--border);background:transparent;cursor:pointer;font-size:13px;font-weight:600;color:var(--text2);transition:all .15s;}
+.tf-btn:hover{border-color:var(--amber-border);background:var(--amber-bg);}
+.tf-btn.correct{border-color:var(--teal-border);background:var(--teal-bg);color:#fff;}
+.tf-btn.wrong{border-color:rgba(224,92,58,0.4);background:var(--coral-bg);color:#fff;}
+.grammar-box{background:var(--surface2);border-left:3px solid var(--amber-400);border-radius:0 var(--r-sm) var(--r-sm) 0;padding:1rem 1.25rem;margin-bottom:1rem;}
+.grammar-label{font-size:10px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--amber-300);margin-bottom:.5rem;}
+.grammar-rule{font-size:14px;color:#fff;font-weight:600;margin-bottom:.5rem;}
+.grammar-eg{font-size:13px;color:var(--text2);margin-top:.25rem;font-style:italic;}
+.grammar-eg span{color:var(--amber-300);font-weight:600;font-style:normal;}
+.grammar-table{width:100%;border-collapse:collapse;font-size:13px;margin-top:.75rem;}
+.grammar-table th{text-align:left;padding:6px 10px;font-size:10px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;color:var(--text3);border-bottom:1px solid var(--border);}
+.grammar-table td{padding:7px 10px;color:var(--text2);border-bottom:1px solid var(--border2);}
+.grammar-table td:first-child{color:#fff;font-weight:500;}
+.hl{color:var(--amber-300);font-weight:600;}
+.sb-activity{margin-bottom:1.25rem;}
+.sb-label{font-size:11px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;color:var(--amber-300);margin-bottom:.75rem;}
+.sb-input{width:100%;background:var(--surface2);border:1px solid var(--border);border-radius:var(--r-sm);padding:.625rem .875rem;font-size:14px;color:#fff;font-family:'Inter',sans-serif;transition:border-color .15s;outline:none;margin-bottom:.5rem;}
+.sb-input:focus{border-color:var(--amber-border);}
+.sb-check{padding:7px 18px;border-radius:99px;background:var(--amber-400);color:#1A0800;font-size:13px;font-weight:700;border:none;cursor:pointer;transition:opacity .15s;}
+.sb-check:hover{opacity:.85;}
+.sb-result{font-size:12px;margin-top:6px;padding:6px 10px;border-radius:6px;display:none;}
+.sb-result.show{display:block;}
+.sb-result.ok{background:var(--teal-bg);color:#5DCAA5;}
+.sb-result.no{background:var(--coral-bg);color:#F09B80;}
+.speak-level{margin-bottom:1.25rem;}
+.speak-badge{display:inline-flex;align-items:center;gap:6px;font-size:11px;font-weight:700;padding:3px 12px;border-radius:99px;margin-bottom:.875rem;}
+.speak-badge.l1{background:var(--teal-bg);color:#5DCAA5;border:1px solid var(--teal-border);}
+.speak-badge.l2{background:var(--amber-bg);color:var(--amber-300);border:1px solid var(--amber-border);}
+.speak-badge.l3{background:var(--blue-bg);color:var(--blue);border:1px solid rgba(74,158,224,0.3);}
+.speak-q{background:var(--surface2);border:1px solid var(--border2);border-radius:var(--r-sm);padding:1rem 1.25rem;margin-bottom:.75rem;}
+.speak-q p{font-size:14px;font-weight:600;color:#fff;margin-bottom:.5rem;}
+.speak-hint{font-size:12px;color:var(--text3);}
+.speak-hint span{color:var(--amber-300);}
+.idea-q{background:var(--surface2);border:1px solid var(--border2);border-radius:var(--r-sm);padding:1rem 1.25rem;margin-bottom:.75rem;display:flex;gap:10px;}
+.idea-icon{font-size:20px;flex-shrink:0;margin-top:2px;}
+.idea-text{font-size:14px;color:var(--text2);line-height:1.6;}
+.idea-text strong{color:#fff;}
+.ielts-topic{background:var(--blue-bg);border:1px solid rgba(74,158,224,0.25);border-radius:var(--r-sm);padding:1rem 1.25rem;margin-bottom:1.25rem;}
+.ielts-topic-label{font-size:10px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--blue);margin-bottom:.25rem;}
+.ielts-topic h4{font-size:16px;font-weight:700;color:#fff;}
+.vocab-chips{display:flex;flex-wrap:wrap;gap:6px;margin-top:.75rem;}
+.chip{font-size:12px;padding:4px 12px;border-radius:99px;background:rgba(255,255,255,0.06);border:1px solid var(--border);color:var(--text2);}
+.chip.amber{background:var(--amber-bg);border-color:var(--amber-border);color:var(--amber-300);}
+.ielts-qs{display:flex;flex-direction:column;gap:8px;margin-top:1rem;}
+.ielts-q{display:flex;gap:10px;background:var(--surface2);border-radius:var(--r-sm);padding:.875rem 1rem;}
+.ielts-q-num{font-size:11px;font-weight:700;color:var(--blue);min-width:20px;}
+.ielts-q-text{font-size:13px;color:var(--text2);}
+.ielts-w2{background:rgba(74,158,224,0.08);border:1px solid rgba(74,158,224,0.2);border-radius:var(--r-sm);padding:1rem 1.25rem;margin-top:1rem;}
+.ielts-w2-label{font-size:10px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--blue);margin-bottom:.5rem;}
+.ielts-w2 p{font-size:14px;color:var(--text2);line-height:1.7;font-style:italic;}
+.star-words{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:1.25rem;}
+.star-word{display:flex;align-items:center;gap:6px;padding:6px 14px;border-radius:99px;background:var(--amber-bg);border:1px solid var(--amber-border);font-size:13px;font-weight:600;color:var(--amber-300);}
+.think-box{background:var(--surface2);border:1px solid var(--border2);border-radius:var(--r-sm);padding:1rem 1.25rem;margin-bottom:1rem;}
+.think-box .think-head{font-size:12px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;color:var(--amber-300);margin-bottom:.5rem;}
+.think-box p{font-size:14px;color:var(--text2);}
+.mini-quiz-q{background:var(--surface2);border:1px solid var(--border2);border-radius:var(--r-sm);padding:1rem;margin-bottom:.75rem;}
+.mq-text{font-size:13px;font-weight:600;color:#fff;margin-bottom:.625rem;}
+.mq-opts{display:flex;flex-direction:column;gap:5px;}
+.mq-opt{padding:7px 12px;border-radius:6px;border:1px solid var(--border);background:transparent;font-size:12px;color:var(--text2);cursor:pointer;text-align:left;transition:all .15s;}
+.mq-opt:hover{border-color:var(--amber-border);background:var(--amber-bg);}
+.mq-opt.correct{border-color:var(--teal-border);background:var(--teal-bg);color:#fff;}
+.mq-opt.wrong{border-color:rgba(224,92,58,0.4);background:var(--coral-bg);color:#fff;}
+.lesson-nav{display:flex;gap:10px;margin-top:2rem;}
+.nav-btn{display:flex;align-items:center;gap:6px;padding:.75rem 1.25rem;border-radius:10px;font-size:13px;font-weight:600;cursor:pointer;text-decoration:none;border:1px solid var(--border);color:var(--text2);background:var(--surface);transition:all .15s;flex:1;justify-content:center;}
+.nav-btn:hover{border-color:var(--border2);color:#fff;}
+.nav-btn.primary{background:var(--amber-400);color:#1A0800;border-color:transparent;}
+.nav-btn.primary:hover{opacity:.9;}
+.site-footer{background:#111;border-top:1px solid rgba(255,255,255,0.07);text-align:center;padding:1.5rem;font-size:12px;color:rgba(255,255,255,0.3);}
+.site-footer strong{color:var(--amber-300);}
+@media(max-width:600px){.vocab-grid{grid-template-columns:1fr;}.lesson-nav{flex-direction:column;}}
+</style>
 </head>
 <body>
-<nav><a href="https://lexilink-ideation.github.io/index.html">Lexilink Ideation IELTS STUDIO</a><span class="sep">·</span><a href="https://lexilink-ideation.github.io/index.html">Vol. 1</a></nav>
-<div class="lesson-header">
-  <div class="lesson-meta">Lesson 15E</div>
-  <div class="lesson-chapter">Chapter 15 · The Phoenicians</div>
+<header class="site-header">
+  <div class="hdr">
+    <a class="logo-wrap" href="index.html">
+      <div class="logo-icon"><svg viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+          <path d="M6 24 C8 18,14 10,24 6 C20 10,18 14,20 18 C16 16,12 18,6 24Z" fill="white"/>
+          <path d="M20 18 C22 20,22 23,20 26 C18 24,18 21,20 18Z" fill="rgba(255,255,255,0.5)"/>
+        </svg></div>
+      <span class="logo-name">Lexilink Ideation IELTS STUDIO</span>
+    </a>
+    <div class="hdr-pipe"></div>
+    <a class="hdr-back" href="index.html"><i class="ti ti-arrow-left" aria-hidden="true"></i> Vol. 1</a>
+    <div class="hdr-spacer"></div>
+    <span class="hdr-badge">Lesson 15E</span>
+  </div>
+</header>
+<section class="lesson-hero">
+  <p class="lesson-eyebrow">Chapter 15 · The Phoenicians</p>
   <h1>Purple — The Colour of Kings</h1>
-  <p class="lesson-subtitle">The smelly secret behind the most expensive colour in the ancient world</p>
-  <div class="lesson-tags"><span class="tag">📖 Story + Vocabulary</span><span class="tag">🎤 Speaking</span><span class="tag">✏️ Grammar</span><span class="tag">⭐ CEFR A2–B1</span></div>
-  <div class="lesson-progress">Lesson 15E of 7 &nbsp;·&nbsp; Part 1 of 10</div>
+  <p>Why the most powerful people in history wore the smell of rotting snails</p>
+  <div class="lesson-pills"><span class="l-pill">📖 Story + Vocabulary</span><span class="l-pill">🎤 Speaking</span><span class="l-pill">✏️ Grammar</span><span class="l-pill">⭐ CEFR A2–B1</span></div>
+</section>
+<div class="lesson-progress">
+  <div class="lp-inner">
+    <div class="lp-labels"><span>Lesson 15E of 7</span><span style="color:var(--amber-300)">Part 1 of 10</span></div>
+    <div class="lp-track"><div class="lp-fill"></div></div>
+    <div class="lp-parts">
+      <span class="lp-part active" onclick="scrollTo('p1')">1 Vocab</span>
+      <span class="lp-part" onclick="scrollTo('p2')">2 Story</span>
+      <span class="lp-part" onclick="scrollTo('p3')">3 Reading</span>
+      <span class="lp-part" onclick="scrollTo('p4')">4 Grammar</span>
+      <span class="lp-part" onclick="scrollTo('p5')">5 Builder</span>
+      <span class="lp-part" onclick="scrollTo('p6')">6 Speaking 1</span>
+      <span class="lp-part" onclick="scrollTo('p7')">7 Speaking 2</span>
+      <span class="lp-part" onclick="scrollTo('p8')">8 Ideas</span>
+      <span class="lp-part" onclick="scrollTo('p9')">9 IELTS</span>
+      <span class="lp-part" onclick="scrollTo('p10')">10 Review</span>
+    </div>
+  </div>
 </div>
-<div class="tabs-bar"><button class="tab-btn active" onclick="showTab(0,this)"><span class="tab-num">1</span>Vocab</button>
-  <button class="tab-btn" onclick="showTab(1,this)"><span class="tab-num">2</span>Story</button>
-  <button class="tab-btn" onclick="showTab(2,this)"><span class="tab-num">3</span>Reading</button>
-  <button class="tab-btn" onclick="showTab(3,this)"><span class="tab-num">4</span>Grammar</button>
-  <button class="tab-btn" onclick="showTab(4,this)"><span class="tab-num">5</span>Builder</button>
-  <button class="tab-btn" onclick="showTab(5,this)"><span class="tab-num">6</span>Speaking 1</button>
-  <button class="tab-btn" onclick="showTab(6,this)"><span class="tab-num">7</span>Speaking 2</button>
-  <button class="tab-btn" onclick="showTab(7,this)"><span class="tab-num">8</span>Ideas</button>
-  <button class="tab-btn" onclick="showTab(8,this)"><span class="tab-num">9</span>IELTS</button>
-  <button class="tab-btn" onclick="showTab(9,this)"><span class="tab-num">10</span>Review</button></div>
-<div class="section active" id="sec-0"><div class="section-title">1 — Vocabulary</div><div class="section-subtitle">Click each word to learn more</div><div class="vocab-grid"><div class="vocab-card" onclick="toggleVocab(this)">
-      <div class="vocab-card-header"><span class="vocab-word">murex</span><span class="vocab-pos">noun</span><span class="vocab-pron">/ˈmjʊər.eks/</span><div class="vocab-expand">▼</div></div>
-      <div class="vocab-body"><div class="vocab-zh">骨螺（一种海螺）</div><div class="vocab-def">A type of sea snail found in the Mediterranean. The Phoenicians used it to make purple dye.</div><div class="vocab-example">"The Phoenicians collected thousands of murex snails from the sea."</div></div>
-    </div><div class="vocab-card" onclick="toggleVocab(this)">
-      <div class="vocab-card-header"><span class="vocab-word">boil</span><span class="vocab-pos">verb</span><span class="vocab-pron">/bɔɪl/</span><div class="vocab-expand">▼</div></div>
-      <div class="vocab-body"><div class="vocab-zh">煮沸；沸腾</div><div class="vocab-def">To heat a liquid until it reaches 100°C and bubbles form. The Phoenicians boiled snails to extract dye.</div><div class="vocab-example">"They boiled the snails in salt water and lemon juice for ten days."</div></div>
-    </div><div class="vocab-card" onclick="toggleVocab(this)">
-      <div class="vocab-card-header"><span class="vocab-word">stench</span><span class="vocab-pos">noun</span><span class="vocab-pron">/stentʃ/</span><div class="vocab-expand">▼</div></div>
-      <div class="vocab-body"><div class="vocab-zh">恶臭；臭味</div><div class="vocab-def">A very strong, unpleasant smell.</div><div class="vocab-example">"The boiling snails created such a terrible stench that Tyre was known for its awful smell."</div></div>
-    </div><div class="vocab-card" onclick="toggleVocab(this)">
-      <div class="vocab-card-header"><span class="vocab-word">luxury</span><span class="vocab-pos">noun / adj</span><span class="vocab-pron">/ˈlʌk.ʃər.i/</span><div class="vocab-expand">▼</div></div>
-      <div class="vocab-body"><div class="vocab-zh">奢侈品；奢华</div><div class="vocab-def">Something expensive and rare that is very comfortable or pleasant, but not necessary.</div><div class="vocab-example">"Purple cloth was a luxury that only kings and wealthy people could afford."</div></div>
-    </div><div class="vocab-card" onclick="toggleVocab(this)">
-      <div class="vocab-card-header"><span class="vocab-word">afford</span><span class="vocab-pos">verb</span><span class="vocab-pron">/əˈfɔːd/</span><div class="vocab-expand">▼</div></div>
-      <div class="vocab-body"><div class="vocab-zh">负担得起；承担得起</div><div class="vocab-def">To have enough money to buy or pay for something.</div><div class="vocab-example">"A purple cloak cost a year's pay — most people could not afford it."</div></div>
-    </div><div class="vocab-card" onclick="toggleVocab(this)">
-      <div class="vocab-card-header"><span class="vocab-word">status</span><span class="vocab-pos">noun</span><span class="vocab-pron">/ˈsteɪ.təs/</span><div class="vocab-expand">▼</div></div>
-      <div class="vocab-body"><div class="vocab-zh">地位；身份</div><div class="vocab-def">A person's social position or level of importance in society.</div><div class="vocab-example">"Wearing purple was a sign of high status in the ancient world."</div></div>
-    </div><div class="vocab-card" onclick="toggleVocab(this)">
-      <div class="vocab-card-header"><span class="vocab-word">insult</span><span class="vocab-pos">noun</span><span class="vocab-pron">/ˈɪn.sʌlt/</span><div class="vocab-expand">▼</div></div>
-      <div class="vocab-body"><div class="vocab-zh">侮辱；冒犯</div><div class="vocab-def">A rude or offensive comment.</div><div class="vocab-example">"'You stink like a man from Tyre' was a common insult in the ancient world."</div></div>
-    </div><div class="vocab-card" onclick="toggleVocab(this)">
-      <div class="vocab-card-header"><span class="vocab-word">scarce</span><span class="vocab-pos">adjective</span><span class="vocab-pron">/skeəs/</span><div class="vocab-expand">▼</div></div>
-      <div class="vocab-body"><div class="vocab-zh">稀缺的；供不应求的</div><div class="vocab-def">Available only in small quantities, not enough for everyone who wants it.</div><div class="vocab-example">"Purple dye was so scarce and costly that it was worth more than silver."</div></div>
-    </div><div class="vocab-card" onclick="toggleVocab(this)">
-      <div class="vocab-card-header"><span class="vocab-word">prestige</span><span class="vocab-pos">noun</span><span class="vocab-pron">/presˈtiːʒ/</span><div class="vocab-expand">▼</div></div>
-      <div class="vocab-body"><div class="vocab-zh">威望；名声</div><div class="vocab-def">The respect and admiration that comes from being important or successful.</div><div class="vocab-example">"Purple colour carried enormous prestige — even kings competed to wear it."</div></div>
-    </div><div class="vocab-card" onclick="toggleVocab(this)">
-      <div class="vocab-card-header"><span class="vocab-word">dip</span><span class="vocab-pos">verb</span><span class="vocab-pron">/dɪp/</span><div class="vocab-expand">▼</div></div>
-      <div class="vocab-body"><div class="vocab-zh">浸入；蘸</div><div class="vocab-def">To put something into a liquid for a short time.</div><div class="vocab-example">"The Phoenicians dipped the wool into the finished dye to colour it purple."</div></div>
-    </div></div></div>
-<div class="section" id="sec-1"><div class="section-title">2 — The Story</div><div class="section-subtitle">Read carefully. Notice the bold words.</div><div class="story-card">
-    <span class="story-emoji">🐚</span>
-    <p>Cedar wood, salt fish, embroidered cloth, tin, and glass — the Phoenicians traded all of these. But perhaps nothing made them more famous — or more wealthy — than a colour. One colour, in particular: <strong>purple</strong>.</p>
-    <p>Today, purple paint costs almost nothing. You can buy it in any art shop. But in the ancient world, purple was the rarest, most expensive, and most powerful colour in existence. And the Phoenicians were its only source.</p>
-    <p>The secret was a small sea creature called the <strong>murex</strong> — a type of snail that lived in the rocky waters along the Phoenician coast. Inside each murex snail was a tiny gland containing a yellowish liquid. When this liquid was exposed to sunlight, it turned an extraordinary shade of deep, rich purple.</p>
-    <span class="story-emoji">🔥</span>
-    <p>Making purple dye was a horrible process — at least for the nose. The Phoenicians collected the murex snails by the thousands. Then they <strong>boiled</strong> them — snails, shells, and all — in great vats of salt water and lemon juice for ten days. The smell was indescribable. The <strong>stench</strong> from the dye factories was so famous that "You stink like a man from Tyre" became a favourite <strong>insult</strong> throughout the ancient world. The city of Tyre smelled so bad that even the wind avoided it, people joked.</p>
-    <p>But when the boiling was done and the dye was ready, the result was extraordinary. The Phoenicians <strong>dipped</strong> fine wool into the purple liquid. When it dried, the wool was a glowing, deep, beautiful purple that would never fade — the colour of sunsets and kings.</p>
-    <span class="story-emoji">👑</span>
-    <p>Purple dye was incredibly <strong>scarce</strong>. It took thousands of murex snails to make enough dye for a single cloak. The cost was staggering — sometimes a whole year's wages for one purple garment. That is why purple was called "the colour of kings": only kings, emperors, and the wealthiest nobles could <strong>afford</strong> it.</p>
-    <p>Wearing purple was the ultimate signal of <strong>status</strong> and <strong>prestige</strong>. In Rome, purple would later become the exclusive colour of the Emperor — no one else was permitted to wear it. In Byzantium, children born to ruling emperors were called Porphyrogenitoi — "born in purple."</p>
-    <p>And it all started with a smelly little snail, boiled on the coast of Phoenicia.</p>
-  </div></div>
-<div class="section" id="sec-2"><div class="section-title">3 — Reading Comprehension</div><div class="section-subtitle">Choose the best answer.</div><div class="question-card">
-    <div class="question-text"><span class="q-num">1</span>Where did the purple colour come from?</div>
-    <div class="options"><label><input type="radio" name="eq1" value="a"> Purple flowers that grew only in Phoenicia</label><label><input type="radio" name="eq1" value="b"> A special clay found on the sea floor</label><label><input type="radio" name="eq1" value="c"> A gland inside the murex sea snail that produced a liquid which turned purple in sunlight</label></div>
-    <button class="check-btn" onclick="checkQ('eq1','c',this)">Check ✓</button><div class="feedback"></div>
-  </div><div class="question-card">
-    <div class="question-text"><span class="q-num">2</span>Why was Tyre famous for its terrible smell?</div>
-    <div class="options"><label><input type="radio" name="eq2" value="a"> The cedar wood factories produced thick smoke</label><label><input type="radio" name="eq2" value="b"> The dye factories boiled thousands of murex snails for ten days</label><label><input type="radio" name="eq2" value="c"> The harbour was full of rotting fish</label></div>
-    <button class="check-btn" onclick="checkQ('eq2','b',this)">Check ✓</button><div class="feedback"></div>
-  </div><div class="question-card">
-    <div class="question-text"><span class="q-num">3</span>Why was purple dye so expensive?</div>
-    <div class="options"><label><input type="radio" name="eq3" value="a"> The murex snails were very dangerous to collect</label><label><input type="radio" name="eq3" value="b"> It took thousands of snails to make enough dye for a single cloak, so it was scarce and costly</label><label><input type="radio" name="eq3" value="c"> The Phoenicians added gold to the dye</label></div>
-    <button class="check-btn" onclick="checkQ('eq3','b',this)">Check ✓</button><div class="feedback"></div>
-  </div><div class="question-card">
-    <div class="question-text"><span class="q-num">4</span>What does 'afford' mean?</div>
-    <div class="options"><label><input type="radio" name="eq4" value="a"> To enjoy something beautiful</label><label><input type="radio" name="eq4" value="b"> To have enough money to buy or pay for something</label><label><input type="radio" name="eq4" value="c"> To make something with great skill</label></div>
-    <button class="check-btn" onclick="checkQ('eq4','b',this)">Check ✓</button><div class="feedback"></div>
-  </div><div class="question-card">
-    <div class="question-text"><span class="q-num">5</span>True or False: Purple would eventually become the exclusive colour of the Roman Emperor.</div>
-    <div class="options"><label><input type="radio" name="eq5" value="a"> True</label><label><input type="radio" name="eq5" value="b"> False</label></div>
-    <button class="check-btn" onclick="checkQ('eq5','a',this)">Check ✓</button><div class="feedback"></div>
-  </div><div class="question-card">
-    <div class="question-text"><span class="q-num">6</span>What does the phrase 'the colour of kings' mean?</div>
-    <div class="options"><label><input type="radio" name="eq6" value="a"> Only kings were allowed to create purple dye</label><label><input type="radio" name="eq6" value="b"> Kings had to wear purple by law</label><label><input type="radio" name="eq6" value="c"> Only very powerful and wealthy people could afford purple cloth</label></div>
-    <button class="check-btn" onclick="checkQ('eq6','c',this)">Check ✓</button><div class="feedback"></div>
-  </div></div>
-<div class="section" id="sec-3"><div class="section-title">4 — Language Focus</div><div class="section-subtitle">Grammar from the story</div><div class="grammar-block">
-    <div class="grammar-label">📌 GRAMMAR</div>
-    <div class="grammar-title">So… That — Result Clauses</div>
-    <p style="font-size:.9rem;color:#374151;margin-bottom:12px;">We use <strong>so + adjective/adverb + that</strong> to show a result that follows from an extreme quality.</p>
-    <div class="grammar-example">The stench was <strong>so</strong> bad <strong>that</strong> even the wind avoided it.</div>
-    <div class="grammar-example">Purple was <strong>so</strong> expensive <strong>that</strong> only kings could afford it.</div>
-    <div class="grammar-example">It took <strong>so</strong> many snails <strong>that</strong> the process lasted ten days.</div>
-    <div class="grammar-note">This structure is very useful in IELTS essays: "The problem is so serious that governments must act immediately."</div>
+<main class="main">
+<section class="sec" id="p1">
+  <div class="sec-header">
+    <div class="sec-num">1</div>
+    <div><div class="sec-title">Vocabulary</div><div class="sec-sub">Click each word to learn more</div></div>
   </div>
-  <div class="grammar-block">
-    <div class="grammar-label">📌 GRAMMAR</div>
-    <div class="grammar-title">The Only… — Exclusivity</div>
-    <p style="font-size:.9rem;color:#374151;margin-bottom:12px;">We use <strong>the only</strong> to show that something is unique — there is no other like it.</p>
-    <div class="grammar-example">The Phoenicians were <strong>the only</strong> source of purple dye in the world.</div>
-    <div class="grammar-example">Purple was <strong>the only</strong> colour that could not be reproduced cheaply.</div>
-    <div class="grammar-example">Tyre was <strong>the only</strong> city with the knowledge to make this dye.</div>
+  <div class="vocab-grid"><div class="vocab-card" onclick="toggleVocab(this)">
+      <div class="vc-top"><span class="vc-word">dye</span><span class="vc-pos">noun / verb</span></div>
+      <div class="vc-pron">/daɪ/</div>
+      <div class="vc-cn">染料 / 染色</div>
+      <div class="vc-detail">
+        <div class="vc-def">A substance used to change the colour of cloth or hair; or to use such a substance.</div>
+        <div class="vc-ex">"The Phoenicians used dye from sea snails to colour cloth a deep, rich purple."</div>
+      </div>
+    </div><div class="vocab-card" onclick="toggleVocab(this)">
+      <div class="vc-top"><span class="vc-word">murex</span><span class="vc-pos">noun</span></div>
+      <div class="vc-pron">/ˈmjʊər.eks/</div>
+      <div class="vc-cn">骨螺</div>
+      <div class="vc-detail">
+        <div class="vc-def">A type of sea snail with a spiky shell, found in the Mediterranean Sea.</div>
+        <div class="vc-ex">"Thousands of murex snails were crushed to produce just a small amount of purple dye."</div>
+      </div>
+    </div><div class="vocab-card" onclick="toggleVocab(this)">
+      <div class="vc-top"><span class="vc-word">luxury</span><span class="vc-pos">noun</span></div>
+      <div class="vc-pron">/ˈlʌk.ʃər.i/</div>
+      <div class="vc-cn">奢侈品</div>
+      <div class="vc-detail">
+        <div class="vc-def">Something very expensive that gives pleasure but is not necessary.</div>
+        <div class="vc-ex">"Purple cloth was a luxury that only the very richest people could afford."</div>
+      </div>
+    </div><div class="vocab-card" onclick="toggleVocab(this)">
+      <div class="vc-top"><span class="vc-word">status</span><span class="vc-pos">noun</span></div>
+      <div class="vc-pron">/ˈsteɪ.təs/</div>
+      <div class="vc-cn">地位</div>
+      <div class="vc-detail">
+        <div class="vc-def">A person's social position — how important or respected they are.</div>
+        <div class="vc-ex">"Wearing purple was a sign of high status — only kings and emperors could afford it."</div>
+      </div>
+    </div><div class="vocab-card" onclick="toggleVocab(this)">
+      <div class="vc-top"><span class="vc-word">stench</span><span class="vc-pos">noun</span></div>
+      <div class="vc-pron">/stentʃ/</div>
+      <div class="vc-cn">恶臭</div>
+      <div class="vc-detail">
+        <div class="vc-def">An extremely strong and unpleasant smell.</div>
+        <div class="vc-ex">"The rotting murex snails created such a terrible stench that people called Tyre 'the smelly city'."</div>
+      </div>
+    </div><div class="vocab-card" onclick="toggleVocab(this)">
+      <div class="vc-top"><span class="vc-word">extract</span><span class="vc-pos">verb</span></div>
+      <div class="vc-pron">/ɪkˈstrækt/</div>
+      <div class="vc-cn">提取</div>
+      <div class="vc-detail">
+        <div class="vc-def">To remove or take something out of something else, often using force or a process.</div>
+        <div class="vc-ex">"Workers had to crack open thousands of murex shells to extract a tiny drop of purple liquid."</div>
+      </div>
+    </div><div class="vocab-card" onclick="toggleVocab(this)">
+      <div class="vc-top"><span class="vc-word">imperial</span><span class="vc-pos">adjective</span></div>
+      <div class="vc-pron">/ɪmˈpɪər.i.əl/</div>
+      <div class="vc-cn">帝王的</div>
+      <div class="vc-detail">
+        <div class="vc-def">Related to an empire or emperor; used to describe great power and authority.</div>
+        <div class="vc-ex">"Purple became the imperial colour — worn by Roman emperors to show their supreme power."</div>
+      </div>
+    </div><div class="vocab-card" onclick="toggleVocab(this)">
+      <div class="vc-top"><span class="vc-word">coveted</span><span class="vc-pos">adjective</span></div>
+      <div class="vc-pron">/ˈkʌv.ɪ.tɪd/</div>
+      <div class="vc-cn">垂涎的</div>
+      <div class="vc-detail">
+        <div class="vc-def">Desired very much by many people; something everyone wants but few can have.</div>
+        <div class="vc-ex">"Tyrian purple was the most coveted colour in the ancient world."</div>
+      </div>
+    </div><div class="vocab-card" onclick="toggleVocab(this)">
+      <div class="vc-top"><span class="vc-word">gland</span><span class="vc-pos">noun</span></div>
+      <div class="vc-pron">/ɡlænd/</div>
+      <div class="vc-cn">腺体</div>
+      <div class="vc-detail">
+        <div class="vc-def">A small organ in an animal's body that produces a special liquid or chemical.</div>
+        <div class="vc-ex">"Each murex snail has a tiny gland that produces just one small drop of purple liquid."</div>
+      </div>
+    </div><div class="vocab-card" onclick="toggleVocab(this)">
+      <div class="vc-top"><span class="vc-word">symbol</span><span class="vc-pos">noun</span></div>
+      <div class="vc-pron">/ˈsɪm.bəl/</div>
+      <div class="vc-cn">象征</div>
+      <div class="vc-detail">
+        <div class="vc-def">Something that represents or stands for an idea or quality.</div>
+        <div class="vc-ex">"Purple cloth became a symbol of royal power throughout the ancient world."</div>
+      </div>
+    </div></div>
+</section>
+<section class="sec" id="p2">
+  <div class="sec-header">
+    <div class="sec-num">2</div>
+    <div><div class="sec-title">The Story</div><div class="sec-sub">Read carefully. Notice the bold words.</div></div>
   </div>
-  <div class="grammar-block">
-    <div class="grammar-label">📌 GRAMMAR</div>
-    <div class="grammar-title">Even — Adding Emphasis</div>
-    <div class="grammar-example">Purple was so expensive that <strong>even</strong> rich nobles struggled to buy it.</div>
-    <div class="grammar-example">The dye was <strong>even</strong> worth more than silver.</div>
-    <div class="grammar-example"><strong>Even</strong> the wind seemed to avoid the city of Tyre.</div>
-    <div class="grammar-note">"Even" emphasises that something is surprising or extreme — more than you would expect.</div>
-  </div></div>
-<div class="section" id="sec-4"><div class="section-title">5 — Sentence Builder</div><div class="section-subtitle">Practice with the vocabulary</div><div class="builder-card">
-    <div class="builder-label">✏️ Fill in the blank</div>
-    <div class="builder-prompt">1. The Phoenicians collected ________ snails and boiled them to make purple dye.</div>
-    <input class="builder-input" type="text" placeholder="Type your answer...">
-    <button class="builder-check" onclick="checkFill(this,'murex')">Check ✓</button>
-    <div class="builder-feedback"></div>
-  </div><div class="builder-card">
-    <div class="builder-label">✏️ so… that…</div>
-    <div class="builder-prompt">2. Complete the sentence: 'The purple cloak was so expensive ________ most people could not afford it.'</div>
-    <input class="builder-input" type="text" placeholder="Type your answer...">
-    <button class="builder-check" onclick="checkFill(this,'that')">Check ✓</button>
-    <div class="builder-feedback"></div>
-  </div><div class="builder-card">
-    <div class="builder-label">✏️ Fill in the blank</div>
-    <div class="builder-prompt">3. Wearing purple was a sign of high ________ — only kings and emperors could afford it.</div>
-    <input class="builder-input" type="text" placeholder="Type your answer...">
-    <button class="builder-check" onclick="checkFill(this,'status')">Check ✓</button>
-    <div class="builder-feedback"></div>
-  </div><div class="builder-card">
-    <div class="builder-label">🈶 Translation</div>
-    <div class="builder-prompt">Translate into English:<br><div style='background:var(--gold-light);border-radius:8px;padding:12px;margin:8px 0;font-size:1rem;color:#92400e;font-weight:600;'>紫色如此昂贵，以至于只有国王才能负担得起。一件紫色斗篷的价格相当于一整年的工钱。</div></div>
-    <input class="builder-input" type="text" placeholder="Type your answer...">
-    <button class="builder-check" onclick="revealFill(this,'Purple was so expensive that only kings could afford it. A purple cloak cost a whole year's wages.')">Check ✓</button>
-    <div class="builder-feedback"></div>
-  </div></div>
-<div class="section" id="sec-5"><div class="section-title">6 — Speaking — Level 1</div><div class="section-subtitle">Answer in one complete sentence</div><div class="speaking-level level-1">🟢 Level 1 · One sentence</div><div class="speaking-question"><div class="speaking-q">What creature did the Phoenicians use to make purple dye?</div><div class="speaking-hint">💡 Start with: <span>"The Phoenicians used a creature called..."</span></div></div><div class="speaking-question"><div class="speaking-q">Why was Tyre famous for its terrible smell?</div><div class="speaking-hint">💡 Start with: <span>"Tyre smelled terrible because..."</span></div></div><div class="speaking-question"><div class="speaking-q">Why was purple called 'the colour of kings'?</div><div class="speaking-hint">💡 Start with: <span>"Purple was called the colour of kings because..."</span></div></div></div>
-<div class="section" id="sec-6"><div class="section-title">7 — Speaking — Level 2</div><div class="section-subtitle">Answer in 2–3 sentences. Share your opinion.</div><div class="speaking-level level-2">🟡 Level 2 · 2–3 sentences</div><div class="speaking-question"><div class="speaking-q">Imagine you are a wool merchant in ancient Rome. Someone offers you a purple cloak — it costs your entire yearly income. Would you buy it? Why or why not?</div><div class="speaking-hint">💡 Think about: <span>status · wealth · sacrifice · showing off · what others would think</span></div></div><div class="speaking-question"><div class="speaking-q">The making of purple dye was disgusting work — boiling rotting snails for ten days. Yet the result was beautiful and highly valued. Can you think of any modern products where the production process is unpleasant but the result is considered desirable?</div><div class="speaking-hint">💡 Try: <span>"I think... is similar because the process... but the result..."</span></div></div><div class="speaking-level level-3" style="margin-top:20px;">🔵 Level 3 · Your opinion</div><div class="speaking-question"><div class="speaking-q">Purple was valuable partly because it was scarce. Today, many luxury brands deliberately make limited quantities of their products to keep prices high. Is this a fair practice? Does scarcity create real value, or is it an illusion?</div><div class="speaking-hint">💡 Use: <span>I think... / On one hand, scarcity... / On the other hand... / In my opinion, real value comes from...</span></div></div></div>
-<div class="section" id="sec-7"><div class="section-title">8 — Ideas &amp; Society</div><div class="section-subtitle">Think about big ideas. There is no wrong answer.</div><div class="idea-card"><span class="idea-emoji">👑</span><p><strong>Power and colour.</strong> In many cultures, colours carry meaning — red for luck, white for purity, black for mourning. Why do you think human beings attach so much meaning to colours? Can you think of any modern examples of colour signalling status or power?</p></div><div class="idea-card"><span class="idea-emoji">🦺</span><p><strong>Luxury and inequality.</strong> Purple cloth could only be owned by the very rich. Today, luxury goods like designer bags or supercars serve the same purpose — to signal wealth and status. Do you think it is healthy for societies to have status symbols? What are the benefits and risks?</p></div><div class="idea-card"><span class="idea-emoji">🌊</span><p><strong>The hidden value of small things.</strong> A tiny snail, boiled in a pot, produced a dye worth more than gold. This shows that value is not always obvious from appearance. Can you think of anything today that seems ordinary but is extremely valuable?</p></div><div class="idea-card"><span class="idea-emoji">🏭</span><p><strong>Working conditions and beautiful products.</strong> The workers in Tyre's dye factories lived with a terrible stench all day long. Do you think it is ethical to benefit from products made in harsh conditions? Who is responsible — the producer, the buyer, or the government?</p></div></div>
-<div class="section" id="sec-8"><div class="section-title">9 — IELTS Content Builder</div><div class="section-subtitle">Planting seeds for your future IELTS exam</div><div class="ielts-banner">
-    <h4>📘 Today's IELTS Topic</h4>
-    <p><strong>Wealth, Status, and Social Inequality</strong></p>
-    <p style="margin-top:6px;">Purple dye illustrates how scarcity creates status symbols — one of IELTS's most tested social themes. Inequality, luxury, and social class appear constantly in Task 2 essays.</p>
-    <div class="vocab-tags"><span class="vocab-tag">social status</span><span class="vocab-tag">wealth inequality</span><span class="vocab-tag">luxury goods</span><span class="vocab-tag">scarcity</span><span class="vocab-tag">exclusivity</span><span class="vocab-tag">consumerism</span><span class="vocab-tag">social class</span><span class="vocab-tag">prestige</span></div>
-    <ul class="colloc-list"><li>signal social status</li><li>widen the wealth gap</li><li>create a sense of exclusivity</li><li>drive conspicuous consumption</li><li>reflect social inequality</li></ul>
+  <div class="story-body"><div class="story-icon">🐌</div>
+    <p>The city of Tyre had a secret — and a terrible smell. Visitors who came by sea could smell it before they could even see the city. It was the smell of rotting sea snails. Thousands of them. Tens of thousands. The <span class="story-hl">stench</span> was so powerful that people called Tyre "the smelly city." Yet this same city was also the richest trading city in the ancient world. The secret behind that wealth? <span class="story-hl">Purple</span>.</p>
+    <p>Along the Phoenician coast lived a small, spiky sea snail called the <span class="story-hl">murex</span>. Inside each snail's body was a tiny <span class="story-hl">gland</span> that produced a small amount of yellow liquid. When this liquid was exposed to sunlight and air, something extraordinary happened: it slowly turned purple — a deep, rich, glorious purple unlike anything nature produced in cloth or stone.</p>
+    <div class="story-box">To make purple <span class="story-hl">dye</span>, workers had to crack open murex shells and <span class="story-hl">extract</span> the gland. Then they boiled the glands in large vats. The liquid stank like rotting fish. But the colour it produced was extraordinary. To make enough dye to colour a single garment, workers needed to crush more than 250,000 murex snails.</div>
+    <p>The result was Tyrian purple — perhaps the most <span class="story-hl">coveted</span> colour in all of history. It did not fade in sunlight. It did not wash out in water. The cloth dyed with it glowed with a depth and richness that no other dye could match.</p>
+    <p>Because it was so difficult and expensive to produce, purple cloth became the ultimate <span class="story-hl">luxury</span>. It became a <span class="story-hl">symbol</span> of power and <span class="story-hl">status</span>. In Rome, wearing the colour purple without permission from the Emperor was punishable by death. Purple was the <span class="story-hl">imperial</span> colour — the colour of gods and rulers. And it came from a smelly little snail on the coast of Phoenicia.</p>
+    <div class="story-icon">👑</div></div>
+</section>
+<section class="sec" id="p3">
+  <div class="sec-header">
+    <div class="sec-num">3</div>
+    <div><div class="sec-title">Reading Comprehension</div><div class="sec-sub">Choose the best answer. Get instant feedback!</div></div>
   </div>
-  <div class="ielts-q"><span class="ielts-num">S1</span>Why do people buy luxury goods? Is it about quality or status?</div>
-  <div class="ielts-q"><span class="ielts-num">S2</span>Do you think the gap between the rich and the poor is getting larger or smaller today?</div>
-  <div class="ielts-q"><span class="ielts-num">S3</span>Should wealthy countries or individuals do more to help those who are less fortunate?</div>
-  <div class="ielts-writing"><h5>✏️ IELTS Writing Task 2 — Future Practice</h5><p>"Some people believe that the increasing gap between rich and poor is one of the greatest threats to modern society. Others argue that inequality is a natural outcome of a free economy. Discuss both views and give your opinion."</p></div></div>
-<div class="section" id="sec-9"><div class="section-title">10 — Review</div><div class="section-subtitle">Remember what you learned!</div><div class="star-words"><span class="star-word">⭐ murex</span><span class="star-word">⭐ stench</span><span class="star-word">⭐ luxury</span><span class="star-word">⭐ afford</span><span class="star-word">⭐ status</span><span class="star-word">⭐ scarce</span><span class="star-word">⭐ prestige</span><span class="star-word">⭐ dip</span></div>
-  <div class="big-idea"><p>💡 <strong>Value comes from scarcity.</strong> The tiny, smelly murex snail became the source of the most powerful colour in history. Not because purple was naturally beautiful — many colours are beautiful. But because purple was rare, difficult to make, and controlled by one people: the Phoenicians. This is one of the oldest lessons in economics: <em>scarcity creates value</em>.</p></div>
-  <div class="section-title" style="margin-bottom:14px;">🧠 Mini Quiz</div><div class="question-card">
-    <div class="question-text"><span class="q-num">A</span>What animal was used to make Tyrian purple dye?</div>
-    <div class="options"><label><input type="radio" name="emq1" value="a"> A type of fish called murex</label><label><input type="radio" name="emq1" value="b"> A sea snail called murex</label><label><input type="radio" name="emq1" value="c"> A shellfish called cedar</label></div>
-    <button class="check-btn" onclick="checkQ('emq1','b',this)">Check ✓</button><div class="feedback"></div>
-  </div><div class="question-card">
-    <div class="question-text"><span class="q-num">B</span>'Purple was ________ expensive ________ only kings could afford it.' Choose the correct words.</div>
-    <div class="options"><label><input type="radio" name="emq2" value="a"> so / that</label><label><input type="radio" name="emq2" value="b"> too / for</label><label><input type="radio" name="emq2" value="c"> very / and</label></div>
-    <button class="check-btn" onclick="checkQ('emq2','a',this)">Check ✓</button><div class="feedback"></div>
-  </div><div class="question-card">
-    <div class="question-text"><span class="q-num">C</span>Why was purple called the colour of kings?</div>
-    <div class="options"><label><input type="radio" name="emq3" value="a"> Because kings invented it</label><label><input type="radio" name="emq3" value="b"> Because it was the hardest colour to make and only the wealthiest could afford it</label><label><input type="radio" name="emq3" value="c"> Because it was the official colour of all ancient religions</label></div>
-    <button class="check-btn" onclick="checkQ('emq3','b',this)">Check ✓</button><div class="feedback"></div>
-  </div></div>
-<div class="lesson-nav"><a href="ch15-d.html" class="lesson-nav nav-prev">← LESSON 15D</a><a href="ch15-f.html" class="lesson-nav nav-next">Next: LESSON 15F →</a></div>
+  <div class="quiz-list">
+    <div class="q-item">
+      <div class="q-text">1. What animal was used to make Phoenician purple dye?</div>
+      <div class="q-opts"><button class="q-opt" onclick="mcq(this,'wrong')">A type of Mediterranean octopus.</button>
+<button class="q-opt" onclick="mcq(this,'correct')">The murex sea snail.</button>
+<button class="q-opt" onclick="mcq(this,'wrong')">A coastal crab found near Tyre.</button></div>
+      <div class="q-feedback"></div>
+    </div>
+    <div class="q-item">
+      <div class="q-text">2. Approximately how many murex snails were needed to dye one garment?</div>
+      <div class="q-opts"><button class="q-opt" onclick="mcq(this,'wrong')">About 1,000.</button>
+<button class="q-opt" onclick="mcq(this,'wrong')">About 10,000.</button>
+<button class="q-opt" onclick="mcq(this,'correct')">More than 250,000.</button></div>
+      <div class="q-feedback"></div>
+    </div>
+    <div class="q-item">
+      <div class="q-text">3. True or False: Tyrian purple dye would fade quickly in sunlight.</div>
+      <div class="tf-opts">
+        <button class="tf-btn" onclick="tf(this,'wrong','False! Tyrian purple was famous precisely because it did NOT fade in sunlight.')">True</button>
+        <button class="tf-btn" onclick="tf(this,'correct','Correct! One of its great qualities was that it never faded.')">False</button>
+      </div>
+      <div class="q-feedback"></div>
+    </div>
+    <div class="q-item">
+      <div class="q-text">4. Why did the city of Tyre have such a terrible smell?</div>
+      <div class="q-opts"><button class="q-opt" onclick="mcq(this,'wrong')">Because of the cedar forests nearby.</button>
+<button class="q-opt" onclick="mcq(this,'correct')">Because thousands of murex snails were rotting as workers extracted the dye.</button>
+<button class="q-opt" onclick="mcq(this,'wrong')">Because the harbour was polluted with old cargo.</button></div>
+      <div class="q-feedback"></div>
+    </div>
+    <div class="q-item">
+      <div class="q-text">5. True or False: In Rome, anyone could wear purple cloth.</div>
+      <div class="tf-opts">
+        <button class="tf-btn" onclick="tf(this,'wrong','Wrong! Wearing purple without Imperial permission was punishable by DEATH.')">True</button>
+        <button class="tf-btn" onclick="tf(this,'correct','Correct! Only the Emperor could wear purple — it was that exclusive.')">False</button>
+      </div>
+      <div class="q-feedback"></div>
+    </div>
+    <div class="q-item">
+      <div class="q-text">6. What made purple a symbol of power and status?</div>
+      <div class="q-opts"><button class="q-opt" onclick="mcq(this,'wrong')">It was easy to produce so everyone wore it.</button>
+<button class="q-opt" onclick="mcq(this,'correct')">It was so difficult and expensive to produce that only the most powerful could afford it.</button>
+<button class="q-opt" onclick="mcq(this,'wrong')">It was the favourite colour of the gods in Phoenician religion.</button></div>
+      <div class="q-feedback"></div>
+    </div>
+  </div>
+</section>
+<section class="sec" id="p4">
+  <div class="sec-header">
+    <div class="sec-num">4</div>
+    <div><div class="sec-title">Language Focus</div><div class="sec-sub">Grammar from the story — learn through meaning</div></div>
+  </div>
+  <div class="grammar-box">
+    <div class="grammar-label">📌 Superlatives — 'the most... / the -est...'</div>
+    <div class="grammar-rule">Use superlatives to describe the extreme of a quality — the highest, best, worst, etc.</div>
+    <div class="grammar-eg">Tyrian purple was <span>the most coveted</span> colour in the ancient world.</div>
+<div class="grammar-eg">The stench of Tyre was <span>the worst</span> smell any visitor had ever experienced.</div>
+<div class="grammar-eg">Purple was <span>the richest</span> and <span>most expensive</span> dye known to history.</div>
+<div class="grammar-eg">Tyre was <span>one of the wealthiest</span> cities in the ancient Mediterranean.</div>
+    
+  </div>
+<div class="grammar-box">
+    <div class="grammar-label">📌 Expressing rarity with 'only' and 'just'</div>
+    <div class="grammar-rule">Use 'only' and 'just' to emphasise how few or how little.</div>
+    <div class="grammar-eg"><span>Only</span> kings and emperors could afford purple cloth.</div>
+<div class="grammar-eg">Each snail produced <span>just</span> one tiny drop of liquid.</div>
+<div class="grammar-eg"><span>Only</span> 250,000 snails could produce enough dye for one garment.</div>
+<div class="grammar-eg">The gland was <span>just</span> a tiny organ inside each shell.</div>
+    
+  </div>
+<div class="grammar-box">
+    <div class="grammar-label">📌 Despite / Although — expressing contrast</div>
+    <div class="grammar-rule">Use these words when something unexpected is true.</div>
+    <div class="grammar-eg"><span>Despite</span> the terrible stench, Tyre was the richest city in the ancient world.</div>
+<div class="grammar-eg"><span>Although</span> the smell was horrible, workers continued extracting the dye.</div>
+<div class="grammar-eg"><span>Despite</span> the enormous cost, kings and emperors paid whatever it took to own purple cloth.</div>
+<div class="grammar-eg"><span>Although</span> it came from a tiny snail, purple cloth carried enormous power.</div>
+    
+  </div>
+</section>
+<section class="sec" id="p5">
+  <div class="sec-header">
+    <div class="sec-num">5</div>
+    <div><div class="sec-title">Sentence Builder</div><div class="sec-sub">Build your skills with the vocabulary</div></div>
+  </div>
+  <div class="sb-activity">
+    <div class="sb-label">🔀 Unscramble the sentence</div>
+    <p style="font-size:13px;color:var(--text3);margin-bottom:.75rem;">Put these words in the correct order:</p>
+    <div style="margin-bottom:.75rem;"><span style="padding:5px 10px;border-radius:99px;background:var(--surface2);border:1px solid var(--border);font-size:13px;color:var(--text2);display:inline-block;margin:3px;">of</span><span style="padding:5px 10px;border-radius:99px;background:var(--surface2);border:1px solid var(--border);font-size:13px;color:var(--text2);display:inline-block;margin:3px;">symbol</span><span style="padding:5px 10px;border-radius:99px;background:var(--surface2);border:1px solid var(--border);font-size:13px;color:var(--text2);display:inline-block;margin:3px;">purple</span><span style="padding:5px 10px;border-radius:99px;background:var(--surface2);border:1px solid var(--border);font-size:13px;color:var(--text2);display:inline-block;margin:3px;">status</span><span style="padding:5px 10px;border-radius:99px;background:var(--surface2);border:1px solid var(--border);font-size:13px;color:var(--text2);display:inline-block;margin:3px;">became</span><span style="padding:5px 10px;border-radius:99px;background:var(--surface2);border:1px solid var(--border);font-size:13px;color:var(--text2);display:inline-block;margin:3px;">power</span><span style="padding:5px 10px;border-radius:99px;background:var(--surface2);border:1px solid var(--border);font-size:13px;color:var(--text2);display:inline-block;margin:3px;">ancient</span><span style="padding:5px 10px;border-radius:99px;background:var(--surface2);border:1px solid var(--border);font-size:13px;color:var(--text2);display:inline-block;margin:3px;">cloth</span><span style="padding:5px 10px;border-radius:99px;background:var(--surface2);border:1px solid var(--border);font-size:13px;color:var(--text2);display:inline-block;margin:3px;">a</span><span style="padding:5px 10px;border-radius:99px;background:var(--surface2);border:1px solid var(--border);font-size:13px;color:var(--text2);display:inline-block;margin:3px;">and</span><span style="padding:5px 10px;border-radius:99px;background:var(--surface2);border:1px solid var(--border);font-size:13px;color:var(--text2);display:inline-block;margin:3px;">in</span><span style="padding:5px 10px;border-radius:99px;background:var(--surface2);border:1px solid var(--border);font-size:13px;color:var(--text2);display:inline-block;margin:3px;">the</span><span style="padding:5px 10px;border-radius:99px;background:var(--surface2);border:1px solid var(--border);font-size:13px;color:var(--text2);display:inline-block;margin:3px;">world</span></div>
+    <input class="sb-input" id="us1e" placeholder="Type your sentence here..."/>
+    <button class="sb-check" onclick="checkUnscramble('us1e','purple cloth became a symbol of power and status in the ancient world','ur1e')">Check ✓</button>
+    <div class="sb-result" id="ur1e"></div>
+  </div>
+<div class="sb-activity">
+    <div class="sb-label">✏️ Fill in the blank</div>
+    <p style="font-size:13px;color:var(--text2);margin-bottom:.5rem;">1. Workers had to crack open thousands of murex shells to ________ the tiny gland inside.</p>
+    <input class="sb-input" id="f1e" placeholder="Your answer..."/>
+    <button class="sb-check" onclick="checkFill('f1e','extract','rf1e')">Check ✓</button>
+    <div class="sb-result" id="rf1e"></div>
+  </div>
+<div class="sb-activity">
+    <div class="sb-label">✏️ Fill in the blank</div>
+    <p style="font-size:13px;color:var(--text2);margin-bottom:.5rem;">2. Because purple cloth was so rare and expensive, it became a ________ of royal power.</p>
+    <input class="sb-input" id="f2e" placeholder="Your answer..."/>
+    <button class="sb-check" onclick="checkFill('f2e','symbol','rf2e')">Check ✓</button>
+    <div class="sb-result" id="rf2e"></div>
+  </div>
+</section>
+<section class="sec" id="p6">
+  <div class="sec-header">
+    <div class="sec-num">6</div>
+    <div><div class="sec-title">Speaking — Level 1</div><div class="sec-sub">Answer in one complete sentence</div></div>
+  </div>
+  <div class="speak-level">
+    <span class="speak-badge l1">🟢 Level 1 · One sentence</span>
+    <div class="speak-q"><p>What animal was used to make Tyrian purple dye?</p><div class="speak-hint">💡 Start with: <span>"Tyrian purple was made from..."</span></div></div>
+    <div class="speak-q"><p>Why was purple cloth so expensive in the ancient world?</p><div class="speak-hint">💡 Start with: <span>"Purple cloth was expensive because..."</span></div></div>
+    <div class="speak-q"><p>What does it mean to say that purple was a 'symbol of status'?</p><div class="speak-hint">💡 Start with: <span>"Purple was a symbol of status because..."</span></div></div>
+  </div>
+</section>
+<section class="sec" id="p7">
+  <div class="sec-header">
+    <div class="sec-num">7</div>
+    <div><div class="sec-title">Speaking — Level 2 &amp; 3</div><div class="sec-sub">Extend your answer. Share your opinion.</div></div>
+  </div>
+  <div class="speak-level">
+    <span class="speak-badge l2">🟡 Level 2 · 2–3 sentences</span>
+    <div class="speak-q"><p>Imagine you are a Roman senator. You see someone wearing a purple robe without permission. How do you feel? What do you do?</p><div class="speak-hint">💡 Think about: <span>power · law · disrespect · danger</span></div></div>
+    <div class="speak-q"><p>Why do you think people in the ancient world used clothing to show power and status? Do people still do this today?</p><div class="speak-hint">💡 Try: <span>"In the ancient world... Today, people show status by wearing..."</span></div></div>
+  </div>
+  <div class="speak-level">
+    <span class="speak-badge l3">🔵 Level 3 · Your opinion</span>
+    <div class="speak-q"><p>Is it right for a colour or a type of clothing to be restricted to only powerful people? What does this tell us about how society uses symbols of power?</p><div class="speak-hint">💡 Use: <span>I think... / This is similar to... / In contrast, today...</span></div></div>
+  </div>
+</section>
+<section class="sec" id="p8">
+  <div class="sec-header">
+    <div class="sec-num">8</div>
+    <div><div class="sec-title">Ideas &amp; Society</div><div class="sec-sub">Think about big ideas. There is no wrong answer.</div></div>
+  </div>
+  <div class="idea-q"><div class="idea-icon">👗</div><div class="idea-text"><strong>Clothing as power.</strong> Purple was not just a colour — it was a political statement. How do people today use fashion to show their identity, status, or power?</div></div>
+<div class="idea-q"><div class="idea-icon">🐌</div><div class="idea-text"><strong>Extraordinary value from the humblest source.</strong> The most coveted colour in human history came from a tiny sea snail. Can you think of other examples where something ordinary becomes extraordinarily valuable?</div></div>
+<div class="idea-q"><div class="idea-icon">🏙️</div><div class="idea-text"><strong>The cost of luxury.</strong> Tyre grew wealthy from purple dye, but the workers who extracted the dye endured terrible conditions. Who really paid the price for this luxury?</div></div>
+<div class="idea-q"><div class="idea-icon">🌊</div><div class="idea-text"><strong>Environmental impact of ancient industries.</strong> To make enough dye for the Roman Empire, millions of murex snails were harvested. Do you think the ancients thought about environmental sustainability?</div></div>
+</section>
+<section class="sec" id="p9">
+  <div class="sec-header">
+    <div class="sec-num">9</div>
+    <div><div class="sec-title">IELTS Content Builder</div><div class="sec-sub">Planting seeds for your future IELTS exam</div></div>
+  </div>
+  <div class="ielts-topic">
+    <div class="ielts-topic-label">📘 Today's IELTS Topic</div>
+    <h4>Fashion, Status, and Social Inequality</h4>
+  </div>
+  <p style="font-size:12px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;color:var(--text3);margin-bottom:.5rem;">Key vocabulary</p>
+  <div class="vocab-chips"><span class="chip amber">luxury</span><span class="chip amber">status</span><span class="chip amber">inequality</span><span class="chip amber">fashion</span><span class="chip">conspicuous consumption</span><span class="chip">social hierarchy</span><span class="chip">exclusive goods</span><span class="chip">brand recognition</span></div>
+  <p style="font-size:12px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;color:var(--text3);margin:.875rem 0 .5rem;">Useful collocations</p>
+  <div class="vocab-chips"><span class="chip">signal social status</span><span class="chip">display wealth and power</span><span class="chip">reinforce social hierarchy</span><span class="chip">create exclusive markets</span></div>
+  <div class="ielts-qs"><div class="ielts-q"><div class="ielts-q-num">S1</div><div class="ielts-q-text">Why do people use expensive goods to show their status in society?</div></div>
+<div class="ielts-q"><div class="ielts-q-num">S2</div><div class="ielts-q-text">Do you think luxury goods have a positive or negative effect on society?</div></div>
+<div class="ielts-q"><div class="ielts-q-num">S3</div><div class="ielts-q-text">How does fashion today compare to the use of purple cloth in the ancient world?</div></div></div>
+  <div class="ielts-w2">
+    <div class="ielts-w2-label">✏️ IELTS Writing Task 2 — Future Practice</div>
+    <p>"Luxury goods serve no practical purpose and should be heavily taxed to reduce inequality. To what extent do you agree or disagree?"</p>
+  </div>
+</section>
+<section class="sec" id="p10">
+  <div class="sec-header">
+    <div class="sec-num">10</div>
+    <div><div class="sec-title">Review</div><div class="sec-sub">Remember what you learned!</div></div>
+  </div>
+  <p style="font-size:12px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;color:var(--text3);margin-bottom:.75rem;">⭐ Star Words</p>
+  <div class="star-words"><span class="star-word">⭐ murex</span><span class="star-word">⭐ dye</span><span class="star-word">⭐ stench</span><span class="star-word">⭐ extract</span><span class="star-word">⭐ luxury</span><span class="star-word">⭐ status</span><span class="star-word">⭐ imperial</span><span class="star-word">⭐ coveted</span></div>
+  <div class="think-box">
+    <div class="think-head">💡 Big Idea</div>
+    <p>A terrible smell. A tiny snail. And the most powerful colour in the world. <strong>Sometimes the most valuable things in history come from the most unexpected places — and the hardest work.</strong></p>
+  </div>
+  <p style="font-size:12px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;color:var(--text3);margin:.875rem 0 .75rem;">🧠 Mini Quiz</p>
+  <div class="mini-quiz-q"><div class="mq-text">A. What colour was made from murex snails?</div><div class="mq-opts"><button class="mq-opt" onclick="mq(this,'wrong')">Royal blue</button>
+<button class="mq-opt" onclick="mq(this,'correct')">Tyrian purple</button>
+<button class="mq-opt" onclick="mq(this,'wrong')">Crimson red</button></div></div><div class="mini-quiz-q"><div class="mq-text">B. Why was the city of Tyre famous for its smell?</div><div class="mq-opts"><button class="mq-opt" onclick="mq(this,'wrong')">Because of its cedar wood warehouses</button>
+<button class="mq-opt" onclick="mq(this,'correct')">Because thousands of rotting murex snails were used to make dye</button>
+<button class="mq-opt" onclick="mq(this,'wrong')">Because of the fish market near the harbour</button></div></div><div class="mini-quiz-q"><div class="mq-text">C. In Rome, who was allowed to wear purple?</div><div class="mq-opts"><button class="mq-opt" onclick="mq(this,'wrong')">Any wealthy citizen</button>
+<button class="mq-opt" onclick="mq(this,'correct')">Only the Emperor — others could be executed for wearing it</button>
+<button class="mq-opt" onclick="mq(this,'wrong')">Soldiers and generals</button></div></div>
+  <div class="lesson-nav">
+    <a class="nav-btn" href="ch15-d.html"><i class="ti ti-arrow-left"></i> Lesson 15D</a>
+    <a class="nav-btn primary" href="ch15-f.html">Next: Lesson 15F — Phoenician Colonies <i class="ti ti-arrow-right"></i></a>
+  </div>
+</section>
+</main>
 <footer class="site-footer"><strong>Lexilink Ideation IELTS STUDIO</strong> · History ESL Course · Chapter 15 — Lesson E</footer>
 <script>
-  function showTab(idx,btn){document.querySelectorAll('.section').forEach((s,i)=>s.classList.toggle('active',i===idx));document.querySelectorAll('.tab-btn').forEach(b=>b.classList.remove('active'));btn.classList.add('active');window.scrollTo({top:0,behavior:'smooth'});}
-  function toggleVocab(card){card.classList.toggle('open');}
-  function checkQ(name,correct,btn){const sel=document.querySelector('input[name="'+name+'"]:checked');const fb=btn.nextElementSibling;if(!sel){fb.textContent='Please choose an answer first.';fb.className='feedback wrong';return;}if(sel.value===correct){fb.textContent='✅ Correct! Well done.';fb.className='feedback correct';}else{fb.textContent='❌ Not quite. Read the story again and try once more.';fb.className='feedback wrong';}}
-  function checkFill(btn,answer){const input=btn.previousElementSibling;const fb=btn.nextElementSibling;const val=input.value.trim().toLowerCase().replace(/[.,!?]/g,'');const ans=answer.toLowerCase();if(val===ans||val.includes(ans.split(' ')[0])){fb.textContent='✅ Correct!';fb.className='builder-feedback show';}else{fb.textContent='❌ Try again. The answer is "'+answer+'"';fb.className='builder-feedback show';fb.style.background='var(--red-light)';fb.style.color='var(--red)';}}
-  function revealFill(btn,answer){const fb=btn.nextElementSibling;fb.textContent='✅ Model answer: "'+answer+'"';fb.className='builder-feedback show';}
+function toggleVocab(card){card.classList.toggle('open');}
+function mcq(btn,type){
+  const item=btn.closest('.q-item');
+  item.querySelectorAll('.q-opt').forEach(b=>{b.classList.remove('correct','wrong');b.disabled=true;});
+  btn.classList.add(type);
+  const fb=item.querySelector('.q-feedback');
+  fb.className='q-feedback show '+(type==='correct'?'good':'bad');
+  fb.textContent=type==='correct'?'✓ Correct! Well done!':'✗ Not quite. Try to remember the story.';
+}
+function tf(btn,type,msg){
+  const item=btn.closest('.q-item');
+  item.querySelectorAll('.tf-btn').forEach(b=>{b.classList.remove('correct','wrong');b.disabled=true;});
+  btn.classList.add(type);
+  const fb=item.querySelector('.q-feedback');
+  fb.className='q-feedback show '+(type==='correct'?'good':'bad');
+  fb.textContent=(type==='correct'?'✓ ':'✗ ')+msg;
+}
+function mq(btn,type){
+  const item=btn.closest('.mini-quiz-q');
+  item.querySelectorAll('.mq-opt').forEach(b=>{b.classList.remove('correct','wrong');b.disabled=true;});
+  btn.classList.add(type);
+}
+function checkUnscramble(id,answer,rid){
+  const val=document.getElementById(id).value.trim().toLowerCase().replace(/[^a-z\s]/g,'');
+  const ans=answer.toLowerCase();
+  const r=document.getElementById(rid);
+  r.className='sb-result show '+(val===ans?'ok':'no');
+  r.textContent=val===ans?'✓ Perfect! "'+answer+'"':'✗ Try again. Check the word order.';
+}
+function checkFill(id,answer,rid){
+  const val=document.getElementById(id).value.trim().toLowerCase();
+  const r=document.getElementById(rid);
+  r.className='sb-result show '+(val===answer?'ok':'no');
+  r.textContent=val===answer?'✓ Correct!':'✗ The answer is: "'+answer+'"';
+}
+function scrollTo(id){document.getElementById(id).scrollIntoView({behavior:'smooth',block:'start'});}
+const parts=['p1','p2','p3','p4','p5','p6','p7','p8','p9','p10'];
+const partEls=document.querySelectorAll('.lp-part');
+window.addEventListener('scroll',()=>{
+  let current=0;
+  parts.forEach((id,i)=>{const el=document.getElementById(id);if(el&&el.getBoundingClientRect().top<200)current=i;});
+  partEls.forEach((el,i)=>{el.classList.remove('active','done');if(i<current)el.classList.add('done');else if(i===current)el.classList.add('active');});
+  const pct=Math.round(((current+1)/10)*100);
+  document.querySelector('.lp-fill').style.width=pct+'%';
+});
 </script>
-</body></html>
+</body>
+</html>

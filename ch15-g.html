@@ -1,248 +1,560 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1.0">
-  <title>Lesson 15G — The Story of Dido | Lexilink History Workshop</title>
-  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;600;700&family=Noto+Sans+SC&display=swap" rel="stylesheet">
-  <style>*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}:root{--navy:#1a2744;--blue:#2563eb;--blue-light:#dbeafe;--gold:#f59e0b;--gold-light:#fef3c7;--green:#16a34a;--green-light:#dcfce7;--red:#dc2626;--red-light:#fee2e2;--gray:#6b7280;--gray-light:#f3f4f6;--radius:12px;--shadow:0 2px 12px rgba(0,0,0,.08)}body{font-family:'Noto Sans','Noto Sans SC',sans-serif;background:#f8fafc;color:#1e293b;line-height:1.7}nav{background:var(--navy);padding:0 24px;display:flex;align-items:center;gap:16px;height:52px}nav a{color:#cbd5e1;text-decoration:none;font-size:.85rem;font-weight:600}nav a:hover{color:#fff}nav .sep{color:#475569}.lesson-header{background:var(--navy);color:#fff;padding:32px 24px 28px}.lesson-meta{font-size:.8rem;color:#94a3b8;text-transform:uppercase;letter-spacing:.08em;margin-bottom:6px}.lesson-chapter{font-size:.9rem;color:#7dd3fc;margin-bottom:14px}.lesson-header h1{font-size:1.9rem;font-weight:700;margin-bottom:8px}.lesson-subtitle{color:#cbd5e1;font-size:1rem;margin-bottom:16px}.lesson-tags{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:14px}.tag{background:rgba(255,255,255,.12);border-radius:20px;padding:4px 12px;font-size:.78rem;color:#e2e8f0}.lesson-progress{font-size:.82rem;color:#94a3b8}.tabs-bar{background:#fff;border-bottom:2px solid #e2e8f0;overflow-x:auto;white-space:nowrap;padding:0 16px;position:sticky;top:0;z-index:10;box-shadow:0 2px 8px rgba(0,0,0,.06)}.tab-btn{display:inline-block;padding:14px 14px 12px;cursor:pointer;font-size:.82rem;font-weight:600;color:var(--gray);border-bottom:3px solid transparent;margin-bottom:-2px;background:none;border-top:none;border-left:none;border-right:none;white-space:nowrap}.tab-btn:hover{color:var(--blue)}.tab-btn.active{color:var(--blue);border-bottom-color:var(--blue)}.tab-num{display:inline-flex;align-items:center;justify-content:center;width:20px;height:20px;background:var(--gray-light);border-radius:50%;font-size:.72rem;font-weight:700;margin-right:5px}.tab-btn.active .tab-num{background:var(--blue);color:#fff}.section{display:none;max-width:780px;margin:0 auto;padding:32px 20px}.section.active{display:block}.section-title{font-size:1.3rem;font-weight:700;color:var(--navy);margin-bottom:6px}.section-subtitle{color:var(--gray);font-size:.88rem;margin-bottom:24px}.vocab-grid{display:grid;gap:12px}.vocab-card{background:#fff;border-radius:var(--radius);box-shadow:var(--shadow);border:1px solid #e2e8f0;overflow:hidden;cursor:pointer}.vocab-card-header{display:flex;align-items:center;gap:12px;padding:16px 20px}.vocab-word{font-size:1.1rem;font-weight:700;color:var(--navy)}.vocab-pos{font-size:.75rem;color:var(--gray);background:var(--gray-light);border-radius:4px;padding:2px 7px}.vocab-pron{font-size:.82rem;color:var(--blue);margin-left:auto;font-style:italic}.vocab-expand{width:24px;height:24px;border-radius:50%;background:var(--blue-light);color:var(--blue);display:flex;align-items:center;justify-content:center;font-size:.9rem;flex-shrink:0;transition:transform .3s}.vocab-card.open .vocab-expand{transform:rotate(180deg)}.vocab-body{display:none;padding:0 20px 18px;border-top:1px solid #f1f5f9}.vocab-card.open .vocab-body{display:block}.vocab-zh{font-size:1rem;color:var(--navy);font-weight:600;margin:10px 0 4px}.vocab-def{color:#374151;font-size:.9rem;margin-bottom:8px}.vocab-example{color:var(--gray);font-size:.85rem;font-style:italic;border-left:3px solid var(--blue-light);padding-left:10px}.story-card{background:#fff;border-radius:var(--radius);box-shadow:var(--shadow);padding:28px;line-height:1.9;font-size:.97rem}.story-card p{margin-bottom:16px}.story-card p:last-child{margin-bottom:0}.story-emoji{font-size:2rem;display:block;margin-bottom:12px}.story-card strong{color:var(--navy)}.question-card{background:#fff;border-radius:var(--radius);box-shadow:var(--shadow);padding:20px 22px;margin-bottom:16px}.question-text{font-weight:600;color:var(--navy);margin-bottom:14px}.q-num{display:inline-flex;align-items:center;justify-content:center;width:26px;height:26px;background:var(--blue);color:#fff;border-radius:50%;font-size:.8rem;font-weight:700;margin-right:8px;flex-shrink:0}.options label{display:flex;align-items:flex-start;gap:10px;padding:10px 12px;margin-bottom:8px;border-radius:8px;border:2px solid #e2e8f0;cursor:pointer;font-size:.9rem;transition:border-color .2s,background .2s}.options label:hover{border-color:var(--blue);background:var(--blue-light)}.options input[type=radio]{margin-top:3px;flex-shrink:0}.check-btn{margin-top:10px;background:var(--blue);color:#fff;border:none;padding:8px 18px;border-radius:8px;cursor:pointer;font-size:.85rem;font-weight:600}.check-btn:hover{background:#1d4ed8}.feedback{display:none;margin-top:8px;padding:8px 12px;border-radius:8px;font-size:.85rem;font-weight:600}.feedback.correct{background:var(--green-light);color:var(--green);display:block}.feedback.wrong{background:var(--red-light);color:var(--red);display:block}.grammar-block{background:#fff;border-radius:var(--radius);box-shadow:var(--shadow);padding:22px 24px;margin-bottom:18px}.grammar-label{display:inline-block;background:var(--navy);color:#fff;font-size:.75rem;font-weight:700;padding:3px 10px;border-radius:4px;margin-bottom:12px}.grammar-title{font-size:1rem;font-weight:700;color:var(--navy);margin-bottom:12px}.grammar-table{width:100%;border-collapse:collapse;font-size:.88rem;margin:12px 0}.grammar-table th{background:var(--navy);color:#fff;padding:8px 12px;text-align:left;font-weight:600}.grammar-table td{padding:8px 12px;border-bottom:1px solid #e2e8f0}.grammar-table tr:nth-child(even) td{background:var(--gray-light)}.grammar-example{background:var(--blue-light);border-left:4px solid var(--blue);border-radius:6px;padding:10px 14px;font-size:.9rem;margin:8px 0;color:var(--navy)}.grammar-note{color:var(--gray);font-size:.85rem;margin-top:10px;font-style:italic}.builder-card{background:#fff;border-radius:var(--radius);box-shadow:var(--shadow);padding:20px 22px;margin-bottom:16px}.builder-label{font-size:.78rem;font-weight:700;color:var(--blue);text-transform:uppercase;letter-spacing:.06em;margin-bottom:8px}.builder-prompt{font-size:.92rem;color:var(--navy);margin-bottom:12px;font-weight:500}.builder-input{width:100%;border:2px solid #e2e8f0;border-radius:8px;padding:10px 12px;font-size:.9rem;font-family:inherit;resize:vertical;transition:border-color .2s}.builder-input:focus{outline:none;border-color:var(--blue)}.builder-check{margin-top:8px;background:var(--blue);color:#fff;border:none;padding:8px 16px;border-radius:8px;cursor:pointer;font-size:.85rem;font-weight:600}.builder-check:hover{background:#1d4ed8}.builder-feedback{display:none;margin-top:8px;padding:8px 12px;border-radius:8px;font-size:.85rem}.builder-feedback.show{display:block;background:var(--green-light);color:var(--green);font-weight:600}.speaking-level{display:inline-flex;align-items:center;gap:6px;font-size:.8rem;font-weight:700;padding:4px 12px;border-radius:20px;margin-bottom:14px}.level-1{background:#dcfce7;color:#15803d}.level-2{background:#fef9c3;color:#a16207}.level-3{background:#dbeafe;color:#1d4ed8}.speaking-question{background:#fff;border-radius:var(--radius);box-shadow:var(--shadow);padding:18px 22px;margin-bottom:14px;border-left:4px solid var(--blue)}.speaking-q{font-weight:600;color:var(--navy);margin-bottom:8px}.speaking-hint{font-size:.83rem;color:var(--gray)}.speaking-hint span{color:var(--blue);font-style:italic}.idea-card{background:#fff;border-radius:var(--radius);box-shadow:var(--shadow);padding:20px 22px;margin-bottom:14px;border-top:4px solid var(--gold)}.idea-emoji{font-size:1.4rem;display:block;margin-bottom:8px}.idea-card p{font-size:.9rem;color:#374151;line-height:1.75}.idea-card strong{color:var(--navy)}.ielts-banner{background:var(--navy);border-radius:var(--radius);padding:20px 24px;color:#fff;margin-bottom:20px}.ielts-banner h4{font-size:1rem;margin-bottom:8px;color:#7dd3fc}.ielts-banner p{font-size:.88rem;color:#cbd5e1}.vocab-tags{display:flex;flex-wrap:wrap;gap:8px;margin-top:12px}.vocab-tag{background:rgba(255,255,255,.12);border-radius:6px;padding:4px 10px;font-size:.8rem;color:#e2e8f0}.colloc-list{list-style:none;margin:12px 0 0}.colloc-list li{font-size:.88rem;color:#cbd5e1;padding:3px 0}.colloc-list li::before{content:"→ ";color:#7dd3fc}.ielts-q{background:#fff;border-radius:var(--radius);padding:14px 18px;margin-bottom:10px;font-size:.88rem;color:var(--navy);box-shadow:var(--shadow)}.ielts-q .ielts-num{font-weight:700;color:var(--blue);margin-right:6px}.ielts-writing{background:var(--gold-light);border-radius:var(--radius);padding:18px 20px;border-left:4px solid var(--gold);margin-top:16px}.ielts-writing h5{font-size:.85rem;font-weight:700;color:#92400e;text-transform:uppercase;letter-spacing:.05em;margin-bottom:8px}.ielts-writing p{font-size:.9rem;color:#78350f;font-style:italic}.star-words{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:20px}.star-word{background:var(--gold-light);color:#92400e;border-radius:20px;padding:5px 14px;font-size:.85rem;font-weight:600}.big-idea{background:var(--blue-light);border-radius:var(--radius);padding:18px 20px;margin-bottom:20px;border-left:4px solid var(--blue)}.big-idea p{font-size:.92rem;color:var(--navy)}.mini-quiz-card{background:#fff;border-radius:var(--radius);box-shadow:var(--shadow);padding:20px 22px;margin-bottom:14px}.lesson-nav{max-width:780px;margin:0 auto;padding:24px 20px 40px;display:flex;justify-content:space-between;align-items:center;gap:12px;flex-wrap:wrap}.lesson-nav a{text-decoration:none;padding:10px 20px;border-radius:10px;font-size:.88rem;font-weight:600;transition:all .2s}.nav-prev{background:var(--gray-light);color:var(--navy)}.nav-prev:hover{background:#e2e8f0}.nav-next{background:var(--blue);color:#fff}.nav-next:hover{background:#1d4ed8}.site-footer{background:var(--navy);color:#94a3b8;text-align:center;padding:16px;font-size:.8rem}.review-summary{background:var(--navy);color:#fff;border-radius:var(--radius);padding:22px 24px;margin-bottom:20px}.review-summary h4{color:#7dd3fc;margin-bottom:12px}.review-summary p{color:#cbd5e1;font-size:.9rem;line-height:1.75;margin-bottom:8px}.project-steps{list-style:none;counter-reset:steps;display:grid;gap:12px;margin:16px 0}.project-steps li{counter-increment:steps;background:#fff;border-radius:12px;box-shadow:var(--shadow);padding:14px 14px 14px 56px;position:relative;font-size:.9rem;color:#374151}.project-steps li::before{content:counter(steps);position:absolute;left:14px;top:14px;width:28px;height:28px;background:var(--blue);color:#fff;border-radius:50%;display:flex;align-items:center;justify-content:center;font-weight:700;font-size:.85rem}</style>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+<title>Lesson 15G — The Story of Dido | Lexilink History Workshop</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"/>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet"/>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@latest/tabler-icons.min.css"/>
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
+:root{
+  --bg:#0F0800;--surface:rgba(255,255,255,0.04);--surface2:rgba(255,255,255,0.07);
+  --border:rgba(255,255,255,0.10);--border2:rgba(255,255,255,0.06);
+  --amber-300:#E8A832;--amber-400:#D4890F;--amber-500:#B8720A;
+  --amber-bg:rgba(212,137,15,0.12);--amber-border:rgba(212,137,15,0.3);
+  --text:#fff;--text2:rgba(255,255,255,0.72);--text3:rgba(255,255,255,0.45);
+  --teal:#1D9E75;--teal-bg:rgba(29,158,117,0.12);--teal-border:rgba(29,158,117,0.3);
+  --coral:#E05C3A;--coral-bg:rgba(224,92,58,0.12);
+  --blue:#4A9EE0;--blue-bg:rgba(74,158,224,0.12);
+  --r:12px;--r-sm:8px;
+}
+html{scroll-behavior:smooth;}
+body{font-family:'Inter',sans-serif;background:var(--bg);color:var(--text);min-height:100vh;line-height:1.6;}
+.site-header{background:#111;border-bottom:1px solid rgba(255,255,255,0.08);position:sticky;top:0;z-index:100;}
+.hdr{max-width:860px;margin:0 auto;padding:0 1.5rem;height:54px;display:flex;align-items:center;gap:12px;}
+.logo-wrap{display:flex;align-items:center;gap:8px;text-decoration:none;}
+.logo-icon{width:30px;height:30px;display:flex;align-items:center;justify-content:center;}
+.logo-icon svg{width:26px;height:26px;}
+.logo-name{font-size:13px;font-weight:700;color:#fff;}
+.hdr-pipe{width:1px;height:20px;background:rgba(255,255,255,0.15);}
+.hdr-back{display:flex;align-items:center;gap:5px;font-size:12px;color:var(--text3);text-decoration:none;transition:color .15s;}
+.hdr-back:hover{color:var(--text2);}
+.hdr-spacer{flex:1;}
+.hdr-badge{font-size:10px;font-weight:700;letter-spacing:.05em;padding:3px 10px;border-radius:99px;border:1px solid var(--amber-border);color:var(--amber-300);background:var(--amber-bg);}
+.lesson-hero{background:linear-gradient(135deg,#2C1600 0%,#5C3200 40%,#7A4500 100%);padding:3rem 1.5rem 2.5rem;text-align:center;position:relative;overflow:hidden;}
+.lesson-hero::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse 70% 60% at 50% 50%,rgba(200,130,0,0.15),transparent);pointer-events:none;}
+.lesson-eyebrow{font-size:10px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--amber-300);margin-bottom:.75rem;}
+.lesson-hero h1{font-size:clamp(22px,4vw,36px);font-weight:700;color:#fff;letter-spacing:-.02em;margin-bottom:.5rem;}
+.lesson-hero p{font-size:14px;color:rgba(255,255,255,0.65);max-width:520px;margin:0 auto .875rem;}
+.lesson-pills{display:flex;flex-wrap:wrap;justify-content:center;gap:8px;}
+.l-pill{font-size:11px;font-weight:500;padding:4px 12px;border-radius:99px;border:1px solid rgba(255,255,255,0.18);color:rgba(255,255,255,0.75);background:rgba(255,255,255,0.06);}
+.lesson-progress{background:#1A1100;border-bottom:1px solid rgba(255,255,255,0.06);padding:.75rem 1.5rem;}
+.lp-inner{max-width:860px;margin:0 auto;}
+.lp-labels{display:flex;justify-content:space-between;font-size:11px;color:var(--text3);margin-bottom:6px;}
+.lp-track{height:4px;border-radius:99px;background:rgba(255,255,255,0.08);}
+.lp-fill{height:100%;border-radius:99px;background:linear-gradient(90deg,var(--amber-500),var(--amber-300));width:10%;}
+.lp-parts{display:flex;gap:4px;margin-top:8px;flex-wrap:wrap;}
+.lp-part{font-size:10px;font-weight:600;padding:2px 8px;border-radius:99px;background:rgba(255,255,255,0.06);color:var(--text3);cursor:pointer;transition:all .15s;}
+.lp-part.done{background:var(--amber-bg);color:var(--amber-300);border:1px solid var(--amber-border);}
+.lp-part.active{background:var(--amber-400);color:#1A0800;}
+.main{max-width:860px;margin:0 auto;padding:2rem 1.5rem 5rem;}
+.sec{background:var(--surface);border:1px solid var(--border);border-radius:var(--r);padding:1.5rem;margin-bottom:1.5rem;scroll-margin-top:80px;}
+.sec-header{display:flex;align-items:center;gap:10px;margin-bottom:1.25rem;}
+.sec-num{width:28px;height:28px;border-radius:8px;display:flex;align-items:center;justify-content:center;font-size:11px;font-weight:700;background:var(--amber-bg);color:var(--amber-300);border:1px solid var(--amber-border);flex-shrink:0;}
+.sec-title{font-size:16px;font-weight:700;color:#fff;}
+.sec-sub{font-size:12px;color:var(--text3);margin-top:1px;}
+.vocab-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(240px,1fr));gap:10px;}
+.vocab-card{background:var(--surface2);border:1px solid var(--border2);border-radius:var(--r-sm);padding:1rem;cursor:pointer;transition:border-color .15s;}
+.vocab-card:hover,.vocab-card.open{border-color:var(--amber-border);}
+.vc-top{display:flex;align-items:baseline;gap:8px;}
+.vc-word{font-size:16px;font-weight:700;color:#fff;}
+.vc-pos{font-size:10px;font-weight:600;padding:1px 7px;border-radius:99px;background:var(--amber-bg);color:var(--amber-300);}
+.vc-pron{font-size:12px;color:var(--text3);margin-top:2px;font-style:italic;}
+.vc-cn{font-size:15px;color:var(--amber-300);margin-top:4px;font-weight:600;}
+.vc-detail{display:none;margin-top:10px;padding-top:10px;border-top:1px solid var(--border2);}
+.vocab-card.open .vc-detail{display:block;}
+.vc-def{font-size:13px;color:var(--text2);margin-bottom:6px;}
+.vc-ex{font-size:12px;color:var(--text3);font-style:italic;padding-left:8px;border-left:2px solid var(--amber-border);}
+.story-body p{font-size:15px;color:var(--text2);line-height:1.8;margin-bottom:1rem;}
+.story-body p:last-child{margin-bottom:0;}
+.story-hl{color:var(--amber-300);font-weight:600;}
+.story-box{background:var(--amber-bg);border:1px solid var(--amber-border);border-radius:var(--r-sm);padding:1rem 1.25rem;margin:1.25rem 0;font-size:14px;color:rgba(255,255,255,0.85);line-height:1.7;font-style:italic;}
+.story-box::before{content:'"';font-size:32px;color:var(--amber-400);line-height:1;display:block;margin-bottom:.25rem;}
+.story-icon{font-size:40px;text-align:center;margin:1rem 0;}
+.quiz-list{display:flex;flex-direction:column;gap:14px;}
+.q-item{background:var(--surface2);border:1px solid var(--border2);border-radius:var(--r-sm);padding:1rem 1.25rem;}
+.q-text{font-size:14px;font-weight:600;color:#fff;margin-bottom:.75rem;}
+.q-opts{display:flex;flex-direction:column;gap:6px;}
+.q-opt{display:flex;align-items:center;gap:10px;padding:8px 12px;border-radius:8px;border:1px solid var(--border);background:transparent;cursor:pointer;font-size:13px;color:var(--text2);width:100%;text-align:left;transition:all .15s;}
+.q-opt:hover{border-color:var(--amber-border);background:var(--amber-bg);}
+.q-opt.correct{border-color:var(--teal-border);background:var(--teal-bg);color:#fff;}
+.q-opt.wrong{border-color:rgba(224,92,58,0.4);background:var(--coral-bg);color:#fff;}
+.q-feedback{font-size:12px;margin-top:8px;padding:6px 10px;border-radius:6px;display:none;}
+.q-feedback.show{display:block;}
+.q-feedback.good{background:var(--teal-bg);color:#5DCAA5;}
+.q-feedback.bad{background:var(--coral-bg);color:#F09B80;}
+.tf-opts{display:flex;gap:8px;}
+.tf-btn{flex:1;padding:8px;border-radius:8px;border:1px solid var(--border);background:transparent;cursor:pointer;font-size:13px;font-weight:600;color:var(--text2);transition:all .15s;}
+.tf-btn:hover{border-color:var(--amber-border);background:var(--amber-bg);}
+.tf-btn.correct{border-color:var(--teal-border);background:var(--teal-bg);color:#fff;}
+.tf-btn.wrong{border-color:rgba(224,92,58,0.4);background:var(--coral-bg);color:#fff;}
+.grammar-box{background:var(--surface2);border-left:3px solid var(--amber-400);border-radius:0 var(--r-sm) var(--r-sm) 0;padding:1rem 1.25rem;margin-bottom:1rem;}
+.grammar-label{font-size:10px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--amber-300);margin-bottom:.5rem;}
+.grammar-rule{font-size:14px;color:#fff;font-weight:600;margin-bottom:.5rem;}
+.grammar-eg{font-size:13px;color:var(--text2);margin-top:.25rem;font-style:italic;}
+.grammar-eg span{color:var(--amber-300);font-weight:600;font-style:normal;}
+.grammar-table{width:100%;border-collapse:collapse;font-size:13px;margin-top:.75rem;}
+.grammar-table th{text-align:left;padding:6px 10px;font-size:10px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;color:var(--text3);border-bottom:1px solid var(--border);}
+.grammar-table td{padding:7px 10px;color:var(--text2);border-bottom:1px solid var(--border2);}
+.grammar-table td:first-child{color:#fff;font-weight:500;}
+.hl{color:var(--amber-300);font-weight:600;}
+.sb-activity{margin-bottom:1.25rem;}
+.sb-label{font-size:11px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;color:var(--amber-300);margin-bottom:.75rem;}
+.sb-input{width:100%;background:var(--surface2);border:1px solid var(--border);border-radius:var(--r-sm);padding:.625rem .875rem;font-size:14px;color:#fff;font-family:'Inter',sans-serif;transition:border-color .15s;outline:none;margin-bottom:.5rem;}
+.sb-input:focus{border-color:var(--amber-border);}
+.sb-check{padding:7px 18px;border-radius:99px;background:var(--amber-400);color:#1A0800;font-size:13px;font-weight:700;border:none;cursor:pointer;transition:opacity .15s;}
+.sb-check:hover{opacity:.85;}
+.sb-result{font-size:12px;margin-top:6px;padding:6px 10px;border-radius:6px;display:none;}
+.sb-result.show{display:block;}
+.sb-result.ok{background:var(--teal-bg);color:#5DCAA5;}
+.sb-result.no{background:var(--coral-bg);color:#F09B80;}
+.speak-level{margin-bottom:1.25rem;}
+.speak-badge{display:inline-flex;align-items:center;gap:6px;font-size:11px;font-weight:700;padding:3px 12px;border-radius:99px;margin-bottom:.875rem;}
+.speak-badge.l1{background:var(--teal-bg);color:#5DCAA5;border:1px solid var(--teal-border);}
+.speak-badge.l2{background:var(--amber-bg);color:var(--amber-300);border:1px solid var(--amber-border);}
+.speak-badge.l3{background:var(--blue-bg);color:var(--blue);border:1px solid rgba(74,158,224,0.3);}
+.speak-q{background:var(--surface2);border:1px solid var(--border2);border-radius:var(--r-sm);padding:1rem 1.25rem;margin-bottom:.75rem;}
+.speak-q p{font-size:14px;font-weight:600;color:#fff;margin-bottom:.5rem;}
+.speak-hint{font-size:12px;color:var(--text3);}
+.speak-hint span{color:var(--amber-300);}
+.idea-q{background:var(--surface2);border:1px solid var(--border2);border-radius:var(--r-sm);padding:1rem 1.25rem;margin-bottom:.75rem;display:flex;gap:10px;}
+.idea-icon{font-size:20px;flex-shrink:0;margin-top:2px;}
+.idea-text{font-size:14px;color:var(--text2);line-height:1.6;}
+.idea-text strong{color:#fff;}
+.ielts-topic{background:var(--blue-bg);border:1px solid rgba(74,158,224,0.25);border-radius:var(--r-sm);padding:1rem 1.25rem;margin-bottom:1.25rem;}
+.ielts-topic-label{font-size:10px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--blue);margin-bottom:.25rem;}
+.ielts-topic h4{font-size:16px;font-weight:700;color:#fff;}
+.vocab-chips{display:flex;flex-wrap:wrap;gap:6px;margin-top:.75rem;}
+.chip{font-size:12px;padding:4px 12px;border-radius:99px;background:rgba(255,255,255,0.06);border:1px solid var(--border);color:var(--text2);}
+.chip.amber{background:var(--amber-bg);border-color:var(--amber-border);color:var(--amber-300);}
+.ielts-qs{display:flex;flex-direction:column;gap:8px;margin-top:1rem;}
+.ielts-q{display:flex;gap:10px;background:var(--surface2);border-radius:var(--r-sm);padding:.875rem 1rem;}
+.ielts-q-num{font-size:11px;font-weight:700;color:var(--blue);min-width:20px;}
+.ielts-q-text{font-size:13px;color:var(--text2);}
+.ielts-w2{background:rgba(74,158,224,0.08);border:1px solid rgba(74,158,224,0.2);border-radius:var(--r-sm);padding:1rem 1.25rem;margin-top:1rem;}
+.ielts-w2-label{font-size:10px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--blue);margin-bottom:.5rem;}
+.ielts-w2 p{font-size:14px;color:var(--text2);line-height:1.7;font-style:italic;}
+.star-words{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:1.25rem;}
+.star-word{display:flex;align-items:center;gap:6px;padding:6px 14px;border-radius:99px;background:var(--amber-bg);border:1px solid var(--amber-border);font-size:13px;font-weight:600;color:var(--amber-300);}
+.think-box{background:var(--surface2);border:1px solid var(--border2);border-radius:var(--r-sm);padding:1rem 1.25rem;margin-bottom:1rem;}
+.think-box .think-head{font-size:12px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;color:var(--amber-300);margin-bottom:.5rem;}
+.think-box p{font-size:14px;color:var(--text2);}
+.mini-quiz-q{background:var(--surface2);border:1px solid var(--border2);border-radius:var(--r-sm);padding:1rem;margin-bottom:.75rem;}
+.mq-text{font-size:13px;font-weight:600;color:#fff;margin-bottom:.625rem;}
+.mq-opts{display:flex;flex-direction:column;gap:5px;}
+.mq-opt{padding:7px 12px;border-radius:6px;border:1px solid var(--border);background:transparent;font-size:12px;color:var(--text2);cursor:pointer;text-align:left;transition:all .15s;}
+.mq-opt:hover{border-color:var(--amber-border);background:var(--amber-bg);}
+.mq-opt.correct{border-color:var(--teal-border);background:var(--teal-bg);color:#fff;}
+.mq-opt.wrong{border-color:rgba(224,92,58,0.4);background:var(--coral-bg);color:#fff;}
+.lesson-nav{display:flex;gap:10px;margin-top:2rem;}
+.nav-btn{display:flex;align-items:center;gap:6px;padding:.75rem 1.25rem;border-radius:10px;font-size:13px;font-weight:600;cursor:pointer;text-decoration:none;border:1px solid var(--border);color:var(--text2);background:var(--surface);transition:all .15s;flex:1;justify-content:center;}
+.nav-btn:hover{border-color:var(--border2);color:#fff;}
+.nav-btn.primary{background:var(--amber-400);color:#1A0800;border-color:transparent;}
+.nav-btn.primary:hover{opacity:.9;}
+.site-footer{background:#111;border-top:1px solid rgba(255,255,255,0.07);text-align:center;padding:1.5rem;font-size:12px;color:rgba(255,255,255,0.3);}
+.site-footer strong{color:var(--amber-300);}
+@media(max-width:600px){.vocab-grid{grid-template-columns:1fr;}.lesson-nav{flex-direction:column;}}
+</style>
 </head>
 <body>
-<nav><a href="https://lexilink-ideation.github.io/index.html">Lexilink Ideation IELTS STUDIO</a><span class="sep">·</span><a href="https://lexilink-ideation.github.io/index.html">Vol. 1</a></nav>
-<div class="lesson-header">
-  <div class="lesson-meta">Lesson 15G</div>
-  <div class="lesson-chapter">Chapter 15 · The Phoenicians</div>
+<header class="site-header">
+  <div class="hdr">
+    <a class="logo-wrap" href="index.html">
+      <div class="logo-icon"><svg viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+          <path d="M6 24 C8 18,14 10,24 6 C20 10,18 14,20 18 C16 16,12 18,6 24Z" fill="white"/>
+          <path d="M20 18 C22 20,22 23,20 26 C18 24,18 21,20 18Z" fill="rgba(255,255,255,0.5)"/>
+        </svg></div>
+      <span class="logo-name">Lexilink Ideation IELTS STUDIO</span>
+    </a>
+    <div class="hdr-pipe"></div>
+    <a class="hdr-back" href="index.html"><i class="ti ti-arrow-left" aria-hidden="true"></i> Vol. 1</a>
+    <div class="hdr-spacer"></div>
+    <span class="hdr-badge">Lesson 15G</span>
+  </div>
+</header>
+<section class="lesson-hero">
+  <p class="lesson-eyebrow">Chapter 15 · The Phoenicians</p>
   <h1>The Story of Dido</h1>
-  <p class="lesson-subtitle">A princess, a bull's hide, and the founding of Carthage — plus Chapter 15 Review</p>
-  <div class="lesson-tags"><span class="tag">📖 Story + Vocabulary</span><span class="tag">🎤 Speaking</span><span class="tag">✏️ Grammar</span><span class="tag">⭐ CEFR B1</span></div>
-  <div class="lesson-progress">Lesson 15G of 7 &nbsp;·&nbsp; Part 1 of 10</div>
-</div>
-<div class="tabs-bar"><button class="tab-btn active" onclick="showTab(0,this)"><span class="tab-num">1</span>Vocab</button>
-  <button class="tab-btn" onclick="showTab(1,this)"><span class="tab-num">2</span>Story</button>
-  <button class="tab-btn" onclick="showTab(2,this)"><span class="tab-num">3</span>Reading</button>
-  <button class="tab-btn" onclick="showTab(3,this)"><span class="tab-num">4</span>Grammar</button>
-  <button class="tab-btn" onclick="showTab(4,this)"><span class="tab-num">5</span>Builder</button>
-  <button class="tab-btn" onclick="showTab(5,this)"><span class="tab-num">6</span>Speaking 1</button>
-  <button class="tab-btn" onclick="showTab(6,this)"><span class="tab-num">7</span>Speaking 2</button>
-  <button class="tab-btn" onclick="showTab(7,this)"><span class="tab-num">8</span>Ideas</button>
-  <button class="tab-btn" onclick="showTab(8,this)"><span class="tab-num">9</span>IELTS</button>
-  <button class="tab-btn" onclick="showTab(9,this)"><span class="tab-num">10</span>Review</button></div>
-
-<!-- 1: VOCAB -->
-<div class="section active" id="sec-0">
-  <div class="section-title">1 — Vocabulary</div>
-  <div class="section-subtitle">Click each word to learn more</div>
-  <div class="vocab-grid">
-    <div class="vocab-card" onclick="toggleVocab(this)"><div class="vocab-card-header"><span class="vocab-word">jealous</span><span class="vocab-pos">adjective</span><span class="vocab-pron">/ˈdʒel.əs/</span><div class="vocab-expand">▼</div></div><div class="vocab-body"><div class="vocab-zh">嫉妒的；妒忌的</div><div class="vocab-def">Unhappy and angry because someone else has something you want, or because you fear losing something important.</div><div class="vocab-example">"Dido's brother was jealous of her and her husband's wealth."</div></div></div>
-    <div class="vocab-card" onclick="toggleVocab(this)"><div class="vocab-card-header"><span class="vocab-word">exile</span><span class="vocab-pos">noun / verb</span><span class="vocab-pron">/ˈek.saɪl/</span><div class="vocab-expand">▼</div></div><div class="vocab-body"><div class="vocab-zh">流放；放逐；流亡者</div><div class="vocab-def">The state of being forced to leave your home country or city; a person forced into this situation.</div><div class="vocab-example">"Dido left Tyre in the middle of the night and went into exile, never to return."</div></div></div>
-    <div class="vocab-card" onclick="toggleVocab(this)"><div class="vocab-card-header"><span class="vocab-word">determined</span><span class="vocab-pos">adjective</span><span class="vocab-pron">/dɪˈtɜː.mɪnd/</span><div class="vocab-expand">▼</div></div><div class="vocab-body"><div class="vocab-zh">坚定的；下定决心的</div><div class="vocab-def">Having a strong decision to do something, even when it is difficult.</div><div class="vocab-example">"Dido was determined to build her city on that very spot, despite all difficulties."</div></div></div>
-    <div class="vocab-card" onclick="toggleVocab(this)"><div class="vocab-card-header"><span class="vocab-word">outwit</span><span class="vocab-pos">verb</span><span class="vocab-pron">/ˌaʊtˈwɪt/</span><div class="vocab-expand">▼</div></div><div class="vocab-body"><div class="vocab-zh">智胜；以智谋胜过</div><div class="vocab-def">To defeat someone by being more clever or using a smart trick.</div><div class="vocab-example">"Dido outwitted the landowner by cutting the bull's hide into thin strips."</div></div></div>
-    <div class="vocab-card" onclick="toggleVocab(this)"><div class="vocab-card-header"><span class="vocab-word">strip</span><span class="vocab-pos">noun</span><span class="vocab-pron">/strɪp/</span><div class="vocab-expand">▼</div></div><div class="vocab-body"><div class="vocab-zh">细长的带子；条</div><div class="vocab-def">A long, narrow piece of material.</div><div class="vocab-example">"She cut the hide into hundreds of long, thin strips and laid them end to end."</div></div></div>
-    <div class="vocab-card" onclick="toggleVocab(this)"><div class="vocab-card-header"><span class="vocab-word">negotiate</span><span class="vocab-pos">verb</span><span class="vocab-pron">/nɪˈɡəʊ.ʃi.eɪt/</span><div class="vocab-expand">▼</div></div><div class="vocab-body"><div class="vocab-zh">谈判；协商</div><div class="vocab-def">To have formal discussions to reach an agreement.</div><div class="vocab-example">"Dido negotiated cleverly — she asked only for as much land as a bull's hide could cover."</div></div></div>
-    <div class="vocab-card" onclick="toggleVocab(this)"><div class="vocab-card-header"><span class="vocab-word">shrewdly</span><span class="vocab-pos">adverb</span><span class="vocab-pron">/ˈʃruːd.li/</span><div class="vocab-expand">▼</div></div><div class="vocab-body"><div class="vocab-zh">精明地；机智地</div><div class="vocab-def">In a clever and practical way, especially in business or difficult situations.</div><div class="vocab-example">"Dido shrewdly found a way to get much more land than the owner expected."</div></div></div>
-    <div class="vocab-card" onclick="toggleVocab(this)"><div class="vocab-card-header"><span class="vocab-word">refugee</span><span class="vocab-pos">noun</span><span class="vocab-pron">/ˌref.juˈdʒiː/</span><div class="vocab-expand">▼</div></div><div class="vocab-body"><div class="vocab-zh">难民；流亡者</div><div class="vocab-def">A person who has been forced to leave their country because of war, persecution, or disaster.</div><div class="vocab-example">"Dido and her friends were refugees — forced to leave their home city in fear for their lives."</div></div></div>
-    <div class="vocab-card" onclick="toggleVocab(this)"><div class="vocab-card-header"><span class="vocab-word">perseverance</span><span class="vocab-pos">noun</span><span class="vocab-pron">/ˌpɜː.sɪˈvɪər.əns/</span><div class="vocab-expand">▼</div></div><div class="vocab-body"><div class="vocab-zh">坚持；毅力</div><div class="vocab-def">The quality of continuing to try hard even when it is difficult.</div><div class="vocab-example">"Dido's perseverance in the face of tragedy and exile made her one of the great figures of ancient history."</div></div></div>
-    <div class="vocab-card" onclick="toggleVocab(this)"><div class="vocab-card-header"><span class="vocab-word">prosper</span><span class="vocab-pos">verb</span><span class="vocab-pron">/ˈprɒs.pər/</span><div class="vocab-expand">▼</div></div><div class="vocab-body"><div class="vocab-zh">繁荣；兴旺</div><div class="vocab-def">To be successful, especially in business; to grow and develop well.</div><div class="vocab-example">"Carthage prospered and grew from a tiny village into one of the most powerful cities in the world."</div></div></div>
+  <p>How a princess with nothing but her wit founded one of the greatest cities in history</p>
+  <div class="lesson-pills"><span class="l-pill">📖 Story + Vocabulary</span><span class="l-pill">🎤 Speaking</span><span class="l-pill">✏️ Grammar</span><span class="l-pill">⭐ Chapter Review</span></div>
+</section>
+<div class="lesson-progress">
+  <div class="lp-inner">
+    <div class="lp-labels"><span>Lesson 15G of 7</span><span style="color:var(--amber-300)">Part 1 of 10</span></div>
+    <div class="lp-track"><div class="lp-fill"></div></div>
+    <div class="lp-parts">
+      <span class="lp-part active" onclick="scrollTo('p1')">1 Vocab</span>
+      <span class="lp-part" onclick="scrollTo('p2')">2 Story</span>
+      <span class="lp-part" onclick="scrollTo('p3')">3 Reading</span>
+      <span class="lp-part" onclick="scrollTo('p4')">4 Grammar</span>
+      <span class="lp-part" onclick="scrollTo('p5')">5 Builder</span>
+      <span class="lp-part" onclick="scrollTo('p6')">6 Speaking 1</span>
+      <span class="lp-part" onclick="scrollTo('p7')">7 Speaking 2</span>
+      <span class="lp-part" onclick="scrollTo('p8')">8 Ideas</span>
+      <span class="lp-part" onclick="scrollTo('p9')">9 IELTS</span>
+      <span class="lp-part" onclick="scrollTo('p10')">10 Review</span>
+    </div>
   </div>
 </div>
-
-<!-- 2: STORY -->
-<div class="section" id="sec-1">
-  <div class="section-title">2 — The Story</div>
-  <div class="section-subtitle">Read carefully. Notice the bold words.</div>
-  <div class="story-card">
-    <span class="story-emoji">👑</span>
-    <p>The Phoenicians founded many colonies around the Mediterranean. But none became more famous than <strong>Carthage</strong>, on the coast of North Africa. And the legend of how Carthage was founded is one of the most clever stories of the ancient world — the story of Princess <strong>Dido</strong>.</p>
-    <p>Dido was a Phoenician princess, the sister of the king of Tyre. She should have been happy. She lived in a palace. She was married to a very wealthy man. But her brother, the king, was <strong>jealous</strong> of her husband's riches. He wanted all that money for himself. So one day, the king had Dido's husband arrested — and put to death.</p>
-    <p>Dido was terrified. She knew that she might be next. So in the middle of the night, she gathered her friends, her servants, and as many of her husband's treasures as she could carry. They crept quietly to the harbour, pushed their boats away from the shore, and sailed away into the darkness. They were <strong>refugees</strong> — people in <strong>exile</strong>, fleeing for their lives.</p>
-    <span class="story-emoji">⚓</span>
-    <p>Dido and her friends sailed for many days. Finally, they spotted land — the coast of North Africa. Dido looked at the harbour, the gentle hills, the position near the sea. "This is it," she said. "We will build our city here."</p>
-    <p>But when they came ashore, they found that the land was already owned. A local chief met them on the beach. He listened to their request and shook his head. "I will not sell you this land," he said.</p>
-    <p>Dido did not give up. She was <strong>determined</strong>. She thought quickly — and then she made a clever offer. "Will you sell me only as much land as can be covered by the skin of a single bull?" she asked. The chief thought about this. He imagined a bull's hide laid out flat on the ground — perhaps enough space for a small house. "Very well," he agreed, smiling. He thought he was getting the better of her.</p>
-    <span class="story-emoji">🐂</span>
-    <p>But Dido was far cleverer than he knew. She brought out a large bull's hide. Then she took a very sharp knife and began to cut. She cut the hide into hundreds of long, thin <strong>strips</strong>. Then she laid the strips end to end, in a great circle, around a large hill near the sea.</p>
-    <p>The chief stared. He had promised "as much land as a bull's hide could cover" — and Dido had <strong>shrewdly</strong>, legally covered an enormous amount of land. He had been <strong>outwitted</strong>. He had promised, and he could not take it back. He had to <strong>negotiate</strong> the deal as agreed.</p>
-    <p>Dido built a tower on the land and named it "Bull's Hide" in memory of her trick. She and her friends settled around the tower and named their city <strong>Carthage</strong>. And then something extraordinary happened: <strong>prosperity</strong>. Ships from all over the world came to trade. The little settlement on the hill grew and grew. It became one of the most powerful cities in the ancient world. Dido's <strong>perseverance</strong>, cleverness, and determination had built an empire from nothing.</p>
+<main class="main">
+<section class="sec" id="p1">
+  <div class="sec-header">
+    <div class="sec-num">1</div>
+    <div><div class="sec-title">Vocabulary</div><div class="sec-sub">Click each word to learn more</div></div>
   </div>
-</div>
-
-<!-- 3: READING -->
-<div class="section" id="sec-2">
-  <div class="section-title">3 — Reading Comprehension</div>
-  <div class="section-subtitle">Choose the best answer.</div>
-  <div class="question-card"><div class="question-text"><span class="q-num">1</span>Why did Dido leave Tyre in the middle of the night?</div><div class="options"><label><input type="radio" name="gq1" value="a"> She wanted to go on a trading voyage</label><label><input type="radio" name="gq1" value="b"> Her brother, the king, had killed her husband out of jealousy and she feared for her life</label><label><input type="radio" name="gq1" value="c"> She had been chosen to found a new colony</label></div><button class="check-btn" onclick="checkQ('gq1','b',this)">Check ✓</button><div class="feedback"></div></div>
-  <div class="question-card"><div class="question-text"><span class="q-num">2</span>What did Dido ask the local chief for?</div><div class="options"><label><input type="radio" name="gq2" value="a"> A piece of land as large as her ship</label><label><input type="radio" name="gq2" value="b"> All the land she could see from the hilltop</label><label><input type="radio" name="gq2" value="c"> As much land as could be covered by the skin of a single bull</label></div><button class="check-btn" onclick="checkQ('gq2','c',this)">Check ✓</button><div class="feedback"></div></div>
-  <div class="question-card"><div class="question-text"><span class="q-num">3</span>How did Dido outwit the landowner?</div><div class="options"><label><input type="radio" name="gq3" value="a"> She bribed him with a large amount of Phoenician gold</label><label><input type="radio" name="gq3" value="b"> She cut the bull's hide into hundreds of thin strips and laid them end to end around a large piece of land</label><label><input type="radio" name="gq3" value="c"> She used purple dye to mark the boundaries</label></div><button class="check-btn" onclick="checkQ('gq3','b',this)">Check ✓</button><div class="feedback"></div></div>
-  <div class="question-card"><div class="question-text"><span class="q-num">4</span>True or False: The chief could refuse the deal after realising how much land Dido had claimed.</div><div class="options"><label><input type="radio" name="gq4" value="a"> True</label><label><input type="radio" name="gq4" value="b"> False — he had made a promise, and he was bound to keep it</label></div><button class="check-btn" onclick="checkQ('gq4','b',this)">Check ✓</button><div class="feedback"></div></div>
-  <div class="question-card"><div class="question-text"><span class="q-num">5</span>What did Dido name her tower, and why?</div><div class="options"><label><input type="radio" name="gq5" value="a"> "Tyre" — to remember her homeland</label><label><input type="radio" name="gq5" value="b"> "Bull's Hide" — in memory of the clever trick with the bull's skin</label><label><input type="radio" name="gq5" value="c"> "Carthage" — after the Phoenician word for 'victory'</label></div><button class="check-btn" onclick="checkQ('gq5','b',this)">Check ✓</button><div class="feedback"></div></div>
-  <div class="question-card"><div class="question-text"><span class="q-num">6</span>What does the story of Dido tell us about her character?</div><div class="options"><label><input type="radio" name="gq6" value="a"> She was aggressive and used force to take what she wanted</label><label><input type="radio" name="gq6" value="b"> She was determined, clever, quick-thinking, and able to turn a disadvantage into an advantage</label><label><input type="radio" name="gq6" value="c"> She was lucky — the whole plan worked by accident</label></div><button class="check-btn" onclick="checkQ('gq6','b',this)">Check ✓</button><div class="feedback"></div></div>
-</div>
-
-<!-- 4: GRAMMAR -->
-<div class="section" id="sec-3">
-  <div class="section-title">4 — Language Focus</div>
-  <div class="section-subtitle">Grammar from the story</div>
-  <div class="grammar-block">
-    <div class="grammar-label">📌 GRAMMAR</div>
-    <div class="grammar-title">Past Perfect — "had + past participle"</div>
-    <p style="font-size:.9rem;color:#374151;margin-bottom:12px;">We use the <strong>past perfect</strong> when we need to show that one past event happened BEFORE another past event.</p>
-    <div class="grammar-example">The king <strong>had killed</strong> Dido's husband before she fled the city.</div>
-    <div class="grammar-example">She <strong>had gathered</strong> her friends before the sun rose.</div>
-    <div class="grammar-example">The chief realised she <strong>had outwitted</strong> him completely.</div>
-    <div class="grammar-note">Timeline: past perfect (further back) → past simple (more recent). "By the time she finished, she had laid out all the strips."</div>
+  <div class="vocab-grid"><div class="vocab-card" onclick="toggleVocab(this)">
+      <div class="vc-top"><span class="vc-word">princess</span><span class="vc-pos">noun</span></div>
+      <div class="vc-pron">/ˈprɪn.ses/</div>
+      <div class="vc-cn">公主</div>
+      <div class="vc-detail">
+        <div class="vc-def">The daughter of a king or queen.</div>
+        <div class="vc-ex">"Dido was a Phoenician princess — the daughter of the King of Tyre."</div>
+      </div>
+    </div><div class="vocab-card" onclick="toggleVocab(this)">
+      <div class="vc-top"><span class="vc-word">flee</span><span class="vc-pos">verb</span></div>
+      <div class="vc-pron">/fliː/</div>
+      <div class="vc-cn">逃跑</div>
+      <div class="vc-detail">
+        <div class="vc-def">To run away quickly from danger.</div>
+        <div class="vc-ex">"Dido had to flee from Tyre when her brother killed her husband."</div>
+      </div>
+    </div><div class="vocab-card" onclick="toggleVocab(this)">
+      <div class="vc-top"><span class="vc-word">cunning</span><span class="vc-pos">adjective</span></div>
+      <div class="vc-pron">/ˈkʌn.ɪŋ/</div>
+      <div class="vc-cn">狡猾的 / 聪明的</div>
+      <div class="vc-detail">
+        <div class="vc-def">Clever at getting what you want, especially by tricking others.</div>
+        <div class="vc-ex">"Dido used a cunning trick to claim more land than anyone expected."</div>
+      </div>
+    </div><div class="vocab-card" onclick="toggleVocab(this)">
+      <div class="vc-top"><span class="vc-word">ox hide</span><span class="vc-pos">noun</span></div>
+      <div class="vc-pron">/ˈɒks haɪd/</div>
+      <div class="vc-cn">牛皮</div>
+      <div class="vc-detail">
+        <div class="vc-def">The skin of an ox (a large bull), used in ancient times for leather and trade.</div>
+        <div class="vc-ex">"The local king told Dido she could have as much land as an ox hide could cover."</div>
+      </div>
+    </div><div class="vocab-card" onclick="toggleVocab(this)">
+      <div class="vc-top"><span class="vc-word">strips</span><span class="vc-pos">noun</span></div>
+      <div class="vc-pron">/strɪps/</div>
+      <div class="vc-cn">细条</div>
+      <div class="vc-detail">
+        <div class="vc-def">Long, narrow pieces of something.</div>
+        <div class="vc-ex">"Dido cut the ox hide into incredibly thin strips, making it stretch into a huge circle."</div>
+      </div>
+    </div><div class="vocab-card" onclick="toggleVocab(this)">
+      <div class="vc-top"><span class="vc-word">bargain</span><span class="vc-pos">noun</span></div>
+      <div class="vc-pron">/ˈbɑː.ɡɪn/</div>
+      <div class="vc-cn">交易 / 协议</div>
+      <div class="vc-detail">
+        <div class="vc-def">An agreement where something is exchanged or a deal is made.</div>
+        <div class="vc-ex">"The king thought it was a simple bargain, but Dido outsmarted him completely."</div>
+      </div>
+    </div><div class="vocab-card" onclick="toggleVocab(this)">
+      <div class="vc-top"><span class="vc-word">founder</span><span class="vc-pos">noun</span></div>
+      <div class="vc-pron">/ˈfaʊn.dər/</div>
+      <div class="vc-cn">创始人</div>
+      <div class="vc-detail">
+        <div class="vc-def">A person who establishes a city, company, or organisation.</div>
+        <div class="vc-ex">"Dido became the founder and first queen of the great city of Carthage."</div>
+      </div>
+    </div><div class="vocab-card" onclick="toggleVocab(this)">
+      <div class="vc-top"><span class="vc-word">reign</span><span class="vc-pos">verb / noun</span></div>
+      <div class="vc-pron">/reɪn/</div>
+      <div class="vc-cn">统治</div>
+      <div class="vc-detail">
+        <div class="vc-def">To rule as a king or queen; the period of time a ruler is in power.</div>
+        <div class="vc-ex">"Dido reigned over Carthage wisely and built it into a powerful city."</div>
+      </div>
+    </div><div class="vocab-card" onclick="toggleVocab(this)">
+      <div class="vc-top"><span class="vc-word">wit</span><span class="vc-pos">noun</span></div>
+      <div class="vc-pron">/wɪt/</div>
+      <div class="vc-cn">机智</div>
+      <div class="vc-detail">
+        <div class="vc-def">Quick, clever thinking; the ability to use your mind cleverly.</div>
+        <div class="vc-ex">"Dido used her wit — not soldiers — to win herself a kingdom."</div>
+      </div>
+    </div><div class="vocab-card" onclick="toggleVocab(this)">
+      <div class="vc-top"><span class="vc-word">rival</span><span class="vc-pos">noun</span></div>
+      <div class="vc-pron">/ˈraɪ.vəl/</div>
+      <div class="vc-cn">对手 / 竞争者</div>
+      <div class="vc-detail">
+        <div class="vc-def">A person or group that competes with another.</div>
+        <div class="vc-ex">"Carthage grew so powerful that it became Rome's greatest rival."</div>
+      </div>
+    </div></div>
+</section>
+<section class="sec" id="p2">
+  <div class="sec-header">
+    <div class="sec-num">2</div>
+    <div><div class="sec-title">The Story</div><div class="sec-sub">Read carefully. Notice the bold words.</div></div>
   </div>
-  <div class="grammar-block">
-    <div class="grammar-label">📌 GRAMMAR</div>
-    <div class="grammar-title">Reported Speech — "said that / told him that"</div>
-    <p style="font-size:.9rem;color:#374151;margin-bottom:12px;">When we report what someone said, we shift the tense back (present → past, past → past perfect).</p>
-    <table class="grammar-table">
-      <tr><th>Direct Speech</th><th>Reported Speech</th></tr>
-      <tr><td>"We will build our city here."</td><td>She said that they <strong>would build</strong> their city there.</td></tr>
-      <tr><td>"I will not sell you this land."</td><td>He said that he <strong>would not sell</strong> the land.</td></tr>
-      <tr><td>"Will you sell me as much land as a bull's hide can cover?"</td><td>She asked if he <strong>would sell</strong> her as much land as a bull's hide <strong>could</strong> cover.</td></tr>
-    </table>
+  <div class="story-body"><div class="story-icon">👑</div>
+    <p>Long ago, in the great Phoenician city of Tyre, there lived a <span class="story-hl">princess</span> named <span class="story-hl">Dido</span>. Dido was beautiful, wise, and as clever as any king. But her world was about to fall apart.</p>
+    <p>When Dido's father died, her brother <span class="story-hl">Pygmalion</span> became king. Pygmalion was cruel and greedy. He murdered Dido's husband to steal his gold. Dido knew she was in terrible danger. So she gathered her most loyal friends, loaded their ships with her husband's treasure, and did the only thing she could: she <span class="story-hl">fled</span>.</p>
+    <p>Dido's ships sailed west across the Mediterranean. They passed islands and coastlines until they reached the northern shore of Africa. There, Dido asked the local king for a small piece of land — just enough to give her people a home. The king smiled. "You may have," he said, "as much land as an <span class="story-hl">ox hide</span> can cover."</p>
+    <div class="story-box">He thought he was being clever. How much land could one ox hide cover? But Dido was more <span class="story-hl">cunning</span> than he knew. She took the ox hide and cut it into hundreds of incredibly thin <span class="story-hl">strips</span>. Then she tied the strips end to end into one long line and laid them in a great circle on the ground. Inside that circle of leather <span class="story-hl">strips</span>, she founded her city.</div>
+    <p>The king could not believe it. The <span class="story-hl">bargain</span> had been kept — technically. And inside that circle of ox hide, Dido built the city of <span class="story-hl">Carthage</span>. She became its <span class="story-hl">founder</span> and its first queen. She <span class="story-hl">reigned</span> wisely and well. The city grew powerful and rich.</p>
+    <p>Carthage would go on to become Rome's greatest <span class="story-hl">rival</span> — a maritime empire that stretched across the western Mediterranean. All because one woman, using only her <span class="story-hl">wit</span> and a single ox hide, claimed a kingdom from nothing.</p>
+    <div class="story-icon">🏛️</div></div>
+</section>
+<section class="sec" id="p3">
+  <div class="sec-header">
+    <div class="sec-num">3</div>
+    <div><div class="sec-title">Reading Comprehension</div><div class="sec-sub">Choose the best answer. Get instant feedback!</div></div>
   </div>
-  <div class="grammar-block">
-    <div class="grammar-label">📌 GRAMMAR</div>
-    <div class="grammar-title">Despite / In spite of — Showing contrast</div>
-    <div class="grammar-example"><strong>Despite</strong> all the difficulties, Dido built a great city.</div>
-    <div class="grammar-example"><strong>In spite of</strong> being a refugee, she became the founder of Carthage.</div>
-    <div class="grammar-example"><strong>Despite</strong> the landowner's refusal, she found a way to get the land she needed.</div>
-    <div class="grammar-note">Despite / In spite of + noun phrase or -ing. They cannot be followed by a clause directly.</div>
+  <div class="quiz-list">
+    <div class="q-item">
+      <div class="q-text">1. Why did Dido flee from the city of Tyre?</div>
+      <div class="q-opts"><button class="q-opt" onclick="mcq(this,'wrong')">She wanted to explore new lands.</button>
+<button class="q-opt" onclick="mcq(this,'correct')">Her brother Pygmalion killed her husband and she was in danger.</button>
+<button class="q-opt" onclick="mcq(this,'wrong')">She was sent away by the king of Tyre.</button></div>
+      <div class="q-feedback"></div>
+    </div>
+    <div class="q-item">
+      <div class="q-text">2. What did the local king offer Dido?</div>
+      <div class="q-opts"><button class="q-opt" onclick="mcq(this,'wrong')">All the land she could see from a hill.</button>
+<button class="q-opt" onclick="mcq(this,'wrong')">A ship full of gold.</button>
+<button class="q-opt" onclick="mcq(this,'correct')">As much land as an ox hide could cover.</button></div>
+      <div class="q-feedback"></div>
+    </div>
+    <div class="q-item">
+      <div class="q-text">3. How did Dido use the ox hide cleverly?</div>
+      <div class="q-opts"><button class="q-opt" onclick="mcq(this,'wrong')">She used it to make a boat to cross the river.</button>
+<button class="q-opt" onclick="mcq(this,'correct')">She cut it into thin strips and laid them in a large circle to claim more land.</button>
+<button class="q-opt" onclick="mcq(this,'wrong')">She sold it to buy land from the king.</button></div>
+      <div class="q-feedback"></div>
+    </div>
+    <div class="q-item">
+      <div class="q-text">4. True or False: Dido founded the city of Sidon.</div>
+      <div class="tf-opts">
+        <button class="tf-btn" onclick="tf(this,'wrong','Wrong! Dido founded the city of CARTHAGE in North Africa.')">True</button>
+        <button class="tf-btn" onclick="tf(this,'correct','Correct! Dido founded Carthage — not Sidon.')">False</button>
+      </div>
+      <div class="q-feedback"></div>
+    </div>
+    <div class="q-item">
+      <div class="q-text">5. What does the word 'cunning' mean in this story?</div>
+      <div class="q-opts"><button class="q-opt" onclick="mcq(this,'wrong')">Very strong and powerful.</button>
+<button class="q-opt" onclick="mcq(this,'correct')">Clever at getting what you want, sometimes by using tricks.</button>
+<button class="q-opt" onclick="mcq(this,'wrong')">Very generous and kind.</button></div>
+      <div class="q-feedback"></div>
+    </div>
+    <div class="q-item">
+      <div class="q-text">6. What did Carthage eventually become?</div>
+      <div class="q-opts"><button class="q-opt" onclick="mcq(this,'wrong')">A small fishing village.</button>
+<button class="q-opt" onclick="mcq(this,'wrong')">A colony of Egypt.</button>
+<button class="q-opt" onclick="mcq(this,'correct')">Rome's greatest rival — a powerful maritime empire.</button></div>
+      <div class="q-feedback"></div>
+    </div>
   </div>
-</div>
-
-<!-- 5: BUILDER -->
-<div class="section" id="sec-4">
-  <div class="section-title">5 — Sentence Builder</div>
-  <div class="section-subtitle">Practice with the vocabulary</div>
-  <div class="builder-card">
-    <div class="builder-label">✏️ Past perfect</div>
-    <div class="builder-prompt">1. Rewrite using the past perfect:<br><em>"The king killed her husband. Then she fled."</em></div>
-    <input class="builder-input" type="text" placeholder="After the king had...">
-    <button class="builder-check" onclick="revealFill(this,'After the king had killed her husband, she fled.')">Check ✓</button>
-    <div class="builder-feedback"></div>
+</section>
+<section class="sec" id="p4">
+  <div class="sec-header">
+    <div class="sec-num">4</div>
+    <div><div class="sec-title">Language Focus</div><div class="sec-sub">Grammar from the story — learn through meaning</div></div>
   </div>
-  <div class="builder-card">
-    <div class="builder-label">✏️ Reported speech</div>
-    <div class="builder-prompt">2. Report this sentence:<br><em>"I will build my city here," said Dido.</em></div>
-    <input class="builder-input" type="text" placeholder="Dido said that she would...">
-    <button class="builder-check" onclick="revealFill(this,'Dido said that she would build her city there.')">Check ✓</button>
-    <div class="builder-feedback"></div>
+  <div class="grammar-box">
+    <div class="grammar-label">📌 Narrative past tense — storytelling in English</div>
+    <div class="grammar-rule">Stories about the past use these patterns to build tension and describe actions.</div>
+    
+    <table class="grammar-table"><tr><th>Base</th><th>Past</th><th>From the story</th></tr><tr><td>flee</td><td><span class="hl">fled</span></td><td>Dido <span class='hl'>fled</span> from Tyre with her loyal followers.</td></tr><tr><td>cut</td><td><span class="hl">cut</span></td><td>She <span class='hl'>cut</span> the ox hide into thin strips.</td></tr><tr><td>lay</td><td><span class="hl">laid</span></td><td>She <span class='hl'>laid</span> the strips in a circle on the ground.</td></tr><tr><td>build</td><td><span class="hl">built</span></td><td>Inside that circle, she <span class='hl'>built</span> the city of Carthage.</td></tr><tr><td>grow</td><td><span class="hl">grew</span></td><td>Carthage <span class='hl'>grew</span> into Rome's greatest rival.</td></tr></table>
   </div>
-  <div class="builder-card">
-    <div class="builder-label">✏️ Despite / In spite of</div>
-    <div class="builder-prompt">3. Complete: "________ being forced to leave Tyre, Dido ________ to build one of the greatest cities in the ancient world."</div>
-    <input class="builder-input" type="text" placeholder="Despite / went on...">
-    <button class="builder-check" onclick="revealFill(this,'Despite being forced to leave Tyre, Dido went on to build one of the greatest cities in the ancient world.')">Check ✓</button>
-    <div class="builder-feedback"></div>
+<div class="grammar-box">
+    <div class="grammar-label">📌 Despite / In spite of — expressing contrast</div>
+    <div class="grammar-rule">Use these phrases when an outcome is surprising given the circumstances.</div>
+    <div class="grammar-eg"><span>Despite</span> having no army, Dido claimed a kingdom using only her wit.</div>
+<div class="grammar-eg"><span>In spite of</span> losing everything in Tyre, Dido built a great city in Africa.</div>
+<div class="grammar-eg"><span>Despite</span> the king thinking the bargain was in his favour, Dido outsmarted him.</div>
+<div class="grammar-eg"><span>In spite of</span> being a refugee, Dido became a queen.</div>
+    
   </div>
-  <div class="builder-card">
-    <div class="builder-label">🈶 Translation challenge</div>
-    <div class="builder-prompt">Translate into English:</div>
-    <div style="background:var(--gold-light);border-radius:8px;padding:12px;margin-bottom:10px;font-size:1rem;color:#92400e;font-weight:600;">狄多把牛皮切成细条，聪明地圈出了一大片土地，尽管当地酋长以为她只会得到一小块地方。</div>
-    <input class="builder-input" type="text" placeholder="Write in English...">
-    <button class="builder-check" onclick="revealFill(this,'Dido cut the bull hide into thin strips and cleverly enclosed a large piece of land, even though the local chief had thought she would only get a small area.')">Check ✓</button>
-    <div class="builder-feedback"></div>
+<div class="grammar-box">
+    <div class="grammar-label">📌 What if...? — Conditional sentences</div>
+    <div class="grammar-rule">Use 'If... would...' to imagine different possibilities in history.</div>
+    <div class="grammar-eg"><span>If</span> Dido had not fled Tyre, Carthage might never have been founded.</div>
+<div class="grammar-eg"><span>If</span> the king had thought more carefully, he <span>would not have</span> made the bargain.</div>
+<div class="grammar-eg"><span>If</span> Carthage had not existed, Rome might have dominated the Mediterranean even sooner.</div>
+<div class="grammar-eg"><span>If</span> Dido had used an army instead of her wit, she might have failed.</div>
+    
   </div>
-</div>
-
-<!-- 6: SPEAKING 1 -->
-<div class="section" id="sec-5">
-  <div class="section-title">6 — Speaking — Level 1</div>
-  <div class="section-subtitle">Answer in one complete sentence</div>
-  <div class="speaking-level level-1">🟢 Level 1 · One sentence</div>
-  <div class="speaking-question"><div class="speaking-q">Why did Dido leave Tyre?</div><div class="speaking-hint">💡 Start with: <span>"Dido left Tyre because..."</span></div></div>
-  <div class="speaking-question"><div class="speaking-q">What was clever about cutting the bull's hide into strips?</div><div class="speaking-hint">💡 Start with: <span>"By cutting the hide into strips, Dido could..."</span></div></div>
-  <div class="speaking-question"><div class="speaking-q">What happened to Carthage after Dido founded it?</div><div class="speaking-hint">💡 Start with: <span>"After Dido founded Carthage, the city..."</span></div></div>
-</div>
-
-<!-- 7: SPEAKING 2 -->
-<div class="section" id="sec-6">
-  <div class="section-title">7 — Speaking — Level 2</div>
-  <div class="section-subtitle">Answer in 2–3 sentences.</div>
-  <div class="speaking-level level-2">🟡 Level 2 · 2–3 sentences</div>
-  <div class="speaking-question"><div class="speaking-q">Imagine you are the local chief who made the deal with Dido. When you realise what she has done, how do you feel? Do you think she was fair?</div><div class="speaking-hint">💡 Think about: <span>anger · admiration · the importance of keeping promises · whether a trick counts as cheating</span></div></div>
-  <div class="speaking-question"><div class="speaking-q">Dido went from being a refugee who lost everything to the founder of one of the greatest cities in the world. What qualities made this possible? Do you know anyone who has shown similar qualities?</div><div class="speaking-hint">💡 Try: <span>"I think the qualities that made Dido successful were... For example... I think these qualities are also important today because..."</span></div></div>
-  <div class="speaking-level level-3" style="margin-top:20px;">🔵 Level 3 · Your opinion</div>
-  <div class="speaking-question"><div class="speaking-q">Dido used clever thinking instead of force. She turned a disadvantage (being a refugee with nothing) into an advantage (founding Carthage). Do you think intelligence and creativity are more powerful than physical strength or military force in the long run? Support your view with examples from history or today.</div><div class="speaking-hint">💡 Use: <span>I believe... / History shows that... / For example, Dido... / In contrast to... / However, some might argue...</span></div></div>
-</div>
-
-<!-- 8: IDEAS -->
-<div class="section" id="sec-7">
-  <div class="section-title">8 — Ideas &amp; Society</div>
-  <div class="section-subtitle">Think about big ideas. There is no wrong answer.</div>
-  <div class="idea-card"><span class="idea-emoji">🧠</span><p><strong>Intelligence vs force.</strong> Dido used her mind — not weapons or money — to win. Throughout history, have clever ideas been more powerful than armies? Think of examples. Can you think of any famous cases where brains defeated brute force?</p></div>
-  <div class="idea-card"><span class="idea-emoji">🚺</span><p><strong>Women in ancient history.</strong> Dido is one of the few women leaders celebrated in ancient stories. Why do you think women's contributions to history are often less well-known than men's? Is this changing today?</p></div>
-  <div class="idea-card"><span class="idea-emoji">🌱</span><p><strong>Starting from nothing.</strong> Dido was a refugee who had lost everything — her home, her husband, her country. Yet she built Carthage. Do you think adversity (difficulty and hardship) makes people stronger? Or does it just make things harder?</p></div>
-  <div class="idea-card"><span class="idea-emoji">🤝</span><p><strong>Promises and ethics.</strong> The local chief made a promise without fully thinking it through. Dido held him to it. Was Dido's trick ethical? Is it acceptable to use a clever interpretation of a promise to get more than the other person intended? Where is the line between cleverness and deception?</p></div>
-</div>
-
-<!-- 9: IELTS -->
-<div class="section" id="sec-8">
-  <div class="section-title">9 — IELTS Content Builder</div>
-  <div class="section-subtitle">Planting seeds for your future IELTS exam</div>
-  <div class="ielts-banner">
-    <h4>📘 Today's IELTS Topic</h4>
-    <p><strong>Leadership, Resilience, and Gender Equality</strong></p>
-    <p style="margin-top:6px;">Dido's story touches on leadership, resilience, and the role of women in history — all hot IELTS topics, especially for Speaking Part 3 and Writing Task 2.</p>
-    <div class="vocab-tags"><span class="vocab-tag">leadership</span><span class="vocab-tag">resilience</span><span class="vocab-tag">gender equality</span><span class="vocab-tag">perseverance</span><span class="vocab-tag">adversity</span><span class="vocab-tag">critical thinking</span><span class="vocab-tag">negotiation</span><span class="vocab-tag">problem-solving</span></div>
-    <ul class="colloc-list"><li>demonstrate strong leadership</li><li>overcome adversity and hardship</li><li>promote gender equality</li><li>think creatively under pressure</li><li>negotiate a favourable outcome</li></ul>
+</section>
+<section class="sec" id="p5">
+  <div class="sec-header">
+    <div class="sec-num">5</div>
+    <div><div class="sec-title">Sentence Builder</div><div class="sec-sub">Build your skills with the vocabulary</div></div>
   </div>
-  <div class="ielts-q"><span class="ielts-num">S1</span>Do you think men and women have equal opportunities in leadership today? Give examples.</div>
-  <div class="ielts-q"><span class="ielts-num">S2</span>What qualities make a great leader? Is intelligence more important than strength?</div>
-  <div class="ielts-q"><span class="ielts-num">S3</span>Do you think people who have faced hardship make better leaders? Why or why not?</div>
-  <div class="ielts-writing"><h5>✏️ IELTS Writing Task 2 — Future Practice</h5><p>"Some people believe that great leaders are born with natural qualities, while others think that leadership skills can be learned. Discuss both views and give your opinion."</p></div>
-</div>
-
-<!-- 10: REVIEW (Chapter 15 Full Review) -->
-<div class="section" id="sec-9">
-  <div class="section-title">10 — Review + Chapter 15 Project</div>
-  <div class="section-subtitle">Chapter 15 — The Phoenicians: Complete Summary</div>
-
-  <div class="review-summary">
-    <h4>📖 Chapter 15 in Five Key Points</h4>
-    <p>The <strong>Phoenicians</strong> lived in northern Canaan, on a narrow coastal strip. Because the land was rocky and unfertile, they turned to the sea and became the greatest sailors and traders in the ancient world.</p>
-    <p>They traded widely: <strong>cedar wood, salt, fish, embroidered cloth, and tin</strong>. They built a vast Mediterranean trading network and became the ancient world's first international merchants.</p>
-    <p>The Phoenicians were master glassmakers who also invented <strong>glassblowing</strong> — a revolutionary technique that allowed them to create delicate, beautiful objects unlike anything made before.</p>
-    <p>They made <strong>Tyrian purple</strong> dye from murex snails — the rarest, most expensive colour in the world, worn only by kings. And they founded <strong>colonies</strong> across the Mediterranean, including the great city of Carthage.</p>
-    <p>Their greatest gift to the world was their <strong>alphabet</strong> — the ancestor of the Greek, Latin, and modern Western alphabets. Every time you read or write, you use a descendant of the Phoenician alphabet.</p>
+  <div class="sb-activity">
+    <div class="sb-label">🔀 Unscramble the sentence</div>
+    <p style="font-size:13px;color:var(--text3);margin-bottom:.75rem;">Put these words in the correct order:</p>
+    <div style="margin-bottom:.75rem;"><span style="padding:5px 10px;border-radius:99px;background:var(--surface2);border:1px solid var(--border);font-size:13px;color:var(--text2);display:inline-block;margin:3px;">ox</span><span style="padding:5px 10px;border-radius:99px;background:var(--surface2);border:1px solid var(--border);font-size:13px;color:var(--text2);display:inline-block;margin:3px;">strips</span><span style="padding:5px 10px;border-radius:99px;background:var(--surface2);border:1px solid var(--border);font-size:13px;color:var(--text2);display:inline-block;margin:3px;">into</span><span style="padding:5px 10px;border-radius:99px;background:var(--surface2);border:1px solid var(--border);font-size:13px;color:var(--text2);display:inline-block;margin:3px;">Dido</span><span style="padding:5px 10px;border-radius:99px;background:var(--surface2);border:1px solid var(--border);font-size:13px;color:var(--text2);display:inline-block;margin:3px;">thin</span><span style="padding:5px 10px;border-radius:99px;background:var(--surface2);border:1px solid var(--border);font-size:13px;color:var(--text2);display:inline-block;margin:3px;">the</span><span style="padding:5px 10px;border-radius:99px;background:var(--surface2);border:1px solid var(--border);font-size:13px;color:var(--text2);display:inline-block;margin:3px;">cut</span><span style="padding:5px 10px;border-radius:99px;background:var(--surface2);border:1px solid var(--border);font-size:13px;color:var(--text2);display:inline-block;margin:3px;">hide</span></div>
+    <input class="sb-input" id="us1g" placeholder="Type your sentence here..."/>
+    <button class="sb-check" onclick="checkUnscramble('us1g','Dido cut the ox hide into thin strips','ur1g')">Check ✓</button>
+    <div class="sb-result" id="ur1g"></div>
   </div>
-
-  <div class="star-words">
-    <span class="star-word">⭐ Phoenician</span><span class="star-word">⭐ Mediterranean</span><span class="star-word">⭐ merchant</span><span class="star-word">⭐ cedar</span><span class="star-word">⭐ glassblowing</span><span class="star-word">⭐ murex</span><span class="star-word">⭐ purple</span><span class="star-word">⭐ colony</span><span class="star-word">⭐ alphabet</span><span class="star-word">⭐ Carthage</span><span class="star-word">⭐ Dido</span><span class="star-word">⭐ perseverance</span>
+<div class="sb-activity">
+    <div class="sb-label">✏️ Fill in the blank</div>
+    <p style="font-size:13px;color:var(--text2);margin-bottom:.5rem;">1. Dido had to ________ from Tyre because her brother Pygmalion had murdered her husband.</p>
+    <input class="sb-input" id="f1g" placeholder="Your answer..."/>
+    <button class="sb-check" onclick="checkFill('f1g','flee','rf1g')">Check ✓</button>
+    <div class="sb-result" id="rf1g"></div>
   </div>
-
-  <div class="big-idea">
-    <p>💡 <strong>The Big Idea:</strong> The Phoenicians show us that <em>geography is not destiny</em>. Poor land, craggy hills, and isolation could have kept them small and powerless. Instead, they adapted — turned to the sea, mastered trade, invented glassblowing, created purple dye, founded cities, and gave the world its alphabet. The lesson of the Phoenicians: the greatest empires are not always built by armies. Sometimes, they are built by clever merchants with a sharp knife and a long, thin strip of bull's hide.</p>
+<div class="sb-activity">
+    <div class="sb-label">✏️ Fill in the blank</div>
+    <p style="font-size:13px;color:var(--text2);margin-bottom:.5rem;">2. Dido became the ________ and first queen of the great city of Carthage.</p>
+    <input class="sb-input" id="f2g" placeholder="Your answer..."/>
+    <button class="sb-check" onclick="checkFill('f2g','founder','rf2g')">Check ✓</button>
+    <div class="sb-result" id="rf2g"></div>
   </div>
-
-  <div class="section-title" style="margin-bottom:14px;">🎨 Chapter 15 Project — The Phoenician Trading Map</div>
-  <p style="font-size:.9rem;color:#374151;margin-bottom:16px;">Create a visual map of the Phoenician world. You can draw it, design it digitally, or make a poster.</p>
-  <ol class="project-steps">
-    <li>Draw or print a blank map of the Mediterranean Sea. Include the coasts of southern Europe, North Africa, and the Middle East.</li>
-    <li>Mark <strong>Phoenicia</strong> (northern Canaan) on the eastern coast and add the city of <strong>Tyre</strong>.</li>
-    <li>Draw <strong>Phoenician trade routes</strong> as dotted lines going west, south, and east. Mark key colonies: Cyprus, Sicily, Sardinia, Spain, and <strong>Carthage</strong> in North Africa.</li>
-    <li>Add <strong>icons</strong> for what was traded from each region — a cedar tree for Phoenicia, a glass bottle, a purple snail, a tin mine for Spain or Britain.</li>
-    <li>Add a <strong>key</strong> (legend) explaining your icons. Write one sentence describing what the Phoenicians gave to world history.</li>
-    <li><strong>Bonus:</strong> Add a small panel showing the Phoenician alphabet and draw a line connecting it to the Greek → Roman → Modern English alphabet.</li>
-  </ol>
-
-  <div class="section-title" style="margin-bottom:14px;">🧠 Final Mini Quiz — Chapter 15</div>
-  <div class="mini-quiz-card"><div class="question-text"><span class="q-num">A</span>Why did the Phoenicians become great sailors?</div><div class="options"><label><input type="radio" name="gmq1" value="a"> They loved adventure and exploration for its own sake</label><label><input type="radio" name="gmq1" value="b"> Their land was rocky, dry, and not fertile — so they turned to the sea instead</label><label><input type="radio" name="gmq1" value="c"> They were forced to by the Egyptians</label></div><button class="check-btn" onclick="checkQ('gmq1','b',this)">Check ✓</button><div class="feedback"></div></div>
-  <div class="mini-quiz-card"><div class="question-text"><span class="q-num">B</span>"________ being a refugee, Dido founded one of the most powerful cities in the ancient world." Choose the correct word.</div><div class="options"><label><input type="radio" name="gmq2" value="a"> Although</label><label><input type="radio" name="gmq2" value="b"> Despite</label><label><input type="radio" name="gmq2" value="c"> However</label></div><button class="check-btn" onclick="checkQ('gmq2','b',this)">Check ✓</button><div class="feedback"></div></div>
-  <div class="mini-quiz-card"><div class="question-text"><span class="q-num">C</span>What is the most important legacy of the Phoenicians?</div><div class="options"><label><input type="radio" name="gmq3" value="a"> They invented purple dye which became the colour of all modern flags</label><label><input type="radio" name="gmq3" value="b"> Their trading network, glassblowing, and especially their alphabet — the ancestor of all modern Western writing systems</label><label><input type="radio" name="gmq3" value="c"> They built the Egyptian pyramids</label></div><button class="check-btn" onclick="checkQ('gmq3','b',this)">Check ✓</button><div class="feedback"></div></div>
-</div>
-
-<div class="lesson-nav">
-  <a href="ch15-f.html" class="lesson-nav nav-prev">← Lesson 15F</a>
-  <a href="https://lexilink-ideation.github.io/History-Workshop/" class="lesson-nav nav-next">Back to All Chapters →</a>
-</div>
-<footer class="site-footer"><strong>Lexilink Ideation IELTS STUDIO</strong> · History ESL Course · Chapter 15 — Lesson G + Chapter Review</footer>
-
+</section>
+<section class="sec" id="p6">
+  <div class="sec-header">
+    <div class="sec-num">6</div>
+    <div><div class="sec-title">Speaking — Level 1</div><div class="sec-sub">Answer in one complete sentence</div></div>
+  </div>
+  <div class="speak-level">
+    <span class="speak-badge l1">🟢 Level 1 · One sentence</span>
+    <div class="speak-q"><p>Why did Dido leave Tyre?</p><div class="speak-hint">💡 Start with: <span>"Dido left Tyre because..."</span></div></div>
+    <div class="speak-q"><p>How did Dido use the ox hide cleverly?</p><div class="speak-hint">💡 Start with: <span>"Dido cut the ox hide into..."</span></div></div>
+    <div class="speak-q"><p>What did Dido found at the end of the story?</p><div class="speak-hint">💡 Start with: <span>"Dido founded the city of..."</span></div></div>
+  </div>
+</section>
+<section class="sec" id="p7">
+  <div class="sec-header">
+    <div class="sec-num">7</div>
+    <div><div class="sec-title">Speaking — Level 2 &amp; 3</div><div class="sec-sub">Extend your answer. Share your opinion.</div></div>
+  </div>
+  <div class="speak-level">
+    <span class="speak-badge l2">🟡 Level 2 · 2–3 sentences</span>
+    <div class="speak-q"><p>Dido used cleverness instead of force to get what she needed. Do you think this was the right approach? Could it work in today's world?</p><div class="speak-hint">💡 Try: <span>"I think Dido was right to use cleverness because... Today..."</span></div></div>
+    <div class="speak-q"><p>Dido was a refugee — she fled her homeland with nothing but her people and her treasure. How does her story compare to modern refugees?</p><div class="speak-hint">💡 Think about: <span>what refugees lose · what they hope for · what Dido achieved</span></div></div>
+  </div>
+  <div class="speak-level">
+    <span class="speak-badge l3">🔵 Level 3 · Your opinion</span>
+    <div class="speak-q"><p>Dido technically kept the bargain — she used the ox hide as promised. But was it honest? Is it ever ethical to find clever loopholes in agreements?</p><div class="speak-hint">💡 Use: <span>I believe... / On one hand... / However... / In my opinion...</span></div></div>
+  </div>
+</section>
+<section class="sec" id="p8">
+  <div class="sec-header">
+    <div class="sec-num">8</div>
+    <div><div class="sec-title">Ideas &amp; Society</div><div class="sec-sub">Think about big ideas. There is no wrong answer.</div></div>
+  </div>
+  <div class="idea-q"><div class="idea-icon">🧠</div><div class="idea-text"><strong>Wit is more powerful than weapons.</strong> Dido had no army, yet she founded a kingdom. Can you think of other historical figures who used intelligence rather than force to change their situation?</div></div>
+<div class="idea-q"><div class="idea-icon">🏃</div><div class="idea-text"><strong>Dido was a refugee who became a queen.</strong> She lost her home, fled danger, and built something new. How does her story make you feel about refugees and displaced people today?</div></div>
+<div class="idea-q"><div class="idea-icon">⚖️</div><div class="idea-text"><strong>She kept the letter of the bargain, but not the spirit.</strong> Dido technically did what was agreed, but the king felt tricked. When is a clever trick also a kind of dishonesty?</div></div>
+<div class="idea-q"><div class="idea-icon">🌆</div><div class="idea-text"><strong>Great cities are often founded by outsiders.</strong> Carthage was founded by a refugee princess. Can you think of other cities or nations founded by people who came from somewhere else?</div></div>
+</section>
+<section class="sec" id="p9">
+  <div class="sec-header">
+    <div class="sec-num">9</div>
+    <div><div class="sec-title">IELTS Content Builder</div><div class="sec-sub">Planting seeds for your future IELTS exam</div></div>
+  </div>
+  <div class="ielts-topic">
+    <div class="ielts-topic-label">📘 Today's IELTS Topic</div>
+    <h4>Leadership, Resilience, and Problem-Solving</h4>
+  </div>
+  <p style="font-size:12px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;color:var(--text3);margin-bottom:.5rem;">Key vocabulary</p>
+  <div class="vocab-chips"><span class="chip amber">resilience</span><span class="chip amber">leadership</span><span class="chip amber">ingenuity</span><span class="chip amber">adversity</span><span class="chip">overcome obstacles</span><span class="chip">demonstrate resourcefulness</span><span class="chip">found an institution</span><span class="chip">show determination</span></div>
+  <p style="font-size:12px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;color:var(--text3);margin:.875rem 0 .5rem;">Useful collocations</p>
+  <div class="vocab-chips"><span class="chip">rise to the challenge</span><span class="chip">think outside the box</span><span class="chip">turn adversity into opportunity</span><span class="chip">demonstrate exceptional leadership</span></div>
+  <div class="ielts-qs"><div class="ielts-q"><div class="ielts-q-num">S1</div><div class="ielts-q-text">What qualities make a great leader? Use Dido as an example.</div></div>
+<div class="ielts-q"><div class="ielts-q-num">S2</div><div class="ielts-q-text">Do you think intelligence or strength is more important for a leader?</div></div>
+<div class="ielts-q"><div class="ielts-q-num">S3</div><div class="ielts-q-text">How can people who have lost everything rebuild their lives? What does Dido's story suggest?</div></div></div>
+  <div class="ielts-w2">
+    <div class="ielts-w2-label">✏️ IELTS Writing Task 2 — Future Practice</div>
+    <p>"The most effective leaders are those who use intelligence and creativity rather than force and authority. To what extent do you agree or disagree?"</p>
+  </div>
+</section>
+<section class="sec" id="p10">
+  <div class="sec-header">
+    <div class="sec-num">10</div>
+    <div><div class="sec-title">Chapter 15 Review</div><div class="sec-sub">Celebrate everything you have learned!</div></div>
+  </div>
+  <div style="background:#1A1100;border:1px solid rgba(212,137,15,0.2);border-radius:var(--r-sm);padding:1.25rem;margin-bottom:1.25rem;">
+    <div style="font-size:11px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--amber-300);margin-bottom:.75rem;">📖 Chapter 15 Summary</div>
+    <p style="font-size:14px;color:var(--text2);line-height:1.8;">The <strong style="color:#fff">Phoenicians</strong> lived on a narrow coastal strip between the mountains and the Mediterranean Sea. With almost no farmland, they turned to the sea and became the world's greatest traders. They built great harbour cities — <strong style="color:#fff">Tyre</strong>, <strong style="color:#fff">Sidon</strong>, and <strong style="color:#fff">Byblos</strong> — and sailed trade routes from Egypt to Britain. They invented <strong style="color:#fff">glassmaking</strong> and <strong style="color:#fff">glassblowing</strong>, discovered the precious <strong style="color:#fff">purple dye</strong> from the murex snail, and founded colonies across the Mediterranean, most famously <strong style="color:#fff">Carthage</strong>. Above all, they gave the world the <strong style="color:#fff">alphabet</strong> — the foundation of almost every writing system used today. Their greatest queen, <strong style="color:#fff">Dido</strong>, used nothing but her wit to found a new kingdom from nothing. The Phoenicians built no great pyramids and left no stone temples — yet their legacy touches every word you write.</p>
+  </div>
+  <p style="font-size:12px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;color:var(--text3);margin-bottom:.75rem;">⭐ All Chapter 15 Star Words</p>
+  <div class="star-words"><span class="star-word">⭐ Phoenician</span><span class="star-word">⭐ Mediterranean</span><span class="star-word">⭐ merchant</span><span class="star-word">⭐ harbour</span><span class="star-word">⭐ cedar</span><span class="star-word">⭐ trade</span><span class="star-word">⭐ timber</span><span class="star-word">⭐ cargo</span><span class="star-word">⭐ tin</span><span class="star-word">⭐ embroidered</span><span class="star-word">⭐ campfire</span><span class="star-word">⭐ lye</span><span class="star-word">⭐ molten</span><span class="star-word">⭐ furnace</span><span class="star-word">⭐ transparent</span><span class="star-word">⭐ glassblowing</span><span class="star-word">⭐ blowpipe</span><span class="star-word">⭐ bubble</span><span class="star-word">⭐ revolution</span><span class="star-word">⭐ technique</span><span class="star-word">⭐ murex</span><span class="star-word">⭐ dye</span><span class="star-word">⭐ stench</span><span class="star-word">⭐ luxury</span><span class="star-word">⭐ status</span><span class="star-word">⭐ colony</span><span class="star-word">⭐ establish</span><span class="star-word">⭐ alphabet</span><span class="star-word">⭐ legacy</span><span class="star-word">⭐ ancestor</span><span class="star-word">⭐ princess</span><span class="star-word">⭐ cunning</span><span class="star-word">⭐ flee</span><span class="star-word">⭐ founder</span><span class="star-word">⭐ wit</span></div>
+  <div class="think-box">
+    <div class="think-head">💡 The Big Idea of Chapter 15</div>
+    <p>The Phoenicians had almost nothing. No river. No vast farmland. No empire. Yet they gave the world glass, the purple dye of kings, and — most importantly — the alphabet. <strong>Creativity, skill, and trade can build a legacy more lasting than any army or empire.</strong></p>
+  </div>
+  <div style="background:var(--amber-bg);border:1px solid var(--amber-border);border-radius:var(--r-sm);padding:1.25rem;margin-bottom:1.25rem;">
+    <div style="font-size:11px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--amber-300);margin-bottom:.75rem;">🗺️ Chapter 15 Project — Phoenician Trading Map</div>
+    <p style="font-size:14px;color:var(--text2);margin-bottom:.75rem;">Create an annotated map of the Phoenician world. Include:</p>
+    <div style="display:flex;flex-direction:column;gap:6px;">
+      <div style="display:flex;gap:10px;align-items:flex-start;"><span style="color:var(--amber-300);font-weight:700;min-width:24px;">1.</span><span style="font-size:13px;color:var(--text2);">The cities of Tyre, Sidon, and Byblos on the Lebanese coast.</span></div>
+      <div style="display:flex;gap:10px;align-items:flex-start;"><span style="color:var(--amber-300);font-weight:700;min-width:24px;">2.</span><span style="font-size:13px;color:var(--text2);">The colonies of Carthage (Africa), and settlements in Spain, Sardinia, and Malta.</span></div>
+      <div style="display:flex;gap:10px;align-items:flex-start;"><span style="color:var(--amber-300);font-weight:700;min-width:24px;">3.</span><span style="font-size:13px;color:var(--text2);">Trade routes with arrows showing: cedar to Egypt, tin from Britain, purple cloth to Rome.</span></div>
+      <div style="display:flex;gap:10px;align-items:flex-start;"><span style="color:var(--amber-300);font-weight:700;min-width:24px;">4.</span><span style="font-size:13px;color:var(--text2);">Labels for each location showing what the Phoenicians traded or made there.</span></div>
+      <div style="display:flex;gap:10px;align-items:flex-start;"><span style="color:var(--amber-300);font-weight:700;min-width:24px;">5.</span><span style="font-size:13px;color:var(--text2);">A short caption (2–3 sentences) explaining what the Phoenicians contributed to the world.</span></div>
+    </div>
+  </div>
+  <p style="font-size:12px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;color:var(--text3);margin:.875rem 0 .75rem;">🧠 Final Quiz</p>
+  <div class="mini-quiz-q"><div class="mq-text">A. What is the most important legacy of the Phoenicians, according to historians?</div><div class="mq-opts"><button class="mq-opt" onclick="mq(this,'wrong')">Their purple dye</button>
+<button class="mq-opt" onclick="mq(this,'correct')">The alphabet</button>
+<button class="mq-opt" onclick="mq(this,'wrong')">Their glass vessels</button></div></div><div class="mini-quiz-q"><div class="mq-text">B. How did Dido claim land for Carthage?</div><div class="mq-opts"><button class="mq-opt" onclick="mq(this,'wrong')">She bought it with gold</button>
+<button class="mq-opt" onclick="mq(this,'correct')">She cut an ox hide into thin strips to make a large circle</button>
+<button class="mq-opt" onclick="mq(this,'wrong')">She conquered it with an army</button></div></div><div class="mini-quiz-q"><div class="mq-text">C. Complete the sentence: The Phoenician alphabet had 22 ________, but no vowels.</div><div class="mq-opts"><button class="mq-opt" onclick="mq(this,'wrong')">vowels</button>
+<button class="mq-opt" onclick="mq(this,'correct')">consonants</button>
+<button class="mq-opt" onclick="mq(this,'wrong')">symbols</button></div></div>
+  <div class="lesson-nav">
+    <a class="nav-btn" href="ch15-f.html"><i class="ti ti-arrow-left"></i> Lesson 15F</a>
+    <a class="nav-btn primary" href="index.html">Back to all chapters <i class="ti ti-arrow-right"></i></a>
+  </div>
+</section>
+</main>
+<footer class="site-footer"><strong>Lexilink Ideation IELTS STUDIO</strong> · History ESL Course · Chapter 15 — Lesson G · Chapter Review</footer>
 <script>
-  function showTab(idx,btn){document.querySelectorAll('.section').forEach((s,i)=>s.classList.toggle('active',i===idx));document.querySelectorAll('.tab-btn').forEach(b=>b.classList.remove('active'));btn.classList.add('active');window.scrollTo({top:0,behavior:'smooth'});}
-  function toggleVocab(card){card.classList.toggle('open');}
-  function checkQ(name,correct,btn){const sel=document.querySelector('input[name="'+name+'"]:checked');const fb=btn.nextElementSibling;if(!sel){fb.textContent='Please choose an answer first.';fb.className='feedback wrong';return;}if(sel.value===correct){fb.textContent='✅ Correct! Well done.';fb.className='feedback correct';}else{fb.textContent='❌ Not quite. Read the story again and try once more.';fb.className='feedback wrong';}}
-  function revealFill(btn,answer){const fb=btn.nextElementSibling;fb.textContent='✅ Model answer: "'+answer+'"';fb.className='builder-feedback show';}
+function toggleVocab(card){card.classList.toggle('open');}
+function mcq(btn,type){
+  const item=btn.closest('.q-item');
+  item.querySelectorAll('.q-opt').forEach(b=>{b.classList.remove('correct','wrong');b.disabled=true;});
+  btn.classList.add(type);
+  const fb=item.querySelector('.q-feedback');
+  fb.className='q-feedback show '+(type==='correct'?'good':'bad');
+  fb.textContent=type==='correct'?'✓ Correct! Well done!':'✗ Not quite. Try to remember the story.';
+}
+function tf(btn,type,msg){
+  const item=btn.closest('.q-item');
+  item.querySelectorAll('.tf-btn').forEach(b=>{b.classList.remove('correct','wrong');b.disabled=true;});
+  btn.classList.add(type);
+  const fb=item.querySelector('.q-feedback');
+  fb.className='q-feedback show '+(type==='correct'?'good':'bad');
+  fb.textContent=(type==='correct'?'✓ ':'✗ ')+msg;
+}
+function mq(btn,type){
+  const item=btn.closest('.mini-quiz-q');
+  item.querySelectorAll('.mq-opt').forEach(b=>{b.classList.remove('correct','wrong');b.disabled=true;});
+  btn.classList.add(type);
+}
+function checkUnscramble(id,answer,rid){
+  const val=document.getElementById(id).value.trim().toLowerCase().replace(/[^a-z\s]/g,'');
+  const ans=answer.toLowerCase();
+  const r=document.getElementById(rid);
+  r.className='sb-result show '+(val===ans?'ok':'no');
+  r.textContent=val===ans?'✓ Perfect! "'+answer+'"':'✗ Try again. Check the word order.';
+}
+function checkFill(id,answer,rid){
+  const val=document.getElementById(id).value.trim().toLowerCase();
+  const r=document.getElementById(rid);
+  r.className='sb-result show '+(val===answer?'ok':'no');
+  r.textContent=val===answer?'✓ Correct!':'✗ The answer is: "'+answer+'"';
+}
+function scrollTo(id){document.getElementById(id).scrollIntoView({behavior:'smooth',block:'start'});}
+const parts=['p1','p2','p3','p4','p5','p6','p7','p8','p9','p10'];
+const partEls=document.querySelectorAll('.lp-part');
+window.addEventListener('scroll',()=>{
+  let current=0;
+  parts.forEach((id,i)=>{const el=document.getElementById(id);if(el&&el.getBoundingClientRect().top<200)current=i;});
+  partEls.forEach((el,i)=>{el.classList.remove('active','done');if(i<current)el.classList.add('done');else if(i===current)el.classList.add('active');});
+  const pct=Math.round(((current+1)/10)*100);
+  document.querySelector('.lp-fill').style.width=pct+'%';
+});
 </script>
-</body></html>
+</body>
+</html>

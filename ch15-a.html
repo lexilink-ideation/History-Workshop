@@ -1,730 +1,544 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width,initial-scale=1.0">
-  <title>Lesson 15A — Who Were the Phoenicians? | Lexilink History Workshop</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;600;700&family=Noto+Sans+SC&display=swap" rel="stylesheet">
-  <style>
-    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-    :root {
-      --navy: #1a2744;
-      --blue: #2563eb;
-      --blue-light: #dbeafe;
-      --gold: #f59e0b;
-      --gold-light: #fef3c7;
-      --green: #16a34a;
-      --green-light: #dcfce7;
-      --red: #dc2626;
-      --red-light: #fee2e2;
-      --gray: #6b7280;
-      --gray-light: #f3f4f6;
-      --white: #ffffff;
-      --radius: 12px;
-      --shadow: 0 2px 12px rgba(0,0,0,0.08);
-    }
-    body { font-family: 'Noto Sans', 'Noto Sans SC', sans-serif; background: #f8fafc; color: #1e293b; line-height: 1.7; }
-
-    /* NAV */
-    nav { background: var(--navy); padding: 0 24px; display: flex; align-items: center; gap: 16px; height: 52px; }
-    nav a { color: #cbd5e1; text-decoration: none; font-size: 0.85rem; font-weight: 600; letter-spacing: 0.02em; }
-    nav a:hover { color: white; }
-    nav .sep { color: #475569; }
-
-    /* LESSON HEADER */
-    .lesson-header { background: var(--navy); color: white; padding: 32px 24px 28px; }
-    .lesson-meta { font-size: 0.8rem; color: #94a3b8; text-transform: uppercase; letter-spacing: 0.08em; margin-bottom: 6px; }
-    .lesson-chapter { font-size: 0.9rem; color: #7dd3fc; margin-bottom: 14px; }
-    .lesson-header h1 { font-size: 1.9rem; font-weight: 700; margin-bottom: 8px; }
-    .lesson-subtitle { color: #cbd5e1; font-size: 1rem; margin-bottom: 16px; }
-    .lesson-tags { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 14px; }
-    .tag { background: rgba(255,255,255,0.12); border-radius: 20px; padding: 4px 12px; font-size: 0.78rem; color: #e2e8f0; }
-    .lesson-progress { font-size: 0.82rem; color: #94a3b8; }
-
-    /* TABS */
-    .tabs-bar { background: white; border-bottom: 2px solid #e2e8f0; overflow-x: auto; white-space: nowrap; padding: 0 16px; position: sticky; top: 0; z-index: 10; box-shadow: 0 2px 8px rgba(0,0,0,0.06); }
-    .tab-btn { display: inline-block; padding: 14px 14px 12px; cursor: pointer; font-size: 0.82rem; font-weight: 600; color: var(--gray); border-bottom: 3px solid transparent; margin-bottom: -2px; transition: all 0.2s; white-space: nowrap; background: none; border-top: none; border-left: none; border-right: none; }
-    .tab-btn:hover { color: var(--blue); }
-    .tab-btn.active { color: var(--blue); border-bottom-color: var(--blue); }
-    .tab-num { display: inline-flex; align-items: center; justify-content: center; width: 20px; height: 20px; background: var(--gray-light); border-radius: 50%; font-size: 0.72rem; font-weight: 700; margin-right: 5px; }
-    .tab-btn.active .tab-num { background: var(--blue); color: white; }
-
-    /* SECTIONS */
-    .section { display: none; max-width: 780px; margin: 0 auto; padding: 32px 20px; }
-    .section.active { display: block; }
-    .section-title { font-size: 1.3rem; font-weight: 700; color: var(--navy); margin-bottom: 6px; }
-    .section-subtitle { color: var(--gray); font-size: 0.88rem; margin-bottom: 24px; }
-
-    /* VOCAB CARDS */
-    .vocab-grid { display: grid; gap: 12px; }
-    .vocab-card { background: white; border-radius: var(--radius); box-shadow: var(--shadow); border: 1px solid #e2e8f0; overflow: hidden; cursor: pointer; }
-    .vocab-card-header { display: flex; align-items: center; gap: 12px; padding: 16px 20px; }
-    .vocab-word { font-size: 1.1rem; font-weight: 700; color: var(--navy); }
-    .vocab-pos { font-size: 0.75rem; color: var(--gray); background: var(--gray-light); border-radius: 4px; padding: 2px 7px; }
-    .vocab-pron { font-size: 0.82rem; color: var(--blue); margin-left: auto; font-style: italic; }
-    .vocab-expand { width: 24px; height: 24px; border-radius: 50%; background: var(--blue-light); color: var(--blue); display: flex; align-items: center; justify-content: center; font-size: 0.9rem; flex-shrink: 0; transition: transform 0.3s; }
-    .vocab-card.open .vocab-expand { transform: rotate(180deg); }
-    .vocab-body { display: none; padding: 0 20px 18px; border-top: 1px solid #f1f5f9; }
-    .vocab-card.open .vocab-body { display: block; }
-    .vocab-zh { font-size: 1rem; color: var(--navy); font-weight: 600; margin: 10px 0 4px; }
-    .vocab-def { color: #374151; font-size: 0.9rem; margin-bottom: 8px; }
-    .vocab-example { color: var(--gray); font-size: 0.85rem; font-style: italic; border-left: 3px solid var(--blue-light); padding-left: 10px; }
-
-    /* STORY */
-    .story-card { background: white; border-radius: var(--radius); box-shadow: var(--shadow); padding: 28px 28px; line-height: 1.9; font-size: 0.97rem; }
-    .story-card p { margin-bottom: 16px; }
-    .story-card p:last-child { margin-bottom: 0; }
-    .story-emoji { font-size: 2rem; display: block; margin-bottom: 12px; }
-    .story-card strong { color: var(--navy); }
-
-    /* READING COMPREHENSION */
-    .question-card { background: white; border-radius: var(--radius); box-shadow: var(--shadow); padding: 20px 22px; margin-bottom: 16px; }
-    .question-text { font-weight: 600; color: var(--navy); margin-bottom: 14px; }
-    .q-num { display: inline-flex; align-items: center; justify-content: center; width: 26px; height: 26px; background: var(--blue); color: white; border-radius: 50%; font-size: 0.8rem; font-weight: 700; margin-right: 8px; flex-shrink: 0; }
-    .options label { display: flex; align-items: flex-start; gap: 10px; padding: 10px 12px; margin-bottom: 8px; border-radius: 8px; border: 2px solid #e2e8f0; cursor: pointer; font-size: 0.9rem; transition: border-color 0.2s, background 0.2s; }
-    .options label:hover { border-color: var(--blue); background: var(--blue-light); }
-    .options input[type=radio] { margin-top: 3px; flex-shrink: 0; }
-    .check-btn { margin-top: 10px; background: var(--blue); color: white; border: none; padding: 8px 18px; border-radius: 8px; cursor: pointer; font-size: 0.85rem; font-weight: 600; }
-    .check-btn:hover { background: #1d4ed8; }
-    .feedback { display: none; margin-top: 8px; padding: 8px 12px; border-radius: 8px; font-size: 0.85rem; font-weight: 600; }
-    .feedback.correct { background: var(--green-light); color: var(--green); display: block; }
-    .feedback.wrong { background: var(--red-light); color: var(--red); display: block; }
-
-    /* GRAMMAR */
-    .grammar-block { background: white; border-radius: var(--radius); box-shadow: var(--shadow); padding: 22px 24px; margin-bottom: 18px; }
-    .grammar-label { display: inline-block; background: var(--navy); color: white; font-size: 0.75rem; font-weight: 700; padding: 3px 10px; border-radius: 4px; margin-bottom: 12px; letter-spacing: 0.04em; }
-    .grammar-title { font-size: 1rem; font-weight: 700; color: var(--navy); margin-bottom: 12px; }
-    .grammar-table { width: 100%; border-collapse: collapse; font-size: 0.88rem; margin: 12px 0; }
-    .grammar-table th { background: var(--navy); color: white; padding: 8px 12px; text-align: left; font-weight: 600; }
-    .grammar-table td { padding: 8px 12px; border-bottom: 1px solid #e2e8f0; }
-    .grammar-table tr:nth-child(even) td { background: var(--gray-light); }
-    .grammar-example { background: var(--blue-light); border-left: 4px solid var(--blue); border-radius: 6px; padding: 10px 14px; font-size: 0.9rem; margin: 8px 0; color: var(--navy); }
-    .grammar-note { color: var(--gray); font-size: 0.85rem; margin-top: 10px; font-style: italic; }
-
-    /* SENTENCE BUILDER */
-    .builder-card { background: white; border-radius: var(--radius); box-shadow: var(--shadow); padding: 20px 22px; margin-bottom: 16px; }
-    .builder-label { font-size: 0.78rem; font-weight: 700; color: var(--blue); text-transform: uppercase; letter-spacing: 0.06em; margin-bottom: 8px; }
-    .builder-prompt { font-size: 0.92rem; color: var(--navy); margin-bottom: 12px; font-weight: 500; }
-    .builder-input { width: 100%; border: 2px solid #e2e8f0; border-radius: 8px; padding: 10px 12px; font-size: 0.9rem; font-family: inherit; resize: vertical; transition: border-color 0.2s; }
-    .builder-input:focus { outline: none; border-color: var(--blue); }
-    .builder-check { margin-top: 8px; background: var(--blue); color: white; border: none; padding: 8px 16px; border-radius: 8px; cursor: pointer; font-size: 0.85rem; font-weight: 600; }
-    .builder-check:hover { background: #1d4ed8; }
-    .builder-feedback { display: none; margin-top: 8px; padding: 8px 12px; border-radius: 8px; font-size: 0.85rem; }
-    .builder-feedback.show { display: block; background: var(--green-light); color: var(--green); font-weight: 600; }
-    .match-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin-top: 8px; }
-    .match-item { background: var(--gray-light); border-radius: 8px; padding: 10px; font-size: 0.88rem; text-align: center; }
-
-    /* SPEAKING */
-    .speaking-level { display: inline-flex; align-items: center; gap: 6px; font-size: 0.8rem; font-weight: 700; padding: 4px 12px; border-radius: 20px; margin-bottom: 14px; }
-    .level-1 { background: #dcfce7; color: #15803d; }
-    .level-2 { background: #fef9c3; color: #a16207; }
-    .level-3 { background: #dbeafe; color: #1d4ed8; }
-    .speaking-question { background: white; border-radius: var(--radius); box-shadow: var(--shadow); padding: 18px 22px; margin-bottom: 14px; border-left: 4px solid var(--blue); }
-    .speaking-q { font-weight: 600; color: var(--navy); margin-bottom: 8px; }
-    .speaking-hint { font-size: 0.83rem; color: var(--gray); }
-    .speaking-hint span { color: var(--blue); font-style: italic; }
-
-    /* IDEAS */
-    .idea-card { background: white; border-radius: var(--radius); box-shadow: var(--shadow); padding: 20px 22px; margin-bottom: 14px; border-top: 4px solid var(--gold); }
-    .idea-emoji { font-size: 1.4rem; display: block; margin-bottom: 8px; }
-    .idea-card p { font-size: 0.9rem; color: #374151; line-height: 1.75; }
-    .idea-card strong { color: var(--navy); }
-
-    /* IELTS */
-    .ielts-banner { background: var(--navy); border-radius: var(--radius); padding: 20px 24px; color: white; margin-bottom: 20px; }
-    .ielts-banner h4 { font-size: 1rem; margin-bottom: 8px; color: #7dd3fc; }
-    .ielts-banner p { font-size: 0.88rem; color: #cbd5e1; }
-    .vocab-tags { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 12px; }
-    .vocab-tag { background: rgba(255,255,255,0.12); border-radius: 6px; padding: 4px 10px; font-size: 0.8rem; color: #e2e8f0; }
-    .colloc-list { list-style: none; margin: 12px 0 0; }
-    .colloc-list li { font-size: 0.88rem; color: #cbd5e1; padding: 3px 0; }
-    .colloc-list li::before { content: "→ "; color: #7dd3fc; }
-    .ielts-q { background: white; border-radius: var(--radius); padding: 14px 18px; margin-bottom: 10px; font-size: 0.88rem; color: var(--navy); box-shadow: var(--shadow); }
-    .ielts-q .ielts-num { font-weight: 700; color: var(--blue); margin-right: 6px; }
-    .ielts-writing { background: var(--gold-light); border-radius: var(--radius); padding: 18px 20px; border-left: 4px solid var(--gold); margin-top: 16px; }
-    .ielts-writing h5 { font-size: 0.85rem; font-weight: 700; color: #92400e; text-transform: uppercase; letter-spacing: 0.05em; margin-bottom: 8px; }
-    .ielts-writing p { font-size: 0.9rem; color: #78350f; font-style: italic; }
-
-    /* REVIEW */
-    .review-summary { background: var(--navy); color: white; border-radius: var(--radius); padding: 22px 24px; margin-bottom: 20px; }
-    .review-summary h4 { color: #7dd3fc; margin-bottom: 12px; font-size: 1rem; }
-    .review-summary p { color: #cbd5e1; font-size: 0.9rem; line-height: 1.75; margin-bottom: 8px; }
-    .star-words { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 20px; }
-    .star-word { background: var(--gold-light); color: #92400e; border-radius: 20px; padding: 5px 14px; font-size: 0.85rem; font-weight: 600; }
-    .big-idea { background: var(--blue-light); border-radius: var(--radius); padding: 18px 20px; margin-bottom: 20px; border-left: 4px solid var(--blue); }
-    .big-idea p { font-size: 0.92rem; color: var(--navy); }
-    .mini-quiz-card { background: white; border-radius: var(--radius); box-shadow: var(--shadow); padding: 20px 22px; margin-bottom: 14px; }
-    .mini-quiz-card .question-text { font-size: 0.95rem; }
-
-    /* NAV FOOTER */
-    .lesson-nav { max-width: 780px; margin: 0 auto; padding: 24px 20px 40px; display: flex; justify-content: space-between; align-items: center; gap: 12px; flex-wrap: wrap; }
-    .lesson-nav a { text-decoration: none; padding: 10px 20px; border-radius: 10px; font-size: 0.88rem; font-weight: 600; transition: all 0.2s; }
-    .nav-prev { background: var(--gray-light); color: var(--navy); }
-    .nav-prev:hover { background: #e2e8f0; }
-    .nav-next { background: var(--blue); color: white; }
-    .nav-next:hover { background: #1d4ed8; }
-    .site-footer { background: var(--navy); color: #94a3b8; text-align: center; padding: 16px; font-size: 0.8rem; }
-
-    @media (max-width: 600px) {
-      .lesson-header h1 { font-size: 1.5rem; }
-      .tab-btn { padding: 12px 10px; font-size: 0.78rem; }
-    }
-  </style>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+<title>Lesson 15A — Who Were the Phoenicians? | Lexilink History Workshop</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"/>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet"/>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@latest/tabler-icons.min.css"/>
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
+:root{
+  --bg:#0F0800;--surface:rgba(255,255,255,0.04);--surface2:rgba(255,255,255,0.07);
+  --border:rgba(255,255,255,0.10);--border2:rgba(255,255,255,0.06);
+  --amber-300:#E8A832;--amber-400:#D4890F;--amber-500:#B8720A;
+  --amber-bg:rgba(212,137,15,0.12);--amber-border:rgba(212,137,15,0.3);
+  --text:#fff;--text2:rgba(255,255,255,0.72);--text3:rgba(255,255,255,0.45);
+  --teal:#1D9E75;--teal-bg:rgba(29,158,117,0.12);--teal-border:rgba(29,158,117,0.3);
+  --coral:#E05C3A;--coral-bg:rgba(224,92,58,0.12);
+  --blue:#4A9EE0;--blue-bg:rgba(74,158,224,0.12);
+  --r:12px;--r-sm:8px;
+}
+html{scroll-behavior:smooth;}
+body{font-family:'Inter',sans-serif;background:var(--bg);color:var(--text);min-height:100vh;line-height:1.6;}
+.site-header{background:#111;border-bottom:1px solid rgba(255,255,255,0.08);position:sticky;top:0;z-index:100;}
+.hdr{max-width:860px;margin:0 auto;padding:0 1.5rem;height:54px;display:flex;align-items:center;gap:12px;}
+.logo-wrap{display:flex;align-items:center;gap:8px;text-decoration:none;}
+.logo-icon{width:30px;height:30px;display:flex;align-items:center;justify-content:center;}
+.logo-icon svg{width:26px;height:26px;}
+.logo-name{font-size:13px;font-weight:700;color:#fff;}
+.hdr-pipe{width:1px;height:20px;background:rgba(255,255,255,0.15);}
+.hdr-back{display:flex;align-items:center;gap:5px;font-size:12px;color:var(--text3);text-decoration:none;transition:color .15s;}
+.hdr-back:hover{color:var(--text2);}
+.hdr-spacer{flex:1;}
+.hdr-badge{font-size:10px;font-weight:700;letter-spacing:.05em;padding:3px 10px;border-radius:99px;border:1px solid var(--amber-border);color:var(--amber-300);background:var(--amber-bg);}
+.lesson-hero{background:linear-gradient(135deg,#2C1600 0%,#5C3200 40%,#7A4500 100%);padding:3rem 1.5rem 2.5rem;text-align:center;position:relative;overflow:hidden;}
+.lesson-hero::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse 70% 60% at 50% 50%,rgba(200,130,0,0.15),transparent);pointer-events:none;}
+.lesson-eyebrow{font-size:10px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--amber-300);margin-bottom:.75rem;}
+.lesson-hero h1{font-size:clamp(22px,4vw,36px);font-weight:700;color:#fff;letter-spacing:-.02em;margin-bottom:.5rem;}
+.lesson-hero p{font-size:14px;color:rgba(255,255,255,0.65);max-width:520px;margin:0 auto .875rem;}
+.lesson-pills{display:flex;flex-wrap:wrap;justify-content:center;gap:8px;}
+.l-pill{font-size:11px;font-weight:500;padding:4px 12px;border-radius:99px;border:1px solid rgba(255,255,255,0.18);color:rgba(255,255,255,0.75);background:rgba(255,255,255,0.06);}
+.lesson-progress{background:#1A1100;border-bottom:1px solid rgba(255,255,255,0.06);padding:.75rem 1.5rem;}
+.lp-inner{max-width:860px;margin:0 auto;}
+.lp-labels{display:flex;justify-content:space-between;font-size:11px;color:var(--text3);margin-bottom:6px;}
+.lp-track{height:4px;border-radius:99px;background:rgba(255,255,255,0.08);}
+.lp-fill{height:100%;border-radius:99px;background:linear-gradient(90deg,var(--amber-500),var(--amber-300));width:10%;}
+.lp-parts{display:flex;gap:4px;margin-top:8px;flex-wrap:wrap;}
+.lp-part{font-size:10px;font-weight:600;padding:2px 8px;border-radius:99px;background:rgba(255,255,255,0.06);color:var(--text3);cursor:pointer;transition:all .15s;}
+.lp-part.done{background:var(--amber-bg);color:var(--amber-300);border:1px solid var(--amber-border);}
+.lp-part.active{background:var(--amber-400);color:#1A0800;}
+.main{max-width:860px;margin:0 auto;padding:2rem 1.5rem 5rem;}
+.sec{background:var(--surface);border:1px solid var(--border);border-radius:var(--r);padding:1.5rem;margin-bottom:1.5rem;scroll-margin-top:80px;}
+.sec-header{display:flex;align-items:center;gap:10px;margin-bottom:1.25rem;}
+.sec-num{width:28px;height:28px;border-radius:8px;display:flex;align-items:center;justify-content:center;font-size:11px;font-weight:700;background:var(--amber-bg);color:var(--amber-300);border:1px solid var(--amber-border);flex-shrink:0;}
+.sec-title{font-size:16px;font-weight:700;color:#fff;}
+.sec-sub{font-size:12px;color:var(--text3);margin-top:1px;}
+.vocab-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(240px,1fr));gap:10px;}
+.vocab-card{background:var(--surface2);border:1px solid var(--border2);border-radius:var(--r-sm);padding:1rem;cursor:pointer;transition:border-color .15s;}
+.vocab-card:hover,.vocab-card.open{border-color:var(--amber-border);}
+.vc-top{display:flex;align-items:baseline;gap:8px;}
+.vc-word{font-size:16px;font-weight:700;color:#fff;}
+.vc-pos{font-size:10px;font-weight:600;padding:1px 7px;border-radius:99px;background:var(--amber-bg);color:var(--amber-300);}
+.vc-pron{font-size:12px;color:var(--text3);margin-top:2px;font-style:italic;}
+.vc-cn{font-size:15px;color:var(--amber-300);margin-top:4px;font-weight:600;}
+.vc-detail{display:none;margin-top:10px;padding-top:10px;border-top:1px solid var(--border2);}
+.vocab-card.open .vc-detail{display:block;}
+.vc-def{font-size:13px;color:var(--text2);margin-bottom:6px;}
+.vc-ex{font-size:12px;color:var(--text3);font-style:italic;padding-left:8px;border-left:2px solid var(--amber-border);}
+.story-body p{font-size:15px;color:var(--text2);line-height:1.8;margin-bottom:1rem;}
+.story-body p:last-child{margin-bottom:0;}
+.story-hl{color:var(--amber-300);font-weight:600;}
+.story-box{background:var(--amber-bg);border:1px solid var(--amber-border);border-radius:var(--r-sm);padding:1rem 1.25rem;margin:1.25rem 0;font-size:14px;color:rgba(255,255,255,0.85);line-height:1.7;font-style:italic;}
+.story-box::before{content:'"';font-size:32px;color:var(--amber-400);line-height:1;display:block;margin-bottom:.25rem;}
+.story-icon{font-size:40px;text-align:center;margin:1rem 0;}
+.quiz-list{display:flex;flex-direction:column;gap:14px;}
+.q-item{background:var(--surface2);border:1px solid var(--border2);border-radius:var(--r-sm);padding:1rem 1.25rem;}
+.q-text{font-size:14px;font-weight:600;color:#fff;margin-bottom:.75rem;}
+.q-opts{display:flex;flex-direction:column;gap:6px;}
+.q-opt{display:flex;align-items:center;gap:10px;padding:8px 12px;border-radius:8px;border:1px solid var(--border);background:transparent;cursor:pointer;font-size:13px;color:var(--text2);width:100%;text-align:left;transition:all .15s;}
+.q-opt:hover{border-color:var(--amber-border);background:var(--amber-bg);}
+.q-opt.correct{border-color:var(--teal-border);background:var(--teal-bg);color:#fff;}
+.q-opt.wrong{border-color:rgba(224,92,58,0.4);background:var(--coral-bg);color:#fff;}
+.q-feedback{font-size:12px;margin-top:8px;padding:6px 10px;border-radius:6px;display:none;}
+.q-feedback.show{display:block;}
+.q-feedback.good{background:var(--teal-bg);color:#5DCAA5;}
+.q-feedback.bad{background:var(--coral-bg);color:#F09B80;}
+.tf-opts{display:flex;gap:8px;}
+.tf-btn{flex:1;padding:8px;border-radius:8px;border:1px solid var(--border);background:transparent;cursor:pointer;font-size:13px;font-weight:600;color:var(--text2);transition:all .15s;}
+.tf-btn:hover{border-color:var(--amber-border);background:var(--amber-bg);}
+.tf-btn.correct{border-color:var(--teal-border);background:var(--teal-bg);color:#fff;}
+.tf-btn.wrong{border-color:rgba(224,92,58,0.4);background:var(--coral-bg);color:#fff;}
+.grammar-box{background:var(--surface2);border-left:3px solid var(--amber-400);border-radius:0 var(--r-sm) var(--r-sm) 0;padding:1rem 1.25rem;margin-bottom:1rem;}
+.grammar-label{font-size:10px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--amber-300);margin-bottom:.5rem;}
+.grammar-rule{font-size:14px;color:#fff;font-weight:600;margin-bottom:.5rem;}
+.grammar-eg{font-size:13px;color:var(--text2);margin-top:.25rem;font-style:italic;}
+.grammar-eg span{color:var(--amber-300);font-weight:600;font-style:normal;}
+.grammar-table{width:100%;border-collapse:collapse;font-size:13px;margin-top:.75rem;}
+.grammar-table th{text-align:left;padding:6px 10px;font-size:10px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;color:var(--text3);border-bottom:1px solid var(--border);}
+.grammar-table td{padding:7px 10px;color:var(--text2);border-bottom:1px solid var(--border2);}
+.grammar-table td:first-child{color:#fff;font-weight:500;}
+.hl{color:var(--amber-300);font-weight:600;}
+.sb-activity{margin-bottom:1.25rem;}
+.sb-label{font-size:11px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;color:var(--amber-300);margin-bottom:.75rem;}
+.sb-input{width:100%;background:var(--surface2);border:1px solid var(--border);border-radius:var(--r-sm);padding:.625rem .875rem;font-size:14px;color:#fff;font-family:'Inter',sans-serif;transition:border-color .15s;outline:none;margin-bottom:.5rem;}
+.sb-input:focus{border-color:var(--amber-border);}
+.sb-check{padding:7px 18px;border-radius:99px;background:var(--amber-400);color:#1A0800;font-size:13px;font-weight:700;border:none;cursor:pointer;transition:opacity .15s;}
+.sb-check:hover{opacity:.85;}
+.sb-result{font-size:12px;margin-top:6px;padding:6px 10px;border-radius:6px;display:none;}
+.sb-result.show{display:block;}
+.sb-result.ok{background:var(--teal-bg);color:#5DCAA5;}
+.sb-result.no{background:var(--coral-bg);color:#F09B80;}
+.speak-level{margin-bottom:1.25rem;}
+.speak-badge{display:inline-flex;align-items:center;gap:6px;font-size:11px;font-weight:700;padding:3px 12px;border-radius:99px;margin-bottom:.875rem;}
+.speak-badge.l1{background:var(--teal-bg);color:#5DCAA5;border:1px solid var(--teal-border);}
+.speak-badge.l2{background:var(--amber-bg);color:var(--amber-300);border:1px solid var(--amber-border);}
+.speak-badge.l3{background:var(--blue-bg);color:var(--blue);border:1px solid rgba(74,158,224,0.3);}
+.speak-q{background:var(--surface2);border:1px solid var(--border2);border-radius:var(--r-sm);padding:1rem 1.25rem;margin-bottom:.75rem;}
+.speak-q p{font-size:14px;font-weight:600;color:#fff;margin-bottom:.5rem;}
+.speak-hint{font-size:12px;color:var(--text3);}
+.speak-hint span{color:var(--amber-300);}
+.idea-q{background:var(--surface2);border:1px solid var(--border2);border-radius:var(--r-sm);padding:1rem 1.25rem;margin-bottom:.75rem;display:flex;gap:10px;}
+.idea-icon{font-size:20px;flex-shrink:0;margin-top:2px;}
+.idea-text{font-size:14px;color:var(--text2);line-height:1.6;}
+.idea-text strong{color:#fff;}
+.ielts-topic{background:var(--blue-bg);border:1px solid rgba(74,158,224,0.25);border-radius:var(--r-sm);padding:1rem 1.25rem;margin-bottom:1.25rem;}
+.ielts-topic-label{font-size:10px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--blue);margin-bottom:.25rem;}
+.ielts-topic h4{font-size:16px;font-weight:700;color:#fff;}
+.vocab-chips{display:flex;flex-wrap:wrap;gap:6px;margin-top:.75rem;}
+.chip{font-size:12px;padding:4px 12px;border-radius:99px;background:rgba(255,255,255,0.06);border:1px solid var(--border);color:var(--text2);}
+.chip.amber{background:var(--amber-bg);border-color:var(--amber-border);color:var(--amber-300);}
+.ielts-qs{display:flex;flex-direction:column;gap:8px;margin-top:1rem;}
+.ielts-q{display:flex;gap:10px;background:var(--surface2);border-radius:var(--r-sm);padding:.875rem 1rem;}
+.ielts-q-num{font-size:11px;font-weight:700;color:var(--blue);min-width:20px;}
+.ielts-q-text{font-size:13px;color:var(--text2);}
+.ielts-w2{background:rgba(74,158,224,0.08);border:1px solid rgba(74,158,224,0.2);border-radius:var(--r-sm);padding:1rem 1.25rem;margin-top:1rem;}
+.ielts-w2-label{font-size:10px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--blue);margin-bottom:.5rem;}
+.ielts-w2 p{font-size:14px;color:var(--text2);line-height:1.7;font-style:italic;}
+.star-words{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:1.25rem;}
+.star-word{display:flex;align-items:center;gap:6px;padding:6px 14px;border-radius:99px;background:var(--amber-bg);border:1px solid var(--amber-border);font-size:13px;font-weight:600;color:var(--amber-300);}
+.think-box{background:var(--surface2);border:1px solid var(--border2);border-radius:var(--r-sm);padding:1rem 1.25rem;margin-bottom:1rem;}
+.think-box .think-head{font-size:12px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;color:var(--amber-300);margin-bottom:.5rem;}
+.think-box p{font-size:14px;color:var(--text2);}
+.mini-quiz-q{background:var(--surface2);border:1px solid var(--border2);border-radius:var(--r-sm);padding:1rem;margin-bottom:.75rem;}
+.mq-text{font-size:13px;font-weight:600;color:#fff;margin-bottom:.625rem;}
+.mq-opts{display:flex;flex-direction:column;gap:5px;}
+.mq-opt{padding:7px 12px;border-radius:6px;border:1px solid var(--border);background:transparent;font-size:12px;color:var(--text2);cursor:pointer;text-align:left;transition:all .15s;}
+.mq-opt:hover{border-color:var(--amber-border);background:var(--amber-bg);}
+.mq-opt.correct{border-color:var(--teal-border);background:var(--teal-bg);color:#fff;}
+.mq-opt.wrong{border-color:rgba(224,92,58,0.4);background:var(--coral-bg);color:#fff;}
+.lesson-nav{display:flex;gap:10px;margin-top:2rem;}
+.nav-btn{display:flex;align-items:center;gap:6px;padding:.75rem 1.25rem;border-radius:10px;font-size:13px;font-weight:600;cursor:pointer;text-decoration:none;border:1px solid var(--border);color:var(--text2);background:var(--surface);transition:all .15s;flex:1;justify-content:center;}
+.nav-btn:hover{border-color:var(--border2);color:#fff;}
+.nav-btn.primary{background:var(--amber-400);color:#1A0800;border-color:transparent;}
+.nav-btn.primary:hover{opacity:.9;}
+.site-footer{background:#111;border-top:1px solid rgba(255,255,255,0.07);text-align:center;padding:1.5rem;font-size:12px;color:rgba(255,255,255,0.3);}
+.site-footer strong{color:var(--amber-300);}
+@media(max-width:600px){.vocab-grid{grid-template-columns:1fr;}.lesson-nav{flex-direction:column;}}
+</style>
 </head>
 <body>
-
-<nav>
-  <a href="https://lexilink-ideation.github.io/index.html">Lexilink Ideation IELTS STUDIO</a>
-  <span class="sep">·</span>
-  <a href="https://lexilink-ideation.github.io/index.html">Vol. 1</a>
-</nav>
-
-<div class="lesson-header">
-  <div class="lesson-meta">Lesson 15A</div>
-  <div class="lesson-chapter">Chapter 15 · The Phoenicians</div>
+<header class="site-header">
+  <div class="hdr">
+    <a class="logo-wrap" href="index.html">
+      <div class="logo-icon"><svg viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+          <path d="M6 24 C8 18,14 10,24 6 C20 10,18 14,20 18 C16 16,12 18,6 24Z" fill="white"/>
+          <path d="M20 18 C22 20,22 23,20 26 C18 24,18 21,20 18Z" fill="rgba(255,255,255,0.5)"/>
+        </svg></div>
+      <span class="logo-name">Lexilink Ideation IELTS STUDIO</span>
+    </a>
+    <div class="hdr-pipe"></div>
+    <a class="hdr-back" href="index.html"><i class="ti ti-arrow-left" aria-hidden="true"></i> Vol. 1</a>
+    <div class="hdr-spacer"></div>
+    <span class="hdr-badge">Lesson 15A</span>
+  </div>
+</header>
+<section class="lesson-hero">
+  <p class="lesson-eyebrow">Chapter 15 · The Phoenicians</p>
   <h1>Who Were the Phoenicians?</h1>
-  <p class="lesson-subtitle">The greatest sailors of the ancient world — and why they took to the sea</p>
-  <div class="lesson-tags">
-    <span class="tag">📖 Story + Vocabulary</span>
-    <span class="tag">🎤 Speaking</span>
-    <span class="tag">✏️ Grammar</span>
-    <span class="tag">⭐ CEFR A2–B1</span>
-  </div>
-  <div class="lesson-progress">Lesson 15A of 7 &nbsp;·&nbsp; Part 1 of 10</div>
-</div>
-
-<div class="tabs-bar">
-  <button class="tab-btn active" onclick="showTab(0,this)"><span class="tab-num">1</span>Vocab</button>
-  <button class="tab-btn" onclick="showTab(1,this)"><span class="tab-num">2</span>Story</button>
-  <button class="tab-btn" onclick="showTab(2,this)"><span class="tab-num">3</span>Reading</button>
-  <button class="tab-btn" onclick="showTab(3,this)"><span class="tab-num">4</span>Grammar</button>
-  <button class="tab-btn" onclick="showTab(4,this)"><span class="tab-num">5</span>Builder</button>
-  <button class="tab-btn" onclick="showTab(5,this)"><span class="tab-num">6</span>Speaking 1</button>
-  <button class="tab-btn" onclick="showTab(6,this)"><span class="tab-num">7</span>Speaking 2</button>
-  <button class="tab-btn" onclick="showTab(7,this)"><span class="tab-num">8</span>Ideas</button>
-  <button class="tab-btn" onclick="showTab(8,this)"><span class="tab-num">9</span>IELTS</button>
-  <button class="tab-btn" onclick="showTab(9,this)"><span class="tab-num">10</span>Review</button>
-</div>
-
-<!-- SECTION 1: VOCAB -->
-<div class="section active" id="sec-0">
-  <div class="section-title">1 — Vocabulary</div>
-  <div class="section-subtitle">Click each word to learn more</div>
-  <div class="vocab-grid">
-    <div class="vocab-card" onclick="toggleVocab(this)">
-      <div class="vocab-card-header">
-        <span class="vocab-word">Phoenician</span>
-        <span class="vocab-pos">noun / adj</span>
-        <span class="vocab-pron">/fɪˈniː.ʃ ə n/</span>
-        <div class="vocab-expand">▼</div>
-      </div>
-      <div class="vocab-body">
-        <div class="vocab-zh">腓尼基人</div>
-        <div class="vocab-def">A person from the ancient land of Phoenicia, in the northern part of Canaan, along the Mediterranean coast.</div>
-        <div class="vocab-example">"The Phoenicians were the greatest sailors in the ancient world."</div>
-      </div>
-    </div>
-    <div class="vocab-card" onclick="toggleVocab(this)">
-      <div class="vocab-card-header">
-        <span class="vocab-word">Mediterranean</span>
-        <span class="vocab-pos">noun / adj</span>
-        <span class="vocab-pron">/ˌmed.ɪ.t ə ˈreɪ.ni.ən/</span>
-        <div class="vocab-expand">▼</div>
-      </div>
-      <div class="vocab-body">
-        <div class="vocab-zh">地中海</div>
-        <div class="vocab-def">The large sea surrounded by Europe, Africa, and Asia. Many ancient civilizations lived along its shores.</div>
-        <div class="vocab-example">"The Phoenicians sailed all around the Mediterranean Sea."</div>
-      </div>
-    </div>
-    <div class="vocab-card" onclick="toggleVocab(this)">
-      <div class="vocab-card-header">
-        <span class="vocab-word">coastal</span>
-        <span class="vocab-pos">adjective</span>
-        <span class="vocab-pron">/ˈkəʊ.stəl/</span>
-        <div class="vocab-expand">▼</div>
-      </div>
-      <div class="vocab-body">
-        <div class="vocab-zh">沿海的；海岸的</div>
-        <div class="vocab-def">Relating to the area near the sea or ocean.</div>
-        <div class="vocab-example">"The Phoenicians lived in a coastal region with many natural harbours."</div>
-      </div>
-    </div>
-    <div class="vocab-card" onclick="toggleVocab(this)">
-      <div class="vocab-card-header">
-        <span class="vocab-word">craggy</span>
-        <span class="vocab-pos">adjective</span>
-        <span class="vocab-pron">/ˈkræɡ.i/</span>
-        <div class="vocab-expand">▼</div>
-      </div>
-      <div class="vocab-body">
-        <div class="vocab-zh">崎岖的；多峭壁的</div>
-        <div class="vocab-def">Rough and rocky, with steep cliffs. Difficult to climb or farm.</div>
-        <div class="vocab-example">"The land was surrounded by steep, craggy hills that made farming almost impossible."</div>
-      </div>
-    </div>
-    <div class="vocab-card" onclick="toggleVocab(this)">
-      <div class="vocab-card-header">
-        <span class="vocab-word">fertile</span>
-        <span class="vocab-pos">adjective</span>
-        <span class="vocab-pron">/ˈfɜː.taɪl/</span>
-        <div class="vocab-expand">▼</div>
-      </div>
-      <div class="vocab-body">
-        <div class="vocab-zh">肥沃的；适宜种植的</div>
-        <div class="vocab-def">Good for growing crops. Land that produces a lot of food.</div>
-        <div class="vocab-example">"The land was not fertile — it was too rocky and dry to grow wheat."</div>
-      </div>
-    </div>
-    <div class="vocab-card" onclick="toggleVocab(this)">
-      <div class="vocab-card-header">
-        <span class="vocab-word">harbour</span>
-        <span class="vocab-pos">noun</span>
-        <span class="vocab-pron">/ˈhɑː.bər/</span>
-        <div class="vocab-expand">▼</div>
-      </div>
-      <div class="vocab-body">
-        <div class="vocab-zh">港口；海湾</div>
-        <div class="vocab-def">A sheltered area of water where ships can safely stop and load or unload goods.</div>
-        <div class="vocab-example">"Ships from many nations came to rest in the Phoenician harbours."</div>
-      </div>
-    </div>
-    <div class="vocab-card" onclick="toggleVocab(this)">
-      <div class="vocab-card-header">
-        <span class="vocab-word">navigate</span>
-        <span class="vocab-pos">verb</span>
-        <span class="vocab-pron">/ˈnæv.ɪ.ɡeɪt/</span>
-        <div class="vocab-expand">▼</div>
-      </div>
-      <div class="vocab-body">
-        <div class="vocab-zh">航行；导航</div>
-        <div class="vocab-def">To plan and control the direction you are travelling, especially on a boat or ship.</div>
-        <div class="vocab-example">"The Phoenicians learned to navigate by the stars at night."</div>
-      </div>
-    </div>
-    <div class="vocab-card" onclick="toggleVocab(this)">
-      <div class="vocab-card-header">
-        <span class="vocab-word">adapt</span>
-        <span class="vocab-pos">verb</span>
-        <span class="vocab-pron">/əˈdæpt/</span>
-        <div class="vocab-expand">▼</div>
-      </div>
-      <div class="vocab-body">
-        <div class="vocab-zh">适应；改变</div>
-        <div class="vocab-def">To change your behaviour or way of life to suit a new situation.</div>
-        <div class="vocab-example">"Because the land was poor, the Phoenicians had to adapt — they turned to the sea instead."</div>
-      </div>
-    </div>
-    <div class="vocab-card" onclick="toggleVocab(this)">
-      <div class="vocab-card-header">
-        <span class="vocab-word">merchant</span>
-        <span class="vocab-pos">noun</span>
-        <span class="vocab-pron">/ˈmɜː.tʃənt/</span>
-        <div class="vocab-expand">▼</div>
-      </div>
-      <div class="vocab-body">
-        <div class="vocab-zh">商人</div>
-        <div class="vocab-def">A person who buys and sells goods, especially in large quantities.</div>
-        <div class="vocab-example">"The Phoenicians became wealthy merchants who sailed from country to country."</div>
-      </div>
-    </div>
-    <div class="vocab-card" onclick="toggleVocab(this)">
-      <div class="vocab-card-header">
-        <span class="vocab-word">isolation</span>
-        <span class="vocab-pos">noun</span>
-        <span class="vocab-pron">/ˌaɪ.s ə ˈleɪ.ʃ ə n/</span>
-        <div class="vocab-expand">▼</div>
-      </div>
-      <div class="vocab-body">
-        <div class="vocab-zh">隔离；孤立</div>
-        <div class="vocab-def">The state of being separated from other people or places.</div>
-        <div class="vocab-example">"The craggy hills around Phoenicia created isolation — it was hard to travel in or out by land."</div>
-      </div>
+  <p>From mountain traders to masters of the Mediterranean Sea</p>
+  <div class="lesson-pills"><span class="l-pill">📖 Story + Vocabulary</span><span class="l-pill">🎤 Speaking</span><span class="l-pill">✏️ Grammar</span><span class="l-pill">⭐ CEFR A2–B1</span></div>
+</section>
+<div class="lesson-progress">
+  <div class="lp-inner">
+    <div class="lp-labels"><span>Lesson 15A of 7</span><span style="color:var(--amber-300)">Part 1 of 10</span></div>
+    <div class="lp-track"><div class="lp-fill"></div></div>
+    <div class="lp-parts">
+      <span class="lp-part active" onclick="scrollTo('p1')">1 Vocab</span>
+      <span class="lp-part" onclick="scrollTo('p2')">2 Story</span>
+      <span class="lp-part" onclick="scrollTo('p3')">3 Reading</span>
+      <span class="lp-part" onclick="scrollTo('p4')">4 Grammar</span>
+      <span class="lp-part" onclick="scrollTo('p5')">5 Builder</span>
+      <span class="lp-part" onclick="scrollTo('p6')">6 Speaking 1</span>
+      <span class="lp-part" onclick="scrollTo('p7')">7 Speaking 2</span>
+      <span class="lp-part" onclick="scrollTo('p8')">8 Ideas</span>
+      <span class="lp-part" onclick="scrollTo('p9')">9 IELTS</span>
+      <span class="lp-part" onclick="scrollTo('p10')">10 Review</span>
     </div>
   </div>
 </div>
-
-<!-- SECTION 2: STORY -->
-<div class="section" id="sec-1">
-  <div class="section-title">2 — The Story</div>
-  <div class="section-subtitle">Read carefully. Notice the bold words.</div>
-  <div class="story-card">
-    <span class="story-emoji">🌊</span>
-    <p>After the great Exodus, the Israelites walked north from Egypt back to Canaan — the land that Abraham had once called home. But when they arrived, they found that they were not the only people living there. Others had made Canaan their home too.</p>
-    <p>In the <strong>northern</strong> part of Canaan lived a people called the <strong>Phoenicians</strong>. And they were unlike any other people in the ancient world. Why? Because they were the greatest sailors who had ever lived.</p>
-    <p>To understand why the Phoenicians took to the sea, you have to understand their land. Northern Canaan — the land of the Phoenicians — was a narrow strip of <strong>coastal</strong> territory. On one side: the blue Mediterranean Sea. On the other: steep, <strong>craggy</strong> hills that made it almost impossible to travel inland.</p>
-    <span class="story-emoji">🪨</span>
-    <p>The land itself was a problem. It was rocky and sandy and dry — not at all <strong>fertile</strong>. You could not grow wheat there. You could not raise fat, healthy animals. And you could not easily escape by land, because the hills were too steep and rough.</p>
-    <p>So what did the Phoenicians do? They did what clever people do when the land fails them: they <strong>adapted</strong>. They looked at that long stretch of blue water in front of them, and they thought: "We will go to sea."</p>
-    <p>They built boats. Then they built better boats. They practised sailing close to the shore, then further out, then all the way across the open <strong>Mediterranean</strong>. They learned to <strong>navigate</strong> by the stars at night. They learned to read the winds and the currents.</p>
-    <span class="story-emoji">⚓</span>
-    <p>Soon, the Phoenicians were the best sailors in the world. Their ships pushed out into the sea and reached places no other people had visited — down the coast of Africa, across to Spain, and perhaps even further.</p>
-    <p>They built <strong>harbours</strong> — safe places where ships could stop and rest. And wherever their ships went, they brought goods to trade. They became <strong>merchants</strong> of the sea: buying and selling, sailing and exploring, connecting the ancient world in ways nobody had done before.</p>
-    <p>The <strong>isolation</strong> that their craggy hills had created was now their greatest strength. Because they could not travel easily by land, they had mastered the sea. And the sea belonged to no nation — it was open to anyone brave enough to sail it.</p>
-    <p>The Phoenicians were brave enough.</p>
+<main class="main">
+<section class="sec" id="p1">
+  <div class="sec-header">
+    <div class="sec-num">1</div>
+    <div><div class="sec-title">Vocabulary</div><div class="sec-sub">Click each word to learn more</div></div>
   </div>
-</div>
-
-<!-- SECTION 3: READING COMPREHENSION -->
-<div class="section" id="sec-2">
-  <div class="section-title">3 — Reading Comprehension</div>
-  <div class="section-subtitle">Choose the best answer. Get instant feedback!</div>
-
-  <div class="question-card">
-    <div class="question-text"><span class="q-num">1</span>Where did the Phoenicians live?</div>
-    <div class="options">
-      <label><input type="radio" name="q1" value="a"> In southern Canaan, near the desert</label>
-      <label><input type="radio" name="q1" value="b"> In the northern coastal part of Canaan</label>
-      <label><input type="radio" name="q1" value="c"> In Egypt, along the River Nile</label>
+  <div class="vocab-grid"><div class="vocab-card" onclick="toggleVocab(this)">
+      <div class="vc-top"><span class="vc-word">Phoenician</span><span class="vc-pos">noun</span></div>
+      <div class="vc-pron">/fəˈnɪʃ.ən/</div>
+      <div class="vc-cn">腓尼基人</div>
+      <div class="vc-detail">
+        <div class="vc-def">A person from the ancient trading civilisation that lived on the eastern coast of the Mediterranean Sea.</div>
+        <div class="vc-ex">"The Phoenicians were famous sailors and traders throughout the ancient world."</div>
+      </div>
+    </div><div class="vocab-card" onclick="toggleVocab(this)">
+      <div class="vc-top"><span class="vc-word">Mediterranean</span><span class="vc-pos">noun</span></div>
+      <div class="vc-pron">/ˌmed.ɪ.tə.ˈreɪ.ni.ən/</div>
+      <div class="vc-cn">地中海</div>
+      <div class="vc-detail">
+        <div class="vc-def">The large sea surrounded by Europe, Africa, and Asia — a centre of ancient trade.</div>
+        <div class="vc-ex">"The Phoenicians sailed all the way across the Mediterranean Sea to trade."</div>
+      </div>
+    </div><div class="vocab-card" onclick="toggleVocab(this)">
+      <div class="vc-top"><span class="vc-word">merchant</span><span class="vc-pos">noun</span></div>
+      <div class="vc-pron">/ˈmɜː.tʃənt/</div>
+      <div class="vc-cn">商人</div>
+      <div class="vc-detail">
+        <div class="vc-def">A person who buys and sells goods, especially in large amounts, to make money.</div>
+        <div class="vc-ex">"Phoenician merchants sold cedar wood and fine cloth to people across the ancient world."</div>
+      </div>
+    </div><div class="vocab-card" onclick="toggleVocab(this)">
+      <div class="vc-top"><span class="vc-word">harbour</span><span class="vc-pos">noun</span></div>
+      <div class="vc-pron">/ˈhɑː.bər/</div>
+      <div class="vc-cn">港口</div>
+      <div class="vc-detail">
+        <div class="vc-def">A sheltered area of water near the coast where ships can dock safely.</div>
+        <div class="vc-ex">"Tyre had a natural harbour that made it a perfect city for trade."</div>
+      </div>
+    </div><div class="vocab-card" onclick="toggleVocab(this)">
+      <div class="vc-top"><span class="vc-word">cedar</span><span class="vc-pos">noun</span></div>
+      <div class="vc-pron">/ˈsiː.dər/</div>
+      <div class="vc-cn">雪松</div>
+      <div class="vc-detail">
+        <div class="vc-def">A tall, strong tree with sweet-smelling wood, found in mountain forests.</div>
+        <div class="vc-ex">"The Phoenicians cut cedar trees from the mountains and sold the wood to Egypt."</div>
+      </div>
+    </div><div class="vocab-card" onclick="toggleVocab(this)">
+      <div class="vc-top"><span class="vc-word">scarce</span><span class="vc-pos">adjective</span></div>
+      <div class="vc-pron">/skeəs/</div>
+      <div class="vc-cn">稀缺的</div>
+      <div class="vc-detail">
+        <div class="vc-def">Not enough of something; very hard to find.</div>
+        <div class="vc-ex">"Good farmland was scarce in Phoenicia because the mountains were so close to the sea."</div>
+      </div>
+    </div><div class="vocab-card" onclick="toggleVocab(this)">
+      <div class="vc-top"><span class="vc-word">fertile</span><span class="vc-pos">adjective</span></div>
+      <div class="vc-pron">/ˈfɜː.taɪl/</div>
+      <div class="vc-cn">肥沃的</div>
+      <div class="vc-detail">
+        <div class="vc-def">Land that is good for growing crops; rich soil.</div>
+        <div class="vc-ex">"The Phoenicians traded with people in fertile river valleys who needed wood."</div>
+      </div>
+    </div><div class="vocab-card" onclick="toggleVocab(this)">
+      <div class="vc-top"><span class="vc-word">navigation</span><span class="vc-pos">noun</span></div>
+      <div class="vc-pron">/ˌnæv.ɪˈɡeɪ.ʃən/</div>
+      <div class="vc-cn">航海术</div>
+      <div class="vc-detail">
+        <div class="vc-def">The skill or process of finding your way at sea, especially using stars and maps.</div>
+        <div class="vc-ex">"The Phoenicians were masters of navigation and could sail at night using the stars."</div>
+      </div>
+    </div><div class="vocab-card" onclick="toggleVocab(this)">
+      <div class="vc-top"><span class="vc-word">coastal</span><span class="vc-pos">adjective</span></div>
+      <div class="vc-pron">/ˈkəʊ.stəl/</div>
+      <div class="vc-cn">沿海的</div>
+      <div class="vc-detail">
+        <div class="vc-def">Near or along the coast — the edge of the sea.</div>
+        <div class="vc-ex">"Tyre and Sidon were important coastal cities built right beside the water."</div>
+      </div>
+    </div><div class="vocab-card" onclick="toggleVocab(this)">
+      <div class="vc-top"><span class="vc-word">expand</span><span class="vc-pos">verb</span></div>
+      <div class="vc-pron">/ɪkˈspænd/</div>
+      <div class="vc-cn">扩展</div>
+      <div class="vc-detail">
+        <div class="vc-def">To grow larger; to spread into new areas.</div>
+        <div class="vc-ex">"Because the mountains blocked them, the Phoenicians had to expand by sea."</div>
+      </div>
+    </div></div>
+</section>
+<section class="sec" id="p2">
+  <div class="sec-header">
+    <div class="sec-num">2</div>
+    <div><div class="sec-title">The Story</div><div class="sec-sub">Read carefully. Notice the bold words.</div></div>
+  </div>
+  <div class="story-body"><div class="story-icon">🌊</div>
+    <p>Look at a map of the ancient world. On the eastern shore of the <span class="story-hl">Mediterranean Sea</span>, squeezed between tall mountains and crashing waves, there was a narrow strip of land. The mountains were so close to the sea that there was almost no room to farm. The soil was <span class="story-hl">scarce</span> and rocky. Yet from this tight little strip of land rose one of the most remarkable civilisations in all of history — the <span class="story-hl">Phoenicians</span>.</p>
+    <p>The Phoenicians lived in great <span class="story-hl">coastal</span> cities: <span class="story-hl">Tyre</span>, <span class="story-hl">Sidon</span>, and <span class="story-hl">Byblos</span>. Each city had its own king. Each city had a great <span class="story-hl">harbour</span> where ships could dock, be loaded with goods, and sail out into the vast sea.</p>
+    <div class="story-box">The Phoenicians had a problem: they had almost no farmland. They could not grow enough food for their growing population. But they had something extraordinary — the <span class="story-hl">Lebanon Mountains</span> rising behind them, covered in towering <span class="story-hl">cedar</span> trees. And in front of them — the sea.</div>
+    <p>So the Phoenicians made a choice. Instead of farming, they would <span class="story-hl">expand</span> outward. They became <span class="story-hl">merchants</span> — buying and selling goods across the ancient world. They became sailors. They mastered the art of <span class="story-hl">navigation</span>, learning to steer their ships by the stars at night.</p>
+    <p>The Egyptians called the Phoenicians <em>the purple people</em>. The Greeks called them <em>the alphabet people</em>. But everyone agreed on one thing: the Phoenicians were the greatest sailors and traders of the ancient world. In the coming lessons, you will discover why — and how a small, mountainous strip of land changed history forever.</p>
+    <div class="story-icon">⚓</div></div>
+</section>
+<section class="sec" id="p3">
+  <div class="sec-header">
+    <div class="sec-num">3</div>
+    <div><div class="sec-title">Reading Comprehension</div><div class="sec-sub">Choose the best answer. Get instant feedback!</div></div>
+  </div>
+  <div class="quiz-list">
+    <div class="q-item">
+      <div class="q-text">1. Where did the Phoenicians live?</div>
+      <div class="q-opts"><button class="q-opt" onclick="mcq(this,'wrong')">In the middle of a great desert.</button>
+<button class="q-opt" onclick="mcq(this,'correct')">On a narrow strip of land between mountains and the Mediterranean Sea.</button>
+<button class="q-opt" onclick="mcq(this,'wrong')">On a wide, fertile river plain.</button></div>
+      <div class="q-feedback"></div>
     </div>
-    <button class="check-btn" onclick="checkQ('q1','b',this)">Check ✓</button>
-    <div class="feedback"></div>
-  </div>
-
-  <div class="question-card">
-    <div class="question-text"><span class="q-num">2</span>Why was the Phoenician land difficult to farm?</div>
-    <div class="options">
-      <label><input type="radio" name="q2" value="a"> It flooded every year</label>
-      <label><input type="radio" name="q2" value="b"> It was too cold and icy</label>
-      <label><input type="radio" name="q2" value="c"> It was rocky, sandy, and dry — not fertile</label>
+    <div class="q-item">
+      <div class="q-text">2. True or False: The Phoenicians had a lot of good farmland.</div>
+      <div class="tf-opts">
+        <button class="tf-btn" onclick="tf(this,'wrong','In fact, farmland was SCARCE — the mountains left almost no room to farm!')">True</button>
+        <button class="tf-btn" onclick="tf(this,'correct','Correct! Farmland was very scarce, so they turned to trade instead.')">False</button>
+      </div>
+      <div class="q-feedback"></div>
     </div>
-    <button class="check-btn" onclick="checkQ('q2','c',this)">Check ✓</button>
-    <div class="feedback"></div>
-  </div>
-
-  <div class="question-card">
-    <div class="question-text"><span class="q-num">3</span>True or False: The Phoenicians became great sailors because they loved adventure.</div>
-    <div class="options">
-      <label><input type="radio" name="q3" value="a"> True</label>
-      <label><input type="radio" name="q3" value="b"> False — they turned to the sea because their land was poor and difficult</label>
+    <div class="q-item">
+      <div class="q-text">3. What were the three great Phoenician cities?</div>
+      <div class="q-opts"><button class="q-opt" onclick="mcq(this,'wrong')">Cairo, Alexandria, and Memphis.</button>
+<button class="q-opt" onclick="mcq(this,'wrong')">Athens, Sparta, and Corinth.</button>
+<button class="q-opt" onclick="mcq(this,'correct')">Tyre, Sidon, and Byblos.</button></div>
+      <div class="q-feedback"></div>
     </div>
-    <button class="check-btn" onclick="checkQ('q3','b',this)">Check ✓</button>
-    <div class="feedback"></div>
-  </div>
-
-  <div class="question-card">
-    <div class="question-text"><span class="q-num">4</span>What does "navigate" mean?</div>
-    <div class="options">
-      <label><input type="radio" name="q4" value="a"> To build a boat</label>
-      <label><input type="radio" name="q4" value="b"> To plan and control the direction you are travelling</label>
-      <label><input type="radio" name="q4" value="c"> To catch fish in the sea</label>
+    <div class="q-item">
+      <div class="q-text">4. Why did the Phoenicians become merchants and sailors?</div>
+      <div class="q-opts"><button class="q-opt" onclick="mcq(this,'wrong')">Because they loved adventure.</button>
+<button class="q-opt" onclick="mcq(this,'correct')">Because they had no farmland and needed to find another way to survive.</button>
+<button class="q-opt" onclick="mcq(this,'wrong')">Because their king ordered them to.</button></div>
+      <div class="q-feedback"></div>
     </div>
-    <button class="check-btn" onclick="checkQ('q4','b',this)">Check ✓</button>
-    <div class="feedback"></div>
-  </div>
-
-  <div class="question-card">
-    <div class="question-text"><span class="q-num">5</span>How did the Phoenicians navigate at night?</div>
-    <div class="options">
-      <label><input type="radio" name="q5" value="a"> They used torches and mirrors</label>
-      <label><input type="radio" name="q5" value="b"> They waited until morning to sail</label>
-      <label><input type="radio" name="q5" value="c"> They navigated by the stars</label>
+    <div class="q-item">
+      <div class="q-text">5. True or False: The Phoenicians could navigate at night using the stars.</div>
+      <div class="tf-opts">
+        <button class="tf-btn" onclick="tf(this,'correct','Correct! They were expert navigators who used the stars to find their way.')">True</button>
+        <button class="tf-btn" onclick="tf(this,'wrong','Actually, the Phoenicians COULD navigate by night — this was one of their great skills!')">False</button>
+      </div>
+      <div class="q-feedback"></div>
     </div>
-    <button class="check-btn" onclick="checkQ('q5','c',this)">Check ✓</button>
-    <div class="feedback"></div>
-  </div>
-
-  <div class="question-card">
-    <div class="question-text"><span class="q-num">6</span>According to the story, why did the Phoenicians' isolation become a strength?</div>
-    <div class="options">
-      <label><input type="radio" name="q6" value="a"> It kept enemies away from their city</label>
-      <label><input type="radio" name="q6" value="b"> It forced them to master the sea, which gave them great power and wealth</label>
-      <label><input type="radio" name="q6" value="c"> It gave them lots of time to practise farming</label>
+    <div class="q-item">
+      <div class="q-text">6. What resource did the Lebanon Mountains give the Phoenicians?</div>
+      <div class="q-opts"><button class="q-opt" onclick="mcq(this,'wrong')">Gold and silver mines.</button>
+<button class="q-opt" onclick="mcq(this,'wrong')">Fertile farmland.</button>
+<button class="q-opt" onclick="mcq(this,'correct')">Tall cedar trees, which they could sell as valuable timber.</button></div>
+      <div class="q-feedback"></div>
     </div>
-    <button class="check-btn" onclick="checkQ('q6','b',this)">Check ✓</button>
-    <div class="feedback"></div>
   </div>
-</div>
-
-<!-- SECTION 4: GRAMMAR -->
-<div class="section" id="sec-3">
-  <div class="section-title">4 — Language Focus</div>
-  <div class="section-subtitle">Grammar from the story — learn through meaning</div>
-
-  <div class="grammar-block">
-    <div class="grammar-label">📌 GRAMMAR</div>
-    <div class="grammar-title">Because / So — Showing Cause and Effect</div>
-    <p style="font-size:0.9rem;color:#374151;margin-bottom:12px;">We use <strong>because</strong> to give a reason. We use <strong>so</strong> to show a result.</p>
-    <div class="grammar-example">The land was not fertile, <strong>so</strong> the Phoenicians turned to the sea.</div>
-    <div class="grammar-example"><strong>Because</strong> the land was poor, the Phoenicians adapted and became sailors.</div>
-    <div class="grammar-example">The hills were craggy, <strong>so</strong> it was hard to travel by land.</div>
-    <div class="grammar-note">Notice: "because" introduces a reason clause. "So" introduces a result clause. Both connect two ideas.</div>
+</section>
+<section class="sec" id="p4">
+  <div class="sec-header">
+    <div class="sec-num">4</div>
+    <div><div class="sec-title">Language Focus</div><div class="sec-sub">Grammar from the story — learn through meaning</div></div>
   </div>
-
-  <div class="grammar-block">
-    <div class="grammar-label">📌 GRAMMAR</div>
-    <div class="grammar-title">Could / Could not — Expressing Ability in the Past</div>
-    <p style="font-size:0.9rem;color:#374151;margin-bottom:12px;">We use <strong>could</strong> to talk about ability in the past — what was possible or impossible.</p>
-    <table class="grammar-table">
-      <tr><th>Sentence</th><th>Meaning</th></tr>
-      <tr><td>The Phoenicians <strong>could</strong> navigate by the stars.</td><td>They had this skill.</td></tr>
-      <tr><td>They <strong>could not</strong> grow wheat on rocky land.</td><td>It was impossible.</td></tr>
-      <tr><td>Ships <strong>could</strong> stop safely in the harbours.</td><td>It was possible.</td></tr>
-      <tr><td>People <strong>could not</strong> easily travel through the hills.</td><td>The hills blocked the way.</td></tr>
-    </table>
+  <div class="grammar-box">
+    <div class="grammar-label">📌 Past Tense — Regular & Irregular</div>
+    <div class="grammar-rule">We use the past tense to talk about finished actions in history.</div>
+    
+    <table class="grammar-table"><tr><th>Base</th><th>Past</th><th>From the story</th></tr><tr><td>live</td><td><span class="hl">lived</span></td><td>The Phoenicians <span class='hl'>lived</span> on a narrow strip of land.</td></tr><tr><td>sail</td><td><span class="hl">sailed</span></td><td>They <span class='hl'>sailed</span> across the Mediterranean.</td></tr><tr><td>rise</td><td><span class="hl">rose</span></td><td>A great civilisation <span class='hl'>rose</span> from that strip of land.</td></tr><tr><td>have</td><td><span class="hl">had</span></td><td>They <span class='hl'>had</span> almost no farmland.</td></tr><tr><td>become</td><td><span class="hl">became</span></td><td>They <span class='hl'>became</span> the greatest sailors in the world.</td></tr></table>
   </div>
-
-  <div class="grammar-block">
-    <div class="grammar-label">📌 GRAMMAR</div>
-    <div class="grammar-title">Contrast — "But" and "However"</div>
-    <p style="font-size:0.9rem;color:#374151;margin-bottom:12px;">These words connect two contrasting ideas — they show when something is surprising or unexpected.</p>
-    <div class="grammar-example">The land was poor. <strong>But</strong> the Phoenicians became wealthy.</div>
-    <div class="grammar-example">The hills isolated them. <strong>However</strong>, this isolation became their greatest strength.</div>
-    <div class="grammar-note">In writing, use "however" with a comma after it. "But" usually goes in the middle of a sentence.</div>
+<div class="grammar-box">
+    <div class="grammar-label">📌 Contrast — 'but' and 'however'</div>
+    <div class="grammar-rule">Use 'but' and 'however' to show two opposite or surprising ideas.</div>
+    <div class="grammar-eg">The land was rocky and scarce, <span>but</span> the Phoenicians built a great civilisation.</div>
+<div class="grammar-eg">They had no farmland. <span>However</span>, they had cedar trees and the sea.</div>
+<div class="grammar-eg">The mountains blocked them on one side, <span>but</span> the sea opened up the whole world.</div>
+    
   </div>
-</div>
-
-<!-- SECTION 5: BUILDER -->
-<div class="section" id="sec-4">
-  <div class="section-title">5 — Sentence Builder</div>
-  <div class="section-subtitle">Practice with the vocabulary</div>
-
-  <div class="builder-card">
-    <div class="builder-label">✏️ Fill in the blank</div>
-    <div class="builder-prompt">1. The Phoenicians lived on a narrow <strong>coastal</strong> strip of land. The hills behind them were steep and ________.</div>
-    <input class="builder-input" type="text" placeholder="Type your answer...">
-    <button class="builder-check" onclick="checkFill(this,'craggy')">Check ✓</button>
-    <div class="builder-feedback"></div>
+<div class="grammar-box">
+    <div class="grammar-label">📌 Prepositional phrases of place</div>
+    <div class="grammar-rule">Use prepositions to describe exactly WHERE something is.</div>
+    <div class="grammar-eg">The Phoenicians lived <span>on the eastern shore</span> of the Mediterranean.</div>
+<div class="grammar-eg">Their cities were <span>between the mountains and the sea</span>.</div>
+<div class="grammar-eg">Cedar trees grew <span>on the slopes of</span> the Lebanon Mountains.</div>
+<div class="grammar-eg">Merchants sailed <span>across</span> the Mediterranean to trade.</div>
+    
   </div>
-
-  <div class="builder-card">
-    <div class="builder-label">✏️ Fill in the blank</div>
-    <div class="builder-prompt">2. The land was not ________ — it was too rocky and dry to grow wheat or raise animals.</div>
-    <input class="builder-input" type="text" placeholder="Type your answer...">
-    <button class="builder-check" onclick="checkFill(this,'fertile')">Check ✓</button>
-    <div class="builder-feedback"></div>
+</section>
+<section class="sec" id="p5">
+  <div class="sec-header">
+    <div class="sec-num">5</div>
+    <div><div class="sec-title">Sentence Builder</div><div class="sec-sub">Build your skills with the vocabulary</div></div>
   </div>
-
-  <div class="builder-card">
-    <div class="builder-label">🔀 Unscramble the sentence</div>
-    <div class="builder-prompt">Put these words in the correct order:</div>
-    <div style="background:var(--blue-light);border-radius:8px;padding:12px;margin-bottom:10px;font-size:0.9rem;font-weight:600;color:var(--navy);">
-      sea / to / poor / the / Phoenicians / turned / the / their / because / was / land
-    </div>
-    <input class="builder-input" type="text" placeholder="Write the full sentence...">
-    <button class="builder-check" onclick="checkFill(this,'the phoenicians turned to the sea because their land was poor')">Check ✓</button>
-    <div class="builder-feedback"></div>
+  <div class="sb-activity">
+    <div class="sb-label">🔀 Unscramble the sentence</div>
+    <p style="font-size:13px;color:var(--text3);margin-bottom:.75rem;">Put these words in the correct order:</p>
+    <div style="margin-bottom:.75rem;"><span style="padding:5px 10px;border-radius:99px;background:var(--surface2);border:1px solid var(--border);font-size:13px;color:var(--text2);display:inline-block;margin:3px;">between</span><span style="padding:5px 10px;border-radius:99px;background:var(--surface2);border:1px solid var(--border);font-size:13px;color:var(--text2);display:inline-block;margin:3px;">narrow</span><span style="padding:5px 10px;border-radius:99px;background:var(--surface2);border:1px solid var(--border);font-size:13px;color:var(--text2);display:inline-block;margin:3px;">Phoenicia</span><span style="padding:5px 10px;border-radius:99px;background:var(--surface2);border:1px solid var(--border);font-size:13px;color:var(--text2);display:inline-block;margin:3px;">mountains</span><span style="padding:5px 10px;border-radius:99px;background:var(--surface2);border:1px solid var(--border);font-size:13px;color:var(--text2);display:inline-block;margin:3px;">the</span><span style="padding:5px 10px;border-radius:99px;background:var(--surface2);border:1px solid var(--border);font-size:13px;color:var(--text2);display:inline-block;margin:3px;">strip</span><span style="padding:5px 10px;border-radius:99px;background:var(--surface2);border:1px solid var(--border);font-size:13px;color:var(--text2);display:inline-block;margin:3px;">a</span><span style="padding:5px 10px;border-radius:99px;background:var(--surface2);border:1px solid var(--border);font-size:13px;color:var(--text2);display:inline-block;margin:3px;">sea</span><span style="padding:5px 10px;border-radius:99px;background:var(--surface2);border:1px solid var(--border);font-size:13px;color:var(--text2);display:inline-block;margin:3px;">was</span><span style="padding:5px 10px;border-radius:99px;background:var(--surface2);border:1px solid var(--border);font-size:13px;color:var(--text2);display:inline-block;margin:3px;">land</span><span style="padding:5px 10px;border-radius:99px;background:var(--surface2);border:1px solid var(--border);font-size:13px;color:var(--text2);display:inline-block;margin:3px;">of</span><span style="padding:5px 10px;border-radius:99px;background:var(--surface2);border:1px solid var(--border);font-size:13px;color:var(--text2);display:inline-block;margin:3px;">and</span><span style="padding:5px 10px;border-radius:99px;background:var(--surface2);border:1px solid var(--border);font-size:13px;color:var(--text2);display:inline-block;margin:3px;">the</span></div>
+    <input class="sb-input" id="us1a" placeholder="Type your sentence here..."/>
+    <button class="sb-check" onclick="checkUnscramble('us1a','Phoenicia was a narrow strip of land between the mountains and the sea','ur1a')">Check ✓</button>
+    <div class="sb-result" id="ur1a"></div>
   </div>
-
-  <div class="builder-card">
-    <div class="builder-label">🈶 Translation challenge</div>
-    <div class="builder-prompt">Translate this sentence into English:</div>
-    <div style="background:var(--gold-light);border-radius:8px;padding:12px;margin-bottom:10px;font-size:1rem;color:#92400e;font-weight:600;">
-      腓尼基人因为陆地贫瘠，所以转向大海，成为了伟大的航海家。
-    </div>
-    <input class="builder-input" type="text" placeholder="Write in English...">
-    <button class="builder-check" onclick="revealFill(this,'Because the land was not fertile, the Phoenicians turned to the sea and became great sailors.')">Check ✓</button>
-    <div class="builder-feedback"></div>
+<div class="sb-activity">
+    <div class="sb-label">✏️ Fill in the blank</div>
+    <p style="font-size:13px;color:var(--text2);margin-bottom:.5rem;">1. The Phoenicians became great sailors because farmland was ________ in their homeland.</p>
+    <input class="sb-input" id="f1a" placeholder="Your answer..."/>
+    <button class="sb-check" onclick="checkFill('f1a','scarce','rf1a')">Check ✓</button>
+    <div class="sb-result" id="rf1a"></div>
   </div>
-</div>
-
-<!-- SECTION 6: SPEAKING 1 -->
-<div class="section" id="sec-5">
-  <div class="section-title">6 — Speaking — Level 1</div>
-  <div class="section-subtitle">Answer in one complete sentence</div>
-  <div class="speaking-level level-1">🟢 Level 1 · One sentence</div>
-
-  <div class="speaking-question">
-    <div class="speaking-q">Where did the Phoenicians live?</div>
-    <div class="speaking-hint">💡 Start with: <span>"The Phoenicians lived in..."</span></div>
+<div class="sb-activity">
+    <div class="sb-label">✏️ Fill in the blank</div>
+    <p style="font-size:13px;color:var(--text2);margin-bottom:.5rem;">2. Tyre, Sidon, and Byblos were the three great Phoenician ________ cities.</p>
+    <input class="sb-input" id="f2a" placeholder="Your answer..."/>
+    <button class="sb-check" onclick="checkFill('f2a','coastal','rf2a')">Check ✓</button>
+    <div class="sb-result" id="rf2a"></div>
   </div>
-  <div class="speaking-question">
-    <div class="speaking-q">Why could the Phoenicians not grow wheat on their land?</div>
-    <div class="speaking-hint">💡 Start with: <span>"They could not grow wheat because..."</span></div>
+</section>
+<section class="sec" id="p6">
+  <div class="sec-header">
+    <div class="sec-num">6</div>
+    <div><div class="sec-title">Speaking — Level 1</div><div class="sec-sub">Answer in one complete sentence</div></div>
   </div>
-  <div class="speaking-question">
-    <div class="speaking-q">What did the Phoenicians become famous for?</div>
-    <div class="speaking-hint">💡 Start with: <span>"The Phoenicians became famous for..."</span></div>
+  <div class="speak-level">
+    <span class="speak-badge l1">🟢 Level 1 · One sentence</span>
+    <div class="speak-q"><p>What is a harbour?</p><div class="speak-hint">💡 Start with: <span>"A harbour is a place where..."</span></div></div>
+    <div class="speak-q"><p>Why did the Phoenicians turn to trading instead of farming?</p><div class="speak-hint">💡 Start with: <span>"The Phoenicians traded because..."</span></div></div>
+    <div class="speak-q"><p>Name one of the three great Phoenician cities and describe it.</p><div class="speak-hint">💡 Start with: <span>"One great Phoenician city was... It was..."</span></div></div>
   </div>
-</div>
-
-<!-- SECTION 7: SPEAKING 2 -->
-<div class="section" id="sec-6">
-  <div class="section-title">7 — Speaking — Level 2</div>
-  <div class="section-subtitle">Answer in 2–3 sentences. Share your opinion.</div>
-  <div class="speaking-level level-2">🟡 Level 2 · 2–3 sentences</div>
-
-  <div class="speaking-question">
-    <div class="speaking-q">Imagine you were a young Phoenician who had never seen the sea before. You are about to go on your first sailing voyage. How would you feel?</div>
-    <div class="speaking-hint">💡 Think about: <span>excitement · fear · curiosity · pride · danger</span></div>
+</section>
+<section class="sec" id="p7">
+  <div class="sec-header">
+    <div class="sec-num">7</div>
+    <div><div class="sec-title">Speaking — Level 2 &amp; 3</div><div class="sec-sub">Extend your answer. Share your opinion.</div></div>
   </div>
-  <div class="speaking-question">
-    <div class="speaking-q">The Phoenicians turned a weakness (poor land) into a strength (mastery of the sea). Can you think of another example — in history or in real life — where a difficulty became an advantage?</div>
-    <div class="speaking-hint">💡 Try: <span>"I think... is a good example because..."</span></div>
+  <div class="speak-level">
+    <span class="speak-badge l2">🟡 Level 2 · 2–3 sentences</span>
+    <div class="speak-q"><p>Imagine you live in a Phoenician city. Mountains are behind you, and the sea is in front. How would you feel? What would you do?</p><div class="speak-hint">💡 Think about: <span>the sound of waves · the smell of cedar · how you might earn a living</span></div></div>
+    <div class="speak-q"><p>Why do you think the Phoenicians became so skilled at navigation?</p><div class="speak-hint">💡 Try: <span>"I think they became skilled because... This helped them by..."</span></div></div>
   </div>
-
-  <div class="speaking-level level-3" style="margin-top:20px;">🔵 Level 3 · Your opinion</div>
-  <div class="speaking-question">
-    <div class="speaking-q">The Phoenicians adapted to their environment by going to sea. Today, humans face environmental challenges (like climate change). Do you think modern people can adapt in the same way? What would that adaptation look like?</div>
-    <div class="speaking-hint">💡 Use: <span>I believe... / In my opinion... / Just as the Phoenicians... / We could...</span></div>
+  <div class="speak-level">
+    <span class="speak-badge l3">🔵 Level 3 · Your opinion</span>
+    <div class="speak-q"><p>Is geography destiny? Do you think where you grow up shapes what you become? Use examples.</p><div class="speak-hint">💡 Use: <span>I believe... / For example... / In contrast...</span></div></div>
   </div>
-</div>
-
-<!-- SECTION 8: IDEAS -->
-<div class="section" id="sec-7">
-  <div class="section-title">8 — Ideas &amp; Society</div>
-  <div class="section-subtitle">Think about big ideas. There is no wrong answer.</div>
-
-  <div class="idea-card">
-    <span class="idea-emoji">🗺️</span>
-    <p><strong>Geography shapes history.</strong> The Phoenicians became sailors because of where they lived. How do you think the geography of a place affects the way its people live, work, and think? Can you think of other examples from history or from your own life?</p>
+</section>
+<section class="sec" id="p8">
+  <div class="sec-header">
+    <div class="sec-num">8</div>
+    <div><div class="sec-title">Ideas &amp; Society</div><div class="sec-sub">Think about big ideas. There is no wrong answer.</div></div>
   </div>
-  <div class="idea-card">
-    <span class="idea-emoji">🌊</span>
-    <p><strong>The sea as a highway.</strong> Before roads and railways, the sea was the fastest way to travel long distances. Why do you think controlling sea routes gave certain civilizations so much power? Is the sea still important today?</p>
+  <div class="idea-q"><div class="idea-icon">🏔️</div><div class="idea-text"><strong>Geography shapes civilisation.</strong> The Phoenicians had no farmland, so they took to the sea. Can you think of another civilisation where geography forced people to develop special skills?</div></div>
+<div class="idea-q"><div class="idea-icon">🌊</div><div class="idea-text"><strong>The sea can be both dangerous and full of opportunity.</strong> The Phoenicians chose to sail into the unknown. Do you think it takes courage to become a sailor? What risks would you face?</div></div>
+<div class="idea-q"><div class="idea-icon">🌲</div><div class="idea-text"><strong>The Phoenicians had cedar trees — a resource other nations desperately needed.</strong> Why do you think nations with scarce resources often become great traders? Can you think of a modern example?</div></div>
+<div class="idea-q"><div class="idea-icon">🗺️</div><div class="idea-text"><strong>Trade connects people across cultures.</strong> When the Phoenicians sailed to Egypt or Greece, they brought not only goods but also ideas. Do you think trade is still an important way cultures connect today?</div></div>
+</section>
+<section class="sec" id="p9">
+  <div class="sec-header">
+    <div class="sec-num">9</div>
+    <div><div class="sec-title">IELTS Content Builder</div><div class="sec-sub">Planting seeds for your future IELTS exam</div></div>
   </div>
-  <div class="idea-card">
-    <span class="idea-emoji">💪</span>
-    <p><strong>Turning weakness into strength.</strong> The Phoenicians had poor land and difficult hills — but these very problems pushed them to master the sea. Do you believe that challenges make people stronger? Why or why not?</p>
+  <div class="ielts-topic">
+    <div class="ielts-topic-label">📘 Today's IELTS Topic</div>
+    <h4>Geography and Economic Development</h4>
   </div>
-  <div class="idea-card">
-    <span class="idea-emoji">🤝</span>
-    <p><strong>Traders connect the world.</strong> By sailing from country to country, the Phoenicians helped different cultures share ideas, art, and technology. Do you think trade between nations brings people together or causes problems? Explain your view.</p>
+  <p style="font-size:12px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;color:var(--text3);margin-bottom:.5rem;">Key vocabulary</p>
+  <div class="vocab-chips"><span class="chip amber">geography</span><span class="chip amber">natural resources</span><span class="chip amber">trade</span><span class="chip amber">maritime</span><span class="chip">coastal nation</span><span class="chip">landlocked country</span><span class="chip">export economy</span><span class="chip">comparative advantage</span></div>
+  <p style="font-size:12px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;color:var(--text3);margin:.875rem 0 .5rem;">Useful collocations</p>
+  <div class="vocab-chips"><span class="chip">exploit natural resources</span><span class="chip">develop trading networks</span><span class="chip">overcome geographical barriers</span><span class="chip">drive economic growth</span></div>
+  <div class="ielts-qs"><div class="ielts-q"><div class="ielts-q-num">S1</div><div class="ielts-q-text">How can a country's geography affect its economy?</div></div>
+<div class="ielts-q"><div class="ielts-q-num">S2</div><div class="ielts-q-text">Why do you think coastal nations often become powerful traders?</div></div>
+<div class="ielts-q"><div class="ielts-q-num">S3</div><div class="ielts-q-text">Do you think natural resources are still important for a country's success today?</div></div></div>
+  <div class="ielts-w2">
+    <div class="ielts-w2-label">✏️ IELTS Writing Task 2 — Future Practice</div>
+    <p>"Some people argue that a country's natural geography is the most important factor in its economic development. Others believe that human skills and hard work matter more. Discuss both views and give your own opinion."</p>
   </div>
-</div>
-
-<!-- SECTION 9: IELTS -->
-<div class="section" id="sec-8">
-  <div class="section-title">9 — IELTS Content Builder</div>
-  <div class="section-subtitle">Planting seeds for your future IELTS exam</div>
-
-  <div class="ielts-banner">
-    <h4>📘 Today's IELTS Topic</h4>
-    <p><strong>Geography, Environment, and Human Adaptation</strong></p>
-    <p style="margin-top:6px;">The Phoenicians adapted to their environment by turning to the sea. Human adaptation to geography is a key IELTS theme in both Writing and Speaking.</p>
-    <div class="vocab-tags">
-      <span class="vocab-tag">geography</span>
-      <span class="vocab-tag">environment</span>
-      <span class="vocab-tag">adaptation</span>
-      <span class="vocab-tag">natural resources</span>
-      <span class="vocab-tag">coastal region</span>
-      <span class="vocab-tag">trade route</span>
-      <span class="vocab-tag">civilisation</span>
-      <span class="vocab-tag">maritime</span>
-    </div>
-    <ul class="colloc-list">
-      <li>adapt to the environment</li>
-      <li>exploit natural resources</li>
-      <li>overcome geographical barriers</li>
-      <li>shape the course of history</li>
-      <li>drive economic development</li>
-    </ul>
+</section>
+<section class="sec" id="p10">
+  <div class="sec-header">
+    <div class="sec-num">10</div>
+    <div><div class="sec-title">Review</div><div class="sec-sub">Remember what you learned!</div></div>
   </div>
-
-  <div class="ielts-q"><span class="ielts-num">S1</span>How does geography affect the way people live? Give an example.</div>
-  <div class="ielts-q"><span class="ielts-num">S2</span>Do you think modern technology has reduced the importance of geography? Why or why not?</div>
-  <div class="ielts-q"><span class="ielts-num">S3</span>Some countries have few natural resources but are still very wealthy. How is this possible?</div>
-
-  <div class="ielts-writing">
-    <h5>✏️ IELTS Writing Task 2 — Future Practice</h5>
-    <p>"Some people believe that a country's natural resources are the most important factor in its economic success. Others argue that human innovation and adaptability matter more. Discuss both views and give your opinion."</p>
+  <p style="font-size:12px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;color:var(--text3);margin-bottom:.75rem;">⭐ Star Words</p>
+  <div class="star-words"><span class="star-word">⭐ Phoenician</span><span class="star-word">⭐ merchant</span><span class="star-word">⭐ harbour</span><span class="star-word">⭐ cedar</span><span class="star-word">⭐ scarce</span><span class="star-word">⭐ navigation</span><span class="star-word">⭐ coastal</span><span class="star-word">⭐ Mediterranean</span></div>
+  <div class="think-box">
+    <div class="think-head">💡 Big Idea</div>
+    <p>The Phoenicians had almost nothing — no farmland, no great river. But they had the sea, the cedar, and the will to sail. <strong>Sometimes the greatest civilisations come from places where survival itself demands creativity.</strong></p>
   </div>
-</div>
-
-<!-- SECTION 10: REVIEW -->
-<div class="section" id="sec-9">
-  <div class="section-title">10 — Review</div>
-  <div class="section-subtitle">Remember what you learned!</div>
-
-  <div class="star-words">
-    <span class="star-word">⭐ Phoenician</span>
-    <span class="star-word">⭐ Mediterranean</span>
-    <span class="star-word">⭐ craggy</span>
-    <span class="star-word">⭐ fertile</span>
-    <span class="star-word">⭐ navigate</span>
-    <span class="star-word">⭐ merchant</span>
-    <span class="star-word">⭐ harbour</span>
-    <span class="star-word">⭐ adapt</span>
+  <p style="font-size:12px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;color:var(--text3);margin:.875rem 0 .75rem;">🧠 Mini Quiz</p>
+  <div class="mini-quiz-q"><div class="mq-text">A. What was scarce in Phoenicia?</div><div class="mq-opts"><button class="mq-opt" onclick="mq(this,'wrong')">Gold and silver</button>
+<button class="mq-opt" onclick="mq(this,'correct')">Good farmland</button>
+<button class="mq-opt" onclick="mq(this,'wrong')">Cedar wood</button></div></div><div class="mini-quiz-q"><div class="mq-text">B. Complete the sentence: Tyre had a natural ________ that made it perfect for trade.</div><div class="mq-opts"><button class="mq-opt" onclick="mq(this,'wrong')">mountain</button>
+<button class="mq-opt" onclick="mq(this,'correct')">harbour</button>
+<button class="mq-opt" onclick="mq(this,'wrong')">market</button></div></div><div class="mini-quiz-q"><div class="mq-text">C. Why were the Phoenicians called great navigators?</div><div class="mq-opts"><button class="mq-opt" onclick="mq(this,'wrong')">They built the largest ships</button>
+<button class="mq-opt" onclick="mq(this,'correct')">They could sail at night using the stars</button>
+<button class="mq-opt" onclick="mq(this,'wrong')">They invented the compass</button></div></div>
+  <div class="lesson-nav">
+    <a class="nav-btn" href="ch14-c.html"><i class="ti ti-arrow-left"></i> Lesson 14C</a>
+    <a class="nav-btn primary" href="ch15-b.html">Next: Lesson 15B — Phoenician Traders <i class="ti ti-arrow-right"></i></a>
   </div>
-
-  <div class="big-idea">
-    <p>💡 <strong>The Phoenicians turned a problem into a power.</strong> Poor land pushed them to the sea. And the sea gave them the world. Remember: in history — and in life — the people who <em>adapt</em> are the people who survive and thrive.</p>
-  </div>
-
-  <div class="section-title" style="margin-bottom:14px;">🧠 Mini Quiz</div>
-
-  <div class="mini-quiz-card">
-    <div class="question-text"><span class="q-num">A</span>What kind of land did the Phoenicians live on?</div>
-    <div class="options">
-      <label><input type="radio" name="mq1" value="a"> Flat and fertile farmland</label>
-      <label><input type="radio" name="mq1" value="b"> A rocky, sandy coastal strip with craggy hills behind it</label>
-      <label><input type="radio" name="mq1" value="c"> A wide river delta perfect for growing crops</label>
-    </div>
-    <button class="check-btn" onclick="checkQ('mq1','b',this)">Check ✓</button>
-    <div class="feedback"></div>
-  </div>
-
-  <div class="mini-quiz-card">
-    <div class="question-text"><span class="q-num">B</span>Complete the sentence: "The land was not fertile, ________ the Phoenicians turned to the sea."</div>
-    <div class="options">
-      <label><input type="radio" name="mq2" value="a"> because</label>
-      <label><input type="radio" name="mq2" value="b"> so</label>
-      <label><input type="radio" name="mq2" value="c"> but</label>
-    </div>
-    <button class="check-btn" onclick="checkQ('mq2','b',this)">Check ✓</button>
-    <div class="feedback"></div>
-  </div>
-
-  <div class="mini-quiz-card">
-    <div class="question-text"><span class="q-num">C</span>What did the Phoenicians become that made them famous throughout the ancient world?</div>
-    <div class="options">
-      <label><input type="radio" name="mq3" value="a"> The greatest farmers in Canaan</label>
-      <label><input type="radio" name="mq3" value="b"> The most powerful army</label>
-      <label><input type="radio" name="mq3" value="c"> The greatest sailors and merchants of the Mediterranean</label>
-    </div>
-    <button class="check-btn" onclick="checkQ('mq3','c',this)">Check ✓</button>
-    <div class="feedback"></div>
-  </div>
-</div>
-
-<!-- LESSON NAV -->
-<div class="lesson-nav">
-  <a href="https://lexilink-ideation.github.io/History-Workshop/ch14-c.html" class="lesson-nav nav-prev">← Lesson 14C</a>
-  <a href="ch15-b.html" class="lesson-nav nav-next">Next: Lesson 15B →</a>
-</div>
-
-<footer class="site-footer">
-  <strong>Lexilink Ideation IELTS STUDIO</strong> · History ESL Course · Chapter 15 — Lesson A
-</footer>
-
+</section>
+</main>
+<footer class="site-footer"><strong>Lexilink Ideation IELTS STUDIO</strong> · History ESL Course · Chapter 15 — Lesson A</footer>
 <script>
-  function showTab(idx, btn) {
-    document.querySelectorAll('.section').forEach((s,i) => s.classList.toggle('active', i===idx));
-    document.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
-    btn.classList.add('active');
-    window.scrollTo({top:0, behavior:'smooth'});
-  }
-  function toggleVocab(card) {
-    card.classList.toggle('open');
-  }
-  function checkQ(name, correct, btn) {
-    const selected = document.querySelector(`input[name="${name}"]:checked`);
-    const fb = btn.nextElementSibling;
-    if (!selected) { fb.textContent = 'Please choose an answer first.'; fb.className='feedback wrong'; return; }
-    if (selected.value === correct) {
-      fb.textContent = '✅ Correct! Well done.';
-      fb.className = 'feedback correct';
-    } else {
-      fb.textContent = '❌ Not quite. Read the story again and try once more.';
-      fb.className = 'feedback wrong';
-    }
-  }
-  function checkFill(btn, answer) {
-    const input = btn.previousElementSibling;
-    const fb = btn.nextElementSibling;
-    const val = input.value.trim().toLowerCase().replace(/[.,!?]/g,'');
-    const ans = answer.toLowerCase().replace(/[.,!?]/g,'');
-    if (val === ans || val.includes(ans.split(' ').slice(0,3).join(' '))) {
-      fb.textContent = '✅ Correct!'; fb.className='builder-feedback show';
-    } else {
-      fb.textContent = `❌ Try again. Hint: the answer is "${answer}"`; fb.className='builder-feedback show'; fb.style.background='var(--red-light)'; fb.style.color='var(--red)';
-    }
-  }
-  function revealFill(btn, answer) {
-    const fb = btn.nextElementSibling;
-    fb.textContent = `✅ Model answer: "${answer}"`; fb.className='builder-feedback show';
-  }
+function toggleVocab(card){card.classList.toggle('open');}
+function mcq(btn,type){
+  const item=btn.closest('.q-item');
+  item.querySelectorAll('.q-opt').forEach(b=>{b.classList.remove('correct','wrong');b.disabled=true;});
+  btn.classList.add(type);
+  const fb=item.querySelector('.q-feedback');
+  fb.className='q-feedback show '+(type==='correct'?'good':'bad');
+  fb.textContent=type==='correct'?'✓ Correct! Well done!':'✗ Not quite. Try to remember the story.';
+}
+function tf(btn,type,msg){
+  const item=btn.closest('.q-item');
+  item.querySelectorAll('.tf-btn').forEach(b=>{b.classList.remove('correct','wrong');b.disabled=true;});
+  btn.classList.add(type);
+  const fb=item.querySelector('.q-feedback');
+  fb.className='q-feedback show '+(type==='correct'?'good':'bad');
+  fb.textContent=(type==='correct'?'✓ ':'✗ ')+msg;
+}
+function mq(btn,type){
+  const item=btn.closest('.mini-quiz-q');
+  item.querySelectorAll('.mq-opt').forEach(b=>{b.classList.remove('correct','wrong');b.disabled=true;});
+  btn.classList.add(type);
+}
+function checkUnscramble(id,answer,rid){
+  const val=document.getElementById(id).value.trim().toLowerCase().replace(/[^a-z\s]/g,'');
+  const ans=answer.toLowerCase();
+  const r=document.getElementById(rid);
+  r.className='sb-result show '+(val===ans?'ok':'no');
+  r.textContent=val===ans?'✓ Perfect! "'+answer+'"':'✗ Try again. Check the word order.';
+}
+function checkFill(id,answer,rid){
+  const val=document.getElementById(id).value.trim().toLowerCase();
+  const r=document.getElementById(rid);
+  r.className='sb-result show '+(val===answer?'ok':'no');
+  r.textContent=val===answer?'✓ Correct!':'✗ The answer is: "'+answer+'"';
+}
+function scrollTo(id){document.getElementById(id).scrollIntoView({behavior:'smooth',block:'start'});}
+const parts=['p1','p2','p3','p4','p5','p6','p7','p8','p9','p10'];
+const partEls=document.querySelectorAll('.lp-part');
+window.addEventListener('scroll',()=>{
+  let current=0;
+  parts.forEach((id,i)=>{const el=document.getElementById(id);if(el&&el.getBoundingClientRect().top<200)current=i;});
+  partEls.forEach((el,i)=>{el.classList.remove('active','done');if(i<current)el.classList.add('done');else if(i===current)el.classList.add('active');});
+  const pct=Math.round(((current+1)/10)*100);
+  document.querySelector('.lp-fill').style.width=pct+'%';
+});
 </script>
 </body>
 </html>
