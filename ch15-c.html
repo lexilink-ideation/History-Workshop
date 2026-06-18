@@ -1,0 +1,487 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1.0">
+  <title>Lesson 15C — The Secret of Glass | Lexilink History Workshop</title>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;600;700&family=Noto+Sans+SC&display=swap" rel="stylesheet">
+  <style>
+    *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+    :root{--navy:#1a2744;--blue:#2563eb;--blue-light:#dbeafe;--gold:#f59e0b;--gold-light:#fef3c7;--green:#16a34a;--green-light:#dcfce7;--red:#dc2626;--red-light:#fee2e2;--gray:#6b7280;--gray-light:#f3f4f6;--radius:12px;--shadow:0 2px 12px rgba(0,0,0,.08)}
+    body{font-family:'Noto Sans','Noto Sans SC',sans-serif;background:#f8fafc;color:#1e293b;line-height:1.7}
+    nav{background:var(--navy);padding:0 24px;display:flex;align-items:center;gap:16px;height:52px}
+    nav a{color:#cbd5e1;text-decoration:none;font-size:.85rem;font-weight:600}nav a:hover{color:#fff}nav .sep{color:#475569}
+    .lesson-header{background:var(--navy);color:#fff;padding:32px 24px 28px}
+    .lesson-meta{font-size:.8rem;color:#94a3b8;text-transform:uppercase;letter-spacing:.08em;margin-bottom:6px}
+    .lesson-chapter{font-size:.9rem;color:#7dd3fc;margin-bottom:14px}
+    .lesson-header h1{font-size:1.9rem;font-weight:700;margin-bottom:8px}
+    .lesson-subtitle{color:#cbd5e1;font-size:1rem;margin-bottom:16px}
+    .lesson-tags{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:14px}
+    .tag{background:rgba(255,255,255,.12);border-radius:20px;padding:4px 12px;font-size:.78rem;color:#e2e8f0}
+    .lesson-progress{font-size:.82rem;color:#94a3b8}
+    .tabs-bar{background:#fff;border-bottom:2px solid #e2e8f0;overflow-x:auto;white-space:nowrap;padding:0 16px;position:sticky;top:0;z-index:10;box-shadow:0 2px 8px rgba(0,0,0,.06)}
+    .tab-btn{display:inline-block;padding:14px 14px 12px;cursor:pointer;font-size:.82rem;font-weight:600;color:var(--gray);border-bottom:3px solid transparent;margin-bottom:-2px;background:none;border-top:none;border-left:none;border-right:none;white-space:nowrap}
+    .tab-btn:hover{color:var(--blue)}.tab-btn.active{color:var(--blue);border-bottom-color:var(--blue)}
+    .tab-num{display:inline-flex;align-items:center;justify-content:center;width:20px;height:20px;background:var(--gray-light);border-radius:50%;font-size:.72rem;font-weight:700;margin-right:5px}
+    .tab-btn.active .tab-num{background:var(--blue);color:#fff}
+    .section{display:none;max-width:780px;margin:0 auto;padding:32px 20px}.section.active{display:block}
+    .section-title{font-size:1.3rem;font-weight:700;color:var(--navy);margin-bottom:6px}
+    .section-subtitle{color:var(--gray);font-size:.88rem;margin-bottom:24px}
+    .vocab-grid{display:grid;gap:12px}
+    .vocab-card{background:#fff;border-radius:var(--radius);box-shadow:var(--shadow);border:1px solid #e2e8f0;overflow:hidden;cursor:pointer}
+    .vocab-card-header{display:flex;align-items:center;gap:12px;padding:16px 20px}
+    .vocab-word{font-size:1.1rem;font-weight:700;color:var(--navy)}.vocab-pos{font-size:.75rem;color:var(--gray);background:var(--gray-light);border-radius:4px;padding:2px 7px}
+    .vocab-pron{font-size:.82rem;color:var(--blue);margin-left:auto;font-style:italic}
+    .vocab-expand{width:24px;height:24px;border-radius:50%;background:var(--blue-light);color:var(--blue);display:flex;align-items:center;justify-content:center;font-size:.9rem;flex-shrink:0;transition:transform .3s}
+    .vocab-card.open .vocab-expand{transform:rotate(180deg)}.vocab-body{display:none;padding:0 20px 18px;border-top:1px solid #f1f5f9}
+    .vocab-card.open .vocab-body{display:block}
+    .vocab-zh{font-size:1rem;color:var(--navy);font-weight:600;margin:10px 0 4px}.vocab-def{color:#374151;font-size:.9rem;margin-bottom:8px}
+    .vocab-example{color:var(--gray);font-size:.85rem;font-style:italic;border-left:3px solid var(--blue-light);padding-left:10px}
+    .story-card{background:#fff;border-radius:var(--radius);box-shadow:var(--shadow);padding:28px;line-height:1.9;font-size:.97rem}
+    .story-card p{margin-bottom:16px}.story-card p:last-child{margin-bottom:0}.story-emoji{font-size:2rem;display:block;margin-bottom:12px}.story-card strong{color:var(--navy)}
+    .question-card{background:#fff;border-radius:var(--radius);box-shadow:var(--shadow);padding:20px 22px;margin-bottom:16px}
+    .question-text{font-weight:600;color:var(--navy);margin-bottom:14px}
+    .q-num{display:inline-flex;align-items:center;justify-content:center;width:26px;height:26px;background:var(--blue);color:#fff;border-radius:50%;font-size:.8rem;font-weight:700;margin-right:8px;flex-shrink:0}
+    .options label{display:flex;align-items:flex-start;gap:10px;padding:10px 12px;margin-bottom:8px;border-radius:8px;border:2px solid #e2e8f0;cursor:pointer;font-size:.9rem;transition:border-color .2s,background .2s}
+    .options label:hover{border-color:var(--blue);background:var(--blue-light)}.options input[type=radio]{margin-top:3px;flex-shrink:0}
+    .check-btn{margin-top:10px;background:var(--blue);color:#fff;border:none;padding:8px 18px;border-radius:8px;cursor:pointer;font-size:.85rem;font-weight:600}
+    .check-btn:hover{background:#1d4ed8}.feedback{display:none;margin-top:8px;padding:8px 12px;border-radius:8px;font-size:.85rem;font-weight:600}
+    .feedback.correct{background:var(--green-light);color:var(--green);display:block}.feedback.wrong{background:var(--red-light);color:var(--red);display:block}
+    .grammar-block{background:#fff;border-radius:var(--radius);box-shadow:var(--shadow);padding:22px 24px;margin-bottom:18px}
+    .grammar-label{display:inline-block;background:var(--navy);color:#fff;font-size:.75rem;font-weight:700;padding:3px 10px;border-radius:4px;margin-bottom:12px}
+    .grammar-title{font-size:1rem;font-weight:700;color:var(--navy);margin-bottom:12px}
+    .grammar-table{width:100%;border-collapse:collapse;font-size:.88rem;margin:12px 0}
+    .grammar-table th{background:var(--navy);color:#fff;padding:8px 12px;text-align:left;font-weight:600}
+    .grammar-table td{padding:8px 12px;border-bottom:1px solid #e2e8f0}
+    .grammar-table tr:nth-child(even) td{background:var(--gray-light)}
+    .grammar-example{background:var(--blue-light);border-left:4px solid var(--blue);border-radius:6px;padding:10px 14px;font-size:.9rem;margin:8px 0;color:var(--navy)}
+    .grammar-note{color:var(--gray);font-size:.85rem;margin-top:10px;font-style:italic}
+    .builder-card{background:#fff;border-radius:var(--radius);box-shadow:var(--shadow);padding:20px 22px;margin-bottom:16px}
+    .builder-label{font-size:.78rem;font-weight:700;color:var(--blue);text-transform:uppercase;letter-spacing:.06em;margin-bottom:8px}
+    .builder-prompt{font-size:.92rem;color:var(--navy);margin-bottom:12px;font-weight:500}
+    .builder-input{width:100%;border:2px solid #e2e8f0;border-radius:8px;padding:10px 12px;font-size:.9rem;font-family:inherit;resize:vertical;transition:border-color .2s}
+    .builder-input:focus{outline:none;border-color:var(--blue)}
+    .builder-check{margin-top:8px;background:var(--blue);color:#fff;border:none;padding:8px 16px;border-radius:8px;cursor:pointer;font-size:.85rem;font-weight:600}
+    .builder-check:hover{background:#1d4ed8}.builder-feedback{display:none;margin-top:8px;padding:8px 12px;border-radius:8px;font-size:.85rem}
+    .builder-feedback.show{display:block;background:var(--green-light);color:var(--green);font-weight:600}
+    .speaking-level{display:inline-flex;align-items:center;gap:6px;font-size:.8rem;font-weight:700;padding:4px 12px;border-radius:20px;margin-bottom:14px}
+    .level-1{background:#dcfce7;color:#15803d}.level-2{background:#fef9c3;color:#a16207}.level-3{background:#dbeafe;color:#1d4ed8}
+    .speaking-question{background:#fff;border-radius:var(--radius);box-shadow:var(--shadow);padding:18px 22px;margin-bottom:14px;border-left:4px solid var(--blue)}
+    .speaking-q{font-weight:600;color:var(--navy);margin-bottom:8px}.speaking-hint{font-size:.83rem;color:var(--gray)}.speaking-hint span{color:var(--blue);font-style:italic}
+    .idea-card{background:#fff;border-radius:var(--radius);box-shadow:var(--shadow);padding:20px 22px;margin-bottom:14px;border-top:4px solid var(--gold)}
+    .idea-emoji{font-size:1.4rem;display:block;margin-bottom:8px}.idea-card p{font-size:.9rem;color:#374151;line-height:1.75}.idea-card strong{color:var(--navy)}
+    .ielts-banner{background:var(--navy);border-radius:var(--radius);padding:20px 24px;color:#fff;margin-bottom:20px}
+    .ielts-banner h4{font-size:1rem;margin-bottom:8px;color:#7dd3fc}.ielts-banner p{font-size:.88rem;color:#cbd5e1}
+    .vocab-tags{display:flex;flex-wrap:wrap;gap:8px;margin-top:12px}.vocab-tag{background:rgba(255,255,255,.12);border-radius:6px;padding:4px 10px;font-size:.8rem;color:#e2e8f0}
+    .colloc-list{list-style:none;margin:12px 0 0}.colloc-list li{font-size:.88rem;color:#cbd5e1;padding:3px 0}.colloc-list li::before{content:"→ ";color:#7dd3fc}
+    .ielts-q{background:#fff;border-radius:var(--radius);padding:14px 18px;margin-bottom:10px;font-size:.88rem;color:var(--navy);box-shadow:var(--shadow)}
+    .ielts-q .ielts-num{font-weight:700;color:var(--blue);margin-right:6px}
+    .ielts-writing{background:var(--gold-light);border-radius:var(--radius);padding:18px 20px;border-left:4px solid var(--gold);margin-top:16px}
+    .ielts-writing h5{font-size:.85rem;font-weight:700;color:#92400e;text-transform:uppercase;letter-spacing:.05em;margin-bottom:8px}
+    .ielts-writing p{font-size:.9rem;color:#78350f;font-style:italic}
+    .star-words{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:20px}
+    .star-word{background:var(--gold-light);color:#92400e;border-radius:20px;padding:5px 14px;font-size:.85rem;font-weight:600}
+    .big-idea{background:var(--blue-light);border-radius:var(--radius);padding:18px 20px;margin-bottom:20px;border-left:4px solid var(--blue)}
+    .big-idea p{font-size:.92rem;color:var(--navy)}
+    .mini-quiz-card{background:#fff;border-radius:var(--radius);box-shadow:var(--shadow);padding:20px 22px;margin-bottom:14px}
+    .lesson-nav{max-width:780px;margin:0 auto;padding:24px 20px 40px;display:flex;justify-content:space-between;align-items:center;gap:12px;flex-wrap:wrap}
+    .lesson-nav a{text-decoration:none;padding:10px 20px;border-radius:10px;font-size:.88rem;font-weight:600;transition:all .2s}
+    .nav-prev{background:var(--gray-light);color:var(--navy)}.nav-prev:hover{background:#e2e8f0}
+    .nav-next{background:var(--blue);color:#fff}.nav-next:hover{background:#1d4ed8}
+    .site-footer{background:var(--navy);color:#94a3b8;text-align:center;padding:16px;font-size:.8rem}
+    .step-list{list-style:none;counter-reset:steps;display:grid;gap:12px;margin:16px 0}
+    .step-list li{counter-increment:steps;background:#fff;border-radius:var(--radius);box-shadow:var(--shadow);padding:14px 16px 14px 60px;position:relative;font-size:.9rem;color:#374151}
+    .step-list li::before{content:counter(steps);position:absolute;left:16px;top:50%;transform:translateY(-50%);width:32px;height:32px;background:var(--blue);color:#fff;border-radius:50%;display:flex;align-items:center;justify-content:center;font-weight:700;font-size:.9rem;display:flex;align-items:center;justify-content:center}
+  </style>
+</head>
+<body>
+<nav>
+  <a href="https://lexilink-ideation.github.io/index.html">Lexilink Ideation IELTS STUDIO</a>
+  <span class="sep">·</span>
+  <a href="https://lexilink-ideation.github.io/index.html">Vol. 1</a>
+</nav>
+
+<div class="lesson-header">
+  <div class="lesson-meta">Lesson 15C</div>
+  <div class="lesson-chapter">Chapter 15 · The Phoenicians</div>
+  <h1>The Secret of Glass</h1>
+  <p class="lesson-subtitle">How the Phoenicians turned ash, sand, and fire into a treasure</p>
+  <div class="lesson-tags">
+    <span class="tag">📖 Story + Vocabulary</span><span class="tag">🎤 Speaking</span><span class="tag">✏️ Grammar</span><span class="tag">⭐ CEFR A2–B1</span>
+  </div>
+  <div class="lesson-progress">Lesson 15C of 7 &nbsp;·&nbsp; Part 1 of 10</div>
+</div>
+
+<div class="tabs-bar">
+  <button class="tab-btn active" onclick="showTab(0,this)"><span class="tab-num">1</span>Vocab</button>
+  <button class="tab-btn" onclick="showTab(1,this)"><span class="tab-num">2</span>Story</button>
+  <button class="tab-btn" onclick="showTab(2,this)"><span class="tab-num">3</span>Reading</button>
+  <button class="tab-btn" onclick="showTab(3,this)"><span class="tab-num">4</span>Grammar</button>
+  <button class="tab-btn" onclick="showTab(4,this)"><span class="tab-num">5</span>Builder</button>
+  <button class="tab-btn" onclick="showTab(5,this)"><span class="tab-num">6</span>Speaking 1</button>
+  <button class="tab-btn" onclick="showTab(6,this)"><span class="tab-num">7</span>Speaking 2</button>
+  <button class="tab-btn" onclick="showTab(7,this)"><span class="tab-num">8</span>Ideas</button>
+  <button class="tab-btn" onclick="showTab(8,this)"><span class="tab-num">9</span>IELTS</button>
+  <button class="tab-btn" onclick="showTab(9,this)"><span class="tab-num">10</span>Review</button>
+</div>
+
+<!-- 1: VOCAB -->
+<div class="section active" id="sec-0">
+  <div class="section-title">1 — Vocabulary</div>
+  <div class="section-subtitle">Click each word to learn more</div>
+  <div class="vocab-grid">
+    <div class="vocab-card" onclick="toggleVocab(this)">
+      <div class="vocab-card-header"><span class="vocab-word">lye</span><span class="vocab-pos">noun</span><span class="vocab-pron">/laɪ/</span><div class="vocab-expand">▼</div></div>
+      <div class="vocab-body"><div class="vocab-zh">碱液；强碱溶液</div><div class="vocab-def">A powerful chemical liquid made by pouring water over wood ash. The Phoenicians used it to make glass.</div><div class="vocab-example">"The Phoenicians made lye by pouring water over ashes from a wood fire."</div></div>
+    </div>
+    <div class="vocab-card" onclick="toggleVocab(this)">
+      <div class="vocab-card-header"><span class="vocab-word">ash</span><span class="vocab-pos">noun</span><span class="vocab-pron">/æʃ/</span><div class="vocab-expand">▼</div></div>
+      <div class="vocab-body"><div class="vocab-zh">灰烬；草木灰</div><div class="vocab-def">The grey or white powder that remains after something has been burned.</div><div class="vocab-example">"They collected the ash from a wood fire to make the special chemical called lye."</div></div>
+    </div>
+    <div class="vocab-card" onclick="toggleVocab(this)">
+      <div class="vocab-card-header"><span class="vocab-word">melt</span><span class="vocab-pos">verb</span><span class="vocab-pron">/melt/</span><div class="vocab-expand">▼</div></div>
+      <div class="vocab-body"><div class="vocab-zh">熔化；融化</div><div class="vocab-def">To change from a solid to a liquid when heated.</div><div class="vocab-example">"They melted the sand and lye mixture over an extremely hot fire."</div></div>
+    </div>
+    <div class="vocab-card" onclick="toggleVocab(this)">
+      <div class="vocab-card-header"><span class="vocab-word">bellows</span><span class="vocab-pos">noun (plural)</span><span class="vocab-pron">/ˈbel.əʊz/</span><div class="vocab-expand">▼</div></div>
+      <div class="vocab-body"><div class="vocab-zh">风箱</div><div class="vocab-def">A tool that pushes out a strong blast of air. It was used to fan fires to make them hotter.</div><div class="vocab-example">"Slaves had to fan the fire with bellows for hours to get it hot enough to melt sand."</div></div>
+    </div>
+    <div class="vocab-card" onclick="toggleVocab(this)">
+      <div class="vocab-card-header"><span class="vocab-word">mould</span><span class="vocab-pos">noun</span><span class="vocab-pron">/məʊld/</span><div class="vocab-expand">▼</div></div>
+      <div class="vocab-body"><div class="vocab-zh">模具；铸模</div><div class="vocab-def">A hollow container used to give liquid material a particular shape as it cools and hardens.</div><div class="vocab-example">"They poured the melted mixture into special moulds. When it cooled, it became hard glass."</div></div>
+    </div>
+    <div class="vocab-card" onclick="toggleVocab(this)">
+      <div class="vocab-card-header"><span class="vocab-word">transparent</span><span class="vocab-pos">adjective</span><span class="vocab-pron">/trænsˈpær.ənt/</span><div class="vocab-expand">▼</div></div>
+      <div class="vocab-body"><div class="vocab-zh">透明的</div><div class="vocab-def">Allowing light to pass through so that you can see clearly through it.</div><div class="vocab-example">"The finished glass was hard, shiny, and transparent — you could see through it."</div></div>
+    </div>
+    <div class="vocab-card" onclick="toggleVocab(this)">
+      <div class="vocab-card-header"><span class="vocab-word">dye</span><span class="vocab-pos">noun / verb</span><span class="vocab-pron">/daɪ/</span><div class="vocab-expand">▼</div></div>
+      <div class="vocab-body"><div class="vocab-zh">染料；染色</div><div class="vocab-def">A substance used to change the colour of something. As a verb: to colour something using dye.</div><div class="vocab-example">"Sometimes the Phoenicians added red, blue, and yellow dyes to make coloured glass."</div></div>
+    </div>
+    <div class="vocab-card" onclick="toggleVocab(this)">
+      <div class="vocab-card-header"><span class="vocab-word">complicated</span><span class="vocab-pos">adjective</span><span class="vocab-pron">/ˈkɒm.plɪ.keɪ.tɪd/</span><div class="vocab-expand">▼</div></div>
+      <div class="vocab-body"><div class="vocab-zh">复杂的；繁琐的</div><div class="vocab-def">Having many different parts that are difficult to understand or deal with.</div><div class="vocab-example">"Ancient glass-making was a long, complicated process with many careful steps."</div></div>
+    </div>
+    <div class="vocab-card" onclick="toggleVocab(this)">
+      <div class="vocab-card-header"><span class="vocab-word">process</span><span class="vocab-pos">noun</span><span class="vocab-pron">/ˈprəʊ.ses/</span><div class="vocab-expand">▼</div></div>
+      <div class="vocab-body"><div class="vocab-zh">过程；工序</div><div class="vocab-def">A series of actions or steps done in a particular order to achieve a result.</div><div class="vocab-example">"The glass-making process took many hours and required great skill."</div></div>
+    </div>
+    <div class="vocab-card" onclick="toggleVocab(this)">
+      <div class="vocab-card-header"><span class="vocab-word">ooze</span><span class="vocab-pos">verb</span><span class="vocab-pron">/uːz/</span><div class="vocab-expand">▼</div></div>
+      <div class="vocab-body"><div class="vocab-zh">渗出；慢慢流出</div><div class="vocab-def">To flow slowly through small holes or cracks.</div><div class="vocab-example">"They collected the liquid that oozed out through the ash — this was the lye."</div></div>
+    </div>
+  </div>
+</div>
+
+<!-- 2: STORY -->
+<div class="section" id="sec-1">
+  <div class="section-title">2 — The Story</div>
+  <div class="section-subtitle">Read carefully. Notice the bold words.</div>
+  <div class="story-card">
+    <span class="story-emoji">🔥</span>
+    <p>Among all the things the Phoenicians made and sold, none was more amazing than <strong>glass</strong>. Other peoples in the ancient world also made glass, but the Phoenicians became the finest glassmakers of all. Their glass was famous from one end of the Mediterranean to the other — and the secret of how they made it was one of the most closely guarded in the ancient world.</p>
+    <p>Glass-making was a long, <strong>complicated</strong> <strong>process</strong>. It required patience, skill, and enormous heat. Here is how it worked, step by step:</p>
+
+    <ol class="step-list">
+      <li><strong>Make the lye.</strong> First, the Phoenicians built a wood fire and let it burn until nothing was left but <strong>ash</strong>. Then they poured water slowly over the ash and collected the liquid that <strong>oozed</strong> out below. This liquid was called <strong>lye</strong> — a powerful chemical substance.</li>
+      <li><strong>Mix with sand.</strong> Next, the lye was mixed carefully with pure white sand. The two substances had to be combined in exactly the right amounts.</li>
+      <li><strong>Heat the mixture.</strong> The sand-lye mixture was placed in a furnace and heated over an extremely hot fire. But getting the fire hot enough to <strong>melt</strong> sand was very difficult. Slaves had to pump large <strong>bellows</strong> — tools that blasted air into the fire — for hours and hours, just to make the flames hot enough.</li>
+      <li><strong>Pour into moulds.</strong> Once the sand and lye had melted together into a glowing, sticky liquid, it was carefully poured into special <strong>moulds</strong>. The moulds gave the glass its shape.</li>
+      <li><strong>Cool and finish.</strong> As the liquid cooled, it hardened into hard, shiny, <strong>transparent</strong> glass. The Phoenicians could then add colour — red, blue, yellow <strong>dyes</strong> — to make beautiful coloured glass. Some glass even had gold and jewels embedded in it.</li>
+    </ol>
+
+    <span class="story-emoji">✨</span>
+    <p>The finished glass was extraordinary. It was smooth and shiny. Light passed through it. It could be made in any colour. In a world where most people had never seen anything like it, Phoenician glass seemed almost magical.</p>
+    <p>And so it was sold for enormous prices all around the Mediterranean Sea. People were happy to pay whatever the Phoenicians asked. A piece of blue Phoenician glass in your home showed that you were wealthy and sophisticated. The secret of how to make it — that was priceless.</p>
+  </div>
+</div>
+
+<!-- 3: READING -->
+<div class="section" id="sec-2">
+  <div class="section-title">3 — Reading Comprehension</div>
+  <div class="section-subtitle">Choose the best answer.</div>
+
+  <div class="question-card">
+    <div class="question-text"><span class="q-num">1</span>What was lye made from?</div>
+    <div class="options">
+      <label><input type="radio" name="q1" value="a"> Sea water mixed with clay</label>
+      <label><input type="radio" name="q1" value="b"> Water poured over wood ash</label>
+      <label><input type="radio" name="q1" value="c"> Melted tin mixed with sand</label>
+    </div>
+    <button class="check-btn" onclick="checkQ('q1','b',this)">Check ✓</button><div class="feedback"></div>
+  </div>
+
+  <div class="question-card">
+    <div class="question-text"><span class="q-num">2</span>Why did slaves have to use bellows during glass-making?</div>
+    <div class="options">
+      <label><input type="radio" name="q2" value="a"> To cool the glass quickly after pouring</label>
+      <label><input type="radio" name="q2" value="b"> To pump air into the fire to make it hot enough to melt sand</label>
+      <label><input type="radio" name="q2" value="c"> To mix the sand and lye together</label>
+    </div>
+    <button class="check-btn" onclick="checkQ('q2','b',this)">Check ✓</button><div class="feedback"></div>
+  </div>
+
+  <div class="question-card">
+    <div class="question-text"><span class="q-num">3</span>What were moulds used for in glass-making?</div>
+    <div class="options">
+      <label><input type="radio" name="q3" value="a"> To heat the sand and lye mixture</label>
+      <label><input type="radio" name="q3" value="b"> To give the liquid glass its shape as it cooled</label>
+      <label><input type="radio" name="q3" value="c"> To add colours to the glass</label>
+    </div>
+    <button class="check-btn" onclick="checkQ('q3','b',this)">Check ✓</button><div class="feedback"></div>
+  </div>
+
+  <div class="question-card">
+    <div class="question-text"><span class="q-num">4</span>True or False: Only the Phoenicians knew how to make glass in the ancient world.</div>
+    <div class="options">
+      <label><input type="radio" name="q4" value="a"> True</label>
+      <label><input type="radio" name="q4" value="b"> False — other peoples also made glass, but the Phoenicians were the finest glassmakers</label>
+    </div>
+    <button class="check-btn" onclick="checkQ('q4','b',this)">Check ✓</button><div class="feedback"></div>
+  </div>
+
+  <div class="question-card">
+    <div class="question-text"><span class="q-num">5</span>How did the Phoenicians make coloured glass?</div>
+    <div class="options">
+      <label><input type="radio" name="q5" value="a"> They used different types of sand from different places</label>
+      <label><input type="radio" name="q5" value="b"> They added red, blue, and yellow dyes to the glass mixture</label>
+      <label><input type="radio" name="q5" value="c"> They painted the glass after it hardened</label>
+    </div>
+    <button class="check-btn" onclick="checkQ('q5','b',this)">Check ✓</button><div class="feedback"></div>
+  </div>
+
+  <div class="question-card">
+    <div class="question-text"><span class="q-num">6</span>Why did Phoenician glass sell for such high prices?</div>
+    <div class="options">
+      <label><input type="radio" name="q6" value="a"> It was the only glass that would not break</label>
+      <label><input type="radio" name="q6" value="b"> It was rare, beautiful, and seemed almost magical to those who had never seen it</label>
+      <label><input type="radio" name="q6" value="c"> It was required by law in every Egyptian home</label>
+    </div>
+    <button class="check-btn" onclick="checkQ('q6','b',this)">Check ✓</button><div class="feedback"></div>
+  </div>
+</div>
+
+<!-- 4: GRAMMAR -->
+<div class="section" id="sec-3">
+  <div class="section-title">4 — Language Focus</div>
+  <div class="section-subtitle">Grammar from the story</div>
+
+  <div class="grammar-block">
+    <div class="grammar-label">📌 GRAMMAR</div>
+    <div class="grammar-title">Sequencing — First, Next, Then, Finally</div>
+    <p style="font-size:.9rem;color:#374151;margin-bottom:12px;">These words show the order of steps in a process. They are essential for explaining <em>how</em> something works.</p>
+    <div class="grammar-example"><strong>First</strong>, they made lye by pouring water over ash.</div>
+    <div class="grammar-example"><strong>Next</strong>, they mixed the lye with pure sand.</div>
+    <div class="grammar-example"><strong>Then</strong>, they heated the mixture over a very hot fire.</div>
+    <div class="grammar-example"><strong>Finally</strong>, they poured the liquid into moulds and let it cool.</div>
+    <div class="grammar-note">This is extremely useful for IELTS Writing Task 1, where you often need to describe a process diagram.</div>
+  </div>
+
+  <div class="grammar-block">
+    <div class="grammar-label">📌 GRAMMAR</div>
+    <div class="grammar-title">Passive Voice in Process Descriptions</div>
+    <p style="font-size:.9rem;color:#374151;margin-bottom:12px;">When describing a process, we often use the <strong>passive voice</strong> because the action is more important than who does it.</p>
+    <table class="grammar-table">
+      <tr><th>Active</th><th>Passive</th></tr>
+      <tr><td>They melted the sand.</td><td>The sand <strong>was melted</strong>.</td></tr>
+      <tr><td>They poured it into moulds.</td><td>It <strong>was poured</strong> into moulds.</td></tr>
+      <tr><td>Slaves pumped the bellows.</td><td>The bellows <strong>were pumped</strong> by slaves.</td></tr>
+      <tr><td>They added dyes to the glass.</td><td>Dyes <strong>were added</strong> to the glass.</td></tr>
+    </table>
+    <div class="grammar-note">Passive: was/were + past participle (melted, poured, pumped, added)</div>
+  </div>
+
+  <div class="grammar-block">
+    <div class="grammar-label">📌 GRAMMAR</div>
+    <div class="grammar-title">Purpose Clauses — "in order to" / "so that"</div>
+    <div class="grammar-example">Slaves pumped bellows <strong>in order to</strong> make the fire hotter.</div>
+    <div class="grammar-example">The mixture was poured into moulds <strong>so that</strong> it would take shape.</div>
+    <div class="grammar-example">Dyes were added <strong>in order to</strong> create coloured glass.</div>
+    <div class="grammar-note">Both mean "for the purpose of." "In order to" is followed by a verb; "so that" is followed by a subject + verb.</div>
+  </div>
+</div>
+
+<!-- 5: BUILDER -->
+<div class="section" id="sec-4">
+  <div class="section-title">5 — Sentence Builder</div>
+  <div class="section-subtitle">Practice with the vocabulary</div>
+  <div class="builder-card">
+    <div class="builder-label">✏️ Fill in the blank</div>
+    <div class="builder-prompt">1. Slaves pumped the ________ for hours to make the fire hot enough to melt sand.</div>
+    <input class="builder-input" type="text" placeholder="Type your answer...">
+    <button class="builder-check" onclick="checkFill(this,'bellows')">Check ✓</button>
+    <div class="builder-feedback"></div>
+  </div>
+  <div class="builder-card">
+    <div class="builder-label">✏️ Fill in the blank — passive</div>
+    <div class="builder-prompt">2. The sand-lye mixture ________ into moulds and left to cool. (pour — use passive voice)</div>
+    <input class="builder-input" type="text" placeholder="was poured...">
+    <button class="builder-check" onclick="checkFill(this,'was poured')">Check ✓</button>
+    <div class="builder-feedback"></div>
+  </div>
+  <div class="builder-card">
+    <div class="builder-label">🔀 Unscramble</div>
+    <div class="builder-prompt">Put in the correct order:</div>
+    <div style="background:var(--blue-light);border-radius:8px;padding:12px;margin-bottom:10px;font-size:.9rem;font-weight:600;color:var(--navy);">
+      over / water / ash / poured / was / the / the / wood / to / make / lye
+    </div>
+    <input class="builder-input" type="text" placeholder="Write the full sentence...">
+    <button class="builder-check" onclick="revealFill(this,'Water was poured over the wood ash to make the lye.')">Check ✓</button>
+    <div class="builder-feedback"></div>
+  </div>
+  <div class="builder-card">
+    <div class="builder-label">🈶 Translation challenge</div>
+    <div class="builder-prompt">Translate into English:</div>
+    <div style="background:var(--gold-light);border-radius:8px;padding:12px;margin-bottom:10px;font-size:1rem;color:#92400e;font-weight:600;">
+      首先，他们将水倒在木灰上，制作出碱液。然后，他们将碱液与沙子混合，并放入熔炉中加热。
+    </div>
+    <input class="builder-input" type="text" placeholder="Write in English...">
+    <button class="builder-check" onclick="revealFill(this,'First, they poured water over wood ash to make lye. Then, they mixed the lye with sand and heated it in a furnace.')">Check ✓</button>
+    <div class="builder-feedback"></div>
+  </div>
+</div>
+
+<!-- 6: SPEAKING 1 -->
+<div class="section" id="sec-5">
+  <div class="section-title">6 — Speaking — Level 1</div>
+  <div class="section-subtitle">Answer in one complete sentence</div>
+  <div class="speaking-level level-1">🟢 Level 1 · One sentence</div>
+  <div class="speaking-question">
+    <div class="speaking-q">What is lye and how was it made?</div>
+    <div class="speaking-hint">💡 Start with: <span>"Lye is a chemical made by..."</span></div>
+  </div>
+  <div class="speaking-question">
+    <div class="speaking-q">What were bellows used for in the glass-making process?</div>
+    <div class="speaking-hint">💡 Start with: <span>"Bellows were used to..."</span></div>
+  </div>
+  <div class="speaking-question">
+    <div class="speaking-q">Describe the finished Phoenician glass.</div>
+    <div class="speaking-hint">💡 Start with: <span>"The finished glass was..."</span></div>
+  </div>
+</div>
+
+<!-- 7: SPEAKING 2 -->
+<div class="section" id="sec-6">
+  <div class="section-title">7 — Speaking — Level 2</div>
+  <div class="section-subtitle">Answer in 2–3 sentences.</div>
+  <div class="speaking-level level-2">🟡 Level 2 · 2–3 sentences</div>
+  <div class="speaking-question">
+    <div class="speaking-q">Imagine you are a slave working the bellows in a Phoenician glass-making workshop. Describe what you see, hear, and feel.</div>
+    <div class="speaking-hint">💡 Think about: <span>heat · noise · smoke · hard work · watching the glass form</span></div>
+  </div>
+  <div class="speaking-question">
+    <div class="speaking-q">The Phoenicians closely guarded their glass-making secrets. Why do you think companies and inventors today still try to protect their secrets? Is this fair?</div>
+    <div class="speaking-hint">💡 Try: <span>"I think protecting secrets is... because... However, one problem is..."</span></div>
+  </div>
+  <div class="speaking-level level-3" style="margin-top:20px;">🔵 Level 3 · Your opinion</div>
+  <div class="speaking-question">
+    <div class="speaking-q">Technology today (like smartphones) is manufactured through complicated processes known only to a few companies. Is this similar to Phoenician glass? What are the advantages and disadvantages of one company or nation controlling a key technology?</div>
+    <div class="speaking-hint">💡 Use: <span>On one hand... / On the other hand... / For example... / This reminds me of...</span></div>
+  </div>
+</div>
+
+<!-- 8: IDEAS -->
+<div class="section" id="sec-7">
+  <div class="section-title">8 — Ideas &amp; Society</div>
+  <div class="section-subtitle">Think about big ideas.</div>
+  <div class="idea-card">
+    <span class="idea-emoji">🔬</span>
+    <p><strong>Science as a secret.</strong> The Phoenicians guarded their glass-making knowledge. Today, we often share scientific discoveries openly. Do you think science should be shared freely, or is it acceptable to keep technological knowledge secret for profit?</p>
+  </div>
+  <div class="idea-card">
+    <span class="idea-emoji">🧑‍🏭</span>
+    <p><strong>Labour behind luxury.</strong> Beautiful Phoenician glass was made by slaves pumping bellows in extreme heat. When you see something beautiful or expensive today — like a diamond or a designer phone — do you think about the conditions under which it was made?</p>
+  </div>
+  <div class="idea-card">
+    <span class="idea-emoji">💡</span>
+    <p><strong>Innovation from limitation.</strong> The Phoenicians did not have modern chemistry. They discovered glass-making by experimenting with what they had: ash, sand, and fire. Do you think necessity truly is the "mother of invention"? Can you give an example?</p>
+  </div>
+  <div class="idea-card">
+    <span class="idea-emoji">🎨</span>
+    <p><strong>Art and technology.</strong> Phoenician glass was both a technology AND a work of art — it was functional AND beautiful. Can you think of modern products that combine technology and beauty in the same way? Why do you think people value beauty in everyday objects?</p>
+  </div>
+</div>
+
+<!-- 9: IELTS -->
+<div class="section" id="sec-8">
+  <div class="section-title">9 — IELTS Content Builder</div>
+  <div class="section-subtitle">Planting seeds for your future IELTS exam</div>
+  <div class="ielts-banner">
+    <h4>📘 Today's IELTS Topic</h4>
+    <p><strong>Technology, Innovation, and Intellectual Property</strong></p>
+    <p style="margin-top:6px;">Phoenician glass-making is an early example of technological innovation and trade secrets — both central IELTS topics. The process-description language you practised today is also essential for IELTS Writing Task 1.</p>
+    <div class="vocab-tags">
+      <span class="vocab-tag">innovation</span><span class="vocab-tag">technology</span><span class="vocab-tag">intellectual property</span><span class="vocab-tag">manufacturing</span><span class="vocab-tag">process</span><span class="vocab-tag">patent</span><span class="vocab-tag">trade secret</span><span class="vocab-tag">competitive advantage</span>
+    </div>
+    <ul class="colloc-list">
+      <li>develop new technologies</li>
+      <li>protect intellectual property</li>
+      <li>drive technological innovation</li>
+      <li>manufacture high-quality goods</li>
+      <li>create a competitive advantage</li>
+    </ul>
+  </div>
+  <div class="ielts-q"><span class="ielts-num">S1</span>Should companies be allowed to keep their manufacturing processes secret? Why or why not?</div>
+  <div class="ielts-q"><span class="ielts-num">S2</span>How does technological innovation help a country's economy?</div>
+  <div class="ielts-q"><span class="ielts-num">S3</span>Do you think technology always improves people's lives? Can you think of any downsides?</div>
+  <div class="ielts-writing">
+    <h5>✏️ IELTS Writing Task 2 — Future Practice</h5>
+    <p>"Some people think that governments should invest more in scientific research and technological innovation. Others believe that money should be spent on more immediate social needs. Discuss both views and give your opinion."</p>
+  </div>
+</div>
+
+<!-- 10: REVIEW -->
+<div class="section" id="sec-9">
+  <div class="section-title">10 — Review</div>
+  <div class="section-subtitle">Remember what you learned!</div>
+  <div class="star-words">
+    <span class="star-word">⭐ lye</span><span class="star-word">⭐ ash</span><span class="star-word">⭐ melt</span><span class="star-word">⭐ bellows</span><span class="star-word">⭐ mould</span><span class="star-word">⭐ transparent</span><span class="star-word">⭐ dye</span><span class="star-word">⭐ process</span>
+  </div>
+  <div class="big-idea">
+    <p>💡 <strong>Great products come from great processes.</strong> The Phoenicians turned humble ingredients — ash, sand, fire — into one of the most prized objects in the ancient world. Remember: innovation is not always about inventing something new. It is about finding new ways to use what you already have.</p>
+  </div>
+  <div class="section-title" style="margin-bottom:14px;">🧠 Mini Quiz</div>
+  <div class="mini-quiz-card">
+    <div class="question-text"><span class="q-num">A</span>What two ingredients were mixed together to make glass?</div>
+    <div class="options">
+      <label><input type="radio" name="mq1" value="a"> Salt water and clay</label>
+      <label><input type="radio" name="mq1" value="b"> Lye and sand</label>
+      <label><input type="radio" name="mq1" value="c"> Wood ash and tin</label>
+    </div>
+    <button class="check-btn" onclick="checkQ('mq1','b',this)">Check ✓</button><div class="feedback"></div>
+  </div>
+  <div class="mini-quiz-card">
+    <div class="question-text"><span class="q-num">B</span>"The sand ________ into moulds." Choose the correct passive form.</div>
+    <div class="options">
+      <label><input type="radio" name="mq2" value="a"> was poured</label>
+      <label><input type="radio" name="mq2" value="b"> poured</label>
+      <label><input type="radio" name="mq2" value="c"> were poured</label>
+    </div>
+    <button class="check-btn" onclick="checkQ('mq2','a',this)">Check ✓</button><div class="feedback"></div>
+  </div>
+  <div class="mini-quiz-card">
+    <div class="question-text"><span class="q-num">C</span>Why did Phoenician glass cost so much?</div>
+    <div class="options">
+      <label><input type="radio" name="mq3" value="a"> It was made from rare jewels found only in Africa</label>
+      <label><input type="radio" name="mq3" value="b"> It was beautiful, rare, and seemed almost magical to those who had never seen it</label>
+      <label><input type="radio" name="mq3" value="c"> Only the king of Egypt was allowed to buy it</label>
+    </div>
+    <button class="check-btn" onclick="checkQ('mq3','b',this)">Check ✓</button><div class="feedback"></div>
+  </div>
+</div>
+
+<div class="lesson-nav">
+  <a href="ch15-b.html" class="lesson-nav nav-prev">← Lesson 15B</a>
+  <a href="ch15-d.html" class="lesson-nav nav-next">Next: Lesson 15D →</a>
+</div>
+<footer class="site-footer"><strong>Lexilink Ideation IELTS STUDIO</strong> · History ESL Course · Chapter 15 — Lesson C</footer>
+
+<script>
+  function showTab(idx,btn){document.querySelectorAll('.section').forEach((s,i)=>s.classList.toggle('active',i===idx));document.querySelectorAll('.tab-btn').forEach(b=>b.classList.remove('active'));btn.classList.add('active');window.scrollTo({top:0,behavior:'smooth'});}
+  function toggleVocab(card){card.classList.toggle('open');}
+  function checkQ(name,correct,btn){const sel=document.querySelector(`input[name="${name}"]:checked`);const fb=btn.nextElementSibling;if(!sel){fb.textContent='Please choose an answer first.';fb.className='feedback wrong';return;}if(sel.value===correct){fb.textContent='✅ Correct! Well done.';fb.className='feedback correct';}else{fb.textContent='❌ Not quite. Read the story again and try once more.';fb.className='feedback wrong';}}
+  function checkFill(btn,answer){const input=btn.previousElementSibling;const fb=btn.nextElementSibling;const val=input.value.trim().toLowerCase().replace(/[.,!?]/g,'');const ans=answer.toLowerCase();if(val===ans||val.includes(ans)){fb.textContent='✅ Correct!';fb.className='builder-feedback show';}else{fb.textContent=`❌ Try again. The answer is "${answer}"`;fb.className='builder-feedback show';fb.style.background='var(--red-light)';fb.style.color='var(--red)';}}
+  function revealFill(btn,answer){const fb=btn.nextElementSibling;fb.textContent=`✅ Model answer: "${answer}"`;fb.className='builder-feedback show';}
+</script>
+</body>
+</html>
