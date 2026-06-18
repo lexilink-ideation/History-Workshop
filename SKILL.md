@@ -97,6 +97,51 @@ Every lesson has 10 sections (scroll-based, not tabs):
 
 After all files are written, move the PDF from `input/` to `input/processed/` using bash.
 
-## Step 7 — Report
+## Step 7 — Update index.html
 
-List all files created with their lesson titles and confirm the PDF was moved.
+Edit `/Users/yichen/Claude/Projects/History ESL workshop/index.html` to activate the new chapter.
+
+Find the chapter N entry. It will look like one of these two forms:
+
+**Form A (simple strings — needs upgrading):**
+```
+{ n:16, title:"...", lessons:["Lesson One","Lesson Two","Review + Project"] },
+```
+
+**Form B (already expanded but not live):**
+```
+{ n:16, title:"...", lessons:[
+  { name:"Lesson One", file:"ch16-a.html" },
+  ...
+] },
+```
+
+Replace whichever form is present with the fully expanded, live format:
+```
+{ n:16, title:"The Return of Assyria",
+  lessons:[
+    { name:"Ashurbanipal's Attack",  file:"ch16-a.html", live:true },
+    { name:"The Library of Nineveh", file:"ch16-b.html", live:true },
+    { name:"Review + Project",       file:"ch16-c.html", live:true },
+  ],
+  progress: 0, live: true },
+```
+
+Use the actual chapter number, title, lesson names, and filenames for the chapter you just generated. File names follow the pattern ch{N}-a.html, ch{N}-b.html, etc.
+
+## Step 8 — Git commit and push
+
+Run the following bash commands to commit and deploy everything to GitHub Pages:
+
+```bash
+cd "/Users/yichen/Claude/Projects/History ESL workshop"
+git add ch{N}-a.html ch{N}-b.html ... index.html
+git commit -m "Add Chapter {N} lessons ({Chapter Title})"
+git push
+```
+
+Replace `{N}` with the actual chapter number and list all generated HTML files. If `git push` fails due to authentication, report the error and ask the user to push manually.
+
+## Step 9 — Report
+
+List all files created, confirm the index was updated, and confirm the git push succeeded (or report any error).
