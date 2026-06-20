@@ -129,13 +129,58 @@ Replace whichever form is present with the fully expanded, live format:
 
 Use the actual chapter number, title, lesson names, and filenames for the chapter you just generated. File names follow the pattern ch{N}-a.html, ch{N}-b.html, etc.
 
-## Step 8 — Git commit and push
+## Step 8 — Generate parent notes
 
-Run the following bash commands to commit and deploy everything to GitHub Pages:
+For every lesson file generated (except the Review + Project lesson), write a parent note markdown file into `/Users/yichen/Claude/Projects/History ESL workshop/parent notes/`.
+
+File naming: `ch{N}-{letter}-parent-note.md` (e.g. `ch16-a-parent-note.md`)
+
+Each note must follow this exact format:
+
+```
+# 家长阅读笔记 · Ch{N}-{Letter} · {Lesson Title}
+> ⚠️ 自动生成草稿，请根据实际课堂情况修改后发送
+
+---
+
+**月 日阅读笔记**
+
+1️⃣ 复述 The Story of the World 第{前一章}章节 — {前一章标题} · {前一课课文名}
+
+2️⃣ The Story of the World **第{N}章节**学习 — {Chapter Title} · **{Lesson Title}**
+
+**词汇：** [all 10 vocabulary words from the lesson with Chinese translations, semicolon-separated]
+
+**词组：**
+[6 key phrases from the lesson with Chinese translations, one per line]
+
+**【长难句分析】**
+[One complex sentence from the story, with grammar label and Chinese explanation]
+
+**【语法点】[Grammar point title]**
+[3–4 examples from the lesson with Chinese notes]
+规律：[one-line takeaway rule in Chinese]
+
+**课堂总结：**
+[Leave blank — teacher fills in after class]
+
+**回家作业：**
+1. 复习今天的词汇，重点记住[highlight 2–3 key words]
+2. [Retelling or writing task based on the story]
+3. 思考题：[One open discussion question for next class]
+```
+
+Do NOT generate a parent note for the Review + Project lesson.
+
+## Step 9 — Git commit and push
+
+Run the following bash commands to commit and deploy everything to GitHub Pages.
+
+**Only commit the HTML lesson files and index.html — do NOT add the `parent notes/` folder.**
 
 ```bash
 cd "/Users/yichen/Claude/Projects/History ESL workshop"
-git add ch{N}-a.html ch{N}-b.html ... index.html
+git add ch{N}-a.html ch{N}-b.html ... index.html SKILL.md
 git commit -m "Add Chapter {N} lessons ({Chapter Title})"
 git push
 ```
