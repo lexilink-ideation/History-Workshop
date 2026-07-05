@@ -1,0 +1,539 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+<title>Lesson 17G — The Seven Wonders of the Ancient World | Lexilink History Workshop</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"/>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet"/>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@latest/tabler-icons.min.css"/>
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
+:root{
+  --bg:#0F0800;--surface:rgba(255,255,255,0.04);--surface2:rgba(255,255,255,0.07);
+  --border:rgba(255,255,255,0.10);--border2:rgba(255,255,255,0.06);
+  --amber-300:#E8A832;--amber-400:#D4890F;--amber-500:#B8720A;
+  --amber-bg:rgba(212,137,15,0.12);--amber-border:rgba(212,137,15,0.3);
+  --text:#fff;--text2:rgba(255,255,255,0.72);--text3:rgba(255,255,255,0.45);
+  --teal:#1D9E75;--teal-bg:rgba(29,158,117,0.12);--teal-border:rgba(29,158,117,0.3);
+  --coral:#E05C3A;--coral-bg:rgba(224,92,58,0.12);
+  --blue:#4A9EE0;--blue-bg:rgba(74,158,224,0.12);
+  --r:12px;--r-sm:8px;
+}
+html{scroll-behavior:smooth;}
+body{font-family:'Inter',sans-serif;background:var(--bg);color:var(--text);min-height:100vh;line-height:1.6;}
+.site-header{background:#111;border-bottom:1px solid rgba(255,255,255,0.08);position:sticky;top:0;z-index:100;}
+.hdr{max-width:860px;margin:0 auto;padding:0 1.5rem;height:54px;display:flex;align-items:center;gap:12px;}
+.logo-wrap{display:flex;align-items:center;gap:8px;text-decoration:none;}
+.logo-icon{width:30px;height:30px;display:flex;align-items:center;justify-content:center;}
+.logo-icon svg{width:26px;height:26px;}
+.logo-name{font-size:13px;font-weight:700;color:#fff;}
+.hdr-pipe{width:1px;height:20px;background:rgba(255,255,255,0.15);}
+.hdr-back{display:flex;align-items:center;gap:5px;font-size:12px;color:var(--text3);text-decoration:none;transition:color .15s;}
+.hdr-back:hover{color:var(--text2);}
+.hdr-spacer{flex:1;}
+.hdr-badge{font-size:10px;font-weight:700;letter-spacing:.05em;padding:3px 10px;border-radius:99px;border:1px solid var(--amber-border);color:var(--amber-300);background:var(--amber-bg);}
+.lesson-hero{background:linear-gradient(135deg,#2C1600 0%,#5C3200 40%,#7A4500 100%);padding:3rem 1.5rem 2.5rem;text-align:center;position:relative;overflow:hidden;}
+.lesson-hero::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse 70% 60% at 50% 50%,rgba(200,130,0,0.15),transparent);pointer-events:none;}
+.lesson-eyebrow{font-size:10px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--amber-300);margin-bottom:.75rem;}
+.lesson-hero h1{font-size:clamp(22px,4vw,36px);font-weight:700;color:#fff;letter-spacing:-.02em;margin-bottom:.5rem;}
+.lesson-hero p{font-size:14px;color:rgba(255,255,255,0.65);max-width:520px;margin:0 auto .875rem;}
+.lesson-pills{display:flex;flex-wrap:wrap;justify-content:center;gap:8px;}
+.l-pill{font-size:11px;font-weight:500;padding:4px 12px;border-radius:99px;border:1px solid rgba(255,255,255,0.18);color:rgba(255,255,255,0.75);background:rgba(255,255,255,0.06);}
+.lesson-progress{background:#1A1100;border-bottom:1px solid rgba(255,255,255,0.06);padding:.75rem 1.5rem;}
+.lp-inner{max-width:860px;margin:0 auto;}
+.lp-labels{display:flex;justify-content:space-between;font-size:11px;color:var(--text3);margin-bottom:6px;}
+.lp-track{height:4px;border-radius:99px;background:rgba(255,255,255,0.08);}
+.lp-fill{height:100%;border-radius:99px;background:linear-gradient(90deg,var(--amber-500),var(--amber-300));width:10%;}
+.lp-parts{display:flex;gap:4px;margin-top:8px;flex-wrap:wrap;}
+.lp-part{font-size:10px;font-weight:600;padding:2px 8px;border-radius:99px;background:rgba(255,255,255,0.06);color:var(--text3);cursor:pointer;transition:all .15s;}
+.lp-part.done{background:var(--amber-bg);color:var(--amber-300);border:1px solid var(--amber-border);}
+.lp-part.active{background:var(--amber-400);color:#1A0800;}
+.main{max-width:860px;margin:0 auto;padding:2rem 1.5rem 5rem;}
+.sec{background:var(--surface);border:1px solid var(--border);border-radius:var(--r);padding:1.5rem;margin-bottom:1.5rem;scroll-margin-top:80px;}
+.sec-header{display:flex;align-items:center;gap:10px;margin-bottom:1.25rem;}
+.sec-num{width:28px;height:28px;border-radius:8px;display:flex;align-items:center;justify-content:center;font-size:11px;font-weight:700;background:var(--amber-bg);color:var(--amber-300);border:1px solid var(--amber-border);flex-shrink:0;}
+.sec-title{font-size:16px;font-weight:700;color:#fff;}
+.sec-sub{font-size:12px;color:var(--text3);margin-top:1px;}
+.vocab-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(240px,1fr));gap:10px;}
+.vocab-card{background:var(--surface2);border:1px solid var(--border2);border-radius:var(--r-sm);padding:1rem;cursor:pointer;transition:border-color .15s;}
+.vocab-card:hover,.vocab-card.open{border-color:var(--amber-border);}
+.vc-top{display:flex;align-items:baseline;gap:8px;}
+.vc-word{font-size:16px;font-weight:700;color:#fff;}
+.vc-pos{font-size:10px;font-weight:600;padding:1px 7px;border-radius:99px;background:var(--amber-bg);color:var(--amber-300);}
+.vc-pron{font-size:12px;color:var(--text3);margin-top:2px;font-style:italic;}
+.vc-cn{font-size:15px;color:var(--amber-300);margin-top:4px;font-weight:600;}
+.vc-detail{display:none;margin-top:10px;padding-top:10px;border-top:1px solid var(--border2);}
+.vocab-card.open .vc-detail{display:block;}
+.vc-def{font-size:13px;color:var(--text2);margin-bottom:6px;}
+.vc-ex{font-size:12px;color:var(--text3);font-style:italic;padding-left:8px;border-left:2px solid var(--amber-border);}
+.story-body p{font-size:15px;color:var(--text2);line-height:1.8;margin-bottom:1rem;}
+.story-body p:last-child{margin-bottom:0;}
+.story-hl{color:var(--amber-300);font-weight:600;}
+.story-box{background:var(--amber-bg);border:1px solid var(--amber-border);border-radius:var(--r-sm);padding:1rem 1.25rem;margin:1.25rem 0;font-size:14px;color:rgba(255,255,255,0.85);line-height:1.7;font-style:italic;}
+.story-box::before{content:'"';font-size:32px;color:var(--amber-400);line-height:1;display:block;margin-bottom:.25rem;}
+.story-icon{font-size:40px;text-align:center;margin:1rem 0;}
+.quiz-list{display:flex;flex-direction:column;gap:14px;}
+.q-item{background:var(--surface2);border:1px solid var(--border2);border-radius:var(--r-sm);padding:1rem 1.25rem;}
+.q-text{font-size:14px;font-weight:600;color:#fff;margin-bottom:.75rem;}
+.q-opts{display:flex;flex-direction:column;gap:6px;}
+.q-opt{display:flex;align-items:center;gap:10px;padding:8px 12px;border-radius:8px;border:1px solid var(--border);background:transparent;cursor:pointer;font-size:13px;color:var(--text2);width:100%;text-align:left;transition:all .15s;}
+.q-opt:hover{border-color:var(--amber-border);background:var(--amber-bg);}
+.q-opt.correct{border-color:var(--teal-border);background:var(--teal-bg);color:#fff;}
+.q-opt.wrong{border-color:rgba(224,92,58,0.4);background:var(--coral-bg);color:#fff;}
+.q-feedback{font-size:12px;margin-top:8px;padding:6px 10px;border-radius:6px;display:none;}
+.q-feedback.show{display:block;}
+.q-feedback.good{background:var(--teal-bg);color:#5DCAA5;}
+.q-feedback.bad{background:var(--coral-bg);color:#F09B80;}
+.tf-opts{display:flex;gap:8px;}
+.tf-btn{flex:1;padding:8px;border-radius:8px;border:1px solid var(--border);background:transparent;cursor:pointer;font-size:13px;font-weight:600;color:var(--text2);transition:all .15s;}
+.tf-btn:hover{border-color:var(--amber-border);background:var(--amber-bg);}
+.tf-btn.correct{border-color:var(--teal-border);background:var(--teal-bg);color:#fff;}
+.tf-btn.wrong{border-color:rgba(224,92,58,0.4);background:var(--coral-bg);color:#fff;}
+.grammar-box{background:var(--surface2);border-left:3px solid var(--amber-400);border-radius:0 var(--r-sm) var(--r-sm) 0;padding:1rem 1.25rem;margin-bottom:1rem;}
+.grammar-label{font-size:10px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--amber-300);margin-bottom:.5rem;}
+.grammar-rule{font-size:14px;color:#fff;font-weight:600;margin-bottom:.5rem;}
+.grammar-eg{font-size:13px;color:var(--text2);margin-top:.25rem;font-style:italic;}
+.grammar-eg span{color:var(--amber-300);font-weight:600;font-style:normal;}
+.grammar-table{width:100%;border-collapse:collapse;font-size:13px;margin-top:.75rem;}
+.grammar-table th{text-align:left;padding:6px 10px;font-size:10px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;color:var(--text3);border-bottom:1px solid var(--border);}
+.grammar-table td{padding:7px 10px;color:var(--text2);border-bottom:1px solid var(--border2);}
+.grammar-table td:first-child{color:#fff;font-weight:500;}
+.hl{color:var(--amber-300);font-weight:600;}
+.sb-activity{margin-bottom:1.25rem;}
+.sb-label{font-size:11px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;color:var(--amber-300);margin-bottom:.75rem;}
+.sb-input{width:100%;background:var(--surface2);border:1px solid var(--border);border-radius:var(--r-sm);padding:.625rem .875rem;font-size:14px;color:#fff;font-family:'Inter',sans-serif;transition:border-color .15s;outline:none;margin-bottom:.5rem;}
+.sb-input:focus{border-color:var(--amber-border);}
+.sb-check{padding:7px 18px;border-radius:99px;background:var(--amber-400);color:#1A0800;font-size:13px;font-weight:700;border:none;cursor:pointer;transition:opacity .15s;}
+.sb-check:hover{opacity:.85;}
+.sb-result{font-size:12px;margin-top:6px;padding:6px 10px;border-radius:6px;display:none;}
+.sb-result.show{display:block;}
+.sb-result.ok{background:var(--teal-bg);color:#5DCAA5;}
+.sb-result.no{background:var(--coral-bg);color:#F09B80;}
+.sb-chip{padding:5px 10px;border-radius:99px;background:var(--surface2);border:1px solid var(--border);font-size:13px;color:var(--text2);display:inline-block;margin:3px;}
+.speak-level{margin-bottom:1.25rem;}
+.speak-badge{display:inline-flex;align-items:center;gap:6px;font-size:11px;font-weight:700;padding:3px 12px;border-radius:99px;margin-bottom:.875rem;}
+.speak-badge.l1{background:var(--teal-bg);color:#5DCAA5;border:1px solid var(--teal-border);}
+.speak-badge.l2{background:var(--amber-bg);color:var(--amber-300);border:1px solid var(--amber-border);}
+.speak-badge.l3{background:var(--blue-bg);color:var(--blue);border:1px solid rgba(74,158,224,0.3);}
+.speak-q{background:var(--surface2);border:1px solid var(--border2);border-radius:var(--r-sm);padding:1rem 1.25rem;margin-bottom:.75rem;}
+.speak-q p{font-size:14px;font-weight:600;color:#fff;margin-bottom:.5rem;}
+.speak-hint{font-size:12px;color:var(--text3);}
+.speak-hint span{color:var(--amber-300);}
+.idea-q{background:var(--surface2);border:1px solid var(--border2);border-radius:var(--r-sm);padding:1rem 1.25rem;margin-bottom:.75rem;display:flex;gap:10px;}
+.idea-icon{font-size:20px;flex-shrink:0;margin-top:2px;}
+.idea-text{font-size:14px;color:var(--text2);line-height:1.6;}
+.idea-text strong{color:#fff;}
+.ielts-topic{background:var(--blue-bg);border:1px solid rgba(74,158,224,0.25);border-radius:var(--r-sm);padding:1rem 1.25rem;margin-bottom:1.25rem;}
+.ielts-topic-label{font-size:10px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--blue);margin-bottom:.25rem;}
+.ielts-topic h4{font-size:16px;font-weight:700;color:#fff;}
+.vocab-chips{display:flex;flex-wrap:wrap;gap:6px;margin-top:.75rem;}
+.chip{font-size:12px;padding:4px 12px;border-radius:99px;background:rgba(255,255,255,0.06);border:1px solid var(--border);color:var(--text2);}
+.chip.amber{background:var(--amber-bg);border-color:var(--amber-border);color:var(--amber-300);}
+.ielts-qs{display:flex;flex-direction:column;gap:8px;margin-top:1rem;}
+.ielts-q{display:flex;gap:10px;background:var(--surface2);border-radius:var(--r-sm);padding:.875rem 1rem;}
+.ielts-q-num{font-size:11px;font-weight:700;color:var(--blue);min-width:20px;}
+.ielts-q-text{font-size:13px;color:var(--text2);}
+.ielts-w2{background:rgba(74,158,224,0.08);border:1px solid rgba(74,158,224,0.2);border-radius:var(--r-sm);padding:1rem 1.25rem;margin-top:1rem;}
+.ielts-w2-label{font-size:10px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--blue);margin-bottom:.5rem;}
+.ielts-w2 p{font-size:14px;color:var(--text2);line-height:1.7;font-style:italic;}
+.star-words{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:1.25rem;}
+.star-word{display:flex;align-items:center;gap:6px;padding:6px 14px;border-radius:99px;background:var(--amber-bg);border:1px solid var(--amber-border);font-size:13px;font-weight:600;color:var(--amber-300);}
+.think-box{background:var(--surface2);border:1px solid var(--border2);border-radius:var(--r-sm);padding:1rem 1.25rem;margin-bottom:1rem;}
+.think-box .think-head{font-size:12px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;color:var(--amber-300);margin-bottom:.5rem;}
+.think-box p{font-size:14px;color:var(--text2);}
+.mini-quiz-q{background:var(--surface2);border:1px solid var(--border2);border-radius:var(--r-sm);padding:1rem;margin-bottom:.75rem;}
+.mq-text{font-size:13px;font-weight:600;color:#fff;margin-bottom:.625rem;}
+.mq-opts{display:flex;flex-direction:column;gap:5px;}
+.mq-opt{padding:7px 12px;border-radius:6px;border:1px solid var(--border);background:transparent;font-size:12px;color:var(--text2);cursor:pointer;text-align:left;transition:all .15s;}
+.mq-opt:hover{border-color:var(--amber-border);background:var(--amber-bg);}
+.mq-opt.correct{border-color:var(--teal-border);background:var(--teal-bg);color:#fff;}
+.mq-opt.wrong{border-color:rgba(224,92,58,0.4);background:var(--coral-bg);color:#fff;}
+.lesson-nav{display:flex;gap:10px;margin-top:2rem;}
+.nav-btn{display:flex;align-items:center;gap:6px;padding:.75rem 1.25rem;border-radius:10px;font-size:13px;font-weight:600;cursor:pointer;text-decoration:none;border:1px solid var(--border);color:var(--text2);background:var(--surface);transition:all .15s;flex:1;justify-content:center;}
+.nav-btn:hover{border-color:var(--border2);color:#fff;}
+.nav-btn.primary{background:var(--amber-400);color:#1A0800;border-color:transparent;}
+.nav-btn.primary:hover{opacity:.9;}
+.site-footer{background:#111;border-top:1px solid rgba(255,255,255,0.07);text-align:center;padding:1.5rem;font-size:12px;color:rgba(255,255,255,0.3);}
+.site-footer strong{color:var(--amber-300);}
+@media(max-width:600px){.vocab-grid{grid-template-columns:1fr;}.lesson-nav{flex-direction:column;}}
+</style>
+</head>
+<body>
+<header class="site-header">
+  <div class="hdr">
+    <a class="logo-wrap" href="index.html">
+      <div class="logo-icon"><svg viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+          <path d="M6 24 C8 18,14 10,24 6 C20 10,18 14,20 18 C16 16,12 18,6 24Z" fill="white"/>
+          <path d="M20 18 C22 20,22 23,20 26 C18 24,18 21,20 18Z" fill="rgba(255,255,255,0.5)"/>
+        </svg></div>
+      <span class="logo-name">Lexilink Ideation IELTS STUDIO</span>
+    </a>
+    <div class="hdr-pipe"></div>
+    <a class="hdr-back" href="index.html"><i class="ti ti-arrow-left" aria-hidden="true"></i> Vol. 1</a>
+    <div class="hdr-spacer"></div>
+    <span class="hdr-badge">Lesson 17G</span>
+  </div>
+</header>
+<section class="lesson-hero">
+  <p class="lesson-eyebrow">Chapter 17 · Babylon Takes Over Again!</p>
+  <h1>The Seven Wonders of the Ancient World</h1>
+  <p>Why a garden built for one homesick princess still amazes the world today</p>
+  <div class="lesson-pills"><span class="l-pill">📖 Story + Vocabulary</span><span class="l-pill">🎤 Speaking</span><span class="l-pill">✏️ Grammar</span><span class="l-pill">⭐ Chapter Review</span></div>
+</section>
+<div class="lesson-progress">
+  <div class="lp-inner">
+    <div class="lp-labels"><span>Lesson 17G of 7</span><span style="color:var(--amber-300)">Part 1 of 10</span></div>
+    <div class="lp-track"><div class="lp-fill"></div></div>
+    <div class="lp-parts">
+      <span class="lp-part active" onclick="scrollTo('p1')">1 Vocab</span><span class="lp-part " onclick="scrollTo('p2')">2 Story</span><span class="lp-part " onclick="scrollTo('p3')">3 Reading</span><span class="lp-part " onclick="scrollTo('p4')">4 Grammar</span><span class="lp-part " onclick="scrollTo('p5')">5 Builder</span><span class="lp-part " onclick="scrollTo('p6')">6 Speaking 1</span><span class="lp-part " onclick="scrollTo('p7')">7 Speaking 2</span><span class="lp-part " onclick="scrollTo('p8')">8 Ideas</span><span class="lp-part " onclick="scrollTo('p9')">9 IELTS</span><span class="lp-part " onclick="scrollTo('p10')">10 Review</span>
+    </div>
+  </div>
+</div>
+<main class="main">
+<section class="sec" id="p1">
+  <div class="sec-header">
+    <div class="sec-num">1</div>
+    <div><div class="sec-title">Vocabulary</div><div class="sec-sub">Click each word to learn more</div></div>
+  </div>
+  <div class="vocab-grid"><div class="vocab-card" onclick="toggleVocab(this)">
+      <div class="vc-top"><span class="vc-word">Seven Wonders</span><span class="vc-pos">noun phrase</span></div>
+      <div class="vc-pron">/ˈsev.ən ˈwʌn.dərz/</div>
+      <div class="vc-cn">世界七大奇迹</div>
+      <div class="vc-detail">
+        <div class="vc-def">A famous list of the most amazing structures built by ancient people.</div>
+        <div class="vc-ex">"The Hanging Gardens are one of the Seven Wonders of the Ancient World."</div>
+      </div>
+    </div><div class="vocab-card" onclick="toggleVocab(this)">
+      <div class="vc-top"><span class="vc-word">incredible</span><span class="vc-pos">adjective</span></div>
+      <div class="vc-pron">/ɪnˈkred.ə.bəl/</div>
+      <div class="vc-cn">难以置信的</div>
+      <div class="vc-detail">
+        <div class="vc-def">So amazing that it is hard to believe.</div>
+        <div class="vc-ex">"Visitors thought the garden was truly incredible."</div>
+      </div>
+    </div><div class="vocab-card" onclick="toggleVocab(this)">
+      <div class="vc-top"><span class="vc-word">remarkable</span><span class="vc-pos">adjective</span></div>
+      <div class="vc-pron">/rɪˈmɑː.kə.bəl/</div>
+      <div class="vc-cn">非凡的</div>
+      <div class="vc-detail">
+        <div class="vc-def">Very unusual or impressive; worth noticing.</div>
+        <div class="vc-ex">"It was a remarkable achievement for ancient engineers."</div>
+      </div>
+    </div><div class="vocab-card" onclick="toggleVocab(this)">
+      <div class="vc-top"><span class="vc-word">legacy</span><span class="vc-pos">noun</span></div>
+      <div class="vc-pron">/ˈleɡ.ə.si/</div>
+      <div class="vc-cn">遗产</div>
+      <div class="vc-detail">
+        <div class="vc-def">Something important that is left behind by a person or civilization.</div>
+        <div class="vc-ex">"The story of the Hanging Gardens is part of Babylon's lasting legacy."</div>
+      </div>
+    </div><div class="vocab-card" onclick="toggleVocab(this)">
+      <div class="vc-top"><span class="vc-word">timeless</span><span class="vc-pos">adjective</span></div>
+      <div class="vc-pron">/ˈtaɪm.ləs/</div>
+      <div class="vc-cn">永恒的</div>
+      <div class="vc-detail">
+        <div class="vc-def">Not affected by the passing of time; always admired.</div>
+        <div class="vc-ex">"Even today, the story feels timeless and worth telling."</div>
+      </div>
+    </div><div class="vocab-card" onclick="toggleVocab(this)">
+      <div class="vc-top"><span class="vc-word">awe</span><span class="vc-pos">noun</span></div>
+      <div class="vc-pron">/ɔː/</div>
+      <div class="vc-cn">敬畏</div>
+      <div class="vc-detail">
+        <div class="vc-def">A feeling of great respect and wonder.</div>
+        <div class="vc-ex">"People still look at descriptions of the gardens with awe."</div>
+      </div>
+    </div><div class="vocab-card" onclick="toggleVocab(this)">
+      <div class="vc-top"><span class="vc-word">comparison</span><span class="vc-pos">noun</span></div>
+      <div class="vc-pron">/kəmˈpær.ɪ.sən/</div>
+      <div class="vc-cn">比较</div>
+      <div class="vc-detail">
+        <div class="vc-def">Looking at two or more things to see how they are similar or different.</div>
+        <div class="vc-ex">"Historians often make a comparison between the Hanging Gardens and the Great Pyramid."</div>
+      </div>
+    </div><div class="vocab-card" onclick="toggleVocab(this)">
+      <div class="vc-top"><span class="vc-word">monument</span><span class="vc-pos">noun</span></div>
+      <div class="vc-pron">/ˈmɒn.jʊ.mənt/</div>
+      <div class="vc-cn">纪念碑</div>
+      <div class="vc-detail">
+        <div class="vc-def">A large, impressive structure built to remember an important person or event.</div>
+        <div class="vc-ex">"The garden stood as a monument to one king's love for his wife."</div>
+      </div>
+    </div><div class="vocab-card" onclick="toggleVocab(this)">
+      <div class="vc-top"><span class="vc-word">civilization</span><span class="vc-pos">noun</span></div>
+      <div class="vc-pron">/ˌsɪv.əl.aɪˈzeɪ.ʃən/</div>
+      <div class="vc-cn">文明</div>
+      <div class="vc-detail">
+        <div class="vc-def">A human society with its own culture, government, and way of life.</div>
+        <div class="vc-ex">"The Babylonian civilization created one of history's most famous wonders."</div>
+      </div>
+    </div><div class="vocab-card" onclick="toggleVocab(this)">
+      <div class="vc-top"><span class="vc-word">marvel</span><span class="vc-pos">noun</span></div>
+      <div class="vc-pron">/ˈmɑː.vəl/</div>
+      <div class="vc-cn">奇迹；令人惊叹的事物</div>
+      <div class="vc-detail">
+        <div class="vc-def">Something that causes wonder or astonishment.</div>
+        <div class="vc-ex">"The Hanging Gardens remain a marvel of ancient engineering, even though no ruins have ever been found."</div>
+      </div>
+    </div></div>
+</section>
+<section class="sec" id="p2">
+  <div class="sec-header">
+    <div class="sec-num">2</div>
+    <div><div class="sec-title">The Story</div><div class="sec-sub">Read carefully. Notice the bold words.</div></div>
+  </div>
+  <div class="story-body"><div class="story-icon">🌍</div>
+    <p>By the time Nebuchadnezzar's engineers finished their work, something extraordinary rose from the flat, dusty land of Babylon: a lush, green mountain, covered in trees and flowers, with cool water trickling down through hidden channels from top to bottom. People came from every corner of the ancient world simply to stand and stare in <span class="story-hl">awe</span>.</p><p>They called it the Hanging Gardens of Babylon — even though the garden did not actually 'hang' in the air. Historians believe the name came from the way the trees, vines, and flowers cascaded down the terraces, level after level, almost as if they were hanging from the sky itself.</p><p>The Hanging Gardens became so famous, so <span class="story-hl">remarkable</span>, and so <span class="story-hl">incredible</span> that ancient writers eventually placed it on a very special list: the <span class="story-hl">Seven Wonders</span> of the Ancient World. This list included the most astonishing structures ever built by human <span class="story-hl">civilization</span> — monuments so impressive that people believed everyone should see them at least once in their lifetime, if they possibly could.</p><p>You have already studied one of the other Seven Wonders in an earlier chapter: the Great Pyramid of Giza, built by the ancient Egyptians as a tomb for their pharaoh. Today, you have learned about the second wonder on that famous list — a garden built not for a dead pharaoh, but for a living, homesick queen.</p><p>Make a quick <span class="story-hl">comparison</span> between these two wonders. The Great Pyramid was built from millions of massive stone blocks, designed to last forever as a <span class="story-hl">monument</span> to a powerful ruler. The Hanging Gardens, by contrast, were softer and more delicate — made of soil, water, and living plants, designed simply to bring comfort and joy to one unhappy woman, far from home. Yet both structures required incredible engineering, enormous labor, and remarkable imagination. Both became legendary. And both left a <span class="story-hl">legacy</span> that people still discuss thousands of years later.</p><p>Interestingly, unlike the Great Pyramid, no one has ever found solid physical ruins of the Hanging Gardens. Some historians even debate whether the garden truly existed exactly as the ancient stories describe, or whether parts of the tale grew more exaggerated over time as it was passed down. But whether every detail is completely accurate or not, the story endures — a <span class="story-hl">timeless</span> reminder that even the most powerful rulers can be moved by love, and that human ingenuity can create <span class="story-hl">marvels</span> wherever there is enough determination.</p><p>From the fall of Nineveh, to the madness of a proud king, to a marriage of convenience, to a mountain built from nothing but love and clever engineering — Chapter 17 has taken you through the incredible rise of the Babylonian Empire under Nebuchadnezzar the Great.</p>
+    <div class="story-icon">🏆</div></div>
+</section>
+<section class="sec" id="p3">
+  <div class="sec-header">
+    <div class="sec-num">3</div>
+    <div><div class="sec-title">Reading Comprehension</div><div class="sec-sub">Choose the best answer. Get instant feedback!</div></div>
+  </div>
+  <div class="quiz-list">
+    <div class="q-item">
+      <div class="q-text">1. Why do historians think the garden was called 'hanging'?</div>
+      <div class="q-opts"><button class="q-opt" onclick="mcq(this,'wrong')">Because the garden actually floated in the air.</button>
+<button class="q-opt" onclick="mcq(this,'correct')">Because the plants cascaded down the terraces, appearing to hang from above.</button>
+<button class="q-opt" onclick="mcq(this,'wrong')">Because it hung from the walls of the palace.</button>
+</div>
+      <div class="q-feedback"></div>
+    </div>
+    <div class="q-item">
+      <div class="q-text">2. True or False: The Great Pyramid of Giza is also one of the Seven Wonders of the Ancient World.</div>
+      <div class="tf-opts">
+        <button class="tf-btn" onclick="tf(this,'correct','Correct! You studied the Great Pyramid as another one of the Seven Wonders.')">True</button>
+        <button class="tf-btn" onclick="tf(this,'wrong','Wrong! The Great Pyramid of Giza IS one of the Seven Wonders.')">False</button>
+      </div>
+      <div class="q-feedback"></div>
+    </div>
+    <div class="q-item">
+      <div class="q-text">3. What is one key difference between the Great Pyramid and the Hanging Gardens, according to the story?</div>
+      <div class="q-opts"><button class="q-opt" onclick="mcq(this,'wrong')">The Pyramid was built more recently than the Gardens.</button>
+<button class="q-opt" onclick="mcq(this,'wrong')">The Gardens were made entirely of stone, just like the Pyramid.</button>
+<button class="q-opt" onclick="mcq(this,'correct')">The Pyramid was built as a tomb for a pharaoh, while the Gardens were built to comfort a living queen.</button>
+</div>
+      <div class="q-feedback"></div>
+    </div>
+    <div class="q-item">
+      <div class="q-text">4. What do some historians debate about the Hanging Gardens?</div>
+      <div class="q-opts"><button class="q-opt" onclick="mcq(this,'wrong')">Whether Nebuchadnezzar was a real historical king.</button>
+<button class="q-opt" onclick="mcq(this,'correct')">Whether they truly existed exactly as the ancient stories describe, since no physical ruins have been found.</button>
+<button class="q-opt" onclick="mcq(this,'wrong')">Whether Babylon ever existed at all.</button>
+</div>
+      <div class="q-feedback"></div>
+    </div>
+    <div class="q-item">
+      <div class="q-text">5. What caused Nebuchadnezzar's madness, according to the Book of Daniel?</div>
+      <div class="q-opts"><button class="q-opt" onclick="mcq(this,'wrong')">A serious illness caused by bad food.</button>
+<button class="q-opt" onclick="mcq(this,'correct')">His excessive pride, after he claimed to be more powerful than God.</button>
+<button class="q-opt" onclick="mcq(this,'wrong')">A curse placed on him by the Persians.</button>
+</div>
+      <div class="q-feedback"></div>
+    </div>
+    <div class="q-item">
+      <div class="q-text">6. Why did Nebuchadnezzar marry the Persian princess Amytis?</div>
+      <div class="q-opts"><button class="q-opt" onclick="mcq(this,'wrong')">Because he had fallen in love with her before ever meeting her.</button>
+<button class="q-opt" onclick="mcq(this,'wrong')">Because Persia demanded the marriage as a condition of peace.</button>
+<button class="q-opt" onclick="mcq(this,'correct')">To prevent Persia from attacking Babylon by becoming family with their king.</button>
+</div>
+      <div class="q-feedback"></div>
+    </div>
+  </div>
+</section>
+<section class="sec" id="p4">
+  <div class="sec-header">
+    <div class="sec-num">4</div>
+    <div><div class="sec-title">Language Focus</div><div class="sec-sub">Grammar from the story — learn through meaning</div></div>
+  </div>
+  <div class="grammar-box">
+    <div class="grammar-label">📌 Comparative structures — comparing two wonders</div>
+    <div class="grammar-rule">Use comparative forms to highlight differences and similarities between two things.</div>
+    <div class='grammar-eg'>The Pyramid was <span>more permanent than</span> the Gardens.</div><div class='grammar-eg'>The Gardens were <span>softer and more delicate than</span> the solid stone Pyramid.</div><div class='grammar-eg'>Both wonders were <span>equally remarkable</span>, even though they were very different.</div>
+  </div><div class="grammar-box">
+    <div class="grammar-label">📌 Present perfect — things that still matter today</div>
+    <div class="grammar-rule">Use the present perfect for past actions that connect to the present.</div>
+    <div class='grammar-eg'>The Hanging Gardens <span>have become</span> one of history's most famous stories.</div><div class='grammar-eg'>No one <span>has</span> ever <span>found</span> solid ruins of the garden.</div><div class='grammar-eg'>Historians <span>have debated</span> this question for centuries.</div>
+  </div><div class="grammar-box">
+    <div class="grammar-label">📌 Concessive clauses — 'even though' and 'although'</div>
+    <div class="grammar-rule">Use these words to connect a surprising or contrasting idea to the main clause.</div>
+    <div class='grammar-eg'><span>Even though</span> no ruins have been found, the story endures.</div><div class='grammar-eg'><span>Although</span> the garden may not have existed exactly as described, it remains legendary.</div><div class='grammar-eg'><span>Even though</span> Nebuchadnezzar had once been humbled, he still loved his wife enough to build her a mountain.</div>
+  </div>
+</section>
+<section class="sec" id="p5">
+  <div class="sec-header">
+    <div class="sec-num">5</div>
+    <div><div class="sec-title">Sentence Builder</div><div class="sec-sub">Build your skills with the vocabulary</div></div>
+  </div>
+  <div class="sb-activity">
+    <div class="sb-label">🔀 Unscramble the sentence</div>
+    <p style="font-size:13px;color:var(--text3);margin-bottom:.75rem;">Put these words in the correct order:</p>
+    <div style="margin-bottom:.75rem;"><span class="sb-chip">the</span><span class="sb-chip">Gardens</span><span class="sb-chip">are</span><span class="sb-chip">one</span><span class="sb-chip">of</span><span class="sb-chip">the</span><span class="sb-chip">Seven</span><span class="sb-chip">Wonders</span></div>
+    <input class="sb-input" id="us17g" placeholder="Type your sentence here..."/>
+    <button class="sb-check" onclick="checkUnscramble('us17g','the Gardens are one of the Seven Wonders','ur17g')">Check ✓</button>
+    <div class="sb-result" id="ur17g"></div>
+  </div><div class="sb-activity">
+    <div class="sb-label">✏️ Fill in the blank</div>
+    <p style="font-size:13px;color:var(--text2);margin-bottom:.5rem;">1. The Hanging Gardens are the second of the ________ Wonders that you have studied.</p>
+    <input class="sb-input" id="f1_17g" placeholder="Your answer..."/>
+    <button class="sb-check" onclick="checkFill('f1_17g','seven','rf1_17g')">Check ✓</button>
+    <div class="sb-result" id="rf1_17g"></div>
+  </div><div class="sb-activity">
+    <div class="sb-label">✏️ Fill in the blank</div>
+    <p style="font-size:13px;color:var(--text2);margin-bottom:.5rem;">2. No one has ever found physical ________ of the Hanging Gardens.</p>
+    <input class="sb-input" id="f2_17g" placeholder="Your answer..."/>
+    <button class="sb-check" onclick="checkFill('f2_17g','ruins','rf2_17g')">Check ✓</button>
+    <div class="sb-result" id="rf2_17g"></div>
+  </div><div class="sb-activity">
+    <div class="sb-label">🌐 Chinese → English Translation</div>
+    <p style="font-size:13px;color:var(--text2);margin-bottom:.5rem;">3. 空中花园是古代世界七大奇迹之一。</p>
+    <input class="sb-input" id="t17g" placeholder="Type your English translation..."/>
+    <button class="sb-check" onclick="revealTranslation('t17g','The Hanging Gardens are one of the Seven Wonders of the Ancient World.','rt17g')">Show model answer ✓</button>
+    <div class="sb-result" id="rt17g"></div>
+  </div>
+</section>
+<section class="sec" id="p6">
+  <div class="sec-header">
+    <div class="sec-num">6</div>
+    <div><div class="sec-title">Speaking — Level 1</div><div class="sec-sub">Answer in one complete sentence</div></div>
+  </div>
+  <div class="speak-level">
+    <span class="speak-badge l1">🟢 Level 1 · One sentence</span>
+    <div class="speak-q"><p>What is one of the Seven Wonders you studied before this chapter?</p><div class="speak-hint">💡 Start with: <span>"Before this chapter, I studied..."</span></div></div><div class="speak-q"><p>Why do some historians doubt the Hanging Gardens truly existed?</p><div class="speak-hint">💡 Start with: <span>"Some historians doubt it because..."</span></div></div><div class="speak-q"><p>What is one difference between the Pyramid and the Hanging Gardens?</p><div class="speak-hint">💡 Start with: <span>"One difference is that..."</span></div></div>
+  </div>
+</section>
+<section class="sec" id="p7">
+  <div class="sec-header">
+    <div class="sec-num">7</div>
+    <div><div class="sec-title">Speaking — Level 2 &amp; 3</div><div class="sec-sub">Extend your answer. Share your opinion.</div></div>
+  </div>
+  <div class="speak-level">
+    <span class="speak-badge l2">🟡 Level 2 · 2–3 sentences</span>
+    <div class="speak-q"><p>Compare the Great Pyramid of Giza and the Hanging Gardens of Babylon. Which do you find more impressive, and why?</p><div class="speak-hint">💡 Think about: <span>purpose · materials · engineering</span></div></div><div class="speak-q"><p>If you could visit only one of the Seven Wonders, ancient or modern, which would you choose and why?</p><div class="speak-hint">💡 Think about: <span>curiosity · history · beauty</span></div></div>
+  </div>
+  <div class="speak-level">
+    <span class="speak-badge l3">🔵 Level 3 · Your opinion</span>
+    <div class="speak-q"><p>Does it matter whether the Hanging Gardens actually existed exactly as described, or is the story valuable even if it's partly legend? Discuss both sides.</p><div class="speak-hint">💡 Use: <span>On one hand... / On the other hand... / In my opinion...</span></div></div>
+  </div>
+</section>
+<section class="sec" id="p8">
+  <div class="sec-header">
+    <div class="sec-num">8</div>
+    <div><div class="sec-title">Ideas &amp; Society</div><div class="sec-sub">Think about big ideas. There is no wrong answer.</div></div>
+  </div>
+  <div class="idea-q"><div class="idea-icon">🌍</div><div class="idea-text"><strong>The Seven Wonders list shows what ancient people considered truly amazing.</strong> If you could create a modern 'Seven Wonders' list, what would you include?</div></div><div class="idea-q"><div class="idea-icon">🏺</div><div class="idea-text"><strong>Some historians question whether the Hanging Gardens really existed.</strong> Why do you think stories sometimes survive and become famous even without solid physical evidence?</div></div><div class="idea-q"><div class="idea-icon">❤️</div><div class="idea-text"><strong>The whole garden was built because of one king's love for his wife.</strong> Do you think personal emotions like love have shaped history as much as wars and politics?</div></div><div class="idea-q"><div class="idea-icon">🔮</div><div class="idea-text"><strong>Chapter 17 has shown pride, madness, fear, love, and incredible engineering.</strong> Which single moment from this chapter do you think teaches the most important lesson, and why?</div></div>
+</section>
+<section class="sec" id="p9">
+  <div class="sec-header">
+    <div class="sec-num">9</div>
+    <div><div class="sec-title">IELTS Content Builder</div><div class="sec-sub">Planting seeds for your future IELTS exam</div></div>
+  </div>
+  <div class="ielts-topic">
+    <div class="ielts-topic-label">📘 Today's IELTS Topic</div>
+    <h4>Wonders of the World: Legacy, Legend, and Evidence</h4>
+  </div>
+  <p style="font-size:12px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;color:var(--text3);margin-bottom:.5rem;">Key vocabulary</p>
+  <div class="vocab-chips"><span class="chip amber">cultural heritage</span><span class="chip amber">historical evidence</span><span class="chip amber">legend</span><span class="chip amber">legacy</span><span class="chip amber">architectural wonder</span><span class="chip amber">oral tradition</span></div>
+  <p style="font-size:12px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;color:var(--text3);margin:.875rem 0 .5rem;">Useful collocations</p>
+  <div class="vocab-chips"><span class="chip">stand the test of time</span><span class="chip">pass down through generations</span><span class="chip">separate fact from legend</span><span class="chip">leave a lasting legacy</span></div>
+  <div class="ielts-qs"><div class="ielts-q"><div class="ielts-q-num">S1</div><div class="ielts-q-text">Why do you think certain historical stories become legendary even without complete proof?</div></div><div class="ielts-q"><div class="ielts-q-num">S2</div><div class="ielts-q-text">What modern structures do you think might be remembered as 'wonders' thousands of years from now?</div></div><div class="ielts-q"><div class="ielts-q-num">S3</div><div class="ielts-q-text">How should historians treat stories that cannot be fully proven with evidence?</div></div></div>
+  <div class="ielts-w2">
+    <div class="ielts-w2-label">✏️ IELTS Writing Task 2 — Future Practice</div>
+    <p>"Some of the most famous wonders of the ancient world, such as the Hanging Gardens of Babylon, have no surviving physical evidence. To what extent do you think stories without solid proof should still be considered important historical or cultural achievements?"</p>
+  </div>
+</section>
+<section class="sec" id="p10">
+  <div class="sec-header">
+    <div class="sec-num">10</div>
+    <div><div class="sec-title">Chapter 17 Review</div><div class="sec-sub">Celebrate everything you have learned!</div></div>
+  </div>
+  <div style="background:#1A1100;border:1px solid rgba(212,137,15,0.2);border-radius:var(--r-sm);padding:1.25rem;margin-bottom:1.25rem;">
+    <div style="font-size:11px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--amber-300);margin-bottom:.75rem;">📖 Chapter 17 Summary</div>
+    <p style="font-size:14px;color:var(--text2);line-height:1.8;">After the fall of Ashurbanipal, Assyria collapsed and the Babylonians took revenge, destroying Nineveh, before rebuilding their own mighty <strong style="color:#fff">empire</strong> under <strong style="color:#fff">Nebuchadnezzar the Great</strong>, who built towering walls and the beautiful <strong style="color:#fff">Ishtar Gate</strong>. Despite his success, ancient tablets describe “Nebuchadnezzar's madness” — a story from the Book of Daniel in which the proud king claimed to be a god, was struck down by a divine voice, and lived like a wild animal for years until he humbly admitted he was only a man. Later, fearing invasion from the rising power of <strong style="color:#fff">Persia</strong>, Nebuchadnezzar arranged a marriage with the Persian princess <strong style="color:#fff">Amytis</strong> to secure peace between the two empires. Homesick for the mountains of her homeland, Amytis found no comfort in gold, silk, or servants — so Nebuchadnezzar built her an artificial mountain garden in the heart of flat, dry Babylon, complete with a pump lifting water from the Euphrates River. Known as the <strong style="color:#fff">Hanging Gardens of Babylon</strong>, the garden became the second of the <strong style="color:#fff">Seven Wonders</strong> of the Ancient World that you have studied, standing as a timeless monument to one king's pride, humility, fear, and love.</p>
+  </div>
+  <p style="font-size:12px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;color:var(--text3);margin-bottom:.75rem;">⭐ All Chapter 17 Star Words</p>
+  <div class="star-words"><span class="star-word">⭐ empire</span><span class="star-word">⭐ revenge</span><span class="star-word">⭐ invasion</span><span class="star-word">⭐ gate</span><span class="star-word">⭐ goddess</span><span class="star-word">⭐ decorate</span><span class="star-word">⭐ reign</span><span class="star-word">⭐ rebuild</span><span class="star-word">⭐ proud</span><span class="star-word">⭐ statue</span><span class="star-word">⭐ worship</span><span class="star-word">⭐ ruler</span><span class="star-word">⭐ claim</span><span class="star-word">⭐ enormous</span><span class="star-word">⭐ madness</span><span class="star-word">⭐ mighty</span><span class="star-word">⭐ rooftop</span><span class="star-word">⭐ boast</span><span class="star-word">⭐ heaven</span><span class="star-word">⭐ doom</span><span class="star-word">⭐ insane</span><span class="star-word">⭐ claws</span><span class="star-word">⭐ hooves</span><span class="star-word">⭐ humble</span><span class="star-word">⭐ worry</span><span class="star-word">⭐ invader</span><span class="star-word">⭐ defend</span><span class="star-word">⭐ army</span><span class="star-word">⭐ marriage</span><span class="star-word">⭐ father-in-law</span><span class="star-word">⭐ relieved</span><span class="star-word">⭐ protest</span><span class="star-word">⭐ jewelry</span><span class="star-word">⭐ silk</span><span class="star-word">⭐ servant</span><span class="star-word">⭐ cliff</span><span class="star-word">⭐ valley</span><span class="star-word">⭐ hillside</span><span class="star-word">⭐ dull</span><span class="star-word">⭐ homesick</span><span class="star-word">⭐ artificial</span><span class="star-word">⭐ slab</span><span class="star-word">⭐ haul</span><span class="star-word">⭐ pump</span><span class="star-word">⭐ path</span><span class="star-word">⭐ admire</span><span class="star-word">⭐ irrigation</span><span class="star-word">⭐ design</span><span class="star-word">⭐ Seven Wonders</span><span class="star-word">⭐ incredible</span><span class="star-word">⭐ remarkable</span><span class="star-word">⭐ legacy</span><span class="star-word">⭐ timeless</span><span class="star-word">⭐ awe</span><span class="star-word">⭐ comparison</span><span class="star-word">⭐ monument</span><span class="star-word">⭐ civilization</span><span class="star-word">⭐ marvel</span></div>
+  <div class="think-box">
+    <div class="think-head">💡 The Big Idea of Chapter 17</div>
+    <p>Empires rise from ruins, pride can bring the mightiest ruler low, and even the flattest desert can bloom into a mountain when there is enough love and ingenious engineering behind it.</p>
+  </div>
+  <div style="background:var(--amber-bg);border:1px solid var(--amber-border);border-radius:var(--r-sm);padding:1.25rem;margin-bottom:1.25rem;">
+    <div style="font-size:11px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--amber-300);margin-bottom:.75rem;">🗺️ Chapter 17 Project — Design Your Own Wonder</div>
+    <p style="font-size:14px;color:var(--text2);margin-bottom:.75rem;">Complete the following steps:</p>
+    <div style="display:flex;flex-direction:column;gap:6px;"><div style="display:flex;gap:10px;align-items:flex-start;"><span style="color:var(--amber-300);font-weight:700;min-width:24px;">1.</span><span style="font-size:13px;color:var(--text2);">Choose a real problem faced by someone in the chapter (Nebuchadnezzar's pride, his fear of Persia, or Amytis's homesickness).</span></div><div style="display:flex;gap:10px;align-items:flex-start;"><span style="color:var(--amber-300);font-weight:700;min-width:24px;">2.</span><span style="font-size:13px;color:var(--text2);">Sketch a structure or invention that solves this problem, labeling its key engineering features.</span></div><div style="display:flex;gap:10px;align-items:flex-start;"><span style="color:var(--amber-300);font-weight:700;min-width:24px;">3.</span><span style="font-size:13px;color:var(--text2);">Write a short paragraph (4–5 sentences) explaining how your structure works and why it solves the problem.</span></div><div style="display:flex;gap:10px;align-items:flex-start;"><span style="color:var(--amber-300);font-weight:700;min-width:24px;">4.</span><span style="font-size:13px;color:var(--text2);">Give your invention or structure a name, using at least two vocabulary words from Chapter 17.</span></div><div style="display:flex;gap:10px;align-items:flex-start;"><span style="color:var(--amber-300);font-weight:700;min-width:24px;">5.</span><span style="font-size:13px;color:var(--text2);">Present your idea to a partner or family member and explain why it deserves to be called one of the 'Wonders of Your World.'</span></div></div>
+  </div>
+  <p style="font-size:12px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;color:var(--text3);margin:.875rem 0 .75rem;">🧠 Final Quiz</p>
+  <div class="mini-quiz-q"><div class="mq-text">A. What warned Nebuchadnezzar to stop being so proud?</div><div class="mq-opts"><button class="mq-opt" onclick="mq(this,'wrong')">His advisors</button>
+<button class="mq-opt" onclick="mq(this,'correct')">A voice from heaven</button>
+<button class="mq-opt" onclick="mq(this,'wrong')">A written letter</button>
+</div></div><div class="mini-quiz-q"><div class="mq-text">B. Why did Nebuchadnezzar marry Amytis?</div><div class="mq-opts"><button class="mq-opt" onclick="mq(this,'wrong')">Because her father demanded it</button>
+<button class="mq-opt" onclick="mq(this,'correct')">To prevent Persia from attacking Babylon</button>
+<button class="mq-opt" onclick="mq(this,'wrong')">Because she was the richest princess</button>
+</div></div><div class="mini-quiz-q"><div class="mq-text">C. The Hanging Gardens are the second of the ________ Wonders you have studied.</div><div class="mq-opts"><button class="mq-opt" onclick="mq(this,'wrong')">Great</button>
+<button class="mq-opt" onclick="mq(this,'wrong')">Ancient</button>
+<button class="mq-opt" onclick="mq(this,'correct')">Seven</button>
+</div></div>
+  <div class="lesson-nav">
+    <a class="nav-btn" href="ch17-f.html"><i class="ti ti-arrow-left"></i> Lesson 17F</a>
+    <a class="nav-btn primary" href="https://lexilink-ideation.github.io/History-Workshop/">Back to all chapters <i class="ti ti-arrow-right"></i></a>
+  </div>
+</section>
+</main>
+<footer class="site-footer"><strong>Lexilink Ideation IELTS STUDIO</strong> · History ESL Course · Chapter 17 — Lesson G · Chapter Review</footer>
+<script>
+function toggleVocab(card){card.classList.toggle('open');}
+function mcq(btn,type){
+  const item=btn.closest('.q-item');
+  item.querySelectorAll('.q-opt').forEach(b=>{b.classList.remove('correct','wrong');b.disabled=true;});
+  btn.classList.add(type);
+  const fb=item.querySelector('.q-feedback');
+  fb.className='q-feedback show '+(type==='correct'?'good':'bad');
+  fb.textContent=type==='correct'?'✓ Correct! Well done!':'✗ Not quite. Try to remember the story.';
+}
+function tf(btn,type,msg){
+  const item=btn.closest('.q-item');
+  item.querySelectorAll('.tf-btn').forEach(b=>{b.classList.remove('correct','wrong');b.disabled=true;});
+  btn.classList.add(type);
+  const fb=item.querySelector('.q-feedback');
+  fb.className='q-feedback show '+(type==='correct'?'good':'bad');
+  fb.textContent=(type==='correct'?'✓ ':'✗ ')+msg;
+}
+function mq(btn,type){
+  const item=btn.closest('.mini-quiz-q');
+  item.querySelectorAll('.mq-opt').forEach(b=>{b.classList.remove('correct','wrong');b.disabled=true;});
+  btn.classList.add(type);
+}
+function checkUnscramble(id,answer,rid){
+  const val=document.getElementById(id).value.trim().toLowerCase().replace(/[^a-z\s]/g,'');
+  const ans=answer.toLowerCase();
+  const r=document.getElementById(rid);
+  r.className='sb-result show '+(val===ans?'ok':'no');
+  r.textContent=val===ans?'✓ Perfect! "'+answer+'"':'✗ Try again. Check the word order.';
+}
+function checkFill(id,answer,rid){
+  const val=document.getElementById(id).value.trim().toLowerCase();
+  const r=document.getElementById(rid);
+  r.className='sb-result show '+(val===answer.toLowerCase()?'ok':'no');
+  r.textContent=val===answer.toLowerCase()?'✓ Correct!':'✗ The answer is: "'+answer+'"';
+}
+function revealTranslation(id,answer,rid){
+  const r=document.getElementById(rid);
+  r.className='sb-result show ok';
+  r.textContent='✓ Model answer: "'+answer+'"';
+}
+function scrollTo(id){document.getElementById(id).scrollIntoView({behavior:'smooth',block:'start'});}
+const parts=['p1','p2','p3','p4','p5','p6','p7','p8','p9','p10'];
+const partEls=document.querySelectorAll('.lp-part');
+window.addEventListener('scroll',()=>{
+  let current=0;
+  parts.forEach((id,i)=>{const el=document.getElementById(id);if(el&&el.getBoundingClientRect().top<200)current=i;});
+  partEls.forEach((el,i)=>{el.classList.remove('active','done');if(i<current)el.classList.add('done');else if(i===current)el.classList.add('active');});
+  const pct=Math.round(((current+1)/10)*100);
+  document.querySelector('.lp-fill').style.width=pct+'%';
+});
+</script>
+</body>
+</html>

@@ -1,0 +1,530 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+<title>Lesson 17B — Nebuchadnezzar the Great | Lexilink History Workshop</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"/>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet"/>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@latest/tabler-icons.min.css"/>
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
+:root{
+  --bg:#0F0800;--surface:rgba(255,255,255,0.04);--surface2:rgba(255,255,255,0.07);
+  --border:rgba(255,255,255,0.10);--border2:rgba(255,255,255,0.06);
+  --amber-300:#E8A832;--amber-400:#D4890F;--amber-500:#B8720A;
+  --amber-bg:rgba(212,137,15,0.12);--amber-border:rgba(212,137,15,0.3);
+  --text:#fff;--text2:rgba(255,255,255,0.72);--text3:rgba(255,255,255,0.45);
+  --teal:#1D9E75;--teal-bg:rgba(29,158,117,0.12);--teal-border:rgba(29,158,117,0.3);
+  --coral:#E05C3A;--coral-bg:rgba(224,92,58,0.12);
+  --blue:#4A9EE0;--blue-bg:rgba(74,158,224,0.12);
+  --r:12px;--r-sm:8px;
+}
+html{scroll-behavior:smooth;}
+body{font-family:'Inter',sans-serif;background:var(--bg);color:var(--text);min-height:100vh;line-height:1.6;}
+.site-header{background:#111;border-bottom:1px solid rgba(255,255,255,0.08);position:sticky;top:0;z-index:100;}
+.hdr{max-width:860px;margin:0 auto;padding:0 1.5rem;height:54px;display:flex;align-items:center;gap:12px;}
+.logo-wrap{display:flex;align-items:center;gap:8px;text-decoration:none;}
+.logo-icon{width:30px;height:30px;display:flex;align-items:center;justify-content:center;}
+.logo-icon svg{width:26px;height:26px;}
+.logo-name{font-size:13px;font-weight:700;color:#fff;}
+.hdr-pipe{width:1px;height:20px;background:rgba(255,255,255,0.15);}
+.hdr-back{display:flex;align-items:center;gap:5px;font-size:12px;color:var(--text3);text-decoration:none;transition:color .15s;}
+.hdr-back:hover{color:var(--text2);}
+.hdr-spacer{flex:1;}
+.hdr-badge{font-size:10px;font-weight:700;letter-spacing:.05em;padding:3px 10px;border-radius:99px;border:1px solid var(--amber-border);color:var(--amber-300);background:var(--amber-bg);}
+.lesson-hero{background:linear-gradient(135deg,#2C1600 0%,#5C3200 40%,#7A4500 100%);padding:3rem 1.5rem 2.5rem;text-align:center;position:relative;overflow:hidden;}
+.lesson-hero::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse 70% 60% at 50% 50%,rgba(200,130,0,0.15),transparent);pointer-events:none;}
+.lesson-eyebrow{font-size:10px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--amber-300);margin-bottom:.75rem;}
+.lesson-hero h1{font-size:clamp(22px,4vw,36px);font-weight:700;color:#fff;letter-spacing:-.02em;margin-bottom:.5rem;}
+.lesson-hero p{font-size:14px;color:rgba(255,255,255,0.65);max-width:520px;margin:0 auto .875rem;}
+.lesson-pills{display:flex;flex-wrap:wrap;justify-content:center;gap:8px;}
+.l-pill{font-size:11px;font-weight:500;padding:4px 12px;border-radius:99px;border:1px solid rgba(255,255,255,0.18);color:rgba(255,255,255,0.75);background:rgba(255,255,255,0.06);}
+.lesson-progress{background:#1A1100;border-bottom:1px solid rgba(255,255,255,0.06);padding:.75rem 1.5rem;}
+.lp-inner{max-width:860px;margin:0 auto;}
+.lp-labels{display:flex;justify-content:space-between;font-size:11px;color:var(--text3);margin-bottom:6px;}
+.lp-track{height:4px;border-radius:99px;background:rgba(255,255,255,0.08);}
+.lp-fill{height:100%;border-radius:99px;background:linear-gradient(90deg,var(--amber-500),var(--amber-300));width:10%;}
+.lp-parts{display:flex;gap:4px;margin-top:8px;flex-wrap:wrap;}
+.lp-part{font-size:10px;font-weight:600;padding:2px 8px;border-radius:99px;background:rgba(255,255,255,0.06);color:var(--text3);cursor:pointer;transition:all .15s;}
+.lp-part.done{background:var(--amber-bg);color:var(--amber-300);border:1px solid var(--amber-border);}
+.lp-part.active{background:var(--amber-400);color:#1A0800;}
+.main{max-width:860px;margin:0 auto;padding:2rem 1.5rem 5rem;}
+.sec{background:var(--surface);border:1px solid var(--border);border-radius:var(--r);padding:1.5rem;margin-bottom:1.5rem;scroll-margin-top:80px;}
+.sec-header{display:flex;align-items:center;gap:10px;margin-bottom:1.25rem;}
+.sec-num{width:28px;height:28px;border-radius:8px;display:flex;align-items:center;justify-content:center;font-size:11px;font-weight:700;background:var(--amber-bg);color:var(--amber-300);border:1px solid var(--amber-border);flex-shrink:0;}
+.sec-title{font-size:16px;font-weight:700;color:#fff;}
+.sec-sub{font-size:12px;color:var(--text3);margin-top:1px;}
+.vocab-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(240px,1fr));gap:10px;}
+.vocab-card{background:var(--surface2);border:1px solid var(--border2);border-radius:var(--r-sm);padding:1rem;cursor:pointer;transition:border-color .15s;}
+.vocab-card:hover,.vocab-card.open{border-color:var(--amber-border);}
+.vc-top{display:flex;align-items:baseline;gap:8px;}
+.vc-word{font-size:16px;font-weight:700;color:#fff;}
+.vc-pos{font-size:10px;font-weight:600;padding:1px 7px;border-radius:99px;background:var(--amber-bg);color:var(--amber-300);}
+.vc-pron{font-size:12px;color:var(--text3);margin-top:2px;font-style:italic;}
+.vc-cn{font-size:15px;color:var(--amber-300);margin-top:4px;font-weight:600;}
+.vc-detail{display:none;margin-top:10px;padding-top:10px;border-top:1px solid var(--border2);}
+.vocab-card.open .vc-detail{display:block;}
+.vc-def{font-size:13px;color:var(--text2);margin-bottom:6px;}
+.vc-ex{font-size:12px;color:var(--text3);font-style:italic;padding-left:8px;border-left:2px solid var(--amber-border);}
+.story-body p{font-size:15px;color:var(--text2);line-height:1.8;margin-bottom:1rem;}
+.story-body p:last-child{margin-bottom:0;}
+.story-hl{color:var(--amber-300);font-weight:600;}
+.story-box{background:var(--amber-bg);border:1px solid var(--amber-border);border-radius:var(--r-sm);padding:1rem 1.25rem;margin:1.25rem 0;font-size:14px;color:rgba(255,255,255,0.85);line-height:1.7;font-style:italic;}
+.story-box::before{content:'"';font-size:32px;color:var(--amber-400);line-height:1;display:block;margin-bottom:.25rem;}
+.story-icon{font-size:40px;text-align:center;margin:1rem 0;}
+.quiz-list{display:flex;flex-direction:column;gap:14px;}
+.q-item{background:var(--surface2);border:1px solid var(--border2);border-radius:var(--r-sm);padding:1rem 1.25rem;}
+.q-text{font-size:14px;font-weight:600;color:#fff;margin-bottom:.75rem;}
+.q-opts{display:flex;flex-direction:column;gap:6px;}
+.q-opt{display:flex;align-items:center;gap:10px;padding:8px 12px;border-radius:8px;border:1px solid var(--border);background:transparent;cursor:pointer;font-size:13px;color:var(--text2);width:100%;text-align:left;transition:all .15s;}
+.q-opt:hover{border-color:var(--amber-border);background:var(--amber-bg);}
+.q-opt.correct{border-color:var(--teal-border);background:var(--teal-bg);color:#fff;}
+.q-opt.wrong{border-color:rgba(224,92,58,0.4);background:var(--coral-bg);color:#fff;}
+.q-feedback{font-size:12px;margin-top:8px;padding:6px 10px;border-radius:6px;display:none;}
+.q-feedback.show{display:block;}
+.q-feedback.good{background:var(--teal-bg);color:#5DCAA5;}
+.q-feedback.bad{background:var(--coral-bg);color:#F09B80;}
+.tf-opts{display:flex;gap:8px;}
+.tf-btn{flex:1;padding:8px;border-radius:8px;border:1px solid var(--border);background:transparent;cursor:pointer;font-size:13px;font-weight:600;color:var(--text2);transition:all .15s;}
+.tf-btn:hover{border-color:var(--amber-border);background:var(--amber-bg);}
+.tf-btn.correct{border-color:var(--teal-border);background:var(--teal-bg);color:#fff;}
+.tf-btn.wrong{border-color:rgba(224,92,58,0.4);background:var(--coral-bg);color:#fff;}
+.grammar-box{background:var(--surface2);border-left:3px solid var(--amber-400);border-radius:0 var(--r-sm) var(--r-sm) 0;padding:1rem 1.25rem;margin-bottom:1rem;}
+.grammar-label{font-size:10px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--amber-300);margin-bottom:.5rem;}
+.grammar-rule{font-size:14px;color:#fff;font-weight:600;margin-bottom:.5rem;}
+.grammar-eg{font-size:13px;color:var(--text2);margin-top:.25rem;font-style:italic;}
+.grammar-eg span{color:var(--amber-300);font-weight:600;font-style:normal;}
+.grammar-table{width:100%;border-collapse:collapse;font-size:13px;margin-top:.75rem;}
+.grammar-table th{text-align:left;padding:6px 10px;font-size:10px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;color:var(--text3);border-bottom:1px solid var(--border);}
+.grammar-table td{padding:7px 10px;color:var(--text2);border-bottom:1px solid var(--border2);}
+.grammar-table td:first-child{color:#fff;font-weight:500;}
+.hl{color:var(--amber-300);font-weight:600;}
+.sb-activity{margin-bottom:1.25rem;}
+.sb-label{font-size:11px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;color:var(--amber-300);margin-bottom:.75rem;}
+.sb-input{width:100%;background:var(--surface2);border:1px solid var(--border);border-radius:var(--r-sm);padding:.625rem .875rem;font-size:14px;color:#fff;font-family:'Inter',sans-serif;transition:border-color .15s;outline:none;margin-bottom:.5rem;}
+.sb-input:focus{border-color:var(--amber-border);}
+.sb-check{padding:7px 18px;border-radius:99px;background:var(--amber-400);color:#1A0800;font-size:13px;font-weight:700;border:none;cursor:pointer;transition:opacity .15s;}
+.sb-check:hover{opacity:.85;}
+.sb-result{font-size:12px;margin-top:6px;padding:6px 10px;border-radius:6px;display:none;}
+.sb-result.show{display:block;}
+.sb-result.ok{background:var(--teal-bg);color:#5DCAA5;}
+.sb-result.no{background:var(--coral-bg);color:#F09B80;}
+.sb-chip{padding:5px 10px;border-radius:99px;background:var(--surface2);border:1px solid var(--border);font-size:13px;color:var(--text2);display:inline-block;margin:3px;}
+.speak-level{margin-bottom:1.25rem;}
+.speak-badge{display:inline-flex;align-items:center;gap:6px;font-size:11px;font-weight:700;padding:3px 12px;border-radius:99px;margin-bottom:.875rem;}
+.speak-badge.l1{background:var(--teal-bg);color:#5DCAA5;border:1px solid var(--teal-border);}
+.speak-badge.l2{background:var(--amber-bg);color:var(--amber-300);border:1px solid var(--amber-border);}
+.speak-badge.l3{background:var(--blue-bg);color:var(--blue);border:1px solid rgba(74,158,224,0.3);}
+.speak-q{background:var(--surface2);border:1px solid var(--border2);border-radius:var(--r-sm);padding:1rem 1.25rem;margin-bottom:.75rem;}
+.speak-q p{font-size:14px;font-weight:600;color:#fff;margin-bottom:.5rem;}
+.speak-hint{font-size:12px;color:var(--text3);}
+.speak-hint span{color:var(--amber-300);}
+.idea-q{background:var(--surface2);border:1px solid var(--border2);border-radius:var(--r-sm);padding:1rem 1.25rem;margin-bottom:.75rem;display:flex;gap:10px;}
+.idea-icon{font-size:20px;flex-shrink:0;margin-top:2px;}
+.idea-text{font-size:14px;color:var(--text2);line-height:1.6;}
+.idea-text strong{color:#fff;}
+.ielts-topic{background:var(--blue-bg);border:1px solid rgba(74,158,224,0.25);border-radius:var(--r-sm);padding:1rem 1.25rem;margin-bottom:1.25rem;}
+.ielts-topic-label{font-size:10px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--blue);margin-bottom:.25rem;}
+.ielts-topic h4{font-size:16px;font-weight:700;color:#fff;}
+.vocab-chips{display:flex;flex-wrap:wrap;gap:6px;margin-top:.75rem;}
+.chip{font-size:12px;padding:4px 12px;border-radius:99px;background:rgba(255,255,255,0.06);border:1px solid var(--border);color:var(--text2);}
+.chip.amber{background:var(--amber-bg);border-color:var(--amber-border);color:var(--amber-300);}
+.ielts-qs{display:flex;flex-direction:column;gap:8px;margin-top:1rem;}
+.ielts-q{display:flex;gap:10px;background:var(--surface2);border-radius:var(--r-sm);padding:.875rem 1rem;}
+.ielts-q-num{font-size:11px;font-weight:700;color:var(--blue);min-width:20px;}
+.ielts-q-text{font-size:13px;color:var(--text2);}
+.ielts-w2{background:rgba(74,158,224,0.08);border:1px solid rgba(74,158,224,0.2);border-radius:var(--r-sm);padding:1rem 1.25rem;margin-top:1rem;}
+.ielts-w2-label{font-size:10px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--blue);margin-bottom:.5rem;}
+.ielts-w2 p{font-size:14px;color:var(--text2);line-height:1.7;font-style:italic;}
+.star-words{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:1.25rem;}
+.star-word{display:flex;align-items:center;gap:6px;padding:6px 14px;border-radius:99px;background:var(--amber-bg);border:1px solid var(--amber-border);font-size:13px;font-weight:600;color:var(--amber-300);}
+.think-box{background:var(--surface2);border:1px solid var(--border2);border-radius:var(--r-sm);padding:1rem 1.25rem;margin-bottom:1rem;}
+.think-box .think-head{font-size:12px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;color:var(--amber-300);margin-bottom:.5rem;}
+.think-box p{font-size:14px;color:var(--text2);}
+.mini-quiz-q{background:var(--surface2);border:1px solid var(--border2);border-radius:var(--r-sm);padding:1rem;margin-bottom:.75rem;}
+.mq-text{font-size:13px;font-weight:600;color:#fff;margin-bottom:.625rem;}
+.mq-opts{display:flex;flex-direction:column;gap:5px;}
+.mq-opt{padding:7px 12px;border-radius:6px;border:1px solid var(--border);background:transparent;font-size:12px;color:var(--text2);cursor:pointer;text-align:left;transition:all .15s;}
+.mq-opt:hover{border-color:var(--amber-border);background:var(--amber-bg);}
+.mq-opt.correct{border-color:var(--teal-border);background:var(--teal-bg);color:#fff;}
+.mq-opt.wrong{border-color:rgba(224,92,58,0.4);background:var(--coral-bg);color:#fff;}
+.lesson-nav{display:flex;gap:10px;margin-top:2rem;}
+.nav-btn{display:flex;align-items:center;gap:6px;padding:.75rem 1.25rem;border-radius:10px;font-size:13px;font-weight:600;cursor:pointer;text-decoration:none;border:1px solid var(--border);color:var(--text2);background:var(--surface);transition:all .15s;flex:1;justify-content:center;}
+.nav-btn:hover{border-color:var(--border2);color:#fff;}
+.nav-btn.primary{background:var(--amber-400);color:#1A0800;border-color:transparent;}
+.nav-btn.primary:hover{opacity:.9;}
+.site-footer{background:#111;border-top:1px solid rgba(255,255,255,0.07);text-align:center;padding:1.5rem;font-size:12px;color:rgba(255,255,255,0.3);}
+.site-footer strong{color:var(--amber-300);}
+@media(max-width:600px){.vocab-grid{grid-template-columns:1fr;}.lesson-nav{flex-direction:column;}}
+</style>
+</head>
+<body>
+<header class="site-header">
+  <div class="hdr">
+    <a class="logo-wrap" href="index.html">
+      <div class="logo-icon"><svg viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+          <path d="M6 24 C8 18,14 10,24 6 C20 10,18 14,20 18 C16 16,12 18,6 24Z" fill="white"/>
+          <path d="M20 18 C22 20,22 23,20 26 C18 24,18 21,20 18Z" fill="rgba(255,255,255,0.5)"/>
+        </svg></div>
+      <span class="logo-name">Lexilink Ideation IELTS STUDIO</span>
+    </a>
+    <div class="hdr-pipe"></div>
+    <a class="hdr-back" href="index.html"><i class="ti ti-arrow-left" aria-hidden="true"></i> Vol. 1</a>
+    <div class="hdr-spacer"></div>
+    <span class="hdr-badge">Lesson 17B</span>
+  </div>
+</header>
+<section class="lesson-hero">
+  <p class="lesson-eyebrow">Chapter 17 · Babylon Takes Over Again!</p>
+  <h1>Nebuchadnezzar the Great</h1>
+  <p>A ruler so powerful he began to believe he was equal to the gods</p>
+  <div class="lesson-pills"><span class="l-pill">📖 Story + Vocabulary</span><span class="l-pill">🎤 Speaking</span><span class="l-pill">✏️ Grammar</span><span class="l-pill">⭐ CEFR A2–B1</span></div>
+</section>
+<div class="lesson-progress">
+  <div class="lp-inner">
+    <div class="lp-labels"><span>Lesson 17B of 7</span><span style="color:var(--amber-300)">Part 1 of 10</span></div>
+    <div class="lp-track"><div class="lp-fill"></div></div>
+    <div class="lp-parts">
+      <span class="lp-part active" onclick="scrollTo('p1')">1 Vocab</span><span class="lp-part " onclick="scrollTo('p2')">2 Story</span><span class="lp-part " onclick="scrollTo('p3')">3 Reading</span><span class="lp-part " onclick="scrollTo('p4')">4 Grammar</span><span class="lp-part " onclick="scrollTo('p5')">5 Builder</span><span class="lp-part " onclick="scrollTo('p6')">6 Speaking 1</span><span class="lp-part " onclick="scrollTo('p7')">7 Speaking 2</span><span class="lp-part " onclick="scrollTo('p8')">8 Ideas</span><span class="lp-part " onclick="scrollTo('p9')">9 IELTS</span><span class="lp-part " onclick="scrollTo('p10')">10 Review</span>
+    </div>
+  </div>
+</div>
+<main class="main">
+<section class="sec" id="p1">
+  <div class="sec-header">
+    <div class="sec-num">1</div>
+    <div><div class="sec-title">Vocabulary</div><div class="sec-sub">Click each word to learn more</div></div>
+  </div>
+  <div class="vocab-grid"><div class="vocab-card" onclick="toggleVocab(this)">
+      <div class="vc-top"><span class="vc-word">proud</span><span class="vc-pos">adjective</span></div>
+      <div class="vc-pron">/praʊd/</div>
+      <div class="vc-cn">骄傲的</div>
+      <div class="vc-detail">
+        <div class="vc-def">Feeling pleased and satisfied with your own achievements, sometimes too much so.</div>
+        <div class="vc-ex">"Nebuchadnezzar became too proud of his own power."</div>
+      </div>
+    </div><div class="vocab-card" onclick="toggleVocab(this)">
+      <div class="vc-top"><span class="vc-word">statue</span><span class="vc-pos">noun</span></div>
+      <div class="vc-pron">/ˈstætʃ.uː/</div>
+      <div class="vc-cn">雕像</div>
+      <div class="vc-detail">
+        <div class="vc-def">A model of a person or animal, made from stone, metal, or another material.</div>
+        <div class="vc-ex">"He made an enormous golden statue of himself."</div>
+      </div>
+    </div><div class="vocab-card" onclick="toggleVocab(this)">
+      <div class="vc-top"><span class="vc-word">worship</span><span class="vc-pos">verb</span></div>
+      <div class="vc-pron">/ˈwɜː.ʃɪp/</div>
+      <div class="vc-cn">崇拜</div>
+      <div class="vc-detail">
+        <div class="vc-def">To show great love and respect for a god, or to treat someone as if they were a god.</div>
+        <div class="vc-ex">"He told his people to bow down and worship the statue."</div>
+      </div>
+    </div><div class="vocab-card" onclick="toggleVocab(this)">
+      <div class="vc-top"><span class="vc-word">ruler</span><span class="vc-pos">noun</span></div>
+      <div class="vc-pron">/ˈruː.lər/</div>
+      <div class="vc-cn">统治者</div>
+      <div class="vc-detail">
+        <div class="vc-def">A person, such as a king or queen, who governs a country.</div>
+        <div class="vc-ex">"Nebuchadnezzar was one of the most famous rulers of the ancient world."</div>
+      </div>
+    </div><div class="vocab-card" onclick="toggleVocab(this)">
+      <div class="vc-top"><span class="vc-word">claim</span><span class="vc-pos">verb</span></div>
+      <div class="vc-pron">/kleɪm/</div>
+      <div class="vc-cn">声称</div>
+      <div class="vc-detail">
+        <div class="vc-def">To say that something is true, even if other people are not sure.</div>
+        <div class="vc-ex">"He began to claim that he was more powerful than any god."</div>
+      </div>
+    </div><div class="vocab-card" onclick="toggleVocab(this)">
+      <div class="vc-top"><span class="vc-word">enormous</span><span class="vc-pos">adjective</span></div>
+      <div class="vc-pron">/ɪˈnɔː.məs/</div>
+      <div class="vc-cn">巨大的</div>
+      <div class="vc-detail">
+        <div class="vc-def">Extremely large in size or amount.</div>
+        <div class="vc-ex">"The statue was enormous — almost a hundred feet high."</div>
+      </div>
+    </div><div class="vocab-card" onclick="toggleVocab(this)">
+      <div class="vc-top"><span class="vc-word">madness</span><span class="vc-pos">noun</span></div>
+      <div class="vc-pron">/ˈmæd.nəs/</div>
+      <div class="vc-cn">疯狂</div>
+      <div class="vc-detail">
+        <div class="vc-def">Extreme foolishness, or the state of being mentally ill.</div>
+        <div class="vc-ex">"Ancient scrolls describe several years of ‘Nebuchadnezzar's madness.’"</div>
+      </div>
+    </div><div class="vocab-card" onclick="toggleVocab(this)">
+      <div class="vc-top"><span class="vc-word">scroll</span><span class="vc-pos">noun</span></div>
+      <div class="vc-pron">/skrəʊl/</div>
+      <div class="vc-cn">卷轴</div>
+      <div class="vc-detail">
+        <div class="vc-def">A long roll of paper or other material with writing on it, used before books existed.</div>
+        <div class="vc-ex">"Old scrolls tell strange stories about the king's mind."</div>
+      </div>
+    </div><div class="vocab-card" onclick="toggleVocab(this)">
+      <div class="vc-top"><span class="vc-word">mighty</span><span class="vc-pos">adjective</span></div>
+      <div class="vc-pron">/ˈmaɪ.ti/</div>
+      <div class="vc-cn">强大的</div>
+      <div class="vc-detail">
+        <div class="vc-def">Very powerful or strong.</div>
+        <div class="vc-ex">"Nebuchadnezzar ruled a mighty empire that stretched across the region."</div>
+      </div>
+    </div><div class="vocab-card" onclick="toggleVocab(this)">
+      <div class="vc-top"><span class="vc-word">pleased with himself</span><span class="vc-pos">adjective phrase</span></div>
+      <div class="vc-pron">/pliːzd wɪð hɪmˈself/</div>
+      <div class="vc-cn">自鸣得意</div>
+      <div class="vc-detail">
+        <div class="vc-def">Feeling too happy or satisfied with your own success.</div>
+        <div class="vc-ex">"The king was a little too pleased with himself and his achievements."</div>
+      </div>
+    </div></div>
+</section>
+<section class="sec" id="p2">
+  <div class="sec-header">
+    <div class="sec-num">2</div>
+    <div><div class="sec-title">The Story</div><div class="sec-sub">Read carefully. Notice the bold words.</div></div>
+  </div>
+  <div class="story-body"><div class="story-icon">📜</div>
+    <p>Nebuchadnezzar was, without question, one of the most successful <span class="story-hl">rulers</span> in the ancient world. He had rebuilt Babylon from the ruins of war. He had built towering walls and a gate so beautiful that people spoke of it for centuries. His empire was <span class="story-hl">mighty</span>, stretching across a huge area of the ancient Middle East. People began calling him “Nebuchadnezzar the Great.”</p><p>But being called “great” is not the same as being happy. Strange as it sounds, ancient clay tablets and <span class="story-hl">scrolls</span> written during Nebuchadnezzar's reign describe something historians now call “<span class="story-hl">Nebuchadnezzar's madness</span>.” For several years, according to these old records, the powerful king actually seemed to lose his mind.</p><p>How could such a successful ruler fall into madness? One famous story, found in the Bible in the Book of Daniel, gives us an answer — and it is a warning about pride.</p><p>According to the story, Nebuchadnezzar had become a little too <span class="story-hl">pleased with himself</span>. Every day he looked out at Babylon — its towering walls, its beautiful gate, its temples and palaces — and he grew <span class="story-hl">prouder</span> and prouder. Slowly, an extraordinary idea took root in his mind: perhaps he was not simply a great king. Perhaps he was something more. Perhaps, he began to think, he was actually a god.</p><p>To prove it, Nebuchadnezzar ordered his workers to build an <span class="story-hl">enormous</span> golden <span class="story-hl">statue</span> in his own image — almost a hundred feet high, gleaming in the desert sun. Then he commanded every person in his kingdom to bow down before the statue and <span class="story-hl">worship</span> it, exactly as they would worship a god.</p><p>Think about that for a moment. Nebuchadnezzar was already the most powerful man in his world. He had armies, gold, a magnificent capital city, and the loyalty of millions of people. And still, it was not enough. He wanted to be worshipped like a god.</p><p>This is where the ancient story becomes a warning. In the Book of Daniel, pride like this never goes unpunished for long. A king who <span class="story-hl">claims</span> to be equal to God is about to receive a lesson he will never forget.</p><p>What happened next changed Nebuchadnezzar forever — turning the most powerful man in the world into something almost unrecognizable. Read on in the next lesson to discover exactly what happened when the king's pride finally went too far.</p>
+    <div class="story-icon">👑</div></div>
+</section>
+<section class="sec" id="p3">
+  <div class="sec-header">
+    <div class="sec-num">3</div>
+    <div><div class="sec-title">Reading Comprehension</div><div class="sec-sub">Choose the best answer. Get instant feedback!</div></div>
+  </div>
+  <div class="quiz-list">
+    <div class="q-item">
+      <div class="q-text">1. What title did people give Nebuchadnezzar because of his success?</div>
+      <div class="q-opts"><button class="q-opt" onclick="mcq(this,'correct')">Nebuchadnezzar the Great</button>
+<button class="q-opt" onclick="mcq(this,'wrong')">Nebuchadnezzar the Wise</button>
+<button class="q-opt" onclick="mcq(this,'wrong')">Nebuchadnezzar the Kind</button>
+</div>
+      <div class="q-feedback"></div>
+    </div>
+    <div class="q-item">
+      <div class="q-text">2. True or False: Ancient tablets say Nebuchadnezzar was always calm and happy.</div>
+      <div class="tf-opts">
+        <button class="tf-btn" onclick="tf(this,'wrong','Wrong! Ancient tablets actually describe years of strange 'madness.'')">True</button>
+        <button class="tf-btn" onclick="tf(this,'correct','Correct! Ancient scrolls describe years of 'Nebuchadnezzar's madness,' not calm happiness.')">False</button>
+      </div>
+      <div class="q-feedback"></div>
+    </div>
+    <div class="q-item">
+      <div class="q-text">3. Where is the story of Nebuchadnezzar's pride found?</div>
+      <div class="q-opts"><button class="q-opt" onclick="mcq(this,'wrong')">In an Egyptian pyramid.</button>
+<button class="q-opt" onclick="mcq(this,'correct')">In the Bible, in the Book of Daniel.</button>
+<button class="q-opt" onclick="mcq(this,'wrong')">In a Greek poem.</button>
+</div>
+      <div class="q-feedback"></div>
+    </div>
+    <div class="q-item">
+      <div class="q-text">4. What extraordinary idea did Nebuchadnezzar begin to believe about himself?</div>
+      <div class="q-opts"><button class="q-opt" onclick="mcq(this,'correct')">That he might be a god, not just a king.</button>
+<button class="q-opt" onclick="mcq(this,'wrong')">That he was actually Assyrian.</button>
+<button class="q-opt" onclick="mcq(this,'wrong')">That he should retire from ruling.</button>
+</div>
+      <div class="q-feedback"></div>
+    </div>
+    <div class="q-item">
+      <div class="q-text">5. What did Nebuchadnezzar order his people to do?</div>
+      <div class="q-opts"><button class="q-opt" onclick="mcq(this,'wrong')">Build him a new palace.</button>
+<button class="q-opt" onclick="mcq(this,'wrong')">Pay much higher taxes.</button>
+<button class="q-opt" onclick="mcq(this,'correct')">Bow down and worship a huge golden statue of himself.</button>
+</div>
+      <div class="q-feedback"></div>
+    </div>
+    <div class="q-item">
+      <div class="q-text">6. Why does the story call itself a 'warning about pride'?</div>
+      <div class="q-opts"><button class="q-opt" onclick="mcq(this,'correct')">Because claiming to be equal to a god leads to serious punishment in the story.</button>
+<button class="q-opt" onclick="mcq(this,'wrong')">Because pride always makes kings more popular.</button>
+<button class="q-opt" onclick="mcq(this,'wrong')">Because the story has no real lesson at all.</button>
+</div>
+      <div class="q-feedback"></div>
+    </div>
+  </div>
+</section>
+<section class="sec" id="p4">
+  <div class="sec-header">
+    <div class="sec-num">4</div>
+    <div><div class="sec-title">Language Focus</div><div class="sec-sub">Grammar from the story — learn through meaning</div></div>
+  </div>
+  <div class="grammar-box">
+    <div class="grammar-label">📌 Irregular Past Tense — More Storytelling Verbs</div>
+    <div class="grammar-rule">We use the past tense to describe how Nebuchadnezzar's pride grew.</div>
+    <table class="grammar-table"><tr><th>Base</th><th>Past</th><th>From the story</th></tr><tr><td>become</td><td><span class='hl'>became</span></td><td>He <span class='hl'>became</span> known as Nebuchadnezzar the Great.</td></tr><tr><td>grow</td><td><span class='hl'>grew</span></td><td>Every day he <span class='hl'>grew</span> prouder and prouder.</td></tr><tr><td>think</td><td><span class='hl'>thought</span></td><td>He began to <span class='hl'>think</span> he was a god.</td></tr><tr><td>make</td><td><span class='hl'>made</span></td><td>He <span class='hl'>made</span> an enormous golden statue of himself.</td></tr><tr><td>tell</td><td><span class='hl'>told</span></td><td>He <span class='hl'>told</span> his people to worship it.</td></tr></table>
+  </div><div class="grammar-box">
+    <div class="grammar-label">📌 'So + adjective + that' — showing extreme results</div>
+    <div class="grammar-rule">Use this pattern to show that something was so extreme it caused a result.</div>
+    <div class='grammar-eg'>The statue was <span>so</span> enormous <span>that</span> it was almost a hundred feet high.</div><div class='grammar-eg'>He was <span>so</span> proud <span>that</span> he wanted people to worship him.</div><div class='grammar-eg'>The empire was <span>so</span> mighty <span>that</span> no one dared to challenge it.</div>
+  </div><div class="grammar-box">
+    <div class="grammar-label">📌 Modals of speculation — 'might' and 'perhaps'</div>
+    <div class="grammar-rule">Use 'might' and 'perhaps' to show that someone is guessing or speculating, not stating a fact.</div>
+    <div class='grammar-eg'><span>Perhaps</span> he was something more than a king.</div><div class='grammar-eg'><span>Perhaps</span>, he began to think, he was actually a god.</div><div class='grammar-eg'>He <span>might have been</span> the most powerful man alive, but he still wanted more.</div>
+  </div>
+</section>
+<section class="sec" id="p5">
+  <div class="sec-header">
+    <div class="sec-num">5</div>
+    <div><div class="sec-title">Sentence Builder</div><div class="sec-sub">Build your skills with the vocabulary</div></div>
+  </div>
+  <div class="sb-activity">
+    <div class="sb-label">🔀 Unscramble the sentence</div>
+    <p style="font-size:13px;color:var(--text3);margin-bottom:.75rem;">Put these words in the correct order:</p>
+    <div style="margin-bottom:.75rem;"><span class="sb-chip">he</span><span class="sb-chip">made</span><span class="sb-chip">an</span><span class="sb-chip">enormous</span><span class="sb-chip">golden</span><span class="sb-chip">statue</span><span class="sb-chip">of</span><span class="sb-chip">himself</span></div>
+    <input class="sb-input" id="us17b" placeholder="Type your sentence here..."/>
+    <button class="sb-check" onclick="checkUnscramble('us17b','he made an enormous golden statue of himself','ur17b')">Check ✓</button>
+    <div class="sb-result" id="ur17b"></div>
+  </div><div class="sb-activity">
+    <div class="sb-label">✏️ Fill in the blank</div>
+    <p style="font-size:13px;color:var(--text2);margin-bottom:.5rem;">1. Nebuchadnezzar ordered his people to bow down and ________ the golden statue.</p>
+    <input class="sb-input" id="f1_17b" placeholder="Your answer..."/>
+    <button class="sb-check" onclick="checkFill('f1_17b','worship','rf1_17b')">Check ✓</button>
+    <div class="sb-result" id="rf1_17b"></div>
+  </div><div class="sb-activity">
+    <div class="sb-label">✏️ Fill in the blank</div>
+    <p style="font-size:13px;color:var(--text2);margin-bottom:.5rem;">2. People began calling him ‘Nebuchadnezzar the ________’ because of his success.</p>
+    <input class="sb-input" id="f2_17b" placeholder="Your answer..."/>
+    <button class="sb-check" onclick="checkFill('f2_17b','great','rf2_17b')">Check ✓</button>
+    <div class="sb-result" id="rf2_17b"></div>
+  </div><div class="sb-activity">
+    <div class="sb-label">🌐 Chinese → English Translation</div>
+    <p style="font-size:13px;color:var(--text2);margin-bottom:.5rem;">3. 尼布甲尼撒为自己建造了一座巨大的金色雕像。</p>
+    <input class="sb-input" id="t17b" placeholder="Type your English translation..."/>
+    <button class="sb-check" onclick="revealTranslation('t17b','Nebuchadnezzar built an enormous golden statue of himself.','rt17b')">Show model answer ✓</button>
+    <div class="sb-result" id="rt17b"></div>
+  </div>
+</section>
+<section class="sec" id="p6">
+  <div class="sec-header">
+    <div class="sec-num">6</div>
+    <div><div class="sec-title">Speaking — Level 1</div><div class="sec-sub">Answer in one complete sentence</div></div>
+  </div>
+  <div class="speak-level">
+    <span class="speak-badge l1">🟢 Level 1 · One sentence</span>
+    <div class="speak-q"><p>Why did people call Nebuchadnezzar “the Great”?</p><div class="speak-hint">💡 Start with: <span>"People called him..."</span></div></div><div class="speak-q"><p>What extraordinary idea did Nebuchadnezzar begin to believe?</p><div class="speak-hint">💡 Start with: <span>"He began to believe that..."</span></div></div><div class="speak-q"><p>What did he order his people to do?</p><div class="speak-hint">💡 Start with: <span>"He ordered his people to..."</span></div></div>
+  </div>
+</section>
+<section class="sec" id="p7">
+  <div class="sec-header">
+    <div class="sec-num">7</div>
+    <div><div class="sec-title">Speaking — Level 2 &amp; 3</div><div class="sec-sub">Extend your answer. Share your opinion.</div></div>
+  </div>
+  <div class="speak-level">
+    <span class="speak-badge l2">🟡 Level 2 · 2–3 sentences</span>
+    <div class="speak-q"><p>Imagine you are one of Nebuchadnezzar's advisors. He asks you what you think of his golden statue. What would you honestly say to him, and would it be safe to say it?</p><div class="speak-hint">💡 Think about: <span>honesty · danger · flattery</span></div></div><div class="speak-q"><p>Why do you think powerful people sometimes start to believe they are better than everyone else?</p><div class="speak-hint">💡 Try: <span>"I think this happens because... Power can make people..."</span></div></div>
+  </div>
+  <div class="speak-level">
+    <span class="speak-badge l3">🔵 Level 3 · Your opinion</span>
+    <div class="speak-q"><p>Do you think absolute power always leads to pride and poor judgment? Use examples from history or today.</p><div class="speak-hint">💡 Use: <span>I believe... / For example... / In contrast... / However...</span></div></div>
+  </div>
+</section>
+<section class="sec" id="p8">
+  <div class="sec-header">
+    <div class="sec-num">8</div>
+    <div><div class="sec-title">Ideas &amp; Society</div><div class="sec-sub">Think about big ideas. There is no wrong answer.</div></div>
+  </div>
+  <div class="idea-q"><div class="idea-icon">👑</div><div class="idea-text"><strong>“Power tends to corrupt” is a famous saying.</strong> Does Nebuchadnezzar's story support this idea? Why or why not?</div></div><div class="idea-q"><div class="idea-icon">🪙</div><div class="idea-text"><strong>Nebuchadnezzar had everything — gold, armies, a beautiful capital — yet he still wanted to be worshipped like a god.</strong> Why do you think having everything is sometimes not enough for powerful people?</div></div><div class="idea-q"><div class="idea-icon">🗣️</div><div class="idea-text"><strong>No one in the story seems to tell Nebuchadnezzar he is wrong.</strong> Why might it be dangerous to disagree with a powerful ruler? What happens to societies when no one can criticize their leaders?</div></div><div class="idea-q"><div class="idea-icon">📖</div><div class="idea-text"><strong>This story has survived for thousands of years as a 'warning about pride.'</strong> Why do you think ancient cultures used stories, rather than just rules, to teach important lessons?</div></div>
+</section>
+<section class="sec" id="p9">
+  <div class="sec-header">
+    <div class="sec-num">9</div>
+    <div><div class="sec-title">IELTS Content Builder</div><div class="sec-sub">Planting seeds for your future IELTS exam</div></div>
+  </div>
+  <div class="ielts-topic">
+    <div class="ielts-topic-label">📘 Today's IELTS Topic</div>
+    <h4>Power, Ego, and Leadership</h4>
+  </div>
+  <p style="font-size:12px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;color:var(--text3);margin-bottom:.5rem;">Key vocabulary</p>
+  <div class="vocab-chips"><span class="chip amber">authority</span><span class="chip amber">arrogance</span><span class="chip amber">humility</span><span class="chip amber">absolute power</span><span class="chip amber">self-image</span><span class="chip amber">accountability</span></div>
+  <p style="font-size:12px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;color:var(--text3);margin:.875rem 0 .5rem;">Useful collocations</p>
+  <div class="vocab-chips"><span class="chip">abuse power</span><span class="chip">hold someone accountable</span><span class="chip">fall from grace</span><span class="chip">a lesson in humility</span></div>
+  <div class="ielts-qs"><div class="ielts-q"><div class="ielts-q-num">S1</div><div class="ielts-q-text">Why do some leaders lose touch with reality once they gain power?</div></div><div class="ielts-q"><div class="ielts-q-num">S2</div><div class="ielts-q-text">Is it possible for a powerful person to remain humble? How?</div></div><div class="ielts-q"><div class="ielts-q-num">S3</div><div class="ielts-q-text">Should leaders always be held accountable, even kings or presidents?</div></div></div>
+  <div class="ielts-w2">
+    <div class="ielts-w2-label">✏️ IELTS Writing Task 2 — Future Practice</div>
+    <p>"Some people believe that unlimited power inevitably leads to poor decision-making, while others believe strong individuals can handle great power responsibly. Discuss both views and give your own opinion."</p>
+  </div>
+</section>
+<section class="sec" id="p10">
+  <div class="sec-header">
+    <div class="sec-num">10</div>
+    <div><div class="sec-title">Review</div><div class="sec-sub">Remember what you learned!</div></div>
+  </div>
+  <p style="font-size:12px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;color:var(--text3);margin-bottom:.75rem;">⭐ Star Words</p>
+  <div class="star-words"><span class="star-word">⭐ proud</span><span class="star-word">⭐ statue</span><span class="star-word">⭐ worship</span><span class="star-word">⭐ ruler</span><span class="star-word">⭐ claim</span><span class="star-word">⭐ enormous</span><span class="star-word">⭐ madness</span><span class="star-word">⭐ mighty</span></div>
+  <div class="think-box">
+    <div class="think-head">💡 Big Idea</div>
+    <p>True greatness is different from wanting to be worshipped. Nebuchadnezzar's story warns that unchecked pride can bring even the mightiest ruler crashing down.</p>
+  </div>
+  <p style="font-size:12px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;color:var(--text3);margin:.875rem 0 .75rem;">🧠 Mini Quiz</p>
+  <div class="mini-quiz-q"><div class="mq-text">A. What did Nebuchadnezzar order people to worship?</div><div class="mq-opts"><button class="mq-opt" onclick="mq(this,'correct')">A giant golden statue of himself</button>
+<button class="mq-opt" onclick="mq(this,'wrong')">The goddess Ishtar</button>
+<button class="mq-opt" onclick="mq(this,'wrong')">A sacred river</button>
+</div></div><div class="mini-quiz-q"><div class="mq-text">B. Where does the story of his pride appear?</div><div class="mq-opts"><button class="mq-opt" onclick="mq(this,'wrong')">In an Egyptian tomb</button>
+<button class="mq-opt" onclick="mq(this,'correct')">In the Book of Daniel in the Bible</button>
+<button class="mq-opt" onclick="mq(this,'wrong')">In a Greek myth</button>
+</div></div><div class="mini-quiz-q"><div class="mq-text">C. People called Nebuchadnezzar ‘the ________’ because of his success.</div><div class="mq-opts"><button class="mq-opt" onclick="mq(this,'wrong')">Wise</button>
+<button class="mq-opt" onclick="mq(this,'wrong')">Kind</button>
+<button class="mq-opt" onclick="mq(this,'correct')">Great</button>
+</div></div>
+  <div class="lesson-nav">
+    <a class="nav-btn" href="ch17-a.html"><i class="ti ti-arrow-left"></i> Lesson 17A</a>
+    <a class="nav-btn primary" href="ch17-c.html">Next: Lesson 17C — The King Who Thought He Was a God <i class="ti ti-arrow-right"></i></a>
+  </div>
+</section>
+</main>
+<footer class="site-footer"><strong>Lexilink Ideation IELTS STUDIO</strong> · History ESL Course · Chapter 17 — Lesson B</footer>
+<script>
+function toggleVocab(card){card.classList.toggle('open');}
+function mcq(btn,type){
+  const item=btn.closest('.q-item');
+  item.querySelectorAll('.q-opt').forEach(b=>{b.classList.remove('correct','wrong');b.disabled=true;});
+  btn.classList.add(type);
+  const fb=item.querySelector('.q-feedback');
+  fb.className='q-feedback show '+(type==='correct'?'good':'bad');
+  fb.textContent=type==='correct'?'✓ Correct! Well done!':'✗ Not quite. Try to remember the story.';
+}
+function tf(btn,type,msg){
+  const item=btn.closest('.q-item');
+  item.querySelectorAll('.tf-btn').forEach(b=>{b.classList.remove('correct','wrong');b.disabled=true;});
+  btn.classList.add(type);
+  const fb=item.querySelector('.q-feedback');
+  fb.className='q-feedback show '+(type==='correct'?'good':'bad');
+  fb.textContent=(type==='correct'?'✓ ':'✗ ')+msg;
+}
+function mq(btn,type){
+  const item=btn.closest('.mini-quiz-q');
+  item.querySelectorAll('.mq-opt').forEach(b=>{b.classList.remove('correct','wrong');b.disabled=true;});
+  btn.classList.add(type);
+}
+function checkUnscramble(id,answer,rid){
+  const val=document.getElementById(id).value.trim().toLowerCase().replace(/[^a-z\s]/g,'');
+  const ans=answer.toLowerCase();
+  const r=document.getElementById(rid);
+  r.className='sb-result show '+(val===ans?'ok':'no');
+  r.textContent=val===ans?'✓ Perfect! "'+answer+'"':'✗ Try again. Check the word order.';
+}
+function checkFill(id,answer,rid){
+  const val=document.getElementById(id).value.trim().toLowerCase();
+  const r=document.getElementById(rid);
+  r.className='sb-result show '+(val===answer.toLowerCase()?'ok':'no');
+  r.textContent=val===answer.toLowerCase()?'✓ Correct!':'✗ The answer is: "'+answer+'"';
+}
+function revealTranslation(id,answer,rid){
+  const r=document.getElementById(rid);
+  r.className='sb-result show ok';
+  r.textContent='✓ Model answer: "'+answer+'"';
+}
+function scrollTo(id){document.getElementById(id).scrollIntoView({behavior:'smooth',block:'start'});}
+const parts=['p1','p2','p3','p4','p5','p6','p7','p8','p9','p10'];
+const partEls=document.querySelectorAll('.lp-part');
+window.addEventListener('scroll',()=>{
+  let current=0;
+  parts.forEach((id,i)=>{const el=document.getElementById(id);if(el&&el.getBoundingClientRect().top<200)current=i;});
+  partEls.forEach((el,i)=>{el.classList.remove('active','done');if(i<current)el.classList.add('done');else if(i===current)el.classList.add('active');});
+  const pct=Math.round(((current+1)/10)*100);
+  document.querySelector('.lp-fill').style.width=pct+'%';
+});
+</script>
+</body>
+</html>

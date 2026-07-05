@@ -1,0 +1,530 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+<title>Lesson 17F — Building the Hanging Gardens | Lexilink History Workshop</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"/>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet"/>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@latest/tabler-icons.min.css"/>
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
+:root{
+  --bg:#0F0800;--surface:rgba(255,255,255,0.04);--surface2:rgba(255,255,255,0.07);
+  --border:rgba(255,255,255,0.10);--border2:rgba(255,255,255,0.06);
+  --amber-300:#E8A832;--amber-400:#D4890F;--amber-500:#B8720A;
+  --amber-bg:rgba(212,137,15,0.12);--amber-border:rgba(212,137,15,0.3);
+  --text:#fff;--text2:rgba(255,255,255,0.72);--text3:rgba(255,255,255,0.45);
+  --teal:#1D9E75;--teal-bg:rgba(29,158,117,0.12);--teal-border:rgba(29,158,117,0.3);
+  --coral:#E05C3A;--coral-bg:rgba(224,92,58,0.12);
+  --blue:#4A9EE0;--blue-bg:rgba(74,158,224,0.12);
+  --r:12px;--r-sm:8px;
+}
+html{scroll-behavior:smooth;}
+body{font-family:'Inter',sans-serif;background:var(--bg);color:var(--text);min-height:100vh;line-height:1.6;}
+.site-header{background:#111;border-bottom:1px solid rgba(255,255,255,0.08);position:sticky;top:0;z-index:100;}
+.hdr{max-width:860px;margin:0 auto;padding:0 1.5rem;height:54px;display:flex;align-items:center;gap:12px;}
+.logo-wrap{display:flex;align-items:center;gap:8px;text-decoration:none;}
+.logo-icon{width:30px;height:30px;display:flex;align-items:center;justify-content:center;}
+.logo-icon svg{width:26px;height:26px;}
+.logo-name{font-size:13px;font-weight:700;color:#fff;}
+.hdr-pipe{width:1px;height:20px;background:rgba(255,255,255,0.15);}
+.hdr-back{display:flex;align-items:center;gap:5px;font-size:12px;color:var(--text3);text-decoration:none;transition:color .15s;}
+.hdr-back:hover{color:var(--text2);}
+.hdr-spacer{flex:1;}
+.hdr-badge{font-size:10px;font-weight:700;letter-spacing:.05em;padding:3px 10px;border-radius:99px;border:1px solid var(--amber-border);color:var(--amber-300);background:var(--amber-bg);}
+.lesson-hero{background:linear-gradient(135deg,#2C1600 0%,#5C3200 40%,#7A4500 100%);padding:3rem 1.5rem 2.5rem;text-align:center;position:relative;overflow:hidden;}
+.lesson-hero::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse 70% 60% at 50% 50%,rgba(200,130,0,0.15),transparent);pointer-events:none;}
+.lesson-eyebrow{font-size:10px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--amber-300);margin-bottom:.75rem;}
+.lesson-hero h1{font-size:clamp(22px,4vw,36px);font-weight:700;color:#fff;letter-spacing:-.02em;margin-bottom:.5rem;}
+.lesson-hero p{font-size:14px;color:rgba(255,255,255,0.65);max-width:520px;margin:0 auto .875rem;}
+.lesson-pills{display:flex;flex-wrap:wrap;justify-content:center;gap:8px;}
+.l-pill{font-size:11px;font-weight:500;padding:4px 12px;border-radius:99px;border:1px solid rgba(255,255,255,0.18);color:rgba(255,255,255,0.75);background:rgba(255,255,255,0.06);}
+.lesson-progress{background:#1A1100;border-bottom:1px solid rgba(255,255,255,0.06);padding:.75rem 1.5rem;}
+.lp-inner{max-width:860px;margin:0 auto;}
+.lp-labels{display:flex;justify-content:space-between;font-size:11px;color:var(--text3);margin-bottom:6px;}
+.lp-track{height:4px;border-radius:99px;background:rgba(255,255,255,0.08);}
+.lp-fill{height:100%;border-radius:99px;background:linear-gradient(90deg,var(--amber-500),var(--amber-300));width:10%;}
+.lp-parts{display:flex;gap:4px;margin-top:8px;flex-wrap:wrap;}
+.lp-part{font-size:10px;font-weight:600;padding:2px 8px;border-radius:99px;background:rgba(255,255,255,0.06);color:var(--text3);cursor:pointer;transition:all .15s;}
+.lp-part.done{background:var(--amber-bg);color:var(--amber-300);border:1px solid var(--amber-border);}
+.lp-part.active{background:var(--amber-400);color:#1A0800;}
+.main{max-width:860px;margin:0 auto;padding:2rem 1.5rem 5rem;}
+.sec{background:var(--surface);border:1px solid var(--border);border-radius:var(--r);padding:1.5rem;margin-bottom:1.5rem;scroll-margin-top:80px;}
+.sec-header{display:flex;align-items:center;gap:10px;margin-bottom:1.25rem;}
+.sec-num{width:28px;height:28px;border-radius:8px;display:flex;align-items:center;justify-content:center;font-size:11px;font-weight:700;background:var(--amber-bg);color:var(--amber-300);border:1px solid var(--amber-border);flex-shrink:0;}
+.sec-title{font-size:16px;font-weight:700;color:#fff;}
+.sec-sub{font-size:12px;color:var(--text3);margin-top:1px;}
+.vocab-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(240px,1fr));gap:10px;}
+.vocab-card{background:var(--surface2);border:1px solid var(--border2);border-radius:var(--r-sm);padding:1rem;cursor:pointer;transition:border-color .15s;}
+.vocab-card:hover,.vocab-card.open{border-color:var(--amber-border);}
+.vc-top{display:flex;align-items:baseline;gap:8px;}
+.vc-word{font-size:16px;font-weight:700;color:#fff;}
+.vc-pos{font-size:10px;font-weight:600;padding:1px 7px;border-radius:99px;background:var(--amber-bg);color:var(--amber-300);}
+.vc-pron{font-size:12px;color:var(--text3);margin-top:2px;font-style:italic;}
+.vc-cn{font-size:15px;color:var(--amber-300);margin-top:4px;font-weight:600;}
+.vc-detail{display:none;margin-top:10px;padding-top:10px;border-top:1px solid var(--border2);}
+.vocab-card.open .vc-detail{display:block;}
+.vc-def{font-size:13px;color:var(--text2);margin-bottom:6px;}
+.vc-ex{font-size:12px;color:var(--text3);font-style:italic;padding-left:8px;border-left:2px solid var(--amber-border);}
+.story-body p{font-size:15px;color:var(--text2);line-height:1.8;margin-bottom:1rem;}
+.story-body p:last-child{margin-bottom:0;}
+.story-hl{color:var(--amber-300);font-weight:600;}
+.story-box{background:var(--amber-bg);border:1px solid var(--amber-border);border-radius:var(--r-sm);padding:1rem 1.25rem;margin:1.25rem 0;font-size:14px;color:rgba(255,255,255,0.85);line-height:1.7;font-style:italic;}
+.story-box::before{content:'"';font-size:32px;color:var(--amber-400);line-height:1;display:block;margin-bottom:.25rem;}
+.story-icon{font-size:40px;text-align:center;margin:1rem 0;}
+.quiz-list{display:flex;flex-direction:column;gap:14px;}
+.q-item{background:var(--surface2);border:1px solid var(--border2);border-radius:var(--r-sm);padding:1rem 1.25rem;}
+.q-text{font-size:14px;font-weight:600;color:#fff;margin-bottom:.75rem;}
+.q-opts{display:flex;flex-direction:column;gap:6px;}
+.q-opt{display:flex;align-items:center;gap:10px;padding:8px 12px;border-radius:8px;border:1px solid var(--border);background:transparent;cursor:pointer;font-size:13px;color:var(--text2);width:100%;text-align:left;transition:all .15s;}
+.q-opt:hover{border-color:var(--amber-border);background:var(--amber-bg);}
+.q-opt.correct{border-color:var(--teal-border);background:var(--teal-bg);color:#fff;}
+.q-opt.wrong{border-color:rgba(224,92,58,0.4);background:var(--coral-bg);color:#fff;}
+.q-feedback{font-size:12px;margin-top:8px;padding:6px 10px;border-radius:6px;display:none;}
+.q-feedback.show{display:block;}
+.q-feedback.good{background:var(--teal-bg);color:#5DCAA5;}
+.q-feedback.bad{background:var(--coral-bg);color:#F09B80;}
+.tf-opts{display:flex;gap:8px;}
+.tf-btn{flex:1;padding:8px;border-radius:8px;border:1px solid var(--border);background:transparent;cursor:pointer;font-size:13px;font-weight:600;color:var(--text2);transition:all .15s;}
+.tf-btn:hover{border-color:var(--amber-border);background:var(--amber-bg);}
+.tf-btn.correct{border-color:var(--teal-border);background:var(--teal-bg);color:#fff;}
+.tf-btn.wrong{border-color:rgba(224,92,58,0.4);background:var(--coral-bg);color:#fff;}
+.grammar-box{background:var(--surface2);border-left:3px solid var(--amber-400);border-radius:0 var(--r-sm) var(--r-sm) 0;padding:1rem 1.25rem;margin-bottom:1rem;}
+.grammar-label{font-size:10px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--amber-300);margin-bottom:.5rem;}
+.grammar-rule{font-size:14px;color:#fff;font-weight:600;margin-bottom:.5rem;}
+.grammar-eg{font-size:13px;color:var(--text2);margin-top:.25rem;font-style:italic;}
+.grammar-eg span{color:var(--amber-300);font-weight:600;font-style:normal;}
+.grammar-table{width:100%;border-collapse:collapse;font-size:13px;margin-top:.75rem;}
+.grammar-table th{text-align:left;padding:6px 10px;font-size:10px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;color:var(--text3);border-bottom:1px solid var(--border);}
+.grammar-table td{padding:7px 10px;color:var(--text2);border-bottom:1px solid var(--border2);}
+.grammar-table td:first-child{color:#fff;font-weight:500;}
+.hl{color:var(--amber-300);font-weight:600;}
+.sb-activity{margin-bottom:1.25rem;}
+.sb-label{font-size:11px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;color:var(--amber-300);margin-bottom:.75rem;}
+.sb-input{width:100%;background:var(--surface2);border:1px solid var(--border);border-radius:var(--r-sm);padding:.625rem .875rem;font-size:14px;color:#fff;font-family:'Inter',sans-serif;transition:border-color .15s;outline:none;margin-bottom:.5rem;}
+.sb-input:focus{border-color:var(--amber-border);}
+.sb-check{padding:7px 18px;border-radius:99px;background:var(--amber-400);color:#1A0800;font-size:13px;font-weight:700;border:none;cursor:pointer;transition:opacity .15s;}
+.sb-check:hover{opacity:.85;}
+.sb-result{font-size:12px;margin-top:6px;padding:6px 10px;border-radius:6px;display:none;}
+.sb-result.show{display:block;}
+.sb-result.ok{background:var(--teal-bg);color:#5DCAA5;}
+.sb-result.no{background:var(--coral-bg);color:#F09B80;}
+.sb-chip{padding:5px 10px;border-radius:99px;background:var(--surface2);border:1px solid var(--border);font-size:13px;color:var(--text2);display:inline-block;margin:3px;}
+.speak-level{margin-bottom:1.25rem;}
+.speak-badge{display:inline-flex;align-items:center;gap:6px;font-size:11px;font-weight:700;padding:3px 12px;border-radius:99px;margin-bottom:.875rem;}
+.speak-badge.l1{background:var(--teal-bg);color:#5DCAA5;border:1px solid var(--teal-border);}
+.speak-badge.l2{background:var(--amber-bg);color:var(--amber-300);border:1px solid var(--amber-border);}
+.speak-badge.l3{background:var(--blue-bg);color:var(--blue);border:1px solid rgba(74,158,224,0.3);}
+.speak-q{background:var(--surface2);border:1px solid var(--border2);border-radius:var(--r-sm);padding:1rem 1.25rem;margin-bottom:.75rem;}
+.speak-q p{font-size:14px;font-weight:600;color:#fff;margin-bottom:.5rem;}
+.speak-hint{font-size:12px;color:var(--text3);}
+.speak-hint span{color:var(--amber-300);}
+.idea-q{background:var(--surface2);border:1px solid var(--border2);border-radius:var(--r-sm);padding:1rem 1.25rem;margin-bottom:.75rem;display:flex;gap:10px;}
+.idea-icon{font-size:20px;flex-shrink:0;margin-top:2px;}
+.idea-text{font-size:14px;color:var(--text2);line-height:1.6;}
+.idea-text strong{color:#fff;}
+.ielts-topic{background:var(--blue-bg);border:1px solid rgba(74,158,224,0.25);border-radius:var(--r-sm);padding:1rem 1.25rem;margin-bottom:1.25rem;}
+.ielts-topic-label{font-size:10px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--blue);margin-bottom:.25rem;}
+.ielts-topic h4{font-size:16px;font-weight:700;color:#fff;}
+.vocab-chips{display:flex;flex-wrap:wrap;gap:6px;margin-top:.75rem;}
+.chip{font-size:12px;padding:4px 12px;border-radius:99px;background:rgba(255,255,255,0.06);border:1px solid var(--border);color:var(--text2);}
+.chip.amber{background:var(--amber-bg);border-color:var(--amber-border);color:var(--amber-300);}
+.ielts-qs{display:flex;flex-direction:column;gap:8px;margin-top:1rem;}
+.ielts-q{display:flex;gap:10px;background:var(--surface2);border-radius:var(--r-sm);padding:.875rem 1rem;}
+.ielts-q-num{font-size:11px;font-weight:700;color:var(--blue);min-width:20px;}
+.ielts-q-text{font-size:13px;color:var(--text2);}
+.ielts-w2{background:rgba(74,158,224,0.08);border:1px solid rgba(74,158,224,0.2);border-radius:var(--r-sm);padding:1rem 1.25rem;margin-top:1rem;}
+.ielts-w2-label{font-size:10px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--blue);margin-bottom:.5rem;}
+.ielts-w2 p{font-size:14px;color:var(--text2);line-height:1.7;font-style:italic;}
+.star-words{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:1.25rem;}
+.star-word{display:flex;align-items:center;gap:6px;padding:6px 14px;border-radius:99px;background:var(--amber-bg);border:1px solid var(--amber-border);font-size:13px;font-weight:600;color:var(--amber-300);}
+.think-box{background:var(--surface2);border:1px solid var(--border2);border-radius:var(--r-sm);padding:1rem 1.25rem;margin-bottom:1rem;}
+.think-box .think-head{font-size:12px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;color:var(--amber-300);margin-bottom:.5rem;}
+.think-box p{font-size:14px;color:var(--text2);}
+.mini-quiz-q{background:var(--surface2);border:1px solid var(--border2);border-radius:var(--r-sm);padding:1rem;margin-bottom:.75rem;}
+.mq-text{font-size:13px;font-weight:600;color:#fff;margin-bottom:.625rem;}
+.mq-opts{display:flex;flex-direction:column;gap:5px;}
+.mq-opt{padding:7px 12px;border-radius:6px;border:1px solid var(--border);background:transparent;font-size:12px;color:var(--text2);cursor:pointer;text-align:left;transition:all .15s;}
+.mq-opt:hover{border-color:var(--amber-border);background:var(--amber-bg);}
+.mq-opt.correct{border-color:var(--teal-border);background:var(--teal-bg);color:#fff;}
+.mq-opt.wrong{border-color:rgba(224,92,58,0.4);background:var(--coral-bg);color:#fff;}
+.lesson-nav{display:flex;gap:10px;margin-top:2rem;}
+.nav-btn{display:flex;align-items:center;gap:6px;padding:.75rem 1.25rem;border-radius:10px;font-size:13px;font-weight:600;cursor:pointer;text-decoration:none;border:1px solid var(--border);color:var(--text2);background:var(--surface);transition:all .15s;flex:1;justify-content:center;}
+.nav-btn:hover{border-color:var(--border2);color:#fff;}
+.nav-btn.primary{background:var(--amber-400);color:#1A0800;border-color:transparent;}
+.nav-btn.primary:hover{opacity:.9;}
+.site-footer{background:#111;border-top:1px solid rgba(255,255,255,0.07);text-align:center;padding:1.5rem;font-size:12px;color:rgba(255,255,255,0.3);}
+.site-footer strong{color:var(--amber-300);}
+@media(max-width:600px){.vocab-grid{grid-template-columns:1fr;}.lesson-nav{flex-direction:column;}}
+</style>
+</head>
+<body>
+<header class="site-header">
+  <div class="hdr">
+    <a class="logo-wrap" href="index.html">
+      <div class="logo-icon"><svg viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+          <path d="M6 24 C8 18,14 10,24 6 C20 10,18 14,20 18 C16 16,12 18,6 24Z" fill="white"/>
+          <path d="M20 18 C22 20,22 23,20 26 C18 24,18 21,20 18Z" fill="rgba(255,255,255,0.5)"/>
+        </svg></div>
+      <span class="logo-name">Lexilink Ideation IELTS STUDIO</span>
+    </a>
+    <div class="hdr-pipe"></div>
+    <a class="hdr-back" href="index.html"><i class="ti ti-arrow-left" aria-hidden="true"></i> Vol. 1</a>
+    <div class="hdr-spacer"></div>
+    <span class="hdr-badge">Lesson 17F</span>
+  </div>
+</header>
+<section class="lesson-hero">
+  <p class="lesson-eyebrow">Chapter 17 · Babylon Takes Over Again!</p>
+  <h1>Building the Hanging Gardens</h1>
+  <p>How an artificial mountain rose from the flat land of Babylon</p>
+  <div class="lesson-pills"><span class="l-pill">📖 Story + Vocabulary</span><span class="l-pill">🎤 Speaking</span><span class="l-pill">✏️ Grammar</span><span class="l-pill">⭐ CEFR A2–B1</span></div>
+</section>
+<div class="lesson-progress">
+  <div class="lp-inner">
+    <div class="lp-labels"><span>Lesson 17F of 7</span><span style="color:var(--amber-300)">Part 1 of 10</span></div>
+    <div class="lp-track"><div class="lp-fill"></div></div>
+    <div class="lp-parts">
+      <span class="lp-part active" onclick="scrollTo('p1')">1 Vocab</span><span class="lp-part " onclick="scrollTo('p2')">2 Story</span><span class="lp-part " onclick="scrollTo('p3')">3 Reading</span><span class="lp-part " onclick="scrollTo('p4')">4 Grammar</span><span class="lp-part " onclick="scrollTo('p5')">5 Builder</span><span class="lp-part " onclick="scrollTo('p6')">6 Speaking 1</span><span class="lp-part " onclick="scrollTo('p7')">7 Speaking 2</span><span class="lp-part " onclick="scrollTo('p8')">8 Ideas</span><span class="lp-part " onclick="scrollTo('p9')">9 IELTS</span><span class="lp-part " onclick="scrollTo('p10')">10 Review</span>
+    </div>
+  </div>
+</div>
+<main class="main">
+<section class="sec" id="p1">
+  <div class="sec-header">
+    <div class="sec-num">1</div>
+    <div><div class="sec-title">Vocabulary</div><div class="sec-sub">Click each word to learn more</div></div>
+  </div>
+  <div class="vocab-grid"><div class="vocab-card" onclick="toggleVocab(this)">
+      <div class="vc-top"><span class="vc-word">artificial</span><span class="vc-pos">adjective</span></div>
+      <div class="vc-pron">/ˌɑː.tɪˈfɪʃ.əl/</div>
+      <div class="vc-cn">人造的</div>
+      <div class="vc-detail">
+        <div class="vc-def">Made by people, not existing naturally.</div>
+        <div class="vc-ex">"Nebuchadnezzar built an artificial mountain right in the middle of the city."</div>
+      </div>
+    </div><div class="vocab-card" onclick="toggleVocab(this)">
+      <div class="vc-top"><span class="vc-word">slab</span><span class="vc-pos">noun</span></div>
+      <div class="vc-pron">/slæb/</div>
+      <div class="vc-cn">厚板；石板</div>
+      <div class="vc-detail">
+        <div class="vc-def">A large, flat, thick piece of stone, wood, or another material.</div>
+        <div class="vc-ex">"He ordered his workers to haul huge slabs of rock from far away."</div>
+      </div>
+    </div><div class="vocab-card" onclick="toggleVocab(this)">
+      <div class="vc-top"><span class="vc-word">haul</span><span class="vc-pos">verb</span></div>
+      <div class="vc-pron">/hɔːl/</div>
+      <div class="vc-cn">拖运</div>
+      <div class="vc-detail">
+        <div class="vc-def">To pull or carry something heavy with great effort.</div>
+        <div class="vc-ex">"Workers had to haul enormous slabs of rock into the city."</div>
+      </div>
+    </div><div class="vocab-card" onclick="toggleVocab(this)">
+      <div class="vc-top"><span class="vc-word">pump</span><span class="vc-pos">noun / verb</span></div>
+      <div class="vc-pron">/pʌmp/</div>
+      <div class="vc-cn">抽水机；抽</div>
+      <div class="vc-detail">
+        <div class="vc-def">A machine that moves liquid or gas from one place to another.</div>
+        <div class="vc-ex">"His engineers built a pump to lift water from the Euphrates River."</div>
+      </div>
+    </div><div class="vocab-card" onclick="toggleVocab(this)">
+      <div class="vc-top"><span class="vc-word">path</span><span class="vc-pos">noun</span></div>
+      <div class="vc-pron">/pɑːθ/</div>
+      <div class="vc-cn">小路</div>
+      <div class="vc-detail">
+        <div class="vc-def">A track or way for walking.</div>
+        <div class="vc-ex">"He ordered paths to be built winding up and down the artificial mountain."</div>
+      </div>
+    </div><div class="vocab-card" onclick="toggleVocab(this)">
+      <div class="vc-top"><span class="vc-word">admire</span><span class="vc-pos">verb</span></div>
+      <div class="vc-pron">/ədˈmaɪər/</div>
+      <div class="vc-cn">欣赏</div>
+      <div class="vc-detail">
+        <div class="vc-def">To look at something with pleasure and respect.</div>
+        <div class="vc-ex">"People came from all over the world to admire the beautiful gardens."</div>
+      </div>
+    </div><div class="vocab-card" onclick="toggleVocab(this)">
+      <div class="vc-top"><span class="vc-word">irrigation</span><span class="vc-pos">noun</span></div>
+      <div class="vc-pron">/ˌɪr.ɪˈɡeɪ.ʃən/</div>
+      <div class="vc-cn">灌溉</div>
+      <div class="vc-detail">
+        <div class="vc-def">The process of supplying water to land or crops using channels or pipes.</div>
+        <div class="vc-ex">"Clever irrigation allowed water to flow down through the entire garden."</div>
+      </div>
+    </div><div class="vocab-card" onclick="toggleVocab(this)">
+      <div class="vc-top"><span class="vc-word">design</span><span class="vc-pos">verb</span></div>
+      <div class="vc-pron">/dɪˈzaɪn/</div>
+      <div class="vc-cn">设计</div>
+      <div class="vc-detail">
+        <div class="vc-def">To plan how something will look or work before it is built.</div>
+        <div class="vc-ex">"Nebuchadnezzar's engineers designed a garden unlike anything the world had seen."</div>
+      </div>
+    </div><div class="vocab-card" onclick="toggleVocab(this)">
+      <div class="vc-top"><span class="vc-word">thickly</span><span class="vc-pos">adverb</span></div>
+      <div class="vc-pron">/ˈθɪk.li/</div>
+      <div class="vc-cn">茂密地</div>
+      <div class="vc-detail">
+        <div class="vc-def">In a way that forms a dense or heavy layer.</div>
+        <div class="vc-ex">"He covered the rock with soil and planted it thickly with trees and flowers."</div>
+      </div>
+    </div><div class="vocab-card" onclick="toggleVocab(this)">
+      <div class="vc-top"><span class="vc-word">wonder</span><span class="vc-pos">noun</span></div>
+      <div class="vc-pron">/ˈwʌn.dər/</div>
+      <div class="vc-cn">奇迹</div>
+      <div class="vc-detail">
+        <div class="vc-def">Something that causes great admiration or amazement.</div>
+        <div class="vc-ex">"The garden became known as one of the Seven Wonders of the Ancient World."</div>
+      </div>
+    </div></div>
+</section>
+<section class="sec" id="p2">
+  <div class="sec-header">
+    <div class="sec-num">2</div>
+    <div><div class="sec-title">The Story</div><div class="sec-sub">Read carefully. Notice the bold words.</div></div>
+  </div>
+  <div class="story-body"><div class="story-icon">⛏️</div>
+    <p>Nebuchadnezzar wasted no time turning his impossible idea into reality. If Amytis missed the mountains of Persia, then he would build her a mountain — right in the middle of flat, dusty Babylon.</p><p>First, he ordered his workers and slaves to <span class="story-hl">haul</span> enormous <span class="story-hl">slabs</span> of rock into the city from distant quarries. This was grueling, difficult labor; each slab was heavy enough to crush a careless worker, and moving them required teams of laborers, ropes, and enormous wooden rollers. Slowly, slab by slab, the rocks piled up in the center of Babylon, forming the skeleton of an entirely <span class="story-hl">artificial</span> mountain — something no city had ever attempted before.</p><p>Once the rock structure stood tall, Nebuchadnezzar's workers covered it with thick layers of soil. Then came the part Amytis would love most: gardeners planted the hillside <span class="story-hl">thickly</span> with trees, flowers, and bushes, many of them brought specially from Persia so that Amytis could look out and see plants that reminded her of home.</p><p>But a mountain garden faces one enormous problem in the middle of a hot desert city: water. Real mountains have rain and rivers flowing naturally down their slopes. An artificial mountain has neither. So Nebuchadnezzar's engineers <span class="story-hl">designed</span> something remarkable — a <span class="story-hl">pump</span> powerful enough to lift water from the Euphrates River all the way up to the very top of the garden. Once the water reached the summit, gravity did the rest: it flowed back down through channels and <span class="story-hl">irrigation</span> systems, trickling from level to level, exactly like a real mountain stream. Visitors said you could stand at the bottom of the garden and hear water splashing above you, just as if you stood beside a genuine river in the mountains.</p><p>Finally, Nebuchadnezzar ordered <span class="story-hl">paths</span> built winding up and down the artificial mountain, so that people could walk among the trees and flowers at every level, just as they might climb a real hillside back in Persia.</p><p>When everything was finally finished, Nebuchadnezzar led Amytis outside to see what he had built for her. “My dear,” he said, “you cannot return to Persia. But I have brought a little piece of Persia to you. Now you can walk in your own hillside garden whenever you wish.”</p><p>Amytis's garden quickly became famous as the Hanging Gardens of Babylon. Visitors traveled from distant lands just to <span class="story-hl">admire</span> the impossible mountain rising from the flat desert — proof that even the driest, flattest place on Earth could be transformed, with enough determination, engineering, and love.</p>
+    <div class="story-icon">🌿</div></div>
+</section>
+<section class="sec" id="p3">
+  <div class="sec-header">
+    <div class="sec-num">3</div>
+    <div><div class="sec-title">Reading Comprehension</div><div class="sec-sub">Choose the best answer. Get instant feedback!</div></div>
+  </div>
+  <div class="quiz-list">
+    <div class="q-item">
+      <div class="q-text">1. Why did workers have to haul huge slabs of rock into Babylon?</div>
+      <div class="q-opts"><button class="q-opt" onclick="mcq(this,'wrong')">To build a new defensive wall.</button>
+<button class="q-opt" onclick="mcq(this,'wrong')">To repair the Ishtar Gate.</button>
+<button class="q-opt" onclick="mcq(this,'correct')">To build the base of an artificial mountain for the garden.</button>
+</div>
+      <div class="q-feedback"></div>
+    </div>
+    <div class="q-item">
+      <div class="q-text">2. True or False: The Hanging Gardens received water naturally from rain, just like a real mountain.</div>
+      <div class="tf-opts">
+        <button class="tf-btn" onclick="tf(this,'wrong','Wrong! A pump lifted water from the Euphrates River to the top of the garden.')">True</button>
+        <button class="tf-btn" onclick="tf(this,'correct','Correct! A pump — not rain — lifted water to the top of the garden.')">False</button>
+      </div>
+      <div class="q-feedback"></div>
+    </div>
+    <div class="q-item">
+      <div class="q-text">3. How did water reach the top of the garden?</div>
+      <div class="q-opts"><button class="q-opt" onclick="mcq(this,'wrong')">Workers carried buckets of water up by hand every day.</button>
+<button class="q-opt" onclick="mcq(this,'wrong')">It rained heavily every day in Babylon.</button>
+<button class="q-opt" onclick="mcq(this,'correct')">A powerful pump lifted it from the Euphrates River.</button>
+</div>
+      <div class="q-feedback"></div>
+    </div>
+    <div class="q-item">
+      <div class="q-text">4. Why did Nebuchadnezzar plant many Persian plants in the garden?</div>
+      <div class="q-opts"><button class="q-opt" onclick="mcq(this,'wrong')">Because Persian plants grew faster than Babylonian ones.</button>
+<button class="q-opt" onclick="mcq(this,'correct')">So Amytis could see plants that reminded her of her homeland.</button>
+<button class="q-opt" onclick="mcq(this,'wrong')">Because Babylonian plants were too expensive.</button>
+</div>
+      <div class="q-feedback"></div>
+    </div>
+    <div class="q-item">
+      <div class="q-text">5. What were the paths in the garden used for?</div>
+      <div class="q-opts"><button class="q-opt" onclick="mcq(this,'wrong')">To transport rocks more easily.</button>
+<button class="q-opt" onclick="mcq(this,'wrong')">To let soldiers patrol the garden.</button>
+<button class="q-opt" onclick="mcq(this,'correct')">So people could walk up and down among the trees and flowers, like climbing a real hillside.</button>
+</div>
+      <div class="q-feedback"></div>
+    </div>
+    <div class="q-item">
+      <div class="q-text">6. Why might building the Hanging Gardens have been considered such an amazing engineering achievement?</div>
+      <div class="q-opts"><button class="q-opt" onclick="mcq(this,'wrong')">Because it only required a small amount of stone and no special skill.</button>
+<button class="q-opt" onclick="mcq(this,'correct')">Because it required creating an artificial mountain and pumping water uphill in a flat, dry city — something never done before.</button>
+<button class="q-opt" onclick="mcq(this,'wrong')">Because gardens were very common and easy to build in ancient times.</button>
+</div>
+      <div class="q-feedback"></div>
+    </div>
+  </div>
+</section>
+<section class="sec" id="p4">
+  <div class="sec-header">
+    <div class="sec-num">4</div>
+    <div><div class="sec-title">Language Focus</div><div class="sec-sub">Grammar from the story — learn through meaning</div></div>
+  </div>
+  <div class="grammar-box">
+    <div class="grammar-label">📌 Sequencing connectors — describing a process</div>
+    <div class="grammar-rule">Use words like 'first,' 'once,' 'then,' and 'finally' to explain the steps of a process in order.</div>
+    <div class='grammar-eg'><span>First</span>, he ordered workers to haul rock.</div><div class='grammar-eg'><span>Once</span> the structure stood tall, workers covered it with soil.</div><div class='grammar-eg'><span>Then</span> came the planting of trees and flowers.</div><div class='grammar-eg'><span>Finally</span>, paths were built winding up the mountain.</div>
+  </div><div class="grammar-box">
+    <div class="grammar-label">📌 Passive voice — describing engineering and construction</div>
+    <div class="grammar-rule">Use the passive voice to focus on what was built, rather than who built it.</div>
+    <div class='grammar-eg'>Paths <span>were built</span> winding up the mountain.</div><div class='grammar-eg'>The rock <span>was covered</span> with soil.</div><div class='grammar-eg'>A pump <span>was designed</span> to lift water from the river.</div>
+  </div><div class="grammar-box">
+    <div class="grammar-label">📌 Purpose clauses — 'so that' and 'to + infinitive'</div>
+    <div class="grammar-rule">Use these structures to explain the reason or purpose behind an action.</div>
+    <div class='grammar-eg'>He built paths <span>so that</span> people could walk among the trees.</div><div class='grammar-eg'>He planted Persian flowers <span>so that</span> Amytis would feel at home.</div><div class='grammar-eg'>Engineers designed a pump <span>to</span> lift water to the top.</div>
+  </div>
+</section>
+<section class="sec" id="p5">
+  <div class="sec-header">
+    <div class="sec-num">5</div>
+    <div><div class="sec-title">Sentence Builder</div><div class="sec-sub">Build your skills with the vocabulary</div></div>
+  </div>
+  <div class="sb-activity">
+    <div class="sb-label">🔀 Unscramble the sentence</div>
+    <p style="font-size:13px;color:var(--text3);margin-bottom:.75rem;">Put these words in the correct order:</p>
+    <div style="margin-bottom:.75rem;"><span class="sb-chip">workers</span><span class="sb-chip">hauled</span><span class="sb-chip">huge</span><span class="sb-chip">slabs</span><span class="sb-chip">of</span><span class="sb-chip">rock</span></div>
+    <input class="sb-input" id="us17f" placeholder="Type your sentence here..."/>
+    <button class="sb-check" onclick="checkUnscramble('us17f','workers hauled huge slabs of rock','ur17f')">Check ✓</button>
+    <div class="sb-result" id="ur17f"></div>
+  </div><div class="sb-activity">
+    <div class="sb-label">✏️ Fill in the blank</div>
+    <p style="font-size:13px;color:var(--text2);margin-bottom:.5rem;">1. A powerful ________ lifted water from the Euphrates River to the top of the garden.</p>
+    <input class="sb-input" id="f1_17f" placeholder="Your answer..."/>
+    <button class="sb-check" onclick="checkFill('f1_17f','pump','rf1_17f')">Check ✓</button>
+    <div class="sb-result" id="rf1_17f"></div>
+  </div><div class="sb-activity">
+    <div class="sb-label">✏️ Fill in the blank</div>
+    <p style="font-size:13px;color:var(--text2);margin-bottom:.5rem;">2. The garden became famous as one of the Seven ________ of the Ancient World.</p>
+    <input class="sb-input" id="f2_17f" placeholder="Your answer..."/>
+    <button class="sb-check" onclick="checkFill('f2_17f','wonders','rf2_17f')">Check ✓</button>
+    <div class="sb-result" id="rf2_17f"></div>
+  </div><div class="sb-activity">
+    <div class="sb-label">🌐 Chinese → English Translation</div>
+    <p style="font-size:13px;color:var(--text2);margin-bottom:.5rem;">3. 工人们把巨大的石板运进了巴比伦城。</p>
+    <input class="sb-input" id="t17f" placeholder="Type your English translation..."/>
+    <button class="sb-check" onclick="revealTranslation('t17f','Workers hauled huge slabs of rock into the city of Babylon.','rt17f')">Show model answer ✓</button>
+    <div class="sb-result" id="rt17f"></div>
+  </div>
+</section>
+<section class="sec" id="p6">
+  <div class="sec-header">
+    <div class="sec-num">6</div>
+    <div><div class="sec-title">Speaking — Level 1</div><div class="sec-sub">Answer in one complete sentence</div></div>
+  </div>
+  <div class="speak-level">
+    <span class="speak-badge l1">🟢 Level 1 · One sentence</span>
+    <div class="speak-q"><p>Why did Nebuchadnezzar need workers to haul huge slabs of rock?</p><div class="speak-hint">💡 Start with: <span>"He needed rock to..."</span></div></div><div class="speak-q"><p>How did water reach the top of the garden?</p><div class="speak-hint">💡 Start with: <span>"Water reached the top because..."</span></div></div><div class="speak-q"><p>Why did Nebuchadnezzar plant Persian flowers in the garden?</p><div class="speak-hint">💡 Start with: <span>"He planted Persian flowers so that..."</span></div></div>
+  </div>
+</section>
+<section class="sec" id="p7">
+  <div class="sec-header">
+    <div class="sec-num">7</div>
+    <div><div class="sec-title">Speaking — Level 2 &amp; 3</div><div class="sec-sub">Extend your answer. Share your opinion.</div></div>
+  </div>
+  <div class="speak-level">
+    <span class="speak-badge l2">🟡 Level 2 · 2–3 sentences</span>
+    <div class="speak-q"><p>Describe, step by step, how you think the Hanging Gardens were built, from the first rock to the final flower.</p><div class="speak-hint">💡 Use sequence words: <span>first · then · next · finally</span></div></div><div class="speak-q"><p>Why do you think ancient engineers were able to build such impressive structures without modern machines?</p><div class="speak-hint">💡 Think about: <span>manpower · ingenuity · time · teamwork</span></div></div>
+  </div>
+  <div class="speak-level">
+    <span class="speak-badge l3">🔵 Level 3 · Your opinion</span>
+    <div class="speak-q"><p>Which do you think is more impressive: solving a technical problem (like pumping water uphill) or solving an emotional problem (like curing homesickness)? Explain your opinion.</p><div class="speak-hint">💡 Use: <span>I believe... / In contrast... / Overall...</span></div></div>
+  </div>
+</section>
+<section class="sec" id="p8">
+  <div class="sec-header">
+    <div class="sec-num">8</div>
+    <div><div class="sec-title">Ideas &amp; Society</div><div class="sec-sub">Think about big ideas. There is no wrong answer.</div></div>
+  </div>
+  <div class="idea-q"><div class="idea-icon">⛏️</div><div class="idea-text"><strong>Building the Hanging Gardens required enormous manpower, likely including enslaved workers.</strong> How should we feel about admiring ancient wonders that were often built through forced labor?</div></div><div class="idea-q"><div class="idea-icon">💧</div><div class="idea-text"><strong>Ancient engineers solved the difficult problem of moving water uphill without electricity.</strong> What modern engineering problems do you think will impress people thousands of years from now?</div></div><div class="idea-q"><div class="idea-icon">🌏</div><div class="idea-text"><strong>Nebuchadnezzar essentially recreated a piece of a different country inside his own capital.</strong> Do you think recreating pieces of 'home' in a new place is a healthy way to cope with homesickness?</div></div><div class="idea-q"><div class="idea-icon">🏗️</div><div class="idea-text"><strong>The Hanging Gardens were built for one person's happiness.</strong> Do you think it's a good use of a nation's resources for a ruler to build something purely to please one person they love?</div></div>
+</section>
+<section class="sec" id="p9">
+  <div class="sec-header">
+    <div class="sec-num">9</div>
+    <div><div class="sec-title">IELTS Content Builder</div><div class="sec-sub">Planting seeds for your future IELTS exam</div></div>
+  </div>
+  <div class="ielts-topic">
+    <div class="ielts-topic-label">📘 Today's IELTS Topic</div>
+    <h4>Engineering, Innovation, and Ancient Technology</h4>
+  </div>
+  <p style="font-size:12px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;color:var(--text3);margin-bottom:.5rem;">Key vocabulary</p>
+  <div class="vocab-chips"><span class="chip amber">engineering</span><span class="chip amber">innovation</span><span class="chip amber">infrastructure</span><span class="chip amber">ingenuity</span><span class="chip amber">sustainability</span><span class="chip amber">architectural marvel</span></div>
+  <p style="font-size:12px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;color:var(--text3);margin:.875rem 0 .5rem;">Useful collocations</p>
+  <div class="vocab-chips"><span class="chip">overcome a technical challenge</span><span class="chip">push the boundaries of engineering</span><span class="chip">stand the test of time</span><span class="chip">leave a lasting legacy</span></div>
+  <div class="ielts-qs"><div class="ielts-q"><div class="ielts-q-num">S1</div><div class="ielts-q-text">What ancient engineering achievement do you find most impressive, and why?</div></div><div class="ielts-q"><div class="ielts-q-num">S2</div><div class="ielts-q-text">Do you think modern technology has made us less resourceful than ancient engineers?</div></div><div class="ielts-q"><div class="ielts-q-num">S3</div><div class="ielts-q-text">Should we judge ancient wonders differently if we know they were built using forced labor?</div></div></div>
+  <div class="ielts-w2">
+    <div class="ielts-w2-label">✏️ IELTS Writing Task 2 — Future Practice</div>
+    <p>"Many of the world's most famous historical monuments were built using methods that would be considered unacceptable today, such as forced labor. To what extent should this affect how we view and celebrate these achievements?"</p>
+  </div>
+</section>
+<section class="sec" id="p10">
+  <div class="sec-header">
+    <div class="sec-num">10</div>
+    <div><div class="sec-title">Review</div><div class="sec-sub">Remember what you learned!</div></div>
+  </div>
+  <p style="font-size:12px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;color:var(--text3);margin-bottom:.75rem;">⭐ Star Words</p>
+  <div class="star-words"><span class="star-word">⭐ artificial</span><span class="star-word">⭐ slab</span><span class="star-word">⭐ haul</span><span class="star-word">⭐ pump</span><span class="star-word">⭐ path</span><span class="star-word">⭐ admire</span><span class="star-word">⭐ irrigation</span><span class="star-word">⭐ design</span></div>
+  <div class="think-box">
+    <div class="think-head">💡 Big Idea</div>
+    <p>With enough determination and clever engineering, humans can reshape even the flattest desert into a mountain — proof that love and ingenuity can overcome nature itself.</p>
+  </div>
+  <p style="font-size:12px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;color:var(--text3);margin:.875rem 0 .75rem;">🧠 Mini Quiz</p>
+  <div class="mini-quiz-q"><div class="mq-text">A. What lifted water to the top of the Hanging Gardens?</div><div class="mq-opts"><button class="mq-opt" onclick="mq(this,'wrong')">Rain</button>
+<button class="mq-opt" onclick="mq(this,'wrong')">Hundreds of buckets carried by hand</button>
+<button class="mq-opt" onclick="mq(this,'correct')">A powerful pump from the Euphrates River</button>
+</div></div><div class="mini-quiz-q"><div class="mq-text">B. Workers had to ________ huge slabs of rock to build the mountain.</div><div class="mq-opts"><button class="mq-opt" onclick="mq(this,'wrong')">paint</button>
+<button class="mq-opt" onclick="mq(this,'wrong')">plant</button>
+<button class="mq-opt" onclick="mq(this,'correct')">haul</button>
+</div></div><div class="mini-quiz-q"><div class="mq-text">C. Why were paths built into the garden?</div><div class="mq-opts"><button class="mq-opt" onclick="mq(this,'wrong')">To drain water away quickly</button>
+<button class="mq-opt" onclick="mq(this,'correct')">So people could walk up and down among the plants</button>
+<button class="mq-opt" onclick="mq(this,'wrong')">To guide soldiers on patrol</button>
+</div></div>
+  <div class="lesson-nav">
+    <a class="nav-btn" href="ch17-e.html"><i class="ti ti-arrow-left"></i> Lesson 17E</a>
+    <a class="nav-btn primary" href="ch17-g.html">Next: Lesson 17G — The Seven Wonders + Review <i class="ti ti-arrow-right"></i></a>
+  </div>
+</section>
+</main>
+<footer class="site-footer"><strong>Lexilink Ideation IELTS STUDIO</strong> · History ESL Course · Chapter 17 — Lesson F</footer>
+<script>
+function toggleVocab(card){card.classList.toggle('open');}
+function mcq(btn,type){
+  const item=btn.closest('.q-item');
+  item.querySelectorAll('.q-opt').forEach(b=>{b.classList.remove('correct','wrong');b.disabled=true;});
+  btn.classList.add(type);
+  const fb=item.querySelector('.q-feedback');
+  fb.className='q-feedback show '+(type==='correct'?'good':'bad');
+  fb.textContent=type==='correct'?'✓ Correct! Well done!':'✗ Not quite. Try to remember the story.';
+}
+function tf(btn,type,msg){
+  const item=btn.closest('.q-item');
+  item.querySelectorAll('.tf-btn').forEach(b=>{b.classList.remove('correct','wrong');b.disabled=true;});
+  btn.classList.add(type);
+  const fb=item.querySelector('.q-feedback');
+  fb.className='q-feedback show '+(type==='correct'?'good':'bad');
+  fb.textContent=(type==='correct'?'✓ ':'✗ ')+msg;
+}
+function mq(btn,type){
+  const item=btn.closest('.mini-quiz-q');
+  item.querySelectorAll('.mq-opt').forEach(b=>{b.classList.remove('correct','wrong');b.disabled=true;});
+  btn.classList.add(type);
+}
+function checkUnscramble(id,answer,rid){
+  const val=document.getElementById(id).value.trim().toLowerCase().replace(/[^a-z\s]/g,'');
+  const ans=answer.toLowerCase();
+  const r=document.getElementById(rid);
+  r.className='sb-result show '+(val===ans?'ok':'no');
+  r.textContent=val===ans?'✓ Perfect! "'+answer+'"':'✗ Try again. Check the word order.';
+}
+function checkFill(id,answer,rid){
+  const val=document.getElementById(id).value.trim().toLowerCase();
+  const r=document.getElementById(rid);
+  r.className='sb-result show '+(val===answer.toLowerCase()?'ok':'no');
+  r.textContent=val===answer.toLowerCase()?'✓ Correct!':'✗ The answer is: "'+answer+'"';
+}
+function revealTranslation(id,answer,rid){
+  const r=document.getElementById(rid);
+  r.className='sb-result show ok';
+  r.textContent='✓ Model answer: "'+answer+'"';
+}
+function scrollTo(id){document.getElementById(id).scrollIntoView({behavior:'smooth',block:'start'});}
+const parts=['p1','p2','p3','p4','p5','p6','p7','p8','p9','p10'];
+const partEls=document.querySelectorAll('.lp-part');
+window.addEventListener('scroll',()=>{
+  let current=0;
+  parts.forEach((id,i)=>{const el=document.getElementById(id);if(el&&el.getBoundingClientRect().top<200)current=i;});
+  partEls.forEach((el,i)=>{el.classList.remove('active','done');if(i<current)el.classList.add('done');else if(i===current)el.classList.add('active');});
+  const pct=Math.round(((current+1)/10)*100);
+  document.querySelector('.lp-fill').style.width=pct+'%';
+});
+</script>
+</body>
+</html>
