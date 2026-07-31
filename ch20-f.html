@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+<title>Lesson 20F — The First Olympic Games | Lexilink History Workshop</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"/>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet"/>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@latest/tabler-icons.min.css"/>
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
+:root{
+  --bg:#0F0800;--surface:rgba(255,255,255,0.04);--surface2:rgba(255,255,255,0.07);
+  --border:rgba(255,255,255,0.10);--border2:rgba(255,255,255,0.06);
+  --amber-300:#E8A832;--amber-400:#D4890F;--amber-500:#B8720A;
+  --amber-bg:rgba(212,137,15,0.12);--amber-border:rgba(212,137,15,0.3);
+  --text:#fff;--text2:rgba(255,255,255,0.72);--text3:rgba(255,255,255,0.45);
+  --teal:#1D9E75;--teal-bg:rgba(29,158,117,0.12);--teal-border:rgba(29,158,117,0.3);
+  --coral:#E05C3A;--coral-bg:rgba(224,92,58,0.12);
+  --blue:#4A9EE0;--blue-bg:rgba(74,158,224,0.12);
+  --navy:#1a2744;
+  --r:12px;--r-sm:8px;
+}
+html{scroll-behavior:smooth;}
+body{font-family:'Inter',sans-serif;background:var(--bg);color:var(--text);min-height:100vh;line-height:1.6;}
+.site-header{background:#111;border-bottom:1px solid rgba(255,255,255,0.08);position:sticky;top:0;z-index:100;}
+.hdr{max-width:860px;margin:0 auto;padding:0 1.5rem;height:54px;display:flex;align-items:center;gap:12px;}
+.logo-wrap{display:flex;align-items:center;gap:8px;text-decoration:none;}
+.logo-icon{width:30px;height:30px;display:flex;align-items:center;justify-content:center;}
+.logo-icon svg{width:26px;height:26px;}
+.logo-name{font-size:13px;font-weight:700;color:#fff;}
+.hdr-pipe{width:1px;height:20px;background:rgba(255,255,255,0.15);}
+.hdr-back{display:flex;align-items:center;gap:5px;font-size:12px;color:var(--text3);text-decoration:none;transition:color .15s;}
+.hdr-back:hover{color:var(--text2);}
+.hdr-spacer{flex:1;}
+.hdr-badge{font-size:10px;font-weight:700;letter-spacing:.05em;padding:3px 10px;border-radius:99px;border:1px solid var(--amber-border);color:var(--amber-300);background:var(--amber-bg);}
+.lesson-hero{background:linear-gradient(135deg,#2C1600 0%,#5C3200 40%,#7A4500 100%);padding:3rem 1.5rem 2.5rem;text-align:center;position:relative;overflow:hidden;}
+.lesson-hero::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse 70% 60% at 50% 50%,rgba(200,130,0,0.15),transparent);pointer-events:none;}
+.lesson-eyebrow{font-size:10px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--amber-300);margin-bottom:.75rem;}
+.lesson-hero h1{font-size:clamp(22px,4vw,36px);font-weight:700;color:#fff;letter-spacing:-.02em;margin-bottom:.5rem;}
+.lesson-hero p{font-size:14px;color:rgba(255,255,255,0.65);max-width:520px;margin:0 auto .875rem;}
+.lesson-pills{display:flex;flex-wrap:wrap;justify-content:center;gap:8px;}
+.l-pill{font-size:11px;font-weight:500;padding:4px 12px;border-radius:99px;border:1px solid rgba(255,255,255,0.18);color:rgba(255,255,255,0.75);background:rgba(255,255,255,0.06);}
+.lesson-progress{background:#1A1100;border-bottom:1px solid rgba(255,255,255,0.06);padding:.75rem 1.5rem;}
+.lp-inner{max-width:860px;margin:0 auto;}
+.lp-labels{display:flex;justify-content:space-between;font-size:11px;color:var(--text3);margin-bottom:6px;}
+.lp-track{height:4px;border-radius:99px;background:rgba(255,255,255,0.08);}
+.lp-fill{height:100%;border-radius:99px;background:linear-gradient(90deg,var(--amber-500),var(--amber-300));width:10%;}
+.lp-parts{display:flex;gap:4px;margin-top:8px;flex-wrap:wrap;}
+.lp-part{font-size:10px;font-weight:600;padding:2px 8px;border-radius:99px;background:rgba(255,255,255,0.06);color:var(--text3);cursor:pointer;transition:all .15s;}
+.lp-part.done{background:var(--amber-bg);color:var(--amber-300);border:1px solid var(--amber-border);}
+.lp-part.active{background:var(--amber-400);color:#1A0800;}
+.main{max-width:860px;margin:0 auto;padding:2rem 1.5rem 5rem;}
+.sec{background:var(--surface);border:1px solid var(--border);border-radius:var(--r);padding:1.5rem;margin-bottom:1.5rem;scroll-margin-top:80px;}
+.sec-header{display:flex;align-items:center;gap:10px;margin-bottom:1.25rem;}
+.sec-num{width:28px;height:28px;border-radius:8px;display:flex;align-items:center;justify-content:center;font-size:11px;font-weight:700;background:var(--amber-bg);color:var(--amber-300);border:1px solid var(--amber-border);flex-shrink:0;}
+.sec-title{font-size:16px;font-weight:700;color:#fff;}
+.sec-sub{font-size:12px;color:var(--text3);margin-top:1px;}
+.vocab-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(240px,1fr));gap:10px;}
+.vocab-card{background:var(--surface2);border:1px solid var(--border2);border-radius:var(--r-sm);padding:1rem;cursor:pointer;transition:border-color .15s;}
+.vocab-card:hover,.vocab-card.open{border-color:var(--amber-border);}
+.vc-top{display:flex;align-items:baseline;gap:8px;}
+.vc-word{font-size:16px;font-weight:700;color:#fff;}
+.vc-pos{font-size:10px;font-weight:600;padding:1px 7px;border-radius:99px;background:var(--amber-bg);color:var(--amber-300);}
+.vc-pron{font-size:12px;color:var(--text3);margin-top:2px;font-style:italic;}
+.vc-cn{font-size:15px;color:var(--amber-300);margin-top:4px;font-weight:600;}
+.vc-detail{display:none;margin-top:10px;padding-top:10px;border-top:1px solid var(--border2);}
+.vocab-card.open .vc-detail{display:block;}
+.vc-def{font-size:13px;color:var(--text2);margin-bottom:6px;}
+.vc-ex{font-size:12px;color:var(--text3);font-style:italic;padding-left:8px;border-left:2px solid var(--amber-border);}
+.story-body p{font-size:15px;color:var(--text2);line-height:1.8;margin-bottom:1rem;}
+.story-body p:last-child{margin-bottom:0;}
+.story-hl{color:var(--amber-300);font-weight:600;}
+.story-box{background:var(--amber-bg);border:1px solid var(--amber-border);border-radius:var(--r-sm);padding:1rem 1.25rem;margin:1.25rem 0;font-size:14px;color:rgba(255,255,255,0.85);line-height:1.7;font-style:italic;}
+.story-box::before{content:'"';font-size:32px;color:var(--amber-400);line-height:1;display:block;margin-bottom:.25rem;}
+.story-icon{font-size:40px;text-align:center;margin:1rem 0;}
+.quiz-list{display:flex;flex-direction:column;gap:14px;}
+.q-item{background:var(--surface2);border:1px solid var(--border2);border-radius:var(--r-sm);padding:1rem 1.25rem;}
+.q-text{font-size:14px;font-weight:600;color:#fff;margin-bottom:.75rem;}
+.q-opts{display:flex;flex-direction:column;gap:6px;}
+.q-opt{display:flex;align-items:center;gap:10px;padding:8px 12px;border-radius:8px;border:1px solid var(--border);background:transparent;cursor:pointer;font-size:13px;color:var(--text2);width:100%;text-align:left;transition:all .15s;}
+.q-opt:hover{border-color:var(--amber-border);background:var(--amber-bg);}
+.q-opt.correct{border-color:var(--teal-border);background:var(--teal-bg);color:#fff;}
+.q-opt.wrong{border-color:rgba(224,92,58,0.4);background:var(--coral-bg);color:#fff;}
+.q-feedback{font-size:12px;margin-top:8px;padding:6px 10px;border-radius:6px;display:none;}
+.q-feedback.show{display:block;}
+.q-feedback.good{background:var(--teal-bg);color:#5DCAA5;}
+.q-feedback.bad{background:var(--coral-bg);color:#F09B80;}
+.tf-opts{display:flex;gap:8px;}
+.tf-btn{flex:1;padding:8px;border-radius:8px;border:1px solid var(--border);background:transparent;cursor:pointer;font-size:13px;font-weight:600;color:var(--text2);transition:all .15s;}
+.tf-btn:hover{border-color:var(--amber-border);background:var(--amber-bg);}
+.tf-btn.correct{border-color:var(--teal-border);background:var(--teal-bg);color:#fff;}
+.tf-btn.wrong{border-color:rgba(224,92,58,0.4);background:var(--coral-bg);color:#fff;}
+.grammar-box{background:var(--surface2);border-left:3px solid var(--amber-400);border-radius:0 var(--r-sm) var(--r-sm) 0;padding:1rem 1.25rem;margin-bottom:1rem;}
+.grammar-label{font-size:10px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--amber-300);margin-bottom:.5rem;}
+.grammar-rule{font-size:14px;color:#fff;font-weight:600;margin-bottom:.5rem;}
+.grammar-eg{font-size:13px;color:var(--text2);margin-top:.25rem;font-style:italic;}
+.grammar-eg span{color:var(--amber-300);font-weight:600;font-style:normal;}
+.grammar-note{font-size:12px;color:var(--text2);margin-top:.7rem;padding:.5rem .75rem;background:var(--amber-bg);border:1px solid var(--amber-border);border-radius:6px;}
+.grammar-note strong{color:var(--amber-300);}
+.grammar-table{width:100%;border-collapse:collapse;font-size:13px;margin-top:.75rem;}
+.grammar-table th{text-align:left;padding:6px 10px;font-size:10px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;color:var(--text3);border-bottom:1px solid var(--border);}
+.grammar-table td{padding:7px 10px;color:var(--text2);border-bottom:1px solid var(--border2);}
+.grammar-table td:first-child{color:#fff;font-weight:500;}
+.hl{color:var(--amber-300);font-weight:600;}
+.sb-activity{margin-bottom:1.25rem;}
+.sb-label{font-size:11px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;color:var(--amber-300);margin-bottom:.75rem;}
+.sb-input{width:100%;background:var(--surface2);border:1px solid var(--border);border-radius:var(--r-sm);padding:.625rem .875rem;font-size:14px;color:#fff;font-family:'Inter',sans-serif;transition:border-color .15s;outline:none;margin-bottom:.5rem;}
+.sb-input:focus{border-color:var(--amber-border);}
+.sb-check{padding:7px 18px;border-radius:99px;background:var(--amber-400);color:#1A0800;font-size:13px;font-weight:700;border:none;cursor:pointer;transition:opacity .15s;}
+.sb-check:hover{opacity:.85;}
+.sb-result{font-size:12px;margin-top:6px;padding:6px 10px;border-radius:6px;display:none;}
+.sb-result.show{display:block;}
+.sb-result.ok{background:var(--teal-bg);color:#5DCAA5;}
+.sb-result.no{background:var(--coral-bg);color:#F09B80;}
+.sb-tile{padding:5px 10px;border-radius:99px;background:var(--surface2);border:1px solid var(--border);font-size:13px;color:var(--text2);display:inline-block;margin:3px;}
+.speak-level{margin-bottom:1.25rem;}
+.speak-badge{display:inline-flex;align-items:center;gap:6px;font-size:11px;font-weight:700;padding:3px 12px;border-radius:99px;margin-bottom:.875rem;}
+.speak-badge.l1{background:var(--teal-bg);color:#5DCAA5;border:1px solid var(--teal-border);}
+.speak-badge.l2{background:var(--amber-bg);color:var(--amber-300);border:1px solid var(--amber-border);}
+.speak-badge.l3{background:var(--blue-bg);color:var(--blue);border:1px solid rgba(74,158,224,0.3);}
+.speak-q{background:var(--surface2);border:1px solid var(--border2);border-radius:var(--r-sm);padding:1rem 1.25rem;margin-bottom:.75rem;}
+.speak-q p{font-size:14px;font-weight:600;color:#fff;margin-bottom:.5rem;}
+.speak-hint{font-size:12px;color:var(--text3);}
+.speak-hint span{color:var(--amber-300);}
+.idea-q{background:var(--surface2);border:1px solid var(--border2);border-top:3px solid var(--amber-400);border-radius:var(--r-sm);padding:1rem 1.25rem;margin-bottom:.75rem;display:flex;gap:10px;}
+.idea-icon{font-size:20px;flex-shrink:0;margin-top:2px;}
+.idea-text{font-size:14px;color:var(--text2);line-height:1.6;}
+.idea-text strong{color:#fff;}
+.ielts-topic{background:var(--navy);border:1px solid rgba(74,158,224,0.25);border-radius:var(--r-sm);padding:1rem 1.25rem;margin-bottom:1.25rem;}
+.ielts-topic-label{font-size:10px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--blue);margin-bottom:.25rem;}
+.ielts-topic h4{font-size:16px;font-weight:700;color:#fff;}
+.vocab-chips{display:flex;flex-wrap:wrap;gap:6px;margin-top:.75rem;}
+.chip{font-size:12px;padding:4px 12px;border-radius:99px;background:rgba(255,255,255,0.06);border:1px solid var(--border);color:var(--text2);}
+.chip.amber{background:var(--amber-bg);border-color:var(--amber-border);color:var(--amber-300);}
+.ielts-qs{display:flex;flex-direction:column;gap:8px;margin-top:1rem;}
+.ielts-q{display:flex;gap:10px;background:var(--surface2);border-radius:var(--r-sm);padding:.875rem 1rem;}
+.ielts-q-num{font-size:11px;font-weight:700;color:var(--blue);min-width:20px;}
+.ielts-q-text{font-size:13px;color:var(--text2);}
+.ielts-w2{background:var(--gold-light,rgba(245,158,11,0.1));border:1px solid var(--amber-border);border-radius:var(--r-sm);padding:1rem 1.25rem;margin-top:1rem;}
+.ielts-w2-label{font-size:10px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--amber-300);margin-bottom:.5rem;}
+.ielts-w2 p{font-size:14px;color:var(--text2);line-height:1.7;font-style:italic;}
+.star-words{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:1.25rem;}
+.star-word{display:flex;align-items:center;gap:6px;padding:6px 14px;border-radius:99px;background:var(--amber-bg);border:1px solid var(--amber-border);font-size:13px;font-weight:600;color:var(--amber-300);}
+.think-box{background:var(--surface2);border:1px solid var(--border2);border-radius:var(--r-sm);padding:1rem 1.25rem;margin-bottom:1rem;}
+.think-box .think-head{font-size:12px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;color:var(--amber-300);margin-bottom:.5rem;}
+.think-box p{font-size:14px;color:var(--text2);}
+.summary-box{background:var(--navy);border:1px solid rgba(74,158,224,0.3);border-radius:var(--r-sm);padding:1.25rem 1.5rem;margin-bottom:1.25rem;}
+.summary-box .think-head{color:var(--blue);}
+.summary-box p{font-size:14px;color:rgba(255,255,255,0.85);line-height:1.7;}
+.project-box{background:var(--surface2);border:1px solid var(--amber-border);border-radius:var(--r-sm);padding:1.25rem 1.5rem;margin-bottom:1.25rem;}
+.project-box .think-head{color:var(--amber-300);font-size:12px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;margin-bottom:.75rem;}
+.project-box ol{margin:0 0 0 1.1rem;padding:0;}
+.project-box li{font-size:14px;color:var(--text2);line-height:1.7;margin-bottom:.4rem;}
+.mini-quiz-q{background:var(--surface2);border:1px solid var(--border2);border-radius:var(--r-sm);padding:1rem;margin-bottom:.75rem;}
+.mq-text{font-size:13px;font-weight:600;color:#fff;margin-bottom:.625rem;}
+.mq-opts{display:flex;flex-direction:column;gap:5px;}
+.mq-opt{padding:7px 12px;border-radius:6px;border:1px solid var(--border);background:transparent;font-size:12px;color:var(--text2);cursor:pointer;text-align:left;transition:all .15s;}
+.mq-opt:hover{border-color:var(--amber-border);background:var(--amber-bg);}
+.mq-opt.correct{border-color:var(--teal-border);background:var(--teal-bg);color:#fff;}
+.mq-opt.wrong{border-color:rgba(224,92,58,0.4);background:var(--coral-bg);color:#fff;}
+.lesson-nav{display:flex;gap:10px;margin-top:2rem;}
+.nav-btn{display:flex;align-items:center;gap:6px;padding:.75rem 1.25rem;border-radius:10px;font-size:13px;font-weight:600;cursor:pointer;text-decoration:none;border:1px solid var(--border);color:var(--text2);background:var(--surface);transition:all .15s;flex:1;justify-content:center;}
+.nav-btn:hover{border-color:var(--border2);color:#fff;}
+.nav-btn.primary{background:var(--amber-400);color:#1A0800;border-color:transparent;}
+.nav-btn.primary:hover{opacity:.9;}
+.site-footer{background:#111;border-top:1px solid rgba(255,255,255,0.07);text-align:center;padding:1.5rem;font-size:12px;color:rgba(255,255,255,0.3);}
+.site-footer strong{color:var(--amber-300);}
+@media(max-width:600px){.vocab-grid{grid-template-columns:1fr;}.lesson-nav{flex-direction:column;}}
+</style>
+</head>
+<body>
+<header class="site-header"><div class="hdr">
+<a class="logo-wrap" href="index.html"><div class="logo-icon"><svg viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path d="M6 24 C8 18,14 10,24 6 C20 10,18 14,20 18 C16 16,12 18,6 24Z" fill="white"/><path d="M20 18 C22 20,22 23,20 26 C18 24,18 21,20 18Z" fill="rgba(255,255,255,0.5)"/></svg></div>
+<span class="logo-name">Lexilink Ideation IELTS STUDIO</span></a>
+<div class="hdr-pipe"></div>
+<a class="hdr-back" href="index.html"><i class="ti ti-arrow-left" aria-hidden="true"></i> Vol. 1</a>
+<div class="hdr-spacer"></div><span class="hdr-badge">Lesson 20F</span></div></header>
+<section class="lesson-hero">
+<p class="lesson-eyebrow">Chapter 20 · Greece Gets Civilized Again</p>
+<h1>The First Olympic Games</h1>
+<p>A festival of peace, strength, and honour for the gods</p>
+<div class="lesson-pills"><span class="l-pill">📖 Story + Vocabulary</span><span class="l-pill">🎤 Speaking</span><span class="l-pill">✏️ Grammar</span><span class="l-pill">⭐ CEFR A2–B1</span></div>
+</section>
+<div class="lesson-progress"><div class="lp-inner">
+<div class="lp-labels"><span>Lesson 20F of 7</span><span style="color:var(--amber-300)">10 parts</span></div>
+<div class="lp-track"><div class="lp-fill"></div></div>
+<div class="lp-parts">
+<span class="lp-part active" onclick="scrollToId('p1')">1 Vocab</span>
+<span class="lp-part" onclick="scrollToId('p2')">2 Story</span>
+<span class="lp-part" onclick="scrollToId('p3')">3 Reading</span>
+<span class="lp-part" onclick="scrollToId('p4')">4 Grammar</span>
+<span class="lp-part" onclick="scrollToId('p5')">5 Builder</span>
+<span class="lp-part" onclick="scrollToId('p6')">6 Speaking 1</span>
+<span class="lp-part" onclick="scrollToId('p7')">7 Speaking 2</span>
+<span class="lp-part" onclick="scrollToId('p8')">8 Ideas</span>
+<span class="lp-part" onclick="scrollToId('p9')">9 IELTS</span>
+<span class="lp-part" onclick="scrollToId('p10')">10 Review</span>
+</div></div></div>
+<main class="main">
+<section class="sec" id="p1"><div class="sec-header"><div class="sec-num">1</div><div><div class="sec-title">Vocabulary</div><div class="sec-sub">Click each word to learn more</div></div></div><div class="vocab-grid"><div class="vocab-card" onclick="toggleVocab(this)"><div class="vc-top"><span class="vc-word">festival</span><span class="vc-pos">noun</span></div><div class="vc-pron">/ˈfes.tɪ.vəl/</div><div class="vc-cn">节日</div><div class="vc-detail"><div class="vc-def">A special time of public celebration.</div><div class="vc-ex">"The Olympics began as a festival in honour of Zeus."</div></div></div><div class="vocab-card" onclick="toggleVocab(this)"><div class="vc-top"><span class="vc-word">compete</span><span class="vc-pos">verb</span></div><div class="vc-pron">/kəmˈpiːt/</div><div class="vc-cn">竞争</div><div class="vc-detail"><div class="vc-def">To try to win against other people.</div><div class="vc-ex">"The strongest Greeks came to compete for prizes."</div></div></div><div class="vocab-card" onclick="toggleVocab(this)"><div class="vc-top"><span class="vc-word">wreath</span><span class="vc-pos">noun</span></div><div class="vc-pron">/riːθ/</div><div class="vc-cn">花环</div><div class="vc-detail"><div class="vc-def">A ring of leaves or flowers worn on the head.</div><div class="vc-ex">"The winner received a wreath of olive leaves."</div></div></div><div class="vocab-card" onclick="toggleVocab(this)"><div class="vc-top"><span class="vc-word">sacrifice</span><span class="vc-pos">noun</span></div><div class="vc-pron">/ˈsæk.rɪ.faɪs/</div><div class="vc-cn">祭品</div><div class="vc-detail"><div class="vc-def">An offering given to a god.</div><div class="vc-ex">"The Greeks made a sacrifice to Zeus at the festival."</div></div></div><div class="vocab-card" onclick="toggleVocab(this)"><div class="vc-top"><span class="vc-word">athlete</span><span class="vc-pos">noun</span></div><div class="vc-pron">/ˈæθ.liːt/</div><div class="vc-cn">运动员</div><div class="vc-detail"><div class="vc-def">A person who is very good at sports.</div><div class="vc-ex">"Each athlete trained hard for the Games."</div></div></div><div class="vocab-card" onclick="toggleVocab(this)"><div class="vc-top"><span class="vc-word">pentathlon</span><span class="vc-pos">noun</span></div><div class="vc-pron">/penˈtæθ.lɒn/</div><div class="vc-cn">五项全能</div><div class="vc-detail"><div class="vc-def">A contest made of five different sports events.</div><div class="vc-ex">"The pentathlon tested five different skills."</div></div></div><div class="vocab-card" onclick="toggleVocab(this)"><div class="vc-top"><span class="vc-word">javelin</span><span class="vc-pos">noun</span></div><div class="vc-pron">/ˈdʒæv.lɪn/</div><div class="vc-cn">标枪</div><div class="vc-detail"><div class="vc-def">A light spear that is thrown as far as possible in sport.</div><div class="vc-ex">"He threw the javelin farther than anyone else."</div></div></div><div class="vocab-card" onclick="toggleVocab(this)"><div class="vc-top"><span class="vc-word">discus</span><span class="vc-pos">noun</span></div><div class="vc-pron">/ˈdɪs.kəs/</div><div class="vc-cn">铁饼</div><div class="vc-detail"><div class="vc-def">A heavy round plate that is thrown in sport.</div><div class="vc-ex">"Throwing the discus was part of the pentathlon."</div></div></div><div class="vocab-card" onclick="toggleVocab(this)"><div class="vc-top"><span class="vc-word">honour</span><span class="vc-pos">verb</span></div><div class="vc-pron">/ˈɒn.ər/</div><div class="vc-cn">纪念</div><div class="vc-detail"><div class="vc-def">To show great respect for someone or something.</div><div class="vc-ex">"The Games were held to honour the god Zeus."</div></div></div><div class="vocab-card" onclick="toggleVocab(this)"><div class="vc-top"><span class="vc-word">peace</span><span class="vc-pos">noun</span></div><div class="vc-pron">/piːs/</div><div class="vc-cn">和平</div><div class="vc-detail"><div class="vc-def">A time without war or fighting.</div><div class="vc-ex">"The olive wreath was a symbol of peace."</div></div></div></div></section><section class="sec" id="p2"><div class="sec-header"><div class="sec-num">2</div><div><div class="sec-title">The Story</div><div class="sec-sub">Read carefully. Notice the bold words.</div></div></div><div class="story-body"><div class="story-icon">🏅</div><p>The Greeks loved to celebrate courage and strength. They told stories about brave heroes like Odysseus — and they also held a huge <span class="story-hl">festival</span> called the <span class="story-hl">Olympic Games</span>. The bravest and strongest Greeks came from all over to <span class="story-hl">compete</span> for prizes.</p><p>How did the Olympics begin? Two Greek cities had fought each other for years and years. At last they made <span class="story-hl">peace</span>. To celebrate, they held a great festival to <span class="story-hl">honour</span> <span class="story-hl">Zeus</span>, the chief god of the Greeks. The festival was named after <span class="story-hl">Mount Olympus</span>, the highest mountain in Greece, where the Greeks believed the gods lived.</p><div class="story-box">At the festival, the Greeks feasted and made a <span class="story-hl">sacrifice</span> to Zeus. Then they ran races. The winners were given a <span class="story-hl">wreath</span> of olive leaves — and the olive leaves stood for peace.</div><p>The Greeks decided to hold the Olympics every four years. As time went on, more and more Greeks came, and more events were added. Instead of only foot races, they held horse races, boxing, and wrestling. They even invented the <span class="story-hl">pentathlon</span>, a contest of five events. To win it, an <span class="story-hl">athlete</span> had to throw the <span class="story-hl">discus</span> and the <span class="story-hl">javelin</span> farther than anyone, and also win a long jump, a wrestling match, and a foot race.</p><p>But there was one strict rule: only men could compete. Girls could watch, but they were not allowed to race. Married women could not even come near the Games. The Greeks believed that only men could be truly brave and strong, and that the best way to honour the gods was for men to train their bodies to be graceful and powerful.</p><p>Winners were treated like heroes. They were given great feasts, and when they went home, their cities rewarded them with money and free food for life. The Olympics were held every four years for almost a thousand years — a festival of strength, peace, and honour that would never be forgotten.</p><div class="story-icon">🔥</div></div></section><section class="sec" id="p3"><div class="sec-header"><div class="sec-num">3</div><div><div class="sec-title">Reading Comprehension</div><div class="sec-sub">Choose the best answer. Get instant feedback!</div></div></div><div class="quiz-list"><div class="q-item"><div class="q-text">1. How did the very first Olympic Games begin?</div><div class="q-opts"><button class="q-opt" onclick="mcq(this,'wrong')">A king ordered everyone to run a race.</button><button class="q-opt" onclick="mcq(this,'correct')">Two cities made peace and held a festival to honour Zeus.</button><button class="q-opt" onclick="mcq(this,'wrong')">Sailors held a race to celebrate a safe voyage.</button></div><div class="q-feedback"></div></div><div class="q-item"><div class="q-text">2. After which mountain were the Games named?</div><div class="q-opts"><button class="q-opt" onclick="mcq(this,'wrong')">Mount Troy.</button><button class="q-opt" onclick="mcq(this,'wrong')">Mount Poseidon.</button><button class="q-opt" onclick="mcq(this,'correct')">Mount Olympus.</button></div><div class="q-feedback"></div></div><div class="q-item"><div class="q-text">3. The winners of the races were given a wreath of olive leaves.</div><div class="tf-opts"><button class="tf-btn" onclick="tf(this,'correct','Correct! The olive wreath was the prize, and it stood for peace.')">True</button><button class="tf-btn" onclick="tf(this,'wrong','Actually, winners did receive an olive wreath, a symbol of peace.')">False</button></div><div class="q-feedback"></div></div><div class="q-item"><div class="q-text">4. What was the pentathlon?</div><div class="q-opts"><button class="q-opt" onclick="mcq(this,'wrong')">A single long foot race.</button><button class="q-opt" onclick="mcq(this,'correct')">A contest of five different events.</button><button class="q-opt" onclick="mcq(this,'wrong')">A boxing match between two cities.</button></div><div class="q-feedback"></div></div><div class="q-item"><div class="q-text">5. Women and girls were allowed to compete in the ancient Olympics.</div><div class="tf-opts"><button class="tf-btn" onclick="tf(this,'wrong','In fact, only men could compete; married women could not even watch.')">True</button><button class="tf-btn" onclick="tf(this,'correct','Correct! Only men could compete in the ancient Games.')">False</button></div><div class="q-feedback"></div></div><div class="q-item"><div class="q-text">6. How were Olympic winners treated when they returned home?</div><div class="q-opts"><button class="q-opt" onclick="mcq(this,'wrong')">They were made to leave their city.</button><button class="q-opt" onclick="mcq(this,'correct')">They were treated like heroes, with feasts and free food for life.</button><button class="q-opt" onclick="mcq(this,'wrong')">They had to pay a large prize back to the city.</button></div><div class="q-feedback"></div></div></div></section><section class="sec" id="p4"><div class="sec-header"><div class="sec-num">4</div><div><div class="sec-title">Language Focus</div><div class="sec-sub">Grammar from the story — learn through meaning</div></div></div><div class="grammar-box"><div class="grammar-label">📌 Passive Voice (past)</div><div class="grammar-rule">We use the passive when the action matters more than who did it: be + past participle.</div><div class="grammar-eg">The festival <span>was named</span> after Mount Olympus.</div><div class="grammar-eg">Winners <span>were given</span> an olive wreath.</div><div class="grammar-eg">The Games <span>were held</span> every four years.</div><div class="grammar-note"><strong>Tip:</strong> Pattern: <strong>was/were + past participle</strong>. Use it when the doer is unknown or unimportant.</div></div><div class="grammar-box"><div class="grammar-label">📌 Frequency: 'every four years'</div><div class="grammar-rule">We use 'every + time period' to show how often something happens.</div><div class="grammar-eg">The Olympics were held <span>every four years</span>.</div><div class="grammar-eg">The Greeks feasted <span>every evening</span> at the Games.</div><div class="grammar-eg">New events were added <span>every so often</span>.</div><div class="grammar-note"><strong>Tip:</strong> Pattern: <strong>every + number + plural time word</strong> (every four years, every two days).</div></div><div class="grammar-box"><div class="grammar-label">📌 only / but for limits</div><div class="grammar-rule">We use 'only' and 'but' to show a limit or an exception.</div><div class="grammar-eg"><span>Only</span> men could compete in the Games.</div><div class="grammar-eg">Girls could watch, <span>but</span> they could not race.</div><div class="grammar-eg">There was <span>only one</span> strict rule about who could take part.</div><div class="grammar-note"><strong>Tip:</strong> <strong>only</strong> narrows things down; <strong>but</strong> introduces an exception.</div></div></section><section class="sec" id="p5"><div class="sec-header"><div class="sec-num">5</div><div><div class="sec-title">Sentence Builder</div><div class="sec-sub">Build your skills with the vocabulary</div></div></div><div class="sb-activity"><div class="sb-label">🔀 Unscramble the sentence</div><p style="font-size:13px;color:var(--text3);margin-bottom:.75rem;">Put these words in the correct order:</p><div style="margin-bottom:.75rem;"><span class="sb-tile">Olympics</span><span class="sb-tile">the</span><span class="sb-tile">held</span><span class="sb-tile">were</span><span class="sb-tile">four</span><span class="sb-tile">every</span><span class="sb-tile">years</span></div><input class="sb-input" id="us1" placeholder="Type your sentence here..."/><button class="sb-check" onclick="checkUnscramble('us1','the olympics were held every four years','ur1')">Check ✓</button><div class="sb-result" id="ur1"></div></div><div class="sb-activity"><div class="sb-label">✏️ Fill in the blank</div><p style="font-size:13px;color:var(--text2);margin-bottom:.5rem;">1. The winners received a ________ made of olive leaves.</p><input class="sb-input" id="f1" placeholder="Your answer..."/><button class="sb-check" onclick="checkFill('f1','wreath','rf1')">Check ✓</button><div class="sb-result" id="rf1"></div></div><div class="sb-activity"><div class="sb-label">✏️ Fill in the blank</div><p style="font-size:13px;color:var(--text2);margin-bottom:.5rem;">2. The Olympics were held to ________ the god Zeus.</p><input class="sb-input" id="f2" placeholder="Your answer..."/><button class="sb-check" onclick="checkFill('f2','honour','rf2')">Check ✓</button><div class="sb-result" id="rf2"></div></div><div class="sb-activity"><div class="sb-label">🇨🇳 Translate into English</div><p style="font-size:13px;color:var(--text2);margin-bottom:.5rem;">奥林匹克运动会每四年举办一次。</p><input class="sb-input" id="tr1" placeholder="Write your English sentence..."/><button class="sb-check" onclick="revealAns('tr1','The Olympic Games were held every four years.','rt1')">Show model answer</button><div class="sb-result" id="rt1"></div></div></section><section class="sec" id="p6"><div class="sec-header"><div class="sec-num">6</div><div><div class="sec-title">Speaking — Level 1</div><div class="sec-sub">Answer in one complete sentence</div></div></div><div class="speak-level"><span class="speak-badge l1">🟢 Level 1 · One sentence</span><div class="speak-q"><p>How did the first Olympic Games begin?</p><div class="speak-hint">💡 Start with: <span>"The first Olympics began when..."</span></div></div><div class="speak-q"><p>What prize did the winners receive?</p><div class="speak-hint">💡 Start with: <span>"The winners received..."</span></div></div><div class="speak-q"><p>What is a pentathlon?</p><div class="speak-hint">💡 Start with: <span>"A pentathlon is a contest with..."</span></div></div></div></section><section class="sec" id="p7"><div class="sec-header"><div class="sec-num">7</div><div><div class="sec-title">Speaking — Level 2 &amp; 3</div><div class="sec-sub">Extend your answer. Share your opinion.</div></div></div><div class="speak-level"><span class="speak-badge l2">🟡 Level 2 · 2–3 sentences</span><div class="speak-q"><p>The olive wreath was a simple prize, yet athletes trained for years to win it. Why do you think honour meant more than gold to them?</p><div class="speak-hint">💡 Think about: <span>the meaning of the wreath · the pride of winning · what athletes really wanted</span></div></div><div class="speak-q"><p>In the ancient Games, only men could compete. What do you think about this rule, and how are the Olympics different today?</p><div class="speak-hint">💡 Think about: <span>"In the past... but today... I think this change is..."</span></div></div></div><div class="speak-level"><span class="speak-badge l3">🔵 Level 3 · Your opinion</span><div class="speak-q"><p>Do you think competitions like the Olympics bring people together or push them apart? Give your opinion.</p><div class="speak-hint">💡 Use: <span>I believe... / For example... / On the other hand...</span></div></div></div></section><section class="sec" id="p8"><div class="sec-header"><div class="sec-num">8</div><div><div class="sec-title">Ideas &amp; Society</div><div class="sec-sub">Think about big ideas. There is no wrong answer.</div></div></div><div class="idea-q"><div class="idea-icon">🕊️</div><div class="idea-text"><strong>Games can grow out of peace.</strong> The Olympics began when two cities stopped fighting. Do you think sport can really help enemies become friends? Why?</div></div><div class="idea-q"><div class="idea-icon">🏆</div><div class="idea-text"><strong>Honour can matter more than money.</strong> Ancient winners fought only for an olive wreath. Why do you think people sometimes value honour above wealth?</div></div><div class="idea-q"><div class="idea-icon">🚻</div><div class="idea-text"><strong>Old rules can be unfair.</strong> Only men could take part in the ancient Games. Why is it important that modern sport is open to everyone?</div></div><div class="idea-q"><div class="idea-icon">🌍</div><div class="idea-text"><strong>A tradition can last a thousand years.</strong> The ancient Olympics lasted almost a thousand years. What do you think makes a tradition strong enough to last so long?</div></div></section><section class="sec" id="p9"><div class="sec-header"><div class="sec-num">9</div><div><div class="sec-title">IELTS Content Builder</div><div class="sec-sub">Planting seeds for your future IELTS exam</div></div></div><div class="ielts-topic"><div class="ielts-topic-label">📘 Today's IELTS Topic</div><h4>Sport, Competition and Society</h4></div><p style="font-size:12px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;color:var(--text3);margin-bottom:.5rem;">Key vocabulary</p><div class="vocab-chips"><span class="chip amber">competition</span><span class="chip amber">athlete</span><span class="chip amber">tradition</span><span class="chip amber">fair play</span><span class="chip">achievement</span><span class="chip">spectator</span><span class="chip">honour</span><span class="chip">teamwork</span></div><p style="font-size:12px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;color:var(--text3);margin:.875rem 0 .5rem;">Useful collocations</p><div class="vocab-chips"><span class="chip">take part in a competition</span><span class="chip">train for an event</span><span class="chip">win a prize</span><span class="chip">bring people together</span></div><div class="ielts-qs"><div class="ielts-q"><div class="ielts-q-num">S1</div><div class="ielts-q-text">Why do you think sport is important in society?</div></div><div class="ielts-q"><div class="ielts-q-num">S2</div><div class="ielts-q-text">Should winning or taking part matter more in sport? Why?</div></div><div class="ielts-q"><div class="ielts-q-num">S3</div><div class="ielts-q-text">How can big sporting events help a country?</div></div></div><div class="ielts-w2"><div class="ielts-w2-label">✏️ IELTS Writing Task 2 — Future Practice</div><p>"Some people think that international sporting events like the Olympics help improve relations between countries, while others believe they create too much rivalry. Discuss both views and give your own opinion."</p></div></section><section class="sec" id="p10"><div class="sec-header"><div class="sec-num">10</div><div><div class="sec-title">Review</div><div class="sec-sub">Remember what you learned!</div></div></div><p style="font-size:12px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;color:var(--text3);margin-bottom:.75rem;">⭐ Star Words</p><div class="star-words"><span class="star-word">⭐ festival</span><span class="star-word">⭐ compete</span><span class="star-word">⭐ wreath</span><span class="star-word">⭐ sacrifice</span><span class="star-word">⭐ athlete</span><span class="star-word">⭐ pentathlon</span><span class="star-word">⭐ honour</span><span class="star-word">⭐ peace</span></div><div class="think-box"><div class="think-head">💡 Big Idea</div><p>The Olympic Games began when two Greek cities made peace and held a festival to honour Zeus. Athletes competed in races, wrestling, boxing, and the pentathlon, and winners received an olive wreath — a symbol of peace. Only men could take part. <strong>The Olympics turned strength and courage into a celebration of peace, held every four years for almost a thousand years.</strong></p></div><p style="font-size:12px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;color:var(--text3);margin:.875rem 0 .75rem;">🧠 Mini Quiz</p><div class="mini-quiz-q"><div class="mq-text">A. The Olympics were held to honour which god?</div><div class="mq-opts"><button class="mq-opt" onclick="mq(this,'wrong')">Poseidon</button><button class="mq-opt" onclick="mq(this,'correct')">Zeus</button><button class="mq-opt" onclick="mq(this,'wrong')">Apollo</button></div></div><div class="mini-quiz-q"><div class="mq-text">B. How often were the ancient Olympics held?</div><div class="mq-opts"><button class="mq-opt" onclick="mq(this,'wrong')">Every year</button><button class="mq-opt" onclick="mq(this,'correct')">Every four years</button><button class="mq-opt" onclick="mq(this,'wrong')">Every ten years</button></div></div><div class="mini-quiz-q"><div class="mq-text">C. The winner's prize was a wreath made of ________.</div><div class="mq-opts"><button class="mq-opt" onclick="mq(this,'wrong')">gold</button><button class="mq-opt" onclick="mq(this,'correct')">olive leaves</button><button class="mq-opt" onclick="mq(this,'wrong')">silver</button></div></div><div class="lesson-nav"><a class="nav-btn" href="ch20-e.html"><i class="ti ti-arrow-left"></i> Lesson 20E</a><a class="nav-btn primary" href="ch20-g.html">Next: Lesson 20G — The Olympics Then & Now <i class="ti ti-arrow-right"></i></a></div></section>
+</main>
+<footer class="site-footer"><strong>Lexilink Ideation IELTS STUDIO</strong> · History ESL Course · Chapter 20 — Lesson F</footer>
+<script>
+function toggleVocab(card){card.classList.toggle('open');}
+function mcq(btn,type){
+  const item=btn.closest('.q-item');
+  item.querySelectorAll('.q-opt').forEach(b=>{b.classList.remove('correct','wrong');b.disabled=true;});
+  btn.classList.add(type);
+  const fb=item.querySelector('.q-feedback');
+  fb.className='q-feedback show '+(type==='correct'?'good':'bad');
+  fb.textContent=type==='correct'?'\u2713 Correct! Well done!':'\u2717 Not quite. Read the story again and try to remember.';
+}
+function tf(btn,type,msg){
+  const item=btn.closest('.q-item');
+  item.querySelectorAll('.tf-btn').forEach(b=>{b.classList.remove('correct','wrong');b.disabled=true;});
+  btn.classList.add(type);
+  const fb=item.querySelector('.q-feedback');
+  fb.className='q-feedback show '+(type==='correct'?'good':'bad');
+  fb.textContent=(type==='correct'?'\u2713 ':'\u2717 ')+msg;
+}
+function mq(btn,type){
+  const item=btn.closest('.mini-quiz-q');
+  item.querySelectorAll('.mq-opt').forEach(b=>{b.classList.remove('correct','wrong');b.disabled=true;});
+  btn.classList.add(type);
+}
+function checkUnscramble(id,answer,rid){
+  const val=document.getElementById(id).value.trim().toLowerCase().replace(/[^a-z\s]/g,'').replace(/\s+/g,' ');
+  const ans=answer.toLowerCase().replace(/[^a-z\s]/g,'').replace(/\s+/g,' ');
+  const r=document.getElementById(rid);
+  r.className='sb-result show '+(val===ans?'ok':'no');
+  r.textContent=val===ans?'\u2713 Perfect! "'+answer+'"':'\u2717 Try again. Check the word order.';
+}
+function checkFill(id,answer,rid){
+  const val=document.getElementById(id).value.trim().toLowerCase();
+  const r=document.getElementById(rid);
+  const ans=answer.toLowerCase();
+  r.className='sb-result show '+(val===ans?'ok':'no');
+  r.textContent=val===ans?'\u2713 Correct!':'\u2717 The answer is: "'+answer+'"';
+}
+function revealAns(id,answer,rid){
+  const r=document.getElementById(rid);
+  r.className='sb-result show ok';
+  r.textContent='\u2705 Model answer: "'+answer+'"';
+}
+function scrollToId(id){document.getElementById(id).scrollIntoView({behavior:'smooth',block:'start'});}
+const parts=['p1','p2','p3','p4','p5','p6','p7','p8','p9','p10'];
+const partEls=document.querySelectorAll('.lp-part');
+window.addEventListener('scroll',()=>{
+  let current=0;
+  parts.forEach((id,i)=>{const el=document.getElementById(id);if(el&&el.getBoundingClientRect().top<200)current=i;});
+  partEls.forEach((el,i)=>{el.classList.remove('active','done');if(i<current)el.classList.add('done');else if(i===current)el.classList.add('active');});
+  const pct=Math.round(((current+1)/10)*100);
+  document.querySelector('.lp-fill').style.width=pct+'%';
+});
+</script>
+</body>
+</html>

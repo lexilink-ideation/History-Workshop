@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+<title>Lesson 20C — The Stories of Homer | Lexilink History Workshop</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"/>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet"/>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@latest/tabler-icons.min.css"/>
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
+:root{
+  --bg:#0F0800;--surface:rgba(255,255,255,0.04);--surface2:rgba(255,255,255,0.07);
+  --border:rgba(255,255,255,0.10);--border2:rgba(255,255,255,0.06);
+  --amber-300:#E8A832;--amber-400:#D4890F;--amber-500:#B8720A;
+  --amber-bg:rgba(212,137,15,0.12);--amber-border:rgba(212,137,15,0.3);
+  --text:#fff;--text2:rgba(255,255,255,0.72);--text3:rgba(255,255,255,0.45);
+  --teal:#1D9E75;--teal-bg:rgba(29,158,117,0.12);--teal-border:rgba(29,158,117,0.3);
+  --coral:#E05C3A;--coral-bg:rgba(224,92,58,0.12);
+  --blue:#4A9EE0;--blue-bg:rgba(74,158,224,0.12);
+  --navy:#1a2744;
+  --r:12px;--r-sm:8px;
+}
+html{scroll-behavior:smooth;}
+body{font-family:'Inter',sans-serif;background:var(--bg);color:var(--text);min-height:100vh;line-height:1.6;}
+.site-header{background:#111;border-bottom:1px solid rgba(255,255,255,0.08);position:sticky;top:0;z-index:100;}
+.hdr{max-width:860px;margin:0 auto;padding:0 1.5rem;height:54px;display:flex;align-items:center;gap:12px;}
+.logo-wrap{display:flex;align-items:center;gap:8px;text-decoration:none;}
+.logo-icon{width:30px;height:30px;display:flex;align-items:center;justify-content:center;}
+.logo-icon svg{width:26px;height:26px;}
+.logo-name{font-size:13px;font-weight:700;color:#fff;}
+.hdr-pipe{width:1px;height:20px;background:rgba(255,255,255,0.15);}
+.hdr-back{display:flex;align-items:center;gap:5px;font-size:12px;color:var(--text3);text-decoration:none;transition:color .15s;}
+.hdr-back:hover{color:var(--text2);}
+.hdr-spacer{flex:1;}
+.hdr-badge{font-size:10px;font-weight:700;letter-spacing:.05em;padding:3px 10px;border-radius:99px;border:1px solid var(--amber-border);color:var(--amber-300);background:var(--amber-bg);}
+.lesson-hero{background:linear-gradient(135deg,#2C1600 0%,#5C3200 40%,#7A4500 100%);padding:3rem 1.5rem 2.5rem;text-align:center;position:relative;overflow:hidden;}
+.lesson-hero::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse 70% 60% at 50% 50%,rgba(200,130,0,0.15),transparent);pointer-events:none;}
+.lesson-eyebrow{font-size:10px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--amber-300);margin-bottom:.75rem;}
+.lesson-hero h1{font-size:clamp(22px,4vw,36px);font-weight:700;color:#fff;letter-spacing:-.02em;margin-bottom:.5rem;}
+.lesson-hero p{font-size:14px;color:rgba(255,255,255,0.65);max-width:520px;margin:0 auto .875rem;}
+.lesson-pills{display:flex;flex-wrap:wrap;justify-content:center;gap:8px;}
+.l-pill{font-size:11px;font-weight:500;padding:4px 12px;border-radius:99px;border:1px solid rgba(255,255,255,0.18);color:rgba(255,255,255,0.75);background:rgba(255,255,255,0.06);}
+.lesson-progress{background:#1A1100;border-bottom:1px solid rgba(255,255,255,0.06);padding:.75rem 1.5rem;}
+.lp-inner{max-width:860px;margin:0 auto;}
+.lp-labels{display:flex;justify-content:space-between;font-size:11px;color:var(--text3);margin-bottom:6px;}
+.lp-track{height:4px;border-radius:99px;background:rgba(255,255,255,0.08);}
+.lp-fill{height:100%;border-radius:99px;background:linear-gradient(90deg,var(--amber-500),var(--amber-300));width:10%;}
+.lp-parts{display:flex;gap:4px;margin-top:8px;flex-wrap:wrap;}
+.lp-part{font-size:10px;font-weight:600;padding:2px 8px;border-radius:99px;background:rgba(255,255,255,0.06);color:var(--text3);cursor:pointer;transition:all .15s;}
+.lp-part.done{background:var(--amber-bg);color:var(--amber-300);border:1px solid var(--amber-border);}
+.lp-part.active{background:var(--amber-400);color:#1A0800;}
+.main{max-width:860px;margin:0 auto;padding:2rem 1.5rem 5rem;}
+.sec{background:var(--surface);border:1px solid var(--border);border-radius:var(--r);padding:1.5rem;margin-bottom:1.5rem;scroll-margin-top:80px;}
+.sec-header{display:flex;align-items:center;gap:10px;margin-bottom:1.25rem;}
+.sec-num{width:28px;height:28px;border-radius:8px;display:flex;align-items:center;justify-content:center;font-size:11px;font-weight:700;background:var(--amber-bg);color:var(--amber-300);border:1px solid var(--amber-border);flex-shrink:0;}
+.sec-title{font-size:16px;font-weight:700;color:#fff;}
+.sec-sub{font-size:12px;color:var(--text3);margin-top:1px;}
+.vocab-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(240px,1fr));gap:10px;}
+.vocab-card{background:var(--surface2);border:1px solid var(--border2);border-radius:var(--r-sm);padding:1rem;cursor:pointer;transition:border-color .15s;}
+.vocab-card:hover,.vocab-card.open{border-color:var(--amber-border);}
+.vc-top{display:flex;align-items:baseline;gap:8px;}
+.vc-word{font-size:16px;font-weight:700;color:#fff;}
+.vc-pos{font-size:10px;font-weight:600;padding:1px 7px;border-radius:99px;background:var(--amber-bg);color:var(--amber-300);}
+.vc-pron{font-size:12px;color:var(--text3);margin-top:2px;font-style:italic;}
+.vc-cn{font-size:15px;color:var(--amber-300);margin-top:4px;font-weight:600;}
+.vc-detail{display:none;margin-top:10px;padding-top:10px;border-top:1px solid var(--border2);}
+.vocab-card.open .vc-detail{display:block;}
+.vc-def{font-size:13px;color:var(--text2);margin-bottom:6px;}
+.vc-ex{font-size:12px;color:var(--text3);font-style:italic;padding-left:8px;border-left:2px solid var(--amber-border);}
+.story-body p{font-size:15px;color:var(--text2);line-height:1.8;margin-bottom:1rem;}
+.story-body p:last-child{margin-bottom:0;}
+.story-hl{color:var(--amber-300);font-weight:600;}
+.story-box{background:var(--amber-bg);border:1px solid var(--amber-border);border-radius:var(--r-sm);padding:1rem 1.25rem;margin:1.25rem 0;font-size:14px;color:rgba(255,255,255,0.85);line-height:1.7;font-style:italic;}
+.story-box::before{content:'"';font-size:32px;color:var(--amber-400);line-height:1;display:block;margin-bottom:.25rem;}
+.story-icon{font-size:40px;text-align:center;margin:1rem 0;}
+.quiz-list{display:flex;flex-direction:column;gap:14px;}
+.q-item{background:var(--surface2);border:1px solid var(--border2);border-radius:var(--r-sm);padding:1rem 1.25rem;}
+.q-text{font-size:14px;font-weight:600;color:#fff;margin-bottom:.75rem;}
+.q-opts{display:flex;flex-direction:column;gap:6px;}
+.q-opt{display:flex;align-items:center;gap:10px;padding:8px 12px;border-radius:8px;border:1px solid var(--border);background:transparent;cursor:pointer;font-size:13px;color:var(--text2);width:100%;text-align:left;transition:all .15s;}
+.q-opt:hover{border-color:var(--amber-border);background:var(--amber-bg);}
+.q-opt.correct{border-color:var(--teal-border);background:var(--teal-bg);color:#fff;}
+.q-opt.wrong{border-color:rgba(224,92,58,0.4);background:var(--coral-bg);color:#fff;}
+.q-feedback{font-size:12px;margin-top:8px;padding:6px 10px;border-radius:6px;display:none;}
+.q-feedback.show{display:block;}
+.q-feedback.good{background:var(--teal-bg);color:#5DCAA5;}
+.q-feedback.bad{background:var(--coral-bg);color:#F09B80;}
+.tf-opts{display:flex;gap:8px;}
+.tf-btn{flex:1;padding:8px;border-radius:8px;border:1px solid var(--border);background:transparent;cursor:pointer;font-size:13px;font-weight:600;color:var(--text2);transition:all .15s;}
+.tf-btn:hover{border-color:var(--amber-border);background:var(--amber-bg);}
+.tf-btn.correct{border-color:var(--teal-border);background:var(--teal-bg);color:#fff;}
+.tf-btn.wrong{border-color:rgba(224,92,58,0.4);background:var(--coral-bg);color:#fff;}
+.grammar-box{background:var(--surface2);border-left:3px solid var(--amber-400);border-radius:0 var(--r-sm) var(--r-sm) 0;padding:1rem 1.25rem;margin-bottom:1rem;}
+.grammar-label{font-size:10px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--amber-300);margin-bottom:.5rem;}
+.grammar-rule{font-size:14px;color:#fff;font-weight:600;margin-bottom:.5rem;}
+.grammar-eg{font-size:13px;color:var(--text2);margin-top:.25rem;font-style:italic;}
+.grammar-eg span{color:var(--amber-300);font-weight:600;font-style:normal;}
+.grammar-note{font-size:12px;color:var(--text2);margin-top:.7rem;padding:.5rem .75rem;background:var(--amber-bg);border:1px solid var(--amber-border);border-radius:6px;}
+.grammar-note strong{color:var(--amber-300);}
+.grammar-table{width:100%;border-collapse:collapse;font-size:13px;margin-top:.75rem;}
+.grammar-table th{text-align:left;padding:6px 10px;font-size:10px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;color:var(--text3);border-bottom:1px solid var(--border);}
+.grammar-table td{padding:7px 10px;color:var(--text2);border-bottom:1px solid var(--border2);}
+.grammar-table td:first-child{color:#fff;font-weight:500;}
+.hl{color:var(--amber-300);font-weight:600;}
+.sb-activity{margin-bottom:1.25rem;}
+.sb-label{font-size:11px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;color:var(--amber-300);margin-bottom:.75rem;}
+.sb-input{width:100%;background:var(--surface2);border:1px solid var(--border);border-radius:var(--r-sm);padding:.625rem .875rem;font-size:14px;color:#fff;font-family:'Inter',sans-serif;transition:border-color .15s;outline:none;margin-bottom:.5rem;}
+.sb-input:focus{border-color:var(--amber-border);}
+.sb-check{padding:7px 18px;border-radius:99px;background:var(--amber-400);color:#1A0800;font-size:13px;font-weight:700;border:none;cursor:pointer;transition:opacity .15s;}
+.sb-check:hover{opacity:.85;}
+.sb-result{font-size:12px;margin-top:6px;padding:6px 10px;border-radius:6px;display:none;}
+.sb-result.show{display:block;}
+.sb-result.ok{background:var(--teal-bg);color:#5DCAA5;}
+.sb-result.no{background:var(--coral-bg);color:#F09B80;}
+.sb-tile{padding:5px 10px;border-radius:99px;background:var(--surface2);border:1px solid var(--border);font-size:13px;color:var(--text2);display:inline-block;margin:3px;}
+.speak-level{margin-bottom:1.25rem;}
+.speak-badge{display:inline-flex;align-items:center;gap:6px;font-size:11px;font-weight:700;padding:3px 12px;border-radius:99px;margin-bottom:.875rem;}
+.speak-badge.l1{background:var(--teal-bg);color:#5DCAA5;border:1px solid var(--teal-border);}
+.speak-badge.l2{background:var(--amber-bg);color:var(--amber-300);border:1px solid var(--amber-border);}
+.speak-badge.l3{background:var(--blue-bg);color:var(--blue);border:1px solid rgba(74,158,224,0.3);}
+.speak-q{background:var(--surface2);border:1px solid var(--border2);border-radius:var(--r-sm);padding:1rem 1.25rem;margin-bottom:.75rem;}
+.speak-q p{font-size:14px;font-weight:600;color:#fff;margin-bottom:.5rem;}
+.speak-hint{font-size:12px;color:var(--text3);}
+.speak-hint span{color:var(--amber-300);}
+.idea-q{background:var(--surface2);border:1px solid var(--border2);border-top:3px solid var(--amber-400);border-radius:var(--r-sm);padding:1rem 1.25rem;margin-bottom:.75rem;display:flex;gap:10px;}
+.idea-icon{font-size:20px;flex-shrink:0;margin-top:2px;}
+.idea-text{font-size:14px;color:var(--text2);line-height:1.6;}
+.idea-text strong{color:#fff;}
+.ielts-topic{background:var(--navy);border:1px solid rgba(74,158,224,0.25);border-radius:var(--r-sm);padding:1rem 1.25rem;margin-bottom:1.25rem;}
+.ielts-topic-label{font-size:10px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--blue);margin-bottom:.25rem;}
+.ielts-topic h4{font-size:16px;font-weight:700;color:#fff;}
+.vocab-chips{display:flex;flex-wrap:wrap;gap:6px;margin-top:.75rem;}
+.chip{font-size:12px;padding:4px 12px;border-radius:99px;background:rgba(255,255,255,0.06);border:1px solid var(--border);color:var(--text2);}
+.chip.amber{background:var(--amber-bg);border-color:var(--amber-border);color:var(--amber-300);}
+.ielts-qs{display:flex;flex-direction:column;gap:8px;margin-top:1rem;}
+.ielts-q{display:flex;gap:10px;background:var(--surface2);border-radius:var(--r-sm);padding:.875rem 1rem;}
+.ielts-q-num{font-size:11px;font-weight:700;color:var(--blue);min-width:20px;}
+.ielts-q-text{font-size:13px;color:var(--text2);}
+.ielts-w2{background:var(--gold-light,rgba(245,158,11,0.1));border:1px solid var(--amber-border);border-radius:var(--r-sm);padding:1rem 1.25rem;margin-top:1rem;}
+.ielts-w2-label{font-size:10px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--amber-300);margin-bottom:.5rem;}
+.ielts-w2 p{font-size:14px;color:var(--text2);line-height:1.7;font-style:italic;}
+.star-words{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:1.25rem;}
+.star-word{display:flex;align-items:center;gap:6px;padding:6px 14px;border-radius:99px;background:var(--amber-bg);border:1px solid var(--amber-border);font-size:13px;font-weight:600;color:var(--amber-300);}
+.think-box{background:var(--surface2);border:1px solid var(--border2);border-radius:var(--r-sm);padding:1rem 1.25rem;margin-bottom:1rem;}
+.think-box .think-head{font-size:12px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;color:var(--amber-300);margin-bottom:.5rem;}
+.think-box p{font-size:14px;color:var(--text2);}
+.summary-box{background:var(--navy);border:1px solid rgba(74,158,224,0.3);border-radius:var(--r-sm);padding:1.25rem 1.5rem;margin-bottom:1.25rem;}
+.summary-box .think-head{color:var(--blue);}
+.summary-box p{font-size:14px;color:rgba(255,255,255,0.85);line-height:1.7;}
+.project-box{background:var(--surface2);border:1px solid var(--amber-border);border-radius:var(--r-sm);padding:1.25rem 1.5rem;margin-bottom:1.25rem;}
+.project-box .think-head{color:var(--amber-300);font-size:12px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;margin-bottom:.75rem;}
+.project-box ol{margin:0 0 0 1.1rem;padding:0;}
+.project-box li{font-size:14px;color:var(--text2);line-height:1.7;margin-bottom:.4rem;}
+.mini-quiz-q{background:var(--surface2);border:1px solid var(--border2);border-radius:var(--r-sm);padding:1rem;margin-bottom:.75rem;}
+.mq-text{font-size:13px;font-weight:600;color:#fff;margin-bottom:.625rem;}
+.mq-opts{display:flex;flex-direction:column;gap:5px;}
+.mq-opt{padding:7px 12px;border-radius:6px;border:1px solid var(--border);background:transparent;font-size:12px;color:var(--text2);cursor:pointer;text-align:left;transition:all .15s;}
+.mq-opt:hover{border-color:var(--amber-border);background:var(--amber-bg);}
+.mq-opt.correct{border-color:var(--teal-border);background:var(--teal-bg);color:#fff;}
+.mq-opt.wrong{border-color:rgba(224,92,58,0.4);background:var(--coral-bg);color:#fff;}
+.lesson-nav{display:flex;gap:10px;margin-top:2rem;}
+.nav-btn{display:flex;align-items:center;gap:6px;padding:.75rem 1.25rem;border-radius:10px;font-size:13px;font-weight:600;cursor:pointer;text-decoration:none;border:1px solid var(--border);color:var(--text2);background:var(--surface);transition:all .15s;flex:1;justify-content:center;}
+.nav-btn:hover{border-color:var(--border2);color:#fff;}
+.nav-btn.primary{background:var(--amber-400);color:#1A0800;border-color:transparent;}
+.nav-btn.primary:hover{opacity:.9;}
+.site-footer{background:#111;border-top:1px solid rgba(255,255,255,0.07);text-align:center;padding:1.5rem;font-size:12px;color:rgba(255,255,255,0.3);}
+.site-footer strong{color:var(--amber-300);}
+@media(max-width:600px){.vocab-grid{grid-template-columns:1fr;}.lesson-nav{flex-direction:column;}}
+</style>
+</head>
+<body>
+<header class="site-header"><div class="hdr">
+<a class="logo-wrap" href="index.html"><div class="logo-icon"><svg viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path d="M6 24 C8 18,14 10,24 6 C20 10,18 14,20 18 C16 16,12 18,6 24Z" fill="white"/><path d="M20 18 C22 20,22 23,20 26 C18 24,18 21,20 18Z" fill="rgba(255,255,255,0.5)"/></svg></div>
+<span class="logo-name">Lexilink Ideation IELTS STUDIO</span></a>
+<div class="hdr-pipe"></div>
+<a class="hdr-back" href="index.html"><i class="ti ti-arrow-left" aria-hidden="true"></i> Vol. 1</a>
+<div class="hdr-spacer"></div><span class="hdr-badge">Lesson 20C</span></div></header>
+<section class="lesson-hero">
+<p class="lesson-eyebrow">Chapter 20 · Greece Gets Civilized Again</p>
+<h1>The Stories of Homer</h1>
+<p>A blind poet, a famous war, and a hero lost at sea</p>
+<div class="lesson-pills"><span class="l-pill">📖 Story + Vocabulary</span><span class="l-pill">🎤 Speaking</span><span class="l-pill">✏️ Grammar</span><span class="l-pill">⭐ CEFR A2–B1</span></div>
+</section>
+<div class="lesson-progress"><div class="lp-inner">
+<div class="lp-labels"><span>Lesson 20C of 7</span><span style="color:var(--amber-300)">10 parts</span></div>
+<div class="lp-track"><div class="lp-fill"></div></div>
+<div class="lp-parts">
+<span class="lp-part active" onclick="scrollToId('p1')">1 Vocab</span>
+<span class="lp-part" onclick="scrollToId('p2')">2 Story</span>
+<span class="lp-part" onclick="scrollToId('p3')">3 Reading</span>
+<span class="lp-part" onclick="scrollToId('p4')">4 Grammar</span>
+<span class="lp-part" onclick="scrollToId('p5')">5 Builder</span>
+<span class="lp-part" onclick="scrollToId('p6')">6 Speaking 1</span>
+<span class="lp-part" onclick="scrollToId('p7')">7 Speaking 2</span>
+<span class="lp-part" onclick="scrollToId('p8')">8 Ideas</span>
+<span class="lp-part" onclick="scrollToId('p9')">9 IELTS</span>
+<span class="lp-part" onclick="scrollToId('p10')">10 Review</span>
+</div></div></div>
+<main class="main">
+<section class="sec" id="p1"><div class="sec-header"><div class="sec-num">1</div><div><div class="sec-title">Vocabulary</div><div class="sec-sub">Click each word to learn more</div></div></div><div class="vocab-grid"><div class="vocab-card" onclick="toggleVocab(this)"><div class="vc-top"><span class="vc-word">poet</span><span class="vc-pos">noun</span></div><div class="vc-pron">/ˈpəʊ.ɪt/</div><div class="vc-cn">诗人</div><div class="vc-detail"><div class="vc-def">A person who writes poems and stories in beautiful language.</div><div class="vc-ex">"Homer was the first great Greek poet."</div></div></div><div class="vocab-card" onclick="toggleVocab(this)"><div class="vc-top"><span class="vc-word">blind</span><span class="vc-pos">adjective</span></div><div class="vc-pron">/blaɪnd/</div><div class="vc-cn">失明的</div><div class="vc-detail"><div class="vc-def">Not able to see.</div><div class="vc-ex">"Tradition says that Homer was blind."</div></div></div><div class="vocab-card" onclick="toggleVocab(this)"><div class="vc-top"><span class="vc-word">tradition</span><span class="vc-pos">noun</span></div><div class="vc-pron">/trəˈdɪʃ.ən/</div><div class="vc-cn">传统</div><div class="vc-detail"><div class="vc-def">A belief or story passed down from parents to children over time.</div><div class="vc-ex">"Greek tradition says Homer lived around 800 BC."</div></div></div><div class="vocab-card" onclick="toggleVocab(this)"><div class="vc-top"><span class="vc-word">warrior</span><span class="vc-pos">noun</span></div><div class="vc-pron">/ˈwɒr.i.ər/</div><div class="vc-cn">战士</div><div class="vc-detail"><div class="vc-def">A brave and experienced fighter or soldier.</div><div class="vc-ex">"Odysseus was a clever Greek warrior."</div></div></div><div class="vocab-card" onclick="toggleVocab(this)"><div class="vc-top"><span class="vc-word">voyage</span><span class="vc-pos">noun</span></div><div class="vc-pron">/ˈvɔɪ.ɪdʒ/</div><div class="vc-cn">航行</div><div class="vc-detail"><div class="vc-def">A long journey by sea.</div><div class="vc-ex">"Odysseus began a long voyage home after the war."</div></div></div><div class="vocab-card" onclick="toggleVocab(this)"><div class="vc-top"><span class="vc-word">victory</span><span class="vc-pos">noun</span></div><div class="vc-pron">/ˈvɪk.tər.i/</div><div class="vc-cn">胜利</div><div class="vc-detail"><div class="vc-def">Winning a battle, game, or war.</div><div class="vc-ex">"The Greeks thanked the gods for their victory at Troy."</div></div></div><div class="vocab-card" onclick="toggleVocab(this)"><div class="vc-top"><span class="vc-word">course</span><span class="vc-pos">noun</span></div><div class="vc-pron">/kɔːs/</div><div class="vc-cn">航线</div><div class="vc-detail"><div class="vc-def">The direction that a ship or plane travels.</div><div class="vc-ex">"A strong wind blew the ships off course."</div></div></div><div class="vocab-card" onclick="toggleVocab(this)"><div class="vc-top"><span class="vc-word">furious</span><span class="vc-pos">adjective</span></div><div class="vc-pron">/ˈfjʊə.ri.əs/</div><div class="vc-cn">狂怒的</div><div class="vc-detail"><div class="vc-def">Very, very angry.</div><div class="vc-ex">"Poseidon was furious that the Greeks forgot to thank him."</div></div></div><div class="vocab-card" onclick="toggleVocab(this)"><div class="vc-top"><span class="vc-word">praise</span><span class="vc-pos">verb</span></div><div class="vc-pron">/preɪz/</div><div class="vc-cn">赞美</div><div class="vc-detail"><div class="vc-def">To say good things about someone or something.</div><div class="vc-ex">"The sailors praised the gods for keeping them alive."</div></div></div><div class="vocab-card" onclick="toggleVocab(this)"><div class="vc-top"><span class="vc-word">adventure</span><span class="vc-pos">noun</span></div><div class="vc-pron">/ədˈven.tʃər/</div><div class="vc-cn">冒险</div><div class="vc-detail"><div class="vc-def">An exciting and sometimes dangerous experience.</div><div class="vc-ex">"The Odyssey is full of dangerous adventures."</div></div></div></div></section><section class="sec" id="p2"><div class="sec-header"><div class="sec-num">2</div><div><div class="sec-title">The Story</div><div class="sec-sub">Read carefully. Notice the bold words.</div></div></div><div class="story-body"><div class="story-icon">📜</div><p>When the Greeks first learned to read and write, one of them decided to write down the old stories that people had told out loud around the fire for years and years. His name was <span class="story-hl">Homer</span>, and he was the first great Greek <span class="story-hl">poet</span>.</p><p><span class="story-hl">Tradition</span> tells us that Homer was <span class="story-hl">blind</span>. Because he could not see, he listened very carefully to the stories he heard — and then he wrote them down using the new Greek alphabet. In this way, some very old tales were saved forever.</p><div class="story-box">Homer wrote about a famous war: the Greek attack on the city of <span class="story-hl">Troy</span>. This was called the <span class="story-hl">Trojan War</span>, and Homer told the story in a long poem, the <span class="story-hl">Iliad</span>.</div><p>After he finished the Iliad, Homer wrote a second great poem, the <span class="story-hl">Odyssey</span>. It was about <span class="story-hl">Odysseus</span>, a clever Greek <span class="story-hl">warrior</span> who had fought in the Trojan War. When the war ended, Odysseus and his men set sail for home — but their <span class="story-hl">voyage</span> did not go as planned!</p><p>At first the men were happy. They <span class="story-hl">praised</span> all the gods of Greece for keeping them alive through the war. They thanked the gods for their <span class="story-hl">victory</span> over Troy. But there was a problem. They forgot to thank one very important god — <span class="story-hl">Poseidon</span>, the god of the sea.</p><p>Poseidon was <span class="story-hl">furious</span> at being left out. He sent a strong wind to blow the ships off <span class="story-hl">course</span>, so that Odysseus would have a hard time getting home. Odysseus and his tired, hungry men got lost, far out on the wide sea. Their long <span class="story-hl">adventure</span> was only just beginning — and it would take ten long years before Odysseus saw his home again.</p><div class="story-icon">⛵</div></div></section><section class="sec" id="p3"><div class="sec-header"><div class="sec-num">3</div><div><div class="sec-title">Reading Comprehension</div><div class="sec-sub">Choose the best answer. Get instant feedback!</div></div></div><div class="quiz-list"><div class="q-item"><div class="q-text">1. Who was Homer?</div><div class="q-opts"><button class="q-opt" onclick="mcq(this,'wrong')">A Greek king who ruled Troy.</button><button class="q-opt" onclick="mcq(this,'correct')">The first great Greek poet, who wrote down old stories.</button><button class="q-opt" onclick="mcq(this,'wrong')">A sea god who controlled the wind.</button></div><div class="q-feedback"></div></div><div class="q-item"><div class="q-text">2. Tradition says that Homer could not see.</div><div class="tf-opts"><button class="tf-btn" onclick="tf(this,'correct','Correct! Homer was said to be blind, so he listened and remembered.')">True</button><button class="tf-btn" onclick="tf(this,'wrong','Actually, tradition says Homer was blind — he listened to the stories.')">False</button></div><div class="q-feedback"></div></div><div class="q-item"><div class="q-text">3. What are the names of Homer's two great poems?</div><div class="q-opts"><button class="q-opt" onclick="mcq(this,'correct')">The Iliad and the Odyssey.</button><button class="q-opt" onclick="mcq(this,'wrong')">The Alpha and the Beta.</button><button class="q-opt" onclick="mcq(this,'wrong')">The Troy and the Poseidon.</button></div><div class="q-feedback"></div></div><div class="q-item"><div class="q-text">4. Why was Poseidon so angry with Odysseus and his men?</div><div class="q-opts"><button class="q-opt" onclick="mcq(this,'wrong')">They stole treasure from his temple.</button><button class="q-opt" onclick="mcq(this,'wrong')">They attacked his city of Troy.</button><button class="q-opt" onclick="mcq(this,'correct')">They forgot to thank him after the war.</button></div><div class="q-feedback"></div></div><div class="q-item"><div class="q-text">5. Odysseus reached home quickly and easily after the war.</div><div class="tf-opts"><button class="tf-btn" onclick="tf(this,'wrong','In fact, his voyage took ten long, difficult years!')">True</button><button class="tf-btn" onclick="tf(this,'correct','Correct! His journey home took ten long years of adventures.')">False</button></div><div class="q-feedback"></div></div><div class="q-item"><div class="q-text">6. What can we guess about Odysseus from this lesson?</div><div class="q-opts"><button class="q-opt" onclick="mcq(this,'correct')">He was a clever warrior who would face many dangers.</button><button class="q-opt" onclick="mcq(this,'wrong')">He was a lazy man who never left home.</button><button class="q-opt" onclick="mcq(this,'wrong')">He was a god who lived in the sea.</button></div><div class="q-feedback"></div></div></div></section><section class="sec" id="p4"><div class="sec-header"><div class="sec-num">4</div><div><div class="sec-title">Language Focus</div><div class="sec-sub">Grammar from the story — learn through meaning</div></div></div><div class="grammar-box"><div class="grammar-label">📌 Past Simple in storytelling</div><div class="grammar-rule">Stories about the past use the past simple to tell events in order.</div><table class="grammar-table"><tr><th>Base</th><th>Past</th><th>From the story</th></tr><tr><td>write</td><td><span class='hl'>wrote</span></td><td>Homer <span class='hl'>wrote</span> the Iliad.</td></tr><tr><td>send</td><td><span class='hl'>sent</span></td><td>Poseidon <span class='hl'>sent</span> a strong wind.</td></tr><tr><td>forget</td><td><span class='hl'>forgot</span></td><td>They <span class='hl'>forgot</span> to thank Poseidon.</td></tr><tr><td>begin</td><td><span class='hl'>began</span></td><td>Their adventure <span class='hl'>began</span>.</td></tr></table><div class="grammar-note"><strong>Tip:</strong> Many common storytelling verbs are irregular — practise them until they feel natural.</div></div><div class="grammar-box"><div class="grammar-label">📌 'so' to show a result</div><div class="grammar-rule">We use 'so' to connect a cause with its result.</div><div class="grammar-eg">Poseidon was angry, <span>so</span> he sent a storm.</div><div class="grammar-eg">Homer was blind, <span>so</span> he listened carefully.</div><div class="grammar-eg">The wind blew them off course, <span>so</span> they got lost.</div><div class="grammar-note"><strong>Tip:</strong> Pattern: <strong>cause + so + result</strong>. It answers the question 'What happened next?'</div></div><div class="grammar-box"><div class="grammar-label">📌 'forget / decide + to' (infinitive)</div><div class="grammar-rule">Some verbs are followed by 'to' + the base verb.</div><div class="grammar-eg">They <span>forgot to thank</span> Poseidon.</div><div class="grammar-eg">One Greek <span>decided to write</span> down the stories.</div><div class="grammar-eg">Odysseus <span>wanted to sail</span> home.</div><div class="grammar-note"><strong>Tip:</strong> After <strong>forget, decide, want, hope, need</strong>, use <strong>to + verb</strong>.</div></div></section><section class="sec" id="p5"><div class="sec-header"><div class="sec-num">5</div><div><div class="sec-title">Sentence Builder</div><div class="sec-sub">Build your skills with the vocabulary</div></div></div><div class="sb-activity"><div class="sb-label">🔀 Unscramble the sentence</div><p style="font-size:13px;color:var(--text3);margin-bottom:.75rem;">Put these words in the correct order:</p><div style="margin-bottom:.75rem;"><span class="sb-tile">Homer</span><span class="sb-tile">first</span><span class="sb-tile">great</span><span class="sb-tile">the</span><span class="sb-tile">was</span><span class="sb-tile">poet</span><span class="sb-tile">Greek</span></div><input class="sb-input" id="us1" placeholder="Type your sentence here..."/><button class="sb-check" onclick="checkUnscramble('us1','homer was the first great greek poet','ur1')">Check ✓</button><div class="sb-result" id="ur1"></div></div><div class="sb-activity"><div class="sb-label">✏️ Fill in the blank</div><p style="font-size:13px;color:var(--text2);margin-bottom:.5rem;">1. Odysseus was a clever Greek ________ who had fought at Troy.</p><input class="sb-input" id="f1" placeholder="Your answer..."/><button class="sb-check" onclick="checkFill('f1','warrior','rf1')">Check ✓</button><div class="sb-result" id="rf1"></div></div><div class="sb-activity"><div class="sb-label">✏️ Fill in the blank</div><p style="font-size:13px;color:var(--text2);margin-bottom:.5rem;">2. Poseidon was ________ because the men forgot to thank him.</p><input class="sb-input" id="f2" placeholder="Your answer..."/><button class="sb-check" onclick="checkFill('f2','furious','rf2')">Check ✓</button><div class="sb-result" id="rf2"></div></div><div class="sb-activity"><div class="sb-label">🇨🇳 Translate into English</div><p style="font-size:13px;color:var(--text2);margin-bottom:.5rem;">荷马是第一位伟大的希腊诗人。</p><input class="sb-input" id="tr1" placeholder="Write your English sentence..."/><button class="sb-check" onclick="revealAns('tr1','Homer was the first great Greek poet.','rt1')">Show model answer</button><div class="sb-result" id="rt1"></div></div></section><section class="sec" id="p6"><div class="sec-header"><div class="sec-num">6</div><div><div class="sec-title">Speaking — Level 1</div><div class="sec-sub">Answer in one complete sentence</div></div></div><div class="speak-level"><span class="speak-badge l1">🟢 Level 1 · One sentence</span><div class="speak-q"><p>Who was Homer?</p><div class="speak-hint">💡 Start with: <span>"Homer was..."</span></div></div><div class="speak-q"><p>What are the names of Homer's two poems?</p><div class="speak-hint">💡 Start with: <span>"Homer wrote two poems called..."</span></div></div><div class="speak-q"><p>Why was Poseidon angry with Odysseus?</p><div class="speak-hint">💡 Start with: <span>"Poseidon was angry because..."</span></div></div></div></section><section class="sec" id="p7"><div class="sec-header"><div class="sec-num">7</div><div><div class="sec-title">Speaking — Level 2 &amp; 3</div><div class="sec-sub">Extend your answer. Share your opinion.</div></div></div><div class="speak-level"><span class="speak-badge l2">🟡 Level 2 · 2–3 sentences</span><div class="speak-q"><p>Homer was said to be blind, yet he created two of the greatest poems in history. What does this tell us about him?</p><div class="speak-hint">💡 Think about: <span>his memory · his talent · how he listened to others</span></div></div><div class="speak-q"><p>Why do you think people told the same stories out loud for many years before writing them down?</p><div class="speak-hint">💡 Think about: <span>"I think people told stories because... These stories helped them by..."</span></div></div></div><div class="speak-level"><span class="speak-badge l3">🔵 Level 3 · Your opinion</span><div class="speak-q"><p>Do you think old stories and legends are still important for young people today? Why or why not?</p><div class="speak-hint">💡 Use: <span>I believe... / For example... / On the other hand...</span></div></div></div></section><section class="sec" id="p8"><div class="sec-header"><div class="sec-num">8</div><div><div class="sec-title">Ideas &amp; Society</div><div class="sec-sub">Think about big ideas. There is no wrong answer.</div></div></div><div class="idea-q"><div class="idea-icon">🎭</div><div class="idea-text"><strong>Stories carry a people's memory.</strong> For years, Greek tales lived only in people's voices. Why do you think stories are so important to a culture's sense of who they are?</div></div><div class="idea-q"><div class="idea-icon">👂</div><div class="idea-text"><strong>A weakness can become a strength.</strong> Homer was blind, yet he became a master storyteller. Can you think of a time when a difficulty helped someone develop a special skill?</div></div><div class="idea-q"><div class="idea-icon">🙏</div><div class="idea-text"><strong>The Greeks believed the gods could be offended.</strong> Odysseus's trouble began when the men forgot to thank a god. Why do you think ancient people believed the gods watched their every action?</div></div><div class="idea-q"><div class="idea-icon">🌊</div><div class="idea-text"><strong>One small mistake can lead to big trouble.</strong> Forgetting to thank Poseidon cost Odysseus ten years. Do you think small choices can really change the whole path of a life?</div></div></section><section class="sec" id="p9"><div class="sec-header"><div class="sec-num">9</div><div><div class="sec-title">IELTS Content Builder</div><div class="sec-sub">Planting seeds for your future IELTS exam</div></div></div><div class="ielts-topic"><div class="ielts-topic-label">📘 Today's IELTS Topic</div><h4>Stories, Literature and Culture</h4></div><p style="font-size:12px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;color:var(--text3);margin-bottom:.5rem;">Key vocabulary</p><div class="vocab-chips"><span class="chip amber">literature</span><span class="chip amber">epic poem</span><span class="chip amber">storyteller</span><span class="chip amber">legend</span><span class="chip">oral tradition</span><span class="chip">author</span><span class="chip">narrative</span><span class="chip">heritage</span></div><p style="font-size:12px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;color:var(--text3);margin:.875rem 0 .5rem;">Useful collocations</p><div class="vocab-chips"><span class="chip">pass down a story</span><span class="chip">write down a legend</span><span class="chip">preserve a culture</span><span class="chip">capture people's imagination</span></div><div class="ielts-qs"><div class="ielts-q"><div class="ielts-q-num">S1</div><div class="ielts-q-text">Why do you think old stories and legends are still popular today?</div></div><div class="ielts-q"><div class="ielts-q-num">S2</div><div class="ielts-q-text">Is it better to read a story or to hear it told out loud? Why?</div></div><div class="ielts-q"><div class="ielts-q-num">S3</div><div class="ielts-q-text">How do the stories a country tells shape its people?</div></div></div><div class="ielts-w2"><div class="ielts-w2-label">✏️ IELTS Writing Task 2 — Future Practice</div><p>"Some people believe that traditional stories and legends should be taught in schools, while others think students should focus on modern subjects. Discuss both views and give your own opinion."</p></div></section><section class="sec" id="p10"><div class="sec-header"><div class="sec-num">10</div><div><div class="sec-title">Review</div><div class="sec-sub">Remember what you learned!</div></div></div><p style="font-size:12px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;color:var(--text3);margin-bottom:.75rem;">⭐ Star Words</p><div class="star-words"><span class="star-word">⭐ poet</span><span class="star-word">⭐ blind</span><span class="star-word">⭐ tradition</span><span class="star-word">⭐ warrior</span><span class="star-word">⭐ voyage</span><span class="star-word">⭐ victory</span><span class="star-word">⭐ furious</span><span class="star-word">⭐ adventure</span></div><div class="think-box"><div class="think-head">💡 Big Idea</div><p>Homer, the first great Greek poet, wrote down the old stories in two long poems: the Iliad, about the Trojan War, and the Odyssey, about the warrior Odysseus. When Odysseus's men forgot to thank Poseidon, the angry sea god sent storms that kept them lost for ten years. <strong>Great stories can survive for thousands of years — if someone takes the time to write them down.</strong></p></div><p style="font-size:12px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;color:var(--text3);margin:.875rem 0 .75rem;">🧠 Mini Quiz</p><div class="mini-quiz-q"><div class="mq-text">A. Homer's poem about the Trojan War is called the ________.</div><div class="mq-opts"><button class="mq-opt" onclick="mq(this,'wrong')">Odyssey</button><button class="mq-opt" onclick="mq(this,'correct')">Iliad</button><button class="mq-opt" onclick="mq(this,'wrong')">Alphabet</button></div></div><div class="mini-quiz-q"><div class="mq-text">B. Which god did the sailors forget to thank?</div><div class="mq-opts"><button class="mq-opt" onclick="mq(this,'wrong')">Zeus</button><button class="mq-opt" onclick="mq(this,'correct')">Poseidon</button><button class="mq-opt" onclick="mq(this,'wrong')">Apollo</button></div></div><div class="mini-quiz-q"><div class="mq-text">C. How long did it take Odysseus to get home?</div><div class="mq-opts"><button class="mq-opt" onclick="mq(this,'correct')">Ten years</button><button class="mq-opt" onclick="mq(this,'wrong')">Ten days</button><button class="mq-opt" onclick="mq(this,'wrong')">One hundred years</button></div></div><div class="lesson-nav"><a class="nav-btn" href="ch20-b.html"><i class="ti ti-arrow-left"></i> Lesson 20B</a><a class="nav-btn primary" href="ch20-d.html">Next: Lesson 20D — Odysseus and the Cyclops <i class="ti ti-arrow-right"></i></a></div></section>
+</main>
+<footer class="site-footer"><strong>Lexilink Ideation IELTS STUDIO</strong> · History ESL Course · Chapter 20 — Lesson C</footer>
+<script>
+function toggleVocab(card){card.classList.toggle('open');}
+function mcq(btn,type){
+  const item=btn.closest('.q-item');
+  item.querySelectorAll('.q-opt').forEach(b=>{b.classList.remove('correct','wrong');b.disabled=true;});
+  btn.classList.add(type);
+  const fb=item.querySelector('.q-feedback');
+  fb.className='q-feedback show '+(type==='correct'?'good':'bad');
+  fb.textContent=type==='correct'?'\u2713 Correct! Well done!':'\u2717 Not quite. Read the story again and try to remember.';
+}
+function tf(btn,type,msg){
+  const item=btn.closest('.q-item');
+  item.querySelectorAll('.tf-btn').forEach(b=>{b.classList.remove('correct','wrong');b.disabled=true;});
+  btn.classList.add(type);
+  const fb=item.querySelector('.q-feedback');
+  fb.className='q-feedback show '+(type==='correct'?'good':'bad');
+  fb.textContent=(type==='correct'?'\u2713 ':'\u2717 ')+msg;
+}
+function mq(btn,type){
+  const item=btn.closest('.mini-quiz-q');
+  item.querySelectorAll('.mq-opt').forEach(b=>{b.classList.remove('correct','wrong');b.disabled=true;});
+  btn.classList.add(type);
+}
+function checkUnscramble(id,answer,rid){
+  const val=document.getElementById(id).value.trim().toLowerCase().replace(/[^a-z\s]/g,'').replace(/\s+/g,' ');
+  const ans=answer.toLowerCase().replace(/[^a-z\s]/g,'').replace(/\s+/g,' ');
+  const r=document.getElementById(rid);
+  r.className='sb-result show '+(val===ans?'ok':'no');
+  r.textContent=val===ans?'\u2713 Perfect! "'+answer+'"':'\u2717 Try again. Check the word order.';
+}
+function checkFill(id,answer,rid){
+  const val=document.getElementById(id).value.trim().toLowerCase();
+  const r=document.getElementById(rid);
+  const ans=answer.toLowerCase();
+  r.className='sb-result show '+(val===ans?'ok':'no');
+  r.textContent=val===ans?'\u2713 Correct!':'\u2717 The answer is: "'+answer+'"';
+}
+function revealAns(id,answer,rid){
+  const r=document.getElementById(rid);
+  r.className='sb-result show ok';
+  r.textContent='\u2705 Model answer: "'+answer+'"';
+}
+function scrollToId(id){document.getElementById(id).scrollIntoView({behavior:'smooth',block:'start'});}
+const parts=['p1','p2','p3','p4','p5','p6','p7','p8','p9','p10'];
+const partEls=document.querySelectorAll('.lp-part');
+window.addEventListener('scroll',()=>{
+  let current=0;
+  parts.forEach((id,i)=>{const el=document.getElementById(id);if(el&&el.getBoundingClientRect().top<200)current=i;});
+  partEls.forEach((el,i)=>{el.classList.remove('active','done');if(i<current)el.classList.add('done');else if(i===current)el.classList.add('active');});
+  const pct=Math.round(((current+1)/10)*100);
+  document.querySelector('.lp-fill').style.width=pct+'%';
+});
+</script>
+</body>
+</html>
