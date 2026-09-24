@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+<title>Lesson 23A — The Golden Apple | Lexilink History Workshop</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"/>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet"/>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@latest/tabler-icons.min.css"/>
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
+:root{
+  --bg:#0F0800;--surface:rgba(255,255,255,0.04);--surface2:rgba(255,255,255,0.07);
+  --border:rgba(255,255,255,0.10);--border2:rgba(255,255,255,0.06);
+  --amber-300:#E8A832;--amber-400:#D4890F;--amber-500:#B8720A;
+  --amber-bg:rgba(212,137,15,0.12);--amber-border:rgba(212,137,15,0.3);
+  --text:#fff;--text2:rgba(255,255,255,0.72);--text3:rgba(255,255,255,0.45);
+  --teal:#1D9E75;--teal-bg:rgba(29,158,117,0.12);--teal-border:rgba(29,158,117,0.3);
+  --coral:#E05C3A;--coral-bg:rgba(224,92,58,0.12);
+  --blue:#4A9EE0;--blue-bg:rgba(74,158,224,0.12);
+  --navy:#1a2744;
+  --r:12px;--r-sm:8px;
+}
+html{scroll-behavior:smooth;}
+body{font-family:'Inter',sans-serif;background:var(--bg);color:var(--text);min-height:100vh;line-height:1.6;}
+.site-header{background:#111;border-bottom:1px solid rgba(255,255,255,0.08);position:sticky;top:0;z-index:100;}
+.hdr{max-width:860px;margin:0 auto;padding:0 1.5rem;height:54px;display:flex;align-items:center;gap:12px;}
+.logo-wrap{display:flex;align-items:center;gap:8px;text-decoration:none;}
+.logo-icon{width:30px;height:30px;display:flex;align-items:center;justify-content:center;}
+.logo-icon svg{width:26px;height:26px;}
+.logo-name{font-size:13px;font-weight:700;color:#fff;}
+.hdr-pipe{width:1px;height:20px;background:rgba(255,255,255,0.15);}
+.hdr-back{display:flex;align-items:center;gap:5px;font-size:12px;color:var(--text3);text-decoration:none;transition:color .15s;}
+.hdr-back:hover{color:var(--text2);}
+.hdr-spacer{flex:1;}
+.hdr-badge{font-size:10px;font-weight:700;letter-spacing:.05em;padding:3px 10px;border-radius:99px;border:1px solid var(--amber-border);color:var(--amber-300);background:var(--amber-bg);}
+.lesson-hero{background:linear-gradient(135deg,#2C1600 0%,#5C3200 40%,#7A4500 100%);padding:3rem 1.5rem 2.5rem;text-align:center;position:relative;overflow:hidden;}
+.lesson-hero::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse 70% 60% at 50% 50%,rgba(200,130,0,0.15),transparent);pointer-events:none;}
+.lesson-eyebrow{font-size:10px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--amber-300);margin-bottom:.75rem;}
+.lesson-hero h1{font-size:clamp(22px,4vw,36px);font-weight:700;color:#fff;letter-spacing:-.02em;margin-bottom:.5rem;}
+.lesson-hero p{font-size:14px;color:rgba(255,255,255,0.65);max-width:520px;margin:0 auto .875rem;}
+.lesson-pills{display:flex;flex-wrap:wrap;justify-content:center;gap:8px;}
+.l-pill{font-size:11px;font-weight:500;padding:4px 12px;border-radius:99px;border:1px solid rgba(255,255,255,0.18);color:rgba(255,255,255,0.75);background:rgba(255,255,255,0.06);}
+.lesson-progress{background:#1A1100;border-bottom:1px solid rgba(255,255,255,0.06);padding:.75rem 1.5rem;}
+.lp-inner{max-width:860px;margin:0 auto;}
+.lp-labels{display:flex;justify-content:space-between;font-size:11px;color:var(--text3);margin-bottom:6px;}
+.lp-track{height:4px;border-radius:99px;background:rgba(255,255,255,0.08);}
+.lp-fill{height:100%;border-radius:99px;background:linear-gradient(90deg,var(--amber-500),var(--amber-300));width:10%;}
+.lp-parts{display:flex;gap:4px;margin-top:8px;flex-wrap:wrap;}
+.lp-part{font-size:10px;font-weight:600;padding:2px 8px;border-radius:99px;background:rgba(255,255,255,0.06);color:var(--text3);cursor:pointer;transition:all .15s;}
+.lp-part.done{background:var(--amber-bg);color:var(--amber-300);border:1px solid var(--amber-border);}
+.lp-part.active{background:var(--amber-400);color:#1A0800;}
+.main{max-width:860px;margin:0 auto;padding:2rem 1.5rem 5rem;}
+.sec{background:var(--surface);border:1px solid var(--border);border-radius:var(--r);padding:1.5rem;margin-bottom:1.5rem;scroll-margin-top:80px;}
+.sec-header{display:flex;align-items:center;gap:10px;margin-bottom:1.25rem;}
+.sec-num{width:28px;height:28px;border-radius:8px;display:flex;align-items:center;justify-content:center;font-size:11px;font-weight:700;background:var(--amber-bg);color:var(--amber-300);border:1px solid var(--amber-border);flex-shrink:0;}
+.sec-title{font-size:16px;font-weight:700;color:#fff;}
+.sec-sub{font-size:12px;color:var(--text3);margin-top:1px;}
+.vocab-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(240px,1fr));gap:10px;}
+.vocab-card{background:var(--surface2);border:1px solid var(--border2);border-radius:var(--r-sm);padding:1rem;cursor:pointer;transition:border-color .15s;}
+.vocab-card:hover,.vocab-card.open{border-color:var(--amber-border);}
+.vc-top{display:flex;align-items:baseline;gap:8px;}
+.vc-word{font-size:16px;font-weight:700;color:#fff;}
+.vc-pos{font-size:10px;font-weight:600;padding:1px 7px;border-radius:99px;background:var(--amber-bg);color:var(--amber-300);}
+.vc-pron{font-size:12px;color:var(--text3);margin-top:2px;font-style:italic;}
+.vc-cn{font-size:15px;color:var(--amber-300);margin-top:4px;font-weight:600;}
+.vc-detail{display:none;margin-top:10px;padding-top:10px;border-top:1px solid var(--border2);}
+.vocab-card.open .vc-detail{display:block;}
+.vc-def{font-size:13px;color:var(--text2);margin-bottom:6px;}
+.vc-ex{font-size:12px;color:var(--text3);font-style:italic;padding-left:8px;border-left:2px solid var(--amber-border);}
+.story-body p{font-size:15px;color:var(--text2);line-height:1.8;margin-bottom:1rem;}
+.story-body p:last-child{margin-bottom:0;}
+.story-hl{color:var(--amber-300);font-weight:600;}
+.story-box{background:var(--amber-bg);border:1px solid var(--amber-border);border-radius:var(--r-sm);padding:1rem 1.25rem;margin:1.25rem 0;font-size:14px;color:rgba(255,255,255,0.85);line-height:1.7;font-style:italic;}
+.story-box::before{content:'"';font-size:32px;color:var(--amber-400);line-height:1;display:block;margin-bottom:.25rem;}
+.story-icon{font-size:40px;text-align:center;margin:1rem 0;}
+.quiz-list{display:flex;flex-direction:column;gap:14px;}
+.q-item{background:var(--surface2);border:1px solid var(--border2);border-radius:var(--r-sm);padding:1rem 1.25rem;}
+.q-text{font-size:14px;font-weight:600;color:#fff;margin-bottom:.75rem;}
+.q-opts{display:flex;flex-direction:column;gap:6px;}
+.q-opt{display:flex;align-items:center;gap:10px;padding:8px 12px;border-radius:8px;border:1px solid var(--border);background:transparent;cursor:pointer;font-size:13px;color:var(--text2);width:100%;text-align:left;transition:all .15s;}
+.q-opt:hover{border-color:var(--amber-border);background:var(--amber-bg);}
+.q-opt.correct{border-color:var(--teal-border);background:var(--teal-bg);color:#fff;}
+.q-opt.wrong{border-color:rgba(224,92,58,0.4);background:var(--coral-bg);color:#fff;}
+.q-feedback{font-size:12px;margin-top:8px;padding:6px 10px;border-radius:6px;display:none;}
+.q-feedback.show{display:block;}
+.q-feedback.good{background:var(--teal-bg);color:#5DCAA5;}
+.q-feedback.bad{background:var(--coral-bg);color:#F09B80;}
+.tf-opts{display:flex;gap:8px;}
+.tf-btn{flex:1;padding:8px;border-radius:8px;border:1px solid var(--border);background:transparent;cursor:pointer;font-size:13px;font-weight:600;color:var(--text2);transition:all .15s;}
+.tf-btn:hover{border-color:var(--amber-border);background:var(--amber-bg);}
+.tf-btn.correct{border-color:var(--teal-border);background:var(--teal-bg);color:#fff;}
+.tf-btn.wrong{border-color:rgba(224,92,58,0.4);background:var(--coral-bg);color:#fff;}
+.grammar-box{background:var(--surface2);border-left:3px solid var(--amber-400);border-radius:0 var(--r-sm) var(--r-sm) 0;padding:1rem 1.25rem;margin-bottom:1rem;}
+.grammar-label{font-size:10px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--amber-300);margin-bottom:.5rem;}
+.grammar-rule{font-size:14px;color:#fff;font-weight:600;margin-bottom:.5rem;}
+.grammar-eg{font-size:13px;color:var(--text2);margin-top:.25rem;font-style:italic;}
+.grammar-eg span{color:var(--amber-300);font-weight:600;font-style:normal;}
+.grammar-note{font-size:12px;color:var(--text2);margin-top:.7rem;padding:.5rem .75rem;background:var(--amber-bg);border:1px solid var(--amber-border);border-radius:6px;}
+.grammar-note strong{color:var(--amber-300);}
+.grammar-table{width:100%;border-collapse:collapse;font-size:13px;margin-top:.75rem;}
+.grammar-table th{text-align:left;padding:6px 10px;font-size:10px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;color:var(--text3);border-bottom:1px solid var(--border);}
+.grammar-table td{padding:7px 10px;color:var(--text2);border-bottom:1px solid var(--border2);}
+.grammar-table td:first-child{color:#fff;font-weight:500;}
+.hl{color:var(--amber-300);font-weight:600;}
+.sb-activity{margin-bottom:1.25rem;}
+.sb-label{font-size:11px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;color:var(--amber-300);margin-bottom:.75rem;}
+.sb-input{width:100%;background:var(--surface2);border:1px solid var(--border);border-radius:var(--r-sm);padding:.625rem .875rem;font-size:14px;color:#fff;font-family:'Inter',sans-serif;transition:border-color .15s;outline:none;margin-bottom:.5rem;}
+.sb-input:focus{border-color:var(--amber-border);}
+.sb-check{padding:7px 18px;border-radius:99px;background:var(--amber-400);color:#1A0800;font-size:13px;font-weight:700;border:none;cursor:pointer;transition:opacity .15s;}
+.sb-check:hover{opacity:.85;}
+.sb-result{font-size:12px;margin-top:6px;padding:6px 10px;border-radius:6px;display:none;}
+.sb-result.show{display:block;}
+.sb-result.ok{background:var(--teal-bg);color:#5DCAA5;}
+.sb-result.no{background:var(--coral-bg);color:#F09B80;}
+.sb-tile{padding:5px 10px;border-radius:99px;background:var(--surface2);border:1px solid var(--border);font-size:13px;color:var(--text2);display:inline-block;margin:3px;}
+.speak-level{margin-bottom:1.25rem;}
+.speak-badge{display:inline-flex;align-items:center;gap:6px;font-size:11px;font-weight:700;padding:3px 12px;border-radius:99px;margin-bottom:.875rem;}
+.speak-badge.l1{background:var(--teal-bg);color:#5DCAA5;border:1px solid var(--teal-border);}
+.speak-badge.l2{background:var(--amber-bg);color:var(--amber-300);border:1px solid var(--amber-border);}
+.speak-badge.l3{background:var(--blue-bg);color:var(--blue);border:1px solid rgba(74,158,224,0.3);}
+.speak-q{background:var(--surface2);border:1px solid var(--border2);border-radius:var(--r-sm);padding:1rem 1.25rem;margin-bottom:.75rem;}
+.speak-q p{font-size:14px;font-weight:600;color:#fff;margin-bottom:.5rem;}
+.speak-hint{font-size:12px;color:var(--text3);}
+.speak-hint span{color:var(--amber-300);}
+.idea-q{background:var(--surface2);border:1px solid var(--border2);border-top:3px solid var(--amber-400);border-radius:var(--r-sm);padding:1rem 1.25rem;margin-bottom:.75rem;display:flex;gap:10px;}
+.idea-icon{font-size:20px;flex-shrink:0;margin-top:2px;}
+.idea-text{font-size:14px;color:var(--text2);line-height:1.6;}
+.idea-text strong{color:#fff;}
+.ielts-topic{background:var(--navy);border:1px solid rgba(74,158,224,0.25);border-radius:var(--r-sm);padding:1rem 1.25rem;margin-bottom:1.25rem;}
+.ielts-topic-label{font-size:10px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--blue);margin-bottom:.25rem;}
+.ielts-topic h4{font-size:16px;font-weight:700;color:#fff;}
+.vocab-chips{display:flex;flex-wrap:wrap;gap:6px;margin-top:.75rem;}
+.chip{font-size:12px;padding:4px 12px;border-radius:99px;background:rgba(255,255,255,0.06);border:1px solid var(--border);color:var(--text2);}
+.chip.amber{background:var(--amber-bg);border-color:var(--amber-border);color:var(--amber-300);}
+.ielts-qs{display:flex;flex-direction:column;gap:8px;margin-top:1rem;}
+.ielts-q{display:flex;gap:10px;background:var(--surface2);border-radius:var(--r-sm);padding:.875rem 1rem;}
+.ielts-q-num{font-size:11px;font-weight:700;color:var(--blue);min-width:20px;}
+.ielts-q-text{font-size:13px;color:var(--text2);}
+.ielts-w2{background:var(--gold-light,rgba(245,158,11,0.1));border:1px solid var(--amber-border);border-radius:var(--r-sm);padding:1rem 1.25rem;margin-top:1rem;}
+.ielts-w2-label{font-size:10px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--amber-300);margin-bottom:.5rem;}
+.ielts-w2 p{font-size:14px;color:var(--text2);line-height:1.7;font-style:italic;}
+.star-words{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:1.25rem;}
+.star-word{display:flex;align-items:center;gap:6px;padding:6px 14px;border-radius:99px;background:var(--amber-bg);border:1px solid var(--amber-border);font-size:13px;font-weight:600;color:var(--amber-300);}
+.think-box{background:var(--surface2);border:1px solid var(--border2);border-radius:var(--r-sm);padding:1rem 1.25rem;margin-bottom:1rem;}
+.think-box .think-head{font-size:12px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;color:var(--amber-300);margin-bottom:.5rem;}
+.think-box p{font-size:14px;color:var(--text2);}
+.summary-box{background:var(--navy);border:1px solid rgba(74,158,224,0.3);border-radius:var(--r-sm);padding:1.25rem 1.5rem;margin-bottom:1.25rem;}
+.summary-box .think-head{color:var(--blue);}
+.summary-box p{font-size:14px;color:rgba(255,255,255,0.85);line-height:1.7;}
+.project-box{background:var(--surface2);border:1px solid var(--amber-border);border-radius:var(--r-sm);padding:1.25rem 1.5rem;margin-bottom:1.25rem;}
+.project-box .think-head{color:var(--amber-300);font-size:12px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;margin-bottom:.75rem;}
+.project-box ol{margin:0 0 0 1.1rem;padding:0;}
+.project-box li{font-size:14px;color:var(--text2);line-height:1.7;margin-bottom:.4rem;}
+.mini-quiz-q{background:var(--surface2);border:1px solid var(--border2);border-radius:var(--r-sm);padding:1rem;margin-bottom:.75rem;}
+.mq-text{font-size:13px;font-weight:600;color:#fff;margin-bottom:.625rem;}
+.mq-opts{display:flex;flex-direction:column;gap:5px;}
+.mq-opt{padding:7px 12px;border-radius:6px;border:1px solid var(--border);background:transparent;font-size:12px;color:var(--text2);cursor:pointer;text-align:left;transition:all .15s;}
+.mq-opt:hover{border-color:var(--amber-border);background:var(--amber-bg);}
+.mq-opt.correct{border-color:var(--teal-border);background:var(--teal-bg);color:#fff;}
+.mq-opt.wrong{border-color:rgba(224,92,58,0.4);background:var(--coral-bg);color:#fff;}
+.lesson-nav{display:flex;gap:10px;margin-top:2rem;}
+.nav-btn{display:flex;align-items:center;gap:6px;padding:.75rem 1.25rem;border-radius:10px;font-size:13px;font-weight:600;cursor:pointer;text-decoration:none;border:1px solid var(--border);color:var(--text2);background:var(--surface);transition:all .15s;flex:1;justify-content:center;}
+.nav-btn:hover{border-color:var(--border2);color:#fff;}
+.nav-btn.primary{background:var(--amber-400);color:#1A0800;border-color:transparent;}
+.nav-btn.primary:hover{opacity:.9;}
+.site-footer{background:#111;border-top:1px solid rgba(255,255,255,0.07);text-align:center;padding:1.5rem;font-size:12px;color:rgba(255,255,255,0.3);}
+.site-footer strong{color:var(--amber-300);}
+@media(max-width:600px){.vocab-grid{grid-template-columns:1fr;}.lesson-nav{flex-direction:column;}}
+</style>
+</head>
+<body>
+<header class="site-header"><div class="hdr">
+<a class="logo-wrap" href="index.html"><div class="logo-icon"><svg viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path d="M6 24 C8 18,14 10,24 6 C20 10,18 14,20 18 C16 16,12 18,6 24Z" fill="white"/><path d="M20 18 C22 20,22 23,20 26 C18 24,18 21,20 18Z" fill="rgba(255,255,255,0.5)"/></svg></div>
+<span class="logo-name">Lexilink Ideation IELTS STUDIO</span></a>
+<div class="hdr-pipe"></div>
+<a class="hdr-back" href="index.html"><i class="ti ti-arrow-left" aria-hidden="true"></i> Vol. 1</a>
+<div class="hdr-spacer"></div><span class="hdr-badge">Lesson 23A</span></div></header>
+<section class="lesson-hero">
+<p class="lesson-eyebrow">Chapter 23 · The Greek Gods</p>
+<h1>The Golden Apple</h1>
+<p>A mischievous trick at a wedding sparks a rivalry among the gods</p>
+<div class="lesson-pills"><span class="l-pill">📖 Story + Vocabulary</span><span class="l-pill">🎤 Speaking</span><span class="l-pill">✏️ Grammar</span><span class="l-pill">⭐ CEFR A2–B1</span></div>
+</section>
+<div class="lesson-progress"><div class="lp-inner">
+<div class="lp-labels"><span>Lesson 23A of 3</span><span style="color:var(--amber-300)">10 parts</span></div>
+<div class="lp-track"><div class="lp-fill"></div></div>
+<div class="lp-parts">
+<span class="lp-part active" onclick="scrollToId('p1')">1 Vocab</span>
+<span class="lp-part" onclick="scrollToId('p2')">2 Story</span>
+<span class="lp-part" onclick="scrollToId('p3')">3 Reading</span>
+<span class="lp-part" onclick="scrollToId('p4')">4 Grammar</span>
+<span class="lp-part" onclick="scrollToId('p5')">5 Builder</span>
+<span class="lp-part" onclick="scrollToId('p6')">6 Speaking 1</span>
+<span class="lp-part" onclick="scrollToId('p7')">7 Speaking 2</span>
+<span class="lp-part" onclick="scrollToId('p8')">8 Ideas</span>
+<span class="lp-part" onclick="scrollToId('p9')">9 IELTS</span>
+<span class="lp-part" onclick="scrollToId('p10')">10 Review</span>
+</div></div></div>
+<main class="main">
+<section class="sec" id="p1"><div class="sec-header"><div class="sec-num">1</div><div><div class="sec-title">Vocabulary</div><div class="sec-sub">Click each word to learn more</div></div></div><div class="vocab-grid"><div class="vocab-card" onclick="toggleVocab(this)"><div class="vc-top"><span class="vc-word">polytheist</span><span class="vc-pos">noun</span></div><div class="vc-pron">/ˈpɒl.i.θiː.ɪst/</div><div class="vc-cn">多神论者</div><div class="vc-detail"><div class="vc-def">A person who believes in and worships many different gods.</div><div class="vc-ex">&quot;The ancient Greeks were polytheists — they believed in a whole family of gods.&quot;</div></div></div><div class="vocab-card" onclick="toggleVocab(this)"><div class="vc-top"><span class="vc-word">monotheist</span><span class="vc-pos">noun</span></div><div class="vc-pron">/ˈmɒn.əʊ.θiː.ɪst/</div><div class="vc-cn">一神论者</div><div class="vc-detail"><div class="vc-def">A person who believes in and worships only one god.</div><div class="vc-ex">&quot;The Jews were monotheists, believing in only one god.&quot;</div></div></div><div class="vocab-card" onclick="toggleVocab(this)"><div class="vc-top"><span class="vc-word">Mount Olympus</span><span class="vc-pos">noun</span></div><div class="vc-pron">/maʊnt əˈlɪm.pəs/</div><div class="vc-cn">奥林匹斯山</div><div class="vc-detail"><div class="vc-def">The highest mountain in Greece, believed by the ancient Greeks to be the home of the gods.</div><div class="vc-ex">&quot;The Greek gods were believed to live on top of Mount Olympus.&quot;</div></div></div><div class="vocab-card" onclick="toggleVocab(this)"><div class="vc-top"><span class="vc-word">chief</span><span class="vc-pos">adjective</span></div><div class="vc-pron">/tʃiːf/</div><div class="vc-cn">首领的；最重要的</div><div class="vc-detail"><div class="vc-def">Most important; highest in rank.</div><div class="vc-ex">&quot;Zeus was the chief god of the Greeks.&quot;</div></div></div><div class="vocab-card" onclick="toggleVocab(this)"><div class="vc-top"><span class="vc-word">cruel</span><span class="vc-pos">adjective</span></div><div class="vc-pron">/ˈkruː.əl/</div><div class="vc-cn">残忍的</div><div class="vc-detail"><div class="vc-def">Causing pain or suffering to others on purpose.</div><div class="vc-ex">&quot;Sometimes the Greek gods were kind, but at other times they were cruel.&quot;</div></div></div><div class="vocab-card" onclick="toggleVocab(this)"><div class="vc-top"><span class="vc-word">strife</span><span class="vc-pos">noun</span></div><div class="vc-pron">/straɪf/</div><div class="vc-cn">纷争；冲突</div><div class="vc-detail"><div class="vc-def">Angry or violent disagreement between people.</div><div class="vc-ex">&quot;Eris was the goddess of strife, and she loved to cause trouble.&quot;</div></div></div><div class="vocab-card" onclick="toggleVocab(this)"><div class="vc-top"><span class="vc-word">wedding</span><span class="vc-pos">noun</span></div><div class="vc-pron">/ˈwed.ɪŋ/</div><div class="vc-cn">婚礼</div><div class="vc-detail"><div class="vc-def">A ceremony where two people get married.</div><div class="vc-ex">&quot;All the gods were invited to a big wedding on Mount Olympus.&quot;</div></div></div><div class="vocab-card" onclick="toggleVocab(this)"><div class="vc-top"><span class="vc-word">goddess</span><span class="vc-pos">noun</span></div><div class="vc-pron">/ˈɡɒd.es/</div><div class="vc-cn">女神</div><div class="vc-detail"><div class="vc-def">A female god, worshipped for her power over some part of life.</div><div class="vc-ex">&quot;Hera, Athena, and Aphrodite were three of the most powerful goddesses.&quot;</div></div></div><div class="vocab-card" onclick="toggleVocab(this)"><div class="vc-top"><span class="vc-word">twirl</span><span class="vc-pos">verb</span></div><div class="vc-pron">/twɜːl/</div><div class="vc-cn">旋转；捻</div><div class="vc-detail"><div class="vc-def">To turn around quickly and lightly, again and again.</div><div class="vc-ex">&quot;Aphrodite twirled her golden hair around one hand.&quot;</div></div></div><div class="vocab-card" onclick="toggleVocab(this)"><div class="vc-top"><span class="vc-word">clutch</span><span class="vc-pos">verb</span></div><div class="vc-pron">/klʌtʃ/</div><div class="vc-cn">紧抓</div><div class="vc-detail"><div class="vc-def">To hold onto something tightly, often because you are afraid of losing it.</div><div class="vc-ex">&quot;Hera clutched the golden apple and refused to let it go.&quot;</div></div></div><div class="vocab-card" onclick="toggleVocab(this)"><div class="vc-top"><span class="vc-word">deserve</span><span class="vc-pos">verb</span></div><div class="vc-pron">/dɪˈzɜːv/</div><div class="vc-cn">应得</div><div class="vc-detail"><div class="vc-def">To have earned something because of your qualities or actions.</div><div class="vc-ex">&quot;Each goddess believed that she deserved the apple more than the others.&quot;</div></div></div><div class="vocab-card" onclick="toggleVocab(this)"><div class="vc-top"><span class="vc-word">innocently</span><span class="vc-pos">adverb</span></div><div class="vc-pron">/ˈɪn.ə.sənt.li/</div><div class="vc-cn">天真无邪地</div><div class="vc-detail"><div class="vc-def">In a way that shows no guilt or knowledge of wrongdoing.</div><div class="vc-ex">&quot;Zeus stood innocently by the punch bowl, as if he had nothing to do with it.&quot;</div></div></div><div class="vocab-card" onclick="toggleVocab(this)"><div class="vc-top"><span class="vc-word">mortal</span><span class="vc-pos">adjective</span></div><div class="vc-pron">/ˈmɔː.təl/</div><div class="vc-cn">凡人的</div><div class="vc-detail"><div class="vc-def">Living for a limited time and certain to die eventually, unlike a god.</div><div class="vc-ex">&quot;Zeus told the goddesses to ask a mortal man, Paris, to judge them.&quot;</div></div></div><div class="vocab-card" onclick="toggleVocab(this)"><div class="vc-top"><span class="vc-word">demand</span><span class="vc-pos">verb</span></div><div class="vc-pron">/dɪˈmɑːnd/</div><div class="vc-cn">要求；索要</div><div class="vc-detail"><div class="vc-def">To ask for something firmly, expecting to get it.</div><div class="vc-ex">&quot;The three goddesses appeared before Paris and demanded that he judge them.&quot;</div></div></div><div class="vocab-card" onclick="toggleVocab(this)"><div class="vc-top"><span class="vc-word">bribe</span><span class="vc-pos">verb</span></div><div class="vc-pron">/braɪb/</div><div class="vc-cn">贿赂</div><div class="vc-detail"><div class="vc-def">To offer someone something valuable in exchange for a favour.</div><div class="vc-ex">&quot;Each goddess tried to bribe Paris with a wonderful gift.&quot;</div></div></div><div class="vocab-card" onclick="toggleVocab(this)"><div class="vc-top"><span class="vc-word">victory</span><span class="vc-pos">noun</span></div><div class="vc-pron">/ˈvɪk.tər.i/</div><div class="vc-cn">胜利</div><div class="vc-detail"><div class="vc-def">Success in a war, battle, or competition.</div><div class="vc-ex">&quot;Athena promised Paris victory in every battle he ever fought.&quot;</div></div></div><div class="vocab-card" onclick="toggleVocab(this)"><div class="vc-top"><span class="vc-word">grumble</span><span class="vc-pos">verb</span></div><div class="vc-pron">/ˈɡrʌm.bəl/</div><div class="vc-cn">抱怨</div><div class="vc-detail"><div class="vc-def">To complain in a quiet, unhappy way.</div><div class="vc-ex">&quot;Hera and Athena went back to Olympus, grumbling and complaining.&quot;</div></div></div></div></section>
+<section class="sec" id="p2"><div class="sec-header"><div class="sec-num">2</div><div><div class="sec-title">The Story</div><div class="sec-sub">Read carefully. Notice the bold words.</div></div></div><div class="story-body"><div class="story-icon">⚡</div><p>Look up at the night sky, and imagine the ancient Greeks looking up at the very same stars, thousands of years ago. The Greeks believed something remarkable: that a whole family of powerful beings lived on top of the tallest mountain in their land, watching everything they did.</p><p>The ancient Greeks were <span class="story-hl">polytheists</span> — they believed in many gods, not just one. This is very different from <span class="story-hl">monotheists</span>, like the ancient Jews, who worshipped only a single god. The Greeks believed their gods lived together on <span class="story-hl">Mount Olympus</span>, the highest mountain in all of Greece, and were extremely interested in what human beings were doing down on earth. Sometimes the gods were kind and generous. But at other times, they could be shockingly <span class="story-hl">cruel</span>.</p><p><span class="story-hl">Zeus</span>, the <span class="story-hl">chief</span> god of all the Greek gods, is a perfect example. One day, Zeus looked down over Greece from Mount Olympus and saw men swarming like ants — cutting down trees, building houses, pulling fish from the sea. &quot;There are too many people on the earth,&quot; he said gloomily. &quot;I should get rid of some of them.&quot;</p><p>He thought and thought, and finally, he came up with a plan. He knew all the gods were going to a huge <span class="story-hl">wedding</span> soon — the perfect moment to start a fight. So Zeus made a golden apple so beautiful that it made the sun look dim, and wrote on it: &quot;For the Most Beautiful.&quot; Then he called Eris, the goddess of <span class="story-hl">strife</span>, who loved to cause trouble. &quot;Take this apple to the wedding,&quot; he told her, &quot;and drop it in front of my wife, Hera.&quot;</p><p>At the wedding, Eris waited until Hera and two other powerful <span class="story-hl">goddesses</span> were standing together, chatting. Then she rolled the golden apple across the floor. It bumped against Hera's foot, and Hera picked it up. &quot;For the Most Beautiful!&quot; she read aloud. &quot;Why, thank you! That's obviously me!&quot; But Aphrodite, the goddess of love, <span class="story-hl">twirled</span> her golden hair and disagreed sweetly, while Athena, the goddess of war, reached for the apple too. &quot;No!&quot; Hera snapped, <span class="story-hl">clutching</span> it tightly. &quot;It's mine!&quot;</p><p>The argument grew louder, with guests taking sides about which goddess truly <span class="story-hl">deserved</span> the apple. Finally, Hera suggested Zeus should judge them. But Zeus, standing <span class="story-hl">innocently</span> by the punch bowl — pretending he knew nothing about the golden apple at all — quickly refused. &quot;How can I judge my own wife?&quot; he said. &quot;Ask a <span class="story-hl">mortal</span> man instead. Ask Paris, the prince of Troy. He's the handsomest man on earth, so surely he can decide.&quot;</p><p>Paris was lying happily on a mountainside when the three goddesses suddenly appeared and <span class="story-hl">demanded</span> that he judge them. Each one tried to <span class="story-hl">bribe</span> him: Hera whispered that she would make him king of the world; Athena hissed that she would give him <span class="story-hl">victory</span> in every battle; and Aphrodite promised him the most beautiful woman on earth. Paris's eyes lit up, and he handed the apple straight to Aphrodite. Hera and Athena stormed back to Olympus, <span class="story-hl">grumbling</span> and complaining — and neither goddess would ever forget the prince who had rejected them.</p><div class="story-icon">🍎</div></div></section>
+<section class="sec" id="p3"><div class="sec-header"><div class="sec-num">3</div><div><div class="sec-title">Reading Comprehension</div><div class="sec-sub">Choose the best answer. Get instant feedback!</div></div></div><div class="quiz-list"><div class="q-item"><div class="q-text">1. What does it mean to be a &#x27;polytheist&#x27;?</div><div class="q-opts"><button class="q-opt" onclick="mcq(this,'wrong')">To believe in and worship only one god.</button><button class="q-opt" onclick="mcq(this,'correct')">To believe in and worship many gods.</button><button class="q-opt" onclick="mcq(this,'wrong')">To not believe in any gods at all.</button></div><div class="q-feedback"></div></div><div class="q-item"><div class="q-text">2. The ancient Jews were polytheists, just like the Greeks.</div><div class="tf-opts"><button class="tf-btn" onclick="tf(this,'wrong','In fact, the Jews were monotheists — they believed in only one god!')">True</button><button class="tf-btn" onclick="tf(this,'correct','Correct! The Jews were monotheists, believing in only one god, unlike the polytheistic Greeks.')">False</button></div><div class="q-feedback"></div></div><div class="q-item"><div class="q-text">3. Why did Zeus want to &#x27;get rid of some&#x27; of the people on earth?</div><div class="q-opts"><button class="q-opt" onclick="mcq(this,'correct')">Because he thought there were too many people.</button><button class="q-opt" onclick="mcq(this,'wrong')">Because the people had stopped worshipping him.</button><button class="q-opt" onclick="mcq(this,'wrong')">Because Hera asked him to.</button></div><div class="q-feedback"></div></div><div class="q-item"><div class="q-text">4. What did Eris do with the golden apple at the wedding?</div><div class="q-opts"><button class="q-opt" onclick="mcq(this,'wrong')">She kept it for herself.</button><button class="q-opt" onclick="mcq(this,'correct')">She rolled it towards Hera and two other goddesses.</button><button class="q-opt" onclick="mcq(this,'wrong')">She gave it directly to Zeus.</button></div><div class="q-feedback"></div></div><div class="q-item"><div class="q-text">5. Zeus agreed to personally judge which goddess was the most beautiful.</div><div class="tf-opts"><button class="tf-btn" onclick="tf(this,'wrong','Actually, Zeus refused and cleverly suggested a mortal man, Paris, should judge them instead!')">True</button><button class="tf-btn" onclick="tf(this,'correct','Correct! Zeus refused, sending the decision to Paris instead.')">False</button></div><div class="q-feedback"></div></div><div class="q-item"><div class="q-text">6. What did Aphrodite promise Paris in exchange for the apple?</div><div class="q-opts"><button class="q-opt" onclick="mcq(this,'wrong')">To make him king of the whole world.</button><button class="q-opt" onclick="mcq(this,'wrong')">Victory in every battle he ever fought.</button><button class="q-opt" onclick="mcq(this,'correct')">The most beautiful woman on earth.</button></div><div class="q-feedback"></div></div></div></section>
+<section class="sec" id="p4"><div class="sec-header"><div class="sec-num">4</div><div><div class="sec-title">Language Focus</div><div class="sec-sub">Grammar from the story — learn through meaning</div></div></div><div class="grammar-box"><div class="grammar-label">📌 Past Simple — Narrating a Story</div><div class="grammar-rule">We use the past simple tense to tell a story about finished actions in the past.</div><div class="grammar-eg">Zeus <span>looked</span> down over Greece and <span>saw</span> men swarming like ants.</div><div class="grammar-eg">He <span>thought</span> and <span>thought</span>, and finally he <span>came up</span> with a plan.</div><div class="grammar-eg">Paris <span>gave</span> the golden apple to Aphrodite.</div><div class="grammar-note"><strong>Tip:</strong> Notice the irregular past tense verbs: saw (see), thought (think), came (come), gave (give).</div></div><div class="grammar-box"><div class="grammar-label">📌 Direct Speech — Quotation Marks</div><div class="grammar-rule">We use quotation marks (" ") to show the exact words a person said.</div><div class="grammar-eg">Zeus said, <span>&quot;There are too many people on the earth.&quot;</span></div><div class="grammar-eg">Hera snapped, <span>&quot;It&#39;s mine!&quot;</span></div><div class="grammar-eg">Zeus wrote on the apple: <span>&quot;For the Most Beautiful.&quot;</span></div><div class="grammar-note"><strong>Tip:</strong> A comma usually comes before the quotation mark when introducing speech: Zeus said, "..."</div></div><div class="grammar-box"><div class="grammar-label">📌 Superlatives — '-est' and 'most'</div><div class="grammar-rule">We use superlatives to compare three or more things and say which is the extreme.</div><div class="grammar-eg">Each goddess believed she was <span>the most beautiful</span> of them all.</div><div class="grammar-eg">Paris was known as <span>the handsomest</span> man on earth.</div><div class="grammar-eg">Zeus was <span>the chief</span> — the <span>most powerful</span> — of all the gods.</div><div class="grammar-note"><strong>Tip:</strong> Short adjectives usually add -est (handsomest); longer adjectives use 'most' (most beautiful).</div></div></section>
+<section class="sec" id="p5"><div class="sec-header"><div class="sec-num">5</div><div><div class="sec-title">Sentence Builder</div><div class="sec-sub">Build your skills with the vocabulary</div></div></div><div class="sb-activity"><div class="sb-label">🔀 Unscramble the sentence</div><p style="font-size:13px;color:var(--text3);margin-bottom:.75rem;">Put these words in the correct order:</p><div style="margin-bottom:.75rem;"><span class="sb-tile">gods</span><span class="sb-tile">many</span><span class="sb-tile">in</span><span class="sb-tile">Greeks</span><span class="sb-tile">believed</span><span class="sb-tile">the</span></div><input class="sb-input" id="us1" placeholder="Type your sentence here..."/><button class="sb-check" onclick="checkUnscramble('us1','the greeks believed in many gods','ur1')">Check ✓</button><div class="sb-result" id="ur1"></div></div><div class="sb-activity"><div class="sb-label">✏️ Fill in the blank</div><p style="font-size:13px;color:var(--text2);margin-bottom:.5rem;">1. The Greeks believed their gods lived on top of Mount ________.</p><input class="sb-input" id="f1" placeholder="Your answer..."/><button class="sb-check" onclick="checkFill('f1','olympus','rf1')">Check ✓</button><div class="sb-result" id="rf1"></div></div><div class="sb-activity"><div class="sb-label">✏️ Fill in the blank</div><p style="font-size:13px;color:var(--text2);margin-bottom:.5rem;">2. Paris gave the golden apple to ________.</p><input class="sb-input" id="f2" placeholder="Your answer..."/><button class="sb-check" onclick="checkFill('f2','aphrodite','rf2')">Check ✓</button><div class="sb-result" id="rf2"></div></div><div class="sb-activity"><div class="sb-label">🇨🇳 Translate into English</div><p style="font-size:13px;color:var(--text2);margin-bottom:.5rem;">宙斯是希腊人的首领之神。</p><input class="sb-input" id="tr1" placeholder="Write your English sentence..."/><button class="sb-check" onclick="revealAns('tr1','Zeus was the chief god of the Greeks.','rt1')">Show model answer</button><div class="sb-result" id="rt1"></div></div></section>
+<section class="sec" id="p6"><div class="sec-header"><div class="sec-num">6</div><div><div class="sec-title">Speaking — Level 1</div><div class="sec-sub">Answer in one complete sentence</div></div></div><div class="speak-level"><span class="speak-badge l1">🟢 Level 1 · One sentence</span><div class="speak-q"><p>What does &#x27;polytheist&#x27; mean?</p><div class="speak-hint">💡 Start with: <span>"A polytheist is someone who..."</span></div></div><div class="speak-q"><p>What did Zeus write on the golden apple?</p><div class="speak-hint">💡 Start with: <span>"Zeus wrote..."</span></div></div><div class="speak-q"><p>Which goddess did Paris choose?</p><div class="speak-hint">💡 Start with: <span>"Paris chose..."</span></div></div></div></section>
+<section class="sec" id="p7"><div class="sec-header"><div class="sec-num">7</div><div><div class="sec-title">Speaking — Level 2 &amp; 3</div><div class="sec-sub">Extend your answer. Share your opinion.</div></div></div><div class="speak-level"><span class="speak-badge l2">🟡 Level 2 · 2–3 sentences</span><div class="speak-q"><p>Describe how the argument at the wedding grew from a small disagreement into a big problem.</p><div class="speak-hint">💡 Think about: <span>Hera picking up the apple · Aphrodite and Athena disagreeing · the guests taking sides</span></div></div><div class="speak-q"><p>Why do you think Zeus was so eager to avoid judging the goddesses himself?</p><div class="speak-hint">💡 Try: <span>&quot;I think Zeus avoided the decision because...&quot;</span></div></div></div><div class="speak-level"><span class="speak-badge l3">🔵 Level 3 · Your opinion</span><div class="speak-q"><p>Do you think Zeus behaved responsibly by starting an argument and then refusing to solve it? Explain your opinion.</p><div class="speak-hint">💡 Use: <span>I believe... / For example... / However...</span></div></div></div></section>
+<section class="sec" id="p8"><div class="sec-header"><div class="sec-num">8</div><div><div class="sec-title">Ideas &amp; Society</div><div class="sec-sub">Think about big ideas. There is no wrong answer.</div></div></div><div class="idea-q"><div class="idea-icon">🌩️</div><div class="idea-text"><strong>Power without limits can be dangerous.</strong> Zeus had enormous power and used it to create a plan that would eventually cause a terrible war. Do you think leaders with unlimited power are more likely to make harmful decisions?</div></div><div class="idea-q"><div class="idea-icon">🍎</div><div class="idea-text"><strong>Small actions can cause enormous consequences.</strong> One tiny golden apple, tossed onto a floor, would eventually lead to a famous war. Can you think of a small event in history (or your own life) that led to huge results?</div></div><div class="idea-q"><div class="idea-icon">🎭</div><div class="idea-text"><strong>Leaders sometimes avoid responsibility for problems they create.</strong> Zeus created the entire situation, then pretended to know nothing and passed the decision to someone else. Have you ever seen someone avoid taking responsibility for a problem they caused?</div></div><div class="idea-q"><div class="idea-icon">💭</div><div class="idea-text"><strong>People often choose what they want personally over what benefits everyone.</strong> Paris chose the gift that pleased him personally, without thinking about how his choice would affect his country. Do people often make decisions this way in real life?</div></div></section>
+<section class="sec" id="p9"><div class="sec-header"><div class="sec-num">9</div><div><div class="sec-title">IELTS Content Builder</div><div class="sec-sub">Planting seeds for your future IELTS exam</div></div></div><div class="ielts-topic"><div class="ielts-topic-label">📘 Today's IELTS Topic</div><h4>Belief Systems and Decision-Making</h4></div><p style="font-size:12px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;color:var(--text3);margin-bottom:.5rem;">Key vocabulary</p><div class="vocab-chips"><span class="chip amber">belief system</span><span class="chip amber">responsibility</span><span class="chip amber">temptation</span><span class="chip amber">mythology</span><span class="chip">cultural values</span><span class="chip">avoid blame</span><span class="chip">short-term reward</span><span class="chip">ancient civilisation</span></div><p style="font-size:12px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;color:var(--text3);margin:.875rem 0 .5rem;">Useful collocations</p><div class="vocab-chips"><span class="chip">hold a belief</span><span class="chip">avoid responsibility</span><span class="chip">weigh the consequences</span><span class="chip">pass down traditions</span></div><div class="ielts-qs"><div class="ielts-q"><div class="ielts-q-num">S1</div><div class="ielts-q-text">How do belief systems shape the values of a society?</div></div><div class="ielts-q"><div class="ielts-q-num">S2</div><div class="ielts-q-text">Why do people sometimes choose short-term rewards over long-term benefits?</div></div><div class="ielts-q"><div class="ielts-q-num">S3</div><div class="ielts-q-text">Do you think people in positions of power should avoid making difficult decisions themselves?</div></div></div><div class="ielts-w2"><div class="ielts-w2-label">✏️ IELTS Writing Task 2 — Future Practice</div><p>&quot;Some people believe that leaders should always make difficult decisions themselves, while others believe it is better to ask an independent person to decide. Discuss both views and give your own opinion.&quot;</p></div></section>
+<section class="sec" id="p10"><div class="sec-header"><div class="sec-num">10</div><div><div class="sec-title">Review</div><div class="sec-sub">Remember what you learned!</div></div></div><p style="font-size:12px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;color:var(--text3);margin-bottom:.75rem;">⭐ Star Words</p><div class="star-words"><span class="star-word">⭐ polytheist</span><span class="star-word">⭐ monotheist</span><span class="star-word">⭐ Mount Olympus</span><span class="star-word">⭐ chief</span><span class="star-word">⭐ cruel</span><span class="star-word">⭐ strife</span><span class="star-word">⭐ goddess</span><span class="star-word">⭐ clutch</span><span class="star-word">⭐ deserve</span><span class="star-word">⭐ judge</span><span class="star-word">⭐ mortal</span><span class="star-word">⭐ bribe</span></div><div class="think-box"><div class="think-head">💡 Big Idea</div><p>The ancient Greeks believed in a whole family of gods living on Mount Olympus who watched — and sometimes interfered with — human life. <strong>Even a single small object, like a golden apple, can set off events far larger than anyone expects.</strong></p></div><p style="font-size:12px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;color:var(--text3);margin:.875rem 0 .75rem;">🧠 Mini Quiz</p><div class="mini-quiz-q"><div class="mq-text">A. What is a polytheist?</div><div class="mq-opts"><button class="mq-opt" onclick="mq(this,'wrong')">Someone who believes in one god</button><button class="mq-opt" onclick="mq(this,'correct')">Someone who believes in many gods</button><button class="mq-opt" onclick="mq(this,'wrong')">Someone who does not believe in gods</button></div></div><div class="mini-quiz-q"><div class="mq-text">B. What did Zeus write on the golden apple?</div><div class="mq-opts"><button class="mq-opt" onclick="mq(this,'wrong')">For the Bravest</button><button class="mq-opt" onclick="mq(this,'correct')">For the Most Beautiful</button><button class="mq-opt" onclick="mq(this,'wrong')">For the Wisest</button></div></div><div class="mini-quiz-q"><div class="mq-text">C. Which goddess did Paris choose?</div><div class="mq-opts"><button class="mq-opt" onclick="mq(this,'wrong')">Hera</button><button class="mq-opt" onclick="mq(this,'wrong')">Athena</button><button class="mq-opt" onclick="mq(this,'correct')">Aphrodite</button></div></div><div class="lesson-nav"><a class="nav-btn" href="ch22-g.html"><i class="ti ti-arrow-left"></i> Chapter 22</a><a class="nav-btn primary" href="ch23-b.html">Next: Lesson 23B — Gods and Their Powers <i class="ti ti-arrow-right"></i></a></div></section>
+</main>
+<footer class="site-footer"><strong>Lexilink Ideation IELTS STUDIO</strong> · History ESL Course · Chapter 23 — Lesson A</footer>
+<script>
+function toggleVocab(card){card.classList.toggle('open');}
+function mcq(btn,type){
+  const item=btn.closest('.q-item');
+  item.querySelectorAll('.q-opt').forEach(b=>{b.classList.remove('correct','wrong');b.disabled=true;});
+  btn.classList.add(type);
+  const fb=item.querySelector('.q-feedback');
+  fb.className='q-feedback show '+(type==='correct'?'good':'bad');
+  fb.textContent=type==='correct'?'\u2713 Correct! Well done!':'\u2717 Not quite. Read the story again and try to remember.';
+}
+function tf(btn,type,msg){
+  const item=btn.closest('.q-item');
+  item.querySelectorAll('.tf-btn').forEach(b=>{b.classList.remove('correct','wrong');b.disabled=true;});
+  btn.classList.add(type);
+  const fb=item.querySelector('.q-feedback');
+  fb.className='q-feedback show '+(type==='correct'?'good':'bad');
+  fb.textContent=(type==='correct'?'\u2713 ':'\u2717 ')+msg;
+}
+function mq(btn,type){
+  const item=btn.closest('.mini-quiz-q');
+  item.querySelectorAll('.mq-opt').forEach(b=>{b.classList.remove('correct','wrong');b.disabled=true;});
+  btn.classList.add(type);
+}
+function checkUnscramble(id,answer,rid){
+  const val=document.getElementById(id).value.trim().toLowerCase().replace(/[^a-z\s]/g,'').replace(/\s+/g,' ');
+  const ans=answer.toLowerCase().replace(/[^a-z\s]/g,'').replace(/\s+/g,' ');
+  const r=document.getElementById(rid);
+  r.className='sb-result show '+(val===ans?'ok':'no');
+  r.textContent=val===ans?'\u2713 Perfect! "'+answer+'"':'\u2717 Try again. Check the word order.';
+}
+function checkFill(id,answer,rid){
+  const val=document.getElementById(id).value.trim().toLowerCase();
+  const r=document.getElementById(rid);
+  const ans=answer.toLowerCase();
+  r.className='sb-result show '+(val===ans?'ok':'no');
+  r.textContent=val===ans?'\u2713 Correct!':'\u2717 The answer is: "'+answer+'"';
+}
+function revealAns(id,answer,rid){
+  const r=document.getElementById(rid);
+  r.className='sb-result show ok';
+  r.textContent='\u2705 Model answer: "'+answer+'"';
+}
+function scrollToId(id){document.getElementById(id).scrollIntoView({behavior:'smooth',block:'start'});}
+const parts=['p1','p2','p3','p4','p5','p6','p7','p8','p9','p10'];
+const partEls=document.querySelectorAll('.lp-part');
+window.addEventListener('scroll',()=>{
+  let current=0;
+  parts.forEach((id,i)=>{const el=document.getElementById(id);if(el&&el.getBoundingClientRect().top<200)current=i;});
+  partEls.forEach((el,i)=>{el.classList.remove('active','done');if(i<current)el.classList.add('done');else if(i===current)el.classList.add('active');});
+  const pct=Math.round(((current+1)/10)*100);
+  document.querySelector('.lp-fill').style.width=pct+'%';
+});
+</script>
+</body>
+</html>

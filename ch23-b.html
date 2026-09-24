@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+<title>Lesson 23B — Gods and Their Powers | Lexilink History Workshop</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"/>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet"/>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@latest/tabler-icons.min.css"/>
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
+:root{
+  --bg:#0F0800;--surface:rgba(255,255,255,0.04);--surface2:rgba(255,255,255,0.07);
+  --border:rgba(255,255,255,0.10);--border2:rgba(255,255,255,0.06);
+  --amber-300:#E8A832;--amber-400:#D4890F;--amber-500:#B8720A;
+  --amber-bg:rgba(212,137,15,0.12);--amber-border:rgba(212,137,15,0.3);
+  --text:#fff;--text2:rgba(255,255,255,0.72);--text3:rgba(255,255,255,0.45);
+  --teal:#1D9E75;--teal-bg:rgba(29,158,117,0.12);--teal-border:rgba(29,158,117,0.3);
+  --coral:#E05C3A;--coral-bg:rgba(224,92,58,0.12);
+  --blue:#4A9EE0;--blue-bg:rgba(74,158,224,0.12);
+  --navy:#1a2744;
+  --r:12px;--r-sm:8px;
+}
+html{scroll-behavior:smooth;}
+body{font-family:'Inter',sans-serif;background:var(--bg);color:var(--text);min-height:100vh;line-height:1.6;}
+.site-header{background:#111;border-bottom:1px solid rgba(255,255,255,0.08);position:sticky;top:0;z-index:100;}
+.hdr{max-width:860px;margin:0 auto;padding:0 1.5rem;height:54px;display:flex;align-items:center;gap:12px;}
+.logo-wrap{display:flex;align-items:center;gap:8px;text-decoration:none;}
+.logo-icon{width:30px;height:30px;display:flex;align-items:center;justify-content:center;}
+.logo-icon svg{width:26px;height:26px;}
+.logo-name{font-size:13px;font-weight:700;color:#fff;}
+.hdr-pipe{width:1px;height:20px;background:rgba(255,255,255,0.15);}
+.hdr-back{display:flex;align-items:center;gap:5px;font-size:12px;color:var(--text3);text-decoration:none;transition:color .15s;}
+.hdr-back:hover{color:var(--text2);}
+.hdr-spacer{flex:1;}
+.hdr-badge{font-size:10px;font-weight:700;letter-spacing:.05em;padding:3px 10px;border-radius:99px;border:1px solid var(--amber-border);color:var(--amber-300);background:var(--amber-bg);}
+.lesson-hero{background:linear-gradient(135deg,#2C1600 0%,#5C3200 40%,#7A4500 100%);padding:3rem 1.5rem 2.5rem;text-align:center;position:relative;overflow:hidden;}
+.lesson-hero::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse 70% 60% at 50% 50%,rgba(200,130,0,0.15),transparent);pointer-events:none;}
+.lesson-eyebrow{font-size:10px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--amber-300);margin-bottom:.75rem;}
+.lesson-hero h1{font-size:clamp(22px,4vw,36px);font-weight:700;color:#fff;letter-spacing:-.02em;margin-bottom:.5rem;}
+.lesson-hero p{font-size:14px;color:rgba(255,255,255,0.65);max-width:520px;margin:0 auto .875rem;}
+.lesson-pills{display:flex;flex-wrap:wrap;justify-content:center;gap:8px;}
+.l-pill{font-size:11px;font-weight:500;padding:4px 12px;border-radius:99px;border:1px solid rgba(255,255,255,0.18);color:rgba(255,255,255,0.75);background:rgba(255,255,255,0.06);}
+.lesson-progress{background:#1A1100;border-bottom:1px solid rgba(255,255,255,0.06);padding:.75rem 1.5rem;}
+.lp-inner{max-width:860px;margin:0 auto;}
+.lp-labels{display:flex;justify-content:space-between;font-size:11px;color:var(--text3);margin-bottom:6px;}
+.lp-track{height:4px;border-radius:99px;background:rgba(255,255,255,0.08);}
+.lp-fill{height:100%;border-radius:99px;background:linear-gradient(90deg,var(--amber-500),var(--amber-300));width:10%;}
+.lp-parts{display:flex;gap:4px;margin-top:8px;flex-wrap:wrap;}
+.lp-part{font-size:10px;font-weight:600;padding:2px 8px;border-radius:99px;background:rgba(255,255,255,0.06);color:var(--text3);cursor:pointer;transition:all .15s;}
+.lp-part.done{background:var(--amber-bg);color:var(--amber-300);border:1px solid var(--amber-border);}
+.lp-part.active{background:var(--amber-400);color:#1A0800;}
+.main{max-width:860px;margin:0 auto;padding:2rem 1.5rem 5rem;}
+.sec{background:var(--surface);border:1px solid var(--border);border-radius:var(--r);padding:1.5rem;margin-bottom:1.5rem;scroll-margin-top:80px;}
+.sec-header{display:flex;align-items:center;gap:10px;margin-bottom:1.25rem;}
+.sec-num{width:28px;height:28px;border-radius:8px;display:flex;align-items:center;justify-content:center;font-size:11px;font-weight:700;background:var(--amber-bg);color:var(--amber-300);border:1px solid var(--amber-border);flex-shrink:0;}
+.sec-title{font-size:16px;font-weight:700;color:#fff;}
+.sec-sub{font-size:12px;color:var(--text3);margin-top:1px;}
+.vocab-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(240px,1fr));gap:10px;}
+.vocab-card{background:var(--surface2);border:1px solid var(--border2);border-radius:var(--r-sm);padding:1rem;cursor:pointer;transition:border-color .15s;}
+.vocab-card:hover,.vocab-card.open{border-color:var(--amber-border);}
+.vc-top{display:flex;align-items:baseline;gap:8px;}
+.vc-word{font-size:16px;font-weight:700;color:#fff;}
+.vc-pos{font-size:10px;font-weight:600;padding:1px 7px;border-radius:99px;background:var(--amber-bg);color:var(--amber-300);}
+.vc-pron{font-size:12px;color:var(--text3);margin-top:2px;font-style:italic;}
+.vc-cn{font-size:15px;color:var(--amber-300);margin-top:4px;font-weight:600;}
+.vc-detail{display:none;margin-top:10px;padding-top:10px;border-top:1px solid var(--border2);}
+.vocab-card.open .vc-detail{display:block;}
+.vc-def{font-size:13px;color:var(--text2);margin-bottom:6px;}
+.vc-ex{font-size:12px;color:var(--text3);font-style:italic;padding-left:8px;border-left:2px solid var(--amber-border);}
+.story-body p{font-size:15px;color:var(--text2);line-height:1.8;margin-bottom:1rem;}
+.story-body p:last-child{margin-bottom:0;}
+.story-hl{color:var(--amber-300);font-weight:600;}
+.story-box{background:var(--amber-bg);border:1px solid var(--amber-border);border-radius:var(--r-sm);padding:1rem 1.25rem;margin:1.25rem 0;font-size:14px;color:rgba(255,255,255,0.85);line-height:1.7;font-style:italic;}
+.story-box::before{content:'"';font-size:32px;color:var(--amber-400);line-height:1;display:block;margin-bottom:.25rem;}
+.story-icon{font-size:40px;text-align:center;margin:1rem 0;}
+.quiz-list{display:flex;flex-direction:column;gap:14px;}
+.q-item{background:var(--surface2);border:1px solid var(--border2);border-radius:var(--r-sm);padding:1rem 1.25rem;}
+.q-text{font-size:14px;font-weight:600;color:#fff;margin-bottom:.75rem;}
+.q-opts{display:flex;flex-direction:column;gap:6px;}
+.q-opt{display:flex;align-items:center;gap:10px;padding:8px 12px;border-radius:8px;border:1px solid var(--border);background:transparent;cursor:pointer;font-size:13px;color:var(--text2);width:100%;text-align:left;transition:all .15s;}
+.q-opt:hover{border-color:var(--amber-border);background:var(--amber-bg);}
+.q-opt.correct{border-color:var(--teal-border);background:var(--teal-bg);color:#fff;}
+.q-opt.wrong{border-color:rgba(224,92,58,0.4);background:var(--coral-bg);color:#fff;}
+.q-feedback{font-size:12px;margin-top:8px;padding:6px 10px;border-radius:6px;display:none;}
+.q-feedback.show{display:block;}
+.q-feedback.good{background:var(--teal-bg);color:#5DCAA5;}
+.q-feedback.bad{background:var(--coral-bg);color:#F09B80;}
+.tf-opts{display:flex;gap:8px;}
+.tf-btn{flex:1;padding:8px;border-radius:8px;border:1px solid var(--border);background:transparent;cursor:pointer;font-size:13px;font-weight:600;color:var(--text2);transition:all .15s;}
+.tf-btn:hover{border-color:var(--amber-border);background:var(--amber-bg);}
+.tf-btn.correct{border-color:var(--teal-border);background:var(--teal-bg);color:#fff;}
+.tf-btn.wrong{border-color:rgba(224,92,58,0.4);background:var(--coral-bg);color:#fff;}
+.grammar-box{background:var(--surface2);border-left:3px solid var(--amber-400);border-radius:0 var(--r-sm) var(--r-sm) 0;padding:1rem 1.25rem;margin-bottom:1rem;}
+.grammar-label{font-size:10px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--amber-300);margin-bottom:.5rem;}
+.grammar-rule{font-size:14px;color:#fff;font-weight:600;margin-bottom:.5rem;}
+.grammar-eg{font-size:13px;color:var(--text2);margin-top:.25rem;font-style:italic;}
+.grammar-eg span{color:var(--amber-300);font-weight:600;font-style:normal;}
+.grammar-note{font-size:12px;color:var(--text2);margin-top:.7rem;padding:.5rem .75rem;background:var(--amber-bg);border:1px solid var(--amber-border);border-radius:6px;}
+.grammar-note strong{color:var(--amber-300);}
+.grammar-table{width:100%;border-collapse:collapse;font-size:13px;margin-top:.75rem;}
+.grammar-table th{text-align:left;padding:6px 10px;font-size:10px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;color:var(--text3);border-bottom:1px solid var(--border);}
+.grammar-table td{padding:7px 10px;color:var(--text2);border-bottom:1px solid var(--border2);}
+.grammar-table td:first-child{color:#fff;font-weight:500;}
+.hl{color:var(--amber-300);font-weight:600;}
+.sb-activity{margin-bottom:1.25rem;}
+.sb-label{font-size:11px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;color:var(--amber-300);margin-bottom:.75rem;}
+.sb-input{width:100%;background:var(--surface2);border:1px solid var(--border);border-radius:var(--r-sm);padding:.625rem .875rem;font-size:14px;color:#fff;font-family:'Inter',sans-serif;transition:border-color .15s;outline:none;margin-bottom:.5rem;}
+.sb-input:focus{border-color:var(--amber-border);}
+.sb-check{padding:7px 18px;border-radius:99px;background:var(--amber-400);color:#1A0800;font-size:13px;font-weight:700;border:none;cursor:pointer;transition:opacity .15s;}
+.sb-check:hover{opacity:.85;}
+.sb-result{font-size:12px;margin-top:6px;padding:6px 10px;border-radius:6px;display:none;}
+.sb-result.show{display:block;}
+.sb-result.ok{background:var(--teal-bg);color:#5DCAA5;}
+.sb-result.no{background:var(--coral-bg);color:#F09B80;}
+.sb-tile{padding:5px 10px;border-radius:99px;background:var(--surface2);border:1px solid var(--border);font-size:13px;color:var(--text2);display:inline-block;margin:3px;}
+.speak-level{margin-bottom:1.25rem;}
+.speak-badge{display:inline-flex;align-items:center;gap:6px;font-size:11px;font-weight:700;padding:3px 12px;border-radius:99px;margin-bottom:.875rem;}
+.speak-badge.l1{background:var(--teal-bg);color:#5DCAA5;border:1px solid var(--teal-border);}
+.speak-badge.l2{background:var(--amber-bg);color:var(--amber-300);border:1px solid var(--amber-border);}
+.speak-badge.l3{background:var(--blue-bg);color:var(--blue);border:1px solid rgba(74,158,224,0.3);}
+.speak-q{background:var(--surface2);border:1px solid var(--border2);border-radius:var(--r-sm);padding:1rem 1.25rem;margin-bottom:.75rem;}
+.speak-q p{font-size:14px;font-weight:600;color:#fff;margin-bottom:.5rem;}
+.speak-hint{font-size:12px;color:var(--text3);}
+.speak-hint span{color:var(--amber-300);}
+.idea-q{background:var(--surface2);border:1px solid var(--border2);border-top:3px solid var(--amber-400);border-radius:var(--r-sm);padding:1rem 1.25rem;margin-bottom:.75rem;display:flex;gap:10px;}
+.idea-icon{font-size:20px;flex-shrink:0;margin-top:2px;}
+.idea-text{font-size:14px;color:var(--text2);line-height:1.6;}
+.idea-text strong{color:#fff;}
+.ielts-topic{background:var(--navy);border:1px solid rgba(74,158,224,0.25);border-radius:var(--r-sm);padding:1rem 1.25rem;margin-bottom:1.25rem;}
+.ielts-topic-label{font-size:10px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--blue);margin-bottom:.25rem;}
+.ielts-topic h4{font-size:16px;font-weight:700;color:#fff;}
+.vocab-chips{display:flex;flex-wrap:wrap;gap:6px;margin-top:.75rem;}
+.chip{font-size:12px;padding:4px 12px;border-radius:99px;background:rgba(255,255,255,0.06);border:1px solid var(--border);color:var(--text2);}
+.chip.amber{background:var(--amber-bg);border-color:var(--amber-border);color:var(--amber-300);}
+.ielts-qs{display:flex;flex-direction:column;gap:8px;margin-top:1rem;}
+.ielts-q{display:flex;gap:10px;background:var(--surface2);border-radius:var(--r-sm);padding:.875rem 1rem;}
+.ielts-q-num{font-size:11px;font-weight:700;color:var(--blue);min-width:20px;}
+.ielts-q-text{font-size:13px;color:var(--text2);}
+.ielts-w2{background:var(--gold-light,rgba(245,158,11,0.1));border:1px solid var(--amber-border);border-radius:var(--r-sm);padding:1rem 1.25rem;margin-top:1rem;}
+.ielts-w2-label{font-size:10px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--amber-300);margin-bottom:.5rem;}
+.ielts-w2 p{font-size:14px;color:var(--text2);line-height:1.7;font-style:italic;}
+.star-words{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:1.25rem;}
+.star-word{display:flex;align-items:center;gap:6px;padding:6px 14px;border-radius:99px;background:var(--amber-bg);border:1px solid var(--amber-border);font-size:13px;font-weight:600;color:var(--amber-300);}
+.think-box{background:var(--surface2);border:1px solid var(--border2);border-radius:var(--r-sm);padding:1rem 1.25rem;margin-bottom:1rem;}
+.think-box .think-head{font-size:12px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;color:var(--amber-300);margin-bottom:.5rem;}
+.think-box p{font-size:14px;color:var(--text2);}
+.summary-box{background:var(--navy);border:1px solid rgba(74,158,224,0.3);border-radius:var(--r-sm);padding:1.25rem 1.5rem;margin-bottom:1.25rem;}
+.summary-box .think-head{color:var(--blue);}
+.summary-box p{font-size:14px;color:rgba(255,255,255,0.85);line-height:1.7;}
+.project-box{background:var(--surface2);border:1px solid var(--amber-border);border-radius:var(--r-sm);padding:1.25rem 1.5rem;margin-bottom:1.25rem;}
+.project-box .think-head{color:var(--amber-300);font-size:12px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;margin-bottom:.75rem;}
+.project-box ol{margin:0 0 0 1.1rem;padding:0;}
+.project-box li{font-size:14px;color:var(--text2);line-height:1.7;margin-bottom:.4rem;}
+.mini-quiz-q{background:var(--surface2);border:1px solid var(--border2);border-radius:var(--r-sm);padding:1rem;margin-bottom:.75rem;}
+.mq-text{font-size:13px;font-weight:600;color:#fff;margin-bottom:.625rem;}
+.mq-opts{display:flex;flex-direction:column;gap:5px;}
+.mq-opt{padding:7px 12px;border-radius:6px;border:1px solid var(--border);background:transparent;font-size:12px;color:var(--text2);cursor:pointer;text-align:left;transition:all .15s;}
+.mq-opt:hover{border-color:var(--amber-border);background:var(--amber-bg);}
+.mq-opt.correct{border-color:var(--teal-border);background:var(--teal-bg);color:#fff;}
+.mq-opt.wrong{border-color:rgba(224,92,58,0.4);background:var(--coral-bg);color:#fff;}
+.lesson-nav{display:flex;gap:10px;margin-top:2rem;}
+.nav-btn{display:flex;align-items:center;gap:6px;padding:.75rem 1.25rem;border-radius:10px;font-size:13px;font-weight:600;cursor:pointer;text-decoration:none;border:1px solid var(--border);color:var(--text2);background:var(--surface);transition:all .15s;flex:1;justify-content:center;}
+.nav-btn:hover{border-color:var(--border2);color:#fff;}
+.nav-btn.primary{background:var(--amber-400);color:#1A0800;border-color:transparent;}
+.nav-btn.primary:hover{opacity:.9;}
+.site-footer{background:#111;border-top:1px solid rgba(255,255,255,0.07);text-align:center;padding:1.5rem;font-size:12px;color:rgba(255,255,255,0.3);}
+.site-footer strong{color:var(--amber-300);}
+@media(max-width:600px){.vocab-grid{grid-template-columns:1fr;}.lesson-nav{flex-direction:column;}}
+</style>
+</head>
+<body>
+<header class="site-header"><div class="hdr">
+<a class="logo-wrap" href="index.html"><div class="logo-icon"><svg viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path d="M6 24 C8 18,14 10,24 6 C20 10,18 14,20 18 C16 16,12 18,6 24Z" fill="white"/><path d="M20 18 C22 20,22 23,20 26 C18 24,18 21,20 18Z" fill="rgba(255,255,255,0.5)"/></svg></div>
+<span class="logo-name">Lexilink Ideation IELTS STUDIO</span></a>
+<div class="hdr-pipe"></div>
+<a class="hdr-back" href="index.html"><i class="ti ti-arrow-left" aria-hidden="true"></i> Vol. 1</a>
+<div class="hdr-spacer"></div><span class="hdr-badge">Lesson 23B</span></div></header>
+<section class="lesson-hero">
+<p class="lesson-eyebrow">Chapter 23 · The Greek Gods</p>
+<h1>Gods and Their Powers</h1>
+<p>Meet the Olympian family — and watch them choose sides in a growing war</p>
+<div class="lesson-pills"><span class="l-pill">📖 Story + Vocabulary</span><span class="l-pill">🎤 Speaking</span><span class="l-pill">✏️ Grammar</span><span class="l-pill">⭐ CEFR A2–B1</span></div>
+</section>
+<div class="lesson-progress"><div class="lp-inner">
+<div class="lp-labels"><span>Lesson 23B of 3</span><span style="color:var(--amber-300)">10 parts</span></div>
+<div class="lp-track"><div class="lp-fill"></div></div>
+<div class="lp-parts">
+<span class="lp-part active" onclick="scrollToId('p1')">1 Vocab</span>
+<span class="lp-part" onclick="scrollToId('p2')">2 Story</span>
+<span class="lp-part" onclick="scrollToId('p3')">3 Reading</span>
+<span class="lp-part" onclick="scrollToId('p4')">4 Grammar</span>
+<span class="lp-part" onclick="scrollToId('p5')">5 Builder</span>
+<span class="lp-part" onclick="scrollToId('p6')">6 Speaking 1</span>
+<span class="lp-part" onclick="scrollToId('p7')">7 Speaking 2</span>
+<span class="lp-part" onclick="scrollToId('p8')">8 Ideas</span>
+<span class="lp-part" onclick="scrollToId('p9')">9 IELTS</span>
+<span class="lp-part" onclick="scrollToId('p10')">10 Review</span>
+</div></div></div>
+<main class="main">
+<section class="sec" id="p1"><div class="sec-header"><div class="sec-num">1</div><div><div class="sec-title">Vocabulary</div><div class="sec-sub">Click each word to learn more</div></div></div><div class="vocab-grid"><div class="vocab-card" onclick="toggleVocab(this)"><div class="vc-top"><span class="vc-word">fall in love</span><span class="vc-pos">phrase</span></div><div class="vc-pron">/fɔːl ɪn lʌv/</div><div class="vc-cn">坠入爱河</div><div class="vc-detail"><div class="vc-def">To suddenly develop strong romantic feelings for someone.</div><div class="vc-ex">&quot;Aphrodite made Helen fall in love with Paris the moment she saw him.&quot;</div></div></div><div class="vocab-card" onclick="toggleVocab(this)"><div class="vc-top"><span class="vc-word">unfortunately</span><span class="vc-pos">adverb</span></div><div class="vc-pron">/ʌnˈfɔː.tʃən.ət.li/</div><div class="vc-cn">不幸地</div><div class="vc-detail"><div class="vc-def">Used to introduce bad or unlucky news.</div><div class="vc-ex">&quot;Unfortunately, Helen was already married to another king.&quot;</div></div></div><div class="vocab-card" onclick="toggleVocab(this)"><div class="vc-top"><span class="vc-word">furious</span><span class="vc-pos">adjective</span></div><div class="vc-pron">/ˈfjʊə.ri.əs/</div><div class="vc-cn">狂怒的</div><div class="vc-detail"><div class="vc-def">Extremely angry.</div><div class="vc-ex">&quot;Menelaus was furious when he discovered that his wife had run away.&quot;</div></div></div><div class="vocab-card" onclick="toggleVocab(this)"><div class="vc-top"><span class="vc-word">betray</span><span class="vc-pos">verb</span></div><div class="vc-pron">/bɪˈtreɪ/</div><div class="vc-cn">背叛</div><div class="vc-detail"><div class="vc-def">To be disloyal to someone who trusts you.</div><div class="vc-ex">&quot;Menelaus felt utterly betrayed when his wife left him for Paris.&quot;</div></div></div><div class="vocab-card" onclick="toggleVocab(this)"><div class="vc-top"><span class="vc-word">ally</span><span class="vc-pos">noun</span></div><div class="vc-pron">/ˈæl.aɪ/</div><div class="vc-cn">盟友</div><div class="vc-detail"><div class="vc-def">A person, group, or country that helps and supports another in a conflict.</div><div class="vc-ex">&quot;Some gods became allies of Troy, while others fought against it.&quot;</div></div></div><div class="vocab-card" onclick="toggleVocab(this)"><div class="vc-top"><span class="vc-word">resent</span><span class="vc-pos">verb</span></div><div class="vc-pron">/rɪˈzent/</div><div class="vc-cn">怨恨</div><div class="vc-detail"><div class="vc-def">To feel bitter or angry about something, often for a long time.</div><div class="vc-ex">&quot;Hera and Athena still resented Paris for rejecting them.&quot;</div></div></div><div class="vocab-card" onclick="toggleVocab(this)"><div class="vc-top"><span class="vc-word">side with</span><span class="vc-pos">phrase</span></div><div class="vc-pron">/saɪd wɪð/</div><div class="vc-cn">支持；站在...一边</div><div class="vc-detail"><div class="vc-def">To support one group or person in an argument or conflict.</div><div class="vc-ex">&quot;Aphrodite decided to side with Troy, since Paris had chosen her.&quot;</div></div></div><div class="vocab-card" onclick="toggleVocab(this)"><div class="vc-top"><span class="vc-word">bloodshed</span><span class="vc-pos">noun</span></div><div class="vc-pron">/ˈblʌd.ʃed/</div><div class="vc-cn">流血；杀戮</div><div class="vc-detail"><div class="vc-def">Violent killing, especially during war or fighting.</div><div class="vc-ex">&quot;The Trojan War would bring years of bloodshed and death.&quot;</div></div></div><div class="vocab-card" onclick="toggleVocab(this)"><div class="vc-top"><span class="vc-word">root cause</span><span class="vc-pos">noun phrase</span></div><div class="vc-pron">/ruːt kɔːz/</div><div class="vc-cn">根本原因</div><div class="vc-detail"><div class="vc-def">The most basic reason something happened.</div><div class="vc-ex">&quot;The root cause of the entire war was a single golden apple.&quot;</div></div></div><div class="vocab-card" onclick="toggleVocab(this)"><div class="vc-top"><span class="vc-word">myth</span><span class="vc-pos">noun</span></div><div class="vc-pron">/mɪθ/</div><div class="vc-cn">神话</div><div class="vc-detail"><div class="vc-def">A traditional story, often about gods or heroes, that explains something about the world.</div><div class="vc-ex">&quot;The story of the golden apple is one of the most famous Greek myths.&quot;</div></div></div><div class="vocab-card" onclick="toggleVocab(this)"><div class="vc-top"><span class="vc-word">Olympian</span><span class="vc-pos">noun</span></div><div class="vc-pron">/əˈlɪm.pi.ən/</div><div class="vc-cn">奥林匹斯神</div><div class="vc-detail"><div class="vc-def">One of the twelve chief gods and goddesses who lived on Mount Olympus.</div><div class="vc-ex">&quot;Zeus, Hera, and Athena were three of the twelve great Olympians.&quot;</div></div></div><div class="vocab-card" onclick="toggleVocab(this)"><div class="vc-top"><span class="vc-word">domain</span><span class="vc-pos">noun</span></div><div class="vc-pron">/dəˈmeɪn/</div><div class="vc-cn">领域；掌管范围</div><div class="vc-detail"><div class="vc-def">An area of knowledge, power, or control belonging to a particular person or thing.</div><div class="vc-ex">&quot;Each god&#x27;s domain gave them power over a different part of life.&quot;</div></div></div><div class="vocab-card" onclick="toggleVocab(this)"><div class="vc-top"><span class="vc-word">wisdom</span><span class="vc-pos">noun</span></div><div class="vc-pron">/ˈwɪz.dəm/</div><div class="vc-cn">智慧</div><div class="vc-detail"><div class="vc-def">The quality of having knowledge, experience, and good judgment.</div><div class="vc-ex">&quot;Athena was the goddess of wisdom as well as war.&quot;</div></div></div><div class="vocab-card" onclick="toggleVocab(this)"><div class="vc-top"><span class="vc-word">messenger</span><span class="vc-pos">noun</span></div><div class="vc-pron">/ˈmes.ɪn.dʒər/</div><div class="vc-cn">信使</div><div class="vc-detail"><div class="vc-def">A person (or god) who carries and delivers messages.</div><div class="vc-ex">&quot;Hermes was the messenger god, famous for his winged sandals.&quot;</div></div></div><div class="vocab-card" onclick="toggleVocab(this)"><div class="vc-top"><span class="vc-word">harvest</span><span class="vc-pos">noun</span></div><div class="vc-pron">/ˈhɑː.vɪst/</div><div class="vc-cn">收获；丰收</div><div class="vc-detail"><div class="vc-def">The gathering of crops, or the crops themselves, at the end of a growing season.</div><div class="vc-ex">&quot;Demeter was the goddess of the harvest, watching over crops and farmland.&quot;</div></div></div><div class="vocab-card" onclick="toggleVocab(this)"><div class="vc-top"><span class="vc-word">underworld</span><span class="vc-pos">noun</span></div><div class="vc-pron">/ˈʌn.də.wɜːld/</div><div class="vc-cn">冥界</div><div class="vc-detail"><div class="vc-def">In mythology, the world of the dead, ruled by a god beneath the earth.</div><div class="vc-ex">&quot;Hades ruled the underworld, the kingdom of the dead.&quot;</div></div></div><div class="vocab-card" onclick="toggleVocab(this)"><div class="vc-top"><span class="vc-word">thunderbolt</span><span class="vc-pos">noun</span></div><div class="vc-pron">/ˈθʌn.də.bəʊlt/</div><div class="vc-cn">雷电</div><div class="vc-detail"><div class="vc-def">A flash of lightning together with a crash of thunder, used as Zeus&#x27;s weapon in myth.</div><div class="vc-ex">&quot;Zeus was famous for hurling thunderbolts down from the sky.&quot;</div></div></div></div></section>
+<section class="sec" id="p2"><div class="sec-header"><div class="sec-num">2</div><div><div class="sec-title">The Story</div><div class="sec-sub">Read carefully. Notice the bold words.</div></div></div><div class="story-body"><div class="story-icon">⚡</div><p>Now that you have met Zeus, Hera, Athena, and Aphrodite, it is worth pausing the story to properly introduce the whole family of Greek gods. The Greeks believed in twelve great <span class="story-hl">Olympians</span>, each with their own special <span class="story-hl">domain</span> — a particular area of life they controlled.</p><p>Zeus ruled the sky and carried a mighty <span class="story-hl">thunderbolt</span> as his weapon; Hera, his wife, watched over marriage and family. Athena, born fully grown from Zeus's head, was the goddess of <span class="story-hl">wisdom</span> as well as war. Aphrodite ruled over love and beauty, while Poseidon, Zeus's brother, commanded the sea. Hades, another brother, ruled the shadowy <span class="story-hl">underworld</span> beneath the earth. Other Olympians included Apollo, god of the sun and music; Artemis, goddess of the hunt and the moon; Ares, the fierce god of war; Hermes, the swift <span class="story-hl">messenger</span> god; and Demeter, goddess of the <span class="story-hl">harvest</span>, who made crops grow.</p><p>With the whole family in mind, let's return to our story. Aphrodite kept her promise to Paris without delay. She travelled to the palace of Helen — the most beautiful woman in the world — and made Helen <span class="story-hl">fall in love</span> with Paris the moment she saw him. Helen ran away with Paris to live with him in Troy.</p><p><span class="story-hl">Unfortunately</span>, Helen was already married — to Menelaus, the king of the Greeks! When Menelaus discovered that his wife had vanished, he was absolutely <span class="story-hl">furious</span>, feeling completely <span class="story-hl">betrayed</span> by both his wife and the prince of Troy. He called on the gods and on every Greek soldier he could find to help him fight against Troy, defeat Paris, and win Helen back.</p><p>This is where the gods' different powers and personalities truly came into play. Hera, still <span class="story-hl">resenting</span> Paris for rejecting her at the judgment, chose to fight against Troy, and Athena, goddess of war, joined her as an <span class="story-hl">ally</span>. Aphrodite, of course, remained loyal to Paris and decided to <span class="story-hl">side with</span> Troy. Apollo, the sun god, also supported Troy, while Poseidon, god of the sea, wanted to see the city completely destroyed and joined the other side.</p><p>One by one, the Olympians lined up for or against Troy — not because of who was right or wrong, but because of old grudges, personal loyalty, and wounded pride. And so the Trojan War began, lasting for years and years of <span class="story-hl">bloodshed</span> and death. If you trace this entire war back to its true beginning, you arrive at something surprisingly small: a single golden apple. This <span class="story-hl">myth</span>'s clearest lesson is that the <span class="story-hl">root cause</span> of even the greatest conflicts can be a tiny, personal choice.</p><div class="story-icon">⚔️</div></div></section>
+<section class="sec" id="p3"><div class="sec-header"><div class="sec-num">3</div><div><div class="sec-title">Reading Comprehension</div><div class="sec-sub">Choose the best answer. Get instant feedback!</div></div></div><div class="quiz-list"><div class="q-item"><div class="q-text">1. How many great Olympian gods and goddesses did the Greeks believe in?</div><div class="q-opts"><button class="q-opt" onclick="mcq(this,'wrong')">Six.</button><button class="q-opt" onclick="mcq(this,'correct')">Twelve.</button><button class="q-opt" onclick="mcq(this,'wrong')">Twenty.</button></div><div class="q-feedback"></div></div><div class="q-item"><div class="q-text">2. Every Olympian god controlled the exact same domain, or area of life.</div><div class="tf-opts"><button class="tf-btn" onclick="tf(this,'wrong','Actually, each Olympian had their own special domain — Zeus ruled the sky, Poseidon the sea, and so on!')">True</button><button class="tf-btn" onclick="tf(this,'correct','Correct! Each Olympian had a unique domain, such as the sky, the sea, or wisdom.')">False</button></div><div class="q-feedback"></div></div><div class="q-item"><div class="q-text">3. Who was the messenger god, famous for his winged sandals?</div><div class="q-opts"><button class="q-opt" onclick="mcq(this,'wrong')">Apollo.</button><button class="q-opt" onclick="mcq(this,'correct')">Hermes.</button><button class="q-opt" onclick="mcq(this,'wrong')">Ares.</button></div><div class="q-feedback"></div></div><div class="q-item"><div class="q-text">4. Why was Menelaus furious?</div><div class="q-opts"><button class="q-opt" onclick="mcq(this,'wrong')">His crops had failed.</button><button class="q-opt" onclick="mcq(this,'correct')">His wife Helen had run away with Paris.</button><button class="q-opt" onclick="mcq(this,'wrong')">Zeus had insulted him.</button></div><div class="q-feedback"></div></div><div class="q-item"><div class="q-text">5. Aphrodite sided with Troy because Paris had chosen her at the judgment.</div><div class="tf-opts"><button class="tf-btn" onclick="tf(this,'correct','Correct! Aphrodite remained loyal to Paris and supported Troy.')">True</button><button class="tf-btn" onclick="tf(this,'wrong','Actually, Aphrodite DID side with Troy, remaining loyal to Paris.')">False</button></div><div class="q-feedback"></div></div><div class="q-item"><div class="q-text">6. What is the true &#x27;root cause&#x27; of the entire Trojan War, according to this lesson?</div><div class="q-opts"><button class="q-opt" onclick="mcq(this,'wrong')">A disagreement over land.</button><button class="q-opt" onclick="mcq(this,'correct')">A single golden apple.</button><button class="q-opt" onclick="mcq(this,'wrong')">A trade dispute.</button></div><div class="q-feedback"></div></div></div></section>
+<section class="sec" id="p4"><div class="sec-header"><div class="sec-num">4</div><div><div class="sec-title">Language Focus</div><div class="sec-sub">Grammar from the story — learn through meaning</div></div></div><div class="grammar-box"><div class="grammar-label">📌 Passive Voice — 'was/were + past participle'</div><div class="grammar-rule">We use the passive voice when the action matters more than who did it.</div><div class="grammar-eg">Helen <span>was married</span> to Menelaus.</div><div class="grammar-eg">The war <span>was fought</span> because of a single golden apple.</div><div class="grammar-eg">A queen&#39;s heart <span>was changed</span> forever by Aphrodite&#39;s magic.</div><div class="grammar-note"><strong>Tip:</strong> Passive voice: be (was/were) + past participle. Useful for describing what happened TO someone.</div></div><div class="grammar-box"><div class="grammar-label">📌 Contrast Linkers — 'while' and 'whereas'</div><div class="grammar-rule">We use 'while' and 'whereas' to compare two very different situations.</div><div class="grammar-eg"><span>While</span> Hera fought against Troy, Aphrodite fought for it.</div><div class="grammar-eg">Athena sided against Paris, <span>whereas</span> Aphrodite remained loyal to him.</div><div class="grammar-eg">Zeus ruled the sky, <span>while</span> Poseidon ruled the sea.</div><div class="grammar-note"><strong>Tip:</strong> 'While' and 'whereas' highlight a clear contrast between two clauses in the same sentence.</div></div><div class="grammar-box"><div class="grammar-label">📌 'All because of' — Emphasising a Small Cause</div><div class="grammar-rule">We use 'all because of + noun' to emphasise that something surprisingly small caused a huge result.</div><div class="grammar-eg">The war began <span>all because of</span> a single golden apple.</div><div class="grammar-eg">Years of bloodshed happened <span>all because of</span> one choice.</div><div class="grammar-eg">Two great civilisations went to war <span>all because of</span> a wedding gift.</div><div class="grammar-note"><strong>Tip:</strong> This phrase emphasises surprise — that something so small could cause something so large.</div></div></section>
+<section class="sec" id="p5"><div class="sec-header"><div class="sec-num">5</div><div><div class="sec-title">Sentence Builder</div><div class="sec-sub">Build your skills with the vocabulary</div></div></div><div class="sb-activity"><div class="sb-label">🔀 Unscramble the sentence</div><p style="font-size:13px;color:var(--text3);margin-bottom:.75rem;">Put these words in the correct order:</p><div style="margin-bottom:.75rem;"><span class="sb-tile">sided</span><span class="sb-tile">Aphrodite</span><span class="sb-tile">Troy</span><span class="sb-tile">with</span></div><input class="sb-input" id="us1" placeholder="Type your sentence here..."/><button class="sb-check" onclick="checkUnscramble('us1','aphrodite sided with troy','ur1')">Check ✓</button><div class="sb-result" id="ur1"></div></div><div class="sb-activity"><div class="sb-label">✏️ Fill in the blank</div><p style="font-size:13px;color:var(--text2);margin-bottom:.5rem;">1. Poseidon, the god of the sea, wanted to see Troy ________.</p><input class="sb-input" id="f1" placeholder="Your answer..."/><button class="sb-check" onclick="checkFill('f1','destroyed','rf1')">Check ✓</button><div class="sb-result" id="rf1"></div></div><div class="sb-activity"><div class="sb-label">✏️ Fill in the blank</div><p style="font-size:13px;color:var(--text2);margin-bottom:.5rem;">2. Athena was the goddess of war and ________.</p><input class="sb-input" id="f2" placeholder="Your answer..."/><button class="sb-check" onclick="checkFill('f2','wisdom','rf2')">Check ✓</button><div class="sb-result" id="rf2"></div></div><div class="sb-activity"><div class="sb-label">🇨🇳 Translate into English</div><p style="font-size:13px;color:var(--text2);margin-bottom:.5rem;">赫拉决定反对特洛伊作战。</p><input class="sb-input" id="tr1" placeholder="Write your English sentence..."/><button class="sb-check" onclick="revealAns('tr1','Hera decided to fight against Troy.','rt1')">Show model answer</button><div class="sb-result" id="rt1"></div></div></section>
+<section class="sec" id="p6"><div class="sec-header"><div class="sec-num">6</div><div><div class="sec-title">Speaking — Level 1</div><div class="sec-sub">Answer in one complete sentence</div></div></div><div class="speak-level"><span class="speak-badge l1">🟢 Level 1 · One sentence</span><div class="speak-q"><p>How many Olympian gods were there?</p><div class="speak-hint">💡 Start with: <span>"There were..."</span></div></div><div class="speak-q"><p>What was Poseidon the god of?</p><div class="speak-hint">💡 Start with: <span>"Poseidon was the god of..."</span></div></div><div class="speak-q"><p>Which side did Aphrodite choose?</p><div class="speak-hint">💡 Start with: <span>"Aphrodite chose to..."</span></div></div></div></section>
+<section class="sec" id="p7"><div class="sec-header"><div class="sec-num">7</div><div><div class="sec-title">Speaking — Level 2 &amp; 3</div><div class="sec-sub">Extend your answer. Share your opinion.</div></div></div><div class="speak-level"><span class="speak-badge l2">🟡 Level 2 · 2–3 sentences</span><div class="speak-q"><p>Explain why different gods chose different sides in the coming war.</p><div class="speak-hint">💡 Think about: <span>old grudges · personal loyalty · wounded pride</span></div></div><div class="speak-q"><p>Choose two Olympians and describe their powers in your own words.</p><div class="speak-hint">💡 Try: <span>&quot;... is the god/goddess of..., and has the power to...&quot;</span></div></div></div><div class="speak-level"><span class="speak-badge l3">🔵 Level 3 · Your opinion</span><div class="speak-q"><p>Do you think the gods&#x27; reasons for choosing sides were fair or selfish? Use evidence from the story to explain your opinion.</p><div class="speak-hint">💡 Use: <span>I believe... / For example... / However...</span></div></div></div></section>
+<section class="sec" id="p8"><div class="sec-header"><div class="sec-num">8</div><div><div class="sec-title">Ideas &amp; Society</div><div class="sec-sub">Think about big ideas. There is no wrong answer.</div></div></div><div class="idea-q"><div class="idea-icon">🏳️</div><div class="idea-text"><strong>Even powerful beings can act selfishly in conflicts.</strong> The gods didn't choose sides based on justice — they chose based on personal feelings. Do you think even the most powerful leaders today sometimes act this way?</div></div><div class="idea-q"><div class="idea-icon">⚡</div><div class="idea-text"><strong>Every culture invents gods to explain the forces of nature and life.</strong> The Greeks gave each god a specific power — the sky, the sea, love, wisdom. Why do you think ancient people organised their gods this way?</div></div><div class="idea-q"><div class="idea-icon">🌍</div><div class="idea-text"><strong>Conflicts often grow bigger as more people or groups get involved.</strong> What began as an argument between three goddesses grew to involve gods, kings, entire armies, and years of war. Why do conflicts often expand this way?</div></div><div class="idea-q"><div class="idea-icon">⚖️</div><div class="idea-text"><strong>Was anyone in this story truly 'right'?</strong> Looking at the whole story — Zeus, Eris, the three goddesses, Paris, Helen, and Menelaus — do you think any single person or god was completely blameless? Why or why not?</div></div></section>
+<section class="sec" id="p9"><div class="sec-header"><div class="sec-num">9</div><div><div class="sec-title">IELTS Content Builder</div><div class="sec-sub">Planting seeds for your future IELTS exam</div></div></div><div class="ielts-topic"><div class="ielts-topic-label">📘 Today's IELTS Topic</div><h4>Alliances and Loyalty in Conflict</h4></div><p style="font-size:12px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;color:var(--text3);margin-bottom:.5rem;">Key vocabulary</p><div class="vocab-chips"><span class="chip amber">alliance</span><span class="chip amber">loyalty</span><span class="chip amber">grudge</span><span class="chip amber">mythology</span><span class="chip">take a side</span><span class="chip">personal bias</span><span class="chip">long-standing rivalry</span><span class="chip">escalating conflict</span></div><p style="font-size:12px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;color:var(--text3);margin:.875rem 0 .5rem;">Useful collocations</p><div class="vocab-chips"><span class="chip">form an alliance</span><span class="chip">hold a grudge</span><span class="chip">remain neutral</span><span class="chip">escalate into war</span></div><div class="ielts-qs"><div class="ielts-q"><div class="ielts-q-num">S1</div><div class="ielts-q-text">Why do individuals or countries form alliances during a conflict?</div></div><div class="ielts-q"><div class="ielts-q-num">S2</div><div class="ielts-q-text">Can personal loyalty ever cloud good judgment in a dispute?</div></div><div class="ielts-q"><div class="ielts-q-num">S3</div><div class="ielts-q-text">Do different cultures need myths to explain the natural world?</div></div></div><div class="ielts-w2"><div class="ielts-w2-label">✏️ IELTS Writing Task 2 — Future Practice</div><p>&quot;Some people believe that loyalty to friends or allies should always come first, even during a disagreement, while others believe that fairness and objectivity are more important. Discuss both views and give your own opinion.&quot;</p></div></section>
+<section class="sec" id="p10"><div class="sec-header"><div class="sec-num">10</div><div><div class="sec-title">Review</div><div class="sec-sub">Remember what you learned!</div></div></div><p style="font-size:12px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;color:var(--text3);margin-bottom:.75rem;">⭐ Star Words</p><div class="star-words"><span class="star-word">⭐ Olympian</span><span class="star-word">⭐ domain</span><span class="star-word">⭐ wisdom</span><span class="star-word">⭐ underworld</span><span class="star-word">⭐ thunderbolt</span><span class="star-word">⭐ messenger</span><span class="star-word">⭐ harvest</span><span class="star-word">⭐ furious</span><span class="star-word">⭐ betray</span><span class="star-word">⭐ ally</span><span class="star-word">⭐ resent</span><span class="star-word">⭐ side with</span><span class="star-word">⭐ myth</span><span class="star-word">⭐ root cause</span></div><div class="think-box"><div class="think-head">💡 Big Idea</div><p>As the twelve Olympians revealed their unique powers, old grudges pushed them into opposing camps, dragging both gods and mortals into the Trojan War. <strong>Conflicts often grow because everyone involved — even the powerful — chooses sides for personal reasons.</strong></p></div><p style="font-size:12px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;color:var(--text3);margin:.875rem 0 .75rem;">🧠 Mini Quiz</p><div class="mini-quiz-q"><div class="mq-text">A. How many Olympian gods were there?</div><div class="mq-opts"><button class="mq-opt" onclick="mq(this,'wrong')">Six</button><button class="mq-opt" onclick="mq(this,'correct')">Twelve</button><button class="mq-opt" onclick="mq(this,'wrong')">Twenty</button></div></div><div class="mini-quiz-q"><div class="mq-text">B. Who ruled the underworld?</div><div class="mq-opts"><button class="mq-opt" onclick="mq(this,'wrong')">Zeus</button><button class="mq-opt" onclick="mq(this,'correct')">Hades</button><button class="mq-opt" onclick="mq(this,'wrong')">Poseidon</button></div></div><div class="mini-quiz-q"><div class="mq-text">C. What was the true root cause of the Trojan War?</div><div class="mq-opts"><button class="mq-opt" onclick="mq(this,'wrong')">A land dispute</button><button class="mq-opt" onclick="mq(this,'correct')">The golden apple</button><button class="mq-opt" onclick="mq(this,'wrong')">A trade disagreement</button></div></div><div class="lesson-nav"><a class="nav-btn" href="ch23-a.html"><i class="ti ti-arrow-left"></i> Lesson 23A</a><a class="nav-btn primary" href="ch23-c.html">Next: Lesson 23C — Chapter Review <i class="ti ti-arrow-right"></i></a></div></section>
+</main>
+<footer class="site-footer"><strong>Lexilink Ideation IELTS STUDIO</strong> · History ESL Course · Chapter 23 — Lesson B</footer>
+<script>
+function toggleVocab(card){card.classList.toggle('open');}
+function mcq(btn,type){
+  const item=btn.closest('.q-item');
+  item.querySelectorAll('.q-opt').forEach(b=>{b.classList.remove('correct','wrong');b.disabled=true;});
+  btn.classList.add(type);
+  const fb=item.querySelector('.q-feedback');
+  fb.className='q-feedback show '+(type==='correct'?'good':'bad');
+  fb.textContent=type==='correct'?'\u2713 Correct! Well done!':'\u2717 Not quite. Read the story again and try to remember.';
+}
+function tf(btn,type,msg){
+  const item=btn.closest('.q-item');
+  item.querySelectorAll('.tf-btn').forEach(b=>{b.classList.remove('correct','wrong');b.disabled=true;});
+  btn.classList.add(type);
+  const fb=item.querySelector('.q-feedback');
+  fb.className='q-feedback show '+(type==='correct'?'good':'bad');
+  fb.textContent=(type==='correct'?'\u2713 ':'\u2717 ')+msg;
+}
+function mq(btn,type){
+  const item=btn.closest('.mini-quiz-q');
+  item.querySelectorAll('.mq-opt').forEach(b=>{b.classList.remove('correct','wrong');b.disabled=true;});
+  btn.classList.add(type);
+}
+function checkUnscramble(id,answer,rid){
+  const val=document.getElementById(id).value.trim().toLowerCase().replace(/[^a-z\s]/g,'').replace(/\s+/g,' ');
+  const ans=answer.toLowerCase().replace(/[^a-z\s]/g,'').replace(/\s+/g,' ');
+  const r=document.getElementById(rid);
+  r.className='sb-result show '+(val===ans?'ok':'no');
+  r.textContent=val===ans?'\u2713 Perfect! "'+answer+'"':'\u2717 Try again. Check the word order.';
+}
+function checkFill(id,answer,rid){
+  const val=document.getElementById(id).value.trim().toLowerCase();
+  const r=document.getElementById(rid);
+  const ans=answer.toLowerCase();
+  r.className='sb-result show '+(val===ans?'ok':'no');
+  r.textContent=val===ans?'\u2713 Correct!':'\u2717 The answer is: "'+answer+'"';
+}
+function revealAns(id,answer,rid){
+  const r=document.getElementById(rid);
+  r.className='sb-result show ok';
+  r.textContent='\u2705 Model answer: "'+answer+'"';
+}
+function scrollToId(id){document.getElementById(id).scrollIntoView({behavior:'smooth',block:'start'});}
+const parts=['p1','p2','p3','p4','p5','p6','p7','p8','p9','p10'];
+const partEls=document.querySelectorAll('.lp-part');
+window.addEventListener('scroll',()=>{
+  let current=0;
+  parts.forEach((id,i)=>{const el=document.getElementById(id);if(el&&el.getBoundingClientRect().top<200)current=i;});
+  partEls.forEach((el,i)=>{el.classList.remove('active','done');if(i<current)el.classList.add('done');else if(i===current)el.classList.add('active');});
+  const pct=Math.round(((current+1)/10)*100);
+  document.querySelector('.lp-fill').style.width=pct+'%';
+});
+</script>
+</body>
+</html>
