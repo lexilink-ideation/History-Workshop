@@ -1,0 +1,558 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+<title>Lesson 27A — A Tiny Village in the Hills | Lexilink History Workshop</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"/>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet"/>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@latest/tabler-icons.min.css"/>
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
+:root{
+  --bg:#0F0800;--surface:rgba(255,255,255,0.04);--surface2:rgba(255,255,255,0.07);
+  --border:rgba(255,255,255,0.10);--border2:rgba(255,255,255,0.06);
+  --amber-300:#E8A832;--amber-400:#D4890F;--amber-500:#B8720A;
+  --amber-bg:rgba(212,137,15,0.12);--amber-border:rgba(212,137,15,0.3);
+  --text:#fff;--text2:rgba(255,255,255,0.72);--text3:rgba(255,255,255,0.45);
+  --teal:#1D9E75;--teal-bg:rgba(29,158,117,0.12);--teal-border:rgba(29,158,117,0.3);
+  --coral:#E05C3A;--coral-bg:rgba(224,92,58,0.12);
+  --blue:#4A9EE0;--blue-bg:rgba(74,158,224,0.12);
+  --r:12px;--r-sm:8px;
+}
+html{scroll-behavior:smooth;}
+body{font-family:'Inter',sans-serif;background:var(--bg);color:var(--text);min-height:100vh;line-height:1.6;}
+.site-header{background:#111;border-bottom:1px solid rgba(255,255,255,0.08);position:sticky;top:0;z-index:100;}
+.hdr{max-width:860px;margin:0 auto;padding:0 1.5rem;height:54px;display:flex;align-items:center;gap:12px;}
+.logo-wrap{display:flex;align-items:center;gap:8px;text-decoration:none;}
+.logo-icon{width:30px;height:30px;display:flex;align-items:center;justify-content:center;}
+.logo-icon svg{width:26px;height:26px;}
+.logo-name{font-size:13px;font-weight:700;color:#fff;}
+.hdr-pipe{width:1px;height:20px;background:rgba(255,255,255,0.15);}
+.hdr-back{display:flex;align-items:center;gap:5px;font-size:12px;color:var(--text3);text-decoration:none;transition:color .15s;}
+.hdr-back:hover{color:var(--text2);}
+.hdr-spacer{flex:1;}
+.hdr-badge{font-size:10px;font-weight:700;letter-spacing:.05em;padding:3px 10px;border-radius:99px;border:1px solid var(--amber-border);color:var(--amber-300);background:var(--amber-bg);}
+.lesson-hero{background:linear-gradient(135deg,#2C1600 0%,#5C3200 40%,#7A4500 100%);padding:3rem 1.5rem 2.5rem;text-align:center;position:relative;overflow:hidden;}
+.lesson-hero::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse 70% 60% at 50% 50%,rgba(200,130,0,0.15),transparent);pointer-events:none;}
+.lesson-eyebrow{font-size:10px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--amber-300);margin-bottom:.75rem;}
+.lesson-hero h1{font-size:clamp(22px,4vw,36px);font-weight:700;color:#fff;letter-spacing:-.02em;margin-bottom:.5rem;}
+.lesson-hero p{font-size:14px;color:rgba(255,255,255,0.65);max-width:520px;margin:0 auto .875rem;}
+.lesson-pills{display:flex;flex-wrap:wrap;justify-content:center;gap:8px;}
+.l-pill{font-size:11px;font-weight:500;padding:4px 12px;border-radius:99px;border:1px solid rgba(255,255,255,0.18);color:rgba(255,255,255,0.75);background:rgba(255,255,255,0.06);}
+.lesson-progress{background:#1A1100;border-bottom:1px solid rgba(255,255,255,0.06);padding:.75rem 1.5rem;}
+.lp-inner{max-width:860px;margin:0 auto;}
+.lp-labels{display:flex;justify-content:space-between;font-size:11px;color:var(--text3);margin-bottom:6px;}
+.lp-track{height:4px;border-radius:99px;background:rgba(255,255,255,0.08);}
+.lp-fill{height:100%;border-radius:99px;background:linear-gradient(90deg,var(--amber-500),var(--amber-300));width:10%;}
+.lp-parts{display:flex;gap:4px;margin-top:8px;flex-wrap:wrap;}
+.lp-part{font-size:10px;font-weight:600;padding:2px 8px;border-radius:99px;background:rgba(255,255,255,0.06);color:var(--text3);cursor:pointer;transition:all .15s;}
+.lp-part.done{background:var(--amber-bg);color:var(--amber-300);border:1px solid var(--amber-border);}
+.lp-part.active{background:var(--amber-400);color:#1A0800;}
+.main{max-width:860px;margin:0 auto;padding:2rem 1.5rem 5rem;}
+.sec{background:var(--surface);border:1px solid var(--border);border-radius:var(--r);padding:1.5rem;margin-bottom:1.5rem;scroll-margin-top:80px;}
+.sec-header{display:flex;align-items:center;gap:10px;margin-bottom:1.25rem;}
+.sec-num{width:28px;height:28px;border-radius:8px;display:flex;align-items:center;justify-content:center;font-size:11px;font-weight:700;background:var(--amber-bg);color:var(--amber-300);border:1px solid var(--amber-border);flex-shrink:0;}
+.sec-title{font-size:16px;font-weight:700;color:#fff;}
+.sec-sub{font-size:12px;color:var(--text3);margin-top:1px;}
+.vocab-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(240px,1fr));gap:10px;}
+.vocab-card{background:var(--surface2);border:1px solid var(--border2);border-radius:var(--r-sm);padding:1rem;cursor:pointer;transition:border-color .15s;}
+.vocab-card:hover,.vocab-card.open{border-color:var(--amber-border);}
+.vc-top{display:flex;align-items:baseline;gap:8px;}
+.vc-word{font-size:16px;font-weight:700;color:#fff;}
+.vc-pos{font-size:10px;font-weight:600;padding:1px 7px;border-radius:99px;background:var(--amber-bg);color:var(--amber-300);}
+.vc-pron{font-size:12px;color:var(--text3);margin-top:2px;font-style:italic;}
+.vc-cn{font-size:15px;color:var(--amber-300);margin-top:4px;font-weight:600;}
+.vc-detail{display:none;margin-top:10px;padding-top:10px;border-top:1px solid var(--border2);}
+.vocab-card.open .vc-detail{display:block;}
+.vc-def{font-size:13px;color:var(--text2);margin-bottom:6px;}
+.vc-ex{font-size:12px;color:var(--text3);font-style:italic;padding-left:8px;border-left:2px solid var(--amber-border);}
+.story-body p{font-size:15px;color:var(--text2);line-height:1.8;margin-bottom:1rem;}
+.story-body p:last-child{margin-bottom:0;}
+.story-hl{color:var(--amber-300);font-weight:600;}
+.story-box{background:var(--amber-bg);border:1px solid var(--amber-border);border-radius:var(--r-sm);padding:1rem 1.25rem;margin:1.25rem 0;font-size:14px;color:rgba(255,255,255,0.85);line-height:1.7;font-style:italic;}
+.story-box::before{content:'"';font-size:32px;color:var(--amber-400);line-height:1;display:block;margin-bottom:.25rem;}
+.story-icon{font-size:40px;text-align:center;margin:1rem 0;}
+.quiz-list{display:flex;flex-direction:column;gap:14px;}
+.q-item{background:var(--surface2);border:1px solid var(--border2);border-radius:var(--r-sm);padding:1rem 1.25rem;}
+.q-text{font-size:14px;font-weight:600;color:#fff;margin-bottom:.75rem;}
+.q-opts{display:flex;flex-direction:column;gap:6px;}
+.q-opt{display:flex;align-items:center;gap:10px;padding:8px 12px;border-radius:8px;border:1px solid var(--border);background:transparent;cursor:pointer;font-size:13px;color:var(--text2);width:100%;text-align:left;transition:all .15s;}
+.q-opt:hover{border-color:var(--amber-border);background:var(--amber-bg);}
+.q-opt.correct{border-color:var(--teal-border);background:var(--teal-bg);color:#fff;}
+.q-opt.wrong{border-color:rgba(224,92,58,0.4);background:var(--coral-bg);color:#fff;}
+.q-feedback{font-size:12px;margin-top:8px;padding:6px 10px;border-radius:6px;display:none;}
+.q-feedback.show{display:block;}
+.q-feedback.good{background:var(--teal-bg);color:#5DCAA5;}
+.q-feedback.bad{background:var(--coral-bg);color:#F09B80;}
+.tf-opts{display:flex;gap:8px;}
+.tf-btn{flex:1;padding:8px;border-radius:8px;border:1px solid var(--border);background:transparent;cursor:pointer;font-size:13px;font-weight:600;color:var(--text2);transition:all .15s;}
+.tf-btn:hover{border-color:var(--amber-border);background:var(--amber-bg);}
+.tf-btn.correct{border-color:var(--teal-border);background:var(--teal-bg);color:#fff;}
+.tf-btn.wrong{border-color:rgba(224,92,58,0.4);background:var(--coral-bg);color:#fff;}
+.grammar-box{background:var(--surface2);border-left:3px solid var(--amber-400);border-radius:0 var(--r-sm) var(--r-sm) 0;padding:1rem 1.25rem;margin-bottom:1rem;}
+.grammar-label{font-size:10px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--amber-300);margin-bottom:.5rem;}
+.grammar-rule{font-size:14px;color:#fff;font-weight:600;margin-bottom:.5rem;}
+.grammar-eg{font-size:13px;color:var(--text2);margin-top:.25rem;font-style:italic;}
+.grammar-eg span{color:var(--amber-300);font-weight:600;font-style:normal;}
+.grammar-table{width:100%;border-collapse:collapse;font-size:13px;margin-top:.75rem;}
+.grammar-table th{text-align:left;padding:6px 10px;font-size:10px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;color:var(--text3);border-bottom:1px solid var(--border);}
+.grammar-table td{padding:7px 10px;color:var(--text2);border-bottom:1px solid var(--border2);}
+.grammar-table td:first-child{color:#fff;font-weight:500;}
+.hl{color:var(--amber-300);font-weight:600;}
+.sb-activity{margin-bottom:1.25rem;}
+.sb-label{font-size:11px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;color:var(--amber-300);margin-bottom:.75rem;}
+.sb-input{width:100%;background:var(--surface2);border:1px solid var(--border);border-radius:var(--r-sm);padding:.625rem .875rem;font-size:14px;color:#fff;font-family:'Inter',sans-serif;transition:border-color .15s;outline:none;margin-bottom:.5rem;}
+.sb-input:focus{border-color:var(--amber-border);}
+.sb-check{padding:7px 18px;border-radius:99px;background:var(--amber-400);color:#1A0800;font-size:13px;font-weight:700;border:none;cursor:pointer;transition:opacity .15s;}
+.sb-check:hover{opacity:.85;}
+.sb-result{font-size:12px;margin-top:6px;padding:6px 10px;border-radius:6px;display:none;}
+.sb-result.show{display:block;}
+.sb-result.ok{background:var(--teal-bg);color:#5DCAA5;}
+.sb-result.no{background:var(--coral-bg);color:#F09B80;}
+.speak-level{margin-bottom:1.25rem;}
+.speak-badge{display:inline-flex;align-items:center;gap:6px;font-size:11px;font-weight:700;padding:3px 12px;border-radius:99px;margin-bottom:.875rem;}
+.speak-badge.l1{background:var(--teal-bg);color:#5DCAA5;border:1px solid var(--teal-border);}
+.speak-badge.l2{background:var(--amber-bg);color:var(--amber-300);border:1px solid var(--amber-border);}
+.speak-badge.l3{background:var(--blue-bg);color:var(--blue);border:1px solid rgba(74,158,224,0.3);}
+.speak-q{background:var(--surface2);border:1px solid var(--border2);border-radius:var(--r-sm);padding:1rem 1.25rem;margin-bottom:.75rem;}
+.speak-q p{font-size:14px;font-weight:600;color:#fff;margin-bottom:.5rem;}
+.speak-hint{font-size:12px;color:var(--text3);}
+.speak-hint span{color:var(--amber-300);}
+.idea-q{background:var(--surface2);border:1px solid var(--border2);border-radius:var(--r-sm);padding:1rem 1.25rem;margin-bottom:.75rem;display:flex;gap:10px;}
+.idea-icon{font-size:20px;flex-shrink:0;margin-top:2px;}
+.idea-text{font-size:14px;color:var(--text2);line-height:1.6;}
+.idea-text strong{color:#fff;}
+.ielts-topic{background:var(--blue-bg);border:1px solid rgba(74,158,224,0.25);border-radius:var(--r-sm);padding:1rem 1.25rem;margin-bottom:1.25rem;}
+.ielts-topic-label{font-size:10px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--blue);margin-bottom:.25rem;}
+.ielts-topic h4{font-size:16px;font-weight:700;color:#fff;}
+.vocab-chips{display:flex;flex-wrap:wrap;gap:6px;margin-top:.75rem;}
+.chip{font-size:12px;padding:4px 12px;border-radius:99px;background:rgba(255,255,255,0.06);border:1px solid var(--border);color:var(--text2);}
+.chip.amber{background:var(--amber-bg);border-color:var(--amber-border);color:var(--amber-300);}
+.ielts-qs{display:flex;flex-direction:column;gap:8px;margin-top:1rem;}
+.ielts-q{display:flex;gap:10px;background:var(--surface2);border-radius:var(--r-sm);padding:.875rem 1rem;}
+.ielts-q-num{font-size:11px;font-weight:700;color:var(--blue);min-width:20px;}
+.ielts-q-text{font-size:13px;color:var(--text2);}
+.ielts-w2{background:rgba(74,158,224,0.08);border:1px solid rgba(74,158,224,0.2);border-radius:var(--r-sm);padding:1rem 1.25rem;margin-top:1rem;}
+.ielts-w2-label{font-size:10px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--blue);margin-bottom:.5rem;}
+.ielts-w2 p{font-size:14px;color:var(--text2);line-height:1.7;font-style:italic;}
+.star-words{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:1.25rem;}
+.star-word{display:flex;align-items:center;gap:6px;padding:6px 14px;border-radius:99px;background:var(--amber-bg);border:1px solid var(--amber-border);font-size:13px;font-weight:600;color:var(--amber-300);}
+.think-box{background:var(--surface2);border:1px solid var(--border2);border-radius:var(--r-sm);padding:1rem 1.25rem;margin-bottom:1rem;}
+.think-box .think-head{font-size:12px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;color:var(--amber-300);margin-bottom:.5rem;}
+.think-box p{font-size:14px;color:var(--text2);}
+.mini-quiz-q{background:var(--surface2);border:1px solid var(--border2);border-radius:var(--r-sm);padding:1rem;margin-bottom:.75rem;}
+.mq-text{font-size:13px;font-weight:600;color:#fff;margin-bottom:.625rem;}
+.mq-opts{display:flex;flex-direction:column;gap:5px;}
+.mq-opt{padding:7px 12px;border-radius:6px;border:1px solid var(--border);background:transparent;font-size:12px;color:var(--text2);cursor:pointer;text-align:left;transition:all .15s;}
+.mq-opt:hover{border-color:var(--amber-border);background:var(--amber-bg);}
+.mq-opt.correct{border-color:var(--teal-border);background:var(--teal-bg);color:#fff;}
+.mq-opt.wrong{border-color:rgba(224,92,58,0.4);background:var(--coral-bg);color:#fff;}
+.lesson-nav{display:flex;gap:10px;margin-top:2rem;}
+.nav-btn{display:flex;align-items:center;gap:6px;padding:.75rem 1.25rem;border-radius:10px;font-size:13px;font-weight:600;cursor:pointer;text-decoration:none;border:1px solid var(--border);color:var(--text2);background:var(--surface);transition:all .15s;flex:1;justify-content:center;}
+.nav-btn:hover{border-color:var(--border2);color:#fff;}
+.nav-btn.primary{background:var(--amber-400);color:#1A0800;border-color:transparent;}
+.nav-btn.primary:hover{opacity:.9;}
+.site-footer{background:#111;border-top:1px solid rgba(255,255,255,0.07);text-align:center;padding:1.5rem;font-size:12px;color:rgba(255,255,255,0.3);}
+.site-footer strong{color:var(--amber-300);}
+@media(max-width:600px){.vocab-grid{grid-template-columns:1fr;}.lesson-nav{flex-direction:column;}}
+</style>
+</head>
+<body>
+<header class="site-header">
+  <div class="hdr">
+    <a class="logo-wrap" href="index.html">
+      <div class="logo-icon"><svg viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+          <path d="M6 24 C8 18,14 10,24 6 C20 10,18 14,20 18 C16 16,12 18,6 24Z" fill="white"/>
+          <path d="M20 18 C22 20,22 23,20 26 C18 24,18 21,20 18Z" fill="rgba(255,255,255,0.5)"/>
+        </svg></div>
+      <span class="logo-name">Lexilink Ideation IELTS STUDIO</span>
+    </a>
+    <div class="hdr-pipe"></div>
+    <a class="hdr-back" href="index.html"><i class="ti ti-arrow-left" aria-hidden="true"></i> Vol. 1</a>
+    <div class="hdr-spacer"></div>
+    <span class="hdr-badge">Lesson 27A</span>
+  </div>
+</header>
+<section class="lesson-hero">
+  <p class="lesson-eyebrow">Chapter 27 · The Rise of Rome</p>
+  <h1>A Tiny Village in the Hills</h1>
+  <p>How empires rise and fall — and how Rome began</p>
+  <div class="lesson-pills"><span class="l-pill">📖 Story + Vocabulary</span><span class="l-pill">🎤 Speaking</span><span class="l-pill">✏️ Grammar</span><span class="l-pill">⭐ CEFR A2–B1</span></div>
+</section>
+<div class="lesson-progress">
+  <div class="lp-inner">
+    <div class="lp-labels"><span>Lesson 27A of 7</span><span style="color:var(--amber-300)">Part 1 of 10</span></div>
+    <div class="lp-track"><div class="lp-fill"></div></div>
+    <div class="lp-parts">
+      <span class="lp-part active" onclick="scrollTo('p1')">1 Vocab</span>
+      <span class="lp-part" onclick="scrollTo('p2')">2 Story</span>
+      <span class="lp-part" onclick="scrollTo('p3')">3 Reading</span>
+      <span class="lp-part" onclick="scrollTo('p4')">4 Grammar</span>
+      <span class="lp-part" onclick="scrollTo('p5')">5 Builder</span>
+      <span class="lp-part" onclick="scrollTo('p6')">6 Speaking 1</span>
+      <span class="lp-part" onclick="scrollTo('p7')">7 Speaking 2</span>
+      <span class="lp-part" onclick="scrollTo('p8')">8 Ideas</span>
+      <span class="lp-part" onclick="scrollTo('p9')">9 IELTS</span>
+      <span class="lp-part" onclick="scrollTo('p10')">10 Review</span>
+    </div>
+  </div>
+</div>
+
+<main class="main">
+<section class="sec" id="p1">
+  <div class="sec-header">
+    <div class="sec-num">1</div>
+    <div><div class="sec-title">Vocabulary</div><div class="sec-sub">Click each word to learn more</div></div>
+  </div>
+  <div class="vocab-grid"><div class="vocab-card" onclick="toggleVocab(this)">
+      <div class="vc-top"><span class="vc-word">empire</span><span class="vc-pos">noun</span></div>
+      <div class="vc-pron">/ˈem.paɪər/</div>
+      <div class="vc-cn">帝国</div>
+      <div class="vc-detail">
+        <div class="vc-def">A group of lands and peoples ruled by one king or government.</div>
+        <div class="vc-ex">"Assyria was a great empire."</div>
+      </div>
+    </div><div class="vocab-card" onclick="toggleVocab(this)">
+      <div class="vc-top"><span class="vc-word">conquer</span><span class="vc-pos">verb</span></div>
+      <div class="vc-pron">/ˈkɒŋ.kər/</div>
+      <div class="vc-cn">征服</div>
+      <div class="vc-detail">
+        <div class="vc-def">To win a land or people by fighting.</div>
+        <div class="vc-ex">"Babylon conquered Assyria."</div>
+      </div>
+    </div><div class="vocab-card" onclick="toggleVocab(this)">
+      <div class="vc-top"><span class="vc-word">generals</span><span class="vc-pos">noun</span></div>
+      <div class="vc-pron">/ˈdʒen.ər.əlz/</div>
+      <div class="vc-cn">将军们</div>
+      <div class="vc-detail">
+        <div class="vc-def">Army leaders.</div>
+        <div class="vc-ex">"Alexander&#x27;s generals broke his kingdom into pieces."</div>
+      </div>
+    </div><div class="vocab-card" onclick="toggleVocab(this)">
+      <div class="vc-top"><span class="vc-word">break up</span><span class="vc-pos">phrasal verb</span></div>
+      <div class="vc-pron">/breɪk ʌp/</div>
+      <div class="vc-cn">分裂</div>
+      <div class="vc-detail">
+        <div class="vc-def">To split into smaller parts.</div>
+        <div class="vc-ex">"The kingdom broke up into pieces."</div>
+      </div>
+    </div><div class="vocab-card" onclick="toggleVocab(this)">
+      <div class="vc-top"><span class="vc-word">lose control</span><span class="vc-pos">verb phrase</span></div>
+      <div class="vc-pron">/luːz kənˈtrəʊl/</div>
+      <div class="vc-cn">失去控制</div>
+      <div class="vc-detail">
+        <div class="vc-def">To no longer be in charge.</div>
+        <div class="vc-ex">"Later kings slowly lose control of the empire."</div>
+      </div>
+    </div><div class="vocab-card" onclick="toggleVocab(this)">
+      <div class="vc-top"><span class="vc-word">last</span><span class="vc-pos">verb</span></div>
+      <div class="vc-pron">/lɑːst/</div>
+      <div class="vc-cn">持续</div>
+      <div class="vc-detail">
+        <div class="vc-def">To continue for a long time.</div>
+        <div class="vc-ex">"This empire lasted for hundreds of years."</div>
+      </div>
+    </div><div class="vocab-card" onclick="toggleVocab(this)">
+      <div class="vc-top"><span class="vc-word">copy</span><span class="vc-pos">verb</span></div>
+      <div class="vc-pron">/ˈkɒp.i/</div>
+      <div class="vc-cn">模仿</div>
+      <div class="vc-detail">
+        <div class="vc-def">To do the same thing as someone else.</div>
+        <div class="vc-ex">"People copied its government."</div>
+      </div>
+    </div><div class="vocab-card" onclick="toggleVocab(this)">
+      <div class="vc-top"><span class="vc-word">hills</span><span class="vc-pos">noun</span></div>
+      <div class="vc-pron">/hɪlz/</div>
+      <div class="vc-cn">丘陵</div>
+      <div class="vc-detail">
+        <div class="vc-def">Small mountains with round tops.</div>
+        <div class="vc-ex">"Rome was a tiny village in the hills of Italy."</div>
+      </div>
+    </div><div class="vocab-card" onclick="toggleVocab(this)">
+      <div class="vc-top"><span class="vc-word">peninsula</span><span class="vc-pos">noun</span></div>
+      <div class="vc-pron">/pəˈnɪn.sjə.lə/</div>
+      <div class="vc-cn">半岛</div>
+      <div class="vc-detail">
+        <div class="vc-def">Land that sticks out into the sea and has water on three sides.</div>
+        <div class="vc-ex">"Italy is a peninsula shaped like a boot."</div>
+      </div>
+    </div><div class="vocab-card" onclick="toggleVocab(this)">
+      <div class="vc-top"><span class="vc-word">legend</span><span class="vc-pos">noun</span></div>
+      <div class="vc-pron">/ˈledʒ.ənd/</div>
+      <div class="vc-cn">传说</div>
+      <div class="vc-detail">
+        <div class="vc-def">An old story that may not be completely true.</div>
+        <div class="vc-ex">"The Romans told a legend about their village&#x27;s beginning."</div>
+      </div>
+    </div></div>
+</section>
+<section class="sec" id="p2">
+  <div class="sec-header">
+    <div class="sec-num">2</div>
+    <div><div class="sec-title">The Story</div><div class="sec-sub">Read carefully. Notice the bold words.</div></div>
+  </div>
+  <div class="story-body"><div class="story-icon">🏛️</div><p>Let us think back over the great empires we have studied. <span class="story-hl">Assyria</span> was a great kingdom, but Babylon <span class="story-hl">conquered</span> it. Babylon was a great <span class="story-hl">empire</span>, but Persia conquered Babylon. Persia and Greece were great empires, but Alexander the Great conquered them. Alexander built the biggest kingdom of all. Then he died, and his <span class="story-hl">generals</span> broke the kingdom into pieces.</p>
+<p>🔁 This is the pattern of the ancient world. One king comes along, wins battles, and builds a big empire. For a little while the empire is strong. But the kings who come after him slowly <span class="story-hl">lose control</span>. Then a king from another country does the same thing, and the cycle starts again. It happens over and over.</p>
+<div class="story-box">An empire grows when one strong ruler wins battles, and it falls when later rulers slowly lose control.</div><p>🌍 So it will not surprise you that a new empire is coming. But this one was bigger and stronger than any empire before it. It was even bigger than Alexander's! And it <span class="story-hl">lasted</span> much longer, for hundreds and hundreds of years.</p>
+<p>📚 Here is something amazing. More than a thousand years after this empire fell, people were still learning its language, reading its books, and <span class="story-hl">copying</span> its government. This great empire was called <span class="story-hl">Rome</span>.</p>
+<p>🏘️ But Rome did not begin as an empire. At first, it was just a tiny village in the <span class="story-hl">hills</span> of Italy. Find Greece on a map and go west. You will see a piece of land that looks like a boot. It sticks out into the Mediterranean Sea. We call this kind of land a <span class="story-hl">peninsula</span>, because it sticks out into the water. This peninsula is Italy.</p>
+<p>⛰️ In the hills of this boot-shaped land, a handful of farmers and shepherds lived in small houses. They could not guess that their little village would one day rule the whole Mediterranean world. Nobody could.</p>
+<p>📜 The people who lived in Rome told a <span class="story-hl">legend</span> about how their village began. A legend is a story from long ago. It may not be completely true, but it tells us what the people believed and loved. In the next lesson, you will hear the legend of two baby boys and a river.</p>
+<p>🧠 As you read about Rome, keep one question in your mind: why did Rome last so long when so many empires fell quickly? Historians have many answers. Some say Rome had strong armies. Others say Rome learned from the people it met. Soon you will see how Rome borrowed ideas from its neighbors and made them its own.</p>
+<div class="story-icon">🥾</div></div>
+</section>
+<section class="sec" id="p3">
+  <div class="sec-header">
+    <div class="sec-num">3</div>
+    <div><div class="sec-title">Reading Comprehension</div><div class="sec-sub">Choose the best answer. Get instant feedback!</div></div>
+  </div>
+  <div class="quiz-list">
+    <div class="q-item">
+      <div class="q-text">1. Which empire conquered Babylon?</div>
+      <div class="q-opts"><button class="q-opt" onclick="mcq(this,'wrong')">Assyria</button>
+<button class="q-opt" onclick="mcq(this,'correct')">Persia</button>
+<button class="q-opt" onclick="mcq(this,'wrong')">Greece</button></div>
+      <div class="q-feedback"></div>
+    </div>
+    <div class="q-item">
+      <div class="q-text">2. What happened to Alexander&#x27;s kingdom after he died?</div>
+      <div class="q-opts"><button class="q-opt" onclick="mcq(this,'wrong')">It grew bigger.</button>
+<button class="q-opt" onclick="mcq(this,'correct')">His generals broke it into pieces.</button>
+<button class="q-opt" onclick="mcq(this,'wrong')">It became Rome.</button></div>
+      <div class="q-feedback"></div>
+    </div>
+    <div class="q-item">
+      <div class="q-text">3. According to the story, what usually happens to an empire after the first king?</div>
+      <div class="q-opts"><button class="q-opt" onclick="mcq(this,'correct')">The kings after him slowly lose control.</button>
+<button class="q-opt" onclick="mcq(this,'wrong')">It always becomes stronger.</button>
+<button class="q-opt" onclick="mcq(this,'wrong')">It moves to a new continent.</button></div>
+      <div class="q-feedback"></div>
+    </div>
+    <div class="q-item">
+      <div class="q-text">4. How was Rome different from earlier empires?</div>
+      <div class="q-opts"><button class="q-opt" onclick="mcq(this,'wrong')">It was smaller.</button>
+<button class="q-opt" onclick="mcq(this,'correct')">It lasted much longer and grew bigger.</button>
+<button class="q-opt" onclick="mcq(this,'wrong')">It never fought a battle.</button></div>
+      <div class="q-feedback"></div>
+    </div>
+    <div class="q-item">
+      <div class="q-text">5. What did Rome look like at the beginning?</div>
+      <div class="q-opts"><button class="q-opt" onclick="mcq(this,'wrong')">A great city of marble</button>
+<button class="q-opt" onclick="mcq(this,'wrong')">A huge army camp</button>
+<button class="q-opt" onclick="mcq(this,'correct')">A tiny village in the hills</button></div>
+      <div class="q-feedback"></div>
+    </div>
+    <div class="q-item">
+      <div class="q-text">6. Why is Italy called a peninsula?</div>
+      <div class="q-opts"><button class="q-opt" onclick="mcq(this,'wrong')">It is an island.</button>
+<button class="q-opt" onclick="mcq(this,'correct')">It sticks out into the sea.</button>
+<button class="q-opt" onclick="mcq(this,'wrong')">It is a desert.</button></div>
+      <div class="q-feedback"></div>
+    </div>
+  </div>
+</section>
+<section class="sec" id="p4">
+  <div class="sec-header">
+    <div class="sec-num">4</div>
+    <div><div class="sec-title">Language Focus</div><div class="sec-sub">Grammar from the story — learn through meaning</div></div>
+  </div>
+<div class="grammar-box">
+    <div class="grammar-label">📌 Past simple passive-like structure: &#x27;was conquered by&#x27;</div>
+    <div class="grammar-rule">Use &#x27;was/were + past participle + by&#x27; to say who did the action.</div>
+    <div class="grammar-eg">Assyria <span>was conquered by</span> Babylon.</div>
+<div class="grammar-eg">Persia <span>was conquered by</span> Alexander.</div>
+<div class="grammar-eg">The kingdom <span>was broken up by</span> his generals.</div>
+<div class="grammar-note" style="font-size:12px;color:var(--text3);margin-top:.5rem;">💡 Tip: The subject is the one that receives the action.</div>
+  </div>
+<div class="grammar-box">
+    <div class="grammar-label">📌 Repeating patterns with &#x27;over and over&#x27;</div>
+    <div class="grammar-rule">Use these phrases to show something happens again and again.</div>
+    <div class="grammar-eg">This happens <span>over and over</span>.</div>
+<div class="grammar-eg">Kings win battles <span>again and again</span>.</div>
+<div class="grammar-eg">The cycle starts <span>all over again</span>.</div>
+<div class="grammar-note" style="font-size:12px;color:var(--text3);margin-top:.5rem;">💡 Tip: Good for describing patterns in history.</div>
+  </div>
+<div class="grammar-box">
+    <div class="grammar-label">📌 Comparing: bigger and stronger than</div>
+    <div class="grammar-rule">Use two comparatives to describe something that is better in two ways.</div>
+    <div class="grammar-eg">Rome was <span>bigger and stronger than</span> any empire before it.</div>
+<div class="grammar-eg">It lasted <span>much longer than</span> Alexander's empire.</div>
+<div class="grammar-eg">The empire was <span>more powerful than</span> Persia.</div>
+<div class="grammar-note" style="font-size:12px;color:var(--text3);margin-top:.5rem;">💡 Tip: Use &#x27;than&#x27; to complete the comparison.</div>
+  </div>
+
+</section>
+<section class="sec" id="p5">
+  <div class="sec-header">
+    <div class="sec-num">5</div>
+    <div><div class="sec-title">Sentence Builder</div><div class="sec-sub">Build your skills with the vocabulary</div></div>
+  </div>
+<div class="sb-activity">
+    <div class="sb-label">✏️ Fill in the blank</div>
+    <p style="font-size:13px;color:var(--text2);margin-bottom:.5rem;">1. Rome began as a tiny village in the ________ of Italy.</p>
+    <input class="sb-input" id="f1a" placeholder="Your answer..."/>
+    <button class="sb-check" onclick="checkFill('f1a','hills','rf1a')">Check ✓</button>
+    <div class="sb-result" id="rf1a"></div>
+  </div>
+<div class="sb-activity">
+    <div class="sb-label">✏️ Fill in the blank</div>
+    <p style="font-size:13px;color:var(--text2);margin-bottom:.5rem;">2. A piece of land that sticks out into the sea is a ________.</p>
+    <input class="sb-input" id="f2a" placeholder="Your answer..."/>
+    <button class="sb-check" onclick="checkFill('f2a','peninsula','rf2a')">Check ✓</button>
+    <div class="sb-result" id="rf2a"></div>
+  </div>
+<div class="sb-activity">
+    <div class="sb-label">🔀 Unscramble the sentence</div>
+    <p style="font-size:13px;color:var(--text3);margin-bottom:.75rem;">Put these words in the correct order:</p>
+    <div style="margin-bottom:.75rem;"><span style="padding:5px 10px;border-radius:99px;background:var(--surface2);border:1px solid var(--border);font-size:13px;color:var(--text2);display:inline-block;margin:3px;">Alexander</span><span style="padding:5px 10px;border-radius:99px;background:var(--surface2);border:1px solid var(--border);font-size:13px;color:var(--text2);display:inline-block;margin:3px;">conquered</span><span style="padding:5px 10px;border-radius:99px;background:var(--surface2);border:1px solid var(--border);font-size:13px;color:var(--text2);display:inline-block;margin:3px;">Persia</span><span style="padding:5px 10px;border-radius:99px;background:var(--surface2);border:1px solid var(--border);font-size:13px;color:var(--text2);display:inline-block;margin:3px;">and</span><span style="padding:5px 10px;border-radius:99px;background:var(--surface2);border:1px solid var(--border);font-size:13px;color:var(--text2);display:inline-block;margin:3px;">Greece</span></div>
+    <input class="sb-input" id="us1a" placeholder="Type your sentence here..."/>
+    <button class="sb-check" onclick="checkUnscramble('us1a','alexander conquered persia and greece','ur1a')">Check ✓</button>
+    <div class="sb-result" id="ur1a"></div>
+  </div>
+<div class="sb-activity">
+    <div class="sb-label">🌏 Translate into English</div>
+    <p style="font-size:15px;color:var(--amber-300);margin-bottom:.5rem;">意大利是一个形状像靴子的半岛。</p>
+    <input class="sb-input" id="tr1a" placeholder="Write your English sentence..."/>
+    <button class="sb-check" onclick="revealFill('rt1a','Italy is a peninsula shaped like a boot.')">Show model answer</button>
+    <div class="sb-result" id="rt1a"></div>
+  </div>
+
+</section>
+<section class="sec" id="p6">
+  <div class="sec-header">
+    <div class="sec-num">6</div>
+    <div><div class="sec-title">Speaking — Level 1</div><div class="sec-sub">Answer in one complete sentence</div></div>
+  </div>
+  <div class="speak-level">
+    <span class="speak-badge l1">🟢 Level 1 · One sentence</span>
+    <div class="speak-q"><p>Which empire was bigger than Alexander&#x27;s?</p><div class="speak-hint">💡 Start with: <span>The empire was...</span></div></div>
+<div class="speak-q"><p>What shape is Italy?</p><div class="speak-hint">💡 Start with: <span>Italy is shaped like...</span></div></div>
+<div class="speak-q"><p>What did Rome look like at first?</p><div class="speak-hint">💡 Start with: <span>At first, Rome was...</span></div></div>
+  </div>
+</section>
+<section class="sec" id="p7">
+  <div class="sec-header">
+    <div class="sec-num">7</div>
+    <div><div class="sec-title">Speaking — Level 2 &amp; 3</div><div class="sec-sub">Extend your answer. Share your opinion.</div></div>
+  </div>
+  <div class="speak-level">
+    <span class="speak-badge l2">🟡 Level 2 · 2–3 sentences</span>
+    <div class="speak-q"><p>Explain the pattern of empires in the ancient world.</p><div class="speak-hint">💡 Try: <span>First a king... Then his empire... After that...</span></div></div>
+<div class="speak-q"><p>Why do you think Rome lasted longer than other empires?</p><div class="speak-hint">💡 Try: <span>I think it lasted because...</span></div></div>
+  </div>
+  <div class="speak-level">
+    <span class="speak-badge l3">🔵 Level 3 · Your opinion</span>
+    <div class="speak-q"><p>Do you think every empire must end one day? Why or why not?</p><div class="speak-hint">💡 Use: <span>I believe... For example... However...</span></div></div>
+  </div>
+</section>
+<section class="sec" id="p8">
+  <div class="sec-header">
+    <div class="sec-num">8</div>
+    <div><div class="sec-title">Ideas &amp; Society</div><div class="sec-sub">Think about big ideas. There is no wrong answer.</div></div>
+  </div>
+<div class="idea-q"><div class="idea-icon">🏛️</div><div class="idea-text"><strong>Rise and fall.</strong> Assyria, Babylon, Persia, and Greece all fell. What makes it hard for a country to stay powerful forever?</div></div>
+<div class="idea-q"><div class="idea-icon">🌱</div><div class="idea-text"><strong>Small beginnings.</strong> Rome began as a tiny village. Can you think of any famous place or company that began very small?</div></div>
+<div class="idea-q"><div class="idea-icon">📖</div><div class="idea-text"><strong>Copying good ideas.</strong> People copied Rome&#x27;s government for a thousand years. Why do we copy ideas from other cultures?</div></div>
+<div class="idea-q"><div class="idea-icon">🧭</div><div class="idea-text"><strong>Geography and history.</strong> Italy sticks out into the sea like a boot. How might this shape help a country?</div></div>
+
+</section>
+<section class="sec" id="p9">
+  <div class="sec-header">
+    <div class="sec-num">9</div>
+    <div><div class="sec-title">IELTS Content Builder</div><div class="sec-sub">Planting seeds for your future IELTS exam</div></div>
+  </div>
+  <div class="ielts-topic">
+    <div class="ielts-topic-label">📘 Today's IELTS Topic</div>
+    <h4>Power, Politics, and Change</h4>
+  </div>
+  <p style="font-size:12px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;color:var(--text3);margin:.875rem 0 .5rem;">Key vocabulary</p>
+  <div class="vocab-chips"><span class="chip amber">empire</span><span class="chip amber">dominance</span><span class="chip amber">expansion</span><span class="chip amber">decline</span><span class="chip">government</span><span class="chip">leadership</span><span class="chip">influence</span><span class="chip">superpower</span></div>
+  <p style="font-size:12px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;color:var(--text3);margin:.875rem 0 .5rem;">Useful collocations</p>
+  <div class="vocab-chips"><span class="chip">rise and fall of an empire</span><span class="chip">lose political control</span><span class="chip">exert influence</span><span class="chip">expand territory</span></div>
+  <div class="ielts-qs"><div class="ielts-q"><div class="ielts-q-num">S1</div><div class="ielts-q-text">Which country do you think has the most influence in the world today?</div></div>
+<div class="ielts-q"><div class="ielts-q-num">S2</div><div class="ielts-q-text">Why do powerful countries sometimes lose their power?</div></div>
+<div class="ielts-q"><div class="ielts-q-num">S3</div><div class="ielts-q-text">Is it better for the world to have one superpower or many?</div></div>
+</div>
+  <div class="ielts-w2">
+    <div class="ielts-w2-label">✏️ IELTS Writing Task 2 — Future Practice</div>
+    <p>"Some people think a single powerful country brings stability to the world. Others believe power should be shared among many countries. Discuss both views."</p>
+  </div>
+</section>
+<section class="sec" id="p10">
+  <div class="sec-header">
+    <div class="sec-num">10</div>
+    <div><div class="sec-title">Review</div><div class="sec-sub">Remember what you learned!</div></div>
+  </div>
+  <p style="font-size:12px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;color:var(--text3);margin:.875rem 0 .5rem;">⭐ Star Words</p>
+  <div class="star-words"><span class="star-word">⭐ empire</span><span class="star-word">⭐ conquer</span><span class="star-word">⭐ generals</span><span class="star-word">⭐ lose control</span><span class="star-word">⭐ last</span><span class="star-word">⭐ copy</span><span class="star-word">⭐ peninsula</span><span class="star-word">⭐ legend</span></div>
+  <div class="think-box">
+    <div class="think-head">💡 Big Idea</div>
+    <p>Empires rise and fall in cycles, but great ideas can live on. Rome began as a tiny village yet influenced the world for a thousand years.</p>
+  </div>
+  <p style="font-size:12px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;color:var(--text3);margin:.875rem 0 .5rem;">🧠 Mini Quiz</p>
+  <div class="mini-quiz-q"><div class="mq-text">A. What does &#x27;conquer&#x27; mean?</div><div class="mq-opts"><button class="mq-opt" onclick="mq(this,'correct')">To win by fighting</button>
+<button class="mq-opt" onclick="mq(this,'wrong')">To plant crops</button>
+<button class="mq-opt" onclick="mq(this,'wrong')">To write a book</button></div></div><div class="mini-quiz-q"><div class="mq-text">B. A peninsula has water on...</div><div class="mq-opts"><button class="mq-opt" onclick="mq(this,'wrong')">one side</button>
+<button class="mq-opt" onclick="mq(this,'correct')">three sides</button>
+<button class="mq-opt" onclick="mq(this,'wrong')">all sides</button></div></div><div class="mini-quiz-q"><div class="mq-text">C. Rome began as a...</div><div class="mq-opts"><button class="mq-opt" onclick="mq(this,'correct')">tiny village</button>
+<button class="mq-opt" onclick="mq(this,'wrong')">big empire</button>
+<button class="mq-opt" onclick="mq(this,'wrong')">desert camp</button></div></div>
+  <div class="lesson-nav">
+    <a class="nav-btn" href="ch26-g.html"><i class="ti ti-arrow-left"></i> Lesson 26G</a>
+    <a class="nav-btn primary" href="ch27-b.html">Next: Lesson 27B — The Twins in the Basket <i class="ti ti-arrow-right"></i></a>
+  </div>
+</section>
+</main>
+<footer class="site-footer"><strong>Lexilink Ideation IELTS STUDIO</strong> · History ESL Course · Chapter 27 — Lesson A</footer>
+<script>
+function toggleVocab(card){card.classList.toggle('open');}
+function mcq(btn,type){
+  const item=btn.closest('.q-item');
+  item.querySelectorAll('.q-opt').forEach(b=>{b.classList.remove('correct','wrong');b.disabled=true;});
+  btn.classList.add(type);
+  const fb=item.querySelector('.q-feedback');
+  fb.className='q-feedback show '+(type==='correct'?'good':'bad');
+  fb.textContent=type==='correct'?'✓ Correct! Well done!':'✗ Not quite. Try to remember the story.';
+}
+function tf(btn,type,msg){
+  const item=btn.closest('.q-item');
+  item.querySelectorAll('.tf-btn').forEach(b=>{b.classList.remove('correct','wrong');b.disabled=true;});
+  btn.classList.add(type);
+  const fb=item.querySelector('.q-feedback');
+  fb.className='q-feedback show '+(type==='correct'?'good':'bad');
+  fb.textContent=(type==='correct'?'✓ ':'✗ ')+msg;
+}
+function mq(btn,type){
+  const item=btn.closest('.mini-quiz-q');
+  item.querySelectorAll('.mq-opt').forEach(b=>{b.classList.remove('correct','wrong');b.disabled=true;});
+  btn.classList.add(type);
+}
+function checkUnscramble(id,answer,rid){
+  const val=document.getElementById(id).value.trim().toLowerCase().replace(/[^a-z\s]/g,'');
+  const ans=answer.toLowerCase();
+  const r=document.getElementById(rid);
+  r.className='sb-result show '+(val===ans?'ok':'no');
+  r.textContent=val===ans?'✓ Perfect! "'+answer+'"':'✗ Try again. Check the word order.';
+}
+function checkFill(id,answer,rid){
+  const val=document.getElementById(id).value.trim().toLowerCase();
+  const r=document.getElementById(rid);
+  r.className='sb-result show '+(val===answer?'ok':'no');
+  r.textContent=val===answer?'✓ Correct!':'✗ The answer is: "'+answer+'"';
+}
+function revealFill(rid,answer){const r=document.getElementById(rid);r.className='sb-result show ok';r.textContent='Model answer: "'+answer+'"';}
+function scrollTo(id){document.getElementById(id).scrollIntoView({behavior:'smooth',block:'start'});}
+const parts=['p1','p2','p3','p4','p5','p6','p7','p8','p9','p10'];
+const partEls=document.querySelectorAll('.lp-part');
+window.addEventListener('scroll',()=>{
+  let current=0;
+  parts.forEach((id,i)=>{const el=document.getElementById(id);if(el&&el.getBoundingClientRect().top<200)current=i;});
+  partEls.forEach((el,i)=>{el.classList.remove('active','done');if(i<current)el.classList.add('done');else if(i===current)el.classList.add('active');});
+  const pct=Math.round(((current+1)/10)*100);
+  document.querySelector('.lp-fill').style.width=pct+'%';
+});
+</script>
+</body>
+</html>

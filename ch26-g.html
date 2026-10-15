@@ -1,0 +1,572 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+<title>Lesson 26G — Rabbit Shoots the Sun | Lexilink History Workshop</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"/>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet"/>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@latest/tabler-icons.min.css"/>
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
+:root{
+  --bg:#0F0800;--surface:rgba(255,255,255,0.04);--surface2:rgba(255,255,255,0.07);
+  --border:rgba(255,255,255,0.10);--border2:rgba(255,255,255,0.06);
+  --amber-300:#E8A832;--amber-400:#D4890F;--amber-500:#B8720A;
+  --amber-bg:rgba(212,137,15,0.12);--amber-border:rgba(212,137,15,0.3);
+  --text:#fff;--text2:rgba(255,255,255,0.72);--text3:rgba(255,255,255,0.45);
+  --teal:#1D9E75;--teal-bg:rgba(29,158,117,0.12);--teal-border:rgba(29,158,117,0.3);
+  --coral:#E05C3A;--coral-bg:rgba(224,92,58,0.12);
+  --blue:#4A9EE0;--blue-bg:rgba(74,158,224,0.12);
+  --r:12px;--r-sm:8px;
+}
+html{scroll-behavior:smooth;}
+body{font-family:'Inter',sans-serif;background:var(--bg);color:var(--text);min-height:100vh;line-height:1.6;}
+.site-header{background:#111;border-bottom:1px solid rgba(255,255,255,0.08);position:sticky;top:0;z-index:100;}
+.hdr{max-width:860px;margin:0 auto;padding:0 1.5rem;height:54px;display:flex;align-items:center;gap:12px;}
+.logo-wrap{display:flex;align-items:center;gap:8px;text-decoration:none;}
+.logo-icon{width:30px;height:30px;display:flex;align-items:center;justify-content:center;}
+.logo-icon svg{width:26px;height:26px;}
+.logo-name{font-size:13px;font-weight:700;color:#fff;}
+.hdr-pipe{width:1px;height:20px;background:rgba(255,255,255,0.15);}
+.hdr-back{display:flex;align-items:center;gap:5px;font-size:12px;color:var(--text3);text-decoration:none;transition:color .15s;}
+.hdr-back:hover{color:var(--text2);}
+.hdr-spacer{flex:1;}
+.hdr-badge{font-size:10px;font-weight:700;letter-spacing:.05em;padding:3px 10px;border-radius:99px;border:1px solid var(--amber-border);color:var(--amber-300);background:var(--amber-bg);}
+.lesson-hero{background:linear-gradient(135deg,#00251F 0%,#00403A 40%,#006156 100%);padding:3rem 1.5rem 2.5rem;text-align:center;position:relative;overflow:hidden;}
+.lesson-hero::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse 70% 60% at 50% 50%,rgba(200,130,0,0.15),transparent);pointer-events:none;}
+.lesson-eyebrow{font-size:10px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--amber-300);margin-bottom:.75rem;}
+.lesson-hero h1{font-size:clamp(22px,4vw,36px);font-weight:700;color:#fff;letter-spacing:-.02em;margin-bottom:.5rem;}
+.lesson-hero p{font-size:14px;color:rgba(255,255,255,0.65);max-width:520px;margin:0 auto .875rem;}
+.lesson-pills{display:flex;flex-wrap:wrap;justify-content:center;gap:8px;}
+.l-pill{font-size:11px;font-weight:500;padding:4px 12px;border-radius:99px;border:1px solid rgba(255,255,255,0.18);color:rgba(255,255,255,0.75);background:rgba(255,255,255,0.06);}
+.lesson-progress{background:#1A1100;border-bottom:1px solid rgba(255,255,255,0.06);padding:.75rem 1.5rem;}
+.lp-inner{max-width:860px;margin:0 auto;}
+.lp-labels{display:flex;justify-content:space-between;font-size:11px;color:var(--text3);margin-bottom:6px;}
+.lp-track{height:4px;border-radius:99px;background:rgba(255,255,255,0.08);}
+.lp-fill{height:100%;border-radius:99px;background:linear-gradient(90deg,var(--amber-500),var(--amber-300));width:10%;}
+.lp-parts{display:flex;gap:4px;margin-top:8px;flex-wrap:wrap;}
+.lp-part{font-size:10px;font-weight:600;padding:2px 8px;border-radius:99px;background:rgba(255,255,255,0.06);color:var(--text3);cursor:pointer;transition:all .15s;}
+.lp-part.done{background:var(--amber-bg);color:var(--amber-300);border:1px solid var(--amber-border);}
+.lp-part.active{background:var(--amber-400);color:#1A0800;}
+.main{max-width:860px;margin:0 auto;padding:2rem 1.5rem 5rem;}
+.sec{background:var(--surface);border:1px solid var(--border);border-radius:var(--r);padding:1.5rem;margin-bottom:1.5rem;scroll-margin-top:80px;}
+.sec-header{display:flex;align-items:center;gap:10px;margin-bottom:1.25rem;}
+.sec-num{width:28px;height:28px;border-radius:8px;display:flex;align-items:center;justify-content:center;font-size:11px;font-weight:700;background:var(--amber-bg);color:var(--amber-300);border:1px solid var(--amber-border);flex-shrink:0;}
+.sec-title{font-size:16px;font-weight:700;color:#fff;}
+.sec-sub{font-size:12px;color:var(--text3);margin-top:1px;}
+.vocab-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(240px,1fr));gap:10px;}
+.vocab-card{background:var(--surface2);border:1px solid var(--border2);border-radius:var(--r-sm);padding:1rem;cursor:pointer;transition:border-color .15s;}
+.vocab-card:hover,.vocab-card.open{border-color:var(--amber-border);}
+.vc-top{display:flex;align-items:baseline;gap:8px;}
+.vc-word{font-size:16px;font-weight:700;color:#fff;}
+.vc-pos{font-size:10px;font-weight:600;padding:1px 7px;border-radius:99px;background:var(--amber-bg);color:var(--amber-300);}
+.vc-pron{font-size:12px;color:var(--text3);margin-top:2px;font-style:italic;}
+.vc-cn{font-size:15px;color:var(--amber-300);margin-top:4px;font-weight:600;}
+.vc-detail{display:none;margin-top:10px;padding-top:10px;border-top:1px solid var(--border2);}
+.vocab-card.open .vc-detail{display:block;}
+.vc-def{font-size:13px;color:var(--text2);margin-bottom:6px;}
+.vc-ex{font-size:12px;color:var(--text3);font-style:italic;padding-left:8px;border-left:2px solid var(--amber-border);}
+.story-body p{font-size:15px;color:var(--text2);line-height:1.8;margin-bottom:1rem;}
+.story-body p:last-child{margin-bottom:0;}
+.story-hl{color:var(--amber-300);font-weight:600;}
+.story-box{background:var(--amber-bg);border:1px solid var(--amber-border);border-radius:var(--r-sm);padding:1rem 1.25rem;margin:1.25rem 0;font-size:14px;color:rgba(255,255,255,0.85);line-height:1.7;font-style:italic;}
+.story-box::before{content:'"';font-size:32px;color:var(--amber-400);line-height:1;display:block;margin-bottom:.25rem;}
+.story-icon{font-size:40px;text-align:center;margin:1rem 0;}
+.quiz-list{display:flex;flex-direction:column;gap:14px;}
+.q-item{background:var(--surface2);border:1px solid var(--border2);border-radius:var(--r-sm);padding:1rem 1.25rem;}
+.q-text{font-size:14px;font-weight:600;color:#fff;margin-bottom:.75rem;}
+.q-opts{display:flex;flex-direction:column;gap:6px;}
+.q-opt{display:flex;align-items:center;gap:10px;padding:8px 12px;border-radius:8px;border:1px solid var(--border);background:transparent;cursor:pointer;font-size:13px;color:var(--text2);width:100%;text-align:left;transition:all .15s;}
+.q-opt:hover{border-color:var(--amber-border);background:var(--amber-bg);}
+.q-opt.correct{border-color:var(--teal-border);background:var(--teal-bg);color:#fff;}
+.q-opt.wrong{border-color:rgba(224,92,58,0.4);background:var(--coral-bg);color:#fff;}
+.q-feedback{font-size:12px;margin-top:8px;padding:6px 10px;border-radius:6px;display:none;}
+.q-feedback.show{display:block;}
+.q-feedback.good{background:var(--teal-bg);color:#5DCAA5;}
+.q-feedback.bad{background:var(--coral-bg);color:#F09B80;}
+.tf-opts{display:flex;gap:8px;}
+.tf-btn{flex:1;padding:8px;border-radius:8px;border:1px solid var(--border);background:transparent;cursor:pointer;font-size:13px;font-weight:600;color:var(--text2);transition:all .15s;}
+.tf-btn:hover{border-color:var(--amber-border);background:var(--amber-bg);}
+.tf-btn.correct{border-color:var(--teal-border);background:var(--teal-bg);color:#fff;}
+.tf-btn.wrong{border-color:rgba(224,92,58,0.4);background:var(--coral-bg);color:#fff;}
+.grammar-box{background:var(--surface2);border-left:3px solid var(--amber-400);border-radius:0 var(--r-sm) var(--r-sm) 0;padding:1rem 1.25rem;margin-bottom:1rem;}
+.grammar-label{font-size:10px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--amber-300);margin-bottom:.5rem;}
+.grammar-rule{font-size:14px;color:#fff;font-weight:600;margin-bottom:.5rem;}
+.grammar-eg{font-size:13px;color:var(--text2);margin-top:.25rem;font-style:italic;}
+.grammar-eg span{color:var(--amber-300);font-weight:600;font-style:normal;}
+.grammar-table{width:100%;border-collapse:collapse;font-size:13px;margin-top:.75rem;}
+.grammar-table th{text-align:left;padding:6px 10px;font-size:10px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;color:var(--text3);border-bottom:1px solid var(--border);}
+.grammar-table td{padding:7px 10px;color:var(--text2);border-bottom:1px solid var(--border2);}
+.grammar-table td:first-child{color:#fff;font-weight:500;}
+.hl{color:var(--amber-300);font-weight:600;}
+.sb-activity{margin-bottom:1.25rem;}
+.sb-label{font-size:11px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;color:var(--amber-300);margin-bottom:.75rem;}
+.sb-input{width:100%;background:var(--surface2);border:1px solid var(--border);border-radius:var(--r-sm);padding:.625rem .875rem;font-size:14px;color:#fff;font-family:'Inter',sans-serif;transition:border-color .15s;outline:none;margin-bottom:.5rem;}
+.sb-input:focus{border-color:var(--amber-border);}
+.sb-check{padding:7px 18px;border-radius:99px;background:var(--amber-400);color:#1A0800;font-size:13px;font-weight:700;border:none;cursor:pointer;transition:opacity .15s;}
+.sb-check:hover{opacity:.85;}
+.sb-result{font-size:12px;margin-top:6px;padding:6px 10px;border-radius:6px;display:none;}
+.sb-result.show{display:block;}
+.sb-result.ok{background:var(--teal-bg);color:#5DCAA5;}
+.sb-result.no{background:var(--coral-bg);color:#F09B80;}
+.speak-level{margin-bottom:1.25rem;}
+.speak-badge{display:inline-flex;align-items:center;gap:6px;font-size:11px;font-weight:700;padding:3px 12px;border-radius:99px;margin-bottom:.875rem;}
+.speak-badge.l1{background:var(--teal-bg);color:#5DCAA5;border:1px solid var(--teal-border);}
+.speak-badge.l2{background:var(--amber-bg);color:var(--amber-300);border:1px solid var(--amber-border);}
+.speak-badge.l3{background:var(--blue-bg);color:var(--blue);border:1px solid rgba(74,158,224,0.3);}
+.speak-q{background:var(--surface2);border:1px solid var(--border2);border-radius:var(--r-sm);padding:1rem 1.25rem;margin-bottom:.75rem;}
+.speak-q p{font-size:14px;font-weight:600;color:#fff;margin-bottom:.5rem;}
+.speak-hint{font-size:12px;color:var(--text3);}
+.speak-hint span{color:var(--amber-300);}
+.idea-q{background:var(--surface2);border:1px solid var(--border2);border-radius:var(--r-sm);padding:1rem 1.25rem;margin-bottom:.75rem;display:flex;gap:10px;}
+.idea-icon{font-size:20px;flex-shrink:0;margin-top:2px;}
+.idea-text{font-size:14px;color:var(--text2);line-height:1.6;}
+.idea-text strong{color:#fff;}
+.ielts-topic{background:var(--blue-bg);border:1px solid rgba(74,158,224,0.25);border-radius:var(--r-sm);padding:1rem 1.25rem;margin-bottom:1.25rem;}
+.ielts-topic-label{font-size:10px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--blue);margin-bottom:.25rem;}
+.ielts-topic h4{font-size:16px;font-weight:700;color:#fff;}
+.vocab-chips{display:flex;flex-wrap:wrap;gap:6px;margin-top:.75rem;}
+.chip{font-size:12px;padding:4px 12px;border-radius:99px;background:rgba(255,255,255,0.06);border:1px solid var(--border);color:var(--text2);}
+.chip.amber{background:var(--amber-bg);border-color:var(--amber-border);color:var(--amber-300);}
+.ielts-qs{display:flex;flex-direction:column;gap:8px;margin-top:1rem;}
+.ielts-q{display:flex;gap:10px;background:var(--surface2);border-radius:var(--r-sm);padding:.875rem 1rem;}
+.ielts-q-num{font-size:11px;font-weight:700;color:var(--blue);min-width:20px;}
+.ielts-q-text{font-size:13px;color:var(--text2);}
+.ielts-w2{background:rgba(74,158,224,0.08);border:1px solid rgba(74,158,224,0.2);border-radius:var(--r-sm);padding:1rem 1.25rem;margin-top:1rem;}
+.ielts-w2-label{font-size:10px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--blue);margin-bottom:.5rem;}
+.ielts-w2 p{font-size:14px;color:var(--text2);line-height:1.7;font-style:italic;}
+.star-words{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:1.25rem;}
+.star-word{display:flex;align-items:center;gap:6px;padding:6px 14px;border-radius:99px;background:var(--amber-bg);border:1px solid var(--amber-border);font-size:13px;font-weight:600;color:var(--amber-300);}
+.think-box{background:var(--surface2);border:1px solid var(--border2);border-radius:var(--r-sm);padding:1rem 1.25rem;margin-bottom:1rem;}
+.think-box .think-head{font-size:12px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;color:var(--amber-300);margin-bottom:.5rem;}
+.think-box p{font-size:14px;color:var(--text2);}
+.mini-quiz-q{background:var(--surface2);border:1px solid var(--border2);border-radius:var(--r-sm);padding:1rem;margin-bottom:.75rem;}
+.mq-text{font-size:13px;font-weight:600;color:#fff;margin-bottom:.625rem;}
+.mq-opts{display:flex;flex-direction:column;gap:5px;}
+.mq-opt{padding:7px 12px;border-radius:6px;border:1px solid var(--border);background:transparent;font-size:12px;color:var(--text2);cursor:pointer;text-align:left;transition:all .15s;}
+.mq-opt:hover{border-color:var(--amber-border);background:var(--amber-bg);}
+.mq-opt.correct{border-color:var(--teal-border);background:var(--teal-bg);color:#fff;}
+.mq-opt.wrong{border-color:rgba(224,92,58,0.4);background:var(--coral-bg);color:#fff;}
+.lesson-nav{display:flex;gap:10px;margin-top:2rem;}
+.nav-btn{display:flex;align-items:center;gap:6px;padding:.75rem 1.25rem;border-radius:10px;font-size:13px;font-weight:600;cursor:pointer;text-decoration:none;border:1px solid var(--border);color:var(--text2);background:var(--surface);transition:all .15s;flex:1;justify-content:center;}
+.nav-btn:hover{border-color:var(--border2);color:#fff;}
+.nav-btn.primary{background:var(--amber-400);color:#1A0800;border-color:transparent;}
+.nav-btn.primary:hover{opacity:.9;}
+.site-footer{background:#111;border-top:1px solid rgba(255,255,255,0.07);text-align:center;padding:1.5rem;font-size:12px;color:rgba(255,255,255,0.3);}
+.site-footer strong{color:var(--amber-300);}
+@media(max-width:600px){.vocab-grid{grid-template-columns:1fr;}.lesson-nav{flex-direction:column;}}
+</style>
+</head>
+<body>
+<header class="site-header">
+  <div class="hdr">
+    <a class="logo-wrap" href="index.html">
+      <div class="logo-icon"><svg viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+          <path d="M6 24 C8 18,14 10,24 6 C20 10,18 14,20 18 C16 16,12 18,6 24Z" fill="white"/>
+          <path d="M20 18 C22 20,22 23,20 26 C18 24,18 21,20 18Z" fill="rgba(255,255,255,0.5)"/>
+        </svg></div>
+      <span class="logo-name">Lexilink Ideation IELTS STUDIO</span>
+    </a>
+    <div class="hdr-pipe"></div>
+    <a class="hdr-back" href="index.html"><i class="ti ti-arrow-left" aria-hidden="true"></i> Vol. 1</a>
+    <div class="hdr-spacer"></div>
+    <span class="hdr-badge">Lesson 26G</span>
+  </div>
+</header>
+<section class="lesson-hero">
+  <p class="lesson-eyebrow">Chapter 26 · The People of the Americas</p>
+  <h1>Rabbit Shoots the Sun</h1>
+  <p>A North American story — and a review of the whole chapter</p>
+  <div class="lesson-pills"><span class="l-pill">📖 Story + Vocabulary</span><span class="l-pill">🎤 Speaking</span><span class="l-pill">✏️ Grammar</span><span class="l-pill">⭐ CEFR A2–B1</span></div>
+</section>
+<div class="lesson-progress">
+  <div class="lp-inner">
+    <div class="lp-labels"><span>Lesson 26G of 7</span><span style="color:var(--amber-300)">Part 1 of 10</span></div>
+    <div class="lp-track"><div class="lp-fill"></div></div>
+    <div class="lp-parts">
+      <span class="lp-part active" onclick="scrollTo('p1')">1 Vocab</span>
+      <span class="lp-part" onclick="scrollTo('p2')">2 Story</span>
+      <span class="lp-part" onclick="scrollTo('p3')">3 Reading</span>
+      <span class="lp-part" onclick="scrollTo('p4')">4 Grammar</span>
+      <span class="lp-part" onclick="scrollTo('p5')">5 Builder</span>
+      <span class="lp-part" onclick="scrollTo('p6')">6 Speaking 1</span>
+      <span class="lp-part" onclick="scrollTo('p7')">7 Speaking 2</span>
+      <span class="lp-part" onclick="scrollTo('p8')">8 Ideas</span>
+      <span class="lp-part" onclick="scrollTo('p9')">9 IELTS</span>
+      <span class="lp-part" onclick="scrollTo('p10')">10 Review</span>
+    </div>
+  </div>
+</div>
+
+<main class="main">
+<section class="sec" id="p1">
+  <div class="sec-header">
+    <div class="sec-num">1</div>
+    <div><div class="sec-title">Vocabulary</div><div class="sec-sub">Click each word to learn more</div></div>
+  </div>
+  <div class="vocab-grid"><div class="vocab-card" onclick="toggleVocab(this)">
+      <div class="vc-top"><span class="vc-word">wither</span><span class="vc-pos">verb</span></div>
+      <div class="vc-pron">/ˈwɪð.ər/</div>
+      <div class="vc-cn">枯萎</div>
+      <div class="vc-detail">
+        <div class="vc-def">To become dry and weak because of heat.</div>
+        <div class="vc-ex">"The grass withered in the heat."</div>
+      </div>
+    </div><div class="vocab-card" onclick="toggleVocab(this)">
+      <div class="vc-top"><span class="vc-word">weary</span><span class="vc-pos">adjective</span></div>
+      <div class="vc-pron">/ˈwɪə.ri/</div>
+      <div class="vc-cn">疲倦的</div>
+      <div class="vc-detail">
+        <div class="vc-def">Very tired.</div>
+        <div class="vc-ex">"The animals were too hot and weary to play."</div>
+      </div>
+    </div><div class="vocab-card" onclick="toggleVocab(this)">
+      <div class="vc-top"><span class="vc-word">gasp</span><span class="vc-pos">verb</span></div>
+      <div class="vc-pron">/ɡɑːsp/</div>
+      <div class="vc-cn">喘气</div>
+      <div class="vc-detail">
+        <div class="vc-def">To breathe in quickly because you are hot or surprised.</div>
+        <div class="vc-ex">"They lay in the shade, gasping for breath."</div>
+      </div>
+    </div><div class="vocab-card" onclick="toggleVocab(this)">
+      <div class="vc-top"><span class="vc-word">trickle</span><span class="vc-pos">verb</span></div>
+      <div class="vc-pron">/ˈtrɪk.əl/</div>
+      <div class="vc-cn">滴流</div>
+      <div class="vc-detail">
+        <div class="vc-def">To flow in a very thin, slow line.</div>
+        <div class="vc-ex">"Even the stream had trickled away into dust."</div>
+      </div>
+    </div><div class="vocab-card" onclick="toggleVocab(this)">
+      <div class="vc-top"><span class="vc-word">grumble</span><span class="vc-pos">verb</span></div>
+      <div class="vc-pron">/ˈɡrʌm.bəl/</div>
+      <div class="vc-cn">抱怨</div>
+      <div class="vc-detail">
+        <div class="vc-def">To complain in a quiet, unhappy voice.</div>
+        <div class="vc-ex">"&quot;Sun needs to learn a lesson,&quot; Rabbit grumbled."</div>
+      </div>
+    </div><div class="vocab-card" onclick="toggleVocab(this)">
+      <div class="vc-top"><span class="vc-word">bound</span><span class="vc-pos">noun</span></div>
+      <div class="vc-pron">/baʊnd/</div>
+      <div class="vc-cn">跳跃</div>
+      <div class="vc-detail">
+        <div class="vc-def">A big jump.</div>
+        <div class="vc-ex">"The Sun jumped into the sky with a great bound."</div>
+      </div>
+    </div><div class="vocab-card" onclick="toggleVocab(this)">
+      <div class="vc-top"><span class="vc-word">scorch</span><span class="vc-pos">verb</span></div>
+      <div class="vc-pron">/skɔːtʃ/</div>
+      <div class="vc-cn">烧焦</div>
+      <div class="vc-detail">
+        <div class="vc-def">To burn the surface of something.</div>
+        <div class="vc-ex">"Rabbit&#x27;s fur began to scorch."</div>
+      </div>
+    </div><div class="vocab-card" onclick="toggleVocab(this)">
+      <div class="vc-top"><span class="vc-word">panic</span><span class="vc-pos">noun</span></div>
+      <div class="vc-pron">/ˈpæn.ɪk/</div>
+      <div class="vc-cn">惊慌</div>
+      <div class="vc-detail">
+        <div class="vc-def">A sudden, strong fear.</div>
+        <div class="vc-ex">"In a panic, Rabbit threw down his bow and ran."</div>
+      </div>
+    </div><div class="vocab-card" onclick="toggleVocab(this)">
+      <div class="vc-top"><span class="vc-word">timid</span><span class="vc-pos">adjective</span></div>
+      <div class="vc-pron">/ˈtɪm.ɪd/</div>
+      <div class="vc-cn">胆小的</div>
+      <div class="vc-detail">
+        <div class="vc-def">Shy and easily frightened.</div>
+        <div class="vc-ex">"The story tells why rabbits are so timid."</div>
+      </div>
+    </div><div class="vocab-card" onclick="toggleVocab(this)">
+      <div class="vc-top"><span class="vc-word">bold</span><span class="vc-pos">adjective</span></div>
+      <div class="vc-pron">/bəʊld/</div>
+      <div class="vc-cn">大胆的</div>
+      <div class="vc-detail">
+        <div class="vc-def">Brave and not afraid.</div>
+        <div class="vc-ex">"The Sun was never as bold as before."</div>
+      </div>
+    </div></div>
+</section>
+<section class="sec" id="p2">
+  <div class="sec-header">
+    <div class="sec-num">2</div>
+    <div><div class="sec-title">The Story</div><div class="sec-sub">Read carefully. Notice the bold words.</div></div>
+  </div>
+  <div class="story-body"><div class="story-icon">☀️</div><p>The ancient North Americans did not write books, but they told wonderful stories. Here is one of them. It explains why rabbits are so <span class="story-hl">timid</span>.</p>
+<p>🔥 It was the hottest day of summer. The sun beat down on the earth and turned it brown and dry. The grass <span class="story-hl">withered</span>. The animals were too hot and <span class="story-hl">weary</span> to run or play, so they lay in the shade, <span class="story-hl">gasping</span> for breath. Rabbit had searched for water all day. Every puddle was dry mud, and even the stream had <span class="story-hl">trickled</span> away into dust.</p>
+<p>😠 Rabbit sat in the dry stream bed and shouted at the sun, "Stop shining! We need to cool off!" But the Sun paid no attention. Rabbit got hotter and thirstier. "Sun needs to learn a lesson," he <span class="story-hl">grumbled</span>. "I will take my bow and arrows and go east, where the Sun comes up. When he puts his head up tomorrow, I will shoot him!"</p>
+<div class="story-box">Rabbit, great Rabbit, enemy of the Sun. The Sun will learn my strength. Ho! Rabbit is coming!</div><p>🏹 In those days, the Sun did not rise slowly. He jumped into the sky with a great <span class="story-hl">bound</span>. So Rabbit ran east, singing his brave song. He waited all night under a tree. In the morning, the Sun sprang up, laughing. At once, Rabbit jumped up and shot an arrow right into the middle of the Sun!</p>
+<p>💥 The arrow made a great hole in the Sun, and fire poured out over the world. The tree began to smoke. The grass burst into flames. Rabbit's fur began to <span class="story-hl">scorch</span>. In a <span class="story-hl">panic</span>, he threw down his bow and ran, crying, "Rabbit has shot the Sun! Fire is over the world!"</p>
+<p>🌱 "Over here!" called a little voice. It was a tiny green bush. "Jump under me and you will be safe! I am so small that the fire will go right over me." Rabbit dived under the bush and buried his nose in the ground. The fire swept over him with a roar. When it was gone, the world was brown and burnt, and the bush was no longer green. It had turned yellow. We still call it the yellow bush.</p>
+<p>🐇 Rabbit crept quietly away. To this day, Rabbit runs and hides when sunlight falls on him. And the Sun was never as <span class="story-hl">bold</span> as before. Instead of leaping up, he creeps up slowly, looking around for Rabbit and his bow.</p>
+<div class="story-icon">🐇</div></div>
+</section>
+<section class="sec" id="p3">
+  <div class="sec-header">
+    <div class="sec-num">3</div>
+    <div><div class="sec-title">Reading Comprehension</div><div class="sec-sub">Choose the best answer. Get instant feedback!</div></div>
+  </div>
+  <div class="quiz-list">
+    <div class="q-item">
+      <div class="q-text">1. Why was Rabbit angry at the Sun?</div>
+      <div class="q-opts"><button class="q-opt" onclick="mcq(this,'wrong')">The Sun was too cold.</button>
+<button class="q-opt" onclick="mcq(this,'correct')">The Sun made the day too hot and dry.</button>
+<button class="q-opt" onclick="mcq(this,'wrong')">The Sun took his bow.</button></div>
+      <div class="q-feedback"></div>
+    </div>
+    <div class="q-item">
+      <div class="q-text">2. What did Rabbit decide to do?</div>
+      <div class="q-opts"><button class="q-opt" onclick="mcq(this,'wrong')">Hide under a tree</button>
+<button class="q-opt" onclick="mcq(this,'correct')">Shoot the Sun with an arrow</button>
+<button class="q-opt" onclick="mcq(this,'wrong')">Dig a deep well</button></div>
+      <div class="q-feedback"></div>
+    </div>
+    <div class="q-item">
+      <div class="q-text">3. What happened after Rabbit shot the Sun?</div>
+      <div class="q-opts"><button class="q-opt" onclick="mcq(this,'wrong')">Rain fell from the sky.</button>
+<button class="q-opt" onclick="mcq(this,'correct')">Fire poured out and burned the world.</button>
+<button class="q-opt" onclick="mcq(this,'wrong')">Nothing happened.</button></div>
+      <div class="q-feedback"></div>
+    </div>
+    <div class="q-item">
+      <div class="q-text">4. Who helped Rabbit escape the fire?</div>
+      <div class="q-opts"><button class="q-opt" onclick="mcq(this,'correct')">A tiny green bush</button>
+<button class="q-opt" onclick="mcq(this,'wrong')">A big bear</button>
+<button class="q-opt" onclick="mcq(this,'wrong')">The wolf</button></div>
+      <div class="q-feedback"></div>
+    </div>
+    <div class="q-item">
+      <div class="q-text">5. Why does the yellow bush have its color in the story?</div>
+      <div class="q-opts"><button class="q-opt" onclick="mcq(this,'correct')">It was scorched by the fire.</button>
+<button class="q-opt" onclick="mcq(this,'wrong')">It grew in sand.</button>
+<button class="q-opt" onclick="mcq(this,'wrong')">It was painted.</button></div>
+      <div class="q-feedback"></div>
+    </div>
+    <div class="q-item">
+      <div class="q-text">6. What does the story explain?</div>
+      <div class="q-opts"><button class="q-opt" onclick="mcq(this,'wrong')">Why the sky is blue</button>
+<button class="q-opt" onclick="mcq(this,'correct')">Why rabbits are timid and the Sun rises slowly</button>
+<button class="q-opt" onclick="mcq(this,'wrong')">How the buffalo got horns</button></div>
+      <div class="q-feedback"></div>
+    </div>
+  </div>
+</section>
+<section class="sec" id="p4">
+  <div class="sec-header">
+    <div class="sec-num">4</div>
+    <div><div class="sec-title">Language Focus</div><div class="sec-sub">Grammar from the story — learn through meaning</div></div>
+  </div>
+<div class="grammar-box">
+    <div class="grammar-label">📌 Past simple narrative (storytelling)</div>
+    <div class="grammar-rule">Stories about the past use past simple verbs in order.</div>
+    <div class="grammar-eg">Rabbit <span>sat</span> down, <span>shouted</span> at the Sun, and <span>grabbed</span> his bow.</div>
+<div class="grammar-eg">The fire <span>swept</span> over him with a roar.</div>
+<div class="grammar-eg">Rabbit <span>crept</span> away quietly.</div>
+<div class="grammar-note" style="font-size:12px;color:var(--text3);margin-top:.5rem;">💡 Tip: Irregular verbs: sit-sat, shoot-shot, run-ran, creep-crept, throw-threw.</div>
+  </div>
+<div class="grammar-box">
+    <div class="grammar-label">📌 &#x27;At once&#x27; and time words</div>
+    <div class="grammar-rule">Words like &#x27;at once&#x27;, &#x27;then&#x27;, &#x27;when&#x27; show the order of events.</div>
+    <div class="grammar-eg"><span>At once</span>, Rabbit jumped to his feet.</div>
+<div class="grammar-eg"><span>When</span> the fire was gone, he looked around.</div>
+<div class="grammar-eg"><span>Soon</span> the whole world was burning.</div>
+<div class="grammar-note" style="font-size:12px;color:var(--text3);margin-top:.5rem;">💡 Tip: Time words help your listener follow the story.</div>
+  </div>
+<div class="grammar-box">
+    <div class="grammar-label">📌 Comparing with &#x27;as ... as before&#x27;</div>
+    <div class="grammar-rule">Use &#x27;not as ... as&#x27; to say something changed.</div>
+    <div class="grammar-eg">The Sun was <span>not as bold as before</span>.</div>
+<div class="grammar-eg">The world was <span>not as green as</span> it had been.</div>
+<div class="grammar-eg">Rabbit was <span>not as brave as</span> he thought.</div>
+<div class="grammar-note" style="font-size:12px;color:var(--text3);margin-top:.5rem;">💡 Tip: not as + adjective + as = less than.</div>
+  </div>
+
+</section>
+<section class="sec" id="p5">
+  <div class="sec-header">
+    <div class="sec-num">5</div>
+    <div><div class="sec-title">Sentence Builder</div><div class="sec-sub">Build your skills with the vocabulary</div></div>
+  </div>
+<div class="sb-activity">
+    <div class="sb-label">✏️ Fill in the blank</div>
+    <p style="font-size:13px;color:var(--text2);margin-bottom:.5rem;">1. The grass ________ in the terrible heat.</p>
+    <input class="sb-input" id="f1g" placeholder="Your answer..."/>
+    <button class="sb-check" onclick="checkFill('f1g','withered','rf1g')">Check ✓</button>
+    <div class="sb-result" id="rf1g"></div>
+  </div>
+<div class="sb-activity">
+    <div class="sb-label">✏️ Fill in the blank</div>
+    <p style="font-size:13px;color:var(--text2);margin-bottom:.5rem;">2. Rabbit was so ________ that he ran away from the fire.</p>
+    <input class="sb-input" id="f2g" placeholder="Your answer..."/>
+    <button class="sb-check" onclick="checkFill('f2g','scared','rf2g')">Check ✓</button>
+    <div class="sb-result" id="rf2g"></div>
+  </div>
+<div class="sb-activity">
+    <div class="sb-label">🔀 Unscramble the sentence</div>
+    <p style="font-size:13px;color:var(--text3);margin-bottom:.75rem;">Put these words in the correct order:</p>
+    <div style="margin-bottom:.75rem;"><span style="padding:5px 10px;border-radius:99px;background:var(--surface2);border:1px solid var(--border);font-size:13px;color:var(--text2);display:inline-block;margin:3px;">shot</span><span style="padding:5px 10px;border-radius:99px;background:var(--surface2);border:1px solid var(--border);font-size:13px;color:var(--text2);display:inline-block;margin:3px;">Rabbit</span><span style="padding:5px 10px;border-radius:99px;background:var(--surface2);border:1px solid var(--border);font-size:13px;color:var(--text2);display:inline-block;margin:3px;">arrow</span><span style="padding:5px 10px;border-radius:99px;background:var(--surface2);border:1px solid var(--border);font-size:13px;color:var(--text2);display:inline-block;margin:3px;">an</span><span style="padding:5px 10px;border-radius:99px;background:var(--surface2);border:1px solid var(--border);font-size:13px;color:var(--text2);display:inline-block;margin:3px;">the</span><span style="padding:5px 10px;border-radius:99px;background:var(--surface2);border:1px solid var(--border);font-size:13px;color:var(--text2);display:inline-block;margin:3px;">at</span><span style="padding:5px 10px;border-radius:99px;background:var(--surface2);border:1px solid var(--border);font-size:13px;color:var(--text2);display:inline-block;margin:3px;">Sun</span></div>
+    <input class="sb-input" id="us1g" placeholder="Type your sentence here..."/>
+    <button class="sb-check" onclick="checkUnscramble('us1g','rabbit shot an arrow at the sun','ur1g')">Check ✓</button>
+    <div class="sb-result" id="ur1g"></div>
+  </div>
+<div class="sb-activity">
+    <div class="sb-label">🌏 Translate into English</div>
+    <p style="font-size:15px;color:var(--amber-300);margin-bottom:.5rem;">兔子躲到一棵小绿灌木下面。</p>
+    <input class="sb-input" id="tr1g" placeholder="Write your English sentence..."/>
+    <button class="sb-check" onclick="revealFill('rt1g','Rabbit hid under a tiny green bush.')">Show model answer</button>
+    <div class="sb-result" id="rt1g"></div>
+  </div>
+
+</section>
+<section class="sec" id="p6">
+  <div class="sec-header">
+    <div class="sec-num">6</div>
+    <div><div class="sec-title">Speaking — Level 1</div><div class="sec-sub">Answer in one complete sentence</div></div>
+  </div>
+  <div class="speak-level">
+    <span class="speak-badge l1">🟢 Level 1 · One sentence</span>
+    <div class="speak-q"><p>Why was Rabbit angry?</p><div class="speak-hint">💡 Start with: <span>Rabbit was angry because...</span></div></div>
+<div class="speak-q"><p>Who saved Rabbit from the fire?</p><div class="speak-hint">💡 Start with: <span>A ... saved him.</span></div></div>
+<div class="speak-q"><p>What color did the bush turn?</p><div class="speak-hint">💡 Start with: <span>It turned...</span></div></div>
+  </div>
+</section>
+<section class="sec" id="p7">
+  <div class="sec-header">
+    <div class="sec-num">7</div>
+    <div><div class="sec-title">Speaking — Level 2 &amp; 3</div><div class="sec-sub">Extend your answer. Share your opinion.</div></div>
+  </div>
+  <div class="speak-level">
+    <span class="speak-badge l2">🟡 Level 2 · 2–3 sentences</span>
+    <div class="speak-q"><p>Retell the story of Rabbit and the Sun in three sentences.</p><div class="speak-hint">💡 Try: <span>First... Then... At the end...</span></div></div>
+<div class="speak-q"><p>Why do you think people tell stories that explain nature?</p><div class="speak-hint">💡 Try: <span>I think they tell them because...</span></div></div>
+  </div>
+  <div class="speak-level">
+    <span class="speak-badge l3">🔵 Level 3 · Your opinion</span>
+    <div class="speak-q"><p>Is it ever a good idea to fight something much bigger and stronger than you? Give your opinion.</p><div class="speak-hint">💡 Use: <span>I believe... For example... However...</span></div></div>
+  </div>
+</section>
+<section class="sec" id="p8">
+  <div class="sec-header">
+    <div class="sec-num">8</div>
+    <div><div class="sec-title">Ideas &amp; Society</div><div class="sec-sub">Think about big ideas. There is no wrong answer.</div></div>
+  </div>
+<div class="idea-q"><div class="idea-icon">☀️</div><div class="idea-text"><strong>Stories explain the world.</strong> Rabbit Shoots the Sun explains why rabbits are timid. What other stories explain nature in your culture?</div></div>
+<div class="idea-q"><div class="idea-icon">🐰</div><div class="idea-text"><strong>Small but clever.</strong> The tiny bush saved Rabbit. Can small things be more important than big ones?</div></div>
+<div class="idea-q"><div class="idea-icon">😡</div><div class="idea-text"><strong>Anger and action.</strong> Rabbit acted out of anger and made a big problem. How can we handle strong feelings in a wiser way?</div></div>
+<div class="idea-q"><div class="idea-icon">🔥</div><div class="idea-text"><strong>Climate and heat.</strong> In the story, a very hot day causes trouble. How does extreme weather affect people today?</div></div>
+
+</section>
+<section class="sec" id="p9">
+  <div class="sec-header">
+    <div class="sec-num">9</div>
+    <div><div class="sec-title">IELTS Content Builder</div><div class="sec-sub">Planting seeds for your future IELTS exam</div></div>
+  </div>
+  <div class="ielts-topic">
+    <div class="ielts-topic-label">📘 Today's IELTS Topic</div>
+    <h4>Storytelling and Culture</h4>
+  </div>
+  <p style="font-size:12px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;color:var(--text3);margin:.875rem 0 .5rem;">Key vocabulary</p>
+  <div class="vocab-chips"><span class="chip amber">folktale</span><span class="chip amber">legend</span><span class="chip amber">myth</span><span class="chip amber">culture</span><span class="chip">moral</span><span class="chip">generation</span><span class="chip">imagination</span><span class="chip">symbol</span></div>
+  <p style="font-size:12px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;color:var(--text3);margin:.875rem 0 .5rem;">Useful collocations</p>
+  <div class="vocab-chips"><span class="chip">pass on a story</span><span class="chip">a moral lesson</span><span class="chip">shape cultural identity</span><span class="chip">spark the imagination</span></div>
+  <div class="ielts-qs"><div class="ielts-q"><div class="ielts-q-num">S1</div><div class="ielts-q-text">Do you remember a story from your childhood? What was it about?</div></div>
+<div class="ielts-q"><div class="ielts-q-num">S2</div><div class="ielts-q-text">Why do cultures create myths and legends?</div></div>
+<div class="ielts-q"><div class="ielts-q-num">S3</div><div class="ielts-q-text">Do stories help children learn values?</div></div>
+</div>
+  <div class="ielts-w2">
+    <div class="ielts-w2-label">✏️ IELTS Writing Task 2 — Future Practice</div>
+    <p>"Some people say traditional stories are no longer useful in the modern world. Others believe they are still important for children. Discuss both views and give your own opinion."</p>
+  </div>
+</section>
+<section class="sec" id="p10">
+  <div class="sec-header">
+    <div class="sec-num">10</div>
+    <div><div class="sec-title">Chapter 26 Review</div><div class="sec-sub">Celebrate everything you have learned!</div></div>
+  </div>
+  <div style="background:#1A1100;border:1px solid rgba(212,137,15,0.2);border-radius:var(--r-sm);padding:1.25rem;margin-bottom:1.25rem;">
+    <div style="font-size:11px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--amber-300);margin-bottom:.75rem;">📖 Chapter 26 Summary</div>
+    <p style="font-size:14px;color:var(--text2);line-height:1.8;">The ancient <strong style="color:#fff">Americas</strong> were home to many peoples who left no written records. In South America, the <strong style="color:#fff">Nazca</strong> scraped enormous drawings of animals into the desert in Peru, and nobody knows exactly how or why. In Central America, the <strong style="color:#fff">Olmecs</strong> built a city on a hill, a clay <strong style="color:#fff">pyramid</strong>, and giant stone <strong style="color:#fff">heads</strong> that still amaze us. In the cold north, hunters trapped animals and chased <strong style="color:#fff">whales</strong>; on the plains, tribes followed the <strong style="color:#fff">buffalo</strong> like nomads. Without books, they passed their stories down by voice, including the tale of <strong style="color:#fff">Rabbit Shoots the Sun</strong>. Their artifacts and stories are the voices of people who never wrote their own history.</p>
+  </div>
+  <p style="font-size:12px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;color:var(--text3);margin:.875rem 0 .5rem;">⭐ All Chapter 26 Star Words</p>
+  <div class="star-words"><span class="star-word">⭐ continent</span><span class="star-word">⭐ artifact</span><span class="star-word">⭐ written records</span><span class="star-word">⭐ ruined</span><span class="star-word">⭐ mound</span><span class="star-word">⭐ mysterious</span><span class="star-word">⭐ peninsula</span><span class="star-word">⭐ strip</span><span class="star-word">⭐ fertile</span><span class="star-word">⭐ tribe</span><span class="star-word">⭐ pilot</span><span class="star-word">⭐ scrape</span><span class="star-word">⭐ gash</span><span class="star-word">⭐ enormous</span><span class="star-word">⭐ pelican</span><span class="star-word">⭐ spiral</span><span class="star-word">⭐ pattern</span><span class="star-word">⭐ intact</span><span class="star-word">⭐ damage</span><span class="star-word">⭐ theory</span><span class="star-word">⭐ Mesoamerica</span><span class="star-word">⭐ Olmec</span><span class="star-word">⭐ civilization</span><span class="star-word">⭐ plain</span><span class="star-word">⭐ priest</span><span class="star-word">⭐ pyramid</span><span class="star-word">⭐ haul</span><span class="star-word">⭐ basketful</span><span class="star-word">⭐ temple</span><span class="star-word">⭐ jaguar</span><span class="star-word">⭐ statue</span><span class="star-word">⭐ sculpture</span><span class="star-word">⭐ ruler</span><span class="star-word">⭐ ceiling</span><span class="star-word">⭐ giant</span><span class="star-word">⭐ honor</span><span class="star-word">⭐ archaeologist</span><span class="star-word">⭐ altar</span><span class="star-word">⭐ throne</span><span class="star-word">⭐ roam</span><span class="star-word">⭐ survive</span><span class="star-word">⭐ trap</span><span class="star-word">⭐ caribou</span><span class="star-word">⭐ moss</span><span class="star-word">⭐ lichen</span><span class="star-word">⭐ brave</span><span class="star-word">⭐ whale</span><span class="star-word">⭐ blubber</span><span class="star-word">⭐ village</span><span class="star-word">⭐ buffalo</span><span class="star-word">⭐ herd</span><span class="star-word">⭐ meadow</span><span class="star-word">⭐ nomad</span><span class="star-word">⭐ tent</span><span class="star-word">⭐ sharpen</span><span class="star-word">⭐ settle</span><span class="star-word">⭐ record</span><span class="star-word">⭐ pass down</span><span class="star-word">⭐ explain</span><span class="star-word">⭐ wither</span><span class="star-word">⭐ weary</span><span class="star-word">⭐ gasp</span><span class="star-word">⭐ trickle</span><span class="star-word">⭐ grumble</span><span class="star-word">⭐ bound</span><span class="star-word">⭐ scorch</span><span class="star-word">⭐ panic</span><span class="star-word">⭐ timid</span><span class="star-word">⭐ bold</span></div>
+  <div class="think-box">
+    <div class="think-head">💡 The Big Idea of Chapter 26</div>
+    <p>The people of the Americas had no written records, but they left drawings, giant sculptures, and stories. History is found wherever people leave a trace, and every trace is a clue.</p>
+  </div>
+  <div style="background:var(--amber-bg);border:1px solid var(--amber-border);border-radius:var(--r-sm);padding:1.25rem;margin-bottom:1.25rem;">
+    <div style="font-size:11px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--amber-300);margin-bottom:.75rem;">🗺️ Chapter 26 Project — The Americas Map and Mystery Poster</div>
+    <p style="font-size:14px;color:var(--text2);margin-bottom:.75rem;">Make a poster that shows the three Americas and what each ancient people left behind. Include:</p>
+    <div style="display:flex;flex-direction:column;gap:6px;">
+      <div style="display:flex;gap:10px;align-items:flex-start;"><span style="color:var(--amber-300);font-weight:700;min-width:24px;">1.</span><span style="font-size:13px;color:var(--text2);">Draw a map of North, Central, and South America with the three names clearly labeled.</span></div>
+      <div style="display:flex;gap:10px;align-items:flex-start;"><span style="color:var(--amber-300);font-weight:700;min-width:24px;">2.</span><span style="font-size:13px;color:var(--text2);">Mark Peru (the Nazca), Mexico (the Olmecs), and the far north and Great Plains (hunters and buffalo tribes).</span></div>
+      <div style="display:flex;gap:10px;align-items:flex-start;"><span style="color:var(--amber-300);font-weight:700;min-width:24px;">3.</span><span style="font-size:13px;color:var(--text2);">Draw one picture for each: a Nazca animal drawing, an Olmec stone head, a buffalo, and a whale.</span></div>
+      <div style="display:flex;gap:10px;align-items:flex-start;"><span style="color:var(--amber-300);font-weight:700;min-width:24px;">4.</span><span style="font-size:13px;color:var(--text2);">Under each picture, write two sentences: what the people made or did, and what we still do not know.</span></div>
+      <div style="display:flex;gap:10px;align-items:flex-start;"><span style="color:var(--amber-300);font-weight:700;min-width:24px;">5.</span><span style="font-size:13px;color:var(--text2);">Finish with a short caption (2-3 sentences) explaining why the Americas are important to world history.</span></div>
+    </div>
+  </div>
+  <p style="font-size:12px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;color:var(--text3);margin:.875rem 0 .5rem;">🧠 Final Quiz</p>
+  <div class="mini-quiz-q"><div class="mq-text">A. Where did the Nazca people live?</div><div class="mq-opts"><button class="mq-opt" onclick="mq(this,'correct')">Peru</button>
+<button class="mq-opt" onclick="mq(this,'wrong')">Egypt</button>
+<button class="mq-opt" onclick="mq(this,'wrong')">Greece</button></div></div><div class="mini-quiz-q"><div class="mq-text">B. What did the Olmecs build around their temple?</div><div class="mq-opts"><button class="mq-opt" onclick="mq(this,'correct')">Giant stone heads</button>
+<button class="mq-opt" onclick="mq(this,'wrong')">Walls of glass</button>
+<button class="mq-opt" onclick="mq(this,'wrong')">Roads of gold</button></div></div><div class="mini-quiz-q"><div class="mq-text">C. Why do we know about the ancient North Americans through stories?</div><div class="mq-opts"><button class="mq-opt" onclick="mq(this,'correct')">They passed stories down but left no written records</button>
+<button class="mq-opt" onclick="mq(this,'wrong')">They wrote many books</button>
+<button class="mq-opt" onclick="mq(this,'wrong')">They built libraries</button></div></div>
+  <div class="lesson-nav">
+    <a class="nav-btn" href="ch26-f.html"><i class="ti ti-arrow-left"></i> Lesson 26F</a>
+    <a class="nav-btn primary" href="https://lexilink-ideation.github.io/History-Workshop/">Back to the Workshop Home <i class="ti ti-arrow-right"></i></a>
+  </div>
+</section>
+</main>
+<footer class="site-footer"><strong>Lexilink Ideation IELTS STUDIO</strong> · History ESL Course · Chapter 26 — Lesson G · Chapter Review</footer>
+<script>
+function toggleVocab(card){card.classList.toggle('open');}
+function mcq(btn,type){
+  const item=btn.closest('.q-item');
+  item.querySelectorAll('.q-opt').forEach(b=>{b.classList.remove('correct','wrong');b.disabled=true;});
+  btn.classList.add(type);
+  const fb=item.querySelector('.q-feedback');
+  fb.className='q-feedback show '+(type==='correct'?'good':'bad');
+  fb.textContent=type==='correct'?'✓ Correct! Well done!':'✗ Not quite. Try to remember the story.';
+}
+function tf(btn,type,msg){
+  const item=btn.closest('.q-item');
+  item.querySelectorAll('.tf-btn').forEach(b=>{b.classList.remove('correct','wrong');b.disabled=true;});
+  btn.classList.add(type);
+  const fb=item.querySelector('.q-feedback');
+  fb.className='q-feedback show '+(type==='correct'?'good':'bad');
+  fb.textContent=(type==='correct'?'✓ ':'✗ ')+msg;
+}
+function mq(btn,type){
+  const item=btn.closest('.mini-quiz-q');
+  item.querySelectorAll('.mq-opt').forEach(b=>{b.classList.remove('correct','wrong');b.disabled=true;});
+  btn.classList.add(type);
+}
+function checkUnscramble(id,answer,rid){
+  const val=document.getElementById(id).value.trim().toLowerCase().replace(/[^a-z\s]/g,'');
+  const ans=answer.toLowerCase();
+  const r=document.getElementById(rid);
+  r.className='sb-result show '+(val===ans?'ok':'no');
+  r.textContent=val===ans?'✓ Perfect! "'+answer+'"':'✗ Try again. Check the word order.';
+}
+function checkFill(id,answer,rid){
+  const val=document.getElementById(id).value.trim().toLowerCase();
+  const r=document.getElementById(rid);
+  r.className='sb-result show '+(val===answer?'ok':'no');
+  r.textContent=val===answer?'✓ Correct!':'✗ The answer is: "'+answer+'"';
+}
+function revealFill(rid,answer){const r=document.getElementById(rid);r.className='sb-result show ok';r.textContent='Model answer: "'+answer+'"';}
+function scrollTo(id){document.getElementById(id).scrollIntoView({behavior:'smooth',block:'start'});}
+const parts=['p1','p2','p3','p4','p5','p6','p7','p8','p9','p10'];
+const partEls=document.querySelectorAll('.lp-part');
+window.addEventListener('scroll',()=>{
+  let current=0;
+  parts.forEach((id,i)=>{const el=document.getElementById(id);if(el&&el.getBoundingClientRect().top<200)current=i;});
+  partEls.forEach((el,i)=>{el.classList.remove('active','done');if(i<current)el.classList.add('done');else if(i===current)el.classList.add('active');});
+  const pct=Math.round(((current+1)/10)*100);
+  document.querySelector('.lp-fill').style.width=pct+'%';
+});
+</script>
+</body>
+</html>

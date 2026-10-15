@@ -1,0 +1,558 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+<title>Lesson 27C — The Wolf and the Shepherd | Lexilink History Workshop</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"/>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet"/>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@latest/tabler-icons.min.css"/>
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
+:root{
+  --bg:#0F0800;--surface:rgba(255,255,255,0.04);--surface2:rgba(255,255,255,0.07);
+  --border:rgba(255,255,255,0.10);--border2:rgba(255,255,255,0.06);
+  --amber-300:#E8A832;--amber-400:#D4890F;--amber-500:#B8720A;
+  --amber-bg:rgba(212,137,15,0.12);--amber-border:rgba(212,137,15,0.3);
+  --text:#fff;--text2:rgba(255,255,255,0.72);--text3:rgba(255,255,255,0.45);
+  --teal:#1D9E75;--teal-bg:rgba(29,158,117,0.12);--teal-border:rgba(29,158,117,0.3);
+  --coral:#E05C3A;--coral-bg:rgba(224,92,58,0.12);
+  --blue:#4A9EE0;--blue-bg:rgba(74,158,224,0.12);
+  --r:12px;--r-sm:8px;
+}
+html{scroll-behavior:smooth;}
+body{font-family:'Inter',sans-serif;background:var(--bg);color:var(--text);min-height:100vh;line-height:1.6;}
+.site-header{background:#111;border-bottom:1px solid rgba(255,255,255,0.08);position:sticky;top:0;z-index:100;}
+.hdr{max-width:860px;margin:0 auto;padding:0 1.5rem;height:54px;display:flex;align-items:center;gap:12px;}
+.logo-wrap{display:flex;align-items:center;gap:8px;text-decoration:none;}
+.logo-icon{width:30px;height:30px;display:flex;align-items:center;justify-content:center;}
+.logo-icon svg{width:26px;height:26px;}
+.logo-name{font-size:13px;font-weight:700;color:#fff;}
+.hdr-pipe{width:1px;height:20px;background:rgba(255,255,255,0.15);}
+.hdr-back{display:flex;align-items:center;gap:5px;font-size:12px;color:var(--text3);text-decoration:none;transition:color .15s;}
+.hdr-back:hover{color:var(--text2);}
+.hdr-spacer{flex:1;}
+.hdr-badge{font-size:10px;font-weight:700;letter-spacing:.05em;padding:3px 10px;border-radius:99px;border:1px solid var(--amber-border);color:var(--amber-300);background:var(--amber-bg);}
+.lesson-hero{background:linear-gradient(135deg,#1A0D2E 0%,#2E1A52 40%,#47287A 100%);padding:3rem 1.5rem 2.5rem;text-align:center;position:relative;overflow:hidden;}
+.lesson-hero::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse 70% 60% at 50% 50%,rgba(200,130,0,0.15),transparent);pointer-events:none;}
+.lesson-eyebrow{font-size:10px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--amber-300);margin-bottom:.75rem;}
+.lesson-hero h1{font-size:clamp(22px,4vw,36px);font-weight:700;color:#fff;letter-spacing:-.02em;margin-bottom:.5rem;}
+.lesson-hero p{font-size:14px;color:rgba(255,255,255,0.65);max-width:520px;margin:0 auto .875rem;}
+.lesson-pills{display:flex;flex-wrap:wrap;justify-content:center;gap:8px;}
+.l-pill{font-size:11px;font-weight:500;padding:4px 12px;border-radius:99px;border:1px solid rgba(255,255,255,0.18);color:rgba(255,255,255,0.75);background:rgba(255,255,255,0.06);}
+.lesson-progress{background:#1A1100;border-bottom:1px solid rgba(255,255,255,0.06);padding:.75rem 1.5rem;}
+.lp-inner{max-width:860px;margin:0 auto;}
+.lp-labels{display:flex;justify-content:space-between;font-size:11px;color:var(--text3);margin-bottom:6px;}
+.lp-track{height:4px;border-radius:99px;background:rgba(255,255,255,0.08);}
+.lp-fill{height:100%;border-radius:99px;background:linear-gradient(90deg,var(--amber-500),var(--amber-300));width:10%;}
+.lp-parts{display:flex;gap:4px;margin-top:8px;flex-wrap:wrap;}
+.lp-part{font-size:10px;font-weight:600;padding:2px 8px;border-radius:99px;background:rgba(255,255,255,0.06);color:var(--text3);cursor:pointer;transition:all .15s;}
+.lp-part.done{background:var(--amber-bg);color:var(--amber-300);border:1px solid var(--amber-border);}
+.lp-part.active{background:var(--amber-400);color:#1A0800;}
+.main{max-width:860px;margin:0 auto;padding:2rem 1.5rem 5rem;}
+.sec{background:var(--surface);border:1px solid var(--border);border-radius:var(--r);padding:1.5rem;margin-bottom:1.5rem;scroll-margin-top:80px;}
+.sec-header{display:flex;align-items:center;gap:10px;margin-bottom:1.25rem;}
+.sec-num{width:28px;height:28px;border-radius:8px;display:flex;align-items:center;justify-content:center;font-size:11px;font-weight:700;background:var(--amber-bg);color:var(--amber-300);border:1px solid var(--amber-border);flex-shrink:0;}
+.sec-title{font-size:16px;font-weight:700;color:#fff;}
+.sec-sub{font-size:12px;color:var(--text3);margin-top:1px;}
+.vocab-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(240px,1fr));gap:10px;}
+.vocab-card{background:var(--surface2);border:1px solid var(--border2);border-radius:var(--r-sm);padding:1rem;cursor:pointer;transition:border-color .15s;}
+.vocab-card:hover,.vocab-card.open{border-color:var(--amber-border);}
+.vc-top{display:flex;align-items:baseline;gap:8px;}
+.vc-word{font-size:16px;font-weight:700;color:#fff;}
+.vc-pos{font-size:10px;font-weight:600;padding:1px 7px;border-radius:99px;background:var(--amber-bg);color:var(--amber-300);}
+.vc-pron{font-size:12px;color:var(--text3);margin-top:2px;font-style:italic;}
+.vc-cn{font-size:15px;color:var(--amber-300);margin-top:4px;font-weight:600;}
+.vc-detail{display:none;margin-top:10px;padding-top:10px;border-top:1px solid var(--border2);}
+.vocab-card.open .vc-detail{display:block;}
+.vc-def{font-size:13px;color:var(--text2);margin-bottom:6px;}
+.vc-ex{font-size:12px;color:var(--text3);font-style:italic;padding-left:8px;border-left:2px solid var(--amber-border);}
+.story-body p{font-size:15px;color:var(--text2);line-height:1.8;margin-bottom:1rem;}
+.story-body p:last-child{margin-bottom:0;}
+.story-hl{color:var(--amber-300);font-weight:600;}
+.story-box{background:var(--amber-bg);border:1px solid var(--amber-border);border-radius:var(--r-sm);padding:1rem 1.25rem;margin:1.25rem 0;font-size:14px;color:rgba(255,255,255,0.85);line-height:1.7;font-style:italic;}
+.story-box::before{content:'"';font-size:32px;color:var(--amber-400);line-height:1;display:block;margin-bottom:.25rem;}
+.story-icon{font-size:40px;text-align:center;margin:1rem 0;}
+.quiz-list{display:flex;flex-direction:column;gap:14px;}
+.q-item{background:var(--surface2);border:1px solid var(--border2);border-radius:var(--r-sm);padding:1rem 1.25rem;}
+.q-text{font-size:14px;font-weight:600;color:#fff;margin-bottom:.75rem;}
+.q-opts{display:flex;flex-direction:column;gap:6px;}
+.q-opt{display:flex;align-items:center;gap:10px;padding:8px 12px;border-radius:8px;border:1px solid var(--border);background:transparent;cursor:pointer;font-size:13px;color:var(--text2);width:100%;text-align:left;transition:all .15s;}
+.q-opt:hover{border-color:var(--amber-border);background:var(--amber-bg);}
+.q-opt.correct{border-color:var(--teal-border);background:var(--teal-bg);color:#fff;}
+.q-opt.wrong{border-color:rgba(224,92,58,0.4);background:var(--coral-bg);color:#fff;}
+.q-feedback{font-size:12px;margin-top:8px;padding:6px 10px;border-radius:6px;display:none;}
+.q-feedback.show{display:block;}
+.q-feedback.good{background:var(--teal-bg);color:#5DCAA5;}
+.q-feedback.bad{background:var(--coral-bg);color:#F09B80;}
+.tf-opts{display:flex;gap:8px;}
+.tf-btn{flex:1;padding:8px;border-radius:8px;border:1px solid var(--border);background:transparent;cursor:pointer;font-size:13px;font-weight:600;color:var(--text2);transition:all .15s;}
+.tf-btn:hover{border-color:var(--amber-border);background:var(--amber-bg);}
+.tf-btn.correct{border-color:var(--teal-border);background:var(--teal-bg);color:#fff;}
+.tf-btn.wrong{border-color:rgba(224,92,58,0.4);background:var(--coral-bg);color:#fff;}
+.grammar-box{background:var(--surface2);border-left:3px solid var(--amber-400);border-radius:0 var(--r-sm) var(--r-sm) 0;padding:1rem 1.25rem;margin-bottom:1rem;}
+.grammar-label{font-size:10px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--amber-300);margin-bottom:.5rem;}
+.grammar-rule{font-size:14px;color:#fff;font-weight:600;margin-bottom:.5rem;}
+.grammar-eg{font-size:13px;color:var(--text2);margin-top:.25rem;font-style:italic;}
+.grammar-eg span{color:var(--amber-300);font-weight:600;font-style:normal;}
+.grammar-table{width:100%;border-collapse:collapse;font-size:13px;margin-top:.75rem;}
+.grammar-table th{text-align:left;padding:6px 10px;font-size:10px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;color:var(--text3);border-bottom:1px solid var(--border);}
+.grammar-table td{padding:7px 10px;color:var(--text2);border-bottom:1px solid var(--border2);}
+.grammar-table td:first-child{color:#fff;font-weight:500;}
+.hl{color:var(--amber-300);font-weight:600;}
+.sb-activity{margin-bottom:1.25rem;}
+.sb-label{font-size:11px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;color:var(--amber-300);margin-bottom:.75rem;}
+.sb-input{width:100%;background:var(--surface2);border:1px solid var(--border);border-radius:var(--r-sm);padding:.625rem .875rem;font-size:14px;color:#fff;font-family:'Inter',sans-serif;transition:border-color .15s;outline:none;margin-bottom:.5rem;}
+.sb-input:focus{border-color:var(--amber-border);}
+.sb-check{padding:7px 18px;border-radius:99px;background:var(--amber-400);color:#1A0800;font-size:13px;font-weight:700;border:none;cursor:pointer;transition:opacity .15s;}
+.sb-check:hover{opacity:.85;}
+.sb-result{font-size:12px;margin-top:6px;padding:6px 10px;border-radius:6px;display:none;}
+.sb-result.show{display:block;}
+.sb-result.ok{background:var(--teal-bg);color:#5DCAA5;}
+.sb-result.no{background:var(--coral-bg);color:#F09B80;}
+.speak-level{margin-bottom:1.25rem;}
+.speak-badge{display:inline-flex;align-items:center;gap:6px;font-size:11px;font-weight:700;padding:3px 12px;border-radius:99px;margin-bottom:.875rem;}
+.speak-badge.l1{background:var(--teal-bg);color:#5DCAA5;border:1px solid var(--teal-border);}
+.speak-badge.l2{background:var(--amber-bg);color:var(--amber-300);border:1px solid var(--amber-border);}
+.speak-badge.l3{background:var(--blue-bg);color:var(--blue);border:1px solid rgba(74,158,224,0.3);}
+.speak-q{background:var(--surface2);border:1px solid var(--border2);border-radius:var(--r-sm);padding:1rem 1.25rem;margin-bottom:.75rem;}
+.speak-q p{font-size:14px;font-weight:600;color:#fff;margin-bottom:.5rem;}
+.speak-hint{font-size:12px;color:var(--text3);}
+.speak-hint span{color:var(--amber-300);}
+.idea-q{background:var(--surface2);border:1px solid var(--border2);border-radius:var(--r-sm);padding:1rem 1.25rem;margin-bottom:.75rem;display:flex;gap:10px;}
+.idea-icon{font-size:20px;flex-shrink:0;margin-top:2px;}
+.idea-text{font-size:14px;color:var(--text2);line-height:1.6;}
+.idea-text strong{color:#fff;}
+.ielts-topic{background:var(--blue-bg);border:1px solid rgba(74,158,224,0.25);border-radius:var(--r-sm);padding:1rem 1.25rem;margin-bottom:1.25rem;}
+.ielts-topic-label{font-size:10px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--blue);margin-bottom:.25rem;}
+.ielts-topic h4{font-size:16px;font-weight:700;color:#fff;}
+.vocab-chips{display:flex;flex-wrap:wrap;gap:6px;margin-top:.75rem;}
+.chip{font-size:12px;padding:4px 12px;border-radius:99px;background:rgba(255,255,255,0.06);border:1px solid var(--border);color:var(--text2);}
+.chip.amber{background:var(--amber-bg);border-color:var(--amber-border);color:var(--amber-300);}
+.ielts-qs{display:flex;flex-direction:column;gap:8px;margin-top:1rem;}
+.ielts-q{display:flex;gap:10px;background:var(--surface2);border-radius:var(--r-sm);padding:.875rem 1rem;}
+.ielts-q-num{font-size:11px;font-weight:700;color:var(--blue);min-width:20px;}
+.ielts-q-text{font-size:13px;color:var(--text2);}
+.ielts-w2{background:rgba(74,158,224,0.08);border:1px solid rgba(74,158,224,0.2);border-radius:var(--r-sm);padding:1rem 1.25rem;margin-top:1rem;}
+.ielts-w2-label{font-size:10px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--blue);margin-bottom:.5rem;}
+.ielts-w2 p{font-size:14px;color:var(--text2);line-height:1.7;font-style:italic;}
+.star-words{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:1.25rem;}
+.star-word{display:flex;align-items:center;gap:6px;padding:6px 14px;border-radius:99px;background:var(--amber-bg);border:1px solid var(--amber-border);font-size:13px;font-weight:600;color:var(--amber-300);}
+.think-box{background:var(--surface2);border:1px solid var(--border2);border-radius:var(--r-sm);padding:1rem 1.25rem;margin-bottom:1rem;}
+.think-box .think-head{font-size:12px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;color:var(--amber-300);margin-bottom:.5rem;}
+.think-box p{font-size:14px;color:var(--text2);}
+.mini-quiz-q{background:var(--surface2);border:1px solid var(--border2);border-radius:var(--r-sm);padding:1rem;margin-bottom:.75rem;}
+.mq-text{font-size:13px;font-weight:600;color:#fff;margin-bottom:.625rem;}
+.mq-opts{display:flex;flex-direction:column;gap:5px;}
+.mq-opt{padding:7px 12px;border-radius:6px;border:1px solid var(--border);background:transparent;font-size:12px;color:var(--text2);cursor:pointer;text-align:left;transition:all .15s;}
+.mq-opt:hover{border-color:var(--amber-border);background:var(--amber-bg);}
+.mq-opt.correct{border-color:var(--teal-border);background:var(--teal-bg);color:#fff;}
+.mq-opt.wrong{border-color:rgba(224,92,58,0.4);background:var(--coral-bg);color:#fff;}
+.lesson-nav{display:flex;gap:10px;margin-top:2rem;}
+.nav-btn{display:flex;align-items:center;gap:6px;padding:.75rem 1.25rem;border-radius:10px;font-size:13px;font-weight:600;cursor:pointer;text-decoration:none;border:1px solid var(--border);color:var(--text2);background:var(--surface);transition:all .15s;flex:1;justify-content:center;}
+.nav-btn:hover{border-color:var(--border2);color:#fff;}
+.nav-btn.primary{background:var(--amber-400);color:#1A0800;border-color:transparent;}
+.nav-btn.primary:hover{opacity:.9;}
+.site-footer{background:#111;border-top:1px solid rgba(255,255,255,0.07);text-align:center;padding:1.5rem;font-size:12px;color:rgba(255,255,255,0.3);}
+.site-footer strong{color:var(--amber-300);}
+@media(max-width:600px){.vocab-grid{grid-template-columns:1fr;}.lesson-nav{flex-direction:column;}}
+</style>
+</head>
+<body>
+<header class="site-header">
+  <div class="hdr">
+    <a class="logo-wrap" href="index.html">
+      <div class="logo-icon"><svg viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+          <path d="M6 24 C8 18,14 10,24 6 C20 10,18 14,20 18 C16 16,12 18,6 24Z" fill="white"/>
+          <path d="M20 18 C22 20,22 23,20 26 C18 24,18 21,20 18Z" fill="rgba(255,255,255,0.5)"/>
+        </svg></div>
+      <span class="logo-name">Lexilink Ideation IELTS STUDIO</span>
+    </a>
+    <div class="hdr-pipe"></div>
+    <a class="hdr-back" href="index.html"><i class="ti ti-arrow-left" aria-hidden="true"></i> Vol. 1</a>
+    <div class="hdr-spacer"></div>
+    <span class="hdr-badge">Lesson 27C</span>
+  </div>
+</header>
+<section class="lesson-hero">
+  <p class="lesson-eyebrow">Chapter 27 · The Rise of Rome</p>
+  <h1>The Wolf and the Shepherd</h1>
+  <p>Raised by a wolf — and then by a kind family</p>
+  <div class="lesson-pills"><span class="l-pill">📖 Story + Vocabulary</span><span class="l-pill">🎤 Speaking</span><span class="l-pill">✏️ Grammar</span><span class="l-pill">⭐ CEFR A2–B1</span></div>
+</section>
+<div class="lesson-progress">
+  <div class="lp-inner">
+    <div class="lp-labels"><span>Lesson 27C of 7</span><span style="color:var(--amber-300)">Part 1 of 10</span></div>
+    <div class="lp-track"><div class="lp-fill"></div></div>
+    <div class="lp-parts">
+      <span class="lp-part active" onclick="scrollTo('p1')">1 Vocab</span>
+      <span class="lp-part" onclick="scrollTo('p2')">2 Story</span>
+      <span class="lp-part" onclick="scrollTo('p3')">3 Reading</span>
+      <span class="lp-part" onclick="scrollTo('p4')">4 Grammar</span>
+      <span class="lp-part" onclick="scrollTo('p5')">5 Builder</span>
+      <span class="lp-part" onclick="scrollTo('p6')">6 Speaking 1</span>
+      <span class="lp-part" onclick="scrollTo('p7')">7 Speaking 2</span>
+      <span class="lp-part" onclick="scrollTo('p8')">8 Ideas</span>
+      <span class="lp-part" onclick="scrollTo('p9')">9 IELTS</span>
+      <span class="lp-part" onclick="scrollTo('p10')">10 Review</span>
+    </div>
+  </div>
+</div>
+
+<main class="main">
+<section class="sec" id="p1">
+  <div class="sec-header">
+    <div class="sec-num">1</div>
+    <div><div class="sec-title">Vocabulary</div><div class="sec-sub">Click each word to learn more</div></div>
+  </div>
+  <div class="vocab-grid"><div class="vocab-card" onclick="toggleVocab(this)">
+      <div class="vc-top"><span class="vc-word">peer</span><span class="vc-pos">verb</span></div>
+      <div class="vc-pron">/pɪər/</div>
+      <div class="vc-cn">窥视；凝视</div>
+      <div class="vc-detail">
+        <div class="vc-def">To look carefully at something that is hard to see.</div>
+        <div class="vc-ex">"The wolf peered around the trunk of the fig tree."</div>
+      </div>
+    </div><div class="vocab-card" onclick="toggleVocab(this)">
+      <div class="vc-top"><span class="vc-word">trunk</span><span class="vc-pos">noun</span></div>
+      <div class="vc-pron">/trʌŋk/</div>
+      <div class="vc-cn">树干</div>
+      <div class="vc-detail">
+        <div class="vc-def">The thick main part of a tree.</div>
+        <div class="vc-ex">"She looked around the trunk of the tree."</div>
+      </div>
+    </div><div class="vocab-card" onclick="toggleVocab(this)">
+      <div class="vc-top"><span class="vc-word">cub</span><span class="vc-pos">noun</span></div>
+      <div class="vc-pron">/kʌb/</div>
+      <div class="vc-cn">幼崽</div>
+      <div class="vc-detail">
+        <div class="vc-def">A baby wolf, lion, or bear.</div>
+        <div class="vc-ex">"This wolf had cubs of her own."</div>
+      </div>
+    </div><div class="vocab-card" onclick="toggleVocab(this)">
+      <div class="vc-top"><span class="vc-word">pity</span><span class="vc-pos">noun</span></div>
+      <div class="vc-pron">/ˈpɪt.i/</div>
+      <div class="vc-cn">怜悯</div>
+      <div class="vc-detail">
+        <div class="vc-def">A sad feeling for someone who is in trouble.</div>
+        <div class="vc-ex">"She felt pity for the hungry babies."</div>
+      </div>
+    </div><div class="vocab-card" onclick="toggleVocab(this)">
+      <div class="vc-top"><span class="vc-word">tug</span><span class="vc-pos">verb</span></div>
+      <div class="vc-pron">/tʌɡ/</div>
+      <div class="vc-cn">用力拉</div>
+      <div class="vc-detail">
+        <div class="vc-def">To pull something hard and quickly.</div>
+        <div class="vc-ex">"She tugged the basket onto the bank."</div>
+      </div>
+    </div><div class="vocab-card" onclick="toggleVocab(this)">
+      <div class="vc-top"><span class="vc-word">den</span><span class="vc-pos">noun</span></div>
+      <div class="vc-pron">/den/</div>
+      <div class="vc-cn">兽穴</div>
+      <div class="vc-detail">
+        <div class="vc-def">A wild animal&#x27;s home.</div>
+        <div class="vc-ex">"She took the babies back to her den."</div>
+      </div>
+    </div><div class="vocab-card" onclick="toggleVocab(this)">
+      <div class="vc-top"><span class="vc-word">shepherd</span><span class="vc-pos">noun</span></div>
+      <div class="vc-pron">/ˈʃep.əd/</div>
+      <div class="vc-cn">牧羊人</div>
+      <div class="vc-detail">
+        <div class="vc-def">A person who looks after sheep.</div>
+        <div class="vc-ex">"A shepherd was looking for a lost lamb."</div>
+      </div>
+    </div><div class="vocab-card" onclick="toggleVocab(this)">
+      <div class="vc-top"><span class="vc-word">coo</span><span class="vc-pos">noun</span></div>
+      <div class="vc-pron">/kuː/</div>
+      <div class="vc-cn">咕咕声</div>
+      <div class="vc-detail">
+        <div class="vc-def">A soft, happy sound that a baby makes.</div>
+        <div class="vc-ex">"He heard a coo and then a gurgle."</div>
+      </div>
+    </div><div class="vocab-card" onclick="toggleVocab(this)">
+      <div class="vc-top"><span class="vc-word">brush</span><span class="vc-pos">noun</span></div>
+      <div class="vc-pron">/brʌʃ/</div>
+      <div class="vc-cn">灌木丛</div>
+      <div class="vc-detail">
+        <div class="vc-def">Small bushes and plants growing close together.</div>
+        <div class="vc-ex">"The sound came from the brush around the den."</div>
+      </div>
+    </div><div class="vocab-card" onclick="toggleVocab(this)">
+      <div class="vc-top"><span class="vc-word">handsome</span><span class="vc-pos">adjective</span></div>
+      <div class="vc-pron">/ˈhæn.səm/</div>
+      <div class="vc-cn">英俊的</div>
+      <div class="vc-detail">
+        <div class="vc-def">Good-looking (used mostly for men).</div>
+        <div class="vc-ex">"They grew up into tall, handsome young men."</div>
+      </div>
+    </div></div>
+</section>
+<section class="sec" id="p2">
+  <div class="sec-header">
+    <div class="sec-num">2</div>
+    <div><div class="sec-title">The Story</div><div class="sec-sub">Read carefully. Notice the bold words.</div></div>
+  </div>
+  <div class="story-body"><div class="story-icon">🐺</div><p>Let us go back to the Tiber River. The basket with the two baby boys was stuck in the root of the fig tree. The twins were crying loudly. And a <span class="story-hl">wolf</span> heard them!</p>
+<p>👀 The wolf was a mother, and she had <span class="story-hl">cubs</span> of her own. She came closer very slowly and <span class="story-hl">peered</span> around the <span class="story-hl">trunk</span> of the fig tree. She saw the basket, and inside were two hungry babies. Most wolves would run away from people. But this wolf felt <span class="story-hl">pity</span> for the little boys.</p>
+<p>🏃 She <span class="story-hl">tugged</span> the basket up onto the bank. Then she carried it, bit by bit, back to her <span class="story-hl">den</span>. Inside the den, she fed the twins together with her own wolf cubs. For many days, the human babies drank the wolf's milk and slept in the warm den. She raised them as if they were her own children.</p>
+<div class="story-box">The wolf raised the babies with her own cubs, as if they were her own.</div><p>🐑 One day, a <span class="story-hl">shepherd</span> was walking in the hills. He was looking for a lost lamb. Suddenly he heard a happy <span class="story-hl">coo</span> and a funny gurgle. The sounds came from the <span class="story-hl">brush</span> near the wolf's den. The shepherd pushed some branches aside. What do you think he saw?</p>
+<p>😲 He saw two fat, happy baby boys, playing naked among the wolf cubs! The shepherd could not believe his eyes. He and his wife had no children of their own. He knew at once what to do. He picked up the boys and took them home.</p>
+<p>🏡 The shepherd and his wife loved the twins like their own sons. They gave them food, clothes, and a warm bed. They taught them to look after sheep and to work hard. The boys grew up strong and clever. When they were grown, they were tall, <span class="story-hl">handsome</span> young men.</p>
+<p>🐕 Think about the people who saved Romulus and Remus: a servant, a wolf, and a shepherd. None of them was rich or powerful, but each one helped at just the right time. The wolf became a famous symbol of Rome. Even today, you can find pictures of a wolf with two babies on statues and coins in Italy.</p>
+<p>🌿 Life with the shepherd taught the twins how to be brave. They climbed hills, crossed streams, and learned how to protect the flock from wild animals. These skills would be useful when they built a town of their own. Listen to the next part of the legend to find out where they went when they grew up.</p>
+<div class="story-icon">🐑</div></div>
+</section>
+<section class="sec" id="p3">
+  <div class="sec-header">
+    <div class="sec-num">3</div>
+    <div><div class="sec-title">Reading Comprehension</div><div class="sec-sub">Choose the best answer. Get instant feedback!</div></div>
+  </div>
+  <div class="quiz-list">
+    <div class="q-item">
+      <div class="q-text">1. What did the wolf do when she saw the babies?</div>
+      <div class="q-opts"><button class="q-opt" onclick="mcq(this,'wrong')">She ran away.</button>
+<button class="q-opt" onclick="mcq(this,'correct')">She felt pity and took them to her den.</button>
+<button class="q-opt" onclick="mcq(this,'wrong')">She called the shepherd.</button></div>
+      <div class="q-feedback"></div>
+    </div>
+    <div class="q-item">
+      <div class="q-text">2. Why did the wolf help the babies?</div>
+      <div class="q-opts"><button class="q-opt" onclick="mcq(this,'wrong')">She was hungry.</button>
+<button class="q-opt" onclick="mcq(this,'correct')">She had cubs of her own and felt sorry for them.</button>
+<button class="q-opt" onclick="mcq(this,'wrong')">The king ordered her.</button></div>
+      <div class="q-feedback"></div>
+    </div>
+    <div class="q-item">
+      <div class="q-text">3. What was the shepherd looking for in the hills?</div>
+      <div class="q-opts"><button class="q-opt" onclick="mcq(this,'correct')">A lost lamb</button>
+<button class="q-opt" onclick="mcq(this,'wrong')">A wolf</button>
+<button class="q-opt" onclick="mcq(this,'wrong')">The twins</button></div>
+      <div class="q-feedback"></div>
+    </div>
+    <div class="q-item">
+      <div class="q-text">4. What did the shepherd find near the wolf&#x27;s den?</div>
+      <div class="q-opts"><button class="q-opt" onclick="mcq(this,'correct')">Two baby boys among the wolf cubs</button>
+<button class="q-opt" onclick="mcq(this,'wrong')">A treasure</button>
+<button class="q-opt" onclick="mcq(this,'wrong')">A bag of gold</button></div>
+      <div class="q-feedback"></div>
+    </div>
+    <div class="q-item">
+      <div class="q-text">5. Why did the shepherd take the babies home?</div>
+      <div class="q-opts"><button class="q-opt" onclick="mcq(this,'correct')">He had no children of his own.</button>
+<button class="q-opt" onclick="mcq(this,'wrong')">He wanted them to work.</button>
+<button class="q-opt" onclick="mcq(this,'wrong')">The wolf told him to.</button></div>
+      <div class="q-feedback"></div>
+    </div>
+    <div class="q-item">
+      <div class="q-text">6. What does the wolf symbolize for Rome?</div>
+      <div class="q-opts"><button class="q-opt" onclick="mcq(this,'wrong')">Danger</button>
+<button class="q-opt" onclick="mcq(this,'correct')">A famous symbol of the city</button>
+<button class="q-opt" onclick="mcq(this,'wrong')">Bad luck</button></div>
+      <div class="q-feedback"></div>
+    </div>
+  </div>
+</section>
+<section class="sec" id="p4">
+  <div class="sec-header">
+    <div class="sec-num">4</div>
+    <div><div class="sec-title">Language Focus</div><div class="sec-sub">Grammar from the story — learn through meaning</div></div>
+  </div>
+<div class="grammar-box">
+    <div class="grammar-label">📌 Past simple and the verb &#x27;saw/heard&#x27;</div>
+    <div class="grammar-rule">Use &#x27;saw&#x27; and &#x27;heard&#x27; for senses in the past.</div>
+    <div class="grammar-eg">The wolf <span>heard</span> them crying.</div>
+<div class="grammar-eg">She <span>saw</span> the basket with the babies in it.</div>
+<div class="grammar-eg">He <span>heard</span> a coo and then a gurgle.</div>
+<div class="grammar-note" style="font-size:12px;color:var(--text3);margin-top:.5rem;">💡 Tip: See-saw, hear-heard, find-found.</div>
+  </div>
+<div class="grammar-box">
+    <div class="grammar-label">📌 Prepositions of movement</div>
+    <div class="grammar-rule">Use these words to show where someone goes.</div>
+    <div class="grammar-eg">She tugged the basket <span>up onto</span> the bank.</div>
+<div class="grammar-eg">She carried it <span>back to</span> her den.</div>
+<div class="grammar-eg">He pushed the branches <span>aside</span>.</div>
+<div class="grammar-note" style="font-size:12px;color:var(--text3);margin-top:.5rem;">💡 Tip: Movement words: up, onto, back to, aside, through.</div>
+  </div>
+<div class="grammar-box">
+    <div class="grammar-label">📌 &#x27;As&#x27; for comparison: &#x27;as her own&#x27;</div>
+    <div class="grammar-rule">Use &#x27;as&#x27; to say someone is treated like something else.</div>
+    <div class="grammar-eg">She raised them <span>as her own</span>.</div>
+<div class="grammar-eg">He loved them <span>as his own sons</span>.</div>
+<div class="grammar-eg">She fed them <span>as</span> she fed her cubs.</div>
+<div class="grammar-note" style="font-size:12px;color:var(--text3);margin-top:.5rem;">💡 Tip: as + noun = like / in the role of.</div>
+  </div>
+
+</section>
+<section class="sec" id="p5">
+  <div class="sec-header">
+    <div class="sec-num">5</div>
+    <div><div class="sec-title">Sentence Builder</div><div class="sec-sub">Build your skills with the vocabulary</div></div>
+  </div>
+<div class="sb-activity">
+    <div class="sb-label">✏️ Fill in the blank</div>
+    <p style="font-size:13px;color:var(--text2);margin-bottom:.5rem;">1. The wolf felt ________ for the two hungry babies.</p>
+    <input class="sb-input" id="f1c" placeholder="Your answer..."/>
+    <button class="sb-check" onclick="checkFill('f1c','pity','rf1c')">Check ✓</button>
+    <div class="sb-result" id="rf1c"></div>
+  </div>
+<div class="sb-activity">
+    <div class="sb-label">✏️ Fill in the blank</div>
+    <p style="font-size:13px;color:var(--text2);margin-bottom:.5rem;">2. The ________ was looking for a lost lamb when he found the babies.</p>
+    <input class="sb-input" id="f2c" placeholder="Your answer..."/>
+    <button class="sb-check" onclick="checkFill('f2c','shepherd','rf2c')">Check ✓</button>
+    <div class="sb-result" id="rf2c"></div>
+  </div>
+<div class="sb-activity">
+    <div class="sb-label">🔀 Unscramble the sentence</div>
+    <p style="font-size:13px;color:var(--text3);margin-bottom:.75rem;">Put these words in the correct order:</p>
+    <div style="margin-bottom:.75rem;"><span style="padding:5px 10px;border-radius:99px;background:var(--surface2);border:1px solid var(--border);font-size:13px;color:var(--text2);display:inline-block;margin:3px;">wolf</span><span style="padding:5px 10px;border-radius:99px;background:var(--surface2);border:1px solid var(--border);font-size:13px;color:var(--text2);display:inline-block;margin:3px;">raised</span><span style="padding:5px 10px;border-radius:99px;background:var(--surface2);border:1px solid var(--border);font-size:13px;color:var(--text2);display:inline-block;margin:3px;">The</span><span style="padding:5px 10px;border-radius:99px;background:var(--surface2);border:1px solid var(--border);font-size:13px;color:var(--text2);display:inline-block;margin:3px;">babies</span><span style="padding:5px 10px;border-radius:99px;background:var(--surface2);border:1px solid var(--border);font-size:13px;color:var(--text2);display:inline-block;margin:3px;">the</span><span style="padding:5px 10px;border-radius:99px;background:var(--surface2);border:1px solid var(--border);font-size:13px;color:var(--text2);display:inline-block;margin:3px;">as</span><span style="padding:5px 10px;border-radius:99px;background:var(--surface2);border:1px solid var(--border);font-size:13px;color:var(--text2);display:inline-block;margin:3px;">her</span><span style="padding:5px 10px;border-radius:99px;background:var(--surface2);border:1px solid var(--border);font-size:13px;color:var(--text2);display:inline-block;margin:3px;">own</span></div>
+    <input class="sb-input" id="us1c" placeholder="Type your sentence here..."/>
+    <button class="sb-check" onclick="checkUnscramble('us1c','the wolf raised the babies as her own','ur1c')">Check ✓</button>
+    <div class="sb-result" id="ur1c"></div>
+  </div>
+<div class="sb-activity">
+    <div class="sb-label">🌏 Translate into English</div>
+    <p style="font-size:15px;color:var(--amber-300);margin-bottom:.5rem;">牧羊人把男孩们带回了家。</p>
+    <input class="sb-input" id="tr1c" placeholder="Write your English sentence..."/>
+    <button class="sb-check" onclick="revealFill('rt1c','The shepherd took the boys home.')">Show model answer</button>
+    <div class="sb-result" id="rt1c"></div>
+  </div>
+
+</section>
+<section class="sec" id="p6">
+  <div class="sec-header">
+    <div class="sec-num">6</div>
+    <div><div class="sec-title">Speaking — Level 1</div><div class="sec-sub">Answer in one complete sentence</div></div>
+  </div>
+  <div class="speak-level">
+    <span class="speak-badge l1">🟢 Level 1 · One sentence</span>
+    <div class="speak-q"><p>Who found the babies first?</p><div class="speak-hint">💡 Start with: <span>The ... found them first.</span></div></div>
+<div class="speak-q"><p>Where did the wolf take the babies?</p><div class="speak-hint">💡 Start with: <span>She took them to...</span></div></div>
+<div class="speak-q"><p>Why did the shepherd take the babies home?</p><div class="speak-hint">💡 Start with: <span>He took them because...</span></div></div>
+  </div>
+</section>
+<section class="sec" id="p7">
+  <div class="sec-header">
+    <div class="sec-num">7</div>
+    <div><div class="sec-title">Speaking — Level 2 &amp; 3</div><div class="sec-sub">Extend your answer. Share your opinion.</div></div>
+  </div>
+  <div class="speak-level">
+    <span class="speak-badge l2">🟡 Level 2 · 2–3 sentences</span>
+    <div class="speak-q"><p>Describe how the wolf looked after the babies. Use two sentences.</p><div class="speak-hint">💡 Try: <span>She tugged... She fed...</span></div></div>
+<div class="speak-q"><p>How do you think the shepherd and his wife felt when they found the babies?</p><div class="speak-hint">💡 Try: <span>I think they felt... Because...</span></div></div>
+  </div>
+  <div class="speak-level">
+    <span class="speak-badge l3">🔵 Level 3 · Your opinion</span>
+    <div class="speak-q"><p>Do you think animals can sometimes show kindness like humans? Give examples.</p><div class="speak-hint">💡 Use: <span>I think... For example... In contrast...</span></div></div>
+  </div>
+</section>
+<section class="sec" id="p8">
+  <div class="sec-header">
+    <div class="sec-num">8</div>
+    <div><div class="sec-title">Ideas &amp; Society</div><div class="sec-sub">Think about big ideas. There is no wrong answer.</div></div>
+  </div>
+<div class="idea-q"><div class="idea-icon">🐺</div><div class="idea-text"><strong>Kindness from unexpected places.</strong> A wolf saved the babies. Have you ever received help from someone you did not expect?</div></div>
+<div class="idea-q"><div class="idea-icon">👨‍👩‍👦</div><div class="idea-text"><strong>What makes a family?</strong> The shepherd and his wife raised children who were not born to them. What do you think makes a family a family?</div></div>
+<div class="idea-q"><div class="idea-icon">🏙️</div><div class="idea-text"><strong>National symbols.</strong> Rome chose a wolf as its symbol. What animal represents your country and why?</div></div>
+<div class="idea-q"><div class="idea-icon">🗣️</div><div class="idea-text"><strong>Legends and truth.</strong> This is a legend and may not be true. Why do people keep telling stories that may not be real?</div></div>
+
+</section>
+<section class="sec" id="p9">
+  <div class="sec-header">
+    <div class="sec-num">9</div>
+    <div><div class="sec-title">IELTS Content Builder</div><div class="sec-sub">Planting seeds for your future IELTS exam</div></div>
+  </div>
+  <div class="ielts-topic">
+    <div class="ielts-topic-label">📘 Today's IELTS Topic</div>
+    <h4>Family and Community Support</h4>
+  </div>
+  <p style="font-size:12px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;color:var(--text3);margin:.875rem 0 .5rem;">Key vocabulary</p>
+  <div class="vocab-chips"><span class="chip amber">adoption</span><span class="chip amber">foster family</span><span class="chip amber">upbringing</span><span class="chip amber">compassion</span><span class="chip">community</span><span class="chip">welfare</span><span class="chip">nurture</span><span class="chip">guardian</span></div>
+  <p style="font-size:12px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;color:var(--text3);margin:.875rem 0 .5rem;">Useful collocations</p>
+  <div class="vocab-chips"><span class="chip">bring up a child</span><span class="chip">show compassion</span><span class="chip">a supportive community</span><span class="chip">play a role in upbringing</span></div>
+  <div class="ielts-qs"><div class="ielts-q"><div class="ielts-q-num">S1</div><div class="ielts-q-text">Who has helped you most in your life?</div></div>
+<div class="ielts-q"><div class="ielts-q-num">S2</div><div class="ielts-q-text">Is it better for children to be raised by parents or by a community?</div></div>
+<div class="ielts-q"><div class="ielts-q-num">S3</div><div class="ielts-q-text">Why do some people help strangers?</div></div>
+</div>
+  <div class="ielts-w2">
+    <div class="ielts-w2-label">✏️ IELTS Writing Task 2 — Future Practice</div>
+    <p>"Some people believe parents are fully responsible for raising children. Others think the whole community should help. Discuss both views and give your opinion."</p>
+  </div>
+</section>
+<section class="sec" id="p10">
+  <div class="sec-header">
+    <div class="sec-num">10</div>
+    <div><div class="sec-title">Review</div><div class="sec-sub">Remember what you learned!</div></div>
+  </div>
+  <p style="font-size:12px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;color:var(--text3);margin:.875rem 0 .5rem;">⭐ Star Words</p>
+  <div class="star-words"><span class="star-word">⭐ peer</span><span class="star-word">⭐ cub</span><span class="star-word">⭐ pity</span><span class="star-word">⭐ tug</span><span class="star-word">⭐ den</span><span class="star-word">⭐ shepherd</span><span class="star-word">⭐ coo</span><span class="star-word">⭐ handsome</span></div>
+  <div class="think-box">
+    <div class="think-head">💡 Big Idea</div>
+    <p>Help can come from surprising places. A wolf and a shepherd gave two lost babies a new life, and a symbol that Rome would carry for centuries.</p>
+  </div>
+  <p style="font-size:12px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;color:var(--text3);margin:.875rem 0 .5rem;">🧠 Mini Quiz</p>
+  <div class="mini-quiz-q"><div class="mq-text">A. A baby wolf is called a...</div><div class="mq-opts"><button class="mq-opt" onclick="mq(this,'correct')">cub</button>
+<button class="mq-opt" onclick="mq(this,'wrong')">lamb</button>
+<button class="mq-opt" onclick="mq(this,'wrong')">twin</button></div></div><div class="mini-quiz-q"><div class="mq-text">B. A shepherd looks after...</div><div class="mq-opts"><button class="mq-opt" onclick="mq(this,'wrong')">wolves</button>
+<button class="mq-opt" onclick="mq(this,'correct')">sheep</button>
+<button class="mq-opt" onclick="mq(this,'wrong')">fish</button></div></div><div class="mini-quiz-q"><div class="mq-text">C. What does &#x27;pity&#x27; mean?</div><div class="mq-opts"><button class="mq-opt" onclick="mq(this,'wrong')">Anger</button>
+<button class="mq-opt" onclick="mq(this,'correct')">A sad feeling for someone in trouble</button>
+<button class="mq-opt" onclick="mq(this,'wrong')">Fear</button></div></div>
+  <div class="lesson-nav">
+    <a class="nav-btn" href="ch27-b.html"><i class="ti ti-arrow-left"></i> Lesson 27B</a>
+    <a class="nav-btn primary" href="ch27-d.html">Next: Lesson 27D — Seven Hills and a Wall <i class="ti ti-arrow-right"></i></a>
+  </div>
+</section>
+</main>
+<footer class="site-footer"><strong>Lexilink Ideation IELTS STUDIO</strong> · History ESL Course · Chapter 27 — Lesson C</footer>
+<script>
+function toggleVocab(card){card.classList.toggle('open');}
+function mcq(btn,type){
+  const item=btn.closest('.q-item');
+  item.querySelectorAll('.q-opt').forEach(b=>{b.classList.remove('correct','wrong');b.disabled=true;});
+  btn.classList.add(type);
+  const fb=item.querySelector('.q-feedback');
+  fb.className='q-feedback show '+(type==='correct'?'good':'bad');
+  fb.textContent=type==='correct'?'✓ Correct! Well done!':'✗ Not quite. Try to remember the story.';
+}
+function tf(btn,type,msg){
+  const item=btn.closest('.q-item');
+  item.querySelectorAll('.tf-btn').forEach(b=>{b.classList.remove('correct','wrong');b.disabled=true;});
+  btn.classList.add(type);
+  const fb=item.querySelector('.q-feedback');
+  fb.className='q-feedback show '+(type==='correct'?'good':'bad');
+  fb.textContent=(type==='correct'?'✓ ':'✗ ')+msg;
+}
+function mq(btn,type){
+  const item=btn.closest('.mini-quiz-q');
+  item.querySelectorAll('.mq-opt').forEach(b=>{b.classList.remove('correct','wrong');b.disabled=true;});
+  btn.classList.add(type);
+}
+function checkUnscramble(id,answer,rid){
+  const val=document.getElementById(id).value.trim().toLowerCase().replace(/[^a-z\s]/g,'');
+  const ans=answer.toLowerCase();
+  const r=document.getElementById(rid);
+  r.className='sb-result show '+(val===ans?'ok':'no');
+  r.textContent=val===ans?'✓ Perfect! "'+answer+'"':'✗ Try again. Check the word order.';
+}
+function checkFill(id,answer,rid){
+  const val=document.getElementById(id).value.trim().toLowerCase();
+  const r=document.getElementById(rid);
+  r.className='sb-result show '+(val===answer?'ok':'no');
+  r.textContent=val===answer?'✓ Correct!':'✗ The answer is: "'+answer+'"';
+}
+function revealFill(rid,answer){const r=document.getElementById(rid);r.className='sb-result show ok';r.textContent='Model answer: "'+answer+'"';}
+function scrollTo(id){document.getElementById(id).scrollIntoView({behavior:'smooth',block:'start'});}
+const parts=['p1','p2','p3','p4','p5','p6','p7','p8','p9','p10'];
+const partEls=document.querySelectorAll('.lp-part');
+window.addEventListener('scroll',()=>{
+  let current=0;
+  parts.forEach((id,i)=>{const el=document.getElementById(id);if(el&&el.getBoundingClientRect().top<200)current=i;});
+  partEls.forEach((el,i)=>{el.classList.remove('active','done');if(i<current)el.classList.add('done');else if(i===current)el.classList.add('active');});
+  const pct=Math.round(((current+1)/10)*100);
+  document.querySelector('.lp-fill').style.width=pct+'%';
+});
+</script>
+</body>
+</html>
