@@ -1,0 +1,561 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+<title>Lesson 28A — The Roman Gods | Lexilink History Workshop</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"/>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet"/>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@latest/tabler-icons.min.css"/>
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
+:root{
+  --bg:#0F0800;--surface:rgba(255,255,255,0.04);--surface2:rgba(255,255,255,0.07);
+  --border:rgba(255,255,255,0.10);--border2:rgba(255,255,255,0.06);
+  --amber-300:#E8A832;--amber-400:#D4890F;--amber-500:#B8720A;
+  --amber-bg:rgba(212,137,15,0.12);--amber-border:rgba(212,137,15,0.3);
+  --text:#fff;--text2:rgba(255,255,255,0.72);--text3:rgba(255,255,255,0.45);
+  --teal:#1D9E75;--teal-bg:rgba(29,158,117,0.12);--teal-border:rgba(29,158,117,0.3);
+  --coral:#E05C3A;--coral-bg:rgba(224,92,58,0.12);
+  --blue:#4A9EE0;--blue-bg:rgba(74,158,224,0.12);
+  --r:12px;--r-sm:8px;
+}
+html{scroll-behavior:smooth;}
+body{font-family:'Inter',sans-serif;background:var(--bg);color:var(--text);min-height:100vh;line-height:1.6;}
+.site-header{background:#111;border-bottom:1px solid rgba(255,255,255,0.08);position:sticky;top:0;z-index:100;}
+.hdr{max-width:860px;margin:0 auto;padding:0 1.5rem;height:54px;display:flex;align-items:center;gap:12px;}
+.logo-wrap{display:flex;align-items:center;gap:8px;text-decoration:none;}
+.logo-icon{width:30px;height:30px;display:flex;align-items:center;justify-content:center;}
+.logo-icon svg{width:26px;height:26px;}
+.logo-name{font-size:13px;font-weight:700;color:#fff;}
+.hdr-pipe{width:1px;height:20px;background:rgba(255,255,255,0.15);}
+.hdr-back{display:flex;align-items:center;gap:5px;font-size:12px;color:var(--text3);text-decoration:none;transition:color .15s;}
+.hdr-back:hover{color:var(--text2);}
+.hdr-spacer{flex:1;}
+.hdr-badge{font-size:10px;font-weight:700;letter-spacing:.05em;padding:3px 10px;border-radius:99px;border:1px solid var(--amber-border);color:var(--amber-300);background:var(--amber-bg);}
+.lesson-hero{background:linear-gradient(135deg,#2C1600 0%,#5C3200 40%,#7A4500 100%);padding:3rem 1.5rem 2.5rem;text-align:center;position:relative;overflow:hidden;}
+.lesson-hero::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse 70% 60% at 50% 50%,rgba(200,130,0,0.15),transparent);pointer-events:none;}
+.lesson-eyebrow{font-size:10px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--amber-300);margin-bottom:.75rem;}
+.lesson-hero h1{font-size:clamp(22px,4vw,36px);font-weight:700;color:#fff;letter-spacing:-.02em;margin-bottom:.5rem;}
+.lesson-hero p{font-size:14px;color:rgba(255,255,255,0.65);max-width:520px;margin:0 auto .875rem;}
+.lesson-pills{display:flex;flex-wrap:wrap;justify-content:center;gap:8px;}
+.l-pill{font-size:11px;font-weight:500;padding:4px 12px;border-radius:99px;border:1px solid rgba(255,255,255,0.18);color:rgba(255,255,255,0.75);background:rgba(255,255,255,0.06);}
+.lesson-progress{background:#1A1100;border-bottom:1px solid rgba(255,255,255,0.06);padding:.75rem 1.5rem;}
+.lp-inner{max-width:860px;margin:0 auto;}
+.lp-labels{display:flex;justify-content:space-between;font-size:11px;color:var(--text3);margin-bottom:6px;}
+.lp-track{height:4px;border-radius:99px;background:rgba(255,255,255,0.08);}
+.lp-fill{height:100%;border-radius:99px;background:linear-gradient(90deg,var(--amber-500),var(--amber-300));width:10%;}
+.lp-parts{display:flex;gap:4px;margin-top:8px;flex-wrap:wrap;}
+.lp-part{font-size:10px;font-weight:600;padding:2px 8px;border-radius:99px;background:rgba(255,255,255,0.06);color:var(--text3);cursor:pointer;transition:all .15s;}
+.lp-part.done{background:var(--amber-bg);color:var(--amber-300);border:1px solid var(--amber-border);}
+.lp-part.active{background:var(--amber-400);color:#1A0800;}
+.main{max-width:860px;margin:0 auto;padding:2rem 1.5rem 5rem;}
+.sec{background:var(--surface);border:1px solid var(--border);border-radius:var(--r);padding:1.5rem;margin-bottom:1.5rem;scroll-margin-top:80px;}
+.sec-header{display:flex;align-items:center;gap:10px;margin-bottom:1.25rem;}
+.sec-num{width:28px;height:28px;border-radius:8px;display:flex;align-items:center;justify-content:center;font-size:11px;font-weight:700;background:var(--amber-bg);color:var(--amber-300);border:1px solid var(--amber-border);flex-shrink:0;}
+.sec-title{font-size:16px;font-weight:700;color:#fff;}
+.sec-sub{font-size:12px;color:var(--text3);margin-top:1px;}
+.vocab-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(240px,1fr));gap:10px;}
+.vocab-card{background:var(--surface2);border:1px solid var(--border2);border-radius:var(--r-sm);padding:1rem;cursor:pointer;transition:border-color .15s;}
+.vocab-card:hover,.vocab-card.open{border-color:var(--amber-border);}
+.vc-top{display:flex;align-items:baseline;gap:8px;}
+.vc-word{font-size:16px;font-weight:700;color:#fff;}
+.vc-pos{font-size:10px;font-weight:600;padding:1px 7px;border-radius:99px;background:var(--amber-bg);color:var(--amber-300);}
+.vc-pron{font-size:12px;color:var(--text3);margin-top:2px;font-style:italic;}
+.vc-cn{font-size:15px;color:var(--amber-300);margin-top:4px;font-weight:600;}
+.vc-detail{display:none;margin-top:10px;padding-top:10px;border-top:1px solid var(--border2);}
+.vocab-card.open .vc-detail{display:block;}
+.vc-def{font-size:13px;color:var(--text2);margin-bottom:6px;}
+.vc-ex{font-size:12px;color:var(--text3);font-style:italic;padding-left:8px;border-left:2px solid var(--amber-border);}
+.story-body p{font-size:15px;color:var(--text2);line-height:1.8;margin-bottom:1rem;}
+.story-body p:last-child{margin-bottom:0;}
+.story-hl{color:var(--amber-300);font-weight:600;}
+.story-box{background:var(--amber-bg);border:1px solid var(--amber-border);border-radius:var(--r-sm);padding:1rem 1.25rem;margin:1.25rem 0;font-size:14px;color:rgba(255,255,255,0.85);line-height:1.7;font-style:italic;}
+.story-box::before{content:'"';font-size:32px;color:var(--amber-400);line-height:1;display:block;margin-bottom:.25rem;}
+.story-icon{font-size:40px;text-align:center;margin:1rem 0;}
+.quiz-list{display:flex;flex-direction:column;gap:14px;}
+.q-item{background:var(--surface2);border:1px solid var(--border2);border-radius:var(--r-sm);padding:1rem 1.25rem;}
+.q-text{font-size:14px;font-weight:600;color:#fff;margin-bottom:.75rem;}
+.q-opts{display:flex;flex-direction:column;gap:6px;}
+.q-opt{display:flex;align-items:center;gap:10px;padding:8px 12px;border-radius:8px;border:1px solid var(--border);background:transparent;cursor:pointer;font-size:13px;color:var(--text2);width:100%;text-align:left;transition:all .15s;}
+.q-opt:hover{border-color:var(--amber-border);background:var(--amber-bg);}
+.q-opt.correct{border-color:var(--teal-border);background:var(--teal-bg);color:#fff;}
+.q-opt.wrong{border-color:rgba(224,92,58,0.4);background:var(--coral-bg);color:#fff;}
+.q-feedback{font-size:12px;margin-top:8px;padding:6px 10px;border-radius:6px;display:none;}
+.q-feedback.show{display:block;}
+.q-feedback.good{background:var(--teal-bg);color:#5DCAA5;}
+.q-feedback.bad{background:var(--coral-bg);color:#F09B80;}
+.tf-opts{display:flex;gap:8px;}
+.tf-btn{flex:1;padding:8px;border-radius:8px;border:1px solid var(--border);background:transparent;cursor:pointer;font-size:13px;font-weight:600;color:var(--text2);transition:all .15s;}
+.tf-btn:hover{border-color:var(--amber-border);background:var(--amber-bg);}
+.tf-btn.correct{border-color:var(--teal-border);background:var(--teal-bg);color:#fff;}
+.tf-btn.wrong{border-color:rgba(224,92,58,0.4);background:var(--coral-bg);color:#fff;}
+.grammar-box{background:var(--surface2);border-left:3px solid var(--amber-400);border-radius:0 var(--r-sm) var(--r-sm) 0;padding:1rem 1.25rem;margin-bottom:1rem;}
+.grammar-label{font-size:10px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--amber-300);margin-bottom:.5rem;}
+.grammar-rule{font-size:14px;color:#fff;font-weight:600;margin-bottom:.5rem;}
+.grammar-eg{font-size:13px;color:var(--text2);margin-top:.25rem;font-style:italic;}
+.grammar-eg span{color:var(--amber-300);font-weight:600;font-style:normal;}
+.grammar-table{width:100%;border-collapse:collapse;font-size:13px;margin-top:.75rem;}
+.grammar-table th{text-align:left;padding:6px 10px;font-size:10px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;color:var(--text3);border-bottom:1px solid var(--border);}
+.grammar-table td{padding:7px 10px;color:var(--text2);border-bottom:1px solid var(--border2);}
+.grammar-table td:first-child{color:#fff;font-weight:500;}
+.hl{color:var(--amber-300);font-weight:600;}
+.sb-activity{margin-bottom:1.25rem;}
+.sb-label{font-size:11px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;color:var(--amber-300);margin-bottom:.75rem;}
+.sb-input{width:100%;background:var(--surface2);border:1px solid var(--border);border-radius:var(--r-sm);padding:.625rem .875rem;font-size:14px;color:#fff;font-family:'Inter',sans-serif;transition:border-color .15s;outline:none;margin-bottom:.5rem;}
+.sb-input:focus{border-color:var(--amber-border);}
+.sb-check{padding:7px 18px;border-radius:99px;background:var(--amber-400);color:#1A0800;font-size:13px;font-weight:700;border:none;cursor:pointer;transition:opacity .15s;}
+.sb-check:hover{opacity:.85;}
+.sb-result{font-size:12px;margin-top:6px;padding:6px 10px;border-radius:6px;display:none;}
+.sb-result.show{display:block;}
+.sb-result.ok{background:var(--teal-bg);color:#5DCAA5;}
+.sb-result.no{background:var(--coral-bg);color:#F09B80;}
+.speak-level{margin-bottom:1.25rem;}
+.speak-badge{display:inline-flex;align-items:center;gap:6px;font-size:11px;font-weight:700;padding:3px 12px;border-radius:99px;margin-bottom:.875rem;}
+.speak-badge.l1{background:var(--teal-bg);color:#5DCAA5;border:1px solid var(--teal-border);}
+.speak-badge.l2{background:var(--amber-bg);color:var(--amber-300);border:1px solid var(--amber-border);}
+.speak-badge.l3{background:var(--blue-bg);color:var(--blue);border:1px solid rgba(74,158,224,0.3);}
+.speak-q{background:var(--surface2);border:1px solid var(--border2);border-radius:var(--r-sm);padding:1rem 1.25rem;margin-bottom:.75rem;}
+.speak-q p{font-size:14px;font-weight:600;color:#fff;margin-bottom:.5rem;}
+.speak-hint{font-size:12px;color:var(--text3);}
+.speak-hint span{color:var(--amber-300);}
+.idea-q{background:var(--surface2);border:1px solid var(--border2);border-radius:var(--r-sm);padding:1rem 1.25rem;margin-bottom:.75rem;display:flex;gap:10px;}
+.idea-icon{font-size:20px;flex-shrink:0;margin-top:2px;}
+.idea-text{font-size:14px;color:var(--text2);line-height:1.6;}
+.idea-text strong{color:#fff;}
+.ielts-topic{background:var(--blue-bg);border:1px solid rgba(74,158,224,0.25);border-radius:var(--r-sm);padding:1rem 1.25rem;margin-bottom:1.25rem;}
+.ielts-topic-label{font-size:10px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--blue);margin-bottom:.25rem;}
+.ielts-topic h4{font-size:16px;font-weight:700;color:#fff;}
+.vocab-chips{display:flex;flex-wrap:wrap;gap:6px;margin-top:.75rem;}
+.chip{font-size:12px;padding:4px 12px;border-radius:99px;background:rgba(255,255,255,0.06);border:1px solid var(--border);color:var(--text2);}
+.chip.amber{background:var(--amber-bg);border-color:var(--amber-border);color:var(--amber-300);}
+.ielts-qs{display:flex;flex-direction:column;gap:8px;margin-top:1rem;}
+.ielts-q{display:flex;gap:10px;background:var(--surface2);border-radius:var(--r-sm);padding:.875rem 1rem;}
+.ielts-q-num{font-size:11px;font-weight:700;color:var(--blue);min-width:20px;}
+.ielts-q-text{font-size:13px;color:var(--text2);}
+.ielts-w2{background:rgba(74,158,224,0.08);border:1px solid rgba(74,158,224,0.2);border-radius:var(--r-sm);padding:1rem 1.25rem;margin-top:1rem;}
+.ielts-w2-label{font-size:10px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--blue);margin-bottom:.5rem;}
+.ielts-w2 p{font-size:14px;color:var(--text2);line-height:1.7;font-style:italic;}
+.star-words{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:1.25rem;}
+.star-word{display:flex;align-items:center;gap:6px;padding:6px 14px;border-radius:99px;background:var(--amber-bg);border:1px solid var(--amber-border);font-size:13px;font-weight:600;color:var(--amber-300);}
+.think-box{background:var(--surface2);border:1px solid var(--border2);border-radius:var(--r-sm);padding:1rem 1.25rem;margin-bottom:1rem;}
+.think-box .think-head{font-size:12px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;color:var(--amber-300);margin-bottom:.5rem;}
+.think-box p{font-size:14px;color:var(--text2);}
+.mini-quiz-q{background:var(--surface2);border:1px solid var(--border2);border-radius:var(--r-sm);padding:1rem;margin-bottom:.75rem;}
+.mq-text{font-size:13px;font-weight:600;color:#fff;margin-bottom:.625rem;}
+.mq-opts{display:flex;flex-direction:column;gap:5px;}
+.mq-opt{padding:7px 12px;border-radius:6px;border:1px solid var(--border);background:transparent;font-size:12px;color:var(--text2);cursor:pointer;text-align:left;transition:all .15s;}
+.mq-opt:hover{border-color:var(--amber-border);background:var(--amber-bg);}
+.mq-opt.correct{border-color:var(--teal-border);background:var(--teal-bg);color:#fff;}
+.mq-opt.wrong{border-color:rgba(224,92,58,0.4);background:var(--coral-bg);color:#fff;}
+.lesson-nav{display:flex;gap:10px;margin-top:2rem;}
+.nav-btn{display:flex;align-items:center;gap:6px;padding:.75rem 1.25rem;border-radius:10px;font-size:13px;font-weight:600;cursor:pointer;text-decoration:none;border:1px solid var(--border);color:var(--text2);background:var(--surface);transition:all .15s;flex:1;justify-content:center;}
+.nav-btn:hover{border-color:var(--border2);color:#fff;}
+.nav-btn.primary{background:var(--amber-400);color:#1A0800;border-color:transparent;}
+.nav-btn.primary:hover{opacity:.9;}
+.site-footer{background:#111;border-top:1px solid rgba(255,255,255,0.07);text-align:center;padding:1.5rem;font-size:12px;color:rgba(255,255,255,0.3);}
+.site-footer strong{color:var(--amber-300);}
+@media(max-width:600px){.vocab-grid{grid-template-columns:1fr;}.lesson-nav{flex-direction:column;}}
+</style>
+</head>
+<body>
+<header class="site-header">
+  <div class="hdr">
+    <a class="logo-wrap" href="index.html">
+      <div class="logo-icon"><svg viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+          <path d="M6 24 C8 18,14 10,24 6 C20 10,18 14,20 18 C16 16,12 18,6 24Z" fill="white"/>
+          <path d="M20 18 C22 20,22 23,20 26 C18 24,18 21,20 18Z" fill="rgba(255,255,255,0.5)"/>
+        </svg></div>
+      <span class="logo-name">Lexilink Ideation IELTS STUDIO</span>
+    </a>
+    <div class="hdr-pipe"></div>
+    <a class="hdr-back" href="index.html"><i class="ti ti-arrow-left" aria-hidden="true"></i> Vol. 1</a>
+    <div class="hdr-spacer"></div>
+    <span class="hdr-badge">Lesson 28A</span>
+  </div>
+</header>
+<section class="lesson-hero">
+  <p class="lesson-eyebrow">Chapter 28 · The Roman Empire</p>
+  <h1>The Roman Gods</h1>
+  <p>How Greek gods got new Roman names — and gave names to our planets</p>
+  <div class="lesson-pills"><span class="l-pill">📖 Story + Vocabulary</span><span class="l-pill">🎤 Speaking</span><span class="l-pill">✏️ Grammar</span><span class="l-pill">⭐ CEFR A2–B1</span></div>
+</section>
+<div class="lesson-progress">
+  <div class="lp-inner">
+    <div class="lp-labels"><span>Lesson 28A of 7</span><span style="color:var(--amber-300)">Part 1 of 10</span></div>
+    <div class="lp-track"><div class="lp-fill"></div></div>
+    <div class="lp-parts">
+      <span class="lp-part active" onclick="scrollTo('p1')">1 Vocab</span>
+      <span class="lp-part" onclick="scrollTo('p2')">2 Story</span>
+      <span class="lp-part" onclick="scrollTo('p3')">3 Reading</span>
+      <span class="lp-part" onclick="scrollTo('p4')">4 Grammar</span>
+      <span class="lp-part" onclick="scrollTo('p5')">5 Builder</span>
+      <span class="lp-part" onclick="scrollTo('p6')">6 Speaking 1</span>
+      <span class="lp-part" onclick="scrollTo('p7')">7 Speaking 2</span>
+      <span class="lp-part" onclick="scrollTo('p8')">8 Ideas</span>
+      <span class="lp-part" onclick="scrollTo('p9')">9 IELTS</span>
+      <span class="lp-part" onclick="scrollTo('p10')">10 Review</span>
+    </div>
+  </div>
+</div>
+
+<main class="main">
+<section class="sec" id="p1">
+  <div class="sec-header">
+    <div class="sec-num">1</div>
+    <div><div class="sec-title">Vocabulary</div><div class="sec-sub">Click each word to learn more</div></div>
+  </div>
+  <div class="vocab-grid"><div class="vocab-card" onclick="toggleVocab(this)">
+      <div class="vc-top"><span class="vc-word">tribe</span><span class="vc-pos">noun</span></div>
+      <div class="vc-pron">/traɪb/</div>
+      <div class="vc-cn">部落</div>
+      <div class="vc-detail">
+        <div class="vc-def">A group of families who live together and share the same leaders and customs.</div>
+        <div class="vc-ex">"The Etruscan tribes of Italy went to Greece to buy and sell."</div>
+      </div>
+    </div><div class="vocab-card" onclick="toggleVocab(this)">
+      <div class="vc-top"><span class="vc-word">myth</span><span class="vc-pos">noun</span></div>
+      <div class="vc-pron">/mɪθ/</div>
+      <div class="vc-cn">神话</div>
+      <div class="vc-detail">
+        <div class="vc-def">A very old story about gods and heroes that explains the world.</div>
+        <div class="vc-ex">"In Greece, they heard Greek myths."</div>
+      </div>
+    </div><div class="vocab-card" onclick="toggleVocab(this)">
+      <div class="vc-top"><span class="vc-word">pass along</span><span class="vc-pos">phrasal verb</span></div>
+      <div class="vc-pron">/pɑːs əˈlɒŋ/</div>
+      <div class="vc-cn">传递；传给</div>
+      <div class="vc-detail">
+        <div class="vc-def">To give something, like a story, to other people.</div>
+        <div class="vc-ex">"They passed these stories along to the Romans."</div>
+      </div>
+    </div><div class="vocab-card" onclick="toggleVocab(this)">
+      <div class="vc-top"><span class="vc-word">worship</span><span class="vc-pos">verb</span></div>
+      <div class="vc-pron">/ˈwɜː.ʃɪp/</div>
+      <div class="vc-cn">崇拜；敬奉</div>
+      <div class="vc-detail">
+        <div class="vc-def">To show love and respect to a god, often by praying.</div>
+        <div class="vc-ex">"The Romans worshipped the gods of Greece."</div>
+      </div>
+    </div><div class="vocab-card" onclick="toggleVocab(this)">
+      <div class="vc-top"><span class="vc-word">control</span><span class="vc-pos">verb</span></div>
+      <div class="vc-pron">/kənˈtrəʊl/</div>
+      <div class="vc-cn">控制；掌管</div>
+      <div class="vc-detail">
+        <div class="vc-def">To have power over something and decide what it does.</div>
+        <div class="vc-ex">"Jupiter controlled the sky, the moon, and the weather."</div>
+      </div>
+    </div><div class="vocab-card" onclick="toggleVocab(this)">
+      <div class="vc-top"><span class="vc-word">thunder</span><span class="vc-pos">noun</span></div>
+      <div class="vc-pron">/ˈθʌn.dər/</div>
+      <div class="vc-cn">雷；雷声</div>
+      <div class="vc-detail">
+        <div class="vc-def">The loud noise you hear in the sky during a storm.</div>
+        <div class="vc-ex">"Jupiter sent wind, rain, and thunder."</div>
+      </div>
+    </div><div class="vocab-card" onclick="toggleVocab(this)">
+      <div class="vc-top"><span class="vc-word">planet</span><span class="vc-pos">noun</span></div>
+      <div class="vc-pron">/ˈplæn.ɪt/</div>
+      <div class="vc-cn">行星</div>
+      <div class="vc-detail">
+        <div class="vc-def">A very large round object in space that moves around the sun.</div>
+        <div class="vc-ex">"We call one of the planets Jupiter."</div>
+      </div>
+    </div><div class="vocab-card" onclick="toggleVocab(this)">
+      <div class="vc-top"><span class="vc-word">solar system</span><span class="vc-pos">noun</span></div>
+      <div class="vc-pron">/ˈsəʊ.lə ˌsɪs.təm/</div>
+      <div class="vc-cn">太阳系</div>
+      <div class="vc-detail">
+        <div class="vc-def">The sun and all the planets that move around it.</div>
+        <div class="vc-ex">"Our solar system also has a planet named Neptune."</div>
+      </div>
+    </div><div class="vocab-card" onclick="toggleVocab(this)">
+      <div class="vc-top"><span class="vc-word">named after</span><span class="vc-pos">verb phrase</span></div>
+      <div class="vc-pron">/neɪmd ˈɑːf.tər/</div>
+      <div class="vc-cn">以……命名</div>
+      <div class="vc-detail">
+        <div class="vc-def">Given the same name as someone or something else.</div>
+        <div class="vc-ex">"The planet Mars is named after the Roman god of war."</div>
+      </div>
+    </div><div class="vocab-card" onclick="toggleVocab(this)">
+      <div class="vc-top"><span class="vc-word">explain</span><span class="vc-pos">verb</span></div>
+      <div class="vc-pron">/ɪkˈspleɪn/</div>
+      <div class="vc-cn">解释；说明</div>
+      <div class="vc-detail">
+        <div class="vc-def">To tell why or how something happens.</div>
+        <div class="vc-ex">"The Romans told stories to explain the natural world."</div>
+      </div>
+    </div></div>
+</section>
+<section class="sec" id="p2">
+  <div class="sec-header">
+    <div class="sec-num">2</div>
+    <div><div class="sec-title">The Story</div><div class="sec-sub">Read carefully. Notice the bold words.</div></div>
+  </div>
+  <div class="story-body"><div class="story-icon">🏛️</div>
+<p>⛵ Do you remember the <span class="story-hl">Etruscans</span>? They were the <span class="story-hl">tribes</span> who lived in the north of Italy, near Rome. The Etruscans were great traders. They sailed across the sea to Greece to buy and sell pots, metal, and jewelry.</p>
+<p>📜 In Greece, the Etruscans did not only trade. They also listened. They heard the Greek <span class="story-hl">myths</span> — exciting stories about gods, heroes, monsters, and wars. They learned the names of the Greek gods who lived on Mount Olympus. When they came home to Italy, they <span class="story-hl">passed</span> these stories <span class="story-hl">along</span> to their neighbors, the Romans.</p>
+<p>🙏 The Romans loved the stories. Soon they took the Greek gods as their own. They <span class="story-hl">worshipped</span> the same gods and built temples for them. But there was one big change. The Romans gave the Greek gods new, Roman names.</p>
+<div class="story-box">The Romans borrowed the Greek gods, but they gave each god a new Roman name.</div>
+<p>⚡ Do you remember <span class="story-hl">Zeus</span>, the king of the Greek gods? He made a golden apple so that he could start the Trojan War. In Rome, Zeus was called <span class="story-hl">Jupiter</span>. Jupiter <span class="story-hl">controlled</span> the sky, the moon, and the weather. When the wind blew hard, when rain fell, and when <span class="story-hl">thunder</span> crashed over the hills, the Romans said, &quot;Jupiter is busy today!&quot;</p>
+<p>🪐 Today, the biggest <span class="story-hl">planet</span> in our <span class="story-hl">solar system</span> is called Jupiter. It is <span class="story-hl">named after</span> the king of the Roman gods. That makes sense, because Jupiter is the king of the planets too!</p>
+<p>🔴 The red planet, <span class="story-hl">Mars</span>, also has a Roman name. Mars was the Roman god of war. The Romans were a nation of soldiers, so Mars was very important to them. Before a battle, Roman soldiers prayed to Mars and asked him to make them strong.</p>
+<p>🌊 And do you remember <span class="story-hl">Poseidon</span>, the god of the sea? He was angry with Odysseus and tried to stop him from getting home. The Romans called this sea god <span class="story-hl">Neptune</span>. There is a blue planet far, far away from the sun that is named Neptune, too.</p>
+<p>🌾 Why did the Romans tell so many stories about their gods? One reason is that the stories helped them <span class="story-hl">explain</span> the natural world. Why does it rain? Why does the sea become wild? Why do the leaves fall in autumn and grow again in spring? People in the ancient world did not have science books. So they told stories.</p>
+<p>❄️ One of the most famous Roman stories tries to explain why we have winter and summer every year. It is about a goddess of the harvest named Ceres and her beautiful daughter, Proserpine. In the next lesson, you will hear what happened to them one day in the woods.</p>
+<div class="story-icon">🪐</div></div>
+</section>
+<section class="sec" id="p3">
+  <div class="sec-header">
+    <div class="sec-num">3</div>
+    <div><div class="sec-title">Reading Comprehension</div><div class="sec-sub">Choose the best answer. Get instant feedback!</div></div>
+  </div>
+  <div class="quiz-list">
+    <div class="q-item">
+      <div class="q-text">1. Who brought the Greek stories to the Romans?</div>
+      <div class="q-opts"><button class="q-opt" onclick="mcq(this,'wrong')">The Persians</button>
+<button class="q-opt" onclick="mcq(this,'correct')">The Etruscans</button>
+<button class="q-opt" onclick="mcq(this,'wrong')">The Egyptians</button></div>
+      <div class="q-feedback"></div>
+    </div>
+    <div class="q-item">
+      <div class="q-text">2. What was Zeus called in Rome?</div>
+      <div class="q-opts"><button class="q-opt" onclick="mcq(this,'wrong')">Neptune</button>
+<button class="q-opt" onclick="mcq(this,'wrong')">Mars</button>
+<button class="q-opt" onclick="mcq(this,'correct')">Jupiter</button></div>
+      <div class="q-feedback"></div>
+    </div>
+    <div class="q-item">
+      <div class="q-text">3. True or False? The Romans changed the names of the Greek gods.</div>
+      <div class="q-opts" style="display:flex;gap:8px;"><button class="tf-btn" onclick="tf(this,'correct','Yes — they kept the gods but gave them Roman names.')">True</button>
+<button class="tf-btn" onclick="tf(this,'wrong','Yes — they kept the gods but gave them Roman names.')">False</button></div>
+      <div class="q-feedback"></div>
+    </div>
+    <div class="q-item">
+      <div class="q-text">4. Mars was the Roman god of...</div>
+      <div class="q-opts"><button class="q-opt" onclick="mcq(this,'correct')">war</button>
+<button class="q-opt" onclick="mcq(this,'wrong')">the sea</button>
+<button class="q-opt" onclick="mcq(this,'wrong')">the harvest</button></div>
+      <div class="q-feedback"></div>
+    </div>
+    <div class="q-item">
+      <div class="q-text">5. True or False? Neptune was the Roman god of the sky.</div>
+      <div class="q-opts" style="display:flex;gap:8px;"><button class="tf-btn" onclick="tf(this,'wrong','Neptune was the god of the sea. Jupiter controlled the sky.')">True</button>
+<button class="tf-btn" onclick="tf(this,'correct','Neptune was the god of the sea. Jupiter controlled the sky.')">False</button></div>
+      <div class="q-feedback"></div>
+    </div>
+    <div class="q-item">
+      <div class="q-text">6. Why did the Romans tell stories about their gods?</div>
+      <div class="q-opts"><button class="q-opt" onclick="mcq(this,'wrong')">To sell them in Greece</button>
+<button class="q-opt" onclick="mcq(this,'correct')">To explain things in the natural world</button>
+<button class="q-opt" onclick="mcq(this,'wrong')">To teach soldiers how to fight</button></div>
+      <div class="q-feedback"></div>
+    </div>
+  </div>
+</section>
+<section class="sec" id="p4">
+  <div class="sec-header">
+    <div class="sec-num">4</div>
+    <div><div class="sec-title">Language Focus</div><div class="sec-sub">Grammar from the story — learn through meaning</div></div>
+  </div>
+<div class="grammar-box">
+    <div class="grammar-label">📌 Passive: &#x27;was called&#x27; / &#x27;is named after&#x27;</div>
+    <div class="grammar-rule">Use was/is + past participle when the name is more important than who gave it.</div>
+    <div class="grammar-eg">In Rome, Zeus <span>was called</span> Jupiter.</div>
+<div class="grammar-eg">The planet Mars <span>is named after</span> the god of war.</div>
+<div class="grammar-eg">The sea god <span>was called</span> Neptune.</div>
+<div class="grammar-eg">The biggest planet <span>is named after</span> the king of the gods.</div>
+<div class="grammar-note" style="font-size:12px;color:var(--text3);margin-top:.5rem;">💡 Tip: &#x27;Named after&#x27; means &#x27;given the same name as&#x27;.</div>
+  </div>
+<div class="grammar-box">
+    <div class="grammar-label">📌 Past simple: regular and irregular verbs</div>
+    <div class="grammar-rule">Many past verbs end in -ed, but some important ones change completely.</div>
+    <div class="grammar-eg">The Etruscans <span>learned</span> the Greek myths.</div>
+<div class="grammar-eg">They <span>heard</span> stories about gods. (hear → heard)</div>
+<div class="grammar-eg">The Romans <span>took</span> the gods as their own. (take → took)</div>
+<div class="grammar-eg">Jupiter <span>controlled</span> the weather.</div>
+<div class="grammar-note" style="font-size:12px;color:var(--text3);margin-top:.5rem;">💡 Tip: Learn irregular verbs in groups: hear–heard, take–took, tell–told.</div>
+  </div>
+<div class="grammar-box">
+    <div class="grammar-label">📌 &#x27;so that&#x27; for purpose</div>
+    <div class="grammar-rule">Use &#x27;so that&#x27; + subject + could/would to explain why someone did something.</div>
+    <div class="grammar-eg">Zeus made a golden apple <span>so that</span> he could start a war.</div>
+<div class="grammar-eg">The Romans told stories <span>so that</span> they could explain the world.</div>
+<div class="grammar-eg">Soldiers prayed to Mars <span>so that</span> he would make them strong.</div>
+<div class="grammar-note" style="font-size:12px;color:var(--text3);margin-top:.5rem;">💡 Tip: &#x27;So that&#x27; answers the question &#x27;Why?&#x27;</div>
+  </div>
+
+</section>
+<section class="sec" id="p5">
+  <div class="sec-header">
+    <div class="sec-num">5</div>
+    <div><div class="sec-title">Sentence Builder</div><div class="sec-sub">Build your skills with the vocabulary</div></div>
+  </div>
+<div class="sb-activity">
+    <div class="sb-label">✏️ Fill in the blank</div>
+    <p style="font-size:13px;color:var(--text2);margin-bottom:.5rem;">1. The Romans ________ the gods of Greece and built temples for them.</p>
+    <input class="sb-input" id="f1a" placeholder="Your answer..."/>
+    <button class="sb-check" onclick="checkFill('f1a','worshipped','rf1a')">Check ✓</button>
+    <div class="sb-result" id="rf1a"></div>
+  </div>
+<div class="sb-activity">
+    <div class="sb-label">✏️ Fill in the blank</div>
+    <p style="font-size:13px;color:var(--text2);margin-bottom:.5rem;">2. The planet Mars is named ________ the Roman god of war.</p>
+    <input class="sb-input" id="f2a" placeholder="Your answer..."/>
+    <button class="sb-check" onclick="checkFill('f2a','after','rf2a')">Check ✓</button>
+    <div class="sb-result" id="rf2a"></div>
+  </div>
+<div class="sb-activity">
+    <div class="sb-label">🔀 Unscramble the sentence</div>
+    <p style="font-size:13px;color:var(--text3);margin-bottom:.75rem;">Put these words in the correct order:</p>
+    <div style="margin-bottom:.75rem;"><span style="padding:5px 10px;border-radius:99px;background:var(--surface2);border:1px solid var(--border);font-size:13px;color:var(--text2);display:inline-block;margin:3px;">Jupiter</span><span style="padding:5px 10px;border-radius:99px;background:var(--surface2);border:1px solid var(--border);font-size:13px;color:var(--text2);display:inline-block;margin:3px;">the</span><span style="padding:5px 10px;border-radius:99px;background:var(--surface2);border:1px solid var(--border);font-size:13px;color:var(--text2);display:inline-block;margin:3px;">controlled</span><span style="padding:5px 10px;border-radius:99px;background:var(--surface2);border:1px solid var(--border);font-size:13px;color:var(--text2);display:inline-block;margin:3px;">sky</span><span style="padding:5px 10px;border-radius:99px;background:var(--surface2);border:1px solid var(--border);font-size:13px;color:var(--text2);display:inline-block;margin:3px;">and</span><span style="padding:5px 10px;border-radius:99px;background:var(--surface2);border:1px solid var(--border);font-size:13px;color:var(--text2);display:inline-block;margin:3px;">weather</span><span style="padding:5px 10px;border-radius:99px;background:var(--surface2);border:1px solid var(--border);font-size:13px;color:var(--text2);display:inline-block;margin:3px;">the</span></div>
+    <input class="sb-input" id="us1a" placeholder="Type your sentence here..."/>
+    <button class="sb-check" onclick="checkUnscramble('us1a','jupiter controlled the sky and the weather','ur1a')">Check ✓</button>
+    <div class="sb-result" id="ur1a"></div>
+  </div>
+<div class="sb-activity">
+    <div class="sb-label">🌏 Translate into English</div>
+    <p style="font-size:15px;color:var(--amber-300);margin-bottom:.5rem;">罗马人用神话来解释自然世界。</p>
+    <input class="sb-input" id="tr1a" placeholder="Write your English sentence..."/>
+    <button class="sb-check" onclick="revealFill('rt1a','The Romans used myths to explain the natural world.')">Show model answer</button>
+    <div class="sb-result" id="rt1a"></div>
+  </div>
+
+</section>
+<section class="sec" id="p6">
+  <div class="sec-header">
+    <div class="sec-num">6</div>
+    <div><div class="sec-title">Speaking — Level 1</div><div class="sec-sub">Answer in one complete sentence</div></div>
+  </div>
+  <div class="speak-level">
+    <span class="speak-badge l1">🟢 Level 1 · One sentence</span>
+    <div class="speak-q"><p>What was Zeus called in Rome?</p><div class="speak-hint">💡 Start with: <span>In Rome, Zeus was called...</span></div></div>
+<div class="speak-q"><p>Which planet is named after the god of war?</p><div class="speak-hint">💡 Start with: <span>The planet ... is named after...</span></div></div>
+<div class="speak-q"><p>Who passed the Greek myths to the Romans?</p><div class="speak-hint">💡 Start with: <span>The ... passed...</span></div></div>
+  </div>
+</section>
+<section class="sec" id="p7">
+  <div class="sec-header">
+    <div class="sec-num">7</div>
+    <div><div class="sec-title">Speaking — Level 2 &amp; 3</div><div class="sec-sub">Extend your answer. Share your opinion.</div></div>
+  </div>
+  <div class="speak-level">
+    <span class="speak-badge l2">🟡 Level 2 · 2–3 sentences</span>
+    <div class="speak-q"><p>Explain how the Greek gods became Roman gods.</p><div class="speak-hint">💡 Try: <span>First, the Etruscans... Then they... Finally, the Romans...</span></div></div>
+<div class="speak-q"><p>Choose one Roman god. Describe what he controlled and why he was important.</p><div class="speak-hint">💡 Try: <span>Jupiter / Mars / Neptune controlled... He was important because...</span></div></div>
+  </div>
+  <div class="speak-level">
+    <span class="speak-badge l3">🔵 Level 3 · Your opinion</span>
+    <div class="speak-q"><p>Why do you think the Romans borrowed gods from Greece instead of making up their own?</p><div class="speak-hint">💡 Use: <span>I think... One reason is... Another reason might be...</span></div></div>
+  </div>
+</section>
+<section class="sec" id="p8">
+  <div class="sec-header">
+    <div class="sec-num">8</div>
+    <div><div class="sec-title">Ideas &amp; Society</div><div class="sec-sub">Think about big ideas. There is no wrong answer.</div></div>
+  </div>
+<div class="idea-q"><div class="idea-icon">🔄</div><div class="idea-text"><strong>Borrowing culture.</strong> The Romans borrowed Greek gods and stories. What things has your country borrowed from other cultures — food, words, festivals?</div></div>
+<div class="idea-q"><div class="idea-icon">🌦️</div><div class="idea-text"><strong>Stories and science.</strong> Ancient people used myths to explain rain and thunder. How do we explain these things today? Are old stories still useful?</div></div>
+<div class="idea-q"><div class="idea-icon">🪐</div><div class="idea-text"><strong>Names that last.</strong> The planets still carry Roman names after 2,000 years. Why do some names last so long?</div></div>
+<div class="idea-q"><div class="idea-icon">🙏</div><div class="idea-text"><strong>Gods for everything.</strong> The Romans had a god for the sky, the sea, and war. Why do you think people wanted a god for each part of life?</div></div>
+
+</section>
+<section class="sec" id="p9">
+  <div class="sec-header">
+    <div class="sec-num">9</div>
+    <div><div class="sec-title">IELTS Content Builder</div><div class="sec-sub">Planting seeds for your future IELTS exam</div></div>
+  </div>
+  <div class="ielts-topic">
+    <div class="ielts-topic-label">📘 Today's IELTS Topic</div>
+    <h4>Culture, Tradition, and Globalisation</h4>
+  </div>
+  <p style="font-size:12px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;color:var(--text3);margin:.875rem 0 .5rem;">Key vocabulary</p>
+  <div class="vocab-chips"><span class="chip amber">cultural exchange</span><span class="chip amber">heritage</span><span class="chip amber">mythology</span><span class="chip amber">tradition</span><span class="chip">influence</span><span class="chip">adopt</span><span class="chip">belief</span><span class="chip">folklore</span></div>
+  <p style="font-size:12px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;color:var(--text3);margin:.875rem 0 .5rem;">Useful collocations</p>
+  <div class="vocab-chips"><span class="chip">adopt foreign customs</span><span class="chip">pass down traditions</span><span class="chip">cultural heritage</span><span class="chip">explain natural phenomena</span></div>
+  <div class="ielts-qs"><div class="ielts-q"><div class="ielts-q-num">S1</div><div class="ielts-q-text">Are there any traditional stories that people in your country still tell?</div></div>
+<div class="ielts-q"><div class="ielts-q-num">S2</div><div class="ielts-q-text">Why do children enjoy myths and legends?</div></div>
+<div class="ielts-q"><div class="ielts-q-num">S3</div><div class="ielts-q-text">Do you think it is good for a country to adopt customs from other countries?</div></div>
+</div>
+  <div class="ielts-w2">
+    <div class="ielts-w2-label">✏️ IELTS Writing Task 2 — Future Practice</div>
+    <p>"Some people believe that traditional stories and myths are no longer useful in the modern world. Others think they still teach important lessons. Discuss both views and give your own opinion."</p>
+  </div>
+</section>
+<section class="sec" id="p10">
+  <div class="sec-header">
+    <div class="sec-num">10</div>
+    <div><div class="sec-title">Review</div><div class="sec-sub">Remember what you learned!</div></div>
+  </div>
+  <p style="font-size:12px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;color:var(--text3);margin:.875rem 0 .5rem;">⭐ Star Words</p>
+  <div class="star-words"><span class="star-word">⭐ tribe</span><span class="star-word">⭐ myth</span><span class="star-word">⭐ pass along</span><span class="star-word">⭐ worship</span><span class="star-word">⭐ control</span><span class="star-word">⭐ planet</span><span class="star-word">⭐ named after</span><span class="star-word">⭐ explain</span></div>
+  <div class="think-box">
+    <div class="think-head">💡 Big Idea</div>
+    <p>Cultures borrow from each other. The Romans took the gods of Greece, gave them new names, and those names still live on in our solar system today.</p>
+  </div>
+  <p style="font-size:12px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;color:var(--text3);margin:.875rem 0 .5rem;">🧠 Mini Quiz</p>
+  <div class="mini-quiz-q"><div class="mq-text">A. A &#x27;myth&#x27; is...</div><div class="mq-opts"><button class="mq-opt" onclick="mq(this,'correct')">an old story about gods and heroes</button>
+<button class="mq-opt" onclick="mq(this,'wrong')">a kind of ship</button>
+<button class="mq-opt" onclick="mq(this,'wrong')">a Roman road</button></div></div><div class="mini-quiz-q"><div class="mq-text">B. Poseidon was called ... in Rome.</div><div class="mq-opts"><button class="mq-opt" onclick="mq(this,'wrong')">Mars</button>
+<button class="mq-opt" onclick="mq(this,'correct')">Neptune</button>
+<button class="mq-opt" onclick="mq(this,'wrong')">Jupiter</button></div></div><div class="mini-quiz-q"><div class="mq-text">C. &#x27;To worship&#x27; means...</div><div class="mq-opts"><button class="mq-opt" onclick="mq(this,'wrong')">to sell things</button>
+<button class="mq-opt" onclick="mq(this,'correct')">to show love and respect to a god</button>
+<button class="mq-opt" onclick="mq(this,'wrong')">to build a city</button></div></div>
+  <div class="lesson-nav">
+    <a class="nav-btn" href="ch27-g.html"><i class="ti ti-arrow-left"></i> Lesson 27G</a>
+    <a class="nav-btn primary" href="ch28-b.html">Next: Lesson 28B — Ceres and Proserpine <i class="ti ti-arrow-right"></i></a>
+  </div>
+</section>
+</main>
+<footer class="site-footer"><strong>Lexilink Ideation IELTS STUDIO</strong> · History ESL Course · Chapter 28 — Lesson A</footer>
+<script>
+function toggleVocab(card){card.classList.toggle('open');}
+function mcq(btn,type){
+  const item=btn.closest('.q-item');
+  item.querySelectorAll('.q-opt').forEach(b=>{b.classList.remove('correct','wrong');b.disabled=true;});
+  btn.classList.add(type);
+  const fb=item.querySelector('.q-feedback');
+  fb.className='q-feedback show '+(type==='correct'?'good':'bad');
+  fb.textContent=type==='correct'?'✓ Correct! Well done!':'✗ Not quite. Try to remember the story.';
+}
+function tf(btn,type,msg){
+  const item=btn.closest('.q-item');
+  item.querySelectorAll('.tf-btn').forEach(b=>{b.classList.remove('correct','wrong');b.disabled=true;});
+  btn.classList.add(type);
+  const fb=item.querySelector('.q-feedback');
+  fb.className='q-feedback show '+(type==='correct'?'good':'bad');
+  fb.textContent=(type==='correct'?'✓ ':'✗ ')+msg;
+}
+function mq(btn,type){
+  const item=btn.closest('.mini-quiz-q');
+  item.querySelectorAll('.mq-opt').forEach(b=>{b.classList.remove('correct','wrong');b.disabled=true;});
+  btn.classList.add(type);
+}
+function checkUnscramble(id,answer,rid){
+  const val=document.getElementById(id).value.trim().toLowerCase().replace(/[^a-z\s]/g,'');
+  const ans=answer.toLowerCase();
+  const r=document.getElementById(rid);
+  r.className='sb-result show '+(val===ans?'ok':'no');
+  r.textContent=val===ans?'✓ Perfect! "'+answer+'"':'✗ Try again. Check the word order.';
+}
+function checkFill(id,answer,rid){
+  const val=document.getElementById(id).value.trim().toLowerCase();
+  const r=document.getElementById(rid);
+  r.className='sb-result show '+(val===answer?'ok':'no');
+  r.textContent=val===answer?'✓ Correct!':'✗ The answer is: "'+answer+'"';
+}
+function revealFill(rid,answer){const r=document.getElementById(rid);r.className='sb-result show ok';r.textContent='Model answer: "'+answer+'"';}
+function scrollTo(id){document.getElementById(id).scrollIntoView({behavior:'smooth',block:'start'});}
+const parts=['p1','p2','p3','p4','p5','p6','p7','p8','p9','p10'];
+const partEls=document.querySelectorAll('.lp-part');
+window.addEventListener('scroll',()=>{
+  let current=0;
+  parts.forEach((id,i)=>{const el=document.getElementById(id);if(el&&el.getBoundingClientRect().top<200)current=i;});
+  partEls.forEach((el,i)=>{el.classList.remove('active','done');if(i<current)el.classList.add('done');else if(i===current)el.classList.add('active');});
+  const pct=Math.round(((current+1)/10)*100);
+  document.querySelector('.lp-fill').style.width=pct+'%';
+});
+</script>
+</body>
+</html>

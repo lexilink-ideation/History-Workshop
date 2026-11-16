@@ -1,0 +1,565 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+<title>Lesson 28C — Six Seeds and the Seasons | Lexilink History Workshop</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"/>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet"/>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@latest/tabler-icons.min.css"/>
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
+:root{
+  --bg:#0F0800;--surface:rgba(255,255,255,0.04);--surface2:rgba(255,255,255,0.07);
+  --border:rgba(255,255,255,0.10);--border2:rgba(255,255,255,0.06);
+  --amber-300:#E8A832;--amber-400:#D4890F;--amber-500:#B8720A;
+  --amber-bg:rgba(212,137,15,0.12);--amber-border:rgba(212,137,15,0.3);
+  --text:#fff;--text2:rgba(255,255,255,0.72);--text3:rgba(255,255,255,0.45);
+  --teal:#1D9E75;--teal-bg:rgba(29,158,117,0.12);--teal-border:rgba(29,158,117,0.3);
+  --coral:#E05C3A;--coral-bg:rgba(224,92,58,0.12);
+  --blue:#4A9EE0;--blue-bg:rgba(74,158,224,0.12);
+  --r:12px;--r-sm:8px;
+}
+html{scroll-behavior:smooth;}
+body{font-family:'Inter',sans-serif;background:var(--bg);color:var(--text);min-height:100vh;line-height:1.6;}
+.site-header{background:#111;border-bottom:1px solid rgba(255,255,255,0.08);position:sticky;top:0;z-index:100;}
+.hdr{max-width:860px;margin:0 auto;padding:0 1.5rem;height:54px;display:flex;align-items:center;gap:12px;}
+.logo-wrap{display:flex;align-items:center;gap:8px;text-decoration:none;}
+.logo-icon{width:30px;height:30px;display:flex;align-items:center;justify-content:center;}
+.logo-icon svg{width:26px;height:26px;}
+.logo-name{font-size:13px;font-weight:700;color:#fff;}
+.hdr-pipe{width:1px;height:20px;background:rgba(255,255,255,0.15);}
+.hdr-back{display:flex;align-items:center;gap:5px;font-size:12px;color:var(--text3);text-decoration:none;transition:color .15s;}
+.hdr-back:hover{color:var(--text2);}
+.hdr-spacer{flex:1;}
+.hdr-badge{font-size:10px;font-weight:700;letter-spacing:.05em;padding:3px 10px;border-radius:99px;border:1px solid var(--amber-border);color:var(--amber-300);background:var(--amber-bg);}
+.lesson-hero{background:linear-gradient(135deg,#0D1A00 0%,#1A3300 40%,#2A5200 100%);padding:3rem 1.5rem 2.5rem;text-align:center;position:relative;overflow:hidden;}
+.lesson-hero::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse 70% 60% at 50% 50%,rgba(200,130,0,0.15),transparent);pointer-events:none;}
+.lesson-eyebrow{font-size:10px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--amber-300);margin-bottom:.75rem;}
+.lesson-hero h1{font-size:clamp(22px,4vw,36px);font-weight:700;color:#fff;letter-spacing:-.02em;margin-bottom:.5rem;}
+.lesson-hero p{font-size:14px;color:rgba(255,255,255,0.65);max-width:520px;margin:0 auto .875rem;}
+.lesson-pills{display:flex;flex-wrap:wrap;justify-content:center;gap:8px;}
+.l-pill{font-size:11px;font-weight:500;padding:4px 12px;border-radius:99px;border:1px solid rgba(255,255,255,0.18);color:rgba(255,255,255,0.75);background:rgba(255,255,255,0.06);}
+.lesson-progress{background:#1A1100;border-bottom:1px solid rgba(255,255,255,0.06);padding:.75rem 1.5rem;}
+.lp-inner{max-width:860px;margin:0 auto;}
+.lp-labels{display:flex;justify-content:space-between;font-size:11px;color:var(--text3);margin-bottom:6px;}
+.lp-track{height:4px;border-radius:99px;background:rgba(255,255,255,0.08);}
+.lp-fill{height:100%;border-radius:99px;background:linear-gradient(90deg,var(--amber-500),var(--amber-300));width:10%;}
+.lp-parts{display:flex;gap:4px;margin-top:8px;flex-wrap:wrap;}
+.lp-part{font-size:10px;font-weight:600;padding:2px 8px;border-radius:99px;background:rgba(255,255,255,0.06);color:var(--text3);cursor:pointer;transition:all .15s;}
+.lp-part.done{background:var(--amber-bg);color:var(--amber-300);border:1px solid var(--amber-border);}
+.lp-part.active{background:var(--amber-400);color:#1A0800;}
+.main{max-width:860px;margin:0 auto;padding:2rem 1.5rem 5rem;}
+.sec{background:var(--surface);border:1px solid var(--border);border-radius:var(--r);padding:1.5rem;margin-bottom:1.5rem;scroll-margin-top:80px;}
+.sec-header{display:flex;align-items:center;gap:10px;margin-bottom:1.25rem;}
+.sec-num{width:28px;height:28px;border-radius:8px;display:flex;align-items:center;justify-content:center;font-size:11px;font-weight:700;background:var(--amber-bg);color:var(--amber-300);border:1px solid var(--amber-border);flex-shrink:0;}
+.sec-title{font-size:16px;font-weight:700;color:#fff;}
+.sec-sub{font-size:12px;color:var(--text3);margin-top:1px;}
+.vocab-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(240px,1fr));gap:10px;}
+.vocab-card{background:var(--surface2);border:1px solid var(--border2);border-radius:var(--r-sm);padding:1rem;cursor:pointer;transition:border-color .15s;}
+.vocab-card:hover,.vocab-card.open{border-color:var(--amber-border);}
+.vc-top{display:flex;align-items:baseline;gap:8px;}
+.vc-word{font-size:16px;font-weight:700;color:#fff;}
+.vc-pos{font-size:10px;font-weight:600;padding:1px 7px;border-radius:99px;background:var(--amber-bg);color:var(--amber-300);}
+.vc-pron{font-size:12px;color:var(--text3);margin-top:2px;font-style:italic;}
+.vc-cn{font-size:15px;color:var(--amber-300);margin-top:4px;font-weight:600;}
+.vc-detail{display:none;margin-top:10px;padding-top:10px;border-top:1px solid var(--border2);}
+.vocab-card.open .vc-detail{display:block;}
+.vc-def{font-size:13px;color:var(--text2);margin-bottom:6px;}
+.vc-ex{font-size:12px;color:var(--text3);font-style:italic;padding-left:8px;border-left:2px solid var(--amber-border);}
+.story-body p{font-size:15px;color:var(--text2);line-height:1.8;margin-bottom:1rem;}
+.story-body p:last-child{margin-bottom:0;}
+.story-hl{color:var(--amber-300);font-weight:600;}
+.story-box{background:var(--amber-bg);border:1px solid var(--amber-border);border-radius:var(--r-sm);padding:1rem 1.25rem;margin:1.25rem 0;font-size:14px;color:rgba(255,255,255,0.85);line-height:1.7;font-style:italic;}
+.story-box::before{content:'"';font-size:32px;color:var(--amber-400);line-height:1;display:block;margin-bottom:.25rem;}
+.story-icon{font-size:40px;text-align:center;margin:1rem 0;}
+.quiz-list{display:flex;flex-direction:column;gap:14px;}
+.q-item{background:var(--surface2);border:1px solid var(--border2);border-radius:var(--r-sm);padding:1rem 1.25rem;}
+.q-text{font-size:14px;font-weight:600;color:#fff;margin-bottom:.75rem;}
+.q-opts{display:flex;flex-direction:column;gap:6px;}
+.q-opt{display:flex;align-items:center;gap:10px;padding:8px 12px;border-radius:8px;border:1px solid var(--border);background:transparent;cursor:pointer;font-size:13px;color:var(--text2);width:100%;text-align:left;transition:all .15s;}
+.q-opt:hover{border-color:var(--amber-border);background:var(--amber-bg);}
+.q-opt.correct{border-color:var(--teal-border);background:var(--teal-bg);color:#fff;}
+.q-opt.wrong{border-color:rgba(224,92,58,0.4);background:var(--coral-bg);color:#fff;}
+.q-feedback{font-size:12px;margin-top:8px;padding:6px 10px;border-radius:6px;display:none;}
+.q-feedback.show{display:block;}
+.q-feedback.good{background:var(--teal-bg);color:#5DCAA5;}
+.q-feedback.bad{background:var(--coral-bg);color:#F09B80;}
+.tf-opts{display:flex;gap:8px;}
+.tf-btn{flex:1;padding:8px;border-radius:8px;border:1px solid var(--border);background:transparent;cursor:pointer;font-size:13px;font-weight:600;color:var(--text2);transition:all .15s;}
+.tf-btn:hover{border-color:var(--amber-border);background:var(--amber-bg);}
+.tf-btn.correct{border-color:var(--teal-border);background:var(--teal-bg);color:#fff;}
+.tf-btn.wrong{border-color:rgba(224,92,58,0.4);background:var(--coral-bg);color:#fff;}
+.grammar-box{background:var(--surface2);border-left:3px solid var(--amber-400);border-radius:0 var(--r-sm) var(--r-sm) 0;padding:1rem 1.25rem;margin-bottom:1rem;}
+.grammar-label{font-size:10px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--amber-300);margin-bottom:.5rem;}
+.grammar-rule{font-size:14px;color:#fff;font-weight:600;margin-bottom:.5rem;}
+.grammar-eg{font-size:13px;color:var(--text2);margin-top:.25rem;font-style:italic;}
+.grammar-eg span{color:var(--amber-300);font-weight:600;font-style:normal;}
+.grammar-table{width:100%;border-collapse:collapse;font-size:13px;margin-top:.75rem;}
+.grammar-table th{text-align:left;padding:6px 10px;font-size:10px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;color:var(--text3);border-bottom:1px solid var(--border);}
+.grammar-table td{padding:7px 10px;color:var(--text2);border-bottom:1px solid var(--border2);}
+.grammar-table td:first-child{color:#fff;font-weight:500;}
+.hl{color:var(--amber-300);font-weight:600;}
+.sb-activity{margin-bottom:1.25rem;}
+.sb-label{font-size:11px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;color:var(--amber-300);margin-bottom:.75rem;}
+.sb-input{width:100%;background:var(--surface2);border:1px solid var(--border);border-radius:var(--r-sm);padding:.625rem .875rem;font-size:14px;color:#fff;font-family:'Inter',sans-serif;transition:border-color .15s;outline:none;margin-bottom:.5rem;}
+.sb-input:focus{border-color:var(--amber-border);}
+.sb-check{padding:7px 18px;border-radius:99px;background:var(--amber-400);color:#1A0800;font-size:13px;font-weight:700;border:none;cursor:pointer;transition:opacity .15s;}
+.sb-check:hover{opacity:.85;}
+.sb-result{font-size:12px;margin-top:6px;padding:6px 10px;border-radius:6px;display:none;}
+.sb-result.show{display:block;}
+.sb-result.ok{background:var(--teal-bg);color:#5DCAA5;}
+.sb-result.no{background:var(--coral-bg);color:#F09B80;}
+.speak-level{margin-bottom:1.25rem;}
+.speak-badge{display:inline-flex;align-items:center;gap:6px;font-size:11px;font-weight:700;padding:3px 12px;border-radius:99px;margin-bottom:.875rem;}
+.speak-badge.l1{background:var(--teal-bg);color:#5DCAA5;border:1px solid var(--teal-border);}
+.speak-badge.l2{background:var(--amber-bg);color:var(--amber-300);border:1px solid var(--amber-border);}
+.speak-badge.l3{background:var(--blue-bg);color:var(--blue);border:1px solid rgba(74,158,224,0.3);}
+.speak-q{background:var(--surface2);border:1px solid var(--border2);border-radius:var(--r-sm);padding:1rem 1.25rem;margin-bottom:.75rem;}
+.speak-q p{font-size:14px;font-weight:600;color:#fff;margin-bottom:.5rem;}
+.speak-hint{font-size:12px;color:var(--text3);}
+.speak-hint span{color:var(--amber-300);}
+.idea-q{background:var(--surface2);border:1px solid var(--border2);border-radius:var(--r-sm);padding:1rem 1.25rem;margin-bottom:.75rem;display:flex;gap:10px;}
+.idea-icon{font-size:20px;flex-shrink:0;margin-top:2px;}
+.idea-text{font-size:14px;color:var(--text2);line-height:1.6;}
+.idea-text strong{color:#fff;}
+.ielts-topic{background:var(--blue-bg);border:1px solid rgba(74,158,224,0.25);border-radius:var(--r-sm);padding:1rem 1.25rem;margin-bottom:1.25rem;}
+.ielts-topic-label{font-size:10px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--blue);margin-bottom:.25rem;}
+.ielts-topic h4{font-size:16px;font-weight:700;color:#fff;}
+.vocab-chips{display:flex;flex-wrap:wrap;gap:6px;margin-top:.75rem;}
+.chip{font-size:12px;padding:4px 12px;border-radius:99px;background:rgba(255,255,255,0.06);border:1px solid var(--border);color:var(--text2);}
+.chip.amber{background:var(--amber-bg);border-color:var(--amber-border);color:var(--amber-300);}
+.ielts-qs{display:flex;flex-direction:column;gap:8px;margin-top:1rem;}
+.ielts-q{display:flex;gap:10px;background:var(--surface2);border-radius:var(--r-sm);padding:.875rem 1rem;}
+.ielts-q-num{font-size:11px;font-weight:700;color:var(--blue);min-width:20px;}
+.ielts-q-text{font-size:13px;color:var(--text2);}
+.ielts-w2{background:rgba(74,158,224,0.08);border:1px solid rgba(74,158,224,0.2);border-radius:var(--r-sm);padding:1rem 1.25rem;margin-top:1rem;}
+.ielts-w2-label{font-size:10px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--blue);margin-bottom:.5rem;}
+.ielts-w2 p{font-size:14px;color:var(--text2);line-height:1.7;font-style:italic;}
+.star-words{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:1.25rem;}
+.star-word{display:flex;align-items:center;gap:6px;padding:6px 14px;border-radius:99px;background:var(--amber-bg);border:1px solid var(--amber-border);font-size:13px;font-weight:600;color:var(--amber-300);}
+.think-box{background:var(--surface2);border:1px solid var(--border2);border-radius:var(--r-sm);padding:1rem 1.25rem;margin-bottom:1rem;}
+.think-box .think-head{font-size:12px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;color:var(--amber-300);margin-bottom:.5rem;}
+.think-box p{font-size:14px;color:var(--text2);}
+.mini-quiz-q{background:var(--surface2);border:1px solid var(--border2);border-radius:var(--r-sm);padding:1rem;margin-bottom:.75rem;}
+.mq-text{font-size:13px;font-weight:600;color:#fff;margin-bottom:.625rem;}
+.mq-opts{display:flex;flex-direction:column;gap:5px;}
+.mq-opt{padding:7px 12px;border-radius:6px;border:1px solid var(--border);background:transparent;font-size:12px;color:var(--text2);cursor:pointer;text-align:left;transition:all .15s;}
+.mq-opt:hover{border-color:var(--amber-border);background:var(--amber-bg);}
+.mq-opt.correct{border-color:var(--teal-border);background:var(--teal-bg);color:#fff;}
+.mq-opt.wrong{border-color:rgba(224,92,58,0.4);background:var(--coral-bg);color:#fff;}
+.lesson-nav{display:flex;gap:10px;margin-top:2rem;}
+.nav-btn{display:flex;align-items:center;gap:6px;padding:.75rem 1.25rem;border-radius:10px;font-size:13px;font-weight:600;cursor:pointer;text-decoration:none;border:1px solid var(--border);color:var(--text2);background:var(--surface);transition:all .15s;flex:1;justify-content:center;}
+.nav-btn:hover{border-color:var(--border2);color:#fff;}
+.nav-btn.primary{background:var(--amber-400);color:#1A0800;border-color:transparent;}
+.nav-btn.primary:hover{opacity:.9;}
+.site-footer{background:#111;border-top:1px solid rgba(255,255,255,0.07);text-align:center;padding:1.5rem;font-size:12px;color:rgba(255,255,255,0.3);}
+.site-footer strong{color:var(--amber-300);}
+@media(max-width:600px){.vocab-grid{grid-template-columns:1fr;}.lesson-nav{flex-direction:column;}}
+</style>
+</head>
+<body>
+<header class="site-header">
+  <div class="hdr">
+    <a class="logo-wrap" href="index.html">
+      <div class="logo-icon"><svg viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+          <path d="M6 24 C8 18,14 10,24 6 C20 10,18 14,20 18 C16 16,12 18,6 24Z" fill="white"/>
+          <path d="M20 18 C22 20,22 23,20 26 C18 24,18 21,20 18Z" fill="rgba(255,255,255,0.5)"/>
+        </svg></div>
+      <span class="logo-name">Lexilink Ideation IELTS STUDIO</span>
+    </a>
+    <div class="hdr-pipe"></div>
+    <a class="hdr-back" href="index.html"><i class="ti ti-arrow-left" aria-hidden="true"></i> Vol. 1</a>
+    <div class="hdr-spacer"></div>
+    <span class="hdr-badge">Lesson 28C</span>
+  </div>
+</header>
+<section class="lesson-hero">
+  <p class="lesson-eyebrow">Chapter 28 · The Roman Empire</p>
+  <h1>Six Seeds and the Seasons</h1>
+  <p>How six pomegranate seeds gave the world winter and spring</p>
+  <div class="lesson-pills"><span class="l-pill">📖 Story + Vocabulary</span><span class="l-pill">🎤 Speaking</span><span class="l-pill">✏️ Grammar</span><span class="l-pill">⭐ CEFR A2–B1</span></div>
+</section>
+<div class="lesson-progress">
+  <div class="lp-inner">
+    <div class="lp-labels"><span>Lesson 28C of 7</span><span style="color:var(--amber-300)">Part 1 of 10</span></div>
+    <div class="lp-track"><div class="lp-fill"></div></div>
+    <div class="lp-parts">
+      <span class="lp-part active" onclick="scrollTo('p1')">1 Vocab</span>
+      <span class="lp-part" onclick="scrollTo('p2')">2 Story</span>
+      <span class="lp-part" onclick="scrollTo('p3')">3 Reading</span>
+      <span class="lp-part" onclick="scrollTo('p4')">4 Grammar</span>
+      <span class="lp-part" onclick="scrollTo('p5')">5 Builder</span>
+      <span class="lp-part" onclick="scrollTo('p6')">6 Speaking 1</span>
+      <span class="lp-part" onclick="scrollTo('p7')">7 Speaking 2</span>
+      <span class="lp-part" onclick="scrollTo('p8')">8 Ideas</span>
+      <span class="lp-part" onclick="scrollTo('p9')">9 IELTS</span>
+      <span class="lp-part" onclick="scrollTo('p10')">10 Review</span>
+    </div>
+  </div>
+</div>
+
+<main class="main">
+<section class="sec" id="p1">
+  <div class="sec-header">
+    <div class="sec-num">1</div>
+    <div><div class="sec-title">Vocabulary</div><div class="sec-sub">Click each word to learn more</div></div>
+  </div>
+  <div class="vocab-grid"><div class="vocab-card" onclick="toggleVocab(this)">
+      <div class="vc-top"><span class="vc-word">condition</span><span class="vc-pos">noun</span></div>
+      <div class="vc-pron">/kənˈdɪʃ.ən/</div>
+      <div class="vc-cn">条件</div>
+      <div class="vc-detail">
+        <div class="vc-def">Something that must happen before something else can happen.</div>
+        <div class="vc-ex">"I will tell Pluto to let her go — on one condition."</div>
+      </div>
+    </div><div class="vocab-card" onclick="toggleVocab(this)">
+      <div class="vc-top"><span class="vc-word">crack</span><span class="vc-pos">verb</span></div>
+      <div class="vc-pron">/kræk/</div>
+      <div class="vc-cn">裂开</div>
+      <div class="vc-detail">
+        <div class="vc-def">To break so that a line or opening appears.</div>
+        <div class="vc-ex">"Suddenly the earth cracked open."</div>
+      </div>
+    </div><div class="vocab-card" onclick="toggleVocab(this)">
+      <div class="vc-top"><span class="vc-word">cloak</span><span class="vc-pos">noun</span></div>
+      <div class="vc-pron">/kləʊk/</div>
+      <div class="vc-cn">斗篷</div>
+      <div class="vc-detail">
+        <div class="vc-def">A long, loose coat with no sleeves.</div>
+        <div class="vc-ex">"Pluto wore a black cloak."</div>
+      </div>
+    </div><div class="vocab-card" onclick="toggleVocab(this)">
+      <div class="vc-top"><span class="vc-word">pomegranate</span><span class="vc-pos">noun</span></div>
+      <div class="vc-pron">/ˈpɒm.ɪ.ɡræn.ɪt/</div>
+      <div class="vc-cn">石榴</div>
+      <div class="vc-detail">
+        <div class="vc-def">A round red fruit with many small juicy seeds inside.</div>
+        <div class="vc-ex">"I only ate six seeds from a pomegranate."</div>
+      </div>
+    </div><div class="vocab-card" onclick="toggleVocab(this)">
+      <div class="vc-top"><span class="vc-word">seed</span><span class="vc-pos">noun</span></div>
+      <div class="vc-pron">/siːd/</div>
+      <div class="vc-cn">种子；籽</div>
+      <div class="vc-detail">
+        <div class="vc-def">The small hard part of a plant or fruit that can grow into a new plant.</div>
+        <div class="vc-ex">"She ate six seeds."</div>
+      </div>
+    </div><div class="vocab-card" onclick="toggleVocab(this)">
+      <div class="vc-top"><span class="vc-word">refuse</span><span class="vc-pos">verb</span></div>
+      <div class="vc-pron">/rɪˈfjuːz/</div>
+      <div class="vc-cn">拒绝</div>
+      <div class="vc-detail">
+        <div class="vc-def">To say no; to not do what someone asks.</div>
+        <div class="vc-ex">"Ceres refused to give in."</div>
+      </div>
+    </div><div class="vocab-card" onclick="toggleVocab(this)">
+      <div class="vc-top"><span class="vc-word">give in</span><span class="vc-pos">phrasal verb</span></div>
+      <div class="vc-pron">/ɡɪv ɪn/</div>
+      <div class="vc-cn">让步；屈服</div>
+      <div class="vc-detail">
+        <div class="vc-def">To stop arguing and agree to what someone else wants.</div>
+        <div class="vc-ex">"Ceres would not give in."</div>
+      </div>
+    </div><div class="vocab-card" onclick="toggleVocab(this)">
+      <div class="vc-top"><span class="vc-word">consider</span><span class="vc-pos">verb</span></div>
+      <div class="vc-pron">/kənˈsɪd.ər/</div>
+      <div class="vc-cn">仔细考虑</div>
+      <div class="vc-detail">
+        <div class="vc-def">To think carefully about something before deciding.</div>
+        <div class="vc-ex">"Jupiter considered the case carefully."</div>
+      </div>
+    </div><div class="vocab-card" onclick="toggleVocab(this)">
+      <div class="vc-top"><span class="vc-word">mourn</span><span class="vc-pos">verb</span></div>
+      <div class="vc-pron">/mɔːn/</div>
+      <div class="vc-cn">哀悼；悲伤</div>
+      <div class="vc-detail">
+        <div class="vc-def">To feel and show great sadness, often because someone is gone.</div>
+        <div class="vc-ex">"Ceres mourns and weeps."</div>
+      </div>
+    </div><div class="vocab-card" onclick="toggleVocab(this)">
+      <div class="vc-top"><span class="vc-word">rejoice</span><span class="vc-pos">verb</span></div>
+      <div class="vc-pron">/rɪˈdʒɔɪs/</div>
+      <div class="vc-cn">欣喜；高兴</div>
+      <div class="vc-detail">
+        <div class="vc-def">To feel or show great happiness.</div>
+        <div class="vc-ex">"When Proserpine comes back, Ceres rejoices."</div>
+      </div>
+    </div></div>
+</section>
+<section class="sec" id="p2">
+  <div class="sec-header">
+    <div class="sec-num">2</div>
+    <div><div class="sec-title">The Story</div><div class="sec-sub">Read carefully. Notice the bold words.</div></div>
+  </div>
+  <div class="story-body"><div class="story-icon">👑</div>
+<p>⚡ Ceres stood in the palace of Jupiter, waiting for his answer. The earth below was already brown and dying. Jupiter thought for a long time. At last he spoke.</p>
+<p>🍽️ &#x27;Very well,&#x27; he said. &#x27;I will tell Pluto to let your daughter go — on one <span class="story-hl">condition</span>. Proserpine can leave the Underworld only if she has not eaten or drunk anything in Pluto&#x27;s palace. But if she ate or drank there, she must stay.&#x27; This was an old rule. Anyone who ate the food of the dead belonged to the land of the dead.</p>
+<p>🌋 Suddenly, the earth <span class="story-hl">cracked</span> open. Out of the darkness came Proserpine. Beside her stood a tall, dark man in a black <span class="story-hl">cloak</span>. It was <span class="story-hl">Pluto</span>, the lord of the Underworld.</p>
+<p>🤗 &#x27;My daughter!&#x27; Ceres cried. She ran forward to hug her.</p>
+<p>✋ &#x27;Wait,&#x27; said Jupiter. &#x27;Proserpine, tell me the truth. Have you eaten or drunk anything in the Underworld?&#x27;</p>
+<p>🍎 Proserpine looked down. &#x27;Hardly anything,&#x27; she said in a small voice. &#x27;I only ate six <span class="story-hl">seeds</span> from a <span class="story-hl">pomegranate</span>, just a few minutes ago.&#x27;</p>
+<p>😟 Jupiter shook his head. &#x27;Then you must stay with Pluto,&#x27; he said.</p>
+<p>💪 But Ceres <span class="story-hl">refused</span> to <span class="story-hl">give in</span>. She stood tall in front of the king of the gods. &#x27;If I do not get my daughter back,&#x27; she warned, &#x27;spring will never come again. Nothing will grow. The people will starve.&#x27;</p>
+<div class="story-box">She ate six seeds, so she stays six months below — and the world above has winter.</div>
+<p>⚖️ Jupiter <span class="story-hl">considered</span> the case carefully. He wanted to be fair to Pluto, to Ceres, and to the people on earth. Finally, he made his decision. &#x27;She only ate six seeds,&#x27; he said. &#x27;So for six months — half of the year — she must stay in the Underworld with Pluto. But for the other six months, she may live with her mother in the world above.&#x27;</p>
+<p>❄️ And so, the Romans said, Proserpine spends six months of every year in the Underworld. While she is in Pluto&#x27;s palace, her mother <span class="story-hl">mourns</span> and weeps. The leaves fall from the trees, the grass turns brown, and the flowers die. Cold winds blow. This is autumn and winter.</p>
+<p>🌼 But each spring, Proserpine comes back to her mother, and Ceres <span class="story-hl">rejoices</span>. The trees grow new leaves. The grass turns green again. Flowers bud and bloom, and farmers plant their crops. This is spring and summer.</p>
+<p>🔭 Today we know that the seasons change because the earth is tilted as it travels around the sun. But for the Romans, this beautiful story explained why the world grows cold and then warm again, year after year.</p>
+<div class="story-icon">🌷</div></div>
+</section>
+<section class="sec" id="p3">
+  <div class="sec-header">
+    <div class="sec-num">3</div>
+    <div><div class="sec-title">Reading Comprehension</div><div class="sec-sub">Choose the best answer. Get instant feedback!</div></div>
+  </div>
+  <div class="quiz-list">
+    <div class="q-item">
+      <div class="q-text">1. What was Jupiter&#x27;s condition?</div>
+      <div class="q-opts"><button class="q-opt" onclick="mcq(this,'correct')">Proserpine must not have eaten or drunk anything</button>
+<button class="q-opt" onclick="mcq(this,'wrong')">Ceres must give Pluto a gift</button>
+<button class="q-opt" onclick="mcq(this,'wrong')">Pluto must leave the Underworld</button></div>
+      <div class="q-feedback"></div>
+    </div>
+    <div class="q-item">
+      <div class="q-text">2. True or False? Proserpine ate a whole pomegranate in the Underworld.</div>
+      <div class="q-opts" style="display:flex;gap:8px;"><button class="tf-btn" onclick="tf(this,'wrong','She only ate six seeds from a pomegranate.')">True</button>
+<button class="tf-btn" onclick="tf(this,'correct','She only ate six seeds from a pomegranate.')">False</button></div>
+      <div class="q-feedback"></div>
+    </div>
+    <div class="q-item">
+      <div class="q-text">3. What did Ceres say would happen if she did not get her daughter back?</div>
+      <div class="q-opts"><button class="q-opt" onclick="mcq(this,'wrong')">She would leave the earth forever</button>
+<button class="q-opt" onclick="mcq(this,'correct')">Spring would never come again</button>
+<button class="q-opt" onclick="mcq(this,'wrong')">She would fight Pluto</button></div>
+      <div class="q-feedback"></div>
+    </div>
+    <div class="q-item">
+      <div class="q-text">4. Why did Jupiter choose six months?</div>
+      <div class="q-opts"><button class="q-opt" onclick="mcq(this,'correct')">Because Proserpine ate six seeds</button>
+<button class="q-opt" onclick="mcq(this,'wrong')">Because Pluto asked for six months</button>
+<button class="q-opt" onclick="mcq(this,'wrong')">Because there are six gods</button></div>
+      <div class="q-feedback"></div>
+    </div>
+    <div class="q-item">
+      <div class="q-text">5. True or False? In the story, winter comes when Proserpine is in the Underworld.</div>
+      <div class="q-opts" style="display:flex;gap:8px;"><button class="tf-btn" onclick="tf(this,'correct','Yes — Ceres mourns, so leaves fall and plants die.')">True</button>
+<button class="tf-btn" onclick="tf(this,'wrong','Yes — Ceres mourns, so leaves fall and plants die.')">False</button></div>
+      <div class="q-feedback"></div>
+    </div>
+    <div class="q-item">
+      <div class="q-text">6. What kind of decision did Jupiter make?</div>
+      <div class="q-opts"><button class="q-opt" onclick="mcq(this,'wrong')">He gave everything to Pluto</button>
+<button class="q-opt" onclick="mcq(this,'correct')">He made a compromise that shared the year</button>
+<button class="q-opt" onclick="mcq(this,'wrong')">He sent Ceres away</button></div>
+      <div class="q-feedback"></div>
+    </div>
+  </div>
+</section>
+<section class="sec" id="p4">
+  <div class="sec-header">
+    <div class="sec-num">4</div>
+    <div><div class="sec-title">Language Focus</div><div class="sec-sub">Grammar from the story — learn through meaning</div></div>
+  </div>
+<div class="grammar-box">
+    <div class="grammar-label">📌 Present perfect questions: Have you ever...?</div>
+    <div class="grammar-rule">Use have/has + past participle to ask about something that happened at any time up to now.</div>
+    <div class="grammar-eg"><span>Have you eaten</span> anything in the Underworld?</div>
+<div class="grammar-eg"><span>Has she drunk</span> anything?</div>
+<div class="grammar-eg"><span>Have you seen</span> my daughter?</div>
+<div class="grammar-eg"><span>Have you ever tasted</span> a pomegranate?</div>
+<div class="grammar-note" style="font-size:12px;color:var(--text3);margin-top:.5rem;">💡 Tip: Answer with &#x27;Yes, I have&#x27; or &#x27;No, I haven&#x27;t&#x27;.</div>
+  </div>
+<div class="grammar-box">
+    <div class="grammar-label">📌 Only + quantity</div>
+    <div class="grammar-rule">Put &#x27;only&#x27; before a number or amount to show it is small.</div>
+    <div class="grammar-eg">I <span>only ate six seeds</span>.</div>
+<div class="grammar-eg">She ate <span>hardly anything</span>.</div>
+<div class="grammar-eg">She stays <span>only half</span> of the year.</div>
+<div class="grammar-eg">Jupiter gave her <span>only one</span> condition.</div>
+<div class="grammar-note" style="font-size:12px;color:var(--text3);margin-top:.5rem;">💡 Tip: &#x27;Hardly anything&#x27; means &#x27;almost nothing&#x27;.</div>
+  </div>
+<div class="grammar-box">
+    <div class="grammar-label">📌 Present simple for things that happen every year</div>
+    <div class="grammar-rule">Use the present simple to explain habits and repeated events.</div>
+    <div class="grammar-eg">Proserpine <span>spends</span> six months in the Underworld.</div>
+<div class="grammar-eg">Ceres <span>mourns</span> and the leaves <span>fall</span>.</div>
+<div class="grammar-eg">Every spring, Proserpine <span>comes</span> back.</div>
+<div class="grammar-eg">The grass <span>turns</span> green again.</div>
+<div class="grammar-note" style="font-size:12px;color:var(--text3);margin-top:.5rem;">💡 Tip: Remember the -s with he, she, and it: she spends, it turns.</div>
+  </div>
+
+</section>
+<section class="sec" id="p5">
+  <div class="sec-header">
+    <div class="sec-num">5</div>
+    <div><div class="sec-title">Sentence Builder</div><div class="sec-sub">Build your skills with the vocabulary</div></div>
+  </div>
+<div class="sb-activity">
+    <div class="sb-label">✏️ Fill in the blank</div>
+    <p style="font-size:13px;color:var(--text2);margin-bottom:.5rem;">1. Proserpine ate six seeds from a ________.</p>
+    <input class="sb-input" id="f1c" placeholder="Your answer..."/>
+    <button class="sb-check" onclick="checkFill('f1c','pomegranate','rf1c')">Check ✓</button>
+    <div class="sb-result" id="rf1c"></div>
+  </div>
+<div class="sb-activity">
+    <div class="sb-label">✏️ Fill in the blank</div>
+    <p style="font-size:13px;color:var(--text2);margin-bottom:.5rem;">2. Ceres ________ to give in and kept asking for her daughter.</p>
+    <input class="sb-input" id="f2c" placeholder="Your answer..."/>
+    <button class="sb-check" onclick="checkFill('f2c','refused','rf2c')">Check ✓</button>
+    <div class="sb-result" id="rf2c"></div>
+  </div>
+<div class="sb-activity">
+    <div class="sb-label">🔀 Unscramble the sentence</div>
+    <p style="font-size:13px;color:var(--text3);margin-bottom:.75rem;">Put these words in the correct order:</p>
+    <div style="margin-bottom:.75rem;"><span style="padding:5px 10px;border-radius:99px;background:var(--surface2);border:1px solid var(--border);font-size:13px;color:var(--text2);display:inline-block;margin:3px;">six</span><span style="padding:5px 10px;border-radius:99px;background:var(--surface2);border:1px solid var(--border);font-size:13px;color:var(--text2);display:inline-block;margin:3px;">the</span><span style="padding:5px 10px;border-radius:99px;background:var(--surface2);border:1px solid var(--border);font-size:13px;color:var(--text2);display:inline-block;margin:3px;">months</span><span style="padding:5px 10px;border-radius:99px;background:var(--surface2);border:1px solid var(--border);font-size:13px;color:var(--text2);display:inline-block;margin:3px;">stays</span><span style="padding:5px 10px;border-radius:99px;background:var(--surface2);border:1px solid var(--border);font-size:13px;color:var(--text2);display:inline-block;margin:3px;">she</span><span style="padding:5px 10px;border-radius:99px;background:var(--surface2);border:1px solid var(--border);font-size:13px;color:var(--text2);display:inline-block;margin:3px;">Underworld</span><span style="padding:5px 10px;border-radius:99px;background:var(--surface2);border:1px solid var(--border);font-size:13px;color:var(--text2);display:inline-block;margin:3px;">in</span><span style="padding:5px 10px;border-radius:99px;background:var(--surface2);border:1px solid var(--border);font-size:13px;color:var(--text2);display:inline-block;margin:3px;">for</span></div>
+    <input class="sb-input" id="us1c" placeholder="Type your sentence here..."/>
+    <button class="sb-check" onclick="checkUnscramble('us1c','she stays in the underworld for six months','ur1c')">Check ✓</button>
+    <div class="sb-result" id="ur1c"></div>
+  </div>
+<div class="sb-activity">
+    <div class="sb-label">🌏 Translate into English</div>
+    <p style="font-size:15px;color:var(--amber-300);margin-bottom:.5rem;">每年春天，女儿回来时，刻瑞斯都非常高兴。</p>
+    <input class="sb-input" id="tr1c" placeholder="Write your English sentence..."/>
+    <button class="sb-check" onclick="revealFill('rt1c','Every spring, when her daughter comes back, Ceres rejoices.')">Show model answer</button>
+    <div class="sb-result" id="rt1c"></div>
+  </div>
+
+</section>
+<section class="sec" id="p6">
+  <div class="sec-header">
+    <div class="sec-num">6</div>
+    <div><div class="sec-title">Speaking — Level 1</div><div class="sec-sub">Answer in one complete sentence</div></div>
+  </div>
+  <div class="speak-level">
+    <span class="speak-badge l1">🟢 Level 1 · One sentence</span>
+    <div class="speak-q"><p>What did Proserpine eat in the Underworld?</p><div class="speak-hint">💡 Start with: <span>She ate...</span></div></div>
+<div class="speak-q"><p>How many months does Proserpine stay with Pluto?</p><div class="speak-hint">💡 Start with: <span>She stays with Pluto for...</span></div></div>
+<div class="speak-q"><p>What happens to the trees when Ceres mourns?</p><div class="speak-hint">💡 Start with: <span>When Ceres mourns, the trees...</span></div></div>
+  </div>
+</section>
+<section class="sec" id="p7">
+  <div class="sec-header">
+    <div class="sec-num">7</div>
+    <div><div class="sec-title">Speaking — Level 2 &amp; 3</div><div class="sec-sub">Extend your answer. Share your opinion.</div></div>
+  </div>
+  <div class="speak-level">
+    <span class="speak-badge l2">🟡 Level 2 · 2–3 sentences</span>
+    <div class="speak-q"><p>Explain how this myth tells the story of the four seasons.</p><div class="speak-hint">💡 Try: <span>When Proserpine is... , it is... But when she comes back...</span></div></div>
+<div class="speak-q"><p>Describe Jupiter&#x27;s decision. Why do you think he chose it?</p><div class="speak-hint">💡 Try: <span>Jupiter decided that... I think he chose this because...</span></div></div>
+  </div>
+  <div class="speak-level">
+    <span class="speak-badge l3">🔵 Level 3 · Your opinion</span>
+    <div class="speak-q"><p>Was Jupiter&#x27;s decision fair to everyone? Who do you think was happiest, and who was least happy?</p><div class="speak-hint">💡 Use: <span>I think it was fair/unfair because... The happiest was... because...</span></div></div>
+  </div>
+</section>
+<section class="sec" id="p8">
+  <div class="sec-header">
+    <div class="sec-num">8</div>
+    <div><div class="sec-title">Ideas &amp; Society</div><div class="sec-sub">Think about big ideas. There is no wrong answer.</div></div>
+  </div>
+<div class="idea-q"><div class="idea-icon">🤝</div><div class="idea-text"><strong>The art of compromise.</strong> Jupiter gave each side half of what they wanted. When is a compromise the best answer, and when is it not?</div></div>
+<div class="idea-q"><div class="idea-icon">🍎</div><div class="idea-text"><strong>Small actions, big results.</strong> Six small seeds changed Proserpine&#x27;s whole life. Can you think of a small choice that had a big result?</div></div>
+<div class="idea-q"><div class="idea-icon">🔭</div><div class="idea-text"><strong>Myth and science.</strong> The Romans used a story to explain the seasons. Today we use science. Why do you think people still enjoy the old story?</div></div>
+<div class="idea-q"><div class="idea-icon">😢</div><div class="idea-text"><strong>Seasons of feeling.</strong> Ceres is sad in winter and happy in spring. Do the seasons change how people feel? How?</div></div>
+
+</section>
+<section class="sec" id="p9">
+  <div class="sec-header">
+    <div class="sec-num">9</div>
+    <div><div class="sec-title">IELTS Content Builder</div><div class="sec-sub">Planting seeds for your future IELTS exam</div></div>
+  </div>
+  <div class="ielts-topic">
+    <div class="ielts-topic-label">📘 Today's IELTS Topic</div>
+    <h4>Seasons, Weather, and the Environment</h4>
+  </div>
+  <p style="font-size:12px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;color:var(--text3);margin:.875rem 0 .5rem;">Key vocabulary</p>
+  <div class="vocab-chips"><span class="chip amber">seasonal change</span><span class="chip amber">climate</span><span class="chip amber">compromise</span><span class="chip amber">cycle</span><span class="chip">agriculture</span><span class="chip">harvest season</span><span class="chip">temperature</span><span class="chip">bloom</span></div>
+  <p style="font-size:12px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;color:var(--text3);margin:.875rem 0 .5rem;">Useful collocations</p>
+  <div class="vocab-chips"><span class="chip">reach a compromise</span><span class="chip">the change of seasons</span><span class="chip">a fair decision</span><span class="chip">the cycle of nature</span></div>
+  <div class="ielts-qs"><div class="ielts-q"><div class="ielts-q-num">S1</div><div class="ielts-q-text">What is your favourite season? Why?</div></div>
+<div class="ielts-q"><div class="ielts-q-num">S2</div><div class="ielts-q-text">How does the weather affect people&#x27;s mood?</div></div>
+<div class="ielts-q"><div class="ielts-q-num">S3</div><div class="ielts-q-text">Do you think it is easy for people to reach a compromise when they disagree?</div></div>
+</div>
+  <div class="ielts-w2">
+    <div class="ielts-w2-label">✏️ IELTS Writing Task 2 — Future Practice</div>
+    <p>"In some countries the weather changes a lot between seasons, while in others it stays the same all year. What are the advantages and disadvantages of living in a place with four distinct seasons?"</p>
+  </div>
+</section>
+<section class="sec" id="p10">
+  <div class="sec-header">
+    <div class="sec-num">10</div>
+    <div><div class="sec-title">Review</div><div class="sec-sub">Remember what you learned!</div></div>
+  </div>
+  <p style="font-size:12px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;color:var(--text3);margin:.875rem 0 .5rem;">⭐ Star Words</p>
+  <div class="star-words"><span class="star-word">⭐ condition</span><span class="star-word">⭐ crack</span><span class="star-word">⭐ pomegranate</span><span class="star-word">⭐ seed</span><span class="star-word">⭐ refuse</span><span class="star-word">⭐ give in</span><span class="star-word">⭐ mourn</span><span class="star-word">⭐ rejoice</span></div>
+  <div class="think-box">
+    <div class="think-head">💡 Big Idea</div>
+    <p>A fair decision can share what everyone wants. The Romans used the story of Proserpine to explain the cycle of the seasons.</p>
+  </div>
+  <p style="font-size:12px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;color:var(--text3);margin:.875rem 0 .5rem;">🧠 Mini Quiz</p>
+  <div class="mini-quiz-q"><div class="mq-text">A. To &#x27;give in&#x27; means...</div><div class="mq-opts"><button class="mq-opt" onclick="mq(this,'correct')">to stop arguing and agree</button>
+<button class="mq-opt" onclick="mq(this,'wrong')">to give a present</button>
+<button class="mq-opt" onclick="mq(this,'wrong')">to go inside</button></div></div><div class="mini-quiz-q"><div class="mq-text">B. When Ceres &#x27;rejoices&#x27;, she is...</div><div class="mq-opts"><button class="mq-opt" onclick="mq(this,'wrong')">very sad</button>
+<button class="mq-opt" onclick="mq(this,'correct')">very happy</button>
+<button class="mq-opt" onclick="mq(this,'wrong')">very angry</button></div></div><div class="mini-quiz-q"><div class="mq-text">C. In the myth, why is there winter?</div><div class="mq-opts"><button class="mq-opt" onclick="mq(this,'wrong')">Pluto brings ice</button>
+<button class="mq-opt" onclick="mq(this,'correct')">Ceres mourns while her daughter is away</button>
+<button class="mq-opt" onclick="mq(this,'wrong')">Jupiter is angry</button></div></div>
+  <div class="lesson-nav">
+    <a class="nav-btn" href="ch28-b.html"><i class="ti ti-arrow-left"></i> Lesson 28B</a>
+    <a class="nav-btn primary" href="ch28-d.html">Next: Lesson 28D — Roads Across Italy <i class="ti ti-arrow-right"></i></a>
+  </div>
+</section>
+</main>
+<footer class="site-footer"><strong>Lexilink Ideation IELTS STUDIO</strong> · History ESL Course · Chapter 28 — Lesson C</footer>
+<script>
+function toggleVocab(card){card.classList.toggle('open');}
+function mcq(btn,type){
+  const item=btn.closest('.q-item');
+  item.querySelectorAll('.q-opt').forEach(b=>{b.classList.remove('correct','wrong');b.disabled=true;});
+  btn.classList.add(type);
+  const fb=item.querySelector('.q-feedback');
+  fb.className='q-feedback show '+(type==='correct'?'good':'bad');
+  fb.textContent=type==='correct'?'✓ Correct! Well done!':'✗ Not quite. Try to remember the story.';
+}
+function tf(btn,type,msg){
+  const item=btn.closest('.q-item');
+  item.querySelectorAll('.tf-btn').forEach(b=>{b.classList.remove('correct','wrong');b.disabled=true;});
+  btn.classList.add(type);
+  const fb=item.querySelector('.q-feedback');
+  fb.className='q-feedback show '+(type==='correct'?'good':'bad');
+  fb.textContent=(type==='correct'?'✓ ':'✗ ')+msg;
+}
+function mq(btn,type){
+  const item=btn.closest('.mini-quiz-q');
+  item.querySelectorAll('.mq-opt').forEach(b=>{b.classList.remove('correct','wrong');b.disabled=true;});
+  btn.classList.add(type);
+}
+function checkUnscramble(id,answer,rid){
+  const val=document.getElementById(id).value.trim().toLowerCase().replace(/[^a-z\s]/g,'');
+  const ans=answer.toLowerCase();
+  const r=document.getElementById(rid);
+  r.className='sb-result show '+(val===ans?'ok':'no');
+  r.textContent=val===ans?'✓ Perfect! "'+answer+'"':'✗ Try again. Check the word order.';
+}
+function checkFill(id,answer,rid){
+  const val=document.getElementById(id).value.trim().toLowerCase();
+  const r=document.getElementById(rid);
+  r.className='sb-result show '+(val===answer?'ok':'no');
+  r.textContent=val===answer?'✓ Correct!':'✗ The answer is: "'+answer+'"';
+}
+function revealFill(rid,answer){const r=document.getElementById(rid);r.className='sb-result show ok';r.textContent='Model answer: "'+answer+'"';}
+function scrollTo(id){document.getElementById(id).scrollIntoView({behavior:'smooth',block:'start'});}
+const parts=['p1','p2','p3','p4','p5','p6','p7','p8','p9','p10'];
+const partEls=document.querySelectorAll('.lp-part');
+window.addEventListener('scroll',()=>{
+  let current=0;
+  parts.forEach((id,i)=>{const el=document.getElementById(id);if(el&&el.getBoundingClientRect().top<200)current=i;});
+  partEls.forEach((el,i)=>{el.classList.remove('active','done');if(i<current)el.classList.add('done');else if(i===current)el.classList.add('active');});
+  const pct=Math.round(((current+1)/10)*100);
+  document.querySelector('.lp-fill').style.width=pct+'%';
+});
+</script>
+</body>
+</html>

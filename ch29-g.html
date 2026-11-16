@@ -1,0 +1,573 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+<title>Lesson 29G — The Fall of Carthage + Chapter Review | Lexilink History Workshop</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"/>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet"/>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@latest/tabler-icons.min.css"/>
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
+:root{
+  --bg:#0F0800;--surface:rgba(255,255,255,0.04);--surface2:rgba(255,255,255,0.07);
+  --border:rgba(255,255,255,0.10);--border2:rgba(255,255,255,0.06);
+  --amber-300:#E8A832;--amber-400:#D4890F;--amber-500:#B8720A;
+  --amber-bg:rgba(212,137,15,0.12);--amber-border:rgba(212,137,15,0.3);
+  --text:#fff;--text2:rgba(255,255,255,0.72);--text3:rgba(255,255,255,0.45);
+  --teal:#1D9E75;--teal-bg:rgba(29,158,117,0.12);--teal-border:rgba(29,158,117,0.3);
+  --coral:#E05C3A;--coral-bg:rgba(224,92,58,0.12);
+  --blue:#4A9EE0;--blue-bg:rgba(74,158,224,0.12);
+  --r:12px;--r-sm:8px;
+}
+html{scroll-behavior:smooth;}
+body{font-family:'Inter',sans-serif;background:var(--bg);color:var(--text);min-height:100vh;line-height:1.6;}
+.site-header{background:#111;border-bottom:1px solid rgba(255,255,255,0.08);position:sticky;top:0;z-index:100;}
+.hdr{max-width:860px;margin:0 auto;padding:0 1.5rem;height:54px;display:flex;align-items:center;gap:12px;}
+.logo-wrap{display:flex;align-items:center;gap:8px;text-decoration:none;}
+.logo-icon{width:30px;height:30px;display:flex;align-items:center;justify-content:center;}
+.logo-icon svg{width:26px;height:26px;}
+.logo-name{font-size:13px;font-weight:700;color:#fff;}
+.hdr-pipe{width:1px;height:20px;background:rgba(255,255,255,0.15);}
+.hdr-back{display:flex;align-items:center;gap:5px;font-size:12px;color:var(--text3);text-decoration:none;transition:color .15s;}
+.hdr-back:hover{color:var(--text2);}
+.hdr-spacer{flex:1;}
+.hdr-badge{font-size:10px;font-weight:700;letter-spacing:.05em;padding:3px 10px;border-radius:99px;border:1px solid var(--amber-border);color:var(--amber-300);background:var(--amber-bg);}
+.lesson-hero{background:linear-gradient(135deg,#00251F 0%,#00403A 40%,#006156 100%);padding:3rem 1.5rem 2.5rem;text-align:center;position:relative;overflow:hidden;}
+.lesson-hero::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse 70% 60% at 50% 50%,rgba(200,130,0,0.15),transparent);pointer-events:none;}
+.lesson-eyebrow{font-size:10px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--amber-300);margin-bottom:.75rem;}
+.lesson-hero h1{font-size:clamp(22px,4vw,36px);font-weight:700;color:#fff;letter-spacing:-.02em;margin-bottom:.5rem;}
+.lesson-hero p{font-size:14px;color:rgba(255,255,255,0.65);max-width:520px;margin:0 auto .875rem;}
+.lesson-pills{display:flex;flex-wrap:wrap;justify-content:center;gap:8px;}
+.l-pill{font-size:11px;font-weight:500;padding:4px 12px;border-radius:99px;border:1px solid rgba(255,255,255,0.18);color:rgba(255,255,255,0.75);background:rgba(255,255,255,0.06);}
+.lesson-progress{background:#1A1100;border-bottom:1px solid rgba(255,255,255,0.06);padding:.75rem 1.5rem;}
+.lp-inner{max-width:860px;margin:0 auto;}
+.lp-labels{display:flex;justify-content:space-between;font-size:11px;color:var(--text3);margin-bottom:6px;}
+.lp-track{height:4px;border-radius:99px;background:rgba(255,255,255,0.08);}
+.lp-fill{height:100%;border-radius:99px;background:linear-gradient(90deg,var(--amber-500),var(--amber-300));width:10%;}
+.lp-parts{display:flex;gap:4px;margin-top:8px;flex-wrap:wrap;}
+.lp-part{font-size:10px;font-weight:600;padding:2px 8px;border-radius:99px;background:rgba(255,255,255,0.06);color:var(--text3);cursor:pointer;transition:all .15s;}
+.lp-part.done{background:var(--amber-bg);color:var(--amber-300);border:1px solid var(--amber-border);}
+.lp-part.active{background:var(--amber-400);color:#1A0800;}
+.main{max-width:860px;margin:0 auto;padding:2rem 1.5rem 5rem;}
+.sec{background:var(--surface);border:1px solid var(--border);border-radius:var(--r);padding:1.5rem;margin-bottom:1.5rem;scroll-margin-top:80px;}
+.sec-header{display:flex;align-items:center;gap:10px;margin-bottom:1.25rem;}
+.sec-num{width:28px;height:28px;border-radius:8px;display:flex;align-items:center;justify-content:center;font-size:11px;font-weight:700;background:var(--amber-bg);color:var(--amber-300);border:1px solid var(--amber-border);flex-shrink:0;}
+.sec-title{font-size:16px;font-weight:700;color:#fff;}
+.sec-sub{font-size:12px;color:var(--text3);margin-top:1px;}
+.vocab-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(240px,1fr));gap:10px;}
+.vocab-card{background:var(--surface2);border:1px solid var(--border2);border-radius:var(--r-sm);padding:1rem;cursor:pointer;transition:border-color .15s;}
+.vocab-card:hover,.vocab-card.open{border-color:var(--amber-border);}
+.vc-top{display:flex;align-items:baseline;gap:8px;}
+.vc-word{font-size:16px;font-weight:700;color:#fff;}
+.vc-pos{font-size:10px;font-weight:600;padding:1px 7px;border-radius:99px;background:var(--amber-bg);color:var(--amber-300);}
+.vc-pron{font-size:12px;color:var(--text3);margin-top:2px;font-style:italic;}
+.vc-cn{font-size:15px;color:var(--amber-300);margin-top:4px;font-weight:600;}
+.vc-detail{display:none;margin-top:10px;padding-top:10px;border-top:1px solid var(--border2);}
+.vocab-card.open .vc-detail{display:block;}
+.vc-def{font-size:13px;color:var(--text2);margin-bottom:6px;}
+.vc-ex{font-size:12px;color:var(--text3);font-style:italic;padding-left:8px;border-left:2px solid var(--amber-border);}
+.story-body p{font-size:15px;color:var(--text2);line-height:1.8;margin-bottom:1rem;}
+.story-body p:last-child{margin-bottom:0;}
+.story-hl{color:var(--amber-300);font-weight:600;}
+.story-box{background:var(--amber-bg);border:1px solid var(--amber-border);border-radius:var(--r-sm);padding:1rem 1.25rem;margin:1.25rem 0;font-size:14px;color:rgba(255,255,255,0.85);line-height:1.7;font-style:italic;}
+.story-box::before{content:'"';font-size:32px;color:var(--amber-400);line-height:1;display:block;margin-bottom:.25rem;}
+.story-icon{font-size:40px;text-align:center;margin:1rem 0;}
+.quiz-list{display:flex;flex-direction:column;gap:14px;}
+.q-item{background:var(--surface2);border:1px solid var(--border2);border-radius:var(--r-sm);padding:1rem 1.25rem;}
+.q-text{font-size:14px;font-weight:600;color:#fff;margin-bottom:.75rem;}
+.q-opts{display:flex;flex-direction:column;gap:6px;}
+.q-opt{display:flex;align-items:center;gap:10px;padding:8px 12px;border-radius:8px;border:1px solid var(--border);background:transparent;cursor:pointer;font-size:13px;color:var(--text2);width:100%;text-align:left;transition:all .15s;}
+.q-opt:hover{border-color:var(--amber-border);background:var(--amber-bg);}
+.q-opt.correct{border-color:var(--teal-border);background:var(--teal-bg);color:#fff;}
+.q-opt.wrong{border-color:rgba(224,92,58,0.4);background:var(--coral-bg);color:#fff;}
+.q-feedback{font-size:12px;margin-top:8px;padding:6px 10px;border-radius:6px;display:none;}
+.q-feedback.show{display:block;}
+.q-feedback.good{background:var(--teal-bg);color:#5DCAA5;}
+.q-feedback.bad{background:var(--coral-bg);color:#F09B80;}
+.tf-opts{display:flex;gap:8px;}
+.tf-btn{flex:1;padding:8px;border-radius:8px;border:1px solid var(--border);background:transparent;cursor:pointer;font-size:13px;font-weight:600;color:var(--text2);transition:all .15s;}
+.tf-btn:hover{border-color:var(--amber-border);background:var(--amber-bg);}
+.tf-btn.correct{border-color:var(--teal-border);background:var(--teal-bg);color:#fff;}
+.tf-btn.wrong{border-color:rgba(224,92,58,0.4);background:var(--coral-bg);color:#fff;}
+.grammar-box{background:var(--surface2);border-left:3px solid var(--amber-400);border-radius:0 var(--r-sm) var(--r-sm) 0;padding:1rem 1.25rem;margin-bottom:1rem;}
+.grammar-label{font-size:10px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--amber-300);margin-bottom:.5rem;}
+.grammar-rule{font-size:14px;color:#fff;font-weight:600;margin-bottom:.5rem;}
+.grammar-eg{font-size:13px;color:var(--text2);margin-top:.25rem;font-style:italic;}
+.grammar-eg span{color:var(--amber-300);font-weight:600;font-style:normal;}
+.grammar-table{width:100%;border-collapse:collapse;font-size:13px;margin-top:.75rem;}
+.grammar-table th{text-align:left;padding:6px 10px;font-size:10px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;color:var(--text3);border-bottom:1px solid var(--border);}
+.grammar-table td{padding:7px 10px;color:var(--text2);border-bottom:1px solid var(--border2);}
+.grammar-table td:first-child{color:#fff;font-weight:500;}
+.hl{color:var(--amber-300);font-weight:600;}
+.sb-activity{margin-bottom:1.25rem;}
+.sb-label{font-size:11px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;color:var(--amber-300);margin-bottom:.75rem;}
+.sb-input{width:100%;background:var(--surface2);border:1px solid var(--border);border-radius:var(--r-sm);padding:.625rem .875rem;font-size:14px;color:#fff;font-family:'Inter',sans-serif;transition:border-color .15s;outline:none;margin-bottom:.5rem;}
+.sb-input:focus{border-color:var(--amber-border);}
+.sb-check{padding:7px 18px;border-radius:99px;background:var(--amber-400);color:#1A0800;font-size:13px;font-weight:700;border:none;cursor:pointer;transition:opacity .15s;}
+.sb-check:hover{opacity:.85;}
+.sb-result{font-size:12px;margin-top:6px;padding:6px 10px;border-radius:6px;display:none;}
+.sb-result.show{display:block;}
+.sb-result.ok{background:var(--teal-bg);color:#5DCAA5;}
+.sb-result.no{background:var(--coral-bg);color:#F09B80;}
+.speak-level{margin-bottom:1.25rem;}
+.speak-badge{display:inline-flex;align-items:center;gap:6px;font-size:11px;font-weight:700;padding:3px 12px;border-radius:99px;margin-bottom:.875rem;}
+.speak-badge.l1{background:var(--teal-bg);color:#5DCAA5;border:1px solid var(--teal-border);}
+.speak-badge.l2{background:var(--amber-bg);color:var(--amber-300);border:1px solid var(--amber-border);}
+.speak-badge.l3{background:var(--blue-bg);color:var(--blue);border:1px solid rgba(74,158,224,0.3);}
+.speak-q{background:var(--surface2);border:1px solid var(--border2);border-radius:var(--r-sm);padding:1rem 1.25rem;margin-bottom:.75rem;}
+.speak-q p{font-size:14px;font-weight:600;color:#fff;margin-bottom:.5rem;}
+.speak-hint{font-size:12px;color:var(--text3);}
+.speak-hint span{color:var(--amber-300);}
+.idea-q{background:var(--surface2);border:1px solid var(--border2);border-radius:var(--r-sm);padding:1rem 1.25rem;margin-bottom:.75rem;display:flex;gap:10px;}
+.idea-icon{font-size:20px;flex-shrink:0;margin-top:2px;}
+.idea-text{font-size:14px;color:var(--text2);line-height:1.6;}
+.idea-text strong{color:#fff;}
+.ielts-topic{background:var(--blue-bg);border:1px solid rgba(74,158,224,0.25);border-radius:var(--r-sm);padding:1rem 1.25rem;margin-bottom:1.25rem;}
+.ielts-topic-label{font-size:10px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--blue);margin-bottom:.25rem;}
+.ielts-topic h4{font-size:16px;font-weight:700;color:#fff;}
+.vocab-chips{display:flex;flex-wrap:wrap;gap:6px;margin-top:.75rem;}
+.chip{font-size:12px;padding:4px 12px;border-radius:99px;background:rgba(255,255,255,0.06);border:1px solid var(--border);color:var(--text2);}
+.chip.amber{background:var(--amber-bg);border-color:var(--amber-border);color:var(--amber-300);}
+.ielts-qs{display:flex;flex-direction:column;gap:8px;margin-top:1rem;}
+.ielts-q{display:flex;gap:10px;background:var(--surface2);border-radius:var(--r-sm);padding:.875rem 1rem;}
+.ielts-q-num{font-size:11px;font-weight:700;color:var(--blue);min-width:20px;}
+.ielts-q-text{font-size:13px;color:var(--text2);}
+.ielts-w2{background:rgba(74,158,224,0.08);border:1px solid rgba(74,158,224,0.2);border-radius:var(--r-sm);padding:1rem 1.25rem;margin-top:1rem;}
+.ielts-w2-label{font-size:10px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--blue);margin-bottom:.5rem;}
+.ielts-w2 p{font-size:14px;color:var(--text2);line-height:1.7;font-style:italic;}
+.star-words{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:1.25rem;}
+.star-word{display:flex;align-items:center;gap:6px;padding:6px 14px;border-radius:99px;background:var(--amber-bg);border:1px solid var(--amber-border);font-size:13px;font-weight:600;color:var(--amber-300);}
+.think-box{background:var(--surface2);border:1px solid var(--border2);border-radius:var(--r-sm);padding:1rem 1.25rem;margin-bottom:1rem;}
+.think-box .think-head{font-size:12px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;color:var(--amber-300);margin-bottom:.5rem;}
+.think-box p{font-size:14px;color:var(--text2);}
+.mini-quiz-q{background:var(--surface2);border:1px solid var(--border2);border-radius:var(--r-sm);padding:1rem;margin-bottom:.75rem;}
+.mq-text{font-size:13px;font-weight:600;color:#fff;margin-bottom:.625rem;}
+.mq-opts{display:flex;flex-direction:column;gap:5px;}
+.mq-opt{padding:7px 12px;border-radius:6px;border:1px solid var(--border);background:transparent;font-size:12px;color:var(--text2);cursor:pointer;text-align:left;transition:all .15s;}
+.mq-opt:hover{border-color:var(--amber-border);background:var(--amber-bg);}
+.mq-opt.correct{border-color:var(--teal-border);background:var(--teal-bg);color:#fff;}
+.mq-opt.wrong{border-color:rgba(224,92,58,0.4);background:var(--coral-bg);color:#fff;}
+.lesson-nav{display:flex;gap:10px;margin-top:2rem;}
+.nav-btn{display:flex;align-items:center;gap:6px;padding:.75rem 1.25rem;border-radius:10px;font-size:13px;font-weight:600;cursor:pointer;text-decoration:none;border:1px solid var(--border);color:var(--text2);background:var(--surface);transition:all .15s;flex:1;justify-content:center;}
+.nav-btn:hover{border-color:var(--border2);color:#fff;}
+.nav-btn.primary{background:var(--amber-400);color:#1A0800;border-color:transparent;}
+.nav-btn.primary:hover{opacity:.9;}
+.site-footer{background:#111;border-top:1px solid rgba(255,255,255,0.07);text-align:center;padding:1.5rem;font-size:12px;color:rgba(255,255,255,0.3);}
+.site-footer strong{color:var(--amber-300);}
+@media(max-width:600px){.vocab-grid{grid-template-columns:1fr;}.lesson-nav{flex-direction:column;}}
+</style>
+</head>
+<body>
+<header class="site-header">
+  <div class="hdr">
+    <a class="logo-wrap" href="index.html">
+      <div class="logo-icon"><svg viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+          <path d="M6 24 C8 18,14 10,24 6 C20 10,18 14,20 18 C16 16,12 18,6 24Z" fill="white"/>
+          <path d="M20 18 C22 20,22 23,20 26 C18 24,18 21,20 18Z" fill="rgba(255,255,255,0.5)"/>
+        </svg></div>
+      <span class="logo-name">Lexilink Ideation IELTS STUDIO</span>
+    </a>
+    <div class="hdr-pipe"></div>
+    <a class="hdr-back" href="index.html"><i class="ti ti-arrow-left" aria-hidden="true"></i> Vol. 1</a>
+    <div class="hdr-spacer"></div>
+    <span class="hdr-badge">Lesson 29G</span>
+  </div>
+</header>
+<section class="lesson-hero">
+  <p class="lesson-eyebrow">Chapter 29 · Rome&#x27;s War With Carthage</p>
+  <h1>The Fall of Carthage + Chapter Review</h1>
+  <p>How the long Punic Wars ended — and how Rome became master of the Mediterranean</p>
+  <div class="lesson-pills"><span class="l-pill">📖 Story + Vocabulary</span><span class="l-pill">🎤 Speaking</span><span class="l-pill">✏️ Grammar</span><span class="l-pill">⭐ CEFR A2–B1</span></div>
+</section>
+<div class="lesson-progress">
+  <div class="lp-inner">
+    <div class="lp-labels"><span>Lesson 29G of 7</span><span style="color:var(--amber-300)">Part 1 of 10</span></div>
+    <div class="lp-track"><div class="lp-fill"></div></div>
+    <div class="lp-parts">
+      <span class="lp-part active" onclick="scrollTo('p1')">1 Vocab</span>
+      <span class="lp-part" onclick="scrollTo('p2')">2 Story</span>
+      <span class="lp-part" onclick="scrollTo('p3')">3 Reading</span>
+      <span class="lp-part" onclick="scrollTo('p4')">4 Grammar</span>
+      <span class="lp-part" onclick="scrollTo('p5')">5 Builder</span>
+      <span class="lp-part" onclick="scrollTo('p6')">6 Speaking 1</span>
+      <span class="lp-part" onclick="scrollTo('p7')">7 Speaking 2</span>
+      <span class="lp-part" onclick="scrollTo('p8')">8 Ideas</span>
+      <span class="lp-part" onclick="scrollTo('p9')">9 IELTS</span>
+      <span class="lp-part" onclick="scrollTo('p10')">10 Review</span>
+    </div>
+  </div>
+</div>
+
+<main class="main">
+<section class="sec" id="p1">
+  <div class="sec-header">
+    <div class="sec-num">1</div>
+    <div><div class="sec-title">Vocabulary</div><div class="sec-sub">Click each word to learn more</div></div>
+  </div>
+  <div class="vocab-grid"><div class="vocab-card" onclick="toggleVocab(this)">
+      <div class="vc-top"><span class="vc-word">surrender</span><span class="vc-pos">verb</span></div>
+      <div class="vc-pron">/səˈren.dər/</div>
+      <div class="vc-cn">投降</div>
+      <div class="vc-detail">
+        <div class="vc-def">To stop fighting and admit that the enemy has won.</div>
+        <div class="vc-ex">"The city of Carthage was forced to surrender to Rome."</div>
+      </div>
+    </div><div class="vocab-card" onclick="toggleVocab(this)">
+      <div class="vc-top"><span class="vc-word">forced</span><span class="vc-pos">adjective</span></div>
+      <div class="vc-pron">/fɔːst/</div>
+      <div class="vc-cn">被迫的</div>
+      <div class="vc-detail">
+        <div class="vc-def">Made to do something you do not want to do.</div>
+        <div class="vc-ex">"Carthage was forced to give up its ships."</div>
+      </div>
+    </div><div class="vocab-card" onclick="toggleVocab(this)">
+      <div class="vc-top"><span class="vc-word">news</span><span class="vc-pos">noun</span></div>
+      <div class="vc-pron">/njuːz/</div>
+      <div class="vc-cn">消息</div>
+      <div class="vc-detail">
+        <div class="vc-def">New information about something that has just happened.</div>
+        <div class="vc-ex">"Hannibal heard the news in Asia Minor."</div>
+      </div>
+    </div><div class="vocab-card" onclick="toggleVocab(this)">
+      <div class="vc-top"><span class="vc-word">bear</span><span class="vc-pos">verb</span></div>
+      <div class="vc-pron">/beər/</div>
+      <div class="vc-cn">忍受</div>
+      <div class="vc-detail">
+        <div class="vc-def">To accept something sad or painful.</div>
+        <div class="vc-ex">"He could not bear to think that his city had been beaten."</div>
+      </div>
+    </div><div class="vocab-card" onclick="toggleVocab(this)">
+      <div class="vc-top"><span class="vc-word">pride</span><span class="vc-pos">noun</span></div>
+      <div class="vc-pron">/praɪd/</div>
+      <div class="vc-cn">自豪；骄傲</div>
+      <div class="vc-detail">
+        <div class="vc-def">A strong feeling that you or your people are important and good.</div>
+        <div class="vc-ex">"Carthage had been the pride of the Phoenicians."</div>
+      </div>
+    </div><div class="vocab-card" onclick="toggleVocab(this)">
+      <div class="vc-top"><span class="vc-word">century</span><span class="vc-pos">noun</span></div>
+      <div class="vc-pron">/ˈsen.tʃər.i/</div>
+      <div class="vc-cn">世纪；一百年</div>
+      <div class="vc-detail">
+        <div class="vc-def">A period of one hundred years.</div>
+        <div class="vc-ex">"The Punic Wars lasted for more than a century."</div>
+      </div>
+    </div><div class="vocab-card" onclick="toggleVocab(this)">
+      <div class="vc-top"><span class="vc-word">rival</span><span class="vc-pos">noun</span></div>
+      <div class="vc-pron">/ˈraɪ.vəl/</div>
+      <div class="vc-cn">对手</div>
+      <div class="vc-detail">
+        <div class="vc-def">A person or group that wants to win the same thing as you.</div>
+        <div class="vc-ex">"Rome had no more rivals in the Mediterranean."</div>
+      </div>
+    </div><div class="vocab-card" onclick="toggleVocab(this)">
+      <div class="vc-top"><span class="vc-word">master</span><span class="vc-pos">noun</span></div>
+      <div class="vc-pron">/ˈmɑː.stər/</div>
+      <div class="vc-cn">主宰者；主人</div>
+      <div class="vc-detail">
+        <div class="vc-def">The person or group that controls something.</div>
+        <div class="vc-ex">"Rome became the master of the Mediterranean Sea."</div>
+      </div>
+    </div><div class="vocab-card" onclick="toggleVocab(this)">
+      <div class="vc-top"><span class="vc-word">destroy</span><span class="vc-pos">verb</span></div>
+      <div class="vc-pron">/dɪˈstrɔɪ/</div>
+      <div class="vc-cn">摧毁</div>
+      <div class="vc-detail">
+        <div class="vc-def">To damage something so badly that it cannot be used.</div>
+        <div class="vc-ex">"In 146 BC, the Romans destroyed the city of Carthage."</div>
+      </div>
+    </div><div class="vocab-card" onclick="toggleVocab(this)">
+      <div class="vc-top"><span class="vc-word">powerful</span><span class="vc-pos">adjective</span></div>
+      <div class="vc-pron">/ˈpaʊə.fəl/</div>
+      <div class="vc-cn">强大的</div>
+      <div class="vc-detail">
+        <div class="vc-def">Very strong; having a lot of control.</div>
+        <div class="vc-ex">"Rome was now the most powerful city in the western world."</div>
+      </div>
+    </div></div>
+</section>
+<section class="sec" id="p2">
+  <div class="sec-header">
+    <div class="sec-num">2</div>
+    <div><div class="sec-title">The Story</div><div class="sec-sub">Read carefully. Notice the bold words.</div></div>
+  </div>
+  <div class="story-body"><div class="story-icon">🏳️</div>
+<p>🛡️ After Scipio defeated Hannibal&#x27;s tired army in Africa, Carthage had no strong soldiers left. The great city could not fight any longer. The leaders of Carthage were <span class="story-hl">forced</span> to <span class="story-hl">surrender</span> to Rome. To surrender means to stop fighting and say, &quot;You have won.&quot;</p>
+<p>📜 Rome made Carthage pay a heavy price. Carthage had to give the Romans large amounts of money. It had to give up most of its warships. And it promised never to start a war again without Rome&#x27;s permission. The proud trading city, which the Phoenicians had built long ago, had lost its <span class="story-hl">pride</span>.</p>
+<p>🌅 Far away in Asia Minor, Hannibal was still hiding. One day, the <span class="story-hl">news</span> reached him: Carthage had surrendered to Rome. Hannibal was heartbroken. He had crossed the Alps with elephants. He had won battle after battle in Italy. Now his city belonged to his enemies.</p>
+<div class="story-box">Hannibal could not bear to think that his great city had been beaten by Rome.</div>
+<p>💔 Hannibal could not <span class="story-hl">bear</span> this sad news. He did not want to live as a prisoner of the Romans. So, at the end of his life, the great general took poison. This was a sad end for one of the most famous generals in history. Even the Romans, who feared him, remembered his name for hundreds of years.</p>
+<p>⏳ The Punic Wars were very, very long. The <span class="story-hl">First Punic War</span> was fought from 264 to 241 BC. The <span class="story-hl">Second Punic War</span>, the war of Hannibal and his elephants, was fought from 218 to 202 BC. Later there was a third war. Finally, in 146 BC, the Romans <span class="story-hl">destroyed</span> the city of Carthage. The fighting had lasted for more than a <span class="story-hl">century</span> — over one hundred years!</p>
+<p>🌊 Now Rome had no more <span class="story-hl">rivals</span> in the western Mediterranean. Roman ships could sail anywhere. Roman traders could buy and sell in every port. Rome had become the <span class="story-hl">master</span> of the Mediterranean Sea.</p>
+<p>🔁 Think back over this whole chapter. Rome and Carthage both wanted more land and more trade. At first, Carthage was stronger at sea. But the Romans copied a wrecked ship and built a navy. A Roman general threw sacred chickens into the sea and lost a battle. Then Hannibal surprised Rome with elephants in the snow of the Alps. Finally, Scipio&#x27;s clever plan brought Hannibal home, and Rome won.</p>
+<p>🏛️ Rome had started as a tiny village in the hills. Now it was the most <span class="story-hl">powerful</span> city in the western world. And Rome was not finished growing yet!</p>
+<div class="story-icon">🏛️</div></div>
+</section>
+<section class="sec" id="p3">
+  <div class="sec-header">
+    <div class="sec-num">3</div>
+    <div><div class="sec-title">Reading Comprehension</div><div class="sec-sub">Choose the best answer. Get instant feedback!</div></div>
+  </div>
+  <div class="quiz-list">
+    <div class="q-item">
+      <div class="q-text">1. What does &#x27;surrender&#x27; mean?</div>
+      <div class="q-opts"><button class="q-opt" onclick="mcq(this,'correct')">To stop fighting and admit the enemy has won</button>
+<button class="q-opt" onclick="mcq(this,'wrong')">To build more ships</button>
+<button class="q-opt" onclick="mcq(this,'wrong')">To make a new plan</button></div>
+      <div class="q-feedback"></div>
+    </div>
+    <div class="q-item">
+      <div class="q-text">2. True or False? After the war, Carthage had to give up most of its warships.</div>
+      <div class="q-opts" style="display:flex;gap:8px;"><button class="tf-btn" onclick="tf(this,'correct','Yes — Rome made Carthage pay money and give up its warships.')">True</button>
+<button class="tf-btn" onclick="tf(this,'wrong','Yes — Rome made Carthage pay money and give up its warships.')">False</button></div>
+      <div class="q-feedback"></div>
+    </div>
+    <div class="q-item">
+      <div class="q-text">3. Where was Hannibal when he heard the news?</div>
+      <div class="q-opts"><button class="q-opt" onclick="mcq(this,'wrong')">In Rome</button>
+<button class="q-opt" onclick="mcq(this,'correct')">In Asia Minor</button>
+<button class="q-opt" onclick="mcq(this,'wrong')">In the Alps</button></div>
+      <div class="q-feedback"></div>
+    </div>
+    <div class="q-item">
+      <div class="q-text">4. When did the Punic Wars finally end?</div>
+      <div class="q-opts"><button class="q-opt" onclick="mcq(this,'wrong')">218 BC</button>
+<button class="q-opt" onclick="mcq(this,'wrong')">241 BC</button>
+<button class="q-opt" onclick="mcq(this,'correct')">146 BC</button></div>
+      <div class="q-feedback"></div>
+    </div>
+    <div class="q-item">
+      <div class="q-text">5. True or False? The Punic Wars lasted less than ten years.</div>
+      <div class="q-opts" style="display:flex;gap:8px;"><button class="tf-btn" onclick="tf(this,'wrong','They lasted more than a century — from 264 BC to 146 BC.')">True</button>
+<button class="tf-btn" onclick="tf(this,'correct','They lasted more than a century — from 264 BC to 146 BC.')">False</button></div>
+      <div class="q-feedback"></div>
+    </div>
+    <div class="q-item">
+      <div class="q-text">6. What did Rome become after the Punic Wars?</div>
+      <div class="q-opts"><button class="q-opt" onclick="mcq(this,'wrong')">A small village again</button>
+<button class="q-opt" onclick="mcq(this,'correct')">The master of the Mediterranean</button>
+<button class="q-opt" onclick="mcq(this,'wrong')">A part of Carthage</button></div>
+      <div class="q-feedback"></div>
+    </div>
+  </div>
+</section>
+<section class="sec" id="p4">
+  <div class="sec-header">
+    <div class="sec-num">4</div>
+    <div><div class="sec-title">Language Focus</div><div class="sec-sub">Grammar from the story — learn through meaning</div></div>
+  </div>
+<div class="grammar-box">
+    <div class="grammar-label">📌 Passive with &#x27;was forced to&#x27;</div>
+    <div class="grammar-rule">Use &#x27;was/were forced to&#x27; + verb when someone had to do something they did not want to do.</div>
+    <div class="grammar-eg">Carthage <span>was forced to</span> surrender.</div>
+<div class="grammar-eg">The city <span>was forced to</span> give up its ships.</div>
+<div class="grammar-eg">Hannibal <span>was forced to</span> leave Italy.</div>
+<div class="grammar-note" style="font-size:12px;color:var(--text3);margin-top:.5rem;">💡 Tip: &#x27;Forced to&#x27; is stronger than &#x27;had to&#x27; — there was no choice at all.</div>
+  </div>
+<div class="grammar-box">
+    <div class="grammar-label">📌 Dates and periods: from ... to ..., for ...</div>
+    <div class="grammar-rule">Use &#x27;from ... to ...&#x27; for start and end dates, and &#x27;for&#x27; for the length of time.</div>
+    <div class="grammar-eg">The First Punic War was fought <span>from</span> 264 <span>to</span> 241 BC.</div>
+<div class="grammar-eg">The Second Punic War lasted <span>from</span> 218 <span>to</span> 202 BC.</div>
+<div class="grammar-eg">The fighting lasted <span>for</span> more than a century.</div>
+<div class="grammar-note" style="font-size:12px;color:var(--text3);margin-top:.5rem;">💡 Tip: With BC dates, the numbers get smaller as time goes forward.</div>
+  </div>
+<div class="grammar-box">
+    <div class="grammar-label">📌 Past perfect for looking back</div>
+    <div class="grammar-rule">Use &#x27;had + past participle&#x27; when looking back at earlier events in a story.</div>
+    <div class="grammar-eg">Hannibal <span>had crossed</span> the Alps with elephants.</div>
+<div class="grammar-eg">He <span>had won</span> battle after battle in Italy.</div>
+<div class="grammar-eg">Rome <span>had started</span> as a tiny village.</div>
+<div class="grammar-note" style="font-size:12px;color:var(--text3);margin-top:.5rem;">💡 Tip: Use it to remind your listener of what happened earlier.</div>
+  </div>
+
+</section>
+<section class="sec" id="p5">
+  <div class="sec-header">
+    <div class="sec-num">5</div>
+    <div><div class="sec-title">Sentence Builder</div><div class="sec-sub">Build your skills with the vocabulary</div></div>
+  </div>
+<div class="sb-activity">
+    <div class="sb-label">✏️ Fill in the blank</div>
+    <p style="font-size:13px;color:var(--text2);margin-bottom:.5rem;">1. The city of Carthage was forced to ________ to Rome.</p>
+    <input class="sb-input" id="f1g" placeholder="Your answer..."/>
+    <button class="sb-check" onclick="checkFill('f1g','surrender','rf1g')">Check ✓</button>
+    <div class="sb-result" id="rf1g"></div>
+  </div>
+<div class="sb-activity">
+    <div class="sb-label">✏️ Fill in the blank</div>
+    <p style="font-size:13px;color:var(--text2);margin-bottom:.5rem;">2. After the Punic Wars, Rome became the ________ of the Mediterranean Sea.</p>
+    <input class="sb-input" id="f2g" placeholder="Your answer..."/>
+    <button class="sb-check" onclick="checkFill('f2g','master','rf2g')">Check ✓</button>
+    <div class="sb-result" id="rf2g"></div>
+  </div>
+<div class="sb-activity">
+    <div class="sb-label">🔀 Unscramble the sentence</div>
+    <p style="font-size:13px;color:var(--text3);margin-bottom:.75rem;">Put these words in the correct order:</p>
+    <div style="margin-bottom:.75rem;"><span style="padding:5px 10px;border-radius:99px;background:var(--surface2);border:1px solid var(--border);font-size:13px;color:var(--text2);display:inline-block;margin:3px;">lasted</span><span style="padding:5px 10px;border-radius:99px;background:var(--surface2);border:1px solid var(--border);font-size:13px;color:var(--text2);display:inline-block;margin:3px;">the</span><span style="padding:5px 10px;border-radius:99px;background:var(--surface2);border:1px solid var(--border);font-size:13px;color:var(--text2);display:inline-block;margin:3px;">for</span><span style="padding:5px 10px;border-radius:99px;background:var(--surface2);border:1px solid var(--border);font-size:13px;color:var(--text2);display:inline-block;margin:3px;">century</span><span style="padding:5px 10px;border-radius:99px;background:var(--surface2);border:1px solid var(--border);font-size:13px;color:var(--text2);display:inline-block;margin:3px;">wars</span><span style="padding:5px 10px;border-radius:99px;background:var(--surface2);border:1px solid var(--border);font-size:13px;color:var(--text2);display:inline-block;margin:3px;">more</span><span style="padding:5px 10px;border-radius:99px;background:var(--surface2);border:1px solid var(--border);font-size:13px;color:var(--text2);display:inline-block;margin:3px;">than</span><span style="padding:5px 10px;border-radius:99px;background:var(--surface2);border:1px solid var(--border);font-size:13px;color:var(--text2);display:inline-block;margin:3px;">a</span></div>
+    <input class="sb-input" id="us1g" placeholder="Type your sentence here..."/>
+    <button class="sb-check" onclick="checkUnscramble('us1g','the wars lasted for more than a century','ur1g')">Check ✓</button>
+    <div class="sb-result" id="ur1g"></div>
+  </div>
+<div class="sb-activity">
+    <div class="sb-label">🌏 Translate into English</div>
+    <p style="font-size:15px;color:var(--amber-300);margin-bottom:.5rem;">罗马在地中海再也没有对手了。</p>
+    <input class="sb-input" id="tr1g" placeholder="Write your English sentence..."/>
+    <button class="sb-check" onclick="revealFill('rt1g','Rome had no more rivals in the Mediterranean.')">Show model answer</button>
+    <div class="sb-result" id="rt1g"></div>
+  </div>
+
+</section>
+<section class="sec" id="p6">
+  <div class="sec-header">
+    <div class="sec-num">6</div>
+    <div><div class="sec-title">Speaking — Level 1</div><div class="sec-sub">Answer in one complete sentence</div></div>
+  </div>
+  <div class="speak-level">
+    <span class="speak-badge l1">🟢 Level 1 · One sentence</span>
+    <div class="speak-q"><p>What happened to Carthage at the end of the war?</p><div class="speak-hint">💡 Start with: <span>At the end of the war, Carthage...</span></div></div>
+<div class="speak-q"><p>How long did the Punic Wars last?</p><div class="speak-hint">💡 Start with: <span>The Punic Wars lasted...</span></div></div>
+<div class="speak-q"><p>What did Rome become after the wars?</p><div class="speak-hint">💡 Start with: <span>Rome became...</span></div></div>
+  </div>
+</section>
+<section class="sec" id="p7">
+  <div class="sec-header">
+    <div class="sec-num">7</div>
+    <div><div class="sec-title">Speaking — Level 2 &amp; 3</div><div class="sec-sub">Extend your answer. Share your opinion.</div></div>
+  </div>
+  <div class="speak-level">
+    <span class="speak-badge l2">🟡 Level 2 · 2–3 sentences</span>
+    <div class="speak-q"><p>Retell the whole story of Rome and Carthage in four or five sentences.</p><div class="speak-hint">💡 Try: <span>First... Then... After that... Finally...</span></div></div>
+<div class="speak-q"><p>Choose the most important moment in the Punic Wars and explain why you chose it.</p><div class="speak-hint">💡 Try: <span>I think the most important moment was... because...</span></div></div>
+  </div>
+  <div class="speak-level">
+    <span class="speak-badge l3">🔵 Level 3 · Your opinion</span>
+    <div class="speak-q"><p>Who do you think was the greater general: Hannibal or Scipio? Why?</p><div class="speak-hint">💡 Use: <span>I believe... was greater because... But some people might say...</span></div></div>
+  </div>
+</section>
+<section class="sec" id="p8">
+  <div class="sec-header">
+    <div class="sec-num">8</div>
+    <div><div class="sec-title">Ideas &amp; Society</div><div class="sec-sub">Think about big ideas. There is no wrong answer.</div></div>
+  </div>
+<div class="idea-q"><div class="idea-icon">🏳️</div><div class="idea-text"><strong>Winning and losing.</strong> Carthage lost everything after the war. Should winners be kind to the people they defeat? Why?</div></div>
+<div class="idea-q"><div class="idea-icon">💔</div><div class="idea-text"><strong>Remembering the losers.</strong> Hannibal lost the war, but people still remember him 2,000 years later. Why do we remember some people who lost?</div></div>
+<div class="idea-q"><div class="idea-icon">⏳</div><div class="idea-text"><strong>A very long war.</strong> The Punic Wars lasted over a hundred years. How do you think a long war changes ordinary people&#x27;s lives?</div></div>
+<div class="idea-q"><div class="idea-icon">🌊</div><div class="idea-text"><strong>Who controls the sea?</strong> Rome became master of the Mediterranean. Why is controlling the sea important for trade and power?</div></div>
+
+</section>
+<section class="sec" id="p9">
+  <div class="sec-header">
+    <div class="sec-num">9</div>
+    <div><div class="sec-title">IELTS Content Builder</div><div class="sec-sub">Planting seeds for your future IELTS exam</div></div>
+  </div>
+  <div class="ielts-topic">
+    <div class="ielts-topic-label">📘 Today's IELTS Topic</div>
+    <h4>War, Peace, and History</h4>
+  </div>
+  <p style="font-size:12px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;color:var(--text3);margin:.875rem 0 .5rem;">Key vocabulary</p>
+  <div class="vocab-chips"><span class="chip amber">conflict</span><span class="chip amber">victory</span><span class="chip amber">consequence</span><span class="chip amber">legacy</span><span class="chip">dominance</span><span class="chip">rivalry</span><span class="chip">treaty</span><span class="chip">reconciliation</span></div>
+  <p style="font-size:12px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;color:var(--text3);margin:.875rem 0 .5rem;">Useful collocations</p>
+  <div class="vocab-chips"><span class="chip">bring a war to an end</span><span class="chip">sign a peace treaty</span><span class="chip">learn from history</span><span class="chip">pay a heavy price</span></div>
+  <div class="ielts-qs"><div class="ielts-q"><div class="ielts-q-num">S1</div><div class="ielts-q-text">Why is it important to study history?</div></div>
+<div class="ielts-q"><div class="ielts-q-num">S2</div><div class="ielts-q-text">What can people today learn from ancient wars?</div></div>
+<div class="ielts-q"><div class="ielts-q-num">S3</div><div class="ielts-q-text">Do you think countries can be friends after a long war?</div></div>
+</div>
+  <div class="ielts-w2">
+    <div class="ielts-w2-label">✏️ IELTS Writing Task 2 — Future Practice</div>
+    <p>"Some people think studying the history of wars helps prevent future conflicts. Others believe history does not really teach us anything about the present. Discuss both views and give your own opinion."</p>
+  </div>
+</section>
+<section class="sec" id="p10">
+  <div class="sec-header">
+    <div class="sec-num">10</div>
+    <div><div class="sec-title">Chapter 29 Review</div><div class="sec-sub">Celebrate everything you have learned!</div></div>
+  </div>
+  <div style="background:#1A1100;border:1px solid rgba(212,137,15,0.2);border-radius:var(--r-sm);padding:1.25rem;margin-bottom:1.25rem;">
+    <div style="font-size:11px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--amber-300);margin-bottom:.75rem;">📖 Chapter 29 Summary</div>
+    <p style="font-size:14px;color:var(--text2);line-height:1.8;"><strong style="color:#fff">Rome</strong> and <strong style="color:#fff">Carthage</strong> both wanted to control trade around the <strong style="color:#fff">Mediterranean Sea</strong>, so they fought the long <strong style="color:#fff">Punic Wars</strong> from 264 to 146 BC. At first Carthage was stronger because it had a <strong style="color:#fff">navy</strong>, but the Romans copied a wrecked Carthaginian ship and learned to fight at sea. The Roman general <strong style="color:#fff">Claudius Pulcher</strong> threw his seasick <strong style="color:#fff">sacred chickens</strong> overboard and then lost a battle. When the war at sea became a <strong style="color:#fff">stalemate</strong>, the Carthaginian general <strong style="color:#fff">Hannibal</strong> marched his army and forty <strong style="color:#fff">elephants</strong> over the <strong style="color:#fff">Alps</strong> and invaded Italy in 218 BC. The Romans were terrified until <strong style="color:#fff">Scipio</strong> sailed to Africa and attacked Carthage itself. Hannibal had to come home, and his worn-out army was defeated. Carthage <strong style="color:#fff">surrendered</strong>, Hannibal took poison in Asia Minor, and Rome became the <strong style="color:#fff">master of the Mediterranean</strong>.</p>
+  </div>
+  <p style="font-size:12px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;color:var(--text3);margin:.875rem 0 .5rem;">⭐ All Chapter 29 Star Words</p>
+  <div class="star-words"><span class="star-word">⭐ take over</span><span class="star-word">⭐ coast</span><span class="star-word">⭐ Phoenicians</span><span class="star-word">⭐ trading ship</span><span class="star-word">⭐ Mediterranean</span><span class="star-word">⭐ get in the way</span><span class="star-word">⭐ interfere</span><span class="star-word">⭐ rival</span><span class="star-word">⭐ Punic Wars</span><span class="star-word">⭐ century</span><span class="star-word">⭐ advantage</span><span class="star-word">⭐ navy</span><span class="star-word">⭐ wreck</span><span class="star-word">⭐ take apart</span><span class="star-word">⭐ figure out</span><span class="star-word">⭐ oar</span><span class="star-word">⭐ match</span><span class="star-word">⭐ tough</span><span class="star-word">⭐ sacrifice</span><span class="star-word">⭐ victory</span><span class="star-word">⭐ general</span><span class="star-word">⭐ sacred</span><span class="star-word">⭐ good fortune</span><span class="star-word">⭐ foretell</span><span class="star-word">⭐ seasick</span><span class="star-word">⭐ sign</span><span class="star-word">⭐ doomed</span><span class="star-word">⭐ irritated</span><span class="star-word">⭐ overboard</span><span class="star-word">⭐ superstition</span><span class="star-word">⭐ camp</span><span class="star-word">⭐ peer</span><span class="star-word">⭐ swirling</span><span class="star-word">⭐ loom</span><span class="star-word">⭐ herd</span><span class="star-word">⭐ flee</span><span class="star-word">⭐ terrifying</span><span class="star-word">⭐ armed</span><span class="star-word">⭐ mount</span><span class="star-word">⭐ bolt</span><span class="star-word">⭐ stalemate</span><span class="star-word">⭐ by land</span><span class="star-word">⭐ journey</span><span class="star-word">⭐ freezing</span><span class="star-word">⭐ path</span><span class="star-word">⭐ invasion</span><span class="star-word">⭐ surprise</span><span class="star-word">⭐ roam</span><span class="star-word">⭐ terrified</span><span class="star-word">⭐ defeat</span><span class="star-word">⭐ gather</span><span class="star-word">⭐ expect</span><span class="star-word">⭐ unprotected</span><span class="star-word">⭐ message</span><span class="star-word">⭐ defend</span><span class="star-word">⭐ worn out</span><span class="star-word">⭐ sack</span><span class="star-word">⭐ homeland</span><span class="star-word">⭐ surrender</span><span class="star-word">⭐ forced</span><span class="star-word">⭐ news</span><span class="star-word">⭐ bear</span><span class="star-word">⭐ pride</span><span class="star-word">⭐ master</span><span class="star-word">⭐ destroy</span><span class="star-word">⭐ powerful</span></div>
+  <div class="think-box">
+    <div class="think-head">💡 The Big Idea of Chapter 29</div>
+    <p>Rome won the Punic Wars by learning from its enemy, by never giving up, and by thinking cleverly. Hard work and new ideas helped a city of farmers become master of the sea.</p>
+  </div>
+  <div style="background:var(--amber-bg);border:1px solid var(--amber-border);border-radius:var(--r-sm);padding:1.25rem;margin-bottom:1.25rem;">
+    <div style="font-size:11px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--amber-300);margin-bottom:.75rem;">🗺️ Chapter 29 Project — Punic Wars Story Map</div>
+    <p style="font-size:14px;color:var(--text2);margin-bottom:.75rem;">Make a large illustrated map that tells the story of Rome&#x27;s war with Carthage. Include:</p>
+    <div style="display:flex;flex-direction:column;gap:6px;">
+      <div style="display:flex;gap:10px;align-items:flex-start;"><span style="color:var(--amber-300);font-weight:700;min-width:24px;">1.</span><span style="font-size:13px;color:var(--text2);">Draw the Mediterranean Sea and mark Rome, Carthage, Spain, the Alps, and Asia Minor.</span></div>
+      <div style="display:flex;gap:10px;align-items:flex-start;"><span style="color:var(--amber-300);font-weight:700;min-width:24px;">2.</span><span style="font-size:13px;color:var(--text2);">Draw a Roman ship copied from a wrecked Carthaginian ship, and add the sacred chickens with a short caption.</span></div>
+      <div style="display:flex;gap:10px;align-items:flex-start;"><span style="color:var(--amber-300);font-weight:700;min-width:24px;">3.</span><span style="font-size:13px;color:var(--text2);">Draw a dotted line showing Hannibal&#x27;s journey by land with his elephants over the Alps into Italy.</span></div>
+      <div style="display:flex;gap:10px;align-items:flex-start;"><span style="color:var(--amber-300);font-weight:700;min-width:24px;">4.</span><span style="font-size:13px;color:var(--text2);">Draw a second line showing Scipio sailing to Carthage, and Hannibal sailing home to defend his city.</span></div>
+      <div style="display:flex;gap:10px;align-items:flex-start;"><span style="color:var(--amber-300);font-weight:700;min-width:24px;">5.</span><span style="font-size:13px;color:var(--text2);">Add a timeline at the bottom with the dates 264 BC, 218 BC, 202 BC, and 146 BC, and write one sentence for each.</span></div>
+    </div>
+  </div>
+  <p style="font-size:12px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;color:var(--text3);margin:.875rem 0 .5rem;">🧠 Final Quiz</p>
+  <div class="mini-quiz-q"><div class="mq-text">A. How did Rome get its first navy?</div><div class="mq-opts"><button class="mq-opt" onclick="mq(this,'wrong')">It bought ships from Greece</button>
+<button class="mq-opt" onclick="mq(this,'correct')">It copied a wrecked Carthaginian ship</button>
+<button class="mq-opt" onclick="mq(this,'wrong')">Hannibal gave Rome his ships</button></div></div><div class="mini-quiz-q"><div class="mq-text">B. How did Hannibal surprise the Romans?</div><div class="mq-opts"><button class="mq-opt" onclick="mq(this,'correct')">He crossed the Alps with elephants</button>
+<button class="mq-opt" onclick="mq(this,'wrong')">He hid in a wooden horse</button>
+<button class="mq-opt" onclick="mq(this,'wrong')">He attacked from the sea at night</button></div></div><div class="mini-quiz-q"><div class="mq-text">C. What was Scipio&#x27;s clever plan?</div><div class="mq-opts"><button class="mq-opt" onclick="mq(this,'correct')">To attack Carthage so Hannibal would leave Italy</button>
+<button class="mq-opt" onclick="mq(this,'wrong')">To build a wall around Rome</button>
+<button class="mq-opt" onclick="mq(this,'wrong')">To throw chickens into the sea</button></div></div>
+  <div class="lesson-nav">
+    <a class="nav-btn" href="ch29-f.html"><i class="ti ti-arrow-left"></i> Lesson 29F</a>
+    <a class="nav-btn primary" href="https://lexilink-ideation.github.io/History-Workshop/">Back to the Workshop Home <i class="ti ti-arrow-right"></i></a>
+  </div>
+</section>
+</main>
+<footer class="site-footer"><strong>Lexilink Ideation IELTS STUDIO</strong> · History ESL Course · Chapter 29 — Lesson G</footer>
+<script>
+function toggleVocab(card){card.classList.toggle('open');}
+function mcq(btn,type){
+  const item=btn.closest('.q-item');
+  item.querySelectorAll('.q-opt').forEach(b=>{b.classList.remove('correct','wrong');b.disabled=true;});
+  btn.classList.add(type);
+  const fb=item.querySelector('.q-feedback');
+  fb.className='q-feedback show '+(type==='correct'?'good':'bad');
+  fb.textContent=type==='correct'?'✓ Correct! Well done!':'✗ Not quite. Try to remember the story.';
+}
+function tf(btn,type,msg){
+  const item=btn.closest('.q-item');
+  item.querySelectorAll('.tf-btn').forEach(b=>{b.classList.remove('correct','wrong');b.disabled=true;});
+  btn.classList.add(type);
+  const fb=item.querySelector('.q-feedback');
+  fb.className='q-feedback show '+(type==='correct'?'good':'bad');
+  fb.textContent=(type==='correct'?'✓ ':'✗ ')+msg;
+}
+function mq(btn,type){
+  const item=btn.closest('.mini-quiz-q');
+  item.querySelectorAll('.mq-opt').forEach(b=>{b.classList.remove('correct','wrong');b.disabled=true;});
+  btn.classList.add(type);
+}
+function checkUnscramble(id,answer,rid){
+  const val=document.getElementById(id).value.trim().toLowerCase().replace(/[^a-z\s]/g,'');
+  const ans=answer.toLowerCase();
+  const r=document.getElementById(rid);
+  r.className='sb-result show '+(val===ans?'ok':'no');
+  r.textContent=val===ans?'✓ Perfect! "'+answer+'"':'✗ Try again. Check the word order.';
+}
+function checkFill(id,answer,rid){
+  const val=document.getElementById(id).value.trim().toLowerCase();
+  const r=document.getElementById(rid);
+  r.className='sb-result show '+(val===answer?'ok':'no');
+  r.textContent=val===answer?'✓ Correct!':'✗ The answer is: "'+answer+'"';
+}
+function revealFill(rid,answer){const r=document.getElementById(rid);r.className='sb-result show ok';r.textContent='Model answer: "'+answer+'"';}
+function scrollTo(id){document.getElementById(id).scrollIntoView({behavior:'smooth',block:'start'});}
+const parts=['p1','p2','p3','p4','p5','p6','p7','p8','p9','p10'];
+const partEls=document.querySelectorAll('.lp-part');
+window.addEventListener('scroll',()=>{
+  let current=0;
+  parts.forEach((id,i)=>{const el=document.getElementById(id);if(el&&el.getBoundingClientRect().top<200)current=i;});
+  partEls.forEach((el,i)=>{el.classList.remove('active','done');if(i<current)el.classList.add('done');else if(i===current)el.classList.add('active');});
+  const pct=Math.round(((current+1)/10)*100);
+  document.querySelector('.lp-fill').style.width=pct+'%';
+});
+</script>
+</body>
+</html>
